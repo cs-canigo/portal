@@ -1,16 +1,16 @@
 +++
-date        = "2022-01-20"
+date        = "2022-05-30"
 title       = "Canigó. Com instal·lar les VBOX guest additions"
 description = "Com instal·lar les VBOX guest additions a l'entorn de desenvolupament de Canigó"
 section     = "howtos"
 categories  = ["canigo"]
-#key        = "FEBRER2022"
+#key        = "JULIOL2022"
 +++
 
 
 ## Introducció
 
-Dins dels lliurables del framework Canigó hi consta l'[Entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
+Dins dels lliurables del framework Canigó hi consta l'[Entorn de desenvolupament de Canigó](/canigo-fwk-docs/entorn-de-desenvolupament/).
 **Es tracta d'una màquina virtual Linux, basada en Lubuntu Desktop** (Ubuntu Bionic Focal 20.4 LTS)
 pel fet de ser una distribució d’escriptori Linux lleugera, derivada d’una de les distribucions més esteses del món (Ubuntu/Debian)
 i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
@@ -41,7 +41,7 @@ On podrem comprovar que la versió, en aquest cas, és la 6.1.26.
 ## Instal·lar VBOX guest additions
 
 Un cop finalitzada la instal·lació de l'entorn de desenvolupament de Canigó seguint les instruccions indicades a l'
-[Entorn de desenvolupament](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), caldrà entrar en un terminal
+[Entorn de desenvolupament](/canigo-fwk-docs/entorn-de-desenvolupament/), caldrà entrar en un terminal
 i executar les següents comandes indicant la versió adient.
 
 Exemple per a la versió 6.1.26:

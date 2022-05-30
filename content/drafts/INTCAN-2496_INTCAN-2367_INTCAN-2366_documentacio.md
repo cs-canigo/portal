@@ -8,9 +8,9 @@ weight		= 3
 
 ### Introducció
 
-_L'entorn de desenvolupament_ és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Focal 20.4.2 LTS)
+**_L'entorn de desenvolupament_ és una màquina virtual Linux**, basada en Lubuntu Desktop (Ubuntu Bionic Focal 20.4.2 LTS)
 per ser una distribució d'escriptori Linux lleugera, derivada d'una de les distribucions més esteses del món (Ubuntu / Debian)
-i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
+i amb suport LTS, **a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó**.
 
 
 ### Objectius
@@ -19,11 +19,11 @@ Els objectius perseguits per l'entorn de desenvolupament són:
 
 * Facilitar la posada en marxa de l'entorn de desenvolupament, aprovisionant una màquina virtual amb tot el necessari
 per a començar el desenvolupament d'una aplicació Canigó.
-* Simular els entorns de desplegament als CPD Generalitat, facilitant contenidors amb les mateixes versions i
+* Simular els entorns de desplegament als CPD's Generalitat, facilitant contenidors amb les mateixes versions i
 configuracions dels PaaS que ens trobarem als clouds.
 
-Addicionalment aquesta versió de l'entorn de desenvolupament no només s'ha actualitzat amb les últimes versions
-estables del programari, sino que s'ha fet que estigui alineada amb l'última versió de Canigó 3.6.x per proporcionar
+Addicionalment, aquesta versió de l'entorn de desenvolupament no només s'ha actualitzat amb les últimes versions
+estables del programari, sinó que s'ha fet que estigui alineada amb l'última versió de Canigó 3.6.x per a proporcionar
 la millor experiència d'usuari *out-of-the-box* en el desenvolupament d'aplicacions Canigó.
 
 
@@ -39,28 +39,26 @@ Per a poder utilitzar l'entorn de desenvolupament és necessari:
 
 * 180 GB de disc dur lliure
 * 6 GB de memòria ram lliure
-* 32 MB de memòria de video lliure
+* 32 MB de memòria de vídeo lliure
 
 ### Instal·lació
 
 La versió 3.1.0 ha simplificat i automatitzat la configuració inicial fins al punt de no haver de fer cap acció
-especial per part de l'usuari (vegeu apartat _KNOWN ISSUES_ de la versió).
+especial per part de l'usuari.
 
 1. Descarregar la configuració del vagrant amb la següent comanda
-
 ```
 git clone https://github.com/gencat/dev-environment.git
 ```
 
 2. Anar al directori `dev-environment/Vagrant` i arrencar l'entorn amb
-
 ```
 vagrant up
 ```
 
-    Amb aquesta última instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que
-    inclogui el fitxer `Vagrantfile`. El temps d'instal·lació pot variar **entre 25 i 60 minuts**, pel fet que
-    ha de descarregar i instal·lar tot el software necessari.
+Amb aquesta última instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que
+inclogui el fitxer `Vagrantfile`. El temps d'instal·lació pot variar **entre 25 i 60 minuts**, pel fet que
+ha de descarregar i instal·lar tot el programari necessari.
 
 En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés haurà finalitzat.
 
@@ -72,7 +70,7 @@ comandes `vagrant up` i `vagrant halt` per fer aquestes accions.
 * Es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense prèvia
 consulta a l'equip del CS Canigó.
 * **Hosts Windows/Mac**: En el cas que hi hagi problemes de codificació en el moment d'arrencar l'entorn, es pot
-deure al fet que els fitxers de text (p.e. `provision.sh`) s'han adaptat automàticament als caràcters EOL del host.
+deure al fet que els fitxers de text (p. ex. `provision.sh`) s'han adaptat automàticament als caràcters EOL del host.
  En aquest cas s'ha d'indicar a GIT que no faci aquesta adaptació automàtica (respectant el contingut original),
  amb les següents dues comandes i tornant a instal·lar de zero l'entorn (`git clone` + `vagrant up`).
 
@@ -83,8 +81,8 @@ vagrant destroy -f
 
 ### Software base
 
-El software base s'ha instal·lat un conjunt de programari per a les tasques complementàries de desenvolupament.
-Aquest software addicional s'ha instal·lat dins el directori `/opt`
+S'ha instal·lat un conjunt de sofware base per a les tasques complementàries de desenvolupament.
+Aquest software s'ha instal·lat dins el directori `/opt`.
 
 * Open JDK 8
 * Open JDK 11
@@ -98,8 +96,8 @@ Aquest software addicional s'ha instal·lat dins el directori `/opt`
 
 ### Software addicional
 
-A banda del software base s'ha instal·lat i configurat un conjunt de programari addicional dins el directori `/opt`,
-amb les versions alineades al [full de ruta del programari]
+A banda del software base, s'ha instal·lat i configurat un conjunt de programari addicional dins el directori `/opt`,
+amb les versions alineades al [Full de ruta del programari CTTI]
 (https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
 * LanguageTool 5.3 - Per revisar gramàtica, ortografia i formes correctes del català.
@@ -118,7 +116,7 @@ amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)
 * Maven 3.8.3
 
 * IDE - [Spring Tool Suite 4.13.0](https://spring.io/tools) (basat en Eclipse 2.3.800.v20211124-1800), i els següents plugins:
-  - [Plugin CTTI Canigó]((/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/)) per a la creació aplicacions Canigó 3.6. basades en arquitectura REST+HTML5/JS.
+  - [Plugin CTTI Canigó]((/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/)) per a la creació aplicacions Canigó 3.6.x basades en arquitectura REST+HTML5/JS.
   - Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects).
   - SonarLint permet detectar i solucionar problemes de qualitat al codi (actualment Java, JavaScript, Python i PHP) [SonarLint](https://www.sonarlint.org/).
 
