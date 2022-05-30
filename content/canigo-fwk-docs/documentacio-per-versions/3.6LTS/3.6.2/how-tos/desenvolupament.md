@@ -16,7 +16,7 @@ weight      = 2
 | [Com utilitzar Spring Retry per a realitzar reintents d’accions](/howtos/2021-07-26-Howto-spring_retry/)| Spring, Patró |
 | [Com implementar el patró Circuit Breaker](/howtos/2021-01-02-Howto-circuit_breaker/)| Spring, Patró |
 | [Com utilitzar Google Error-Prone] (/howtos/2021-01-02-Howto-google_error_prone/)| Entorn desenvolupament, Eclipse, IntelliJ |
-| [Com instal·lar les VBOX guest additions](/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)| Entorn desenvolupament |
+| [Com instal·lar les VBOX guest additions](/howtos/2022-05-30-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)| Entorn desenvolupament |
 | [Com permetre l’intercanvi creuat de recursos (CORS)](/howtos/2021-01-02-Howto-spring_cors/)| Cors, Spring |
 | [Com configurar i utilitzar IronPort a una aplicació Canigó](/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/) | IronPort, Correu |
 | [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó](/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/) | Gicar, SAML |
