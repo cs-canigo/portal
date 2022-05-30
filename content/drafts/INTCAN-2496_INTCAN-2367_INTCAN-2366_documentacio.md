@@ -62,7 +62,7 @@ ha de descarregar i instal·lar tot el programari necessari.
 
 En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés haurà finalitzat.
 
-
+<br/>
 #### Notes addicionals
 
 * Tot i que es pot engegar i aturar la màquina virtual a través de VirtualBox, es recomana utilitzar les
@@ -79,10 +79,10 @@ git config --global core.autocrlf false
 vagrant destroy -f
 ```
 
-### Software base
+### Programari base
 
-S'ha instal·lat un conjunt de sofware base per a les tasques complementàries de desenvolupament.
-Aquest software s'ha instal·lat dins el directori `/opt`.
+S'ha instal·lat un conjunt de programari base per a les tasques complementàries de desenvolupament.
+Aquest programari s'ha instal·lat dins el directori `/opt`.
 
 * Open JDK 8
 * Open JDK 11
@@ -94,9 +94,9 @@ Aquest software s'ha instal·lat dins el directori `/opt`.
 * Engine Docker i Docker Compose Tool per l'execució de contenidors Docker
 * Servidor Apache HTTP (2.4)
 
-### Software addicional
+### Programari addicional
 
-A banda del software base, s'ha instal·lat i configurat un conjunt de programari addicional dins el directori `/opt`,
+A banda del programari base, s'ha instal·lat i configurat un conjunt de programari addicional dins el directori `/opt`,
 amb les versions alineades al [Full de ruta del programari CTTI]
 (https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
