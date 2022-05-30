@@ -5,7 +5,7 @@ description = "Com obtenir suport per part de la oficina tècnica de l'API Manag
 sections = "APIM"
 toc = true
 taxonomies = []
-weight = 4
+weight = 2
 +++
 
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/apim/faq) i utilitzeu els canals de comunicació que s'estableixen:
@@ -22,10 +22,6 @@ Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **c
 ## Aplicacions en servei
 
 Per les aplicacions que estiguin en servei:
-
-_Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "AM10_19-N3-CLOUD" com a "Assigned Group".
-
-<br/>
 
 #### Obrir nova petició a SAU-Remedy
 
@@ -114,13 +110,6 @@ Informació a emplenar:
 <br/>
 ###### Necessito demanar (sol·licituds)
 
-Tipus de petició per a demanar:
-
-* Construcció o adaptació de jobs de construcció i desplegament a Jenkins.
-* Publicació de noves llibreries al Nexus.
-* Creació d'usuaris de grups especials (administradors, oficines de qualitat... etcètera).
-* Esborrat de binaris i projectes al servei de custòdia de codi.
-
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
 <CENTER>![Pàgina principal](/related/sic/Remedy4.png)</center>
@@ -150,38 +139,38 @@ Es proposa seguir les següents plantilles a l'hora del redactat del correu de p
 
 [**Per a consultes:**](mailto:sau.tic@gencat.cat?subject=Consulta%20sobre%20aplicaci%C3%B3%20FRAMEWORK%20SIC&body=-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20SIC%0A-%20Codi%20de%20la%20etiqueta%20o%20el%20nom%20del%20seu%20ordinador%3A%20SIC-Consulta%0A-%20Tel%C3%A8fon%20de%20contacte%0A%0A-%20Descripci%C3%B3%20de%20la%20consulta)
 
-Assumpte: "Consulta sobre aplicació FRAMEWORK SIC"  <br/>
+Assumpte: "Consulta sobre aplicació API MANAGER TRANSVERSAL"  <br/>
 Contingut:
 
-   - Nom de l'aplicació: FRAMEWORK SIC
-   - Codi de la etiqueta o el nom del seu ordinador: SIC-Consulta
+   - Nom de l'aplicació: API MANANGER TRASNVERSAL
+   - Codi de la etiqueta o el nom del seu ordinador: APIM-Consulta
    - Telèfon de contacte
    - Descripció de la consulta
 
 <br/>
 [**Per a reportar una incidència:**](mailto:sau.tic@gencat.cat?subject=Incid%C3%A8ncia%20sobre%20aplicaci%C3%B3%20FRAMEWORK%20SIC&body=-%20Codi%20de%20la%20etiqueta%20o%20el%20nom%20del%20seu%20ordinador%3A%20SIC-Incid%C3%A8ncia%0A-%20Tel%C3%A8fon%20de%20contacte%0A-%20Problema%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20SIC%0A%0A-%20Descripci%C3%B3%20de%20l%27error%20o%20problema%20que%20es%20mostra%20a%20la%20pantalla)
 
-Assumpte: "Incidència sobre aplicació FRAMEWORK SIC"  <br/>
+Assumpte: "Incidència sobre aplicació API MANAGER TRANSVERSAL"  <br/>
 Contingut:
 
-   - Codi de la etiqueta o el nom del seu ordinador: SIC-Incidència
+   - Codi de la etiqueta o el nom del seu ordinador: APIM-Incidència
    - Telèfon de contacte
    - Problema
-   - Nom de l'aplicació: FRAMEWORK SIC
+   - Nom de l'aplicació: API MANAGER TRANSVERSAL
    - Descripció de l'error o problema que es mostra a la pantalla
 
 <br/>
 [**Petició de suport:**](mailto:sau.tic@gencat.cat?subject=Petici%C3%B3%20de%20suport%20funcional%20per%20a%20l%27aplicaci%C3%B3%20FRAMEWORK%20SIC&body=-%20Urg%C3%A8ncia%3A%20Alta%2C%20Mitjana%20o%20Baixa%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20SIC%0A-%20Descripci%C3%B3%20breu%20del%20suport%0A%0A-%20Descripci%C3%B3%20detallada%20del%20suport%0A)
 
-Assumpte: "Petició de suport funcional per a l'aplicació FRAMEWORK SIC" <br/>
+Assumpte: "Petició de suport funcional per a l'aplicació API MANAGER TRANSVERSAL" <br/>
 Contingut:
 
    - Urgència: (Alta, Mitjana o Baixa)
-   - Nom de l'aplicació: FRAMEWORK SIC
+   - Nom de l'aplicació: API MANAGER TRANSVERSAL
    - Descripció breu del suport
    - Descripció detallada del suport
 
 
 <br/><br/><br/>
-Si teniu qualsevol dubte o problema i no podeu utilitzar els canals de suport establerts, podeu contactar amb l'Oficina Tècnica Canigó CTTI a través
-del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema i no podeu utilitzar els canals de suport establerts, podeu contactar amb l'Oficina Tècnica API Manager CTTI a través
+del correu electrònic: **suport.cloud@gencat.cat**.
