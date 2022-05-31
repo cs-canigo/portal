@@ -142,7 +142,7 @@ Es proposa seguir les següents plantilles a l'hora del redactat del correu de p
 Assumpte: "Consulta sobre aplicació API MANAGER TRANSVERSAL"  <br/>
 Contingut:
 
-   - Nom de l'aplicació: API MANANGER TRASNVERSAL
+   - Nom de l'aplicació: API MANAGER TRANSVERSAL
    - Codi de la etiqueta o el nom del seu ordinador: APIM-Consulta
    - Telèfon de contacte
    - Descripció de la consulta
