@@ -8,7 +8,7 @@ weight		= 3
 
 ### Introducció
 
-**_L'entorn de desenvolupament_ és una màquina virtual Linux**, basada en Lubuntu Desktop (Ubuntu Bionic Focal 20.4.2 LTS)
+**_L'entorn de desenvolupament_ és una màquina virtual Linux**, basada en Lubuntu Desktop (Ubuntu Bionic Focal 20.04.4 LTS)
 per ser una distribució d'escriptori Linux lleugera, derivada d'una de les distribucions més esteses del món (Ubuntu / Debian)
 i amb suport LTS, **a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó**.
 
@@ -108,12 +108,12 @@ amb les versions alineades al [Full de ruta del programari CTTI]
 
 * jMeter 5.1.1 - Eina per fer validacions funcionals, proves de càrrega i mesures de rendiment d'aplicacions.
 
-* NodeJS - Servidor d'aplicacions JS. Les versions instal·lades són 14.18.3 i 16.13.2.
+* NodeJS - Servidor d'aplicacions JS. Les versions instal·lades són 14.19.3 i 16.15.0.
 
 * Visual Studio Code - Editor altament extensible (mitjançant plugins). Recomanable principalment per a treballar
 amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)
 
-* Maven 3.8.3
+* Maven 3.8.5
 
 * IDE - [Spring Tool Suite 4.13.0](https://spring.io/tools) (basat en Eclipse 2.3.800.v20211124-1800), i els següents plugins:
   - [Plugin CTTI Canigó]((/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/)) per a la creació aplicacions Canigó 3.6.x basades en arquitectura REST+HTML5/JS.

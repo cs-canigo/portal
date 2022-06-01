@@ -10,7 +10,7 @@ weight 	    = 5
 
 ### Introducció
 
-_L'entorn de desenvolupament_ és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Focal 20.4.2 LTS) per ser una distribució d'escriptori Linux lleugera, derivada d'una de les distribucions més esteses del món (Ubuntu / Debian) i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
+_L'entorn de desenvolupament_ és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Focal 20.04.4 LTS) per ser una distribució d'escriptori Linux lleugera, derivada d'una de les distribucions més esteses del món (Ubuntu / Debian) i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
 
 
 ### Objectius
@@ -91,9 +91,9 @@ A banda del software base s'ha instal·lat i configurat un conjunt de programari
 * DBeaver 6.0.2 - Eina multi-paradigma (SQL, No-SQL, etc.) per a BBDD.
 * SoapUI 5.7.0 - Eina per treballar amb serveis SOAP i REST.
 * jMeter 5.1.1 - Eina per fer validacions funcionals, proves de càrrega i mesures de rendiment d'aplicacions.
-* NodeJS - Servidor d'aplicacions JS. Les versions instal·lades són 14.18.3 i 16.13.2.
+* NodeJS - Servidor d'aplicacions JS. Les versions instal·lades són 14.19.3 i 16.15.0.
 * Visual Studio Code - Editor altament extensible (mitjançant plugins). Recomanable principalment per a treballar amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)
-* Maven 3.8.3
+* Maven 3.8.5
 * IDE - [Spring Tool Suite 4.13.0](https://spring.io/tools) (basat en Eclipse 2.3.800.v20211124-1800), i els següents plugins:
   - [Plugin CTTI Canigó](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.6. basades en arquitectura REST+HTML5/JS.
   - Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects).
@@ -125,12 +125,12 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 _RELEASE NOTES_
 
 * Versió mínima de vagrant (2.2.19)
-* Versió d'US Ubuntu (20.4 LTS)
+* Versió d'US Ubuntu (20.04 LTS)
 * Utilitzar VirutalBox versió 6.x en comptes de 5.2.x (sense suport de Oracle)
 * refactoring de provision.sh per a complir (https://github.com/koalaman/shellcheck)
 * Agregar JDK 11 com a app per defecte
 * Ampliar l'espai del HDD sda1 a 80GB
-* Actualització de les versions de STS (4.13), SoapUI (5.7.0), Tomcat (9.0.55), Docker-*compose (2.22.2), maven (3.8.3), node (14.18.3 y 16.13.2)
+* Actualització de les versions de STS (4.13), SoapUI (5.7.0), Tomcat (10.0.21), Docker-*compose (2.5.0), maven (3.8.5), node (14.19.3 y 16.15.0)
 
 _KNOWN ISSUES_
 

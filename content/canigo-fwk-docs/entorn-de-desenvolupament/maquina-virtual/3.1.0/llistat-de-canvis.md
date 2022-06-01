@@ -1,7 +1,7 @@
 +++
 date        = "2022-05-30"
 title       = "Llistat de canvis"
-description = "Llistat de canvis màquina virtual 3.0.6"
+description = "Llistat de canvis màquina virtual 3.1.0"
 sections    = "canigo-fwk-docs"
 weight		= 1
 +++
@@ -9,13 +9,13 @@ weight		= 1
 ## Màquina virtual 3.1.0 (30/05/2022)
 
 - Versió mínima de vagrant (2.2.19)
-- Versió d'US Ubuntu (20.4 LTS)
+- Versió d'US Ubuntu (20.04 LTS)
 - Utilitzar VirtualBox versió 6.x, enlloc de 5.2.x (sense suport d'Oracle)
 - Refactorització de `provision.sh` per a complir: https://github.com/koalaman/shellcheck
 - Afegir JDK 11 com a app per defecte
 - Ampliar l'espai del HDD sda1 a 80GB
-- Actualització de les versions de STS (4.13), SoapUI (5.7.0), Tomcat (9.0.55), Docker-*compose (2.22.2),
-maven (3.8.3), node (14.18.3 i 16.13.2)
+- Actualització de les versions de STS (4.13), SoapUI (5.7.0), Tomcat (10.0.21), Docker-*compose (2.5.0),
+maven (3.8.5), node (14.19.3 i 16.15.0)
 
 ## Màquina virtual 3.0.6 (14/07/2020)
 

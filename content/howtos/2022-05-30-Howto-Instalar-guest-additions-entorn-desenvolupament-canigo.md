@@ -11,7 +11,7 @@ categories  = ["canigo"]
 ## Introducció
 
 Dins dels lliurables del Framework Canigó hi consta l'[Entorn de desenvolupament de Canigó](/canigo-fwk-docs/entorn-de-desenvolupament/).
-**Es tracta d'una màquina virtual Linux, basada en Lubuntu Desktop** (Ubuntu Bionic Focal 20.4 LTS)
+**Es tracta d'una màquina virtual Linux, basada en Lubuntu Desktop** (Ubuntu Bionic Focal 20.04 LTS)
 pel fet de ser una distribució d’escriptori Linux lleugera, derivada d’una de les distribucions més esteses del món (Ubuntu/Debian)
 i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
 
