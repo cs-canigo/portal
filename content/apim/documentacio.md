@@ -18,5 +18,5 @@ El següent document fa una presentació general del servei:
 
 Es posa a disposició els següents manuals d'usuari on es detallen les característiques i metodologia de treball del servei d’API Manager: 
 
-- Manual del proveïdor d'APIs(/related/apim/APIM_Manual_Proveidor.pdf): com publicar les APIs.
-- Manual del consumidor d'APIs(/related/apim/APIM_Manual_Consumidor.pdf): com subscriure's i consumir-les.
+- [Manual del proveïdor d'APIs](/related/apim/APIM_Manual_Proveidor.pdf): com publicar les APIs.
+- [Manual del consumidor d'APIs](/related/apim/APIM_Manual_Consumidor.pdf): com subscriure's i consumir-les.
