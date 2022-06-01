@@ -1,5 +1,5 @@
 +++
-date        = "2022-06-01T17:11:42+01:00"
+date        = "2022-06-01"
 title       = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
 sections    = "APIM"
