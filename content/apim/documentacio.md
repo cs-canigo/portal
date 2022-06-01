@@ -1,11 +1,11 @@
 +++
-date        = "2022-06-01"
-title       = "Documentació del servei de l'API Manager Corporatiu"
+date = "2022-05-26"
+title = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
-sections    = "APIM"
-taxonomies  = []
-weight 		= 3
-toc			= true
+sections = "APIM"
+toc = true
+taxonomies = []
+weight = 2
 +++
 
 ## Presentació del servei
