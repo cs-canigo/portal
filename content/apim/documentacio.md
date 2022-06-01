@@ -1,5 +1,5 @@
 +++
-date        = "2022-03-25T17:11:42+01:00"
+date        = "2022-06-01T17:11:42+01:00"
 title       = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
 sections    = "APIM"
@@ -10,7 +10,7 @@ toc			= true
 
 ## Presentació del servei
 
-El següent document fa una presentació general del servei:
+En el següent document es fa una presentació general del servei:
 
 [Presentació](/related/APIM/APIM_WelcomePack.pdf)
 
