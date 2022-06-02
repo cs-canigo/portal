@@ -8,11 +8,11 @@ taxonomies = []
 weight = 2
 +++
 
-## Presentació del servei
+## Presentació general del servei APIM
 
-En el següent document es fa una presentació general del servei:
+Es posa a disposició la següent presentació a mode Welcome Pack del servei APIM:
 
-[Presentació](/related/APIM/APIM_WelcomePack.pdf)
+[Presentació APIM](/related/APIM/APIM_WelcomePack.pdf)
 
 ##  Manuals d'usuari
 
