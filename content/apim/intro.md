@@ -25,7 +25,7 @@ El servei d'API Manager Corporatiu ofereix les següents funcionalitats:
 
 El servei s'ofereix en **modalitat SaaS de pagament per ús**.
 
-Els **API Gateways s'exposen amb les següents modalitats de servei**:
+La infraestructura dels **API Gateways** pot ser:
 
 |Modalitat|Descripció|
 |-------|-------|
@@ -45,9 +45,9 @@ La plataforma del servei l'API Manager corporatiu es basa en la solució al núv
 
 Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services/apiconnect?topic=apiconnect-getting-started.
 
-## Manual
+## Documentació
 
-Es posa a disposició un manual d'usuari on es detallen les característiques i metodologia de treball del servei d'API Manager.
+Es posa a disposició documentació on es detallen les característiques i metodologia de treball del servei d'API Manager.
 
-El podeu descarregar a [**Manual d'Usuari**](/related/cloud/Manual-Usuari-APIM.pdf).
+La podeu trobar a https://canigo.ctti.gencat.cat/apim/documentacio/
 
