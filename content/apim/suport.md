@@ -1,7 +1,7 @@
 +++
 date = "2022-05-26"
 title = "Canals de suport"
-description = "Com obtenir suport per part de la oficina tècnica de l'API Manager Transversal"
+description = "Com obtenir suport per part de la oficina tècnica de l'API Manager Corporatiu"
 sections = "APIM"
 toc = true
 taxonomies = []
