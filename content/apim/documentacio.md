@@ -11,11 +11,11 @@ weight = 3
 
 Presentació a mode de Welcome Pack on es descriu de manera general el servei APIM:
 
-[Welcome Pack Servei API Manager Corporatiu](/related/APIM/APIM - Welcome Pack_v0.pdf)
+[Welcome Pack Servei API Manager Corporatiu](/related/apim/APIM_Welcome_Pack_v0.pdf)
 
 ##  Manuals d'usuari
 
 Es posen a disposició els següents manuals d'usuari on es detallen les característiques i metodologia de treball del servei d’API Manager: 
 
 - [Manual del proveïdor d'APIs](/related/apim/APIM_Manual_Proveidor.pdf): conceptes generals del servei APIM i com publicar les APIs.
-- [Manual del consumidor d'APIs](/related/apim/APIM_Manual_Consumidor.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
+- [Manual del consumidor d'APIs](/related/apim/APIM_Manual_Consumidor_APIs_V1.0.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
