@@ -11,7 +11,7 @@ weight = 3
 
 Presentació a mode de Welcome Pack on es descriu de manera general el servei APIM:
 
-[Welcome Pack Servei API Manager Corporatiu](/related/apim/APIM_Manual_Proveidor_APIs_v1.pdf)
+[Welcome Pack Servei API Manager Corporatiu](/related/apim/APIM-Welcome-Pack-v1.pdf)
 
 ##  Manuals d'usuari
 
