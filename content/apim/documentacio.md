@@ -17,5 +17,5 @@ Presentació a mode de Welcome Pack on es descriu de manera general el servei AP
 
 Es posen a disposició els següents manuals d'usuari on es detallen les característiques i metodologia de treball del servei d’API Manager: 
 
-- [Manual del proveïdor d'APIs](/related/apim/APIM_Manual_Proveidor_APIs_v1.pdf): conceptes generals del servei APIM i com publicar les APIs.
-- [Manual del consumidor d'APIs](/related/apim/APIM_Manual_Consumidor_APIs_v1.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
+- [Manual del proveïdor d'APIs](/related/apim/APIM-Manual-Proveidor-APIs-v1.pdf): conceptes generals del servei APIM i com publicar les APIs.
+- [Manual del consumidor d'APIs](/related/apim/APIM-Manual-Consumidor-APIs-v1.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
