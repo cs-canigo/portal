@@ -7,6 +7,8 @@ sections    = ["Notícies", "home"]
 key         = "JULIOL2022"
 +++
 
+<CENTER>![Pàgina principal](/related/apim/API_C.png)</CENTER>
+
 Aquest mes de Juny es posa a disposició dels departaments un **nou servei d'API Manager Corporatiu en modalitat SaaS**. Aquest servei permet gestionar el **cicle de vida de les APIS** de manera senzilla i segura amb l'objectiu de facilitar-ne tant la seva publicació com el seu consum.
 
 El nou servei d'API Manager és una evolució del servei actual que permetia gestionar APIs públiques i que s'amplia a les **APIs privades, tant en el context Intranet com Extranet**.
