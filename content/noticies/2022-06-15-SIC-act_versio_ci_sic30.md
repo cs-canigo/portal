@@ -1,13 +1,13 @@
 +++
 date        = "2022-06-07"
 title       = "SIC. Actualització de versió Jenkins del SIC 3.0"
-description = "El dia 15/06/2022 s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 3.0"
-#categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
-#key         = "JULIOL2022"
+description = "El dia 15/06/2022 està previst dur a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 3.0"
+categories  = ["SIC"]
+sections    = ["Notícies", "home"]
+key         = "JULIOL2022"
 +++
 
-**El dia 15/06/2022 s'ha dut a terme l’actualització del Servei d’Integració Continua SIC 3.0 a la versió 2.319.3 de Jenkins**.
+**El dia 15/06/2022 està previst dur a terme l’actualització del Servei d’Integració Continua SIC 3.0 a la versió 2.319.3 de Jenkins**.
 <br>
 <br>
 <br>
@@ -18,11 +18,11 @@ Les principals novetats d'aquesta actualització són les següents:
 
 |Issue|Descripció|
 |-----------|----------|
-|[pull-5692](https://github.com/jenkinsci/jenkins/pull/5692),[JENKINS-66659](https://issues.jenkins.io/browse/JENKINS-66659)|Modernització d'icones i millores cerques historials d'execucions.|
+|[pull-5692](https://github.com/jenkinsci/jenkins/pull/5692), [JENKINS-66659](https://issues.jenkins.io/browse/JENKINS-66659)|Modernització d'icones i millores cerques historials d'execucions.|
 |[pull-5664](https://github.com/jenkinsci/jenkins/pull/5664)|Modernització del botó per a editar/afegir una descripció.|
-|[pull-5507](https://github.com/jenkinsci/jenkins/pull/5507),[pull-5871](https://github.com/jenkinsci/jenkins/pull/5871)|Millora en el disseny de logs i progrés consola.|
+|[pull-5507](https://github.com/jenkinsci/jenkins/pull/5507), [pull-5871](https://github.com/jenkinsci/jenkins/pull/5871)|Millora en el disseny de logs i progrés consola.|
 |[pull-5763](https://github.com/jenkinsci/jenkins/pull/5763)|Actualització d'ajudes en línia.|
-|[JENKINS-65928](https://issues.jenkins.io/browse/JENKINS-65928),[JENKINS-65928](https://issues.jenkins.io/browse/JENKINS-65928)|Modernització d'icones i escalat de gràfics de tendències de jobs.|
+|[JENKINS-65928](https://issues.jenkins.io/browse/JENKINS-65928), [JENKINS-65928](https://issues.jenkins.io/browse/JENKINS-65928)|Modernització d'icones i escalat de gràfics de tendències de jobs.|
 
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants, entre d’altres:
@@ -30,7 +30,7 @@ Les principals novetats d'aquesta actualització són les següents:
 |Issue|Descripció|
 |-----------|----------|
 |[SECURITY-2602](https://www.jenkins.io/security/advisory/2022-02-09/)|Vulnerabilitat DoS a la llibreria XStream (CVE-2021-43859).|
-|[SECURITY-2455](https://www.jenkins.io/security/advisory/2021-11-04/)|Múltiples vulnerabilitats al control d'accès d'agent a controlador .|
+|[SECURITY-2455](https://www.jenkins.io/security/advisory/2021-11-04/)|Múltiples vulnerabilitats al control d'accès d'agent a controlador.|
 
 <br>
 <br>
