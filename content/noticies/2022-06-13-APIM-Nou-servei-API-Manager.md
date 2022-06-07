@@ -1,5 +1,5 @@
 +++
-date        = "2022-06-08"
+date        = "2022-06-07"
 title       = "Nou servei d'API Manager Corporatiu"
 description = "Aques més de Juny s'inicia el servei de l'API Manager Corporatiu"
 categories  = ["APIM"]
