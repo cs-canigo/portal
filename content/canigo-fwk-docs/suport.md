@@ -3,6 +3,9 @@ date        = "2015-01-24"
 title       = "Canals de suport"
 description = "Com obtenir suport per part de l'equip de Canigó"
 sections    = "Canigó"
+aliases = [
+    "/canigo/suport/"
+]
 weight		= 7
 +++
 

@@ -1,8 +1,8 @@
 +++
-date        = "2021-05-27"	
+date        = "2022-05-23"
 title       = "Framework Canigó"
 description = "Contacte amb l'Oficina Tècnica de Canigó - Framework Canigó"
-enllac		  = "/canigo/suport/"	
-no_index 	  = true	
-weight 		  = 2	
+enllac		= "/canigo-fwk-docs/suport/"
+no_index 	= true
+weight 		= 2
 +++
