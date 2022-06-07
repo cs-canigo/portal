@@ -24,4 +24,4 @@ El servei proporciona als departaments:
 
 El servei permet desplegar les APIS a les instàncies API Gateways tant de la part pública d’Extranet con a la part d’Intranet. **Els gateways s’ofereixen en modalitat d’infraestructura on-premise compartida o dedicada (exclusiva del departament) i en contenidors**. 
 
-Trobare més informació sobre el servei a l'apartat [Servei API Manager Corporatiu](https://canigo.ctti.gencat.cat/apim/) del portal d'arquitectura.
+Trobareu més informació sobre el servei a l'apartat [Servei API Manager Corporatiu](https://canigo.ctti.gencat.cat/apim/) del portal d'arquitectura del CTTI.
