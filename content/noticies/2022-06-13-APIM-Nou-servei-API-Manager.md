@@ -14,6 +14,7 @@ Aquest mes de Juny es posa a disposició dels departaments un **nou servei d'API
 El nou servei d'API Manager és una evolució del servei actual que permetia gestionar APIs públiques i que s'amplia a les **APIs privades, tant en el context Intranet com Extranet**.
 
 El servei proporciona als departaments:
+
 - Catàleg amb funcionalitats per a versionar i descobrir APIs (**inventari de les APIs**)
 - **Autoservei en la subscripció a les APIS**, en base a uns plans definits.*
 - Poder aplicar **polítiques d'ús o de seguretat**.
