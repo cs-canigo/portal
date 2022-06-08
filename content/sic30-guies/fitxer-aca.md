@@ -731,7 +731,9 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 
-- [Construcció aplicació bbdd/Maven i desplegament On Premise](/related/sic/3.0/aca_const_despl_bbdd_maven_onpremise.yml)
+- [Construcció aplicació Maven i desplegament On Premise](/related/sic/3.0/aca_const_despl_maven_onpremise.yml)
+
+- [Desplegament d'scripts de bbdd On Premise](/related/sic/3.0/aca_despl_bbdd_onpremise.yml)
 
 - [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 

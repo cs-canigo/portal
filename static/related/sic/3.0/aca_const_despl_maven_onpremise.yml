@@ -1,14 +1,10 @@
 version: 2.0.0
 info:
   version: 1.0.0
-  description: BBDD i Maven - On premise
-global-env:
-  - PLANS_PATH: 'sql_scripts'
-  - PLANS_NAME: 'plans.xml'
+  description: Maven - On premise
 components:
   - build:
       steps:
-        - container: # Necesario este contenedor vacio para el build de scripts BBDD
         - container:
             image:
               remote:
@@ -24,10 +20,6 @@ components:
         - name: integration
           deployment-type: delegated
           artifacts:
-            - name: bbdd_INT.zip
-              path: tmpBBDD
-              type: bbdd
-              infrastructure-id: id_cpdx_bbdd
             - name: app-dynamic.ear
               path: target
               type: dynamic
@@ -35,18 +27,12 @@ components:
         - name: preproduction
           deployment-type: semiautomatic
           artifacts:
-            - name: bbdd_PRE.zip
-              path: tmpBBDD
-              type: bbdd
             - name: app-dynamic.ear
               path: target
               type: dynamic
         - name: production
           deployment-type: semiautomatic
           artifacts:
-            - name: bbdd_PRO.zip
-              path: tmpBBDD
-              type: bbdd
             - name: app-dynamic.ear
               path: target
               type: dynamic
