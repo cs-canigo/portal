@@ -76,7 +76,7 @@ weight      = 3
 | **canigo.integration.antivirus**                      	|        1.3.0       	|                       |                       |        1.3.1       	|                       |                    |        1.3.2       	  |        1.4.0
 | canigo.core                                           	|    [3.2.0,3.3.0)   	|                       |                       |    [3.2.0,3.3.0)   	|                       |                    |    [3.2.0,3.3.0)   	  |    [3.2.0,3.3.0)
 |                                                       	|                    	|                       |                       |                    	|                       |                    |
-| **canigo.integration.avisosalertes.pica**             	|        1.2.0       	|                       |                       |        1.2.1       	|                       |                    |        1.2.2
+| **canigo.integration.avisosalertes.pica**             	|        1.2.0       	|                       |                       |        1.2.1       	|                       |                    |        1.2.3
 | canigo.core                                           	|    [3.2.0,3.3.0)   	|                       |                       |    [3.2.0,3.3.0)   	|                       |                    |    [3.2.0,3.3.0)
 | canigo.integration.pica                               	|    [1.2.0,1.3.0)   	|                       |                       |    [1.2.0,1.3.0)   	|                       |                    |    [1.2.0,1.3.0)
 |                                                       	|                    	|                       |                       |                    	|                       |                    |
