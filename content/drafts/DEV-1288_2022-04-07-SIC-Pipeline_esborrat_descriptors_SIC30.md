@@ -13,12 +13,12 @@ El **Servei d'Integració Contínua és un servei a disposició dels proveïdors
 de les aplicacions**. A més de proporcionar una pipeline principal per al desplegament de l'aplicació i pipelines operatives
 (start, stop o restart), es proporcionen pipelines avançades de desplegament:
 
-- **DEPLOY-DESCRIPTORS**: permet desplegar canvis en els descriptors (noves variables d'entorn, canvis en la configuració i altres)
+- **`DEPLOY-DESCRIPTORS`**: permet desplegar canvis en els descriptors (noves variables d'entorn, canvis en la configuració i altres)
 sense fer la construcció i desplegament de la imatge.
 
-- **DEPLOY-ALL**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
+- **`DEPLOY-ALL`**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
 
-- **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció,
+- **`DEPLOY-TAG`**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció,
 concebuda per a poder fer un *rollback* a una versió anterior.
 
 En aquest escenari, en cas de requerir revertir el desplegament d'un descriptor, el procediment implicava fer una petició
@@ -33,7 +33,7 @@ actuar (permetent actuar sobre tots ells si així es requereix), i s'encarregar�
 a la plataforma de contenidors.
 Cal tenir present que el fitxer descriptor se seleccionarà d'entre els descriptors repositats al
 Servei de Custòdia de Codi, per la qual cosa, si aquest descriptor no ha estat desplegat prèviament, la pipeline finalitzarà
-amb errors.
+amb error.
 
 Per a més informació: [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/).
 
