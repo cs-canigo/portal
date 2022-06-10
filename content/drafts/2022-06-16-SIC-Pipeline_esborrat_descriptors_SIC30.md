@@ -1,10 +1,10 @@
 +++
-date        = "2022-06-15"
+date        = "2022-06-10"
 title       = "SIC. Nova pipeline d'esborrat de descriptors al SIC 3.0"
 description = "El SIC 3.0 proporciona una nova pipeline per a l'esborrat de descriptors desplegats (DELETE-DESCRIPTORS)."
-sections    = ["Notícies", "home"]
-categories  = ["SIC"]
-key         = "JULIOL2022"
+#sections    = ["Notícies", "home"]
+#categories  = ["SIC"]
+#key         = "JULIOL2022"
 +++
 
 ## Introducció
