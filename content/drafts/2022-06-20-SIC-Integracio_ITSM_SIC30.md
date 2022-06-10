@@ -30,6 +30,12 @@ la traçabilitat dels desplegaments sense que es requereixi cap intervenció man
 - Mode **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema no pateix canvis i seguirà encarregant-se de generar
 una plantilla de petició de canvi que el proveïdor ha d'acabar de complimentar per a poder sol·licitar a Cpd el corresponent desplegament.
 
+## Requisits
+
+**Els usuaris amb rol Release Manager al SIC que aproven els desplegaments sobre aquests entorns han de tenir el rol de
+coordinador de canvis a Remedy**. En cas contrari, el sistema assignarà com a coordinador un altre usuari dins del grup.
+Per a sol·licitar la seva revisió, cal fer una petició a l'equip de Remedy.
+
 ## Funcionament
 
 La **nova modalitat d'integració automàtica aplica a la següent tipologia de pipelines de desplegament de versions del SIC 3.0: `DEPLOY`, `DEPLOY-TAG`,
