@@ -14,7 +14,7 @@ A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
 ## Aplicacions en fase de projecte
 
-Per les aplicacions en fase de projecte que s’integraran amb SIC, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament APIM**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC). El proveïdor d’aplicacions ha de crear una petició en aquest servei informant el camp Sumari “Suport projecte NOM_PROJECTE”. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració dels espais, publicació de l'API, consum API, …) es canalitzarà en aquesta petició.
+Per les aplicacions en fase de projecte que s’integraran amb SIC, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament APIM**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOAPIM). El proveïdor d’aplicacions ha de crear una petició en aquest servei informant el camp Sumari “Suport projecte NOM_PROJECTE”. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració dels espais, publicació de l'API, consum API, …) es canalitzarà en aquesta petició.
 
 Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
 
