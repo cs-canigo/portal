@@ -101,3 +101,9 @@ Paginate = 10
     Weight = 21
     Identifier = "rpa"
     URL = "/rpa"
+    
+[[menu.main]]
+	Name = "APIM"
+    Weight = 23
+    Identifier = "apim"
+    URL = "/apim"
