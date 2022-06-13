@@ -174,3 +174,4 @@ Contingut:
 <br/><br/><br/>
 Si teniu qualsevol dubte o problema i no podeu utilitzar els canals de suport establerts, podeu contactar amb l'Oficina Tècnica API Manager CTTI a través
 del correu electrònic: **suport.cloud@gencat.cat**.
+
