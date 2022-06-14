@@ -44,9 +44,8 @@ A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6
 
 ### Configuració
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
-
-L'eina de desenvolupament genera automàticament el fitxer de propietats necessari per a la configuració del servei.
+La configuració es realitza automàticament a partir de la eina de suport al desenvolupament. Aquesta eina genera
+automàticament el fitxer de propietats necessari per a la configuració del servei.
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mail.properties
 
@@ -55,22 +54,22 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mail.propert
 |mail.host              | No        |localhost      |Nom del servidor de correu sortint (smtp)      |
 |mail.port              | No        |25             |Port del servidor de correu sortint (smtp)     |
 |mail.protocol          | No        |smtp           |Protocol del servidor de correu sortint (smtp) |
-|mail.maxAttachmentSize | No        |1048576        |Tamany màxim permès dels fitxers adjunts       |
+|mail.maxAttachmentSize | No        |1048576        |Mida màxima permesa dels fitxers adjunts       |
 |mail.defaultEncoding   | No        |UTF-8          |Default encoding                               |
 |mail.smtpTimeout       | No        |10000          |Timeout (smtp) mili segons                     |
 |mail.smtpAuth          | No        |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH |
-|mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per canviar la connexió a una connexió protegida TLS |
+|mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per a canviar la connexió a una connexió protegida TLS |
 |mail.debug             | No        |true           |Debug mode                                     |
 |mail.username          | No        |               |Usuari de connexió al servidor de correu sorting (smtp) |
 |mail.password          | No        |               |Password de l'usuari de connexió               |
 |mail.encoded.password  | No        |               |Encoded password de l'usuari de connexió       |
-|mail.extraProperties   | No        |{}             |Extra array propietats. Valor d'exemple: {'mail.smtp.ssl.protocols':'TLSv1.2'} |
+|mail.extraProperties   | No        |{}             |Array extra de propietats. Valor d'exemple: {'mail.smtp.ssl.protocols':'TLSv1.2'} |
 
 ## Utilització del Mòdul
 
 ### Configuració
 
-Exemple de configuració de l'arxiu de propietats: *mail.properties*
+Exemple de configuració de l'arxiu de propietats: `mail.properties`
 
 ```properties
 *.mail.host=localhost
@@ -93,18 +92,18 @@ Exemple de configuració de l'arxiu de propietats: *mail.properties*
 ```
 
 <div class="message information">
-És possible agregar variables dinàmicament concatenant dades en: `mail.extraProperties`
+És possible afegir variables dinàmicament concatenant dades a: `mail.extraProperties`.
 </div>
 
 ### Controller
 
+**MailController.java**
+
+Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 Existeixen 2 beans injectats al context de l'aplicació (Spring) que poden ser consumits directament: *fluentMailService* i *encodedPasswordFluentMailService*
 
-**MailController.java**  
-
-Controller que publica els operacions disponibles per a qui hagi de consumir-els
-
-Utilitzant password no encriptat:
+<br>
+**Exemple utilitzant password no encriptat**:
 
 ```java
 import cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService;
@@ -148,7 +147,8 @@ public class MailController {
 }
 ```
 
-Utilitzant password encriptat:
+<br>
+**Exemple utilitzant password encriptat**:
 
 ```java
 import cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService;

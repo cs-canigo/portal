@@ -27,28 +27,28 @@ Les propietats configurables es troben en l'arxiu: *mail.properties*
 |mail.host              | No        |localhost      |Nom del servidor de correu sortint (smtp)      |
 |mail.port              | No        |25             |Port del servidor de correu sortint (smtp)     |
 |mail.protocol          | No        |smtp           |Protocol del servidor de correu sortint (smtp) |
-|mail.maxAttachmentSize | No        |1048576        |Tamany màxim permès dels fitxers adjunts       |
+|mail.maxAttachmentSize | No        |1048576        |Mida màxima permesa dels fitxers adjunts       |
 |mail.defaultEncoding   | No        |UTF-8          |Default encoding                               |
 |mail.smtpTimeout       | No        |10000          |Timeout (smtp) mili segons                     |
 |mail.smtpAuth          | No        |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH |
-|mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per canviar la connexió a una connexió protegida TLS |
+|mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per a canviar la connexió a una connexió protegida TLS |
 |mail.debug             | No        |true           |Debug mode                                     |
 |mail.username          | No        |               |Usuari de connexió al servidor de correu sorting (smtp) |
 |mail.password          | No        |               |Password de l'usuari de connexió               |
 |mail.encoded.password  | No        |               |Encoded password de l'usuari de connexió       |
-|mail.extraProperties   | No        |{}             |Extra array propietats. Valor d'exemple: {'mail.smtp.ssl.protocols':'TLSv1.3'} |
+|mail.extraProperties   | No        |{}             |Array extra de propietats. Valor d'exemple: {'mail.smtp.ssl.protocols':'TLSv1.2'} |
 
 ### Beans
 
 El mòdul conté els següents beans injectats automàticament en el context d'aplicacions (Spring):
 
-  - mailSender: Client que encapsula tota la configuració de la connexió del servidor de correu
+  - mailSender: client que encapsula tota la configuració de la connexió del servidor de correu
 
-  - fluentMailService: Bean que referència al servei
+  - fluentMailService: bean que referència al servei
 
-  - encodedPasswordJavaMailSender: Client que encapsula la configuració de la connexió del servidor de correu amb el password encriptat en base64
+  - encodedPasswordJavaMailSender: client que encapsula la configuració de la connexió del servidor de correu amb el password encriptat en base64
 
-  - encodedPasswordFluentMailService: Bean que referència al servei amb el password encriptat en base64
+  - encodedPasswordFluentMailService: bean que referència al servei amb el password encriptat en base64
 
 ### Entitats
 

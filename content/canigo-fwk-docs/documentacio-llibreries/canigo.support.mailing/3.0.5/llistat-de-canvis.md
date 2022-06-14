@@ -10,10 +10,10 @@ weight		= 2
 
 - [Actualització de canigo.support.mailing](/noticies/2022-06-13-CAN-actualitzacio-canigo-mailing-3_0_5/)
    - S'actualitza la configuració del projecte per a permetre variables dinàmiques associades a *mailSender*: `mail.extraProperties`
-   - Es remou la configuració via XML i es genera configuració via java config i anotacions
-   - Es canvia la dependència de mail de `javax.mail:1.4.7` (Març 2013) a `com.sun.mail.javax.mail1:1.6.2` (Agost 2018)
-   - S'ha remogut la classe *MailServiceImpl.java* que aquesta deprecada des de 7 versions anteriors
-   - S'ha remogut l'arxiu *canigo-support-mailing.xml* que està en desús
+   - S'elimina la configuració via XML i es genera configuració via java config i anotacions
+   - S'actualitza la dependència de mail de `javax.mail:1.4.7` (Març 2013) a `com.sun.mail.javax.mail1:1.6.2` (Agost 2018)
+   - S'elimina la classe *MailServiceImpl.java* que es trobava deprecada des de 7 versions anteriors
+   - S'elimina l'arxiu *canigo-support-mailing.xml* actualment en desús
 
 ## canigo.support.mailing 3.0.4
 

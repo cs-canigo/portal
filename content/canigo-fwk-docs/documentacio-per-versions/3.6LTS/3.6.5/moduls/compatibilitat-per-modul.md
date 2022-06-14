@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-23"
+date        = "2022-06-13"
 title       = "Compatibilitat per mòdul"
 description = "Compatibilitat per mòdul Canigó 3.6.5"
 sections    = "canigo-fwk-docs"
