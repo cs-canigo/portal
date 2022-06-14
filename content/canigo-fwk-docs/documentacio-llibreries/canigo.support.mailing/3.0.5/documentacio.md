@@ -20,7 +20,7 @@ Permet diferents modes d’enviament, tant en text pla, com en mode HTML, i en t
 
 ### Propietats
 
-Les propietats configurables es troben en l'arxiu: *mail.properties*
+Les propietats configurables es troben en l'arxiu: *mail.properties* o *application.yml*
 
 |Propietat              |Requerit   | Valor Defecte |Descripció                                     |
 |-----------------------|-----------|---------------|-----------------------------------------------|
@@ -32,7 +32,7 @@ Les propietats configurables es troben en l'arxiu: *mail.properties*
 |mail.smtpTimeout       | No        |10000          |Timeout (smtp) mili segons                     |
 |mail.smtpAuth          | No        |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH |
 |mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per a canviar la connexió a una connexió protegida TLS |
-|mail.debug             | No        |true           |Debug mode                                     |
+|mail.debug             | No        |false          |Debug mode                                     |
 |mail.username          | No        |               |Usuari de connexió al servidor de correu sorting (smtp) |
 |mail.password          | No        |               |Password de l'usuari de connexió               |
 |mail.encoded.password  | No        |               |Encoded password de l'usuari de connexió       |
