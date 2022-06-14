@@ -4,7 +4,7 @@ title       = "Canigó. Com instal·lar les VBOX guest additions"
 description = "Com instal·lar les VBOX guest additions a l'entorn de desenvolupament de Canigó"
 section     = "howtos"
 categories  = ["canigo"]
-#key        = "JULIOL2022"
+key        = "JULIOL2022"
 +++
 
 
