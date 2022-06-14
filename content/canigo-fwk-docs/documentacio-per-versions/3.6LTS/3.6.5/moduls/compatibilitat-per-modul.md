@@ -62,7 +62,7 @@ weight      = 1
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.security                                   		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.support.mailing**                         		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.support.mailing/3.0.4/) |
+| **canigo.support.mailing**                         		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.support.mailing/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 |                                                   		|               																																|
 | **canigo.support.resizeimg**                         	| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.support.resizeimg/3.0.4/) |
