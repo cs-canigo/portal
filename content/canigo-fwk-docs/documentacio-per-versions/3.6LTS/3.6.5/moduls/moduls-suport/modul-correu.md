@@ -47,7 +47,9 @@ A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6
 La configuració es realitza automàticament a partir de la eina de suport al desenvolupament. Aquesta eina genera
 automàticament el fitxer de propietats necessari per a la configuració del servei.
 
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mail.properties
+Ubicacions proposades:
+  - <PROJECT_ROOT>/src/main/resources/config/props/mail.properties, o
+  - <PROJECT_ROOT>/src/main/resources/config/props/application.yml
 
 |Propietat              |Requerit   | Valor Defecte |Descripció                                     |
 |-----------------------|-----------|---------------|-----------------------------------------------|
@@ -59,7 +61,7 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mail.propert
 |mail.smtpTimeout       | No        |10000          |Timeout (smtp) mili segons                     |
 |mail.smtpAuth          | No        |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH |
 |mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per a canviar la connexió a una connexió protegida TLS |
-|mail.debug             | No        |true           |Debug mode                                     |
+|mail.debug             | No        |false          |Debug mode                                     |
 |mail.username          | No        |               |Usuari de connexió al servidor de correu sorting (smtp) |
 |mail.password          | No        |               |Password de l'usuari de connexió               |
 |mail.encoded.password  | No        |               |Encoded password de l'usuari de connexió       |
@@ -89,6 +91,29 @@ Exemple de configuració de l'arxiu de propietats: `mail.properties`
   'mail.smtp.connectiontimeout': '5000',\
   'mail.from': 'master@testcanigo.cat'\
   }
+```
+
+Exemple de configuració de l'arxiu de propietats: `application.yml`
+
+```yaml
+mail:
+  host: localhost
+  port: 25
+  protocol: smtp
+  maxAttachmentSize: 1048576
+  defaultEncoding: UTF-8
+  smtpTimeout: 10000
+  smtpAuth: true
+  isSmtpSSLEnabled: true
+  debug: true
+  username: test@testcanigo.cat
+  password: password
+  extraProperties: "{
+    'mail.smtp.ssl.enable': 'false',
+    'mail.smtp.ssl.protocols': 'TLSv1.2',
+    'mail.smtp.connectiontimeout': '5000',
+    'mail.from': 'master@testcanigo.cat'
+  }"
 ```
 
 <div class="message information">
