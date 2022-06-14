@@ -1,10 +1,10 @@
 +++
 date = "2022-06-13"
 title = "Canigó. Actualització plugin Eclipse 1.8.6"
-description = "S'ha publicat una nova versió de l'archetype i del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.5"
+description = "S'ha publicat una nova versió del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.5"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
-key = "JUNY2022"
+key = "JULIOL2022"
 +++
 
 ## Introducció
@@ -18,7 +18,9 @@ per a la creació de projectes Canigó fent ús de l'arquetipus de Maven**, a m�
 amb una preconfiguració donada. Així, usant l'Eclipse, podem crear un projecte i afegir-l'hi els mòduls necessaris
 obtenint un projecte preconfigurat per al marc de treball Canigó i estalviant temps als desenvolupadors.
 
-S'ha actualitzat l'arquetipus i el plugin de Canigó per a **generar projectes amb Canigó 3.6.5**.
+S'ha actualitzat el plugin de Canigó per a **generar projectes amb Canigó 3.6.5 amb la última versió del mòdul
+_canigo.support.mailing_**. Podeu consultar la notícia de la [versió 3.0.5 del mòdul *canigo.support.mailing*]
+(/noticies/2022-06-13-CAN-actualitzacio-canigo-mailing-3_0_5).
 
 Podeu consultar l'abast complet de la nova versió al
 [Llistat de canvis](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/).
