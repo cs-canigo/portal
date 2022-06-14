@@ -34,6 +34,10 @@ Per a donar resposta a aquestes formes de comunicació entre serveis i sistemes,
 
 - **Suport**. Equip de suport especialitzat en la tecnologia per ajudar-vos des de la definició de l’arquitectura, millors pràctiques de definició de topics, integració amb la plataforma, resolució de incidències i posada en producció. Compta amb suport de fabricant, Confluent, amb temps de resposta inferior a 1h per a incidents de severitat crítica en producció.
 
+## Welcome Pack
+L'Oficina Tècnica ha elaborat un document (Welcome Pack) per facilitar-vos la vostra integració amb la Plataforma EventHub.
+
+Podeu consultar la darrera versió disponible el [Welcome Pack aquí.](/related/eventhub/WelcomePackKafka_latest.pdf)
 
 ---
 Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).
