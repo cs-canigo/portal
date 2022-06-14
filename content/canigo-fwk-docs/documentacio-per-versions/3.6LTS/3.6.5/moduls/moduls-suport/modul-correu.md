@@ -97,9 +97,8 @@ Exemple de configuració de l'arxiu de propietats: `mail.properties`
 
 ### Controller
 
-**MailController.java**
+**MailController.java**: Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
-Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 Existeixen 2 beans injectats al context de l'aplicació (Spring) que poden ser consumits directament: *fluentMailService* i *encodedPasswordFluentMailService*
 
 <br>
