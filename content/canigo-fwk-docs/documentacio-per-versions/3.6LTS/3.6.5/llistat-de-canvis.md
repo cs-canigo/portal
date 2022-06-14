@@ -11,9 +11,10 @@ weight      = 1
 
 #### Canigó 3.6.5 (13/06/2022)
 
+<br>
 **13/06/2022**:
 
-- [Actualització del mòdul d'enviament de correus per a permetre configurar paràmetres dinàmics](noticies/2022-06-13-CAN-actualitzacio-canigo-mailing-3_0_5)
+- [Actualització del mòdul d'enviament de correus per a permetre configurar paràmetres dinàmics](/noticies/2022-06-13-CAN-actualitzacio-canigo-mailing-3_0_5)
 - [Actualització del _plugin_ Eclipse 1.8.6](/noticies/2022-06-13-CAN-Actualitzacio_plugin_eclipse_1_8_6/)
    - Actualització del _plugin_ de l'Eclipse de Canigó versió 1.8.6 per a generar projectes amb Canigó 3.6.5 amb el template corresponent a la última versió del mòdul _canigo.support.mailing_.
 
