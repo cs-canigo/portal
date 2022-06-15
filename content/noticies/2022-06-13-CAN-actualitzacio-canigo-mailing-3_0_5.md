@@ -7,7 +7,9 @@ categories = ["canigo"]
 key = "JULIOL2022"
 +++
 
-S'ha actualitzat la **versió 3.0.5 del mòdul d'enviament de correus de Canigó** per a permetre la configuració de paràmetres dinàmics.
+S'ha actualitzat la **versió 3.0.5 del [Mòdul d'enviament de correus]
+(/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-suport/modul-correu/)
+de Canigó** per a permetre la configuració de paràmetres dinàmics.
 
 Podeu consultar l'abast complet de la nova versió en [canigo.support.mailing:3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.support.mailing/3.0.5/).
 
