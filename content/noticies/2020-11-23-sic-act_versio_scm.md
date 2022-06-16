@@ -1,13 +1,13 @@
 +++
 date        = "2020-11-30"
 title       = "SIC. Actualització de versió Gitlab"
-description = "El dia 16/12/2020 està previst dur a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
+description = "El dia 16/12/2020 s'ha dut a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 key         = "DESEMBRE2020"
 +++
 
-**El proper dia 16/12/2020 està previst dur a terme l’actualització del Servei de Custòdia de Codi a la versió 12.10.14 de Gitlab**.
+**El dia 16/12/2020 s'ha dut a terme l’actualització del Servei de Custòdia de Codi a la versió 12.10.14 de Gitlab**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:

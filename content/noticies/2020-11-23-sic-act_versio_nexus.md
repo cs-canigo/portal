@@ -1,13 +1,13 @@
 +++
 date        = "2020-11-30"
 title       = "SIC. Actualització de versió Nexus"
-description = "El dia 09/12/2020 està previst dur a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
+description = "El dia 09/12/2020 s'ha dut a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 key         = "DESEMBRE2020"
 +++
 
-**El proper dia 09/12/2020 està previst dur a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.27.0 de Nexus**.
+**El dia 09/12/2020 s'ha dut a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.27.0 de Nexus**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:

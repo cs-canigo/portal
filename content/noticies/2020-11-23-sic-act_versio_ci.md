@@ -1,13 +1,13 @@
 +++
 date        = "2020-11-30"
 title       = "SIC. Actualització de versió Jenkins"
-description = "El dia 16/12/2020 està previst dur a terme l'actualització del Servei d'Integració Contínua (Jenkins)"
+description = "El dia 16/12/2020 s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 key         = "DESEMBRE2020"
 +++
 
-**El proper dia 16/12/2020 està previst dur a terme l’actualització del Servei d’Integració Continua a la versió 2.235.5 de Jenkins**.
+**El dia 16/12/2020 s'ha dut a terme l’actualització del Servei d’Integració Continua a la versió 2.235.5 de Jenkins**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
