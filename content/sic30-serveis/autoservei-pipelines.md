@@ -1,5 +1,5 @@
 +++
-date = "2022-04-01"
+date = "2022-06-16"
 title = "Autoservei de pipelines"
 description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
 sections = "SIC"
@@ -101,6 +101,10 @@ altres pipelines per a dur a terme les operacions necessàries sobre plataformes
 
 - **DEPLOY-DESCRIPTORS**: permet desplegar canvis en els descriptors (noves variables d'entorn, canvis en la configuració i altres)
 sense fer la construcció i desplegament de la imatge.
+
+- **DELETE-DESCRIPTORS**: permet revertir el desplegament de descriptors (variables d'entorn, configuració i altres)
+habilitant una selecció d'entorn i de fitxer descriptor sobre el qual actuar (incloent-hi l'opció per a poder actuar sobre
+tots ells).
 
 - **DEPLOY-ALL**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
 
