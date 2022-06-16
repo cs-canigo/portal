@@ -112,7 +112,7 @@ Per tant, si no hi ha tags `x.y.z-PR` o `x.y.z-production` l'execució retornar�
 * Es proporciona una nova **pipeline DEPLOY-ALL** que permet fer un desplegament complet davant canvis en l’aplicació, orquestradors
 i/o descriptors.
 
-* Es proporciona una nova **pipeline DELETE-DESCRIPTORS** que permet revertir el desplegament de descriptors.
+* Es proporciona una nova **pipeline DELETE-DESCRIPTORS** que permet revertir el desplegament de descriptors a un determinat entorn.
 
 * El sistema genera noves **pipelines auxiliars DEPLOYER i CLEANER** que s’encarreguen del desplegament de les
 aplicacions i l’esborrat final de l’espai de treball (respectivament). Es tracta de pipelines que són invocades internament des

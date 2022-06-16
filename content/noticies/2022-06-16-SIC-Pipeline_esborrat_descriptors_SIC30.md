@@ -31,12 +31,16 @@ anomenada `DELETE-DESCRIPTORS` que s'encarregarà de l'esborrat de descriptors d
 Aquesta pipeline s'ubica al directori "Advanced" i permetrà seleccionar l'entorn i el/s fitxer/s descriptor/s sobre el/s qual/s
 actuar (permetent actuar sobre tots ells si així es requereix), i s'encarregarà de revertir el desplegament d'aquests
 a la plataforma de contenidors.
+
 Cal tenir present que el fitxer descriptor se seleccionarà d'entre els descriptors repositats al
 Servei de Custòdia de Codi, per la qual cosa, si aquest descriptor no ha estat desplegat prèviament, la pipeline finalitzarà
 amb error.
 
+Exemple:
+
 <CENTER>![Nou projecte](/related/sic/3.0/pipeline-delete-descriptors-input-request.png)</center>
 
+<br/>
 Per a més informació: [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/).
 
 <br/><br/>
