@@ -32,13 +32,13 @@ Aquesta pipeline s'ubica al directori "Advanced" i permetrà seleccionar l'entor
 actuar (permetent actuar sobre tots ells si així es requereix), i s'encarregarà de revertir el desplegament d'aquests
 a la plataforma de contenidors.
 
-Cal tenir present que el fitxer descriptor se seleccionarà d'entre els descriptors repositats al
-Servei de Custòdia de Codi, per la qual cosa, si aquest descriptor no ha estat desplegat prèviament, la pipeline finalitzarà
-amb error.
-
 Exemple:
-
 <CENTER>![Nou projecte](/related/sic/3.0/pipeline-delete-descriptors-input-request.png)</center>
+
+<br/>
+Cal tenir present que el fitxer descriptor se seleccionarà d'entre els descriptors repositats al
+Servei de Custòdia de Codi, per la qual cosa, en cas que se seleccioni un descriptor no permès o bé el descriptor
+no hagi estat desplegat prèviament, la pipeline aturarà l'operació en aquell punt i finalitzarà amb error.
 
 <br/>
 Per a més informació: [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/).
