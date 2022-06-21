@@ -1,7 +1,7 @@
 +++
-date        = "2022-05-23"
+date        = "2022-06-21"
 title       = "Dades de Referència"
-description = "Arquitectura de Dades de CTTI, versió 25/05/2022"
+description = "Arquitectura de Dades de CTTI, versió 22/06/2022"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5

@@ -294,16 +294,31 @@
             },
             {
                 "inom": "V04",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització versió anterior per canvi de nom de 3 direccions generals: \"Direcció General d'Alumnat\", \"Direcció General d'Innovació, Digitalització i Recerca Educativa\" i \"Direcció General de Currículum i Personalització\"  per \"Direcció General de l'Alumnat\",\"Direcció General d'Innovació, Digitalització i Currículum\" i \"Direcció General d'Educació Inclusiva i Llengües\" respectivament.",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_v04.xlsx",
                 "idatacreacio": "26/04/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització versió anterior per canvi de nom d'una direcció general: \"Direcció General de la Representació Institucional del Govern a l'Exterior i de la Unió Europea\" per \"Direcció General de la Representació del Govern a l'Exterior i de la Unió Europea\".",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "21/06/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/06/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -311,7 +326,7 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "27/04/2022"
+        "Data_actualitzacio": "22/06/2022"
     },
     {
         "Id": "dtarq103",
@@ -563,54 +578,69 @@
         "instancies": [
             {
                 "inom": "NC 2019 - V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Any 2019. Versió inicial.",
                 "ifitxer_doc": "NC_2019_prod_com_ext_ATR.docx",
-                "ifitxer_xls": "NC_2019_prod_com_ext.xlsx",
+                "ifitxer_xls": "deprecated/NC_2019_prod_com_ext.xlsx",
                 "idatacreacio": "09/03/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "17/02/2020",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind-stria/NC-2019-productes-comer-exterior-/dxc5-7sp7",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "NC 2020 - V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Any 2020. Versió inicial.",
                 "ifitxer_doc": "NC_2020_prod_com_ext_ATR.docx",
-                "ifitxer_xls": "NC_2020_prod_com_ext.xlsx",
+                "ifitxer_xls": "deprecated/NC_2020_prod_com_ext.xlsx",
                 "idatacreacio": "21/04/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "21/04/2021",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2020-productes-comer%C3%A7-exterior-/qixe-w7gm",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "NC 2021 - V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Any 2021. Versió inicial.",
                 "ifitxer_doc": "NC_2021_prod_com_ext_ATR.docx",
-                "ifitxer_xls": "NC_2021_prod_com_ext.xlsx",
+                "ifitxer_xls": "deprecated/NC_2021_prod_com_ext.xlsx",
                 "idatacreacio": "17/05/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "25/05/2022",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2021-productes-comer%C3%A7-exterior-/yt3j-dp7t",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "NC 2022 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2022. Versió inicial.",
+                "ifitxer_doc": "NC_2022_prod_com_ext_ATR.docx",
+                "ifitxer_xls": "NC_2022_prod_com_ext.xlsx",
+                "idatacreacio": "20/06/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2022-productes-comer%C3%A7-exterior-/ibt9-hnw2",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "NC_PRODUCTES_COMERÇ_EXTERIOR",
         "Classificacio": "Consolidat",
         "Data_publicacio": "10/03/2021",
-        "Data_actualitzacio": "25/05/2022"
+        "Data_actualitzacio": "22/06/2022"
     },
     {
         "Id": "dtarq113",
@@ -707,54 +737,69 @@
         "instancies": [
             {
                 "inom": "2017 - V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Any 2017 (PRODCOM-EIP 2017). Versió inicial.",
                 "ifitxer_doc": "PRODCOM_EIP_2017_prod_ind_ATR.docx",
-                "ifitxer_xls": "PRODCOM_EIP_2017_prod_ind.xlsx",
+                "ifitxer_xls": "deprecated/PRODCOM_EIP_2017_prod_ind.xlsx",
                 "idatacreacio": "09/03/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "17/02/2020",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind-stria/PRODCOM-EIP-2017-productes-industrials-/kcb3-zn5s",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "2018 - V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Any 2018 (PRODCOM-EIP 2018). Versió inicial.",
                 "ifitxer_doc": "PRODCOM_EIP_2018_prod_ind_ATR.docx",
-                "ifitxer_xls": "PRODCOM_EIP_2018_prod_ind.xlsx",
+                "ifitxer_xls": "deprecated/PRODCOM_EIP_2018_prod_ind.xlsx",
                 "idatacreacio": "21/04/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "21/04/2021",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2018-productes-industrials-/3ggf-d6t2",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "2019 - V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Any 2019 (PRODCOM-EIP 2019). Versió inicial.",
                 "ifitxer_doc": "PRODCOM_EIP_2019_prod_ind_ATR.docx",
-                "ifitxer_xls": "PRODCOM_EIP_2019_prod_ind.xlsx",
+                "ifitxer_xls": "deprecated/PRODCOM_EIP_2019_prod_ind.xlsx",
                 "idatacreacio": "17/05/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "25/05/2022",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2019-productes-industrials-/ui8h-bmx3",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2020 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2020 (PRODCOM-EIP 2020). Versió inicial.",
+                "ifitxer_doc": "PRODCOM_EIP_2020_prod_ind_ATR.docx",
+                "ifitxer_xls": "PRODCOM_EIP_2020_prod_ind.xlsx",
+                "idatacreacio": "20/06/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2020-productes-industrials-/w3ui-y7z7",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "PRODCOM_EIP_PRODUCTES_INDUSTRIALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "10/03/2021",
-        "Data_actualitzacio": "25/05/2022"
+        "Data_actualitzacio": "22/06/2022"
     },
     {
         "Id": "dtarq109",
@@ -1452,34 +1497,6 @@
         "Data_actualitzacio": "23/02/2022"
     },
     {
-        "Id": "dtarq50",
-        "Nom": "Canals comunicació avisos",
-        "Ambit": "Societat i ciutadania",
-        "Subambit": "Atenció ciutadana i relacions amb l'administració",
-        "Descripcio": "Mecanismes de comunicació per contactar amb una persona.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Persona_Comunicacio_Canal_Avis_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Comunicació_Canal_Avís.xlsx",
-                "idatacreacio": "07/06/2019",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "CONTACTE_CANAL_AVIS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
-    },
-    {
         "Id": "dtarq56",
         "Nom": "Caràcter Representació",
         "Ambit": "Societat i ciutadania",
@@ -1691,32 +1708,60 @@
         "Data_actualitzacio": "23/03/2022"
     },
     {
+        "Id": "dtarq50",
+        "Nom": "Tipus dispositiu avís electrònic",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Tipus de canals de comunicació dígital per la gestió d'informació i avisos al ciutadà.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Tipus_dispositiu_avis_electronic_ATR.docx",
+                "ifitxer_xls": "Tipus_dispositiu_avis_electronic.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Tipus-av%C3%ADs-electr%C3%B2nic/3ie9-4srq",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_DISPOSITIU_AVIS_ELECTRONIC",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/06/2022",
+        "Data_actualitzacio": "22/06/2022"
+    },
+    {
         "Id": "dtarq49",
         "Nom": "Tipus Identificador",
         "Ambit": "Societat i ciutadania",
         "Subambit": "Atenció ciutadana i relacions amb l'administració",
-        "Descripcio": "Tipus de documentació que es pot utilitzar per identificar a una persona.",
+        "Descripcio": "Tipus de document que es pot utilitzar per identificar a una persona, física o jurídica.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Persona_Tipus_Identificador_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Tipus_Identificador.xlsx",
+                "ifitxer_doc": "Tipus_Identificador_ATR.docx",
+                "ifitxer_xls": "Tipus_Identificador.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Tipus-Identificador/vzfi-u5tr",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "TIPUS_IDENTIFICADOR",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/06/2022",
+        "Data_actualitzacio": "22/06/2022"
     },
     {
         "Id": "dtarq55",
@@ -2116,16 +2161,31 @@
             },
             {
                 "inom": "V08",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom de 21 municipis",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_V08.xlsx",
                 "idatacreacio": "25/04/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V09",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi de nom del municipi Beniardá (nom anterior) per Beniardà (nom actualitzat). Codi 030279.",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "21/06/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/06/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2133,7 +2193,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "27/04/2022"
+        "Data_actualitzacio": "22/06/2022"
     },
     {
         "Id": "dtarq127",
@@ -2621,16 +2681,31 @@
             },
             {
                 "inom": "V08",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Revisió general per nova versió del fitxer font, publicat l'abril del 2022.",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V08.xlsx",
                 "idatacreacio": "20/05/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/06/2022",
                 "idatapublicacio": "25/05/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V09",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització versió anterior per canvi de nom del municipi Beniardá (nom anterior) per Beniardà (nom actualitzat).",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "21/06/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/06/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2638,7 +2713,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "25/05/2022"
+        "Data_actualitzacio": "22/06/2022"
     },
     {
         "Id": "dtarq175",
