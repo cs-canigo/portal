@@ -15,9 +15,9 @@ categories  = ["computació espacial","realitat virtual"]
 
 ## **Taula de Continguts** {#TaulaContiguts}
 1. [Introducció] (#Introduccio)
-  1. [Realitat Virtual (VR)](#VR)
-  2. [Realitat Augmentada (AR)](#AR)
-  3. [Realitat Mixta (MR)](#MR)
+  1. [Realitat Virtual (VR)](#RealitatVirtual)
+  2. [Realitat Augmentada (AR)](#RealitatAugmentada)
+  3. [Realitat Mixta (MR)](#RealitatMixta)
 2. [Tecnologia XR] (#TecnologiaXR)
   1. [Dispositius per experiències XR] (#DispositiusXR)
   2. [Plataformes de programari XR] (#SFTXR)
@@ -54,7 +54,7 @@ El primer sistema de realitat virtual va venir al 1962 on Morton Heilig va crear
 Avui en dia, amb l'ajuda de la tecnologia, es pot gaudir d'experiències molt més reals i concretes que permeten la immersió de la persona, això és possible gràcies a la **realitat virtual** i la **realitat augmentada** o combinades, en un entorn mixt.
 
 
-### **Realitat virtual (VR)** {#VR}
+### **Realitat virtual (VR)** {#RealitatVirtual}
 La realitat virtual és la més àmpliament estesa. Amb la VR es necessari un dispositiu (que pot ser unes ulleres o un casc de realitat virtual), que bloqueja la visió del món exterior i es generen imatges (a través de l’ordinador o del mòbil) creant una sensació d’estar immersos i envoltats per un entorn tridimensional 360º  que reaccionarà al que s’està fent. 
 <br>
 La incorporació de l’àudio i de sensors de moviment, permeten interacció amb l’entorn, el que dona una experiència més real. 
@@ -65,7 +65,7 @@ La incorporació de l’àudio i de sensors de moviment, permeten interacció am
 </div>
 <br>
 
-### **Realitat augmentada (AR)** {#AR}
+### **Realitat augmentada (AR)** {#RealitatAugmentada}
 La realitat augmentada, superposa gràfics, text, fluxos de vídeo i altres elements digitals sobre un espai,  ja sigui una  oficina, una sala d'estar, dins un  cotxe, el jardí, un vestíbul d’un hotel, un centre comercial, fins i tot al carrer mitjançant  un dispositiu mòbil, tauleta o ulleres, de forma que no intenta tancar el món real i substituir-lo per un entorn generat per ordinador.
 <br>
 De manera  que enriqueix o augmenta la realitat. 
@@ -76,7 +76,7 @@ De manera  que enriqueix o augmenta la realitat.
 </div>
 <br>
 
-### **Realitat mixta (MR)** {#MR}
+### **Realitat mixta (MR)** {#RealitatMixta}
 La realitat mixta és una manera de descriure la integració entre els mons físic i digital.
 <br> 
 La idea és tenir situacions en les quals no només es veuen objectes, sinó que també  es vol interactuar amb ells, i això implica que el maquinari, el casc o les ulleres intel·ligents o qualsevol altre dispositiu, ha de fer molt més que mostrar gràfics en un vidre. Ha d'escanejar l'exterior, ha de reconèixer l’entorn, les parets, els mobles, les altres persones, per tal que pugui construir la seva pròpia consciència de l'espai i també reconèixer el que s’està fent amb les mans per poder tocar o agafar aquests objectes digitals.
