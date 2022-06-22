@@ -1737,10 +1737,10 @@
     },
     {
         "Id": "dtarq49",
-        "Nom": "Tipus Identificador",
+        "Nom": "Tipus identificador persona física",
         "Ambit": "Societat i ciutadania",
         "Subambit": "Atenció ciutadana i relacions amb l'administració",
-        "Descripcio": "Tipus de document que es pot utilitzar per identificar a una persona, física o jurídica.",
+        "Descripcio": "Tipus de document que es pot utilitzar per identificar a una persona.",
         "instancies": [
             {
                 "inom": "V01",
@@ -1748,8 +1748,8 @@
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Tipus_Identificador_ATR.docx",
-                "ifitxer_xls": "Tipus_Identificador.xlsx",
+                "ifitxer_doc": "Tipus_identificador_persona_fisica_ATR.docx",
+                "ifitxer_xls": "Tipus_identificador_persona_fisica.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
@@ -1758,7 +1758,7 @@
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "TIPUS_IDENTIFICADOR",
+        "nom_dinsBD": "TIPUS_IDENTIFICADOR_PERSONA_FISICA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/06/2022",
         "Data_actualitzacio": "22/06/2022"
