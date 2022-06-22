@@ -1,7 +1,7 @@
 +++
 date = "2022-06-13"
 title = "Canigó. Actualització plugin Eclipse 1.8.6"
-description = "S'ha publicat una nova versió del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.5"
+description = "S'ha publicat una nova versió del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.5 amb el template corresponent a la última versió del mòdul canigo.support.mailing"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
 key = "JULIOL2022"
