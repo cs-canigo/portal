@@ -4,7 +4,7 @@ title       = "SIC. Actualització de versió Gitlab"
 description = "El dia DD/MM/2022 està previst dur a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
 #categories  = ["SIC"]
 #sections    = ["Notícies", "home"]
-#key         = "JULIOL2022"
+#key         = "AGOST2022"
 +++
 
 **El dia DD/MM/2022 està previst dur a terme l’actualització del Servei de Custòdia de Codi a la versió 14.7.7 de Gitlab**.
