@@ -133,7 +133,7 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
   <tr>
     <td align="center">
       <div align="center">
-        <img src="/images/bloc/2022/06/Imatge7.jgp" />
+        <img src="/images/bloc/2022/06/Imatge7.jpg" />
       </div>
     </td>
     <td align="center">
@@ -188,7 +188,7 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
   <tr>
     <td align="center">
       <div align="center">
-        <img src="/images/bloc/2022/06/Imatge11.jgp" />
+        <img src="/images/bloc/2022/06/Imatge11.jpg" />
       </div>
     </td>
     <td align="center">
@@ -261,7 +261,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
       <strong>Entreteniment:</strong> 
       La indústria de l'entreteniment va ser de les primeres a adoptar i potenciar la XR, en  el sector dels videojocs i en parcs d'atraccions. Els usuaris poden obtenir experiències virtuals d'esdeveniments esportius i musicals utilitzant els seus visors de realitat virtual.
       <div align="center">
-        <img src="/images/bloc/2022/06/Imatge15.jgp" />
+        <img src="/images/bloc/2022/06/Imatge15.jpg" />
       </div>
     </td>
     <td>
@@ -284,7 +284,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
       <strong>Medicina:</strong> 
       Gràcies a la realitat mixta, els equips especialitzats, personal clínic i personal administratiu, poden col·laborar de manera remota. Així, poden realitzar consultes virtuals a pacients, reduir el temps de diagnòstic i de tractament. A més, és una eina molt útil per dur a terme simulacions d'operacions, per optimitzar al màxim el procés i els resultats de l'operació real en pacients.
       <div align="center">
-        <img src="/images/bloc/2022/06/Imatge17.gif" />
+        <img src="/images/bloc/2022/06/Imatge17.jpg" />
       </div>
     </td>
   </tr>
