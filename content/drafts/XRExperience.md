@@ -96,6 +96,7 @@ Per experimentar la realitat virtual, augmentada o mixta de forma immersiva, s�
 <br> 
 En general, totes les tecnologies que permeten a l'usuari interactuar amb l'entorn digital disposen d'un conjunt d'elements comuns:
 <br>
+
 * **Processador.** Maquinari que realitza el processament. 
 * **Aplicació.** Programari que gestiona tot el procés. 
 * **Pantalla.** Element que mostra a l'usuari l'escenari amb el qual interactua. 
@@ -105,6 +106,7 @@ En general, totes les tecnologies que permeten a l'usuari interactuar amb l'ento
 
 Addicionalment, són necessaris els següents elements:
 <br>
+
 * En RA i RM és necessària una càmera, que obtingui les imatges del món real (no en RV).
 * És necessària connexió a Internet, en particular per a obtenir informació digital pre-gravada (per exemple la informació digital superposada d'un servidor remot una vegada identificat el punt d'interès).
 * Activadors i marcadors. Elements que indiquen al programari en RA quan i on ha de superposar una informació.
@@ -122,8 +124,8 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 
 <br>
 <table border="0" align="center">
-  <tr>
-    <td font-weight="bold">Visors de cartó per dispositius mòbils</td>
+  <tr font-weight="bold">
+    <td>Visors de cartó per dispositius mòbils</td>
     <td>HMD per dispositius mòbils</td>
     <td>HMD autònoms</td>
     <td>HMD Connectats(tethered)</td>
@@ -177,7 +179,7 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
 
 <br>
 <table border="0" align="center">
-  <tr>
+  <tr font-weight="bold">
     <td>Ulleres de AR</td>
     <td>Dispositius MR</td>
     <td>HUD Pantalla de visualització de dades</td>
