@@ -178,7 +178,7 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
 
 #### **Altres dispositius per AR i MR** 
 
-<table border="0" align="center">
+<table border="0" align="center" >
   <tr font-weight="bold">
     <td>Ulleres de AR</td>
     <td>Dispositius MR</td>
@@ -268,7 +268,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
       <strong>Indústria:</strong> 
       Son aplicacions XR creades per simular entorns perillosos o aplicacions de realitat augmentada per poder donar informació en temps real en espais reals. També ajuda a la reducció del treball manual per augmentar la productivitat empresarial.
       <div align="center">
-        <img src="/images/bloc/2022/06/Imatge16.gif" />
+        <img src="/images/bloc/2022/06/Imatge16.jpg" />
       </div>
     </td>
   </tr>
@@ -324,7 +324,7 @@ També ajuda a la reducció del treball manual per augmentar la productivitat em
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/06/Imatge16.gif" />
+  <img src="/images/bloc/2022/06/Imatge16.jpg" />
 </div>
 <br>
 
