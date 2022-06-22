@@ -79,10 +79,9 @@ De manera  que enriqueix o augmenta la realitat.
 La realitat mixta és una manera de descriure la integració entre els mons físic i digital.
 <br> 
 La idea és tenir situacions en les quals no només es veuen objectes, sinó que també  es vol interactuar amb ells, i això implica que el maquinari, el casc o les ulleres intel·ligents o qualsevol altre dispositiu, ha de fer molt més que mostrar gràfics en un vidre. Ha d'escanejar l'exterior, ha de reconèixer l’entorn, les parets, els mobles, les altres persones, per tal que pugui construir la seva pròpia consciència de l'espai i també reconèixer el que s’està fent amb les mans per poder tocar o agafar aquests objectes digitals.
-<br>
+<br><br>
 La realitat mixta es pot trobar a les aplicacions de col·laboració més recents, on s’habilita un espai virtual, per exemple: una taula de conferències virtual, els companys de la reunió, arxius compartits i una pissarra digital, i es  fan servir els sensors per detectar on es troba l’escriptori, reconèixer el teclat i generar una versió digital d'aquests objectes reals dins de l'entorn virtual, de manera que la persona que s’uneixi a una sala de conferències virtual, pot mirar cap avall i veure el seu escriptori i les seves mans al teclat. 
 <br>
-
 <br>
 <div align="center">
   <img src="/images/bloc/2022/06/Imatge6.gif" />
@@ -176,7 +175,6 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
 
 #### **Altres dispositius per AR i MR** 
-
 <br>
 <table border="0" align="center">
   <tr font-weight="bold">
@@ -226,9 +224,9 @@ Certs dispositius permeten utilitzar les mans o gestos específics per obrir men
 
 ### **Plataformes de programari XR** {#SFTXR}
 
-El programari és el que defineix les interaccions i les experiències dels mons que es superposen al món real per submergir-se en altres entorns digitals. <br>
-La computació espacial permet barrejar el món real i el digital. Segons Simon Greenwold (2003), la computació espacial és «la interacció d'una persona amb una màquina en la qual la màquina conserva i manipula els referents dels objectes i espais reals». La computació espacial és el pas imprescindible per avançar de les interaccions bidimensionals a les tridimensionals. <br>
-En l'àmbit de la realitat ampliada, el sistema té una noció de l'espai que l'envolta per a interactuar amb ell. Fa servir les interaccions de l'usuari (com els seus moviments corporals, els seus gestos o altres fonts de dades) com a informació d'entrada per les interaccions digitals, combinant-les amb l'espai físic. <br>
+El programari és el que defineix les interaccions i les experiències dels mons que es superposen al món real per submergir-se en altres entorns digitals. <br><br>
+La computació espacial permet barrejar el món real i el digital. Segons Simon Greenwold (2003), la computació espacial és «la interacció d'una persona amb una màquina en la qual la màquina conserva i manipula els referents dels objectes i espais reals». La computació espacial és el pas imprescindible per avançar de les interaccions bidimensionals a les tridimensionals. <br><br>
+En l'àmbit de la realitat ampliada, el sistema té una noció de l'espai que l'envolta per a interactuar amb ell. Fa servir les interaccions de l'usuari (com els seus moviments corporals, els seus gestos o altres fonts de dades) com a informació d'entrada per les interaccions digitals, combinant-les amb l'espai físic. <br><br>
 A continuació, es resumeixen algunes de les eines i plataformes de programari que s'usen per desenvolupar projectes de VR i AR:
 <br>
 
@@ -239,12 +237,12 @@ A continuació, es resumeixen algunes de les eines i plataformes de programari q
 * **Tecnologies relacionades amb XR:** Cloud computing i Edge Computing, Bessons digitales (Digital Twins), Big Data, Internet de las coses (IoT), Intel·ligencia artificial, Automatizació, Blockchain i Tecnologia 5G.
 
 Els desenvolupadors de programari i els científics de dades han de dissenyar algorismes intel·ligents i eficients per produir característiques XR interessants que ofereixin experiències d'usuari immersives.
-<br>
+<br><br>
 Alguns dels llenguatges de programació utilitzats al disseny de XR inclouen C, 
 C++, Java, JavaScript, Python i Swift.
-<br>
+<br><br>
 Per altra banda, s’ha de tenir en compte que qualsevol aplicació VR requereix d’un bon nivell de potència de computació. A la VR sempre hi ha moviment, ja que la imatge s'està emmascarant directament als ulls, això vol dir que són molt més sensibles a ella. Si la velocitat és lenta, els ulls ho perceben malament, i no només interfereix amb el sentit de realisme o presència, també pot fer sentir desorientat i marejat, per això es necessiten 60 FPS com a  mínim, i s’espera arribar fins i tot més ràpid de 120 FPS.
-<br>
+<br><br>
 La latència també és un factor important a les aplicacions XR, ja que el maquinari ha de minimitzar qualsevol retard  entre el moviment del dispositiu i l'actualització de la imatge que es veu. Si hi ha un desajust entre l’oïda interna i els ulls, això condueix ràpidament al vertigen. Una velocitat de fotogrames ràpida i una baixa latència són molt més importants que la resolució de la imatge.
 <br>
 
@@ -254,7 +252,31 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
 
 ### **Aplicacions reals i futures** {#AplicacionsRealsFutures}
 
-**Entreteniment:**
+<table border="0" align="center">
+  <tr>
+    <td>
+      <strong>Entreteniment:</strong> 
+      La indústria de l'entreteniment va ser de les primeres a adoptar i potenciar la XR, en  el sector dels videojocs i en parcs d'atraccions. 
+      Els usuaris poden obtenir experiències virtuals d'esdeveniments esportius i musicals utilitzant els seus visors de realitat virtual.
+      <div align="center">
+        <img src="/images/bloc/2022/06/Imatge15.jgp" />
+      </div>
+    </td>
+    <td>
+      <strong>Indústria:</strong> 
+      Son aplicacions XR creades per simular entorns perillosos o aplicacions de realitat augmentada per poder donar informació en temps real en espais reals. 
+      També ajuda a la reducció del treball manual per augmentar la productivitat empresarial.
+      <div align="center">
+        <img src="/images/bloc/2022/06/Imatge16.gif" />
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+
+**Entreteniment:** 
 La indústria de l'entreteniment va ser de les primeres a adoptar i potenciar la XR, en  el sector dels videojocs i en parcs d'atraccions. <br>
 Els usuaris poden obtenir experiències virtuals d'esdeveniments esportius i musicals utilitzant els seus visors de realitat virtual.<br>
 
@@ -315,7 +337,7 @@ La realitat ampliada permet oferir al viatger una experiència similar a la que 
 ### **Reptes XR** {#ReptesXR}
 Algunes aplicacions de realitat augmentada ja són part de la vida quotidiana, com per exemple les aplicacions de “Pokémon Go” o els filtres que s’utilitzen a diferents xarxes socials.<br>
 L'ús de la realitat virtual avança sobretot en l'àmbit dels videojocs, encara que els requisits tècnics, suposen un obstacle. <br>
-La realitat mixta es limita sobretot a les empreses. <br>
+La realitat mixta es limita sobretot a les empreses. <br><br>
 Totes les formes de XR troben un lloc a la vida quotidiana però encara han de superar alguns reptes:
 
 * **Costos elevats** dels dispositius i del desenvolupament del programari.
@@ -325,7 +347,7 @@ Totes les formes de XR troben un lloc a la vida quotidiana però encara han de s
 * **Falta d'estudis sobre efectes a mitjà i llarg termini** d'usos continuats d'aquestes tecnologies.
 
 <br>
-La majoria de les aplicacions XR disponibles d’avui en dia, encara són molt experimentals. Algunes d'elles són projectes d’investigació i dissenyats per recollir dades amb finalitats de recerca.<br>
+La majoria de les aplicacions XR disponibles d’avui en dia, encara són molt experimentals. Algunes d'elles són projectes d’investigació i dissenyats per recollir dades amb finalitats de recerca.<br><br>
 Algunes veus crítiques fins i tot, podrien dir que la majoria de les aplicacions XR actuals, són només exemples d’entreteniment, però la majoria del que es veu avui, és un precursor del que realment vindrà. Fent ús de la imaginació per extrapolar, es pot arribar a veure el potencial de la tecnologia XR. 
 <br>
 
