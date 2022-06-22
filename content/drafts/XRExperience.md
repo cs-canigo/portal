@@ -44,7 +44,6 @@ Fent una mica d’història, l’any 1838, Charles Wheatstone va crear un dispos
 <br>
 
 El primer sistema de realitat virtual va venir al 1962 on Morton Heilig va crear el **Sensorama**, un  dispositiu que  projectava imatges en format 3D estereoscòpic, combinant so estèreo amb una cadira mòbil per inclinar el cos, amb vent i aromes. 
-
 <br>
 <div align="center">
   <img src="/images/bloc/2022/06/Imatge3.jpg" />
@@ -96,7 +95,7 @@ La realitat mixta es pot trobar a les aplicacions de col·laboració més recent
 Per experimentar la realitat virtual, augmentada o mixta de forma immersiva, s’ha d’utilitzar una determinada combinació d’elements de maquinari i programari.
 <br> 
 En general, totes les tecnologies que permeten a l'usuari interactuar amb l'entorn digital disposen d'un conjunt d'elements comuns:
-
+<br>
 * **Processador.** Maquinari que realitza el processament. 
 * **Aplicació.** Programari que gestiona tot el procés. 
 * **Pantalla.** Element que mostra a l'usuari l'escenari amb el qual interactua. 
@@ -109,6 +108,7 @@ Addicionalment, són necessaris els següents elements:
 * En RA i RM és necessària una càmera, que obtingui les imatges del món real (no en RV).
 * És necessària connexió a Internet, en particular per a obtenir informació digital pre-gravada (per exemple la informació digital superposada d'un servidor remot una vegada identificat el punt d'interès).
 * Activadors i marcadors. Elements que indiquen al programari en RA quan i on ha de superposar una informació.
+<br>
 
 ### **Dispositius per experiències XR** {#DispositiusXR}
 Per les experiències XR es necessita un dispositiu HMD (Head Mounted Display) que  es posa al cap i disposa d’un petit sistema òptic de visualització davant d'un ull o dels dos per reproduir imatges creades per ordinador. 
