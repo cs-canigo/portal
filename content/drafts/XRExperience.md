@@ -112,10 +112,11 @@ Addicionalment, són necessaris els següents elements:
 <br>
 
 ### **Dispositius per experiències XR** {#DispositiusXR}
+
 Per les experiències XR es necessita un dispositiu HMD (Head Mounted Display) que  es posa al cap i disposa d’un petit sistema òptic de visualització davant d'un ull o dels dos per reproduir imatges creades per ordinador. 
 <br>
 Poden mostrar imatges generades per ordinador, imatges del mon real o una combinació d’elles. <br>
-Els HDM tenen moltes utilitats com per exemple els videojocs, l’aviació, l’enginyeria o la medicina. <br> 
+Els HDM tenen moltes utilitats com per exemple els videojocs, l’aviació, l’enginyeria o la medicina. <br><br> 
 
 
 #### **Visors o dispositius pel cap (HMD) per VR** 
@@ -174,8 +175,9 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 <br>
 Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
 
+
 #### **Altres dispositius per AR i MR** 
-<br>
+
 <table border="0" align="center">
   <tr font-weight="bold">
     <td>Ulleres de AR</td>
@@ -250,6 +252,7 @@ La latència també és un factor important a les aplicacions XR, ja que el maqu
 
 La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals, inclouen entreteniment, atenció mèdica, educació, comerç, màrqueting... per posar alguns exemples.
 
+
 ### **Aplicacions reals i futures** {#AplicacionsRealsFutures}
 
 <table border="0" align="center">
@@ -273,7 +276,6 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
   </tr>
 </table>
 <br>
-
 
 
 **Entreteniment:** 
@@ -368,7 +370,7 @@ https://vivevirtual.es/realidad-virtual-inmersiva-aumentada-mixta/ <br>
 
 ## **Glossari** {#Glossari}
 * **Estereoscopi (imatge tridimensional 3-D):** es refereix a qualsevol tècnica d'enregistrament de la informació tridimensional visual o a la creació de la il·lusió de profunditat en una imatge.
-* **FPS:** Fotograma per segon, és la unitat de mesura que indica la freqüència a la qual un reproductor o un enregistrador d’imatges genera els diferents fotogrames. Com a norma general el cinema fa servir habitualment 24 fotogrames
+* **FPS:** Fotograma per segon, és la unitat de mesura que indica la freqüència a la qual un reproductor o un enregistrador d’imatges genera els diferents fotogrames. Com a norma general el cinema fa servir habitualment 24 fotogrames.
 * **IMU (Inertial Measurement Unit):** Dispositiu electrònic que mesura i informa sobre la velocitat, orientació i forces gravitacionals d’un aparell. 
 * **HMD  (Head Mounted Display):** és un dispositiu de visualització semblant a un casc, que permet reproduir imatges creades per ordinador sobre una pantalla, situada molt pròxima als ulls o directament sobre la retina dels ulls.
 * **XR (eXtended Reality):** Realitat ampliada. Engloba la realitat virtual, la realitat augmentada i la realitat mixta.
