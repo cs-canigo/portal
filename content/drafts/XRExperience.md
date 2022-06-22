@@ -123,7 +123,7 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 <br>
 <table border="0" align="center">
   <tr>
-    <td>Visors de cartó per dispositius mòbils</td>
+    <td font-weight="bold">Visors de cartó per dispositius mòbils</td>
     <td>HMD per dispositius mòbils</td>
     <td>HMD autònoms</td>
     <td>HMD Connectats(tethered)</td>
