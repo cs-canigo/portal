@@ -38,7 +38,9 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 <dependencies>
 ```
 
-<div class="message warning">Si es requereix configurar un origen de dades JDBC es requereixen aquestes dependències</div>
+<div class="message warning"><br>
+Si es requereix configurar un origen de dades JDBC es requereixen aquestes dependències<br>
+</div>
 
 ```xml
 <properties>
