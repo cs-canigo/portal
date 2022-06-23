@@ -38,8 +38,10 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 <dependencies>
 ```
 
-<div class="message warning"><br>
-Si es requereix configurar un origen de dades JDBC es requereixen aquestes dependències<br>
+<div class="message warning">
+<br>Si es requereix configurar un origen de dades JDBC es requereixen aquestes dependències <br>
+  - commons-dbcp2 <br>
+  - commons-pool2 <br>
 </div>
 
 ```xml
@@ -156,8 +158,8 @@ Exemple del fitxer de configuració
 
   <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
     <description>Fem servir Hibernate com a motor de persistència per sota de JPA.</description>
-    <property name="showSql" value="true" />
-    <property name="generateDdl" value="false" />
+    <property name="showSql" value="${persistence.showSQL:true}" />
+    <property name="generateDdl" value="${persistence.generateDdl:false}" />
     <property name="database" value="${persistence.database}" />
     <property name="databasePlatform" value="${persistence.dialect}" />
   </bean>
