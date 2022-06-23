@@ -39,9 +39,9 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 ```
 
 <div class="message warning">
-<br>Si es requereix configurar un origen de dades JDBC es requereixen aquestes dependències <br>
+Si es requereix configurar un origen de dades JDBC es requereixen aquestes dependències <br><br>
   - commons-dbcp2 <br>
-  - commons-pool2 <br>
+  - commons-pool2
 </div>
 
 ```xml
