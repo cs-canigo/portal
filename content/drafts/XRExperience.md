@@ -122,7 +122,6 @@ Els HDM tenen moltes utilitats com per exemple els videojocs, l’aviació, l’
 #### **Visors o dispositius pel cap (HMD) per VR** 
 Els visors de realitat virtual són HDM combinats amb unitats de mesurament inercial (IMU), a més és necessita de l’aplicació de realitat virtual que divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
 
-<br>
 <table border="0" align="center">
   <tr>
     <td><strong>Visors de cartó per dispositius mòbils</strong></td>
@@ -174,7 +173,7 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 </table>
 <br>
 Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
-
+<br><br>
 
 #### **Altres dispositius per AR i MR** 
 <table border="0" align="center" >
