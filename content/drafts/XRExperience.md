@@ -52,6 +52,9 @@ El primer sistema de realitat virtual va venir al 1962 on Morton Heilig va crear
 
 Avui en dia, amb l'ajuda de la tecnologia, es pot gaudir d'experiències molt més reals i concretes que permeten la immersió de la persona, això és possible gràcies a la **realitat virtual** i la **realitat augmentada** o combinades, en un entorn mixt.
 
+<br>
+###### [Inici] (#TaulaContiguts)
+<br>
 
 ### **Realitat virtual (VR)** {#RealitatVirtual}
 La realitat virtual és la més àmpliament estesa. Amb la VR es necessari un dispositiu (que pot ser unes ulleres o un casc de realitat virtual), que bloqueja la visió del món exterior i es generen imatges (a través de l’ordinador o del mòbil) creant una sensació d’estar immersos i envoltats per un entorn tridimensional 360º  que reaccionarà al que s’està fent. 
@@ -88,6 +91,9 @@ La realitat mixta es pot trobar a les aplicacions de col·laboració més recent
 </div>
 <br>
 
+<br>
+###### [Inici] (#TaulaContiguts)
+<br>
 
 ## **Tecnologia XR** {#TecnologiaXR}
 
@@ -120,7 +126,6 @@ Els HDM tenen moltes utilitats com per exemple els videojocs, l’aviació, l’
 
 #### **Visors o dispositius pel cap (HMD) per VR** 
 Els visors de realitat virtual són HDM combinats amb unitats de mesurament inercial (IMU), a més és necessita de l’aplicació de realitat virtual que divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
-
 <table border="0" align="center">
   <tr>
     <td><strong>Visors de cartó per dispositius mòbils</strong></td>
@@ -172,7 +177,11 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 </table>
 <br>
 Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
-<br><br>
+<br>
+
+<br>
+###### [Inici] (#TaulaContiguts)
+<br>
 
 #### **Altres dispositius per AR i MR** 
 <table border="0" align="center" >
@@ -221,6 +230,10 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
 
 Certs dispositius permeten utilitzar les mans o gestos específics per obrir menús i executar aplicacions, però a hores d’ara, si es vol nivells de control i operacions molt exactes, la utilització de controladors de mà dona més precisió que les mans. 
 
+<br>
+###### [Inici] (#TaulaContiguts)
+<br>
+
 ### **Plataformes de programari XR** {#SFTXR}
 
 El programari és el que defineix les interaccions i les experiències dels mons que es superposen al món real per submergir-se en altres entorns digitals. <br><br>
@@ -243,6 +256,10 @@ C++, Java, JavaScript, Python i Swift.
 Per altra banda, s’ha de tenir en compte que qualsevol aplicació VR requereix d’un bon nivell de potència de computació. A la VR sempre hi ha moviment, ja que la imatge s'està emmascarant directament als ulls, això vol dir que són molt més sensibles a ella. Si la velocitat és lenta, els ulls ho perceben malament, i no només interfereix amb el sentit de realisme o presència, també pot fer sentir desorientat i marejat, per això es necessiten 60 FPS com a  mínim, i s’espera arribar fins i tot més ràpid de 120 FPS.
 <br><br>
 La latència també és un factor important a les aplicacions XR, ja que el maquinari ha de minimitzar qualsevol retard  entre el moviment del dispositiu i l'actualització de la imatge que es veu. Si hi ha un desajust entre l’oïda interna i els ulls, això condueix ràpidament al vertigen. Una velocitat de fotogrames ràpida i una baixa latència són molt més importants que la resolució de la imatge.
+<br>
+
+<br>
+###### [Inici] (#TaulaContiguts)
 <br>
 
 ## **Experiències XR** {#ExperienciesXR}
@@ -329,7 +346,9 @@ Algunes veus crítiques fins i tot, podrien dir que la majoria de les aplicacion
 * FeelReal’s multi-sensory mask (https://www.youtube.com/watch?v=0rLw2nFmGnc&t=102s)
 * Experiència gastronòmica (https://www.youtube.com/watch?v=PoAX52FiDOM)
 
-
+<br>
+###### [Inici] (#TaulaContiguts)
+<br>
 
 ## **Referències** {#Referencies}
 https://www.acta.es/medios/articulos/ciencias_y_tecnologia/063001.pdf <br>
