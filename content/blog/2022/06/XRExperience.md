@@ -1,7 +1,7 @@
 +++
 date        = "2022-06-22"
 title       = "XR Experiences"
-description = "La XR Experiences engloba  la realitat virtual, augmentada i mixta, i fa referència a la unió d'elements virtuals i reals, e interaccions humà-màquina gràcies a l'ús de determinats dispositius."
+description = "L’ús de la realitat virtual, augmentada i mixta ens permet viure experiències (“XR Experiences”) amb tots els sentits i poder interactuar amb els elements virtuals i reals gràcies a l’ús de determinats dispositius. "
 responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
 blog_tags   = ["computació espacial", "realitat virtual"]
