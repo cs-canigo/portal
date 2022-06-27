@@ -268,7 +268,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
     <td valign = "top">
       <strong>Entreteniment:</strong> 
       La indústria de l'entreteniment va ser de les primeres a adoptar i potenciar la XR, en  el sector dels videojocs i en parcs d'atraccions. Els usuaris poden obtenir experiències virtuals d'esdeveniments esportius i musicals utilitzant els seus visors de realitat virtual.
-      <br />
+      <br>
       <div align="center">
         <img src="/images/bloc/2022/06/Imatge15.jpg" />
       </div>
@@ -276,7 +276,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
     <td valign = "top">
       <strong>Indústria:</strong> 
       Son aplicacions XR creades per simular entorns perillosos o aplicacions de realitat augmentada per poder donar informació en temps real en espais reals. També ajuda a la reducció del treball manual per augmentar la productivitat empresarial.
-      <br />
+      <br>
       <div align="center">
         <img src="/images/bloc/2022/06/Imatge16.jpg" />
       </div>
@@ -286,7 +286,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
     <td valign = "top">
       <strong>Comerç:</strong> 
       La XR en aquesta categoria, hi ha la possibilitat de provar els productes virtualment abans de comprar-los, també permet afegir capes d'informació addicional   dels productes reals o inclús personalitzar-los.
-      <br />
+      <br>
       <div align="center">
         <img src="/images/bloc/2022/06/Imatge18.jpg" />
       </div>
@@ -294,7 +294,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
     <td valign = "top">
       <strong>Medicina:</strong> 
       Gràcies a la realitat mixta, els equips especialitzats, personal clínic i personal administratiu, poden col·laborar de manera remota. Així, poden realitzar consultes virtuals a pacients, reduir el temps de diagnòstic i de tractament. A més, és una eina molt útil per dur a terme simulacions d'operacions, per optimitzar al màxim el procés i els resultats de l'operació real en pacients.
-      <br />
+      <br>
       <div align="center">
         <img src="/images/bloc/2022/06/Imatge17.jpg" />
       </div>
@@ -304,7 +304,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
     <td valign = "top">
       <strong>Educació i formació:</strong> 
       La realitat ampliada obre noves vies per la formació i l'educació. Permet millorar els processos d'aprenentatge, l'efectivitat dels mateixos i la implicació dels alumnes. Mitjançant l'ús d'aquestes eines, els estudiants aprenen molt més ràpid i retenen millor els coneixements, i poden aprendre de manera efectiva, sense cap risc potencial d’accident, com per exemple: pilotar un avió.
-      <br />
+      <br>
       <div align="center">
         <img src="/images/bloc/2022/06/Imatge19.jpg" />
       </div>
@@ -312,7 +312,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
     <td valign = "top">
       <strong>Turisme:</strong> 
       La realitat ampliada permet oferir al viatger una experiència similar a la que tindria al lloc de destí. Així neixen les visites virtuals que permeten als viatgers aprendre sobre llocs més remots.
-      <br />
+      <br>
       <div align="center">
         <img src="/images/bloc/2022/06/Imatge20.jpg" />
       </div>
@@ -320,7 +320,6 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
   </tr>
 </table>
 <br>
-
 
 ### **Reptes XR** {#ReptesXR}
 Algunes aplicacions de realitat augmentada ja són part de la vida quotidiana, com per exemple les aplicacions de “Pokémon Go” o els filtres que s’utilitzen a diferents xarxes socials.<br>
