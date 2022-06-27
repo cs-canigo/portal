@@ -118,7 +118,6 @@ Per les experiències XR es necessita un dispositiu HMD (Head Mounted Display) q
 Poden mostrar imatges generades per ordinador, imatges del mon real o una combinació d’elles. <br>
 Els HDM tenen moltes utilitats com per exemple els videojocs, l’aviació, l’enginyeria o la medicina. <br><br> 
 
-
 #### **Visors o dispositius pel cap (HMD) per VR** 
 Els visors de realitat virtual són HDM combinats amb unitats de mesurament inercial (IMU), a més és necessita de l’aplicació de realitat virtual que divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
 
@@ -151,14 +150,14 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
       </div>
     </td>
   </tr>
-  <tr>
+  <tr valign = "top">
     <td>Construïts  de cartó plegable i dos lents, disposa d’un contenidor on s’encaixa el mòbil, que és el que proporciona la pantalla i els sensors de moviment.</td>
     <td>Disposen d’un contenidor per posar el  telèfon mòbil, que és el que proporciona la pantalla i els sensors de moviment.</td>
     <td>Disposen d’un visor i sensors integrats i el seu propi processador. <br>
         No necessiten  connexió amb cap altre dispositiu.</td>
     <td>Requereixen connexió física a un ordinador  o a una videoconsola per l’aplicació de VR. Disposen de les seves pròpies pantalles i sensors.</td>
   </tr>  
-  <tr>
+  <tr valign = "top">
     <td>El concepte de visor es redueix a la mínima expressió, requerint d’un mòbil i d’una aplicació VR. Permeten a l’usuari experimentar la realitat virtual de forma econòmica i accessible. </td>
     <td>Requereixen del mòbil i d’una aplicació de VR</td>
     <td>Menys prestacions que els HDM connectats, però hi ha més llibertat de moviments.</td>
@@ -205,7 +204,7 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
       </div>
     </td>
   </tr>
-  <tr>
+  <tr valign = "top">
     <td>Es tracta d’ulleres amb la capacitat i funcions necessàries perquè els usuaris puguin gaudir de la realitat augmentada.</td>
     <td>Les lents de les ulleres són parcialment transparents perquè l'usuari pugui veure l'entorn físic. <br> Amb l'ajuda d'un programari AR, els elements digitals poden projectar-se al camp de visió. </td>
     <td>És una pantalla transparent en la qual es projecta informació digital que millora la informació visual del món real.</td>
