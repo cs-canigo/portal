@@ -1,6 +1,6 @@
 +++
 date        = "2022-06-22"
-title       = "XR Experience"
+title       = "XR Experiences"
 description = "La XR Experiences engloba  la realitat virtual, augmentada i mixta, i fa referència a la unió d'elements virtuals i reals, e interaccions humà-màquina gràcies a l'ús de determinats dispositius."
 responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
@@ -12,7 +12,7 @@ key         = "JUNY2022"
 
 ---
 
-# **XR Experience**
+# **XR Experiences**
 
 ---
 
