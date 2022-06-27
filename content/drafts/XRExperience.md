@@ -124,11 +124,11 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 
 <br>
 <table border="0" align="center">
-  <tr font-weight="bold">
-    <td>Visors de cartó per dispositius mòbils</td>
-    <td>HMD per dispositius mòbils</td>
-    <td>HMD autònoms</td>
-    <td>HMD Connectats(tethered)</td>
+  <tr>
+    <td><strong>Visors de cartó per dispositius mòbils</strong></td>
+    <td><strong>HMD per dispositius mòbils</strong></td>
+    <td><strong>HMD autònoms</strong></td>
+    <td><strong>HMD Connectats(tethered)</strong></td>
   </tr>  
   <tr>
     <td align="center">
@@ -178,11 +178,11 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
 
 #### **Altres dispositius per AR i MR** 
 <table border="0" align="center" >
-  <tr font-weight="bold">
-    <td>Ulleres de AR</td>
-    <td>Dispositius MR</td>
-    <td>HUD Pantalla de visualització de dades</td>
-    <td>Dispositius amb funcions Hàptica</td>
+  <tr>
+    <td><strong>Ulleres de AR</strong></td>
+    <td><strong>Dispositius MR</strong></td>
+    <td><strong>HUD Pantalla de visualització de dades</strong></td>
+    <td><strong>Dispositius amb funcions Hàptica</strong></td>
   </tr>  
   <tr>
     <td align="center">
@@ -254,7 +254,7 @@ La XR disposa d’una àmplia gamma d'aplicacions al món, algunes de les quals,
 
 ### **Aplicacions reals i futures** {#AplicacionsRealsFutures}
 
-<table border="0" align="center">
+<table border="0">
   <tr>
     <td>
       <strong>Entreteniment:</strong> 
