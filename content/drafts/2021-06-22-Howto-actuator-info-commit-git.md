@@ -1,7 +1,7 @@
 +++
 date        = "2021-06-05"
 title       = "Canigó. Com exposar informació dels commits de Git mitjançant l'Actuator de Spring"
-description = "Com exposar la informació dels commits de Git mitjançant l'Actuator de Spring ."
+description = "Com exposar l'informació dels commits de Git mitjançant l'Actuator de Spring ."
 section     = "howtos"
 categories  = ["canigo"]
 key        = "JULIOL2021"
@@ -124,7 +124,7 @@ management:
 
 ## Funcionament
 
-Una vegada construïda i inciada l'aplicació, podem accedir via navegador web a l'endopoint info i ens mostrarà l'informació detallada de l'ùltim commit fet al Git:
+Una vegada construïda i iniciada l'aplicació, podem accedir via navegador web a l'endpoint info i ens mostrarà l'informació detallada de l'ùltim commit fet al Git:
 
 ![Acutator info amb Plugin commit Git Ejemplo 1](/images/howtos/2021-06-22-Howto-actuator-info-commit-git.jpg)
 
