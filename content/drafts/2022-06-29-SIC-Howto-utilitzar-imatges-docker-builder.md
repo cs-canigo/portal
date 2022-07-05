@@ -18,7 +18,7 @@ imatges dels builders del SIC en un entorn local, sent possible ajustar les limi
 RAM que permetin comprovar que els processos de compilació podran ser executats sense sobrepassar els límits
 disponibles i alhora permeti monitoritzar en temps real el consum de recursos.
 
-## Instal·lació motor de contenidors
+## Instal·lació del motor de contenidors
 
 Cal instal·lar l’eina de gestió de contenidors Podman seguint la següent guia:
 https://podman.io/getting-started/installation.
@@ -27,7 +27,10 @@ Si es vol monitoritzar l’ús de memòria i cpu en temps real amb Podman stats,
 https://sleeplessbeastie.eu/2021/09/10/how-to-enable-control-group-v2/
 
 Altres referències:
-https://www.cyberithub.com/how-to-install-podman-on-ubuntu-20-04-lts-step-by-step/
+
+- https://www.cyberithub.com/how-to-install-podman-on-ubuntu-20-04-lts-step-by-step/
+
+- https://phoenixnap.com/kb/podman-tutorial
 
 ## Ús del registre privat
 
@@ -55,10 +58,10 @@ Cal introduir l'usuari i paraula de pas proporcionats per l'Oficina Tècnica de 
 Un cop realitzada l’autenticació per línia de comandes, podem baixar-nos la imatge escollida mitjançant:
 
 ```bash
-podman pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+podman pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16
 ```
 
-On, en el cas d'exemple, estem descarregant-nos la imatge *mvn-builder* versió 1.0-3.6-8.
+On, en el cas d'exemple, estem descarregant-nos la imatge *node-builder* versió 1.0-16.
 
 ### Execució de les imatges
 
@@ -67,7 +70,7 @@ Un cop descarregada la imatge del builder, la podem executar en el nostre entorn
 ```bash
 podman run -it \
 --memory=3072m \
---memory-reservation=30720m \
+--memory-reservation=3072m \
 --memory-swap=3072m \
 --rm \
 --net=host \
@@ -75,7 +78,7 @@ podman run -it \
 -v $HOME/.m2/settings.xml:/mnt/nexus/settings.xml \
 -v $HOME/.npmrc:/app/.npmrc \
 -v $PWD:/app:U -w "/app" \
-docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-12 \
+docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16 \
 /bin/sh
 ```
 
@@ -168,7 +171,7 @@ Exemple:
 
 ```bash
 # S'utilitza una imatge base del SIC.
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-2.2-8
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
 
 # Es modifica el responsable de la imatge.
 LABEL maintainer="change.me@gencat.cat"
