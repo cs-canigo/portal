@@ -113,7 +113,7 @@ Per tal de monitoritzar el consum de recursos en temps real, es pot executar la 
 podman stats
 ```
 
-![Podman stats](/related/sic/3.0/podman-stats-monitoring.png)
+<center>![Podman stats](/related/sic/3.0/podman-stats-monitoring.png)</center>
 </br>
 
 ### Generar fitxer de log
