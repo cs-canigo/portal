@@ -46,7 +46,7 @@ https://git.intranet.gencat.cat/0192-intern/sic-builders.
 
 ## Ús del registre privat
 
-Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2021-07-13-SIC-Howto-utilitzar-imatges-docker-builder).
+Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2022-07-06-SIC-Howto-utilitzar-imatges-docker-builder).
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>

@@ -52,7 +52,7 @@ Per a més informació, podeu consultar els següents articles:
 
 - [Servei d'Integració contínua](/sic30-serveis/ci/)
 - [Catàleg d'imatges builder](/sic30-serveis/cataleg-imatges/)
-- [Com utilitzar imatges Docker Builder](/howtos/2021-07-13-SIC-Howto-utilitzar-imatges-docker-builder/)
+- [Com utilitzar imatges Docker Builder](/howtos/2022-07-06-SIC-Howto-utilitzar-imatges-docker-builder/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 
 <br/><br/>
