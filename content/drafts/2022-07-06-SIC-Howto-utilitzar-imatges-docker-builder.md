@@ -1,5 +1,5 @@
 +++
-date        = "2022-06-29"
+date        = "2022-07-06"
 title       = "SIC 3.0 - Utilitzar imatges Docker Builder"
 description = "SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció"
 #section     = "howtos"
@@ -16,14 +16,14 @@ l’entorn d’execució del SIC**.
 Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de simular i executar les
 imatges dels builders del SIC en un entorn local, sent possible ajustar les limitacions en recursos de memòria
 RAM que permetin comprovar que els processos de compilació podran ser executats sense sobrepassar els límits
-disponibles i alhora permeti monitoritzar en temps real el consum de recursos.
+disponibles i alhora permeti monitorar en temps real el consum de recursos.
 
 ## Instal·lació del motor de contenidors
 
 Cal instal·lar l’eina de gestió de contenidors Podman seguint la següent guia:
 https://podman.io/getting-started/installation.
 
-Si es vol monitoritzar l’ús de memòria i cpu en temps real amb Podman stats, cal activar *Control Group v2*:
+Si es vol monitorar l’ús de memòria i cpu en temps real amb Podman stats, cal activar *Control Group v2*:
 https://sleeplessbeastie.eu/2021/09/10/how-to-enable-control-group-v2/
 
 Altres referències:
@@ -39,7 +39,7 @@ d'imatges, el codi font, la documentació associada i el procediment per a dispo
 
 ### Accés via consola web
 
-Es pot accedir al Harbor a través de la seva consola web mitjançant: <https://docker-registry.ctti.extranet.gencat.cat>.
+Es pot accedir al catàleg a través de la seva consola web mitjançant: <https://docker-registry.ctti.extranet.gencat.cat>.
 Un cop dins es pot navegar a través de les carpetes de les imatges del projecte
 [**gencat-sic-builders**](https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories).
 
@@ -85,7 +85,8 @@ docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16
 En aquest cas estem indicant què volem:
 
 - Que s'assignin 3GB de memòria al procès. **Els valors de –memory, –memory-reservation i –memory-swap han de coincidir
-amb el límit màxim especificat al fitxer `aca.yml`, i concretament la secció `components[].build.steps[].container.resources.limits.memory`.
+amb el límit màxim especificat al fitxer `aca.yml`**, i concretament a la secció
+`components[].build.steps[].container.resources.limits.memory`.
 
 - Que s'utilitzi el controlador `Host` de Podman per a compartir la xarxa del host.
 
@@ -95,31 +96,31 @@ amb el límit màxim especificat al fitxer `aca.yml`, i concretament la secció 
 
 En aquest punt, s’obrirà un shell des d’on executar manualment les comandes del builder especificades al fitxer `aca.yml`.
 
-Podeu finalitzar l’execució del contenidor amb:
+<div class="message warning">
+Podman gestionarà els permisos i propietat del volum compartit, que és la carpeta on resideix el codi de l’aplicacíó (/app dins el contenidor),
+per tant, en acabar l’execució del contenidor, haureu de restablir els permisos.
+</div>
+
+Podeu finalitzar l’execució del contenidor mitjançant la següent comanda:
 ```bash
 $ exit
 ```
 
-<div class="message warning">
-Podman gestionarà els permisos i propietat del volum compartit, que és la carpeta on resideix el codi de l’aplicacíó (/app dins el contenidor),
-per tant en acabar l’execució del contenidor, haureu de restablir els permisos.
-</div>
+### Monitoratge del consum de recursos
 
-### Monitorització consum de recursos
-
-Per tal de monitoritzar el consum de recursos en temps real, es pot executar la següent comanda en un terminal addicional:
+Per tal de monitorar el consum de recursos en temps real, es pot executar la següent comanda en un terminal addicional:
 
 ```bash
 podman stats
 ```
 
-<center>![Podman stats](/related/sic/3.0/podman-stats-monitoring.png)</center>
+![Podman stats](/related/sic/3.0/podman-stats-monitoring.png)
 </br>
 
 ### Generar fitxer de log
 
-En cas que s’hagi de reportar un problema a l’equip del SIC és recomanable executar les comandes de compilació
-activant un nivell de verbositat adient, i generar un fitxer de log mitjançant:
+En cas que s’hagi de reportar un problema, es recomana executar les comandes de compilació activant un nivell de
+verbositat adient i generar un fitxer de log. Per exemple:
 
 ```bash
 podman logs -t -l > ~/log-builder-sic.log
@@ -129,7 +130,7 @@ Per a més informació: https://docs.podman.io/en/latest/markdown/podman-logs.1.
 
 ### Logout
 
-Si volem desconnectar-nos del Harbor, serà necessari realitzar un logout mitjançant:
+Si volem desconnectar-nos, serà necessari realitzar un logout mitjançant:
 
 ```bash
 podman logout https://docker-registry.ctti.extranet.gencat.cat
