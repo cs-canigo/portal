@@ -33,25 +33,19 @@ La configuració sería la següent:
 ### Plugin al fitxer `pom.xml`
 
 ```xml
-
+    <plugins>
+      ...
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>pl.project13.maven</groupId>
+        <artifactId>git-commit-id-plugin</artifactId>
         <configuration>
-          <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
-          <arguments>
-            <argument>--spring.profiles.active=loc</argument>
-          </arguments>
+          <offline>true</offline>
+          <abbrevLength>40</abbrevLength>
+          <failOnNoGitDirectory>false</failOnNoGitDirectory>
+          <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
         </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>build-info</goal>
-            </goals>
-          </execution>
-		</executions>
       </plugin>
-
+    </plugins>
 ```
 
 ### Funcionament
@@ -61,13 +55,11 @@ Executant la comanda `mvn clean package` el plugin generarà el fitxer ** ./targ
 Exemple de fitxer `build-info.properties`
 
 ```properties
-
-    build.artifact=Canigo36WebRest
-    build.group=cat.gencat.canigo36webrest
-    build.name=Nom del projecte de tipus Canig\u00F3 REST
-    build.time=2022-07-04T10\:25\:01.770Z
-    build.version=1.0.0
-
+  build.artifact=TestCanigo
+  build.group=cat.gencat.testcanigo
+  build.name=Nom del projecte
+  build.time=2022-07-04T10\:25\:01.770Z
+  build.version=1.0.0
 ```
 
 ## Actuator de spring-boot
@@ -77,7 +69,6 @@ Per a fer servir la llibreria `spring-boot-starter-actuator` és necessari afegi
 ### Dependència al fitxer `pom.xml`
 
 ```xml
-
   <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-actuator</artifactId>
@@ -88,7 +79,6 @@ Per a fer servir la llibreria `spring-boot-starter-actuator` és necessari afegi
       </exclusion>
     </exclusions>
   </dependency>
-
 ```
 
 ### Configuració al fitxer `application.yml`
@@ -96,7 +86,6 @@ Per a fer servir la llibreria `spring-boot-starter-actuator` és necessari afegi
 La llibreria ofereix diferents endpoints amb molta informació. Al nostre cas només configurarem l'endpoint `info`:
 
 ```yml
-
 management:
   endpoints:
     web:
@@ -107,7 +96,6 @@ management:
       mode: full
       enabled: true
 ```
-
 
 ## Funcionament
 
