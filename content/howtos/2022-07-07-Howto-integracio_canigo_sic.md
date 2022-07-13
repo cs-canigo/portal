@@ -46,14 +46,14 @@ Inicialitzem l'aplicació com a repositori Git i pugem el codi font:
 
 Podeu consultar les guies proporcionades per a la integració d'aplicacions al SIC en funció de la versió del servei:
 
-- SIC 2.0:
+- **SIC 2.0**:
     * [Com preparar una aplicació per desplegar-la automàticament](/sic20-guies/preparar-aplicacio/)
     * [Com construir el fitxer ACA](/sic20-guies/fitxer-aca/)
 
-- SIC 3.0:
-    * [SIC 3.0 i procés de transició](/sic-serveis/sic20-sic30/).
+- **SIC 3.0**:
     * [Com preparar una aplicació per desplegar-la automàticament](/sic30-guies/preparar-aplicacio/)
     * [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
+    * [SIC 3.0 i procés de transició](/sic-serveis/sic20-sic30/)
 
 ### Automatitzar la versió (opcional)
 

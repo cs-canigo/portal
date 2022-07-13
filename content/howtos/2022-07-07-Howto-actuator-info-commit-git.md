@@ -1,17 +1,17 @@
 +++
-date        = "2022-07-06"
-title       = "Canigó. Com exposar informació dels commits de Git mitjançant l'actuator de Spring"
+date        = "2022-07-07"
+title       = "Canigó. Exposar informació dels commits de Git"
 description = "Com exposar informació dels commits de Git mitjançant l'actuator de Spring"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "AGOST2022"
 +++
 
-
 ## Introducció
 
 [Spring Boot](https://spring.io/projects/spring-boot) inclou una sèrie de funcions addicionals per a ajudar a supervisar i
 gestionar les aplicacions.
+
 L'objectiu d'aquest article és **mostrar l'ús del servei info de l'*actuator* de Spring per a exposar
 la informació dels commits efectuats al Git**.
 
@@ -27,7 +27,7 @@ detallada de l'últim commit efectuat al Git,
 l'http endpoint *info* que proporciona informació que ens servirà per a identificar el servei.
 
 A continuació s'explica com configurar i fer ús d'aquests dos components per a exposar aquesta informació i així permetre
-a l'usuari identificar el codi desplegat.
+a l'usuari identificar el codi desplegat en cada moment.
 
 ## Plugin git commit id
 
@@ -36,7 +36,7 @@ a l'usuari identificar el codi desplegat.
 Per a fer servir el [_plugin git commit_](https://github.com/git-commit-id/git-commit-id-maven-plugin/blob/master/docs/using-the-plugin.md)
 serà necessari afegir-lo al fitxer `pom.xml` de l'aplicació.
 Per defecte, el _plugin_ cercarà informació al repositori Git remot, però si falla o no està disponible el servei, la construcció
-acabarà amb error. Per a evitar això, es recomana aplicar la configuració següent:
+acabarà amb error. Per a evitar això, es recomana aplicar la següent configuració:
 
 ```xml
   <plugin>
@@ -133,7 +133,7 @@ a l'entorn.
 
 ## Referències
 
-Per a més informació podeu consultar:
+Per a més informació, podeu consultar:
 
  * [Plugin git commit id](https://github.com/git-commit-id/git-commit-id-maven-plugin/blob/master/docs/using-the-plugin.md)
  * [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints)
