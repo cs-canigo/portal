@@ -1,7 +1,7 @@
 +++
 date = "2022-07-07"
 title = "Integració d'una aplicació Canigó a SIC"
-description = "Integració d'una aplicació Canigó a SIC"
+description = "Com integrar una aplicació Canigó 3.x a Sistema d'Integració Contínua (SIC)"
 section = "howtos"
 categories = ["canigo"]
 key = "AGOST2022"
@@ -27,11 +27,13 @@ ignori les parts que no s'han de sincronitzar amb el Git.
 Per exemple:
 
 	target/
-	
-Habitualment, a més de la carpeta de sortida de la compilació, també s'ignoren recursos propis de l'IDE de
-desenvolupament (Eclipse, NetBeans, IntelliJ, ...).
 
-Inicialitzem l'aplicació com a repositori Git i pugem el codi:
+<div class="message information">
+A més de la carpeta de sortida de la compilació, es recomana ignorar també recursos propis de l'IDE de desenvolupament
+(Eclipse, NetBeans, IntelliJ, etc).
+</div>
+
+Inicialitzem l'aplicació com a repositori Git i pugem el codi font:
 
 	-- cal posicionar-se a l'arrel de l'aplicació
 	git init
@@ -49,24 +51,22 @@ Podeu consultar les guies proporcionades per a la integració d'aplicacions al S
     * [Com construir el fitxer ACA](/sic20-guies/fitxer-aca/)
 
 - SIC 3.0:
+    * [SIC 3.0 i procés de transició](/sic-serveis/sic20-sic30/).
     * [Com preparar una aplicació per desplegar-la automàticament](/sic30-guies/preparar-aplicacio/)
     * [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 
-Podeu consultar els detalls de la nova solució SIC 3.0, el procés de transició i els principals canvis en l'operativa
-al següent article: [SIC 3.0 i procés de transició](/sic-serveis/sic20-sic30/).
-
-### Automatitzar el descriptor `sic.yml` (opcional)
+### Automatitzar la versió (opcional)
 
 En qualsevol versió del servei (2.0 i 3.0), és possible automatitzar el descriptor `sic.yml` per a evitar haver d'indicar manualment la
 versió de l'aplicació que es desplega en cada moment. Aquesta versió serà la versió amb la qual s'etiquetarà el codi font
 un cop superada l'etapa de construcció. Per tant, es recomana automatitzar-ho perquè agafi la versió del projecte _Maven_
 com es mostra a continuació:
 
-- Cal crear el fitxer `src/main/resources/sic.yml` amb el següent contingut:
+Cal crear el fitxer `src/main/resources/sic.yml` amb el següent contingut:
 
 	version: ${project.version}
 	
-- Cal afegir el plugin `maven-resources-plugin` al fitxer `pom.xml` de l'aplicació amb la següent configuració:
+Cal afegir el plugin `maven-resources-plugin` al fitxer `pom.xml` de l'aplicació amb la següent configuració:
 
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
@@ -96,7 +96,6 @@ com es mostra a continuació:
 		</executions>
 	</plugin>
 
-D'aquesta manera, quan es construeixi l'aplicació, automàticament s'establirà la versió al fitxer `/sic/sic.yml`
+D'aquesta manera, quan es construeixi l'aplicació automàticament s'establirà la versió al fitxer `/sic/sic.yml`
 assegurant la coherència i es minimitzarà el risc d'error per tag existent.
-
 **A partir de la versió 3.2.3 de Canigó, aquesta configuració ja es troba incorporada a la plantilla** que genera el plugin d'Eclipse.
