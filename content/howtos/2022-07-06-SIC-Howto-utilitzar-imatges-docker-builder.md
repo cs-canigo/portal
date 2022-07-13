@@ -2,9 +2,9 @@
 date        = "2022-07-06"
 title       = "SIC 3.0 - Utilitzar imatges Docker Builder"
 description = "SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció"
-#section     = "howtos"
-#categories  = ["SIC"]
-#key        = "AGOST2022"
+section     = "howtos"
+categories  = ["SIC"]
+key         = "AGOST2022"
 +++
 
 ## Introducció
