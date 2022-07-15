@@ -1,0 +1,27 @@
+version: 2.0.0
+info:
+  version: 1.3.0
+  description: Api Manager
+global-env:
+  - APIC_PRODUCT_FILE: 'apim-descriptor.yaml'
+components:
+  - deployment:
+      environments:
+        - name: des
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_PLAN_MAP: 'new-plan:new-plan'
+        - name: public
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_PLAN_MAP: 'new-plan:new-plan'
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat

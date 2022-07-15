@@ -1,26 +1,40 @@
 version: 2.0.0
 info:
-  version: 1.3.0
-  description: Api Manager
+  version: 1.0.0
+  description: Api Connect Product
 global-env:
-  - APIC_PRODUCT_FILE: 'apim-descriptor.yaml'
+  - APIC_PRODUCT_FILE: 'product.yml'
 components:
   - deployment:
       environments:
-        - name: des
+        - name: privat_pre
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_PLAN_MAP: 'new-plan:new-plan'
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pre'
+        - name: public_pre
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pre'
+        - name: privat
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pro'
         - name: public
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_PLAN_MAP: 'new-plan:new-plan'
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pro'
 notifications:
   email:
     recipients:
