@@ -28,7 +28,7 @@ detallada de construcció de l'aplicació extreta del fitxer POM (Project Object
 l'http endpoint *info* que proporciona informació que ens servirà per a identificar el servei.
 
 A continuació s'explica com configurar i fer ús d'aquests dos components per a exposar aquesta informació i així permetre
-a l'usuarim, per exemple, identificar la versió desplegada en cada moment.
+a l'usuari, per exemple, identificar la versió desplegada en cada moment.
 
 ## Plugin spring-boot-maven-plugin
 
