@@ -1,5 +1,5 @@
 +++
-date        = "2022-06-13"
+date        = "2022-07-21"
 title       = "Llistat de canvis"
 description = "Llistat de canvis Canigó 3.6.5"
 sections    = "canigo-fwk-docs"
@@ -9,9 +9,15 @@ aliases = [
 weight      = 1
 +++
 
-#### Canigó 3.6.5 (13/06/2022)
+#### Canigó 3.6.5 (21/07/2022)
 
 <br>
+
+**21/07/2022**:
+
+- [Actualització client SARCAT/PICA](/noticies/2022-07-21-CAN-actualitzacio-canigo-integration-sarcat-pica-3_0_6/)
+   - S'agreguen 4 atributs (tipusDocumentIdentificatiu, documentIdentificatiu, paisEmisor, observacions) a l'esquema: `AltaAssentaments.xsd` i a les classes: `AssentamentEntradaInfo.java` i `AssentamentSortidaInfo.java` que s'utilitzen com a paràmetres d'entrada de les operacions: `insertarAssentamentEntrada` i `insertarAssentamentSortida`
+
 **13/06/2022**:
 
 - [Actualització del mòdul d'enviament de correus per a permetre configurar paràmetres dinàmics](/noticies/2022-06-13-CAN-actualitzacio-canigo-mailing-3_0_5)

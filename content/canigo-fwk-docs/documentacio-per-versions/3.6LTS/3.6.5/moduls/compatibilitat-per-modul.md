@@ -122,7 +122,7 @@ weight      = 1
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.support.sftp                               		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.sarcat.pica**                 		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sarcat.pica/3.0.5/) |
+| **canigo.integration.sarcat.pica**                 		| [3.0.6](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sarcat.pica/3.0.6/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|

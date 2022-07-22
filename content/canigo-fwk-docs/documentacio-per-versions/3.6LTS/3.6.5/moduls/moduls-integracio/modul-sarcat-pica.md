@@ -90,44 +90,87 @@ Controller que publica les operacions disponibles per a qui hagi de consumir-les
 ```java
 import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.SarcatConnector;
 import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException;
+import net.gencat.scsp.esquemes.peticion.alta.SarcatAlAltaResponse;
 import net.gencat.scsp.esquemes.peticion.common.OrdreCerca;
 import net.gencat.scsp.esquemes.peticion.common.TipusAssentament;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca.ParametresCerca;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentInfo;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.List;
 
 @Service("sarcatClientService")
 @Lazy
 public class SarcatService {
   private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
+
   @Inject
   @Named("sarcatService")
   private SarcatConnector sarcatConnector;
 
-  public AssentamentInfo cercaAssentaments(String urusuari) {
+  public SarcatAlAltaResponse insertarAssentamentEntrada(
+    Long numPK, String dataPresentacio, String dataDocument, String urCodi, String assumpte, String idPoblacio,
+    Long idCentre, String nom, String cognom1, String cognom2, Long tipusDocumentIdentificatiu,
+    String documentIdentificatiu, String observacions
+  ) {
     try {
-      var dataAvui = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-      ParametresCerca params = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createAssentamentCercaParametresCerca();
-      params.setDataInici(dataAvui);
-      params.setDataFinal(dataAvui);
+      var request = new net.gencat.scsp.esquemes.peticion.alta.ObjectFactory().createSarcatAlAltaRequest();
+      var info = new net.gencat.scsp.esquemes.peticion.alta.ObjectFactory().createAssentamentEntradaInfo();
+
+      request.setUrUsuari(urCodi);
+      info.setAnyPK(Long.parseLong(new SimpleDateFormat("yyyy").format(new Date())));
+      info.setNumPK(numPK);
+      info.setDataPresentacio(dataPresentacio);
+      info.setDataDocument(dataDocument);
+      info.setCodiURPK(urCodi);
+      info.setAssumpte(assumpte);
+      info.setIdTipusTramesa(1);
+      info.setIdPoblacioProc(idPoblacio);
+      info.setIdPoblacioDest(idPoblacio);
+      info.setIdCentreDestInterna(idCentre);
+      info.setIdViaPresentacio(5);
+      info.setIdSuportFisic(3L);
+      info.setIdDocument(1L);
+      info.setNom(nom);
+      info.setCognom1(cognom1);
+      info.setCognom2(cognom2);
+      info.setTipusDocumentIdentificatiu(tipusDocumentIdentificatiu);
+      info.setDocumentIdentificatiu(documentIdentificatiu);
+      info.setObservacions(observacions);
+
+      request.setAssentamentEntrada(List.of(info));
+
+      return sarcatConnector.insertarAssentamentEntrada(request);
+    } catch (SarcatException e) {
+      log.error(e.getMessage(), e);
+    }
+    return null;
+  }
+
+  public List<SarcatAlConsultaResponse.Assentament> cercaAssentaments(String user) {
+    try {
+      var dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+      var params = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createAssentamentCercaParametresCerca();
+      params.setDataInici(LocalDateTime.now().minusYears(10).format(dateTimeFormatter));
+      params.setDataFinal(LocalDateTime.now().format(dateTimeFormatter));
 
       var cerca = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createAssentamentCerca();
       cerca.setParametresCerca(params);
-      cerca.setUrUsuari(urusuari);
+      cerca.setUrUsuari(user);
       cerca.setOrdreCerca(OrdreCerca.DATA_ALTA);
       cerca.setTipus(TipusAssentament.ENTRADA);
       cerca.setDescendent(true);
 
       var request = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createSarcatAlConsultaRequest();
       request.setAssentamentCerca(cerca);
-      return sarcatConnector.cercaAssentaments(request).getAssentamentConsultaRetorn();
+      return sarcatConnector.cercaAssentaments(request).getAssentament();
     } catch (SarcatException e) {
       log.error(e.getMessage(), e);
     }
@@ -136,31 +179,41 @@ public class SarcatService {
 }
 ```
 
-**SarcatServiceController.java**
+**SarcatController.java**
 
 Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
 ```java
-import io.swagger.annotations.Api;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentInfo;
+import net.gencat.scsp.esquemes.peticion.alta.SarcatAlAltaResponse;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponse;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.List;
 
-@Api(tags = {"canigo-sarcat-test"})
 @RestController
 @RequestMapping("/sarcat")
-public class SarcatServiceController {
+public class SarcatClientController {
   @Inject
   @Named("sarcatClientService")
   private SarcatService sarcatService;
 
-  @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-  public AssentamentInfo testSarcat(String urusuari) {
-    return sarcatService.cercaAssentaments(urusuari);
+  @GetMapping(value ="insertarAssentamentEntrada", produces = { MediaType.APPLICATION_JSON_VALUE })
+  public SarcatAlAltaResponse insertarAssentamentEntrada(
+    Long numPK, String dataPresentacio, String dataDocument, String urCodi, String assumpte, String idPoblacio, Long idCentre, 
+    String nom, String cognom1, String cognom2, Long tipusDocumentIdentificatiu, String documentIdentificatiu, String observacions
+  ) {
+    return sarcatService.insertarAssentamentEntrada(numPK, dataPresentacio, dataDocument, urCodi, assumpte, idPoblacio, idCentre, nom, cognom1,
+      cognom2, tipusDocumentIdentificatiu, documentIdentificatiu, observacions);
+  }
+
+  @GetMapping(value ="cercaAssentaments", produces = { MediaType.APPLICATION_JSON_VALUE })
+  public List<SarcatAlConsultaResponse.Assentament> cercaAssentaments(String user) {
+    return sarcatService.cercaAssentaments(user);
   }
 }
 ```

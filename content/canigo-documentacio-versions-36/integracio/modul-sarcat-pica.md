@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2022-07-21"
 title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -25,7 +25,7 @@ insertarAssentamentEntrada        | Es registra l'assentament d'entrada i retorn
 insertarAssentamentSortida        | Es registra l'assentament de sortida i retorna el número d'assentament assignat i la data de registre.                  | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_SORTIDA
 insertarAssentamentSafata         | Donada la informació d'assentaments d'entrada, els grava i retorna el número de registre de cadascun. Addicionalment comprova la validesa de la destinació externa respecte l'unitat de registre associada a l'assentament.                                                                                            | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_SAFATA
 insertarAssentamentPresortida     | Donada la informació X d'assentaments de presortida, els grava i retorna el número de registre de cadascun.             | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_PRESORTIDA
-numExp 							  | Permet modificar el número d'expedient prèviament assignat a un assentament d'entrada o sortida realitzat.              | SARCAT_AL_MODIFICACIO |  OP_CANVI_NUM_EXPEDIENT
+numExp  | Permet modificar el número d'expedient prèviament assignat a un assentament d'entrada o sortida realitzat.              | SARCAT_AL_MODIFICACIO |  OP_CANVI_NUM_EXPEDIENT
 getNumsRegistre                   | Permet obtenir un conjunt de números d'assentaments que són reservats per s@rcat de manera exclusiva pel Backoffice que fa la sol- licitud.                                                                                                                                                                             | SARCAT_AL_RESERVA     |  OP_GET_NUM_REGISTRE
 cercaAssentamentsHist             | Permet obtenir totes les dades d'un assentament que ha passat pel repositori d'històrics d'assentaments de S@rcat.      | SARCAT_AP_HISTORIC    |  OP_CERCA_ASSENTAMENT_HISTORIC
 baixaAssentament                  | Permet donar de baixa assentaments d'entrada, sortida o presortida prèviament realitzats.                               | SARCAT_AL_BAIXA       |  OP_BAIXA_ASSENTAMENTS
@@ -39,11 +39,18 @@ llistarTaulaMestra                | Recuperació de codis o valors possibles per
 Per tal d'instal-lar el mòdul de Sarcat Pica es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```xml
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.sarcat.pica</artifactId>
-    <version>${canigo.integration.sarcat.pica.version}</version>
-</dependency>
+  <properties>
+    ...
+    <canigo.integration.sarcat.pica.version>[3.0.0,3.1.0)</canigo.integration.sarcat.pica.version>
+  </properties>
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>cat.gencat.ctti</groupId>
+      <artifactId>canigo.integration.sarcat.pica</artifactId>
+      <version>${canigo.integration.sarcat.pica.version}</version>
+    </dependency>
+  </dependencies>
 ```
 
 A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
@@ -54,17 +61,17 @@ La configuració es realitza automàticament a partir de la eina de suport al de
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/sarcat.properties
 
-Propietat           | Requerit | Descripció
-------------------- | -------- | ----------
-*.sarcat.urlPica	 | Sí       | Url del WebService de Sarcat. Valor per defecte: http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
-*.sarcat.user       | Sí       | Usuari de Sarcat
-*.sarcat.password   | Sí       | Password de l'usuari de Sarcat
-*.sarcat.finalitat  | Sí       | Finalitat de l'ús del servei (TEST, PRODUCTIU...)
-*.sarcat.nifEmisor | Sí       | Nif de l'emissor
+Propietat                | Requerit | Descripció
+------------------------ | -------- | ----------
+*.sarcat.urlPica         | Sí       | Url del WebService de Sarcat. Valor per defecte: http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
+*.sarcat.user            | Sí       | Usuari de Sarcat
+*.sarcat.password        | Sí       | Password de l'usuari de Sarcat
+*.sarcat.finalitat       | Sí       | Finalitat de l'ús del servei (TEST, PRODUCTIU...)
+*.sarcat.nifEmisor       | Sí       | Nif de l'emissor
 *.sarcat.nomEmisor       | Sí       | Nom de l'emissor
 *.sarcat.nomFuncionari   | Sí       | Nom del funcionari
-*.sarcat.nifFuncionari  | Sí       | Nif del funcionari
-*.sarcat.emailFuncionari  | Sí       | Email del funcionari
+*.sarcat.nifFuncionari   | Sí       | Nif del funcionari
+*.sarcat.emailFuncionari | Sí       | Email del funcionari
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
@@ -81,96 +88,132 @@ Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
 Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
 ```java
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Service;
-
 import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.SarcatConnector;
 import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException;
+import net.gencat.scsp.esquemes.peticion.alta.SarcatAlAltaResponse;
 import net.gencat.scsp.esquemes.peticion.common.OrdreCerca;
 import net.gencat.scsp.esquemes.peticion.common.TipusAssentament;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca.ParametresCerca;
-import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaRequestDocument;
-import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaRequestDocument.SarcatAlConsultaRequest;
-import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponseDocument.SarcatAlConsultaResponse;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.List;
 
-@Service("sarcatService")
+@Service("sarcatClientService")
 @Lazy
 public class SarcatService {
+  private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
 
-	private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
+  @Inject
+  @Named("sarcatService")
+  private SarcatConnector sarcatConnector;
 
-	@Autowired
-    private SarcatConnector sarcatConnector;
-    
+  public SarcatAlAltaResponse insertarAssentamentEntrada(
+    Long numPK, String dataPresentacio, String dataDocument, String urCodi, String assumpte, String idPoblacio,
+    Long idCentre, String nom, String cognom1, String cognom2, Long tipusDocumentIdentificatiu,
+    String documentIdentificatiu, String observacions
+  ) {
+    try {
+      var request = new net.gencat.scsp.esquemes.peticion.alta.ObjectFactory().createSarcatAlAltaRequest();
+      var info = new net.gencat.scsp.esquemes.peticion.alta.ObjectFactory().createAssentamentEntradaInfo();
 
+      request.setUrUsuari(urCodi);
+      info.setAnyPK(Long.parseLong(new SimpleDateFormat("yyyy").format(new Date())));
+      info.setNumPK(numPK);
+      info.setDataPresentacio(dataPresentacio);
+      info.setDataDocument(dataDocument);
+      info.setCodiURPK(urCodi);
+      info.setAssumpte(assumpte);
+      info.setIdTipusTramesa(1);
+      info.setIdPoblacioProc(idPoblacio);
+      info.setIdPoblacioDest(idPoblacio);
+      info.setIdCentreDestInterna(idCentre);
+      info.setIdViaPresentacio(5);
+      info.setIdSuportFisic(3L);
+      info.setIdDocument(1L);
+      info.setNom(nom);
+      info.setCognom1(cognom1);
+      info.setCognom2(cognom2);
+      info.setTipusDocumentIdentificatiu(tipusDocumentIdentificatiu);
+      info.setDocumentIdentificatiu(documentIdentificatiu);
+      info.setObservacions(observacions);
 
-	public String testSarcat(){
-		
-		String message;
+      request.setAssentamentEntrada(List.of(info));
 
-		try {
-
-            SarcatAlConsultaRequestDocument document = SarcatAlConsultaRequestDocument.Factory.newInstance();
-            SarcatAlConsultaRequest request = document.addNewSarcatAlConsultaRequest();
-
-            AssentamentCerca cerca = request.addNewAssentamentCerca();
-            ParametresCerca params =  cerca.addNewParametresCerca();
-            params.setDataInici("09/03/2011");
-            params.setDataFinal("10/03/2011");
-            cerca.setParametresCerca(params);
-            cerca.setUrUsuari("0001");
-            cerca.setOrdreCerca(OrdreCerca.DATA_ALTA);
-            cerca.setTipus(TipusAssentament.ENTRADA);
-               cerca.setDescendent(true);
-
-            SarcatAlConsultaResponse resposta = sarcatConnector.cercaAssentaments(document).getSarcatAlConsultaResponse();
-
-	        if (resposta.getError().getCodi() != 0) {
-	        	message = "Test amb errors: " + resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio();
-	        	log.error(resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio());
-	        } else {
-	            message = "Test correcte: " + resposta.getAssentamentArray().length;
-	        }
-	
-	    } catch (SarcatException e) {
-	    	message = "Test erròni: " + e.getMessage();
-	        log.error(e.getMessage(), e);
-	    }
-        
-        return message;
+      return sarcatConnector.insertarAssentamentEntrada(request);
+    } catch (SarcatException e) {
+      log.error(e.getMessage(), e);
     }
-	
+    return null;
+  }
+
+  public List<SarcatAlConsultaResponse.Assentament> cercaAssentaments(String user) {
+    try {
+      var dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+      var params = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createAssentamentCercaParametresCerca();
+      params.setDataInici(LocalDateTime.now().minusYears(10).format(dateTimeFormatter));
+      params.setDataFinal(LocalDateTime.now().format(dateTimeFormatter));
+
+      var cerca = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createAssentamentCerca();
+      cerca.setParametresCerca(params);
+      cerca.setUrUsuari(user);
+      cerca.setOrdreCerca(OrdreCerca.DATA_ALTA);
+      cerca.setTipus(TipusAssentament.ENTRADA);
+      cerca.setDescendent(true);
+
+      var request = new net.gencat.scsp.esquemes.peticion.consulta.ObjectFactory().createSarcatAlConsultaRequest();
+      request.setAssentamentCerca(cerca);
+      return sarcatConnector.cercaAssentaments(request).getAssentament();
+    } catch (SarcatException e) {
+      log.error(e.getMessage(), e);
+    }
+    return null;
+  }
 }
 ```
 
-**SarcatServiceController.java**
+**SarcatController.java**
 
 Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
 ```java
-import org.springframework.beans.factory.annotation.Autowired;
+import net.gencat.scsp.esquemes.peticion.alta.SarcatAlAltaResponse;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponse;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import cat.gencat.plantilla32.service.SarcatService;
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.util.List;
 
 @RestController
 @RequestMapping("/sarcat")
-public class SarcatServiceController {
+public class SarcatClientController {
+  @Inject
+  @Named("sarcatClientService")
+  private SarcatService sarcatService;
 
-	@Autowired
-	SarcatService sarcatService;
+  @GetMapping(value ="insertarAssentamentEntrada", produces = { MediaType.APPLICATION_JSON_VALUE })
+  public SarcatAlAltaResponse insertarAssentamentEntrada(
+    Long numPK, String dataPresentacio, String dataDocument, String urCodi, String assumpte, String idPoblacio, Long idCentre, 
+    String nom, String cognom1, String cognom2, Long tipusDocumentIdentificatiu, String documentIdentificatiu, String observacions
+  ) {
+    return sarcatService.insertarAssentamentEntrada(numPK, dataPresentacio, dataDocument, urCodi, assumpte, idPoblacio, idCentre, nom, cognom1,
+      cognom2, tipusDocumentIdentificatiu, documentIdentificatiu, observacions);
+  }
 
-
-	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-	public String testSarcat() throws Exception {
-		return sarcatService.testSarcat();
-	}
+  @GetMapping(value ="cercaAssentaments", produces = { MediaType.APPLICATION_JSON_VALUE })
+  public List<SarcatAlConsultaResponse.Assentament> cercaAssentaments(String user) {
+    return sarcatService.cercaAssentaments(user);
+  }
 }
 ```
