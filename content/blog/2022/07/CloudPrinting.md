@@ -4,8 +4,8 @@ title       = "Cloud Printing"
 description = "El serveis d’impressió al núvol permeten de forma senzilla i fiable la possibilitat de poder imprimir des de qualsevol lloc i qualsevol dispositiu. Aquest article pretén donar una visió general del servei d’impressió al núvol tot destacant les funcionalitats i característiques, els pros i contres i els seus casos d’ús."
 responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
-blog_tags   = ["cloud", "núvol", "impressió"]
-categories  = ["cloud", "núvol", "impressió"]
+blog_tags   = ["cloud", "nuvol", "impressió"]
+categories  = ["cloud", "nuvol", "impressió"]
 imatge      = "/images/bloc/2022/07/Entrada.jpg"
 key         = "JULIOL2022"
 +++
