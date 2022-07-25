@@ -57,24 +57,21 @@ Cal tenir present que les característiques i funcionalitats  clau que es preten
 Un dels objectius subjacents de totes les empreses és obtenir un benefici substancial mantenint les despeses al mínim. La impressió al núvol és una manera assequible de gestionar el volum d'impressió sense importar la mida i l'abast del negoci.
 * **Manteniment senzill:** La major victòria per gestionar la impressió al núvol és alliberar-se del manteniment dels servidors d'impressió. Això és doblement important pels llocs de treball moderns que busquen la gestió d'impressió però necessiten d’alternatives a l'ecosistema d'impressió tradicional. A més, els controladors únics i les cues úniques simplifiquen la complexitat i l'ús de l'usuari.
 * **Reducció d’incidències:** Les sol·licituds del servei d'assistència informàtica es redueixen significativament, ja que els problemes d'impressió sovint obstrueixen el sistema.
-
-<br><br>
+<br>
 
 **Hi ha algun desavantatge a la impressió al núvol?**
 
 * **Dificultats tècniques:** Tot i que els proveïdors de serveis al núvol solen oferir als seus clients un acord de nivell de servei que garanteix la disponibilitat aproximada del 99,95% del temps, encara hi ha espai en aquest 0,05% persistent perquè les coses surtin malament. Com que els proveïdors de serveis acullen un nombre considerable de clients, es possible que apareguin interrupcions tècniques que puguin provocar una aturada inesperada de les necessitats de producció de l’empresa si es requereix imprimir alguna cosa. Al mateix temps, si es perd la connexió a Internet, es perdrà l'accés a les dades que s’hagin emmagatzemat al núvol fins que torni a estar en funcionament.
 * **Seguretat:** La seguretat és sovint la principal preocupació. Tot i que els diferents proveïdors de serveis al núvol posen en marxa les millors pràctiques de seguretat, col·locar qualsevol dada en un emmagatzematge extern pot suposar un risc potencial. La probabilitat de qualsevol tipus de compromís no és especialment gran, però és important tenir en compte i revisar els detalls de seguretat que es descriuen als SLA del proveïdor per assegurar que les dades estaran segures en cas d'incompliment.
 * **Autogestió limitada:** El sistema del núvol està completament controlat i supervisat pel proveïdor de serveis. Com a client, només pot controlar les aplicacions, les dades i els serveis a la interfície i no pas la infraestructura en si. Per tant, si es vol controlar l'administració de la tecnologia d'impressió, és possible que la impressió al núvol no sigui el més adient.
-
-<br><br>
+<br>
 
 **Qui es pot beneficiar dels serveis d'impressió al núvol?**
 
 La impressió al núvol és una solució excel·lent per als equips de TI i els avantatges que també pot oferir a altres grups:
 * **Equips informàtics:** Redueix la càrrega de treball de l'administrador de TI eliminant la necessitat de mantenir els servidors d'impressió i les cues d'impressió. Redueix les sol·licituds del servei d'assistència perquè els usuaris tenen accés a un desplegament d'impressió automatitzat.
 * **Usuaris finals:** Els usuaris poden imprimir des de qualsevol lloc i dispositiu i els permet disposar de funcionalitats d’autoservei.
-
-<br><br>
+<br>
 
 
 ## **Casos d'ús** {#CasosUs}
