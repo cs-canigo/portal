@@ -45,7 +45,7 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
 	  [ '15','Canigo 3.6.2', new Date(2021, 12, 17), new Date(2021, 12, 27) ],	
 	  [ '16','Canigo 3.6.3', new Date(2021, 12, 27), new Date(2022, 4, 11) ],
 	  [ '16','Canigo 3.6.4', new Date(2022, 4, 11), new Date(2022, 5, 23) ],
-	  [ '16','Canigo 3.6.5', new Date(2022, 5, 23), new Date(2022, 8) ]
+	  [ '16','Canigo 3.6.5', new Date(2022, 5, 23), new Date(2022, 12) ]
 	]);
 
     var options = {
