@@ -16,7 +16,9 @@ weight      = 1
 **21/07/2022**:
 
 - [Actualització client SARCAT/PICA](/noticies/2022-07-21-CAN-actualitzacio-canigo-integration-sarcat-pica-3_0_6/)
-   - S'agreguen 4 atributs (tipusDocumentIdentificatiu, documentIdentificatiu, paisEmisor, observacions) a l'esquema: `AltaAssentaments.xsd` i a les classes: `AssentamentEntradaInfo.java` i `AssentamentSortidaInfo.java` que s'utilitzen com a paràmetres d'entrada de les operacions: `insertarAssentamentEntrada` i `insertarAssentamentSortida`
+   - S'afegeixen 4 atributs (tipusDocumentIdentificatiu, documentIdentificatiu, paisEmisor, observacions) a l'esquema
+   `AltaAssentaments.xsd` i a les classes: `AssentamentEntradaInfo.java` i `AssentamentSortidaInfo.java`
+   que s'utilitzen com a paràmetres d'entrada de les operacions: `insertarAssentamentEntrada` i `insertarAssentamentSortida`
 
 **13/06/2022**:
 
