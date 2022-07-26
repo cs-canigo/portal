@@ -1,7 +1,7 @@
 +++
 date = "2022-06-13"
 title = "Canigó. Publicació nova versió de canigo.support.mailing 3.0.5"
-description = "S'ha publicat una nova versió 3.0.5 de canigo.support.mailing que permet configurar paràmetres dinàmics"
+description = "S'ha publicat una nova versió 3.0.5 del mòdul canigo.support.mailing que permet configurar paràmetres dinàmics"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
 key = "JULIOL2022"
