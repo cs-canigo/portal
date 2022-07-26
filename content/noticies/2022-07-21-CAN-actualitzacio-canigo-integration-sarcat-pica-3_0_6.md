@@ -1,7 +1,7 @@
 +++
 date = "2022-07-21"
-title = "Canigó. Publicació nova versió de canigo.integration.sarcat.pica 3.0.6"
-description = "S'ha publicat una nova versió 3.0.6 de canigo.integration.sarcat.pica incoporant 4 atributs addicionals"
+title = "Canigó. Publicació nova versió del mòdul canigo.integration.sarcat.pica 3.0.6"
+description = "S'ha publicat una nova versió 3.0.6 del mòdul canigo.integration.sarcat.pica incorporant 4 atributs addicionals"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
 key = "AGOST2022"
@@ -18,7 +18,7 @@ Podeu consultar l'abast complet de la nova versió en [canigo.integration.sarcat
 
 S'afegeixen 4 atributs (tipusDocumentIdentificatiu, documentIdentificatiu, paisEmisor, observacions) a l'esquema
 `AltaAssentaments.xsd` i a les classes: `AssentamentEntradaInfo.java` i `AssentamentSortidaInfo.java`
-que s'utilitzen com a paràmetres d'entrada de les operacions: `insertarAssentamentEntrada` i `insertarAssentamentSortida`
+que s'utilitzen com a paràmetres d'entrada de les operacions: `insertarAssentamentEntrada` i `insertarAssentamentSortida`.
 
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó
