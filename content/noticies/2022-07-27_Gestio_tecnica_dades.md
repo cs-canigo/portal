@@ -30,8 +30,8 @@ En la darrera actualització del Catàleg Tècnic de Dades, publicada el 27/06/2
 - S'ha evolucionat una entitat publicada del grup d'Obligat compliment:
   - Direccions Generals: Canvi de nom "Direcció General de Planificació en Salut" (nom anterior) per "Direcció General de Planificació i Recerca en Salut".
   
-- S'han eliminat una entitat del grup Pendents d'aprovació perquè ha sigut avalada i publicada com d'obligat compliment:
-  - Diaris oficials, s'ha publicat d'obligat compliment amb el nom Diaris i butlletins oficials.
+- S'ha eliminat una entitat del grup Pendents d'aprovació perquè ha sigut avalada i publicada com d'obligat compliment:
+  - Diaris oficials, publicada amb el nom Diaris i butlletins oficials.
   
   
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
