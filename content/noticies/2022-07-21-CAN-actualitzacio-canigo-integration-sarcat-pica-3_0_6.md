@@ -1,6 +1,6 @@
 +++
 date = "2022-07-21"
-title = "Canigó. Publicació nova versió de canigo.integration.sarcat.pica 3.0.6"
+title = "Canigó. Publicació nova versió del mòdul canigo.integration.sarcat.pica v.3.0.6"
 description = "S'ha publicat una nova versió 3.0.6 del mòdul canigo.integration.sarcat.pica incorporant 4 atributs addicionals"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
