@@ -67,47 +67,47 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <th width="12%" style="font-size: 14px;"><div align="center">CPD4</div></th>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;">SaaS</td>
+        <td align="right" style="border-style: none;"><strong>SaaS</td>
         <td align="center"></td>
         <td align="center"><img src="../catalegCloud/apiconnect.png" width="24" alt="IBM Apiconnect"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;">CaaS</td>
+        <td align="right" style="border-style: none;"><strong>CaaS</strong></td>
         <td align="center"></td>
         <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-    </tr>
-    <tr>
-        <td align="right" style="border-style: none;">xPaaS</td>
-        <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"></td>
-        <td align="center"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
         <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
         <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;">DBaaS</td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="right" style="border-style: none;"><strong>xPaaS</strong></td>
+        <td align="center"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;">IaaS</td>
+        <td align="right" style="border-style: none;"><strong>DBaaS</strong></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
+    </tr>
+    <tr>
+        <td align="right" style="border-style: none;"><strong>IaaS</strong></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>
