@@ -49,7 +49,6 @@ Així mateix, com a conclusió també es reservarà un espai per tractar les sol
 ## **2. Situació actual** {#SituacioActual}
 
 A la figura es mostren a molt alt nivell les solucions, les tecnologies disponibles i on es poden desplegar:
-
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%">
     <tr>
         <th style="border-style: none;"></th>
@@ -67,50 +66,50 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <th width="13%" style="font-size: 14px;"><div align="center">CPD4</div></th>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;"><strong>SaaS</td>
+        <th align="right" style="border-style: none;"><strong>SaaS</th>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/apiconnect.png" width="24" alt="IBM Apiconnect"></td>
-        <td align="center"><img src="../catalegCloud/powerapps.png" width="24" alt="PowerApps"> <img src="../catalegCloud/dynamics365.png" width="24" alt="Swarm"> <img src="../catalegCloud/cdn.png" width="24" alt="CDN"></td>
+        <td align="center"><img src="../catalegCloud/apiconnect.png" width="20" alt="IBM Apiconnect"></td>
+        <td align="center"><img src="../catalegCloud/powerapps.png" width="20" alt="PowerApps"> <img src="../catalegCloud/dynamics365.png" width="20" alt="Swarm"> <img src="../catalegCloud/cdn.png" width="20" alt="CDN"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;"><strong>CaaS</strong></td>
+        <th align="right" style="border-style: none;"><strong>CaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>
+        <td align="center"><img src="../catalegCloud/kubernetes.png" width="20" alt="Kubernetes"></td>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> <img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>
-        <td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"> <img src="../catalegCloud/openshift.png" width="24" alt="Openshift"></td>
-        <td align="center"><img src="../catalegCloud/openshift.png" width="24" alt="Openshift"></td>
-        <td align="center"><img src="../catalegCloud/openshift.png" width="24" alt="Openshift"></td>
+        <td align="center"><img src="../catalegCloud/swarm.png" width="20" alt="Swarm"> <img src="../catalegCloud/kubernetes.png" width="20" alt="Kubernetes"></td>
+        <td align="center"><img src="../catalegCloud/kubernetes.png" width="20" alt="Kubernetes"> <img src="../catalegCloud/openshift.png" width="20" alt="Openshift"></td>
+        <td align="center"><img src="../catalegCloud/openshift.png" width="20" alt="Openshift"></td>
+        <td align="center"><img src="../catalegCloud/openshift.png" width="20" alt="Openshift"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;"><strong>xPaaS</strong></td>
+        <th align="right" style="border-style: none;"><strong>xPaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/javaliberty.png" width="24" alt="JavaLiberty"> <img src="../catalegCloud/python.png" width="24" alt="Python"> <img src="../catalegCloud/ruby.png" width="24" alt="Ruby"> <img src="../catalegCloud/nginx.png" width="24" alt="NGinx"> <img src="../catalegCloud/php.png" width="24" alt="Php"> <img src="../catalegCloud/nodejs.png" width="24" alt="NodeJS"> <img src="../catalegCloud/go.png" width="24" alt="Go"></td>
-        <td align="center"><img src="../catalegCloud/microsoftnet.png" width="24" alt="Microsoft .Net"> <img src="../catalegCloud/python.png" width="24" alt="Python"> <img src="../catalegCloud/java.png" width="24" alt="Java"> <img src="../catalegCloud/php.png" width="24" alt="Php"> <img src="../catalegCloud/nodejs.png" width="24" alt="NodeJS"></td>
+        <td align="center"><img src="../catalegCloud/javaliberty.png" width="20" alt="JavaLiberty"> <img src="../catalegCloud/python.png" width="20" alt="Python"> <img src="../catalegCloud/ruby.png" width="20" alt="Ruby"> <img src="../catalegCloud/nginx.png" width="20" alt="NGinx"> <img src="../catalegCloud/php.png" width="20" alt="Php"> <img src="../catalegCloud/nodejs.png" width="20" alt="NodeJS"> <img src="../catalegCloud/go.png" width="20" alt="Go"></td>
+        <td align="center"><img src="../catalegCloud/microsoftnet.png" width="20" alt="Microsoft .Net"> <img src="../catalegCloud/python.png" width="20" alt="Python"> <img src="../catalegCloud/java.png" width="20" alt="Java"> <img src="../catalegCloud/php.png" width="20" alt="Php"> <img src="../catalegCloud/nodejs.png" width="20" alt="NodeJS"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/istio.png" width="24" alt="Istio"></td>
-        <td align="center"><img src="../catalegCloud/istio.png" width="24" alt="Istio"></td>
+        <td align="center"><img src="../catalegCloud/istio.png" width="20" alt="Istio"></td>
+        <td align="center"><img src="../catalegCloud/istio.png" width="20" alt="Istio"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;"><strong>DBaaS</strong></td>
-        <td align="center"><img src="../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../catalegCloud/mongodb.png" width="24" alt="MongoDB"> <img src="../catalegCloud/elasticsearch.png" width="24" alt="ElasticSearch"></td>
-        <td align="center"><img src="../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../catalegCloud/mongodb.png" width="24" alt="MongoDB"> <img src="../catalegCloud/redis.png" width="24" alt="Redis"> <img src="../catalegCloud/elasticsearch.png" width="24" alt="ElasticSearch"></td>
-        <td align="center"><img src="../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../catalegCloud/sqlserver.png" width="24" alt="SQLServer"> <img src="../catalegCloud/mysql.png" width="24" alt="MySQL"></td>
+        <th align="right" style="border-style: none;"><strong>DBaaS</strong></th>
+        <td align="center"><img src="../catalegCloud/postgresql.png" width="20" alt="PostgreSQL"> <img src="../catalegCloud/mongodb.png" width="20" alt="MongoDB"> <img src="../catalegCloud/elasticsearch.png" width="20" alt="ElasticSearch"></td>
+        <td align="center"><img src="../catalegCloud/postgresql.png" width="20" alt="PostgreSQL"> <img src="../catalegCloud/mongodb.png" width="20" alt="MongoDB"> <img src="../catalegCloud/redis.png" width="20" alt="Redis"> <img src="../catalegCloud/elasticsearch.png" width="20" alt="ElasticSearch"></td>
+        <td align="center"><img src="../catalegCloud/postgresql.png" width="20" alt="PostgreSQL"> <img src="../catalegCloud/sqlserver.png" width="20" alt="SQLServer"> <img src="../catalegCloud/mysql.png" width="20" alt="MySQL"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../catalegCloud/mysql.png" width="24" alt="MySQL"></td>
+        <td align="center"><img src="../catalegCloud/postgresql.png" width="20" alt="PostgreSQL"> <img src="../catalegCloud/mysql.png" width="20" alt="MySQL"></td>
     </tr>
     <tr>
-        <td align="right" style="border-style: none;"><strong>IaaS</strong></td>
+        <th align="right" style="border-style: none;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="../catalegCloud/iaas.png" width="24" alt="IaaS"></td>
+        <td align="center"><img src="../catalegCloud/iaas.png" width="20" alt="IaaS"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
