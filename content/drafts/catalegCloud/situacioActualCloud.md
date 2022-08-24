@@ -57,14 +57,14 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <th colspan="4" style="font-size: 16px;"><strong>Privat (Intranet)</strong></th>
     </tr>
     <tr>
-        <th width="14%" style="border-style: none;"></th>
-        <th width="12%" style="font-size: 14px;"><div align="center">Compose</div></th>'+
-        <th width="12%" style="font-size: 14px;"><div align="center">IBM Cloud</div></th>
-        <th width="12%" style="font-size: 14px;"><div align="center">Azure</div></th>
-        <th width="12%" style="font-size: 14px;"><div align="center">CPD1</div></th>
-        <th width="12%" style="font-size: 14px;"><div align="center">CPD2</div></th>
-        <th width="12%" style="font-size: 14px;"><div align="center">CPD3</div></th>
-        <th width="12%" style="font-size: 14px;"><div align="center">CPD4</div></th>
+        <th width="9%" style="border-style: none;"></th>
+        <th width="13%" style="font-size: 14px;"><div align="center">Compose</div></th>'+
+        <th width="13%" style="font-size: 14px;"><div align="center">IBM Cloud</div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center">Azure</div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center">CPD1</div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center">CPD2</div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center">CPD3</div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center">CPD4</div></th>
     </tr>
     <tr>
         <td align="right" style="border-style: none;"><strong>SaaS</td>
