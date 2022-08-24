@@ -67,8 +67,8 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     <tr>
         <th align="right" style="border-style: none;"><strong>SaaS</th>
         <td align="center"></td>
-        <td align="center"><img src="./apiconnect.png" width="24" alt="IBM Apiconnect"></td>
-        <td align="center"><img src="./powerapps.png" width="24" alt="PowerApps"> <img src="./dynamics365.png" width="24" alt="Swarm"> <img src="./cdn.png" width="24" alt="CDN"></td>
+        <td align="center"><img src="apiconnect.png" width="24" height="24" alt="IBM Apiconnect"></td>
+        <td align="center"><img src="./powerapps.png" width="24" height="24" alt="PowerApps"> <img src="./dynamics365.png" width="24" height="24" alt="Swarm"> <img src="./cdn.png" width="24" height="24" alt="CDN"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
@@ -77,38 +77,38 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     <tr>
         <th align="right" style="border-style: none;"><strong>CaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="./kubernetes.png" width="24" alt="Kubernetes"></td>
+        <td align="center"><img src="./kubernetes.png" width="24" height="24" alt="Kubernetes"></td>
         <td align="center"></td>
-        <td align="center"><img src="./swarm.png" width="24" alt="Swarm"> <img src="./kubernetes.png" width="24" alt="Kubernetes"></td>
-        <td align="center"><img src="./kubernetes.png" width="24" alt="Kubernetes"> <img src="./openshift.png" width="24" alt="Openshift"></td>
-        <td align="center"><img src="./openshift.png" width="24" alt="Openshift"></td>
-        <td align="center"><img src="./openshift.png" width="24" alt="Openshift"></td>
+        <td align="center"><img src="./swarm.png" width="24" height="24" alt="Swarm"> <img src="./kubernetes.png" width="24" height="24" alt="Kubernetes"></td>
+        <td align="center"><img src="./kubernetes.png" width="24" height="24" alt="Kubernetes"> <img src="./openshift.png" width="24" height="24" alt="Openshift"></td>
+        <td align="center"><img src="./openshift.png" width="24" height="24" alt="Openshift"></td>
+        <td align="center"><img src="./openshift.png" width="24" height="24" alt="Openshift"></td>
     </tr>
     <tr>
         <th align="right" style="border-style: none;"><strong>xPaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="./javaliberty.png" width="24" alt="JavaLiberty"> <img src="./python.png" width="24" alt="Python"> <img src="./ruby.png" width="24" alt="Ruby"> <img src="./nginx.png" width="24" alt="NGinx"> <img src="./php.png" width="24" alt="Php"> <img src="./nodejs.png" width="24" alt="NodeJS"> <img src="./go.png" width="24" alt="Go"></td>
-        <td align="center"><img src="./microsoftnet.png" width="24" alt="Microsoft .Net"> <img src="./python.png" width="24" alt="Python"> <img src="./java.png" width="24" alt="Java"> <img src="./php.png" width="24" alt="Php"> <img src="./nodejs.png" width="24" alt="NodeJS"></td>
+        <td align="center"><img src="./javaliberty.png" width="24" height="24" alt="JavaLiberty"> <img src="./python.png" width="24" height="24" alt="Python"> <img src="./ruby.png" width="24" height="24" alt="Ruby"> <img src="./nginx.png" width="24" height="24" alt="NGinx"> <img src="./php.png" width="24" height="24" alt="Php"> <img src="./nodejs.png" width="24" height="24" alt="NodeJS"> <img src="./go.png" width="24" height="24" alt="Go"></td>
+        <td align="center"><img src="./microsoftnet.png" width="24" height="24" alt="Microsoft .Net"> <img src="./python.png" width="24" height="24" alt="Python"> <img src="./java.png" width="24" height="24" alt="Java"> <img src="./php.png" width="24" height="24" alt="Php"> <img src="./nodejs.png" width="24" height="24" alt="NodeJS"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="./istio.png" width="24" alt="Istio"></td>
-        <td align="center"><img src="./istio.png" width="24" alt="Istio"></td>
+        <td align="center"><img src="./istio.png" width="24" height="24" alt="Istio"></td>
+        <td align="center"><img src="./istio.png" width="24" height="24" alt="Istio"></td>
     </tr>
     <tr>
         <th align="right" style="border-style: none;"><strong>DBaaS</strong></th>
-        <td align="center"><img src="./postgresql.png" width="24" alt="PostgreSQL"> <img src="./mongodb.png" width="24" alt="MongoDB"> <img src="./elasticsearch.png" width="24" alt="ElasticSearch"></td>
-        <td align="center"><img src="./postgresql.png" width="24" alt="PostgreSQL"> <img src="./mongodb.png" width="24" alt="MongoDB"> <img src="./redis.png" width="24" alt="Redis"> <img src="./elasticsearch.png" width="24" alt="ElasticSearch"></td>
-        <td align="center"><img src="./postgresql.png" width="24" alt="PostgreSQL"> <img src="./sqlserver.png" width="24" alt="SQLServer"> <img src="./mysql.png" width="24" alt="MySQL"></td>
+        <td align="center"><img src="./postgresql.png" width="24" height="24" alt="PostgreSQL"> <img src="./mongodb.png" width="24" height="24" alt="MongoDB"> <img src="./elasticsearch.png" width="24" height="24" alt="ElasticSearch"></td>
+        <td align="center"><img src="./postgresql.png" width="24" height="24" alt="PostgreSQL"> <img src="./mongodb.png" width="24" height="24" alt="MongoDB"> <img src="./redis.png" width="24" height="24" alt="Redis"> <img src="./elasticsearch.png" width="24" height="24" alt="ElasticSearch"></td>
+        <td align="center"><img src="./postgresql.png" width="24" height="24" alt="PostgreSQL"> <img src="./sqlserver.png" width="24" height="24" alt="SQLServer"> <img src="./mysql.png" width="24" height="24" alt="MySQL"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="./postgresql.png" width="24" alt="PostgreSQL"> <img src="./mysql.png" width="24" alt="MySQL"></td>
+        <td align="center"><img src="./postgresql.png" width="24" height="24" alt="PostgreSQL"> <img src="./mysql.png" width="24" height="24" alt="MySQL"></td>
     </tr>
     <tr>
         <th align="right" style="border-style: none;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="./iaas.png" width="24" alt="IaaS"></td>
+        <td align="center"><img src="./iaas.png" width="24" height="24" alt="IaaS"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
