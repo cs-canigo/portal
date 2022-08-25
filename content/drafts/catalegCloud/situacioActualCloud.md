@@ -51,8 +51,8 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%;">
     <tr>
         <th style="border-style: none;"></th>
-        <th colspan="3" style="font-size: 16px;"><strong>Públic (Internet)</strong></th>
-        <th colspan="4" style="font-size: 16px;"><strong>Privat (Intranet)</strong></th>
+        <th colspan="3" style="font-size: 20px;"><strong>Públic (Internet)</strong></th>
+        <th colspan="4" style="font-size: 20px;"><strong>Privat (Intranet)</strong></th>
     </tr>
     <tr>
         <th width="9%" style="border-style: none;"></th>
