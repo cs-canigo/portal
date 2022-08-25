@@ -56,7 +56,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     </tr>
     <tr>
         <th width="9%" style="border-style: none;"></th>
-        <th width="13%" style="font-size: 14px;"><div align="center">Compose</div></th>'+
+        <th width="13%" style="font-size: 14px;"><div align="center">Compose</div></th>
         <th width="13%" style="font-size: 14px;"><div align="center">IBM Cloud</div></th>
         <th width="13%" style="font-size: 14px;"><div align="center">Azure</div></th>
         <th width="13%" style="font-size: 14px;"><div align="center">CPD1</div></th>
