@@ -5,6 +5,7 @@ name=""
 out_path=""
 platform_env=""
 conf_env=""
+dns2="eventhub.intranet.gencat.cat"
 
 show_help() {
     echo "Crea un parell de claus publica-privada i el certificat CSR per a un nou client de la plataforma. El CSR s'ha d'enviar a l'Agencia de Ciberseguretat perque el signi."
@@ -84,6 +85,7 @@ fi
 
 if [ "$platform_env" = "pre" ]; then
   conf_env=".pre"
+  dns2="preproduccio.eventhub.intranet.gencat.cat"
 fi
 
 config="
@@ -107,7 +109,7 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = $name.client$conf_env.eventhub.intranet.gencat.cat
-DNS.2 = eventhub.intranet.gencat.cat
+DNS.2 = $dns2
 "
 conf_file="$(mktemp)"
 
