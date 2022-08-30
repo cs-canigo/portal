@@ -48,17 +48,17 @@ Així mateix, com a conclusió també es reservarà un espai per tractar les sol
 ## **2. Situació actual** {#SituacioActual}
 
 A la figura es mostren a molt alt nivell les solucions, les tecnologies disponibles i on es poden desplegar:
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th style="border-style: none;"></th>
-        <th colspan="3" style="font-size: 20px;"><strong>Públic (Internet)</strong></th>
-        <th colspan="4" style="font-size: 20px;"><strong>Privat (Intranet)</strong></th>
+        <th colspan="3" style="font-size: 20px;"><div align="center"><strong>Públic (Internet)</strong></div></th>
+        <th colspan="4" style="font-size: 20px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
     </tr>
     <tr>
         <th width="9%" style="border-style: none;"></th>
-        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/compose.png" width="36" height="36" alt="Compose"></div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" width="36" height="36" alt="IBM Cloud"></div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/azure.png" width="36" height="36" alt="Azure"></div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/compose.png" height="36" alt="Compose"></div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" height="36" alt="IBM Cloud"></div></th>
+        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/azure.png" height="36" alt="Azure"></div></th>
         <th width="13%" style="font-size: 14px;"><div align="center">CPD1</div></th>
         <th width="13%" style="font-size: 14px;"><div align="center">CPD2</div></th>
         <th width="13%" style="font-size: 14px;"><div align="center">CPD3</div></th>
