@@ -20,6 +20,16 @@ estandards =  ["cataleg cloud"]
 
 1. [Introducció] (#Introduccio)
 2. [Situació actual] (#SituacioActual)
+    1. [Cloud Privat] (#CloudPrivat)
+        1. [CaaS] (#CaaS)
+        2. [DBaaS] (#DBaaS)
+        3. [SIC: Desplegament d'aplicacions CaaS] (#SIC)
+    2. [Cloud Públic] (#CloudPublic)
+        1. [Catàleg de serveis] (#CatalegServeis)
+            1. [xPaaS] (#xPaaS)
+            2. [DBaaS] (#DBaaS)
+            3. [IaaS] (#IaaS)
+            4. [Storage] (#Storage)
 3. [Governança] (#Governança)
     1. [Monitorització, logs i traces] (#MonitoritzacioLogsTraces)
         1. [Openshift amb Istio] (#OpenshiftAmbIstio)
@@ -55,14 +65,14 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <th colspan="4" style="font-size: 20px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
     </tr>
     <tr>
-        <td width="9%" style="border-style: none;"></th>
-        <td width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></div></td>
-        <td width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></div></td>
-        <td width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></div></td>
-        <td width="13%" style="font-size: 14px;"><div align="center">CPD1</div></td>
-        <td width="13%" style="font-size: 14px;"><div align="center">CPD2</div></td>
-        <td width="13%" style="font-size: 14px;"><div align="center">CPD3</div></td>
-        <td width="13%" style="font-size: 14px;"><div align="center">CPD4</div></td>
+        <th width="9%" style="border-style: none;"></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD1</strong></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD2</strong></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD3</strong></th>
+        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD4</strong></th>
     </tr>
     <tr>
         <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>SaaS</strong></th>
@@ -115,6 +125,38 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"></td>
     </tr>
 </table>
+
+### **2.1. Cloud Privat** {#CloudPrivat}
+
+#### **2.1.1. CaaS** {#CaaS}
+
+El CTTI disposa de 5 opcions per poder desplegar solucions basades en contenidors. En totes elles el proveïdor ofereix el marc (o plataforma d’orquestració) on es desplegaran i gestionaran els contenidors. Hi ha tres tecnologies d’orquestració:
+* Openshift
+* Kubernetes
+* Swarm
+
+Qualsevol de les opcions tecnològiques d’orquestració permet, malgrat les seves particularitats, als equips de desenvolupament carregar, organitzar, executar, escalar, gestionar i aturar els contenidors mitjançant la virtualització basada en contenidors.A les bases de dades sobre contenidors les anomenem DBaaS, atès a què s’ofereixen amb una capa de gestió addicional per simplificar-ne l’operació i administració.
+
+El tarifari de les solucions de contenidors es basa en: 
+* La memòria total requerida pel sistema d’informació que ha d’hostatjar (assignació a nivell de namespace). Es a dir que cal considerar la memòria agregada de tots els contenidors a utilitzar. Igualment caldrà que, en el moment de desplegament, tinguin uns límits de CPU i RAM definits.
+* L’adició de serveis d’administració per part de CPD en cas que sigui necessari.
+* L’emmagatzematge persistent a afegir al sistema d’informació
+
+#### **2.1.2. DBaaS** {#DBaaS}
+
+#### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
+
+### **2.2. Cloud Públic** {#CloudPublic}
+
+#### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
+
+##### **2.2.1.1. xPaaS** {#CatalegServeis}
+
+##### **2.2.1.2. DBPaaS** {#CatalegServeis}
+
+##### **2.2.1.3. IaaS** {#CatalegServeis}
+
+##### **2.2.1.4. Storage** {#CatalegServeis}
 
 ## **3. Governança** {#Governança}
 
