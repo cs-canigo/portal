@@ -55,17 +55,17 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <th colspan="4" style="font-size: 20px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
     </tr>
     <tr>
-        <th width="9%" style="border-style: none;"></th>
-        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center">CPD1</div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center">CPD2</div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center">CPD3</div></th>
-        <th width="13%" style="font-size: 14px;"><div align="center">CPD4</div></th>
+        <td width="9%" style="border-style: none;"></th>
+        <td width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></div></td>
+        <td width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></div></td>
+        <td width="13%" style="font-size: 14px;"><div align="center"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></div></td>
+        <td width="13%" style="font-size: 14px;"><div align="center">CPD1</div></td>
+        <td width="13%" style="font-size: 14px;"><div align="center">CPD2</div></td>
+        <td width="13%" style="font-size: 14px;"><div align="center">CPD3</div></td>
+        <td width="13%" style="font-size: 14px;"><div align="center">CPD4</div></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>SaaS</th>
+        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>SaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/apiconnect.png" width="24" alt="IBM Apiconnect"></td>
         <td align="center"><img src="../../catalegCloud/powerapps.png" width="24" alt="PowerApps"> <img src="../../catalegCloud/dynamics365.png" width="24" alt="Swarm"> <img src="../../catalegCloud/cdn.png" width="24" alt="CDN"></td>
