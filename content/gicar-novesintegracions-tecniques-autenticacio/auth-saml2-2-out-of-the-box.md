@@ -1,6 +1,6 @@
 +++
 date        = "2021-08-17T12:45:42+01:00"
-title       = "2.- Integració d'una aplicació que admet SAML out of the box"
+title       = "SAML2 - Integració d'una aplicació que admet SAML out of the box"
 description = "Aplicació feta a mida consumint servei d'autenticació SAML2 sense ús d'Apache-Shibboleth"
 sections    = "gicar-novesintegracions-tecniques-autenticacio"
 taxonomies  = []

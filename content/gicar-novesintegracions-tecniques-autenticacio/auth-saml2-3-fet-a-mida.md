@@ -1,6 +1,6 @@
 +++
 date        = "2018-08-17T12:45:42+01:00"
-title       = "3.- Aplicació feta a mida autenticant via SAML2 sense utilitzar Agent de Shibboleth (Canigó SAML o llibreria de tercers) "
+title       = "SAML2 - Aplicació feta a mida autenticant via SAML2 sense utilitzar Agent de Shibboleth (Canigó SAML o llibreria de tercers) "
 description = "Aplicació feta a mida consumint servei d'autenticació SAML2 sense ús d'Apache-Shibboleth"
 sections    = "gicar-novesintegracions-tecniques-autenticacio"
 taxonomies  = []

@@ -1,6 +1,6 @@
 +++
 date        = "2021-08-17T12:20:42+01:00"
-title       = "1.- Integració a través d'Agent de Shibboleth"
+title       = "SAML2 - Integració a través d'Agent de Shibboleth"
 description = "Descripció de la Integració a través d'Agent de Shibboleth"
 sections    = "gicar-novesintegracions-tecniques-autenticacio"
 taxonomies  = []

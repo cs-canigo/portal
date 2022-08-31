@@ -1,6 +1,6 @@
 +++
 date        = "2018-08-16T17:11:42+01:00"
-title       = "4.- Aplicació Microsoft integrada amb GICAR via ADFS"
+title       = "SAML2 - Aplicació Microsoft integrada amb GICAR via ADFS"
 description = ""
 sections    = "gicar-novesintegracions-tecniques-autenticacio"
 taxonomies  = []
