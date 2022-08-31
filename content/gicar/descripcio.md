@@ -1,5 +1,5 @@
 +++
-date        = "2016-06-08T17:11:42+01:00"
+date        = "2022-08-31"
 title       = "Descripció del servei"
 description = "Informació general del servei GICAR"
 sections    = "GICAR"
@@ -19,7 +19,7 @@ GICAR proveeix principalment dos grans funcionalitats:
 
 	En el següent esquema s’especifica a mode general quines són les aplicacions que es recomana que siguin integrades amb GICAR a nivell d’autenticació, i quines es recomana que s’integrin per altres sistemes d’autenticació.
 
-	![Integració Aplicacions GICAR](/related/gicar/tipus-autenticacio.png)
+	![Integració Aplicacions GICAR](/related/gicar/tipus-autenticacio-2022.png)
 
 	Per aplicacions que calgui integrar-les amb sistemes d’autenticació basats en Windows Autentication, caldria adreçar-se a la “Guia d’Integració amb els directoris del nou model TIC”
 
@@ -34,7 +34,7 @@ GICAR proveeix principalment dos grans funcionalitats:
 Per facilitar la comprensió de la plataforma de Gestió d’Identitats, s’inclou a continuació un esquema de l’arquitectura de capes que configuren la plataforma GICAR.
 
 
-![Integració Aplicacions GICAR](/related/gicar/esquema-general-gicar.png)
+![Integració Aplicacions GICAR](/related/gicar/esquema-general-gicar-2022.png)
 
 
 La plataforma GICAR es fonamenta bàsicament en dos objectius principals:
@@ -56,13 +56,13 @@ Actualment es disposa de dues vies per donar d’alta/baixa/modificar identitats
 
 2.	Via GDI (Gestió d’Identitats): eina que permet fer l’alta / baixa / modificació d’identitats T1, T2, T3 i no-nominals al Directori Corporatiu. Per les identitats T1, un cop se’ls ha assignat un Lloc de Treball, passaran a dependre exclusivament de GIP/SIP i amb GDI no es podran modificar. 
 
-Pel que fa als mecanismes d’autenticació d’usuaris, la plataforma disposa de la següent eina:
+Pel que fa als mecanismes d’autenticació d’usuaris, la plataforma disposa de les següents eines:
 
-- SiteMinder: que s’ocupa de l’autenticació d’identitats al Directori Corporatiu que intenten accedir a aplicacions Web (ja sigui amb usuari i contrasenya o bé amb certificat Digital). És una eina, com es veurà en el següent punt, que permet disposar de Single Sign On d’aplicacions Web. A banda del Directori Corporatiu, aquest component també permet autenticar usuaris de les administracions locals de Catalunya (a través del directori de l’EACAT), i permet autenticar certificats digitals vàlids, a través del servei de PSIS del Consorci AOC.
+- SiteMinder/Shibboleth/Keycloak: que s’ocupa de l’autenticació d’identitats al Directori Corporatiu que intenten accedir a aplicacions Web (ja sigui amb usuari i contrasenya o bé amb certificat Digital). És una eina, com es veurà en el següent punt, que permet disposar de Single Sign On d’aplicacions Web. A banda del Directori Corporatiu, aquest component també permet autenticar usuaris de les administracions locals de Catalunya (a través del directori de l’EACAT), i permet autenticar certificats digitals vàlids, a través del servei de PSIS del Consorci AOC. Aquestes eines permeten integrar aplicacions a través de protocols SAML2 i OIDC.
 
 Pel que fa als mecanismes de provisió i control d’accés a recursos, GICAR aporta les següents funcionalitats:
 
-- Disposa d’una eina de Workflow per gestionar les peticions d’alta/baixa/modificació d’accés a recursos (aplicacions)
+- Disposa d’una eina de Control d'accés als Recursos (anomenada CAR) per gestionar les peticions d’alta/baixa/modificació d’accés a recursos (aplicacions)
 - Disposa d’una eina de recordatori de contrasenya, que permet que cada identitat del Directori Corporatiu es gestioni la seva pròpia contrasenya.
 - Disposa d’una eina per sincronitzar la contrasenya de diferents aplicacions.
 - Permet controlar i administrar l’accés a les aplicacions integrades en GICAR
