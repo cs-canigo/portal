@@ -142,68 +142,68 @@ El tarifari de les solucions de contenidors es basa en:
 * L’adició de serveis d’administració per part de CPD en cas que sigui necessari.
 * L’emmagatzematge persistent a afegir al sistema d’informació.
 * Segons l’opció triada per desplegar el sistema d’informació, la CPU assignada varia tal i com s’observa en la taula següent:
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%;">
     <tr>
-        <th width="16%" style="border-style: none;">TALLA</th>
+        <th width="16%" style="border-style: none;font-size: 20px;">TALLA</th>
         <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>S</strong></div></th>
         <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>M</strong></div></th>
         <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>L</strong></div></th>
         <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>XL</strong></div></th>
     </tr>
     <tr>
-        <th style="border-style: none;">Plataforma / Recurs</th>
-        <td style="font-size: 20px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
+        <th style="border-style: none;font-size: 20px;">Plataforma / Recurs</th>
+        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD1</th>
-        <td style="font-size: 20px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>500</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>1000</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>2000</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>-</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>-</strong></div></td>
+        <th style="border-style: none;font-size: 20px;">CPD1</th>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1000</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2000</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>-</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>-</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD2</th>
-        <td style="font-size: 20px;"><div align="center"><strong>256</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>62</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>125</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>250</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>500</strong></div></td>
+        <th style="border-style: none;font-size: 20px;">CPD2</th>
+        <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>62</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>125</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>250</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD2</th>
-        <td style="font-size: 20px;"><div align="center"><strong>256</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>250</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>500</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>1000</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>2000</strong></div></td>
+        <th style="border-style: none;font-size: 20px;">CPD3</th>
+        <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>250</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1000</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2000</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD2</th>
-        <td style="font-size: 20px;"><div align="center"><strong>254</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>54</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>108</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>216</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>432</strong></div></td>
+        <th style="border-style: none;font-size: 20px;">CPD4</th>
+        <td style="font-size: 16px;"><div align="center"><strong>254</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>108</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>216</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>432</strong></div></td>
     </tr>
 </table>
 
@@ -215,13 +215,16 @@ El tarifari de les solucions de contenidors es basa en:
 ###### (*): _Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua._
 
 **CaaS: tecnologies homologades**
+
 Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot desplegar-se sobre les plataformes d’orquestració.
 * El CTTI disposa d’un catàleg d’imatges docker homologades ([https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/](https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/)) on s’hi poden trobar els elements amb més demanda per la capa d’aplicació. 
 * DBaaS: la informació dels elements disponibles es pot consultar a ([https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/](https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/)) en la secció de núvol privat.
 * Per tecnologies o productes no catalogats, es poden aportar imatges de fora de catàleg tenint en compte les consideracions indicades pel CTTI ([https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/)).
 
 **CaaS: Consideracions tècniques generals**
+
 A l’hora d’utilitzar aquesta tecnologia cal tenir en compte les següents premisses:
+
 * Els contenidors són de naturalesa volàtil, si es requereix persistència caldrà:
     * Afegir un volum persistent doncs aquest no es destruirà amb el contenidor.
     * Fer servir el suport d’alguna base de dades.
@@ -234,6 +237,7 @@ A l’hora d’utilitzar aquesta tecnologia cal tenir en compte les següents pr
     * La construcció dels artefactes es farà al SIC i seran els mateixos a tots els entorns. Això inclou la construcció d’imatges docker i proporcionar a l’equip de SIC/Suport cloud les instruccions necessàries (incloent eines i versions).
 
 Pel que fa al desplegament pròpiament dit:
+
 * A les plataformes basades en Kubernetes cal la creació de descriptors en format yaml. La creació d’aquest és responsabilitat de l’equip de desenvolupament i es repositaran a un projecte anomenat Orchestrators dins el directori del Codi de Diàleg del projecte.
 * Cada entorn i component d’aplicació estarà separat en carpetes, amb els descriptors necessaris i el Secrets inclosos sense les dades sensibles.
 * A la plataforma SwarmMe no requereix descriptors específics, però si disposar de la següent informació: Namespace, Imatge docker, xarxa, mida del contenidor, domini, port, rèpliques i paràmetres d’entorn.
@@ -241,11 +245,13 @@ Pel que fa al desplegament pròpiament dit:
 La integració amb GICAR es realitza a la plataforma de contenidors via SAML tot fent servir les imatges disponibles certificades.
 
 Tipus de desplegaments suportats amb Integració Contínua:
+
 * Deployments
 * StatefulSets
 * DaemonSets
 
 A tenir en compte:
+
 * Una sola imatge per pod, amb el número de rèpliques que es considerin necessàries.
 * Un sol projecte (codi construït) per imatge.
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
@@ -254,15 +260,18 @@ A tenir en compte:
 #### **2.1.2. DBaaS** {#DBaaS}
 
 **Consideracions tècniques generals**
+
 A l’hora d’utilitzar aquesta tecnologia cal tenir en compte les següents premisses:
+
 * La base de dades estarà en un namespace propi.
 * Els serveis d’administració que proporciona CPD estan principalment orientats a dotar l’alta disponibilitat i els backups.
 * No es donaran credencials d’administració ni es pot connectar per SSH per modificar taules o dades.
-*Totes les operacions sobre la base de dades s’efectuaran via SIC.
+* Totes les operacions sobre la base de dades s’efectuaran via SIC.
 
 Pel que fa a l’storage:
 * No es fa aprovisionament dinàmic de disc, si no un PVC (persistentVolumeClaim) del PV (persistentVolume) que genera el CPD. 
 * A la configuració del fitxer de desplegament cal referenciar-lo.
+
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th width="33%" style="font-size: 20px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
@@ -271,21 +280,21 @@ Pel que fa a l’storage:
     </tr>
     <tr>
         <th style="border-style: none;">CPD1</th>
-        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors web</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></div></td>
-        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></div></td>
+        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
+        <td style="font-size: 20px;"><div align="center"></td>
+        <td style="font-size: 20px;"><div align="center"></td>
     </tr>
     <tr>
         <th style="border-style: none;">CPD1</th>
-        <td style="font-size: 20px;"><div align="center"></div></td>
-        <td style="font-size: 20px;"><div align="center"></div></td>
-        <td style="font-size: 20px;"><div align="center"></div></td>
+        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
+        <td style="font-size: 20px;"><div align="center"></td>
+        <td style="font-size: 20px;"><div align="center"></td>
     </tr>
     <tr>
         <th style="border-style: none;">CPD1</th>
-        <td style="font-size: 20px;"><div align="center"></div></td>
-        <td style="font-size: 20px;"><div align="center"></div></td>
-        <td style="font-size: 20px;"><div align="center"></div></td>
+        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
+        <td style="font-size: 20px;"><div align="center"></td>
+        <td style="font-size: 20px;"><div align="center"></td>
     </tr>
 </table>
 
