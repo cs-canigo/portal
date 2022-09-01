@@ -77,7 +77,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     <tr>
         <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>SaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/apiconnect.png" width="24" alt="IBM Apiconnect"> <img src="../../catalegCloud/azure.png" width="24" alt="IBM Apiconnect"></td>
+        <td align="center"><img src="../../catalegCloud/apiconnect.png" width="24" alt="IBM Apiconnect"></td>
         <td align="center"><img src="../../catalegCloud/powerapps.png" width="24" alt="PowerApps"> <img src="../../catalegCloud/dynamics365.png" width="24" alt="Swarm"> <img src="../../catalegCloud/cdn.png" width="24" alt="CDN"></td>
         <td align="center"></td>
         <td align="center"></td>
@@ -279,19 +279,16 @@ Pel que fa a l’storage:
         <th width="33%" style="font-size: 20px;"><div align="center"><strong>Plataformes disponibles</strong></div></th>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD1</th>
         <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
         <td style="font-size: 20px;"><div align="center"></td>
         <td style="font-size: 20px;"><div align="center"></td>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD1</th>
         <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
         <td style="font-size: 20px;"><div align="center"></td>
         <td style="font-size: 20px;"><div align="center"></td>
     </tr>
     <tr>
-        <th style="border-style: none;">CPD1</th>
         <td style="font-size: 20px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
         <td style="font-size: 20px;"><div align="center"></td>
         <td style="font-size: 20px;"><div align="center"></td>
