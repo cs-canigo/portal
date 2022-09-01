@@ -66,16 +66,16 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     </tr>
     <tr>
         <th width="9%" style="border-style: none;"></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD1</strong></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD2</strong></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD3</strong></th>
-        <th width="13%" style="font-size: 14px;text-align: center;"><strong>CPD4</strong></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD1</strong></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD2</strong></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD3</strong></th>
+        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD4</strong></th>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>SaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>SaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/apiconnect.png" width="24" alt="IBM Apiconnect"></td>
         <td align="center"><img src="../../catalegCloud/powerapps.png" width="24" alt="PowerApps"> <img src="../../catalegCloud/dynamics365.png" width="24" alt="Swarm"> <img src="../../catalegCloud/cdn.png" width="24" alt="CDN"></td>
@@ -85,7 +85,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>CaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>CaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>
         <td align="center"></td>
@@ -95,7 +95,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/openshift.png" width="24" alt="Openshift"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>xPaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>xPaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/javaliberty.png" width="24" alt="JavaLiberty"> <img src="../../catalegCloud/python.png" width="24" alt="Python"> <img src="../../catalegCloud/ruby.png" width="24" alt="Ruby"> <img src="../../catalegCloud/nginx.png" width="24" alt="NGinx"> <img src="../../catalegCloud/php.png" width="24" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="24" alt="NodeJS"> <img src="../../catalegCloud/go.png" width="24" alt="Go"></td>
         <td align="center"><img src="../../catalegCloud/microsoftnet.png" width="24" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="24" alt="Python"> <img src="../../catalegCloud/java.png" width="24" alt="Java"> <img src="../../catalegCloud/php.png" width="24" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="24" alt="NodeJS"></td>
@@ -105,7 +105,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/istio.png" width="24" alt="Istio"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>DBaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>DBaaS</strong></th>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="24" alt="MongoDB"> <img src="../../catalegCloud/elasticsearch.png" width="24" alt="ElasticSearch"></td>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="24" alt="MongoDB"> <img src="../../catalegCloud/redis.png" width="24" alt="Redis"> <img src="../../catalegCloud/elasticsearch.png" width="24" alt="ElasticSearch"></td>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../../catalegCloud/sqlserver.png" width="24" alt="SQLServer"> <img src="../../catalegCloud/mysql.png" width="24" alt="MySQL"></td>
@@ -115,7 +115,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="24" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="24" alt="MySQL"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 14px;text-align: right;"><strong>IaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/iaas.png" width="24" alt="IaaS"></td>
@@ -147,14 +147,14 @@ El tarifari de les solucions de contenidors es basa en:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%;">
     <tr>
-        <th width="16%" style="border-style: none;font-size: 20px;">TALLA</th>
-        <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>S</strong></div></th>
-        <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>M</strong></div></th>
-        <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>L</strong></div></th>
-        <th width="21%" colspan="2" style="font-size: 20px;"><div align="center"><strong>XL</strong></div></th>
+        <th width="16%" style="border-style: none;font-size: 16px;">TALLA</th>
+        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>S</strong></div></th>
+        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>M</strong></div></th>
+        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>L</strong></div></th>
+        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>XL</strong></div></th>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 20px;">Plataforma / Recurs</th>
+        <th style="border-style: none;font-size: 16px;">Plataforma / Recurs</th>
         <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
         <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
         <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
@@ -165,7 +165,7 @@ El tarifari de les solucions de contenidors es basa en:
         <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 20px;">CPD1</th>
+        <th style="border-style: none;font-size: 16px;">CPD1</th>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
@@ -176,7 +176,7 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>-</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 20px;">CPD2</th>
+        <th style="border-style: none;font-size: 16px;">CPD2</th>
         <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>62</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
@@ -187,7 +187,7 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 20px;">CPD3</th>
+        <th style="border-style: none;font-size: 16px;">CPD3</th>
         <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>250</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
@@ -198,7 +198,7 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>2000</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 20px;">CPD4</th>
+        <th style="border-style: none;font-size: 16px;">CPD4</th>
         <td style="font-size: 16px;"><div align="center"><strong>254</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
