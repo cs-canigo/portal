@@ -131,6 +131,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
 #### **2.1.1. CaaS** {#CaaS}
 
 El CTTI disposa de 5 opcions per poder desplegar solucions basades en contenidors. En totes elles el proveïdor ofereix el marc (o plataforma d’orquestració) on es desplegaran i gestionaran els contenidors. Hi ha tres tecnologies d’orquestració:
+
 * Openshift
 * Kubernetes
 * Swarm
@@ -138,10 +139,12 @@ El CTTI disposa de 5 opcions per poder desplegar solucions basades en contenidor
 Qualsevol de les opcions tecnològiques d’orquestració permet, malgrat les seves particularitats, als equips de desenvolupament carregar, organitzar, executar, escalar, gestionar i aturar els contenidors mitjançant la virtualització basada en contenidors.A les bases de dades sobre contenidors les anomenem DBaaS, atès a què s’ofereixen amb una capa de gestió addicional per simplificar-ne l’operació i administració.
 
 El tarifari de les solucions de contenidors es basa en: 
+
 * La memòria total requerida pel sistema d’informació que ha d’hostatjar (assignació a nivell de namespace). Es a dir que cal considerar la memòria agregada de tots els contenidors a utilitzar. Igualment caldrà que, en el moment de desplegament, tinguin uns límits de CPU i RAM definits.
 * L’adició de serveis d’administració per part de CPD en cas que sigui necessari.
 * L’emmagatzematge persistent a afegir al sistema d’informació.
 * Segons l’opció triada per desplegar el sistema d’informació, la CPU assignada varia tal i com s’observa en la taula següent:
+
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%;">
     <tr>
         <th width="16%" style="border-style: none;font-size: 20px;">TALLA</th>
@@ -217,6 +220,7 @@ El tarifari de les solucions de contenidors es basa en:
 **CaaS: tecnologies homologades**
 
 Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot desplegar-se sobre les plataformes d’orquestració.
+
 * El CTTI disposa d’un catàleg d’imatges docker homologades ([https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/](https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/)) on s’hi poden trobar els elements amb més demanda per la capa d’aplicació. 
 * DBaaS: la informació dels elements disponibles es pot consultar a ([https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/](https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/)) en la secció de núvol privat.
 * Per tecnologies o productes no catalogats, es poden aportar imatges de fora de catàleg tenint en compte les consideracions indicades pel CTTI ([https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/)).
@@ -269,6 +273,7 @@ A l’hora d’utilitzar aquesta tecnologia cal tenir en compte les següents pr
 * Totes les operacions sobre la base de dades s’efectuaran via SIC.
 
 Pel que fa a l’storage:
+
 * No es fa aprovisionament dinàmic de disc, si no un PVC (persistentVolumeClaim) del PV (persistentVolume) que genera el CPD. 
 * A la configuració del fitxer de desplegament cal referenciar-lo.
 
