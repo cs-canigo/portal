@@ -155,14 +155,14 @@ El tarifari de les solucions de contenidors es basa en:
     </tr>
     <tr>
         <th style="border-style: none;font-size: 20px;">Plataforma / Recurs</th>
-        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></td>
+        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
     </tr>
     <tr>
         <th style="border-style: none;font-size: 20px;">CPD1</th>
@@ -279,24 +279,24 @@ Pel que fa a l’storage:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th width="33%" style="font-size: 20px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
-        <th width="34%" style="font-size: 20px;"><div align="center"><strong>Producte</strong></div></th>
-        <th width="33%" style="font-size: 20px;"><div align="center"><strong>Plataformes disponibles</strong></div></th>
+        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
+        <th width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></div></th>
+        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></div></th>
     </tr>
     <tr>
-        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
-        <td style="font-size: 20px;"><div align="center"></td>
-        <td style="font-size: 20px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
+        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"></td>
     </tr>
     <tr>
-        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
-        <td style="font-size: 20px;"><div align="center"></td>
-        <td style="font-size: 20px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
+        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"></td>
     </tr>
     <tr>
-        <td style="font-size: 20px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
-        <td style="font-size: 20px;"><div align="center"></td>
-        <td style="font-size: 20px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
+        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"></td>
     </tr>
 </table>
 
