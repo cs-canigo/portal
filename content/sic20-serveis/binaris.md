@@ -83,7 +83,12 @@ O simplement pot fer ús de la **URL que el proveïdor d'aplicacions ha indicat 
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
+<!-- L'accès ha estat restringit a tècnics de Cpd en haver detectat un forat de seguretat
 Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
+informació. S'ofereixen diverses opcions de cerca i visualització.
+-->
+
+Aquest servei és accessible per **tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
 informació. S'ofereixen diverses opcions de cerca i visualització.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
