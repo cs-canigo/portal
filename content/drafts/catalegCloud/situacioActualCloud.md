@@ -66,16 +66,16 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     </tr>
     <tr>
         <th width="9%" style="border-style: none;"></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD1</strong></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD2</strong></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD3</strong></th>
-        <th width="13%" style="font-size: 16px;text-align: center;"><strong>CPD4</strong></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD1</strong></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD2</strong></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD3</strong></th>
+        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD4</strong></th>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>SaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>SaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/apiconnect.png" width="30" alt="IBM Apiconnect"></td>
         <td align="center"><img src="../../catalegCloud/powerapps.png" width="30" alt="PowerApps"> <img src="../../catalegCloud/dynamics365.png" width="30" alt="Swarm"> <img src="../../catalegCloud/cdn.png" width="30" alt="CDN"></td>
@@ -85,7 +85,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>CaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>CaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/kubernetes.png" width="30" alt="Kubernetes"></td>
         <td align="center"></td>
@@ -95,7 +95,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/openshift.png" width="30" alt="Openshift"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>xPaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>xPaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/javaliberty.png" width="30" alt="JavaLiberty"> <img src="../../catalegCloud/python.png" width="30" alt="Python"> <img src="../../catalegCloud/ruby.png" width="30" alt="Ruby"> <img src="../../catalegCloud/nginx.png" width="30" alt="NGinx"> <img src="../../catalegCloud/php.png" width="30" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="30" alt="NodeJS"> <img src="../../catalegCloud/go.png" width="30" alt="Go"></td>
         <td align="center"><img src="../../catalegCloud/microsoftnet.png" width="30" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="30" alt="Python"> <img src="../../catalegCloud/java.png" width="30" alt="Java"> <img src="../../catalegCloud/php.png" width="30" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="30" alt="NodeJS"></td>
@@ -105,7 +105,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/istio.png" width="30" alt="Istio"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>DBaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>DBaaS</strong></th>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/elasticsearch.png" width="30" alt="ElasticSearch"></td>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/redis.png" width="30" alt="Redis"> <img src="../../catalegCloud/elasticsearch.png" width="30" alt="ElasticSearch"></td>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/sqlserver.png" width="30" alt="SQLServer"> <img src="../../catalegCloud/mysql.png" width="30" alt="MySQL"></td>
@@ -115,7 +115,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="30" alt="MySQL"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 16px;text-align: right;"><strong>IaaS</strong></th>
+        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/iaas.png" width="30" alt="IaaS"></td>
@@ -285,26 +285,75 @@ Pel que fa a l’storage:
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/apache.png" width="36" alt="Apache"> <img src="../../catalegCloud/nginx.png" width="36" alt="NGinx"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="36" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="36" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="36" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/apache.png" width="44" alt="Apache"> <img src="../../catalegCloud/nginx.png" width="44" alt="NGinx"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="44" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/java.png" width="36" alt="Java"> <img src="../../catalegCloud/nodejs.png" width="36" alt="NodeJS"> <img src="../../catalegCloud/php.png" width="36" alt="PHP"> <img src="../../catalegCloud/tomcat.png" width="36" alt="Tomcat"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="36" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="36" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="36" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/java.png" width="44" alt="Java"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/tomcat.png" width="44" alt="Tomcat"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="44" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="36" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="36" alt="MySQL"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="36" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="44" alt="MySQL"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
     </tr>
 </table>
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
 
+**Integració de contenidors al SIC:**
+
+* Informació necessària:
+    * Elements comuns:
+        * Nom del repositori git del codi font.
+        * En cas de necessitats de compilació, requeriments i instruccions al respecte.
+        * Nom de la imatge docker (la versió s’agafa del fitxer sic.yml)
+        * Path del fitxer Dockerfile.
+        * Llista de correus electrònics en cas de notificacions de Jenkins.
+* Elements específics per Openshift i/o Kubernetes: nom del repositori git dels descriptors i nom del descriptor de desplegament de Kubernetes/Openshift.
+* Elements específics per SwarmMe: Com que no disposa de descriptors, cal proporcionar: namespace, xarxa, mida del contenidor, domini, port, rèpliques, etc.
+
+**Tasques d’operació disponibles al SIC:**
+
+* Kubernetes i Openshift:
+    * Desplegament
+    * Desplegament de tags
+    * Reinici
+    * Parada
+    * Arrancada
+    * Desplegament de ConfigMaps
+    * Actualització d’algunes propietats dels descriptors de deployment/deploymentConfig
+* SwarmMe:
+    * Desplegament
+
 ### **2.2. Cloud Públic** {#CloudPublic}
 
+Actualment el CTTI disposa de 2 opcions per desplegar sistemes d’informació sobre núvol públic; Azure i IBM Cloud.
+En el núvol públic hi podem desplegar tres tipologies principals de serveis:
+* **xPaaS:** és un nivell superior d’abstracció que els contenidors. Són els motors d’execució auto-gestionats sobre els que es poden configurar determinades opcions (normalment referents a la potència mínima i es límits d’escalabilitat). 
+* **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
+* **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
+
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
+
+El tarifari associat al núvol públic és específic de l’element a sol·licitar i de l’ús que se’n faci durant la vida del sistema d’informació.
+xPaaS: la informació dels elements disponibles es pot consultar a [https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
+    <tr>
+        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
+        <th width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/javaliberty.png" width="44" alt="Java Liberty"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/ruby.png" width="44" alt="Ruby"> <img src="../../catalegCloud/nginx.png" width="44" alt="NGinx"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"> <img src="../../catalegCloud/go.png" width="44" alt="Go"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><strong>Azure App Services</strong></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/java.png" width="44" alt="Java"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"> </td>
+    </tr>
+</table>
 
 ##### **2.2.1.1. xPaaS** {#CatalegServeis}
 
