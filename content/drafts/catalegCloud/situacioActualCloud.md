@@ -145,7 +145,7 @@ El tarifari de les solucions de contenidors es basa en:
 * L’emmagatzematge persistent a afegir al sistema d’informació.
 * Segons l’opció triada per desplegar el sistema d’informació, la CPU assignada varia tal i com s’observa en la taula següent:
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th width="16%" style="border-style: none;font-size: 16px;">TALLA</th>
         <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>S</strong></div></th>
@@ -277,7 +277,7 @@ Pel que fa a l’storage:
 * No es fa aprovisionament dinàmic de disc, si no un PVC (persistentVolumeClaim) del PV (persistentVolume) que genera el CPD. 
 * A la configuració del fitxer de desplegament cal referenciar-lo.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
         <th width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></div></th>
@@ -343,7 +343,7 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 
 **xPaaS:** la informació dels elements disponibles es pot consultar a [https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
         <th width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
@@ -368,7 +368,7 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 
 Es poden sol·licitar1 altres elements disponibles als núvols públics que es posen a disposició de les ATIC que no estiguin homologats sempre i quan l’ATIC es faci responsable d’assumir el cost que generi.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
         <th width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
