@@ -337,8 +337,11 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
 
+##### **2.2.1.1. xPaaS** {#CatalegServeis}
+
 El tarifari associat al núvol públic és específic de l’element a sol·licitar i de l’ús que se’n faci durant la vida del sistema d’informació.
-xPaaS: la informació dels elements disponibles es pot consultar a [https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)
+
+**xPaaS:** la informació dels elements disponibles es pot consultar a [https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
     <tr>
@@ -351,15 +354,38 @@ xPaaS: la informació dels elements disponibles es pot consultar a [https://cani
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Azure App Services</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/java.png" width="44" alt="Java"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"> </td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/java.png" width="44" alt="Java"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"></td>
     </tr>
 </table>
 
-##### **2.2.1.1. xPaaS** {#CatalegServeis}
-
 ##### **2.2.1.2. DBPaaS** {#CatalegServeis}
 
+**DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
+
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
+
+**IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
+
+Es poden sol·licitar1 altres elements disponibles als núvols públics que es posen a disposició de les ATIC que no estiguin homologats sempre i quan l’ATIC es faci responsable d’assumir el cost que generi.
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
+    <tr>
+        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
+        <th width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="44" alt="MongoDB"> <img src="../../catalegCloud/redis.png" width="44" alt="Redis"> <img src="../../catalegCloud/elasticsearch.png" width="44" alt="ElasticSearch"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud</strong></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="44" alt="MongoDB"> <img src="../../catalegCloud/elasticsearch.png" width="44" alt="ElasticSearch"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><strong>Azure</strong></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/sqlserver.png" width="44" alt="SQLServer"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"></td>
+    </tr>
+</table>
 
 ##### **2.2.1.4. Storage** {#CatalegServeis}
 
