@@ -20,14 +20,14 @@ Les principals novetats d'aquesta actualització són les següents:
 |-----------|----------|
 |[pull-5871](https://github.com/jenkinsci/jenkins/pull/5871)|Millora en la visualització del progrés de consola.|
 |[JENKINS-68672](https://issues.jenkins.io/browse/JENKINS-68672)|Millora en la visualització de la barra de progrés de l'historial d'execucions en files ombrejades.|
-|-|Modernització dels components de formulari i la interfície d'usuari.|
+|-|Modernització general dels components de formulari i la interfície d'usuari.|
 
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants, entre d’altres:
 
 |Issue|Descripció|
 |-----------|----------|
-|[SECURITY-2779,SECURITY-2761,SECURITY-2776,SECURITY-2780](https://www.jenkins.io/security/advisory/2022-06-22/)|Múltiples vulnerabilitats XSS que permet als atacants injectar HTML i JavaScript a la interfície d'usuari.|
+|[SECURITY-2779, SECURITY-2761, SECURITY-2776, SECURITY-2780](https://www.jenkins.io/security/advisory/2022-06-22/)|Múltiples vulnerabilitats XSS que permet als atacants injectar HTML i JavaScript a la interfície d'usuari.|
 
 <br>
 <br>
