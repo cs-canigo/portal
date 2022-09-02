@@ -285,18 +285,18 @@ Pel que fa a l’storage:
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
-        <td style="font-size: 16px;"><div align="center"></td>
-        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/apache.png" width="36" alt="Apache"> <img src="../../catalegCloud/nginx.png" width="36" alt="NGinx"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarmme.png" width="36" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="36" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="36" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
-        <td style="font-size: 16px;"><div align="center"></td>
-        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/java.png" width="36" alt="Java"> <img src="../../catalegCloud/nodejs.png" width="36" alt="NodeJS"> <img src="../../catalegCloud/php.png" width="36" alt="PHP"> <img src="../../catalegCloud/tomcat.png" width="36" alt="Tomcat"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarmme.png" width="36" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="36" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="36" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
-        <td style="font-size: 16px;"><div align="center"></td>
-        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postresql.png" width="36" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="36" alt="MySQL"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="36" alt="Openshift"></td>
     </tr>
 </table>
 
