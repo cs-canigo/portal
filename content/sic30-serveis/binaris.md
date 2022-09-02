@@ -87,7 +87,7 @@ Aquest servei és accessible per **Release Managers, responsables de lot i tècn
 informació. S'ofereixen diverses opcions de cerca i visualització.
 -->
 
-Aquest servei és accessible per **tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
+Aquest servei és accessible exclusivament per **tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
 informació. S'ofereixen diverses opcions de cerca i visualització.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
