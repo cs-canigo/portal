@@ -4,7 +4,7 @@ title       = "Nova plataforma CaaS Openshift de Cpd3"
 description = "Incorporació de la nova plataforma cloud Caas Openshift de CPD3 i adaptació del SIC 3.0 per a donar cobertura al desplegament d’aplicacions."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
-key         = "SETEMBRE2022"
+key         = "OCTUBRE2022"
 +++
 
 ## Introducció
