@@ -54,16 +54,16 @@ Ateses les grans diferències que es poden trobar en la manera de sol·licitar i
 - Les arquitectures basades en l’ús d’elements de núvol públic.
 
 Així mateix, com a conclusió també es reservarà un espai per tractar les solucions basades en arquitectures híbrides.
-
 ###### [Inici] (#TaulaContiguts)
+
 ## **2. Situació actual** {#SituacioActual}
 
 A la figura es mostren a molt alt nivell les solucions, les tecnologies disponibles i on es poden desplegar:
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
     <tr>
         <th style="border-style: none;"></th>
-        <th colspan="3" style="font-size: 20px;"><div align="center"><strong>Públic (Internet)</strong></div></th>
-        <th colspan="4" style="font-size: 20px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
+        <th colspan="3" style="font-size: 24px;"><div align="center"><strong>Públic (Internet)</strong></div></th>
+        <th colspan="4" style="font-size: 24px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
     </tr>
     <tr>
         <th width="9%" style="border-style: none;"></th>
@@ -128,9 +128,11 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
 </table>
 
 ###### [Inici] (#TaulaContiguts)
+
 ### **2.1. Cloud Privat** {#CloudPrivat}
 
 ###### [Inici] (#TaulaContiguts)
+
 #### **2.1.1. CaaS** {#CaaS}
 
 El CTTI disposa de 5 opcions per poder desplegar solucions basades en contenidors. En totes elles el proveïdor ofereix el marc (o plataforma d’orquestració) on es desplegaran i gestionaran els contenidors. Hi ha tres tecnologies d’orquestració:
@@ -219,8 +221,8 @@ El tarifari de les solucions de contenidors es basa en:
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
 ###### (*): _Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua._
-
 ###### [Inici] (#TaulaContiguts)
+
 **CaaS: tecnologies homologades**
 
 Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot desplegar-se sobre les plataformes d’orquestració.
@@ -228,9 +230,8 @@ Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot despl
 * El CTTI disposa d’un catàleg d’imatges docker homologades ([https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/](https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/)) on s’hi poden trobar els elements amb més demanda per la capa d’aplicació. 
 * DBaaS: la informació dels elements disponibles es pot consultar a ([https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/](https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/)) en la secció de núvol privat.
 * Per tecnologies o productes no catalogats, es poden aportar imatges de fora de catàleg tenint en compte les consideracions indicades pel CTTI ([https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/)).
-
-
 ###### [Inici] (#TaulaContiguts)
+
 **CaaS: Consideracions tècniques generals**
 
 A l’hora d’utilitzar aquesta tecnologia cal tenir en compte les següents premisses:
@@ -266,8 +267,8 @@ A tenir en compte:
 * Un sol projecte (codi construït) per imatge.
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
-
 ###### [Inici] (#TaulaContiguts)
+
 #### **2.1.2. DBaaS** {#DBaaS}
 
 **Consideracions tècniques generals**
@@ -308,6 +309,7 @@ Pel que fa a l’storage:
 </table>
 
 ###### [Inici] (#TaulaContiguts)
+
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
 
 **Integració de contenidors al SIC:**
@@ -334,21 +336,25 @@ Pel que fa a l’storage:
     * Actualització d’algunes propietats dels descriptors de deployment/deploymentConfig
 * SwarmMe:
     * Desplegament
-
 ###### [Inici] (#TaulaContiguts)
+
 ### **2.2. Cloud Públic** {#CloudPublic}
 
 Actualment el CTTI disposa de 2 opcions per desplegar sistemes d’informació sobre núvol públic; Azure i IBM Cloud.
+
 En el núvol públic hi podem desplegar tres tipologies principals de serveis:
+
 * **xPaaS:** és un nivell superior d’abstracció que els contenidors. Són els motors d’execució auto-gestionats sobre els que es poden configurar determinades opcions (normalment referents a la potència mínima i es límits d’escalabilitat). 
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
 ###### [Inici] (#TaulaContiguts)
+
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
 
 ###### [Inici] (#TaulaContiguts)
-##### **2.2.1.1. xPaaS** {#CatalegServeis}
+
+##### **2.2.1.1. xPaaS** {#xPaaS}
 
 El tarifari associat al núvol públic és específic de l’element a sol·licitar i de l’ús que se’n faci durant la vida del sistema d’informació.
 
@@ -372,6 +378,7 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 **Consideracions tècniques generals**
 
 Anomenarem així als entorns d’execució, que:
+
 * Són un nivell extra per sobre de la containerització
 * Contenen un motor d’execució (p.e. un servidor d’aplicacions) on posarem la nostra aplicació o funcionalitat
 * Configurarem:
@@ -379,11 +386,12 @@ Anomenarem així als entorns d’execució, que:
     * El nombre d’instàncies que correran en paral·lel per a aconseguir més concurrència.
 
 El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot fer augmentar o disminuir el seu ús de forma significativa. Alguns exemples:
+
 * Consulta de l’estat de les platges.
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
-
 ###### [Inici] (#TaulaContiguts)
+
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
 
 **DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
@@ -391,13 +399,14 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 **Consideracions tècniques generals**
 
 Les bases de dades com a servei són un cas concret de xPaaS on:
+
 * La DB és una “commodity”: no hi ha administració. De fet, és transparent on i com corre.
 * Escala automàticament segons els requeriments (volum, índexos, …)
 * El desenvolupador, amb les credencials d’accés, bàsicament guarda i recupera registres.
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
-
 ###### [Inici] (#TaulaContiguts)
+
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
 
 **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
@@ -426,11 +435,13 @@ Es poden sol·licitar1 altres elements disponibles als núvols públics que es p
 **Consideracions tècniques generals**
 
 S’aprovisiona infraestructura fins a nivell de Sistema Operatiu, per tant:
+
 * Inclou la instal·lació del sistema operatiu, però no el seu manteniment.
 * El desenvolupador no gestiona el maquinari, però si tot el programari.
 * El desenvolupador disposa de credencials d’administrador per gestionar el servidor com consideri oportú.
 
 Avantatges:
+
 * Reducció de costos (respecte el Hosting tradicional, no respecte CaaS o SaaS).
 * Escalabilitat millorada
 * Desplegament simple
@@ -440,39 +451,46 @@ Avantatges:
     * Grups de xarxes
     * Backups de discs
     * Màquines virtuals amb el SO triat
-
 ###### [Inici] (#TaulaContiguts)
+
 ##### **2.2.1.4. Storage** {#CatalegServeis}
 
 **Consideracions tècniques generals**
 
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
-
 ###### [Inici] (#TaulaContiguts)
+
 ## **3. Governança** {#Governança}
 
 ###### [Inici] (#TaulaContiguts)
+
 ### **3.1. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
 ###### [Inici] (#TaulaContiguts)
+
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
 ###### [Inici] (#TaulaContiguts)
+
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
 ###### [Inici] (#TaulaContiguts)
+
 ## **4. Annexes** {#Annexes}
 
 ###### [Inici] (#TaulaContiguts)
+
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
 
 ###### [Inici] (#TaulaContiguts)
+
 #### **4.1.1. Service Mesh** {#ServiceMesh}
 
 ###### [Inici] (#TaulaContiguts)
+
 #### **4.1.2. API Manager** {#APIManager}
 
 ###### [Inici] (#TaulaContiguts)
