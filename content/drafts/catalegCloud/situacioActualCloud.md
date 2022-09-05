@@ -369,10 +369,33 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
     </tr>
 </table>
 
+**Consideracions tècniques generals**
+
+Anomenarem així als entorns d’execució, que:
+* Són un nivell extra per sobre de la containerització
+* Contenen un motor d’execució (p.e. un servidor d’aplicacions) on posarem la nostra aplicació o funcionalitat
+* Configurarem:
+    * La potència: CPU/RAM.
+    * El nombre d’instàncies que correran en paral·lel per a aconseguir més concurrència.
+
+El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot fer augmentar o disminuir el seu ús de forma significativa. Alguns exemples:
+* Consulta de l’estat de les platges.
+* Consulta de les notes de selectivitat.
+* Rastreig de xarxes socials.
+
 ###### [Inici] (#TaulaContiguts)
-##### **2.2.1.2. DBPaaS** {#CatalegServeis}
+##### **2.2.1.2. DBaaS** {#CatalegServeis}
 
 **DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
+
+**Consideracions tècniques generals**
+
+Les bases de dades com a servei són un cas concret de xPaaS on:
+* La DB és una “commodity”: no hi ha administració. De fet, és transparent on i com corre.
+* Escala automàticament segons els requeriments (volum, índexos, …)
+* El desenvolupador, amb les credencials d’accés, bàsicament guarda i recupera registres.
+
+Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
 
 ###### [Inici] (#TaulaContiguts)
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
@@ -400,8 +423,31 @@ Es poden sol·licitar1 altres elements disponibles als núvols públics que es p
     </tr>
 </table>
 
+**Consideracions tècniques generals**
+
+S’aprovisiona infraestructura fins a nivell de Sistema Operatiu, per tant:
+* Inclou la instal·lació del sistema operatiu, però no el seu manteniment.
+* El desenvolupador no gestiona el maquinari, però si tot el programari.
+* El desenvolupador disposa de credencials d’administrador per gestionar el servidor com consideri oportú.
+
+Avantatges:
+* Reducció de costos (respecte el Hosting tradicional, no respecte CaaS o SaaS).
+* Escalabilitat millorada
+* Desplegament simple
+* Flexibilitat màxima.
+* Per part de CSCloud s’aprovisiona (segons els requeriments rebuts):
+    * Balancejos
+    * Grups de xarxes
+    * Backups de discs
+    * Màquines virtuals amb el SO triat
+
 ###### [Inici] (#TaulaContiguts)
 ##### **2.2.1.4. Storage** {#CatalegServeis}
+
+**Consideracions tècniques generals**
+
+* **IBMCloud:** File Storage associat a contenidors com a PVC.
+* **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
 ###### [Inici] (#TaulaContiguts)
 ## **3. Governança** {#Governança}
