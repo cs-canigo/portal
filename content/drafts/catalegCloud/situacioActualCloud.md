@@ -565,9 +565,9 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/swarm.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="./img/swarm.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../img/kibana.png" width="44" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
 </table>
