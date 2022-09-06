@@ -82,8 +82,8 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     <tr>
         <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>SaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/apiconnect.png" width="30" alt="IBM Apiconnect"></td>
-        <td align="center"><img src="../../catalegCloud/powerapps.png" width="30" alt="PowerApps"> <img src="../../catalegCloud/dynamics365.png" width="30" alt="Swarm"> <img src="../../catalegCloud/cdn.png" width="30" alt="CDN"></td>
+        <td align="center"><img src="../../catalegCloud/img/apiconnect.png" width="30" alt="IBM Apiconnect"></td>
+        <td align="center"><img src="../../catalegCloud/img/powerapps.png" width="30" alt="PowerApps"> <img src="../../catalegCloud/img/dynamics365.png" width="30" alt="Swarm"> <img src="../../catalegCloud/img/cdn.png" width="30" alt="CDN"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
@@ -92,38 +92,38 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     <tr>
         <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>CaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/kubernetes.png" width="30" alt="Kubernetes"></td>
+        <td align="center"><img src="../../catalegCloud/img/kubernetes.png" width="30" alt="Kubernetes"></td>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/swarm.png" width="30" alt="Swarm"> <img src="../../catalegCloud/kubernetes.png" width="30" alt="Kubernetes"></td>
-        <td align="center"><img src="../../catalegCloud/kubernetes.png" width="30" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="30" alt="Openshift"></td>
-        <td align="center"><img src="../../catalegCloud/openshift.png" width="30" alt="Openshift"></td>
-        <td align="center"><img src="../../catalegCloud/openshift.png" width="30" alt="Openshift"></td>
+        <td align="center"><img src="../../catalegCloud/img/swarm.png" width="30" alt="Swarm"> <img src="../../catalegCloud/img/kubernetes.png" width="30" alt="Kubernetes"></td>
+        <td align="center"><img src="../../catalegCloud/img/kubernetes.png" width="30" alt="Kubernetes"> <img src="../../catalegCloud/img/openshift.png" width="30" alt="Openshift"></td>
+        <td align="center"><img src="../../catalegCloud/img/openshift.png" width="30" alt="Openshift"></td>
+        <td align="center"><img src="../../catalegCloud/img/openshift.png" width="30" alt="Openshift"></td>
     </tr>
     <tr>
         <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>xPaaS</strong></th>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/javaliberty.png" width="30" alt="JavaLiberty"> <img src="../../catalegCloud/python.png" width="30" alt="Python"> <img src="../../catalegCloud/ruby.png" width="30" alt="Ruby"> <img src="../../catalegCloud/nginx.png" width="30" alt="NGinx"> <img src="../../catalegCloud/php.png" width="30" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="30" alt="NodeJS"> <img src="../../catalegCloud/go.png" width="30" alt="Go"></td>
-        <td align="center"><img src="../../catalegCloud/microsoftnet.png" width="30" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="30" alt="Python"> <img src="../../catalegCloud/java.png" width="30" alt="Java"> <img src="../../catalegCloud/php.png" width="30" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="30" alt="NodeJS"></td>
+        <td align="center"><img src="../../catalegCloud/img/javaliberty.png" width="30" alt="JavaLiberty"> <img src="../../catalegCloud/img/python.png" width="30" alt="Python"> <img src="../../catalegCloud/img/ruby.png" width="30" alt="Ruby"> <img src="../../catalegCloud/img/nginx.png" width="30" alt="NGinx"> <img src="../../catalegCloud/img/php.png" width="30" alt="Php"> <img src="../../catalegCloud/img/nodejs.png" width="30" alt="NodeJS"> <img src="../../catalegCloud/img/go.png" width="30" alt="Go"></td>
+        <td align="center"><img src="../../catalegCloud/img/microsoftnet.png" width="30" alt="Microsoft .Net"> <img src="../../catalegCloud/img/python.png" width="30" alt="Python"> <img src="../../catalegCloud/img/java.png" width="30" alt="Java"> <img src="../../catalegCloud/img/php.png" width="30" alt="Php"> <img src="../../catalegCloud/img/nodejs.png" width="30" alt="NodeJS"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/istio.png" width="30" alt="Istio"></td>
-        <td align="center"><img src="../../catalegCloud/istio.png" width="30" alt="Istio"></td>
+        <td align="center"><img src="../../catalegCloud/img/istio.png" width="30" alt="Istio"></td>
+        <td align="center"><img src="../../catalegCloud/img/istio.png" width="30" alt="Istio"></td>
     </tr>
     <tr>
         <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>DBaaS</strong></th>
-        <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/elasticsearch.png" width="30" alt="ElasticSearch"></td>
-        <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/redis.png" width="30" alt="Redis"> <img src="../../catalegCloud/elasticsearch.png" width="30" alt="ElasticSearch"></td>
-        <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/sqlserver.png" width="30" alt="SQLServer"> <img src="../../catalegCloud/mysql.png" width="30" alt="MySQL"></td>
+        <td align="center"><img src="../../catalegCloud/img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/img/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/img/elasticsearch.png" width="30" alt="ElasticSearch"></td>
+        <td align="center"><img src="../../catalegCloud/img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/img/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/img/redis.png" width="30" alt="Redis"> <img src="../../catalegCloud/img/elasticsearch.png" width="30" alt="ElasticSearch"></td>
+        <td align="center"><img src="../../catalegCloud/img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/img/sqlserver.png" width="30" alt="SQLServer"> <img src="../../catalegCloud/img/mysql.png" width="30" alt="MySQL"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="30" alt="MySQL"></td>
+        <td align="center"><img src="../../catalegCloud/img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/img/mysql.png" width="30" alt="MySQL"></td>
     </tr>
     <tr>
         <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
-        <td align="center"><img src="../../catalegCloud/iaas.png" width="30" alt="IaaS"></td>
+        <td align="center"><img src="../../catalegCloud/img/iaas.png" width="30" alt="IaaS"></td>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"></td>
@@ -198,7 +198,7 @@ El tarifari de les solucions de contenidors es basa en:
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD3</th>
         <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>250</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>250</strong></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
@@ -209,22 +209,26 @@ El tarifari de les solucions de contenidors es basa en:
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD4</th>
         <td style="font-size: 16px;"><div align="center"><strong>254</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>108</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>108</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
         <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>216</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>216</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
         <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>432</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>432</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
     </tr>
 </table>
-
-###### _En procés d’ampliar la proporció a 1 GB:1000 milicores_ 
+</div><dic style="font-size: 9px;font-style: italic;">
+En procés d’ampliar la proporció a 1 GB:1000 milicores
+</div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
-###### (*): _Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua._
+</div><dic style="font-size: 9px;font-style: italic;">
+(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.
+</div>
+
 
 **CaaS: tecnologies homologades**
 
@@ -276,6 +280,7 @@ A tenir en compte:
 [Inici] (#TaulaContiguts)
 </div>
 
+
 #### **2.1.2. DBaaS** {#DBaaS}
 
 **Consideracions tècniques generals**
@@ -300,18 +305,18 @@ Pel que fa a l’storage:
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/apache.png" width="44" alt="Apache"> <img src="../../catalegCloud/nginx.png" width="44" alt="NGinx"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="44" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/apache.png" width="44" alt="Apache"> <img src="../../catalegCloud/img/nginx.png" width="44" alt="NGinx"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/swarm.png" width="44" alt="SwarmMe"> <img src="../../catalegCloud/img/kubernetes.png" width="44" alt="Kubernetes"> <img src="../../catalegCloud/img/openshift.png" width="44" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/java.png" width="44" alt="Java"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/tomcat.png" width="44" alt="Tomcat"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="44" alt="SwarmMe"> <img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"> <img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/java.png" width="44" alt="Java"> <img src="../../catalegCloud/img/nodejs.png" width="44" alt="NodeJS"> <img src="../../catalegCloud/img/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/img/tomcat.png" width="44" alt="Tomcat"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/swarm.png" width="44" alt="SwarmMe"> <img src="../../catalegCloud/img/kubernetes.png" width="44" alt="Kubernetes"> <img src="../../catalegCloud/img/openshift.png" width="44" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="44" alt="MySQL"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/img/mysql.png" width="44" alt="MySQL"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/openshift.png" width="44" alt="Openshift"></td>
     </tr>
 </table>
 
@@ -320,6 +325,7 @@ Pel que fa a l’storage:
 
 [Inici] (#TaulaContiguts)
 </div>
+
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
 
@@ -354,6 +360,7 @@ Pel que fa a l’storage:
 [Inici] (#TaulaContiguts)
 </div>
 
+
 ### **2.2. Cloud Públic** {#CloudPublic}
 
 Actualment el CTTI disposa de 2 opcions per desplegar sistemes d’informació sobre núvol públic; Azure i IBM Cloud.
@@ -370,6 +377,7 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 [Inici] (#TaulaContiguts)
 </div>
 
+
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
 
 ##### **2.2.1.1. xPaaS** {#xPaaS}
@@ -385,11 +393,11 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/javaliberty.png" width="44" alt="Java Liberty"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/ruby.png" width="44" alt="Ruby"> <img src="../../catalegCloud/nginx.png" width="44" alt="NGinx"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"> <img src="../../catalegCloud/go.png" width="44" alt="Go"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/javaliberty.png" width="44" alt="Java Liberty"> <img src="../../catalegCloud/img/python.png" width="44" alt="Python"> <img src="../../catalegCloud/img/ruby.png" width="44" alt="Ruby"> <img src="../../catalegCloud/img/nginx.png" width="44" alt="NGinx"> <img src="../../catalegCloud/img/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/img/nodejs.png" width="44" alt="NodeJS"> <img src="../../catalegCloud/img/go.png" width="44" alt="Go"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Azure App Services</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/java.png" width="44" alt="Java"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/img/python.png" width="44" alt="Python"> <img src="../../catalegCloud/img/java.png" width="44" alt="Java"> <img src="../../catalegCloud/img/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/img/nodejs.png" width="44" alt="NodeJS"></td>
     </tr>
 </table>
 
@@ -415,6 +423,7 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 [Inici] (#TaulaContiguts)
 </div>
 
+
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
 
 **DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
@@ -433,6 +442,7 @@ Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix
 [Inici] (#TaulaContiguts)
 </div>
 
+
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
 
 **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
@@ -446,15 +456,15 @@ Es poden sol·licitar1 altres elements disponibles als núvols públics que es p
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="44" alt="MongoDB"> <img src="../../catalegCloud/redis.png" width="44" alt="Redis"> <img src="../../catalegCloud/elasticsearch.png" width="44" alt="ElasticSearch"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/img/mongodb.png" width="44" alt="MongoDB"> <img src="../../catalegCloud/img/redis.png" width="44" alt="Redis"> <img src="../../catalegCloud/img/elasticsearch.png" width="44" alt="ElasticSearch"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="44" alt="MongoDB"> <img src="../../catalegCloud/elasticsearch.png" width="44" alt="ElasticSearch"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/postgresql.png" width="44" alt="PostgreSQL"> <img src="../../catalegCloud/img/mongodb.png" width="44" alt="MongoDB"> <img src="../../catalegCloud/img/elasticsearch.png" width="44" alt="ElasticSearch"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Azure</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="44" alt="Python"> <img src="../../catalegCloud/sqlserver.png" width="44" alt="SQLServer"> <img src="../../catalegCloud/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/nodejs.png" width="44" alt="NodeJS"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../../catalegCloud/img/python.png" width="44" alt="Python"> <img src="../../catalegCloud/img/sqlserver.png" width="44" alt="SQLServer"> <img src="../../catalegCloud/img/php.png" width="44" alt="PHP"> <img src="../../catalegCloud/img/nodejs.png" width="44" alt="NodeJS"></td>
     </tr>
 </table>
 
@@ -484,6 +494,7 @@ Avantatges:
 [Inici] (#TaulaContiguts)
 </div>
 
+
 ##### **2.2.1.4. Storage** {#CatalegServeis}
 
 **Consideracions tècniques generals**
@@ -497,6 +508,7 @@ Avantatges:
 [Inici] (#TaulaContiguts)
 </div>
 
+
 ## **3. Governança** {#Governança}
 
 ### **3.1. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
@@ -505,7 +517,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;border-style:none;">
     <tr>
-        <td width="10%" style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td width="10%" style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/openshift.png" width="44" alt="Openshift"></td>
         <td width="90%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
         <div align="left">1. Estat dels desplegaments</div>
         <div align="left">2. Estat dels pods</div>
@@ -514,15 +526,15 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
     </td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kibana.png" width="44" alt="Kibana"></td>
         <td style="font-size: 16px;"><div align="left">Les plataformes que ofereixen Kibana poden veure els logs dels seus pods en temps reals amb una retenció de 30 dies.</div></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
         <td style="font-size: 16px;"><div align="left">Accés via Grafana a les mètriques bàsiques d’un contenidor (CPU, RAM i xarxa).</div></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kubernetes.png" width="44" alt="Kubernetes"></td>
         <td style="font-size: 16px;"><div align="left">Accés als logs online via client Kubctl sense persistència.</td>
     </tr>
 </table>
@@ -535,40 +547,42 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
         <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces(**)</strong></div></th>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kibana.png" width="44" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" width="44" alt="Openshift"> <img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/ibmcloud.png" width="44" alt="Openshift"> <img src="../../catalegCloud/img/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kubernetes.png" width="44" alt="Kubernetes"></td>
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kubernetes.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kubernetes.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kibana.png" width="44" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/swarm.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/img/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/kibana.png" width="44" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
 </table>
 
-_(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus._
+</div><dic style="font-size: 9px;font-style: italic;">
+(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.
 
-_(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces_
-
+(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
+</div>
 
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
 </div>
+
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
