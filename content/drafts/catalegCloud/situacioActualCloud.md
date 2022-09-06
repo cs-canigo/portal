@@ -279,6 +279,7 @@ A tenir en compte:
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -325,6 +326,7 @@ Pel que fa a l’storage:
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -359,6 +361,7 @@ Pel que fa a l’storage:
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -376,6 +379,7 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -422,6 +426,7 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -441,6 +446,7 @@ Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -493,6 +499,7 @@ Avantatges:
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -507,6 +514,7 @@ Avantatges:
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
@@ -582,6 +590,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
+
 </div>
 
 
