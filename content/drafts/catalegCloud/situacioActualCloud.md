@@ -209,23 +209,24 @@ El tarifari de les solucions de contenidors es basa en:
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD4</th>
         <td style="font-size: 16px;"><div align="center"><strong>254</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>108</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>108</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
         <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>216</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>216</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
         <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>432</strong></div></div><dic style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>432</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
     </tr>
 </table>
-</div><dic style="font-size: 9px;font-style: italic;">
+
+<div style="font-size: 9px;font-style: italic;">
 En procés d’ampliar la proporció a 1 GB:1000 milicores
 </div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
-</div><dic style="font-size: 9px;font-style: italic;">
+<div style="font-size: 9px;font-style: italic;">
 (*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.
 </div>
 
