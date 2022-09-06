@@ -225,10 +225,6 @@ El tarifari de les solucions de contenidors es basa en:
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
 ###### (*): _Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua._
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 **CaaS: tecnologies homologades**
 
@@ -237,11 +233,6 @@ Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot despl
 * El CTTI disposa d’un catàleg d’imatges docker homologades ([https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/](https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/)) on s’hi poden trobar els elements amb més demanda per la capa d’aplicació. 
 * DBaaS: la informació dels elements disponibles es pot consultar a ([https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/](https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/)) en la secció de núvol privat.
 * Per tecnologies o productes no catalogats, es poden aportar imatges de fora de catàleg tenint en compte les consideracions indicades pel CTTI ([https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/)).
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 **CaaS: Consideracions tècniques generals**
 
@@ -278,7 +269,6 @@ A tenir en compte:
 * Un sol projecte (codi construït) per imatge.
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -322,7 +312,6 @@ Pel que fa a l’storage:
         <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
     </tr>
 </table>
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -354,7 +343,6 @@ Pel que fa a l’storage:
     * Actualització d’algunes propietats dels descriptors de deployment/deploymentConfig
 * SwarmMe:
     * Desplegament
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -369,7 +357,6 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **xPaaS:** és un nivell superior d’abstracció que els contenidors. Són els motors d’execució auto-gestionats sobre els que es poden configurar determinades opcions (normalment referents a la potència mínima i es límits d’escalabilitat). 
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -418,7 +405,6 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de l’estat de les platges.
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -486,7 +472,6 @@ Avantatges:
     * Grups de xarxes
     * Backups de discs
     * Màquines virtuals amb el SO triat
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -498,7 +483,6 @@ Avantatges:
 
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -506,19 +490,14 @@ Avantatges:
 
 ## **3. Governança** {#Governança}
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
-
 ### **3.1. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;border-style:none;">
     <tr>
-        <td width="20%" style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
-        <td width="80%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
+        <td width="10%" style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td width="90%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
         <div align="left">1. Estat dels desplegaments</div>
         <div align="left">2. Estat dels pods</div>
         <div align="left">3. Mètriques dels pods</div>
@@ -574,7 +553,6 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 _(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus._
 _(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces_
-
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -582,42 +560,12 @@ _(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicaci
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
-
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 ## **4. Annexes** {#Annexes}
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
-
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 #### **4.1.1. Service Mesh** {#ServiceMesh}
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
-
 #### **4.1.2. API Manager** {#APIManager}
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
