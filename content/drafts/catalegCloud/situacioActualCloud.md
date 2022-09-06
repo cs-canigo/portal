@@ -54,7 +54,7 @@ Ateses les grans diferències que es poden trobar en la manera de sol·licitar i
 - Les arquitectures basades en l’ús d’elements de núvol públic.
 
 Així mateix, com a conclusió també es reservarà un espai per tractar les solucions basades en arquitectures híbrides.
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ## **2. Situació actual** {#SituacioActual}
 
@@ -127,11 +127,9 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     </tr>
 </table>
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ### **2.1. Cloud Privat** {#CloudPrivat}
-
-###### [Inici] (#TaulaContiguts)
 
 #### **2.1.1. CaaS** {#CaaS}
 
@@ -221,7 +219,8 @@ El tarifari de les solucions de contenidors es basa en:
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
 ###### (*): _Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua._
-###### [Inici] (#TaulaContiguts)
+
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 **CaaS: tecnologies homologades**
 
@@ -230,7 +229,7 @@ Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot despl
 * El CTTI disposa d’un catàleg d’imatges docker homologades ([https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/](https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/)) on s’hi poden trobar els elements amb més demanda per la capa d’aplicació. 
 * DBaaS: la informació dels elements disponibles es pot consultar a ([https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/](https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/)) en la secció de núvol privat.
 * Per tecnologies o productes no catalogats, es poden aportar imatges de fora de catàleg tenint en compte les consideracions indicades pel CTTI ([https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/)).
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 **CaaS: Consideracions tècniques generals**
 
@@ -267,7 +266,7 @@ A tenir en compte:
 * Un sol projecte (codi construït) per imatge.
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 #### **2.1.2. DBaaS** {#DBaaS}
 
@@ -308,7 +307,7 @@ Pel que fa a l’storage:
     </tr>
 </table>
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
 
@@ -336,7 +335,7 @@ Pel que fa a l’storage:
     * Actualització d’algunes propietats dels descriptors de deployment/deploymentConfig
 * SwarmMe:
     * Desplegament
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ### **2.2. Cloud Públic** {#CloudPublic}
 
@@ -348,11 +347,11 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ##### **2.2.1.1. xPaaS** {#xPaaS}
 
@@ -390,7 +389,7 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de l’estat de les platges.
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
 
@@ -405,7 +404,7 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 * El desenvolupador, amb les credencials d’accés, bàsicament guarda i recupera registres.
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
 
@@ -451,7 +450,7 @@ Avantatges:
     * Grups de xarxes
     * Backups de discs
     * Màquines virtuals amb el SO triat
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ##### **2.2.1.4. Storage** {#CatalegServeis}
 
@@ -459,38 +458,38 @@ Avantatges:
 
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ## **3. Governança** {#Governança}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ### **3.1. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ## **4. Annexes** {#Annexes}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 #### **4.1.1. Service Mesh** {#ServiceMesh}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
 
 #### **4.1.2. API Manager** {#APIManager}
 
-###### [Inici] (#TaulaContiguts)
+<div style="font-size: 8px;">[Inici] (#TaulaContiguts)</div>
