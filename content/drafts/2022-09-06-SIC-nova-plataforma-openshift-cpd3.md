@@ -1,5 +1,5 @@
 +++
-date        = "2022-08-03"
+date        = "2022-09-06"
 title       = "Nova plataforma CaaS Openshift de Cpd3"
 description = "Incorporació de la nova plataforma cloud Caas Openshift de CPD3 i adaptació del SIC 3.0 per a donar cobertura al desplegament d’aplicacions."
 sections    = ["Notícies", "home"]
@@ -10,7 +10,8 @@ key         = "OCTUBRE2022"
 ## Introducció
 
 Dins de les plataformes cloud que ofereix la Generalitat de Catalunya, **Cpd3 passa a proporcionar una nova plataforma
-CaaS Openshift**. Aquesta nova plataforma a Cloud Privat ha estat certificada per l'equip de Suport cloud per a poder començar a
+CaaS Openshift** amb entorns Pre i Pro diferenciats.
+Aquesta nova plataforma a Cloud Privat ha estat certificada per l'equip de Suport cloud per a poder començar a
 desplegar aplicacions.
 
 ## Novetats
