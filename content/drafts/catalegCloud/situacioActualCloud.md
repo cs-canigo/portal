@@ -71,9 +71,9 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     </tr>
     <tr>
         <th class="cttiNoBorder" width="9%" style="border-style: none;"></th>
-        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
-        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
-        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>Comnpose</strong></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>IBM Cloud</strong></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>Azure</strong></th>
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD1</strong></th>
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD2</strong></th>
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD3</strong></th>
