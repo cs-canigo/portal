@@ -11,6 +11,7 @@ estandards =  ["cataleg cloud"]
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/catalegCloud/tableStyle.css">
+<link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/catalegCloud/tableStyles.css">
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
@@ -64,22 +65,22 @@ Així mateix, com a conclusió també es reservarà un espai per tractar les sol
 A la figura es mostren a molt alt nivell les solucions, les tecnologies disponibles i on es poden desplegar:
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
     <tr>
-        <th style="border-style: none;"></th>
-        <th colspan="3" style="font-size: 24px;"><div align="center"><strong>Públic (Internet)</strong></div></th>
-        <th colspan="4" style="font-size: 24px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
+        <th class="cttiNoBorder"></th>
+        <th class="cttiNoBorder" colspan="3" style="font-size: 24px;"><div align="center"><strong>Públic (Internet)</strong></div></th>
+        <th class="cttiNoBorder" colspan="4" style="font-size: 24px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
     </tr>
     <tr>
-        <th width="9%" style="border-style: none;"></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD1</strong></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD2</strong></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD3</strong></th>
-        <th width="13%" style="font-size: 20px;text-align: center;"><strong>CPD4</strong></th>
+        <th class="cttiNoBorder" width="9%" style="border-style: none;"></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/compose.png" width="36" alt="Compose"></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/ibmcloud.png" width="36" alt="IBM Cloud"></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><img src="../../catalegCloud/azure.png" width="36" alt="Azure"></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD1</strong></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD2</strong></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD3</strong></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD4</strong></th>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>SaaS</strong></th>
+        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>SaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/apiconnect.png" width="30" alt="IBM Apiconnect"></td>
         <td align="center"><img src="../../catalegCloud/powerapps.png" width="30" alt="PowerApps"> <img src="../../catalegCloud/dynamics365.png" width="30" alt="Swarm"> <img src="../../catalegCloud/cdn.png" width="30" alt="CDN"></td>
@@ -89,7 +90,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>CaaS</strong></th>
+        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>CaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/kubernetes.png" width="30" alt="Kubernetes"></td>
         <td align="center"></td>
@@ -99,7 +100,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/openshift.png" width="30" alt="Openshift"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>xPaaS</strong></th>
+        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>xPaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/javaliberty.png" width="30" alt="JavaLiberty"> <img src="../../catalegCloud/python.png" width="30" alt="Python"> <img src="../../catalegCloud/ruby.png" width="30" alt="Ruby"> <img src="../../catalegCloud/nginx.png" width="30" alt="NGinx"> <img src="../../catalegCloud/php.png" width="30" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="30" alt="NodeJS"> <img src="../../catalegCloud/go.png" width="30" alt="Go"></td>
         <td align="center"><img src="../../catalegCloud/microsoftnet.png" width="30" alt="Microsoft .Net"> <img src="../../catalegCloud/python.png" width="30" alt="Python"> <img src="../../catalegCloud/java.png" width="30" alt="Java"> <img src="../../catalegCloud/php.png" width="30" alt="Php"> <img src="../../catalegCloud/nodejs.png" width="30" alt="NodeJS"></td>
@@ -109,7 +110,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/istio.png" width="30" alt="Istio"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>DBaaS</strong></th>
+        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>DBaaS</strong></th>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/elasticsearch.png" width="30" alt="ElasticSearch"></td>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mongodb.png" width="30" alt="MongoDB"> <img src="../../catalegCloud/redis.png" width="30" alt="Redis"> <img src="../../catalegCloud/elasticsearch.png" width="30" alt="ElasticSearch"></td>
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/sqlserver.png" width="30" alt="SQLServer"> <img src="../../catalegCloud/mysql.png" width="30" alt="MySQL"></td>
@@ -119,7 +120,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../../catalegCloud/postgresql.png" width="30" alt="PostgreSQL"> <img src="../../catalegCloud/mysql.png" width="30" alt="MySQL"></td>
     </tr>
     <tr>
-        <th align="right" style="border-style: none;font-size: 20px;text-align: right;"><strong>IaaS</strong></th>
+        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"><img src="../../catalegCloud/iaas.png" width="30" alt="IaaS"></td>
@@ -155,25 +156,25 @@ El tarifari de les solucions de contenidors es basa en:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th width="16%" style="border-style: none;font-size: 16px;">TALLA</th>
-        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>S</strong></div></th>
-        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>M</strong></div></th>
-        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>L</strong></div></th>
-        <th width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>XL</strong></div></th>
+        <th class="cttiNoBorder" width="16%" style="font-size: 16px;">TALLA</th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>S</strong></div></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>M</strong></div></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>L</strong></div></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>XL</strong></div></th>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 16px;">Plataforma / Recurs</th>
-        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;">Plataforma / Recurs</th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 16px;">CPD1</th>
+        <th class="cttiNoBorder" style="font-size: 16px;">CPD1</th>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
@@ -184,7 +185,7 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>-</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 16px;">CPD2</th>
+        <th class="cttiNoBorder" style="font-size: 16px;">CPD2</th>
         <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>62</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
@@ -195,7 +196,7 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 16px;">CPD3</th>
+        <th class="cttiNoBorder" style="font-size: 16px;">CPD3</th>
         <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>250</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
@@ -206,7 +207,7 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>2000</strong></div></td>
     </tr>
     <tr>
-        <th style="border-style: none;font-size: 16px;">CPD4</th>
+        <th class="cttiNoBorder" style="font-size: 16px;">CPD4</th>
         <td style="font-size: 16px;"><div align="center"><strong>254</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
@@ -301,9 +302,9 @@ Pel que fa a l’storage:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
-        <th width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></div></th>
-        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></div></th>
+        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
+        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></div></th>
+        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></div></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
@@ -389,8 +390,8 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
-        <th width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
+        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
+        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
@@ -449,8 +450,8 @@ Es poden sol·licitar1 altres elements disponibles als núvols públics que es p
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
-        <th width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
+        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
+        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
@@ -513,6 +514,66 @@ Avantatges:
 ### **3.1. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;border-style:none;">
+    <tr>
+        <td width="20%" style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td width="80%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
+        <div align="left">1. Estat dels desplegaments</div>
+        <div align="left">2. Estat dels pods</div>
+        <div align="left">3. Mètriques dels pods</div>
+        <div align="left">4. Logs dels pods</div>
+    </td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="left">Les plataformes que ofereixen Kibana poden veure els logs dels seus pods en temps reals amb una retenció de 30 dies.</div></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="left">Accés via Grafana a les mètriques bàsiques d’un contenidor (CPU, RAM i xarxa).</div></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="left">Accés als logs online via client Kubctl sense persistència.</td>
+    </tr>
+</table>
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+    <tr>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Monitoratge(*)</strong></div></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Logs</strong></div></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces(**)</strong></div></th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/ibmcloud.png" width="44" alt="Openshift"> <img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kubernetes.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/swarm.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/prometheus.png" width="44" alt="Prometheus"> <img src="../../catalegCloud/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"></td>
+    </tr>
+</table>
+
+_(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus._
+_(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces_
 
 <div style="font-size: 9px;">
 
