@@ -29,6 +29,8 @@ div.a {
 th { font-size: 11px; vertical-align: middle;}
 td { font-size: 11px; vertical-align: middle;}
 
+table { border-color: #C00000;}
+
 th.ctti {
     background-color:#C00000;
     color: white;
