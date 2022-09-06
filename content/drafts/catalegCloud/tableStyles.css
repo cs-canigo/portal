@@ -31,9 +31,11 @@ td { font-size: 11px; vertical-align: middle;}
 
 th.ctti {
     background-color:#C00000;
+    color: white;
 }
 
 th.cttiNoBorder {
     background-color:#C00000;
     border-style: none;
+    color: white;
 }
