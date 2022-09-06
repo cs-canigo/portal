@@ -28,3 +28,12 @@ div.a {
 
 th { font-size: 11px; vertical-align: middle;}
 td { font-size: 11px; vertical-align: middle;}
+
+th.ctti {
+    background-color:#C00000;
+}
+
+th.cttiNoBorder {
+    background-color:#C00000;
+    border-style: none;
+}
