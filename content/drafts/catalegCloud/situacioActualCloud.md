@@ -269,6 +269,8 @@ A tenir en compte:
 * Un sol projecte (codi construït) per imatge.
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -312,6 +314,8 @@ Pel que fa a l’storage:
         <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/openshift.png" width="44" alt="Openshift"></td>
     </tr>
 </table>
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -343,6 +347,8 @@ Pel que fa a l’storage:
     * Actualització d’algunes propietats dels descriptors de deployment/deploymentConfig
 * SwarmMe:
     * Desplegament
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -357,17 +363,14 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **xPaaS:** és un nivell superior d’abstracció que els contenidors. Són els motors d’execució auto-gestionats sobre els que es poden configurar determinades opcions (normalment referents a la potència mínima i es límits d’escalabilitat). 
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
 </div>
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 ##### **2.2.1.1. xPaaS** {#xPaaS}
 
@@ -405,6 +408,8 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de l’estat de les platges.
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -472,6 +477,8 @@ Avantatges:
     * Grups de xarxes
     * Backups de discs
     * Màquines virtuals amb el SO triat
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -483,6 +490,8 @@ Avantatges:
 
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -552,7 +561,10 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 </table>
 
 _(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus._
+
 _(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces_
+
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
