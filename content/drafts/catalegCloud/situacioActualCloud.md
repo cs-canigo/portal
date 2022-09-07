@@ -581,7 +581,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
     </tr>
 </table>
 
-</div><dic style="font-size: 9px;font-style: italic;">
+<div style="font-size: 9px;font-style: italic;">
 (*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.
 
 (**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
