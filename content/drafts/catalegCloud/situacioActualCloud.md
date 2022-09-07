@@ -66,8 +66,8 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
     <tr>
         <th class="cttiNoBorder"></th>
-        <th class="cttiNoBorder" colspan="3" style="font-size: 24px;"><div align="center"><strong>Públic (Internet)</strong></div></th>
-        <th class="cttiNoBorder" colspan="4" style="font-size: 24px;"><div align="center"><strong>Privat (Intranet)</strong></div></th>
+        <th class="cttiNoBorder" colspan="3" style="font-size: 24px;"><div align="center"><strong>Públic (Internet)</strong></th>
+        <th class="cttiNoBorder" colspan="4" style="font-size: 24px;"><div align="center"><strong>Privat (Intranet)</strong></th>
     </tr>
     <tr>
         <th class="cttiNoBorder" width="9%" style="border-style: none;"></th>
@@ -157,76 +157,76 @@ El tarifari de les solucions de contenidors es basa en:
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th class="cttiNoBorder" width="16%" style="font-size: 16px;">TALLA</th>
-        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>S</strong></div></th>
-        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>M</strong></div></th>
-        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>L</strong></div></th>
-        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>XL</strong></div></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>S</strong></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>M</strong></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>L</strong></th>
+        <th class="cttiNoBorder" width="21%" colspan="2" style="font-size: 16px;"><div align="center"><strong>XL</strong></th>
     </tr>
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">Plataforma / Recurs</th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></div></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></div></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>Memòria (MB)</strong></th>
+        <th class="cttiNoBorder" style="font-size: 16px;"><div align="center"><strong>CPU (Milicores)</strong></th>
     </tr>
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD1</th>
-        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>1000</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>2000</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>-</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>-</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>500</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1000</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2000</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>-</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>-</strong></td>
     </tr>
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD2</th>
-        <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>62</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>125</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>250</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>256</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>62</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>125</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>250</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>500</strong></td>
     </tr>
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD3</th>
-        <td style="font-size: 16px;"><div align="center"><strong>256</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>256</strong></td>
         <td style="font-size: 16px;"><div align="center"><strong>250</strong></td>
-        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>500</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>1000</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>2000</strong></div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>500</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1000</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2000</strong></td>
     </tr>
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD4</th>
-        <td style="font-size: 16px;"><div align="center"><strong>254</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>54</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>512</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>108</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>216</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></div></td>
-        <td style="font-size: 16px;"><div align="center"><strong>432</strong></div></div><div style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>254</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>54</strong><div style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>512</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>108</strong><div style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>1024</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>216</strong><div style="font-size: 9px;font-style: italic;">1</div></td>
+        <td style="font-size: 16px;"><div align="center"><strong>2048</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>432</strong><div style="font-size: 9px;font-style: italic;">1</div></td>
     </tr>
 </table>
 
-<div style="font-size: 9px;font-style: italic;">
-En procés d’ampliar la proporció a 1 GB:1000 milicores
+<div style="font-size: 10px;font-style: italic;">
+(1): En procés d’ampliar la proporció a 1 GB:1000 milicores
 </div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
-<div style="font-size: 9px;font-style: italic;">
+<div style="font-size: 10px;font-style: italic;">
 (*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.
 </div>
 
@@ -301,9 +301,9 @@ Pel que fa a l’storage:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></div></th>
-        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></div></th>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></div></th>
+        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></th>
+        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></th>
+        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
@@ -393,8 +393,8 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
-        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
+        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
@@ -458,8 +458,8 @@ Es poden sol·licitar1 altres elements disponibles als núvols públics que es p
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
-        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></div></th>
+        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
@@ -550,10 +550,10 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></div></th>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Monitoratge(*)</strong></div></th>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Logs</strong></div></th>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces(**)</strong></div></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Monitoratge(*)</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Logs</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces(**)</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><img src="../../catalegCloud/img/openshift.png" width="44" alt="Openshift"></td>
@@ -581,11 +581,11 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
     </tr>
 </table>
 
-<div style="font-size: 9px;font-style: italic;">
+<div style="font-size: 10px;font-style: italic;">
 (*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.
 </div>
 
-<div style="font-size: 9px;font-style: italic;">
+<div style="font-size: 10px;font-style: italic;">
 (**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
 </div>
 
