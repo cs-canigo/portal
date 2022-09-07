@@ -587,21 +587,26 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 (**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
 </div>
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
-
-
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
+
+Openshift amb Istio
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
+Ticketing/Incidental
+
 ## **4. Annexes** {#Annexes}
+
+Annexes
 
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
 
+SaaS sobre contenidors
+
 #### **4.1.1. Service Mesh** {#ServiceMesh}
 
+Service Mesh
+
 #### **4.1.2. API Manager** {#APIManager}
+
+API Manager
