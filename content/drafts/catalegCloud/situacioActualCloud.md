@@ -610,10 +610,12 @@ En funció de l'estat del projecte, el funcionament serà el següent:
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
 
 Anomenarem així als serveis, que:
+
 * Estan desplegats i s’executen a infraestructura cloud.
 * Els usuaris només consumeixen el servei. No tenen capacitat de control o administració del mateix, més enllà de configuració a nivell d’usuari.
   
 Disponibles actualment:
+
 * ServiceMesh (no disponible en totes les plataformes cloud).
 * API-Manager.
 
