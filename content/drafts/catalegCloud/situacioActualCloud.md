@@ -558,7 +558,28 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
-Openshift amb Istio
+Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen eines per a la monitorització del sistema. El seguiment de mètriques, logs i traces dels microserveis (i de la resta del Sistema d’Informació si es configura així) es poden dur a terme amb les eines que proporciona Istio.
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+    <tr>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Monitoratge</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Logs</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces</strong></th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/storage.png" width="48" alt=""></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/elasticsearch.png" width="48" alt="ElasticSearch"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/zipkin.png" width="48" alt="Zipkin"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/dashboard.png" width="48" alt=""></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/grafana.png" width="48" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/jaeger.png" width="48" alt="Jaeger"></td>
+        <td style="font-size: 16px;"></td>
+    </tr>
+</table>
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
