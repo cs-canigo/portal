@@ -637,6 +637,55 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
     </tr>
 </table>
 
+**Principals funcions:**
+
+* Control de tràfic entre contenidors:
+  * Circuit Breakers.
+  * Timeouts.
+  * Reintents.
+  * Balanceig de tràfic avançat.
+  * Desplegaments avançats (Canary, Blue Green, Dark launching...).
+* Securització del tràfic entre contenidors:
+  * Encriptació SSL del Tràfic.
+  * Mutual TLS.
+  * Control d'accés.
+* Monitoratge:
+  * Estat dels microserveis.
+  * Flux de tràfic entre microserveis.
+  * Rendiment.
+  * Traces distribuïdes.
+
+Exemples d’ús del Service Mesh:
+* **Canary Deployment(*):** model de desplegament en que la nova versió de l’aplicació es desplega simultàniament amb la versió estable.
+* **A/B Testing:** molt similar al Canary Deployment, amb dues versions desplegades a les que decidirem quins usuaris accedeixen a cadascuna. No es fa per percentatge d’accessos, si no que decidim quins usuaris fan servir una o altra versió.
+* **Fault Injection:** permet injectar errors a un percentatge de les peticions. Permet simular i identificar el comportament del sistema en cas de fallida de xarxa i/o microserveis.
+* **Timeouts:** permet afegir de forma transparent als microserveis, timeouts entre peticions per evitar colls d’ampolla i fallides en cascada.
+* **Reintents:** permet afegir polítiques de reintents peticions per mitigar fallides puntuals de xarxa o microserveis.
+* **Throttling:** permet limitar el nombre de peticions concurrents màxim a un microservei per evitar la seva saturació.
+* **Circuit breaking:** es un patró que testeja el servei i, en cas que no es comporti correctament, tallar les peticions per evitar una fallida en cascada.
+* **Mutual TLS:** força TLS pel tràfic entre els diferents pods dins el clúster, eliminant tot el tràfic no TLS. Recomanat per clústers públics multiregió.
+* **ACL:** defineix la seguretat de les crides entre microserveis, indicant quins microserveis poden cridar a un microservei concret. Simplifica la seguretat en microserveis, tot eliminant la necessitat de l’ús de keys.
+* **RBAC:** permet configurar quins usuaris poden fer peticions als serveis i establir els tipus de peticions HTTP (GET, POST, PUT, DELETE, etc.)
+
 #### **4.1.2. API Manager** {#APIManager}
 
 API Manager
+
+Per a la publicació de les APIs públiques està disponible l’API-Manager Corporatiu. Es tracta de l’IBM API Connect.
+
+Funcions de l’API-Manager:
+* Funcionals:
+  * Catàleg d’APIs disponible per al seu ús i versionat.
+  * Autoservei en la subscripció a APIs.
+  * Portal de publicació de la documentació associada a l’ús de les APIs.
+  * Generació de reports sobre l’ús de les APIs.
+  * Associació de cost a l’ús de les APIs i gestionar el ser repartiment.
+* Tècniques:
+  * Control d’accés i definició de plans.
+  * Oferir diferents nivells de servei i control.
+  * Anàlisi de les dades que es publiquen.
+  * Seguretat:
+    * Establir polítiques de cache.
+    * Prevenció davant atacs.
+    * Protecció dels sistemes de backoffice.
+  * Aïllar els consumidors dels publicadors de serveis i dades.
