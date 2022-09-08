@@ -548,21 +548,62 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
     </tr>
 </table>
 
-<div style="font-size: 10px;font-style: italic;">
-(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.
+<div style="font-size: 10px;font-style: italic;">(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.
 </div>
 
-<div style="font-size: 10px;font-style: italic;">
-(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
+<div style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
 </div>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
-Openshift amb Istio
+Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen eines per a la monitorització del sistema. El seguiment de mètriques, logs i traces dels microserveis (i de la resta del Sistema d’Informació si es configura així) es poden dur a terme amb les eines que proporciona Istio.
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+    <tr>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Monitoratge</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Logs</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces</strong></th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/storage.png" width="48" alt=""></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/elasticsearch.png" width="48" alt="ElasticSearch"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/zipkin.png" width="48" alt="Zipkin"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/dashboard.png" width="48" alt=""></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/grafana.png" width="48" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="48" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/jaeger.png" width="48" alt="Jaeger"></td>
+    </tr>
+</table>
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
-Ticketing/Incidental
+En funció de l'estat del projecte, el funcionament serà el següent:
+
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+    <tr>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Estat aplicació</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Comunicació</strong></th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center">En servei</td>
+        <td style="font-size: 16px;"><div align="center">Remedy per incidències, consultes i canvis</td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center">En fase de projecte</td>
+        <td style="font-size: 16px;"><div align="center">Via CSTD (Centre de Suport Tecnològic al Desenvolupament) al Servei Acompanyament Suport Cloud</td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center">Sense iniciar el procés d'alta dins del CTTI</td>
+        <td style="font-size: 16px;"><div align="center">Adreçar consultes a CS Suport Cloud</td>
+    </tr>
+</table>
+
+<div style="font-size: 10px;font-style: italic;">Donat que a les plataformes Cloud gestionades des de Suport Cloud es dona accés a logs i monitoratge de l'aplicació i que gràcies als jobs de desplegament del SIC és autònom per desplegar el servei afectat, només haurien d'arribar incidències a Suport Cloud relacionades amb la plataforma (Ex. indisponiblitat global de la plataforma), que ni tan sols redesplegant el servei puguin resoldre's.
+</div>
 
 ## **4. Annexes** {#Annexes}
 
