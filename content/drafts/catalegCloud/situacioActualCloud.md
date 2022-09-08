@@ -219,18 +219,13 @@ El tarifari de les solucions de contenidors es basa en:
     </tr>
 </table>
 
-<div style="font-size: 10px;font-style: italic;">
-(1): En procés d’ampliar la proporció a 1 GB:1000 milicores
-</div>
+<div style="font-size: 10px;font-style: italic;">(1): En procés d’ampliar la proporció a 1 GB:1000 milicores</div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
-<div style="font-size: 10px;font-style: italic;">
-(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.</div>
-
-
-
+<div style="font-size: 10px;font-style: italic;">(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.</div>
+<div></div>
 **CaaS: tecnologies homologades**
 
 Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot desplegar-se sobre les plataformes d’orquestració.
@@ -276,11 +271,7 @@ A tenir en compte:
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
 
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 #### **2.1.2. DBaaS** {#DBaaS}
@@ -307,27 +298,22 @@ Pel que fa a l’storage:
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/apache.png" width="44" alt="Apache"> <img src="../img/nginx.png" width="44" alt="NGinx"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="44" alt="SwarmMe"> <img src="../img/kubernetes.png" width="44" alt="Kubernetes"> <img src="../img/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/apache.png" width="48" alt="Apache"> <img src="../img/nginx.png" width="48" alt="NGinx"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="SwarmMe"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"> <img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/java.png" width="44" alt="Java"> <img src="../img/nodejs.png" width="44" alt="NodeJS"> <img src="../img/php.png" width="44" alt="PHP"> <img src="../img/tomcat.png" width="44" alt="Tomcat"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="44" alt="SwarmMe"> <img src="../img/kubernetes.png" width="44" alt="Kubernetes"> <img src="../img/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/java.png" width="48" alt="Java"> <img src="../img/nodejs.png" width="48" alt="NodeJS"> <img src="../img/php.png" width="48" alt="PHP"> <img src="../img/tomcat.png" width="48" alt="Tomcat"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="SwarmMe"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"> <img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="44" alt="PostgreSQL"> <img src="../img/mysql.png" width="44" alt="MySQL"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="44" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="48" alt="PostgreSQL"> <img src="../img/mysql.png" width="48" alt="MySQL"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
 </table>
-
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div></div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
@@ -357,12 +343,8 @@ Pel que fa a l’storage:
 * SwarmMe:
     * Desplegament
 
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div></div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 ### **2.2. Cloud Públic** {#CloudPublic}
@@ -375,12 +357,8 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div></div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
@@ -398,11 +376,11 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/javaliberty.png" width="44" alt="Java Liberty"> <img src="../img/python.png" width="44" alt="Python"> <img src="../img/ruby.png" width="44" alt="Ruby"> <img src="../img/nginx.png" width="44" alt="NGinx"> <img src="../img/php.png" width="44" alt="PHP"> <img src="../img/nodejs.png" width="44" alt="NodeJS"> <img src="../img/go.png" width="44" alt="Go"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/javaliberty.png" width="48" alt="Java Liberty"> <img src="../img/python.png" width="48" alt="Python"> <img src="../img/ruby.png" width="48" alt="Ruby"> <img src="../img/nginx.png" width="48" alt="NGinx"> <img src="../img/php.png" width="48" alt="PHP"> <img src="../img/nodejs.png" width="48" alt="NodeJS"> <img src="../img/go.png" width="48" alt="Go"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Azure App Services</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../img/python.png" width="44" alt="Python"> <img src="../img/java.png" width="44" alt="Java"> <img src="../img/php.png" width="44" alt="PHP"> <img src="../img/nodejs.png" width="44" alt="NodeJS"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/microsoftnet.png" width="48" alt="Microsoft .Net"> <img src="../img/python.png" width="48" alt="Python"> <img src="../img/java.png" width="48" alt="Java"> <img src="../img/php.png" width="48" alt="PHP"> <img src="../img/nodejs.png" width="48" alt="NodeJS"></td>
     </tr>
 </table>
 
@@ -422,12 +400,8 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
 
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div></div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
@@ -463,15 +437,15 @@ Es poden sol·licitar1 altres elements disponibles als núvols públics que es p
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="44" alt="PostgreSQL"> <img src="../img/mongodb.png" width="44" alt="MongoDB"> <img src="../img/redis.png" width="44" alt="Redis"> <img src="../img/elasticsearch.png" width="44" alt="ElasticSearch"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="48" alt="PostgreSQL"> <img src="../img/mongodb.png" width="48" alt="MongoDB"> <img src="../img/redis.png" width="48" alt="Redis"> <img src="../img/elasticsearch.png" width="48" alt="ElasticSearch"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="44" alt="PostgreSQL"> <img src="../img/mongodb.png" width="44" alt="MongoDB"> <img src="../img/elasticsearch.png" width="44" alt="ElasticSearch"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="48" alt="PostgreSQL"> <img src="../img/mongodb.png" width="48" alt="MongoDB"> <img src="../img/elasticsearch.png" width="48" alt="ElasticSearch"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Azure</strong></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/microsoftnet.png" width="44" alt="Microsoft .Net"> <img src="../img/python.png" width="44" alt="Python"> <img src="../img/sqlserver.png" width="44" alt="SQLServer"> <img src="../img/php.png" width="44" alt="PHP"> <img src="../img/nodejs.png" width="44" alt="NodeJS"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/microsoftnet.png" width="48" alt="Microsoft .Net"> <img src="../img/python.png" width="48" alt="Python"> <img src="../img/sqlserver.png" width="48" alt="SQLServer"> <img src="../img/php.png" width="48" alt="PHP"> <img src="../img/nodejs.png" width="48" alt="NodeJS"></td>
     </tr>
 </table>
 
@@ -496,11 +470,8 @@ Avantatges:
     * Màquines virtuals amb el SO triat
 
 
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div></div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 ##### **2.2.1.4. Storage** {#CatalegServeis}
@@ -510,12 +481,8 @@ Avantatges:
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
-
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-
-</div>
+<div></div>
+<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
 
 ## **3. Governança** {#Governança}
@@ -526,7 +493,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;border-style:none;">
     <tr>
-        <td width="10%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="44" alt="Openshift"></td>
+        <td width="10%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
         <td width="90%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
         <div align="left">1. Estat dels desplegaments</div>
         <div align="left">2. Estat dels pods</div>
@@ -535,15 +502,15 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
     </td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="48" alt="Kibana"></td>
         <td style="font-size: 16px;"><div align="left">Les plataformes que ofereixen Kibana poden veure els logs dels seus pods en temps reals amb una retenció de 30 dies.</div></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/grafana.png" width="44" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/grafana.png" width="48" alt="Grafana"></td>
         <td style="font-size: 16px;"><div align="left">Accés via Grafana a les mètriques bàsiques d’un contenidor (CPU, RAM i xarxa).</div></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="48" alt="Kubernetes"></td>
         <td style="font-size: 16px;"><div align="left">Accés als logs online via client Kubctl sense persistència.</td>
     </tr>
 </table>
@@ -556,27 +523,27 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
         <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Traces(**)</strong></th>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="44" alt="Prometheus"> <img src="../img/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"> <img src="../img/grafana.png" width="48" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="48" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/ibmcloud.png" width="44" alt="Openshift"> <img src="../img/kubernetes.png" width="44" alt="Kubernetes"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="44" alt="Prometheus"> <img src="../img/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="44" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/ibmcloud.png" width="48" alt="Openshift"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"> <img src="../img/grafana.png" width="48" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="48" alt="Kubernetes"></td>
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="44" alt="Prometheus"> <img src="../img/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="48" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"> <img src="../img/grafana.png" width="48" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="48" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="44" alt="Openshift"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="44" alt="Prometheus"> <img src="../img/grafana.png" width="44" alt="Grafana"></td>
-        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="44" alt="Kibana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="Openshift"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"> <img src="../img/grafana.png" width="48" alt="Grafana"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="48" alt="Kibana"></td>
         <td style="font-size: 16px;"></td>
     </tr>
 </table>
