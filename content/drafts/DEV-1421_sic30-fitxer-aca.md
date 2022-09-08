@@ -1,5 +1,5 @@
 +++
-date = "2022-07-13"
+date = "2022-09-08"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -131,20 +131,18 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
 
 </br>
-#### Per al desplegament a l’Api Manager (v5.2):
+#### Per al desplegament a l’Api Manager (API Connect v.5.2):
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PRODUCT_FILE|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l’Api Manager|
 
 </br>
-#### Per al desplegament a l’Api Manager (>= v10):
+#### Per al desplegament a l’Api Manager (API Connect >= v.10):
 
 |Variable|Requerit|Descripció|Valor per defecte|
 |--------|--------|----------|-----------------|
-|APIC_PRODUCT_FILE|No |Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l’Api Manager|product.yml|
-
-> Totes les variables tenen un valor per defecte pel que no és requerida la seva configuració, amens que el nom de l'arxiu sigui diferent al suggerit
+|APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|
 
 </br>
 #### Per al desplegament al CloudFoundry IBMCloud:
@@ -588,17 +586,17 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |SWARMME_REPLICAS|Nombre d’instàncies del servei al SwarmMe|
 |EXTRA_PARAMS|Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud|
 
-###### Per al **desplegament a l’Api Manager** (v5.2):
+###### Per al **desplegament a l’Api Manager (API Connect v.5.2)**:
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PLAN_MAP|Descripció del pla a utilitzar per al desplegament a l’Api Manager. Consultar a Suport Cloud|
 
-###### Per al desplegament a l’Api Manager (>= v10):
+###### Per al **desplegament a l’Api Manager (API Connect >= v.10)**:
 
-|Variable|Requerit|Descripció|Valors d'exemple|
-|--------|--------|----------|-----------------|
-|APIC_TARGET_URL_{N}|Si |Api target urls, S'ha de configurar una variable amb la URL per cada API. Format de la clau: APIC_*TARGET_URL_{0-*9a-*zA-Z}. Format del valor <api-file-name-with-extension>:<target-url> |APIC_TARGET_URL_1: 'api_1.0.0.yml:http\://backend/api'|
+|Variable|Descripció|Exemple|
+|--------|----------|-----------------|
+|APIC_TARGET_URL_{#}|URL de destí de les API's. Format de la clau: APIC_TARGET_URL_{0-*9a-*zA-Z}. Format del valor: <api-file-name-with-extension>:<target-url>|APIC_TARGET_URL_1: 'api_1.0.0.yml:https\://backend/api'|
 
 ###### Per al **desplegament al CloudFoundry IBMCloud**:
 
@@ -739,9 +737,9 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Desplegament d'scripts de bbdd On Premise](/related/sic/3.0/aca_despl_bbdd_onpremise.yml)
 
-- [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager_v52.yml) (v5.2)
+- [Aplicació a desplegar a l’Api Manager (API Connect v.5.2)](/related/sic/3.0/aca_despl_api_manager_v52.yml)
 
-- [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml) (>= v10)
+- [Aplicació a desplegar a l’Api Manager (API Connect >= v.10)](/related/sic/3.0/aca_despl_api_manager.yml)
 
 - [Construcció i publicació de llibreria Maven al Nexus](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
 
