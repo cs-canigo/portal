@@ -226,6 +226,7 @@ El tarifari de les solucions de contenidors es basa en:
 
 <div style="font-size: 10px;font-style: italic;">(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.</div>
 <div></div>
+
 **CaaS: tecnologies homologades**
 
 Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot desplegar-se sobre les plataformes d’orquestració.
@@ -271,7 +272,13 @@ A tenir en compte:
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
 
 
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+<div></div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 #### **2.1.2. DBaaS** {#DBaaS}
@@ -292,28 +299,34 @@ Pel que fa a l’storage:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></th>
-        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></th>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></th>
+        <th class="cttiNoBorder" width="30%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></th>
+        <th class="cttiNoBorder" width="40%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></th>
+        <th class="cttiNoBorder" width="40%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></th>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Servidors web</strong></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/apache.png" width="48" alt="Apache"> <img src="../img/nginx.png" width="48" alt="NGinx"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="SwarmMe"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"> <img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Servidors d'aplicacions</strong></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/java.png" width="48" alt="Java"> <img src="../img/nodejs.png" width="48" alt="NodeJS"> <img src="../img/php.png" width="48" alt="PHP"> <img src="../img/tomcat.png" width="48" alt="Tomcat"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="SwarmMe"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"> <img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Bases de Dades (DBaaS)</strong></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="48" alt="PostgreSQL"> <img src="../img/mysql.png" width="48" alt="MySQL"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
 </table>
+
 <div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
@@ -344,7 +357,12 @@ Pel que fa a l’storage:
     * Desplegament
 
 <div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 ### **2.2. Cloud Públic** {#CloudPublic}
@@ -358,7 +376,12 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
 <div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
@@ -401,7 +424,12 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Rastreig de xarxes socials.
 
 <div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
@@ -417,6 +445,8 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 * El desenvolupador, amb les credencials d’accés, bàsicament guarda i recupera registres.
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
+<div></div>
+
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
@@ -471,7 +501,12 @@ Avantatges:
 
 
 <div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 ##### **2.2.1.4. Storage** {#CatalegServeis}
@@ -482,7 +517,12 @@ Avantatges:
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
 <div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+
+</div>
 
 
 ## **3. Governança** {#Governança}
