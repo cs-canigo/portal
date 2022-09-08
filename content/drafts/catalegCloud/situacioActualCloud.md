@@ -491,7 +491,7 @@ Avantatges:
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;border-style:none;">
+<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;border-style:none;">
     <tr>
         <td width="10%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
         <td width="90%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
@@ -607,15 +607,35 @@ En funció de l'estat del projecte, el funcionament serà el següent:
 
 ## **4. Annexes** {#Annexes}
 
-Annexes
-
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
 
-SaaS sobre contenidors
+Anomenarem així als serveis, que:
+* Estan desplegats i s’executen a infraestructura cloud.
+* Els usuaris només consumeixen el servei. No tenen capacitat de control o administració del mateix, més enllà de configuració a nivell d’usuari.
+  
+Disponibles actualment:
+* ServiceMesh (no disponible en totes les plataformes cloud).
+* API-Manager.
 
 #### **4.1.1. Service Mesh** {#ServiceMesh}
 
-Service Mesh
+* Cas d'ús:
+
+Service Mesh es un terme que defineix aquells productes que busquen resoldre els problemes que generen les arquitectures basades en microserveis. Les seves funcionalitats clau inclouen seguretat, control del tràfic de xarxa i monitorització de l'aplicació.
+
+Es important entendre que no es només instal·lar-ho, cal configurar-ho correctament i aprofitar-ho.
+
+<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;">
+    <tr>
+        <td style="font-size: 16px;" width="25%"><div align="center"><img src="../img/servicemeshcasus.png" alt="Service Mesh"></td>
+        <td style="font-size: 16px;" width="75%"><div align="center">
+        Quins casos aconsellen l'ús d’un Service Mesh:
+        * Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.
+        * En el cas de comunicacions asíncrones, es més recomanable fer servir un gestor de cues, però un Service Mesh ens ajudaria en el cas de voler traces distribuïdes.
+        * Aplicacions que requereixen de seguretat i/o control del tràfic entre microserveis.
+        </td>
+    </tr>
+</table>
 
 #### **4.1.2. API Manager** {#APIManager}
 
