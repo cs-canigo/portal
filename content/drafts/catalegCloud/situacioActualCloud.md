@@ -628,11 +628,11 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
 <table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;">
     <tr>
         <td style="font-size: 16px;" width="25%"><div align="center"><img src="../img/servicemeshcasus.png" alt="Service Mesh"></td>
-        <td style="font-size: 16px;" width="75%"><div align="center">
-        Quins casos aconsellen l'ús d’un Service Mesh:
-        * Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.
-        * En el cas de comunicacions asíncrones, es més recomanable fer servir un gestor de cues, però un Service Mesh ens ajudaria en el cas de voler traces distribuïdes.
-        * Aplicacions que requereixen de seguretat i/o control del tràfic entre microserveis.
+        <td style="font-size: 16px;" width="75%"><div align="Left">
+        <div>Quins casos aconsellen l'ús d’un Service Mesh:</div>
+        <div>- Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.</div>
+        <div>- En el cas de comunicacions asíncrones, es més recomanable fer servir un gestor de cues, però un Service Mesh ens ajudaria en el cas de voler traces distribuïdes.</div>
+        <div>- Aplicacions que requereixen de seguretat i/o control del tràfic entre microserveis.</div>
         </td>
     </tr>
 </table>
