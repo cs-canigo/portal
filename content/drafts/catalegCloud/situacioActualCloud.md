@@ -394,8 +394,8 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
-        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
@@ -460,10 +460,10 @@ Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix
 
 Es poden sol·licitar1 altres elements disponibles als núvols públics que es posen a disposició de les ATIC que no estiguin homologats sempre i quan l’ATIC es faci responsable d’assumir el cost que generi.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%; align: left;">
     <tr>
-        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
-        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
