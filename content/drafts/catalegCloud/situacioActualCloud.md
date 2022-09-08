@@ -532,7 +532,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
         <td style="font-size: 16px;"><div align="center"><img src="../img/ibmcloud.png" width="48" alt="Openshift"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"> <img src="../img/grafana.png" width="48" alt="Grafana"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="48" alt="Kubernetes"></td>
-        <td style="font-size: 16px;"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/jaeger.png" width="48" alt="Jaeger"> <img src="../img/istio.png" width="48" alt="Istio"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><img src="../img/kubernetes.png" width="48" alt="Openshift"></td>
@@ -586,18 +586,18 @@ En funció de l'estat del projecte, el funcionament serà el següent:
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Estat aplicació</strong></th>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Comunicació</strong></th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><strong>Comunicació</strong></th>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center">En servei</td>
+        <td style="font-size: 16px;"><div align="left">En servei</td>
         <td style="font-size: 16px;"><div align="center">Remedy per incidències, consultes i canvis</td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center">En fase de projecte</td>
+        <td style="font-size: 16px;"><div align="left">En fase de projecte</td>
         <td style="font-size: 16px;"><div align="center">Via CSTD (Centre de Suport Tecnològic al Desenvolupament) al Servei Acompanyament Suport Cloud</td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center">Sense iniciar el procés d'alta dins del CTTI</td>
+        <td style="font-size: 16px;"><div align="left">Sense iniciar el procés d'alta dins del CTTI</td>
         <td style="font-size: 16px;"><div align="center">Adreçar consultes a CS Suport Cloud</td>
     </tr>
 </table>
