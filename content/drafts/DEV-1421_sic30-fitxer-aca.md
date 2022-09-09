@@ -596,7 +596,7 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 
 |Variable|Descripció|Exemple|
 |--------|----------|-----------------|
-|APIC\_TARGET\_URL\_{N}|URL de destí de les API's. Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}. Format del valor: \<api-file-name-with-extension\>:\<target-url\>|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
+|APIC\_TARGET\_URL\_{N}|URL de destí de les API's. <br/>Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}. <br/>Format del valor: \<api-file-name-with-extension\>:\<target-url\>|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 ###### Per al **desplegament al CloudFoundry IBMCloud**:
 
