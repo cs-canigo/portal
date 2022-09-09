@@ -218,17 +218,19 @@ El tarifari de les solucions de contenidors es basa en:
         <td style="font-size: 16px;"><div align="center"><strong>432</strong><font style="font-size: 9px;font-style: italic;"> (1)</font></td>
     </tr>
 </table>
-
 <div style="font-size: 10px;font-style: italic;">
 (1): En procés d’ampliar la proporció a 1 GB:1000 milicores
 </div>
-<div> </div>
+<div> 
+
+</div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
-
 <div style="font-size: 10px;font-style: italic;">(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.</div>
-<div> </div>
+<div> 
+
+</div>
 
 
 **CaaS: tecnologies homologades**
