@@ -580,7 +580,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <div style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
 </div>
-<br>
+<div> </div>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
@@ -607,7 +607,11 @@ Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen ei
     </tr>
 </table>
 
-<br>
+<div> </div>
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
@@ -722,3 +726,10 @@ Funcions de l’API-Manager:
     * Prevenció davant atacs.
     * Protecció dels sistemes de backoffice.
   * Aïllar els consumidors dels publicadors de serveis i dades.
+
+
+<div> </div>
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
