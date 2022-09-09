@@ -222,13 +222,14 @@ El tarifari de les solucions de contenidors es basa en:
 <div style="font-size: 10px;font-style: italic;">
 (1): En procés d’ampliar la proporció a 1 GB:1000 milicores
 </div>
-<br>
+<div> </div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
 <div style="font-size: 10px;font-style: italic;">(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.</div>
-<br>
+<div> </div>
+
 
 **CaaS: tecnologies homologades**
 
@@ -587,6 +588,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <div style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
 </div>
+<br>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
@@ -612,6 +614,8 @@ Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen ei
         <td style="font-size: 16px;"><div align="center"><img src="../img/jaeger.png" width="48" alt="Jaeger"></td>
     </tr>
 </table>
+
+<br>
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
@@ -661,11 +665,12 @@ Service Mesh es un terme que defineix aquells productes que busquen resoldre el
 
 Es important entendre que no es només instal·lar-ho, cal configurar-ho correctament i aprofitar-ho.
 
-<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;">
+<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;align:left;">
     <tr>
-        <td style="font-size: 16px;" width="25%"><div align="center"><img src="../img/servicemeshcasus.png" width="400" alt="Service Mesh"></td>
+        <td style="font-size: 16px;" width="25%"><div align="center"><img src="../img/servicemeshcasus.png" width="100%" alt="Service Mesh"></td>
         <td style="font-size: 16px;" width="75%"><div align="Left">
         <div>Quins casos aconsellen l'ús d’un Service Mesh:</div>
+        <div></div>
         <div>- Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.</div>
         <div>- En el cas de comunicacions asíncrones, es més recomanable fer servir un gestor de cues, però un Service Mesh ens ajudaria en el cas de voler traces distribuïdes.</div>
         <div>- Aplicacions que requereixen de seguretat i/o control del tràfic entre microserveis.</div>
@@ -705,8 +710,6 @@ Exemples d’ús del Service Mesh:
 * **RBAC:** permet configurar quins usuaris poden fer peticions als serveis i establir els tipus de peticions HTTP (GET, POST, PUT, DELETE, etc.)
 
 #### **4.1.2. API Manager** {#APIManager}
-
-API Manager
 
 Per a la publicació de les APIs públiques està disponible l’API-Manager Corporatiu. Es tracta de l’IBM API Connect.
 
