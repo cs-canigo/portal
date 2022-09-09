@@ -219,13 +219,18 @@ El tarifari de les solucions de contenidors es basa en:
     </tr>
 </table>
 
-<div style="font-size: 10px;font-style: italic;">(1): En procés d’ampliar la proporció a 1 GB:1000 milicores</div>
+<div style="font-size: 10px;font-style: italic;">
+(1): En procés d’ampliar la proporció a 1 GB:1000 milicores
+</div>
+<div> </div>
 
 * Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
 <div style="font-size: 10px;font-style: italic;">(*): Cal que, paral·lelament als serveis de CPD, el producte estigui certificat per CS Cloud per disposar dels automatismes de l’entorn d’integració contínua.</div>
-<div></div>
+<div> </div>
+
+
 **CaaS: tecnologies homologades**
 
 Essencialment, qualsevol tecnologia que suporti l’ús de contenidors pot desplegar-se sobre les plataformes d’orquestració.
@@ -270,8 +275,12 @@ A tenir en compte:
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
 
+.
+<div style="font-size: 9px;">
 
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 
 #### **2.1.2. DBaaS** {#DBaaS}
@@ -292,29 +301,33 @@ Pel que fa a l’storage:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></th>
-        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></th>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></th>
+        <th class="cttiNoBorder" width="30%" style="font-size: 16px;"><div align="center"><strong>Grup de Tecnologia</strong></th>
+        <th class="cttiNoBorder" width="40%" style="font-size: 16px;"><div align="center"><strong>Producte</strong></th>
+        <th class="cttiNoBorder" width="40%" style="font-size: 16px;"><div align="center"><strong>Plataformes disponibles</strong></th>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors web</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Servidors web</strong></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/apache.png" width="48" alt="Apache"> <img src="../img/nginx.png" width="48" alt="NGinx"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="SwarmMe"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"> <img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Servidors d'aplicacions</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Servidors d'aplicacions</strong></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/java.png" width="48" alt="Java"> <img src="../img/nodejs.png" width="48" alt="NodeJS"> <img src="../img/php.png" width="48" alt="PHP"> <img src="../img/tomcat.png" width="48" alt="Tomcat"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/swarm.png" width="48" alt="SwarmMe"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"> <img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center"><strong>CaaS - Bases de Dades (DBaaS)</strong></td>
+        <td style="font-size: 16px;"><div align="center"><strong>Bases de Dades (DBaaS)</strong></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/postgresql.png" width="48" alt="PostgreSQL"> <img src="../img/mysql.png" width="48" alt="MySQL"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
     </tr>
 </table>
-<div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
 
+.
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
 
@@ -343,8 +356,12 @@ Pel que fa a l’storage:
 * SwarmMe:
     * Desplegament
 
-<div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+.
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 
 ### **2.2. Cloud Públic** {#CloudPublic}
@@ -357,8 +374,12 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
-<div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+.
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
@@ -371,8 +392,8 @@ El tarifari associat al núvol públic és específic de l’element a sol·lici
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="33%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
-        <th class="cttiNoBorder" width="34%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>IBMCLoud Runtimes</strong></td>
@@ -400,8 +421,12 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
 
-<div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+.
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
@@ -417,11 +442,13 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 * El desenvolupador, amb les credencials d’accés, bàsicament guarda i recupera registres.
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
+
+.
 <div style="font-size: 9px;">
 
 [Inici] (#TaulaContiguts)
-
 </div>
+<br>
 
 
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
@@ -430,10 +457,10 @@ Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix
 
 Es poden sol·licitar1 altres elements disponibles als núvols públics que es posen a disposició de les ATIC que no estiguin homologats sempre i quan l’ATIC es faci responsable d’assumir el cost que generi.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%; align: left;">
     <tr>
-        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
-        <th class="cttiNoBorder" width="50%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><strong>Productes</strong></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>Compose</strong></td>
@@ -470,8 +497,12 @@ Avantatges:
     * Màquines virtuals amb el SO triat
 
 
-<div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+.
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 
 ##### **2.2.1.4. Storage** {#CatalegServeis}
@@ -481,8 +512,12 @@ Avantatges:
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
-<div></div>
-<div style="font-size: 9px;">[Inici] (#TaulaContiguts)</div>
+.
+<div style="font-size: 9px;">
+
+[Inici] (#TaulaContiguts)
+</div>
+<br>
 
 
 ## **3. Governança** {#Governança}
@@ -491,7 +526,7 @@ Avantatges:
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;border-style:none;">
+<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;border-style:none;">
     <tr>
         <td width="10%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
         <td width="90%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
@@ -526,7 +561,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
         <td style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/prometheus.png" width="48" alt="Prometheus"> <img src="../img/grafana.png" width="48" alt="Grafana"></td>
         <td style="font-size: 16px;"><div align="center"><img src="../img/kibana.png" width="48" alt="Kibana"></td>
-        <td style="font-size: 16px;"></td>
+        <td style="font-size: 16px;"><div align="center"><img src="../img/jaeger.png" width="48" alt="Jaeger"> <img src="../img/istio.png" width="48" alt="Istio"></td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><img src="../img/ibmcloud.png" width="48" alt="Openshift"> <img src="../img/kubernetes.png" width="48" alt="Kubernetes"></td>
@@ -553,6 +588,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <div style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
 </div>
+<br>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
@@ -579,25 +615,27 @@ Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen ei
     </tr>
 </table>
 
+<br>
+
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
 En funció de l'estat del projecte, el funcionament serà el següent:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Estat aplicació</strong></th>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Comunicació</strong></th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="left"><strong>Estat aplicació</strong></th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><strong>Comunicació</strong></th>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center">En servei</td>
+        <td style="font-size: 16px;"><div align="left"><strong>En servei</strong></td>
         <td style="font-size: 16px;"><div align="center">Remedy per incidències, consultes i canvis</td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center">En fase de projecte</td>
+        <td style="font-size: 16px;"><div align="left"><strong>En fase de projecte</strong></td>
         <td style="font-size: 16px;"><div align="center">Via CSTD (Centre de Suport Tecnològic al Desenvolupament) al Servei Acompanyament Suport Cloud</td>
     </tr>
     <tr>
-        <td style="font-size: 16px;"><div align="center">Sense iniciar el procés d'alta dins del CTTI</td>
+        <td style="font-size: 16px;"><div align="left"><strong>Sense iniciar el procés d'alta dins del CTTI</strong></td>
         <td style="font-size: 16px;"><div align="center">Adreçar consultes a CS Suport Cloud</td>
     </tr>
 </table>
@@ -607,16 +645,88 @@ En funció de l'estat del projecte, el funcionament serà el següent:
 
 ## **4. Annexes** {#Annexes}
 
-Annexes
-
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
 
-SaaS sobre contenidors
+Anomenarem així als serveis, que:
+
+* Estan desplegats i s’executen a infraestructura cloud.
+* Els usuaris només consumeixen el servei. No tenen capacitat de control o administració del mateix, més enllà de configuració a nivell d’usuari.
+  
+Disponibles actualment:
+
+* ServiceMesh (no disponible en totes les plataformes cloud).
+* API-Manager.
 
 #### **4.1.1. Service Mesh** {#ServiceMesh}
 
-Service Mesh
+* Cas d'ús:
+
+Service Mesh es un terme que defineix aquells productes que busquen resoldre els problemes que generen les arquitectures basades en microserveis. Les seves funcionalitats clau inclouen seguretat, control del tràfic de xarxa i monitorització de l'aplicació.
+
+Es important entendre que no es només instal·lar-ho, cal configurar-ho correctament i aprofitar-ho.
+
+<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;align:left;">
+    <tr>
+        <td style="font-size: 16px;" width="25%"><div align="center"><img src="../img/servicemeshcasus.png" width="100%" alt="Service Mesh"></td>
+        <td style="font-size: 16px;" width="75%"><div align="Left">
+        <div>Quins casos aconsellen l'ús d’un Service Mesh:</div>
+        <div></div>
+        <div>- Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.</div>
+        <div>- En el cas de comunicacions asíncrones, es més recomanable fer servir un gestor de cues, però un Service Mesh ens ajudaria en el cas de voler traces distribuïdes.</div>
+        <div>- Aplicacions que requereixen de seguretat i/o control del tràfic entre microserveis.</div>
+        </td>
+    </tr>
+</table>
+
+**Principals funcions:**
+
+* Control de tràfic entre contenidors:
+  * Circuit Breakers.
+  * Timeouts.
+  * Reintents.
+  * Balanceig de tràfic avançat.
+  * Desplegaments avançats (Canary, Blue Green, Dark launching...).
+* Securització del tràfic entre contenidors:
+  * Encriptació SSL del Tràfic.
+  * Mutual TLS.
+  * Control d'accés.
+* Monitoratge:
+  * Estat dels microserveis.
+  * Flux de tràfic entre microserveis.
+  * Rendiment.
+  * Traces distribuïdes.
+
+Exemples d’ús del Service Mesh:
+
+* **Canary Deployment(*):** model de desplegament en que la nova versió de l’aplicació es desplega simultàniament amb la versió estable.
+* **A/B Testing:** molt similar al Canary Deployment, amb dues versions desplegades a les que decidirem quins usuaris accedeixen a cadascuna. No es fa per percentatge d’accessos, si no que decidim quins usuaris fan servir una o altra versió.
+* **Fault Injection:** permet injectar errors a un percentatge de les peticions. Permet simular i identificar el comportament del sistema en cas de fallida de xarxa i/o microserveis.
+* **Timeouts:** permet afegir de forma transparent als microserveis, timeouts entre peticions per evitar colls d’ampolla i fallides en cascada.
+* **Reintents:** permet afegir polítiques de reintents peticions per mitigar fallides puntuals de xarxa o microserveis.
+* **Throttling:** permet limitar el nombre de peticions concurrents màxim a un microservei per evitar la seva saturació.
+* **Circuit breaking:** es un patró que testeja el servei i, en cas que no es comporti correctament, tallar les peticions per evitar una fallida en cascada.
+* **Mutual TLS:** força TLS pel tràfic entre els diferents pods dins el clúster, eliminant tot el tràfic no TLS. Recomanat per clústers públics multiregió.
+* **ACL:** defineix la seguretat de les crides entre microserveis, indicant quins microserveis poden cridar a un microservei concret. Simplifica la seguretat en microserveis, tot eliminant la necessitat de l’ús de keys.
+* **RBAC:** permet configurar quins usuaris poden fer peticions als serveis i establir els tipus de peticions HTTP (GET, POST, PUT, DELETE, etc.)
 
 #### **4.1.2. API Manager** {#APIManager}
 
-API Manager
+Per a la publicació de les APIs públiques està disponible l’API-Manager Corporatiu. Es tracta de l’IBM API Connect.
+
+Funcions de l’API-Manager:
+
+* Funcionals:
+  * Catàleg d’APIs disponible per al seu ús i versionat.
+  * Autoservei en la subscripció a APIs.
+  * Portal de publicació de la documentació associada a l’ús de les APIs.
+  * Generació de reports sobre l’ús de les APIs.
+  * Associació de cost a l’ús de les APIs i gestionar el ser repartiment.
+* Tècniques:
+  * Control d’accés i definició de plans.
+  * Oferir diferents nivells de servei i control.
+  * Anàlisi de les dades que es publiquen.
+  * Seguretat:
+    * Establir polítiques de cache.
+    * Prevenció davant atacs.
+    * Protecció dels sistemes de backoffice.
+  * Aïllar els consumidors dels publicadors de serveis i dades.
