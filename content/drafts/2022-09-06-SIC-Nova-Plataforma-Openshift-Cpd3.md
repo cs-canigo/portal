@@ -9,8 +9,8 @@ key         = "OCTUBRE2022"
 
 ## Introducció
 
-Dins de les plataformes cloud que ofereix la Generalitat de Catalunya, **Cpd3 passa a proporcionar una nova plataforma
-CaaS Openshift** amb entorns Pre i Pro diferenciats.
+Dins de les [plataformes cloud](/cloud/plataformes-cloud/) que ofereix la Generalitat de Catalunya, **Cpd3 passa a proporcionar
+una nova plataforma CaaS Openshift** amb entorns Pre i Pro diferenciats.
 Aquesta nova plataforma a Cloud Privat ha estat certificada per l'equip de Suport cloud per a poder començar a
 desplegar aplicacions.
 

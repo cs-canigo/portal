@@ -358,7 +358,7 @@ components:
 
 On:
 
-- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a plataformes cloud i 1 hyperthread
+- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a [plataformes cloud](/cloud/plataformes-cloud/) i 1 hyperthread
 a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1 CPU. L'expressió 0.1 equival a l'expressió 100m, que es pot llegir com "cent milicpus" o com a “cent milicores”. Es recomana utilitzar la unitat "milicore" tenint en compte que no es permet una precisió major que 1m.
 
 - `memory`: recursos de memòria mesurats en bytes. Podeu expressar la memòria amb un nombre sencer o com un nombre decimal
