@@ -2,9 +2,9 @@
 date        = "2022-09-08"
 title       = "SIC. Desplegament API Manager corporatiu al SIC 3.0"
 description = "El SIC 3.0 permet dur a terme la publicació i el desplegament automatitzat de les APIS de producte."
-sections    = ["Notícies", "home"]
-categories  = ["SIC"]
-key         = "OCTUBRE2022"
+#sections    = ["Notícies", "home"]
+#categories  = ["SIC"]
+#key         = "OCTUBRE2022"
 +++
 
 ## Introducció
