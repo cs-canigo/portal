@@ -4,7 +4,7 @@ title       = "SIC. Actualització de versió Jenkins del SIC 3.0"
 description = "El dia 07/09/2022 s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 3.0"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
-key         = "SETEMBRE2022"
+key         = "OCTUBRE2022"
 +++
 
 **El dia 07/09/2022 s'ha dut a terme l’actualització del Servei d’Integració Continua SIC 3.0 a la versió 2.346.3 de Jenkins**.
