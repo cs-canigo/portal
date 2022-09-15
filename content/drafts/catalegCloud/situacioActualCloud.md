@@ -209,13 +209,13 @@ El tarifari de les solucions de contenidors es basa en:
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">CPD4</th>
         <td style="font-size: 16px;"><div align="center"><strong>254</strong></td>
-        <td style="font-size: 16px;"><div align="center"><strong>54</strong><font style="font-size: 9px;font-style: italic;"> (1)</font></td>
+        <td style="font-size: 16px;"><div align="center"><strong>54</strong><sup>(1)</sup></td>
         <td style="font-size: 16px;"><div align="center"><strong>512</strong></td>
-        <td style="font-size: 16px;"><div align="center"><strong>108</strong><font style="font-size: 9px;font-style: italic;"> (1)</font></td>
+        <td style="font-size: 16px;"><div align="center"><strong>108</strong><sup>(1)</sup></td>
         <td style="font-size: 16px;"><div align="center"><strong>1024</strong></td>
-        <td style="font-size: 16px;"><div align="center"><strong>216</strong><font style="font-size: 9px;font-style: italic;"> (1)</font></td>
+        <td style="font-size: 16px;"><div align="center"><strong>216</strong><sup>(1)</sup></td>
         <td style="font-size: 16px;"><div align="center"><strong>2048</strong></td>
-        <td style="font-size: 16px;"><div align="center"><strong>432</strong><font style="font-size: 9px;font-style: italic;"> (1)</font></td>
+        <td style="font-size: 16px;"><div align="center"><strong>432</strong><sup>(1)</sup></td>
     </tr>
 </table>
 
