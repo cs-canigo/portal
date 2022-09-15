@@ -222,7 +222,7 @@ El tarifari de les solucions de contenidors es basa en:
 <span style="font-size: 10px;font-style: italic;">(1): En procés d’ampliar la proporció a 1 GB:1000 milicores</span>
 
 
-* Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma(*).
+* Es poden sol·licitar serveis d’administració per elements de programari desplegats a la plataforma<sup>(*)</sup>.
 * L’emmagatzematge persistent se sol·licita amb les mateixes consideracions que el de la resta d’elements de catàleg de CPD.
 
 
