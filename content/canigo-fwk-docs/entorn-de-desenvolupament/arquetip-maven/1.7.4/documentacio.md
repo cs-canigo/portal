@@ -68,8 +68,14 @@ Al fitxer `settings.xml` del Maven caldrà configurar el repositori al profile p
 
 Per a generar aplicacions Canigó amb l'arquetipus maven utilitzarem el goal *archetype:generate*:
 
-```
-mvn archetype:generate -DarchetypeGroupId=cat.gencat -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.7.4 -DartifactId=Prova -DgroupId=cat.gencat -Dversion=1.0.0 -B
+```bash
+mvn archetype:generate \
+   -DarchetypeGroupId=cat.gencat.ctti \
+   -DarchetypeArtifactId=plugin-canigo-archetype-rest \
+   -DarchetypeVersion=1.7.4 \
+   -DartifactId=Prova \
+   -DgroupId=cat.gencat \
+   -Dversion=1.0.0 -B
 ```
 
 On:
