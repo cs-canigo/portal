@@ -1,5 +1,5 @@
 +++
-date = "2022-05-24"
+date = "2022-09-22"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -45,8 +45,7 @@ de forma més periòdica, els responsables poden tenir major confiança del treb
 
 Es contemplen diverses modalitats de desplegament:
 
-* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. Aquesta modalitat no
-aplica als desplegaments on-premise.
+* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. En el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolutció del desplegament. Aquesta modalitat no aplica als desplegaments on-premise.
 
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
 delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides. En aquest cas,
@@ -57,6 +56,8 @@ si es produeix un error en el desplegament, de cara a tractar-lo i reportar-lo, 
 |-1xx|Equip SIC|
 |-2xx|Proveïdor d'infraestructures (Cpd)|
 |-3xx|Lot d'aplicacions|
+
+Igual que amb el desplegament automàtic al cloud, en el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on se sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolució del desplegament.
 
 * **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
 un tiquet Remedy CRQ en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
@@ -119,7 +120,7 @@ seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 <br/>
 A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
 
-* **Init**: inicialitzacions internes i validació de format i contingut dels fitxers YML de configuració per a assegurar que acompleixen l'especificació.
+* **Init**: inicialitzacions internes.
 
 * **Checkout**: descàrrega del codi font del projecte a l'espai de treball.
 
@@ -163,7 +164,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn de Preproducció requereix conformitat prèvia o bé és necessari introduir informació per a la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
-    * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
+    * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
 
     * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Preproducció.
 
@@ -181,13 +182,13 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Environment Tag**: generació del tag d'entorn al repositori de codi segons es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-preproduction.
 
-    * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
+    * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
 
 * Per a l'**entorn de Production** (Producció):
 
     * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn de Producció requereix conformitat prèvia o bé és necessari introduir informació per a la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
-    * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
+    * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
     * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Producció.
 
@@ -201,7 +202,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
 
-    * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
+    * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
 
 <div class="message information">
@@ -222,6 +223,20 @@ Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicam
 Els artefactes no queden emmagatzemats a l'espai de treball pel que la marxa enrere passaria per
 **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors.
 Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
+
+### Integració amb ITSM
+
+Es contemplen dues modalitats d'integració amb ITSM per a generar tiquet Remedy CRQ dels desplegaments als entorns de Preproducció i Producció:
+
+- **Automàtica**: en el cas de modalitat de desplegament automàtic al cloud o delegat, i amb la informació proporcionada per l'usuari,
+el sistema s'encarrega de generar, actualitzar i tancar automàticament els tiquets Remedy CRQ associats a cada desplegament permetent
+la traçabilitat dels desplegaments sense que es requereixi cap intervenció manual per part de l'usuari.
+
+- Mode **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema s'encarrega de generar una plantilla de petició de canvi
+que el proveïdor ha d'acabar de complimentar per a poder sol·licitar a Cpd el corresponent desplegament.
+
+Amb aquestes dues modalitats d'integració, s'assoleix l'**objectiu de disposar de tota la informació necessària per a realitzar
+l'auditoria de l'activitat dels desplegaments als entorns de Preproducció i Producció** de les aplicacions.
 
 ## Autoservei de pipelines
 
