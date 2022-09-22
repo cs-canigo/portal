@@ -1,5 +1,5 @@
 +++
-date        = "2022-09-22"
+date        = "2022-09-21"
 title       = "SIC. Integració ITSM al SIC 3.0"
 description = "A partir del 27/09/2022 es posa en servei la integració amb ITSM Remedy pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0."
 sections    = ["Notícies", "home"]
