@@ -1435,25 +1435,25 @@
         "Descripcio": "Llistat de categories generals de discapacitats, segons la importància de la deficiència i el grau de discapacitat que origina.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "DG Autonomia Personal i la Discapacitat- Departament Drets Socials",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Classes_discapacitat_ATR.docx",
                 "ifitxer_xls": "Classes_discapacitat.xlsx",
                 "idatacreacio": "08/02/2022",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "23/02/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "28/09/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Classes-de-discapacitat/d5s9-m985",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "CLASSES_DISCAPACITAT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "23/02/2022",
-        "Data_actualitzacio": "23/02/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "28/09/2022",
+        "Data_actualitzacio": "28/09/2022"
     },
     {
         "Id": "dtarq171",
@@ -1463,25 +1463,25 @@
         "Descripcio": "Llistat de nivells de gravetat a què fan referència els criteris per a l'assignació del percentatge de discapacitat, està basat en la repercussió de la patologia sobre les activitats de la vida diària.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "DG Autonomia Personal i la Discapacitat- Departament Drets Socials",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Graus_discapacitat_ATR.docx",
                 "ifitxer_xls": "Graus_discapacitat.xlsx",
                 "idatacreacio": "11/12/2020",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "23/02/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "28/09/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Graus-de-discapacitat/5d9v-m5ts",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "GRAUS_DISCAPACITAT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "23/02/2022",
-        "Data_actualitzacio": "23/02/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "28/09/2022",
+        "Data_actualitzacio": "28/09/2022"
     },
     {
         "Id": "dtarq173",
@@ -1491,25 +1491,25 @@
         "Descripcio": "Llistat de tipologies en què es poden classificar les discapacitats de les persones, basades en la normativa que regula el procediment per al reconeixement de discapacitat, que relaciona deficiència i funcionalitat.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "DG Autonomia Personal i la Discapacitat- Departament Drets Socials",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Tipus_discapacitat_ATR.docx",
                 "ifitxer_xls": "Tipus_discapacitat.xlsx",
                 "idatacreacio": "11/12/2020",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "23/02/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "28/09/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Tipus-de-discapacitat/249h-cjmg",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "TIPUS_DISCAPACITAT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "23/02/2022",
-        "Data_actualitzacio": "23/02/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "28/09/2022",
+        "Data_actualitzacio": "28/09/2022"
     },
     {
         "Id": "dtarq56",
@@ -2191,16 +2191,31 @@
             },
             {
                 "inom": "V09",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom del municipi Beniardá (nom anterior) per Beniardà (nom actualitzat). Codi 030279.",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_V09.xlsx",
                 "idatacreacio": "21/06/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "28/09/2022",
                 "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V10",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi de nom del municipi \"Font d'En Carròs, la\" (nom anterior) per \"Font d'en Carròs, la\" (nom actualitzat). Codi 461271.",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "22/09/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "28/09/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2208,7 +2223,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "22/06/2022"
+        "Data_actualitzacio": "28/09/2022"
     },
     {
         "Id": "dtarq127",
@@ -2857,4 +2872,5 @@
         "Data_publicacio": "26/01/2022",
         "Data_actualitzacio": "26/01/2022"
     }
-]}
+]
+}
