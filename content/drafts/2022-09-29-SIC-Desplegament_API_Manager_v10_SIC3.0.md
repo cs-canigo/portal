@@ -32,6 +32,7 @@ de pipelines que permeten gestionar aquest cicle de vida d'una forma estandardit
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”
 
 Per a més informació, podeu consultar la documentació del [Servei d'API Manager Corporatiu](/apim/).
+<br/>
 
 Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
 incorporat exemples:
