@@ -477,6 +477,9 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <table align="left" cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;border-style:none;">
     <tr>
+        <th class="cttiNoBorder" width="100%" style="font-size: 16px;"><div align="center" colspan="2"></th>
+    </tr>
+    <tr>
         <td width="10%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
         <td width="90%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
         <div align="left">1. Estat dels desplegaments</div>
@@ -615,6 +618,9 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
 
 <table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;align:left;" align="left">
     <tr>
+        <th class="cttiNoBorder" width="100%" style="font-size: 16px;"><div align="center" colspan="2"></th>
+    </tr>
+    <tr>
         <td style="font-size: 16px;" width="35%"><div align="center"><img src="../img/servicemeshcasus.png" width="100%" alt="Service Mesh"></td>
         <td style="font-size: 16px;" width="65%"><div align="Left">
         <div>Quins casos aconsellen l'ús d’un Service Mesh:</div>
@@ -625,6 +631,7 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
         </td>
     </tr>
 </table>
+
 
 **Principals funcions:**
 
