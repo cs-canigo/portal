@@ -193,7 +193,7 @@ Els mercats i sectors que poden beneficiar-se d'aquesta tecnologia actualment s√
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/07/Imatge5.jpg" />
+  <img src="/images/bloc/2022/09/Imatge5.jpg" />
   <span>Font: Telef√≤nica</span>
 </div>
 <br>
