@@ -9,10 +9,10 @@ key         = "OCTUBRE2022"
 
 ## Introducció
 
-El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
+El **[Servei d'Integració Contínua](/sic/) és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
 de les aplicacions**.
 
-**L'API Manager Corporatiu és una plataforma en modalitat SaaS basada en la solució IBM API Connect 10 Reserved Instance**.
+**L'[API Manager Corporatiu](/apim/) és una plataforma en modalitat SaaS basada en la solució IBM API Connect 10 Reserved Instance**.
 Aquest servei permet gestionar el cicle de vida de les APIS de manera senzilla i segura amb l’objectiu de facilitar-ne
 tant la seva publicació com el seu consum.
 
@@ -31,14 +31,14 @@ de pipelines que permeten gestionar aquest cicle de vida d'una forma estandardit
     * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden)
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”
 
+Per a més informació, podeu consultar la documentació del [Servei d'API Manager Corporatiu](/apim/).
+
 Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
 incorporat exemples:
 
 - [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 - [Exemple fitxer ACA](/related/sic/3.0/aca_despl_api_manager.yml)
-
-Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
