@@ -59,7 +59,9 @@ Les principals característiques del conjunt de xips NB-IoT d’aquesta tecnolog
 
 Si es compara amb altres tecnologies similars com la LTE-M, NT-IoT té una major cobertura i millor posicionament en interiors, en canvi LTE-M, permet veu i una amplada de banda major, la qual cosa afavoreix a tenir més velocitat de dades, menor latència i està més preparada per aplicacions de mobilitat. <br>
 
-En aquesta taula s’hi poden apreciar les diferencies entre ambdues:
+En aquesta taula s’hi poden apreciar les diferencies entre ambdues: <br>
+
+<div align="center">
 <table border="0" align="center">
   <tr>
     <td><strong>Característica</strong></td>
@@ -117,6 +119,7 @@ En aquesta taula s’hi poden apreciar les diferencies entre ambdues:
     <td>< 10$</td>
   </tr>
 </table>
+</div>
 
 <br>
 <div align="center">
