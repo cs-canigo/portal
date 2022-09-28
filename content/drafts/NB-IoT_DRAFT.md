@@ -56,6 +56,65 @@ Si es compara amb altres tecnologies similars com la LTE-M, NT-IoT té una major
 
 En aquesta taula s’hi poden apreciar les diferencies entre ambdues: <br>
 
+<table border="0" align="center">
+  <tr>
+    <td><strong>Característica</strong></td>
+    <td><strong>NB-IoT</strong></td>
+    <td><strong>LTE-M</strong></td>
+  </tr>  
+  <tr valign = "top">
+    <td>Amplada de banda</td>
+    <td>180KHZ-3GPP Llicència</td>
+    <td>1,4MHZ-3GPP Llicència</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Velocitat de baixada </td>
+    <td>120Kbit/s</td>
+    <td>1Mbit/s</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Velocitat de pujada </td>
+    <td>160Kbit/s</td>
+    <td>1Mbit/s</td>
+  </tr>  
+   <tr valign = "top">
+    <td>Latència</td>
+    <td>1-10s</td>
+    <td>50-100ms</td>
+  </tr>  
+   <tr valign = "top">
+    <td>Duració bateria </td>
+    <td>10 anys(segons dispositiu)</td>
+    <td>10 anys(segons dispositiu)</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Posicionament en interiors</td>
+    <td>Excel·lent</td>
+    <td>Bona</td>
+  </tr>  
+   <tr valign = "top">
+    <td>Tipus de transmissió</td>
+    <td>Dades</td>
+    <td>Dades, veu i SMS</td>
+  </tr>  
+   <tr valign = "top">
+    <td>Desplegament de freqüència</td>
+    <td>Flexible</td>
+    <td>Banda LTE</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Mobilitat</td>
+    <td>No</td>
+    <td>Sí</td>
+  </tr>
+  <tr valign = "top">
+    <td>Cost dels mòduls </td>
+    <td>10% menys que LTE-M</td>
+    <td>< 10$</td>
+  </tr>
+</table>
+<br>
+
 <br>
 <div align="center">
   <img src="/images/bloc/2022/09/imatge2.jpg" text="Font: Sierra Wireless"/>
