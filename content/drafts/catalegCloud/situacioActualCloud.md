@@ -272,11 +272,7 @@ A tenir en compte:
 * Totes les imatges a desplegar parteixen d’un dockerfile. No es despleguen imatges preconstruïdes.
 * Exposició de protocols HTTP/HTTPS. Les plataformes privades no suporten altres protocols, com per exemple SSH, JDBC, sFTP… doncs implica IP de publicació propia així com configuració d’un node-port.
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 #### **2.1.2. DBaaS** {#DBaaS}
@@ -318,11 +314,7 @@ Pel que fa a l’storage:
     </tr>
 </table>
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
 
@@ -351,11 +343,7 @@ Pel que fa a l’storage:
 * SwarmMe:
     * Desplegament
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 ### **2.2. Cloud Públic** {#CloudPublic}
@@ -368,11 +356,7 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
@@ -414,11 +398,7 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
@@ -435,11 +415,7 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
@@ -488,11 +464,7 @@ Avantatges:
     * Màquines virtuals amb el SO triat
 
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 ##### **2.2.1.4. Storage** {#CatalegServeis}
@@ -502,11 +474,7 @@ Avantatges:
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 ## **3. Governança** {#Governança}
@@ -572,12 +540,9 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
     </tr>
 </table>
 
-<div style="font-size: 10px;font-style: italic;">(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.
-</div>
+<span style="font-size: 10px;font-style: italic;">(*)Si es vol afegir una monitorització específica, es pot implementar un Prometheus y Grafana propi de l’aplicació. Es poden fer servir els templates que Suport Cloud ofereix. Cal recordar que s’ha d’aprovisionar disc persistent per Prometheus.</span>
 
-<div style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces
-</div>
-<div> </div>
+<span style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces</span>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
 
@@ -604,11 +569,7 @@ Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen ei
     </tr>
 </table>
 
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
 
@@ -660,8 +621,8 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
 
 <table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;align:left;">
     <tr>
-        <td style="font-size: 16px;" width="25%"><div align="center"><img src="../img/servicemeshcasus.png" width="100%" alt="Service Mesh"></td>
-        <td style="font-size: 16px;" width="75%"><div align="Left">
+        <td style="font-size: 16px;" width="35%"><div align="center"><img src="../img/servicemeshcasus.png" width="100%" alt="Service Mesh"></td>
+        <td style="font-size: 16px;" width="65%"><div align="Left">
         <div>Quins casos aconsellen l'ús d’un Service Mesh:</div>
         <div></div>
         <div>- Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.</div>
@@ -724,9 +685,4 @@ Funcions de l’API-Manager:
     * Protecció dels sistemes de backoffice.
   * Aïllar els consumidors dels publicadors de serveis i dades.
 
-
-<div> </div>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
