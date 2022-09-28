@@ -43,6 +43,7 @@ estandards =  ["cataleg cloud"]
 ---
 
 ## **1. Introducció** {#Introduccio}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 La demanda d’arquitectures basades en solucions de núvol públic i/o contenidors ha augmentat de forma considerable en els darrers temps.
 
@@ -55,12 +56,9 @@ Ateses les grans diferències que es poden trobar en la manera de sol·licitar i
 - Les arquitectures basades en l’ús d’elements de núvol públic.
 
 Així mateix, com a conclusió també es reservarà un espai per tractar les solucions basades en arquitectures híbrides.
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 ## **2. Situació actual** {#SituacioActual}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 A la figura es mostren a molt alt nivell les solucions, les tecnologies disponibles i on es poden desplegar:
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">
@@ -130,14 +128,11 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"></td>
     </tr>
 </table>
-<div style="font-size: 9px;">
-
-[Inici] (#TaulaContiguts)
-</div>
 
 ### **2.1. Cloud Privat** {#CloudPrivat}
 
 #### **2.1.1. CaaS** {#CaaS}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 El CTTI disposa de 5 opcions per poder desplegar solucions basades en contenidors. En totes elles el proveïdor ofereix el marc (o plataforma d’orquestració) on es desplegaran i gestionaran els contenidors. Hi ha tres tecnologies d’orquestració:
 
@@ -276,6 +271,7 @@ A tenir en compte:
 
 
 #### **2.1.2. DBaaS** {#DBaaS}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **Consideracions tècniques generals**
 
@@ -317,6 +313,7 @@ Pel que fa a l’storage:
 <span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **Integració de contenidors al SIC:**
 
@@ -343,10 +340,11 @@ Pel que fa a l’storage:
 * SwarmMe:
     * Desplegament
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+
 
 
 ### **2.2. Cloud Públic** {#CloudPublic}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 Actualment el CTTI disposa de 2 opcions per desplegar sistemes d’informació sobre núvol públic; Azure i IBM Cloud.
 
@@ -356,12 +354,12 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 * **DBaaS:** anàlogament al cas de contenidors, es tracta del cas particular de l’xPaaS en què el programari ofert com a servei és una base de dades.
 * **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
 
 ##### **2.2.1.1. xPaaS** {#xPaaS}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 El tarifari associat al núvol públic és específic de l’element a sol·licitar i de l’ús que se’n faci durant la vida del sistema d’informació.
 
@@ -398,10 +396,9 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Consulta de les notes de selectivitat.
 * Rastreig de xarxes socials.
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
-
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeis}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
 
@@ -415,10 +412,8 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
-
-
 ##### **2.2.1.3. IaaS** {#CatalegServeis}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
 
@@ -464,22 +459,19 @@ Avantatges:
     * Màquines virtuals amb el SO triat
 
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
-
-
 ##### **2.2.1.4. Storage** {#CatalegServeis}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **Consideracions tècniques generals**
 
 * **IBMCloud:** File Storage associat a contenidors com a PVC.
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
-
 
 ## **3. Governança** {#Governança}
 
 ### **3.1. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
@@ -545,6 +537,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 <span style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces</span>
 
 #### **3.1.1. Openshift amb Istio** {#OpenshiftAmbIstio}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen eines per a la monitorització del sistema. El seguiment de mètriques, logs i traces dels microserveis (i de la resta del Sistema d’Informació si es configura així) es poden dur a terme amb les eines que proporciona Istio.
 
@@ -569,9 +562,8 @@ Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen ei
     </tr>
 </table>
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
-
 ### **3.2. Ticketing/Incidental** {#TicketingIncidental}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 En funció de l'estat del projecte, el funcionament serà el següent:
 
@@ -600,6 +592,7 @@ En funció de l'estat del projecte, el funcionament serà el següent:
 ## **4. Annexes** {#Annexes}
 
 ### **4.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 Anomenarem així als serveis, que:
 
@@ -612,6 +605,7 @@ Disponibles actualment:
 * API-Manager.
 
 #### **4.1.1. Service Mesh** {#ServiceMesh}
+<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 * Cas d'ús:
 
