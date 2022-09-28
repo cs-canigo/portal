@@ -183,7 +183,6 @@ NB-IoT utilitza una nova capa física de senyals i canals per complir amb els re
 <br>
 <div align="center">
   <img src="/images/bloc/2022/09/Imatge4.jpg" />
-   <span>Font: GSMA</span>
 </div>
 <br>
 
