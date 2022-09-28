@@ -45,6 +45,7 @@ NB-IoT és un estàndard de tecnologia de transmissió de dades de xarxa d’àr
 Va ser desenvolupat per 3GPP, l'Organització que administra les xarxes mòbils globals per la comunicació de ràdio, i que connecta els dispositius que necessiten transmetre amb poca freqüència petites quantitats de dades, de forma més senzilla i eficaç utilitzant les xarxes mòbils ja establertes. <br>
 
 Les principals característiques del conjunt de xips NB-IoT d’aquesta tecnologia son:
+
 * Tecnologia de baix cost.
 * Baix consum d'energia.
 * Llarga durada de les bateries de l'equip (fins a 10 anys).
@@ -117,11 +118,11 @@ En aquesta taula s’hi poden apreciar les diferencies entre ambdues: <br>
     <td>< 10$</td>
   </tr>
 </table>
-<br>
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/09/Imatge2.jpg" text="Font: Sierra Wireless"/>
+  <img src="/images/bloc/2022/09/Imatge2.jpg" />
+  <span>Font: Sierra Wireless</span>
 </div>
 <br>
 
@@ -158,7 +159,8 @@ Aquesta tecnologia utilitza senyals de baixa amplada de banda per a comunicar-se
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/09/Imatge3.jpg" text="Font: Telecapp"/>
+  <img src="/images/bloc/2022/09/Imatge3.jpg" />
+    <span>Font: Telecapp</span>
 </div>
 <br>
 
@@ -178,7 +180,8 @@ NB-IoT utilitza una nova capa física de senyals i canals per complir amb els re
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/09/Imatge4.jpg" text="Font: GSMA"/>
+  <img src="/images/bloc/2022/09/Imatge4.jpg" />
+   <span>Font: GSMA</span>
 </div>
 <br>
 
@@ -188,7 +191,8 @@ Els mercats i sectors que poden beneficiar-se d'aquesta tecnologia actualment s�
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/07/Imatge5.jpg" text="Font: Telefònica"/>
+  <img src="/images/bloc/2022/07/Imatge5.jpg" />
+  <span>Font: Telefònica</span>
 </div>
 <br>
 
