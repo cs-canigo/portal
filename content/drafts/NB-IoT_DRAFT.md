@@ -117,7 +117,7 @@ En aquesta taula s’hi poden apreciar les diferencies entre ambdues: <br>
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/09/imatge2.jpg" text="Font: Sierra Wireless"/>
+  <img src="/images/bloc/2022/09/Imatge2.jpg" text="Font: Sierra Wireless"/>
 </div>
 <br>
 
@@ -154,7 +154,7 @@ Aquesta tecnologia utilitza senyals de baixa amplada de banda per a comunicar-se
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/09/imatge3.jpg" text="Font: Telecapp"/>
+  <img src="/images/bloc/2022/09/Imatge3.jpg" text="Font: Telecapp"/>
 </div>
 <br>
 
@@ -174,7 +174,7 @@ NB-IoT utilitza una nova capa física de senyals i canals per complir amb els re
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/09/imatge4.jpg" text="Font: GSMA"/>
+  <img src="/images/bloc/2022/09/Imatge4.jpg" text="Font: GSMA"/>
 </div>
 <br>
 
