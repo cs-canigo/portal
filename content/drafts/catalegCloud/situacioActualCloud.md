@@ -477,12 +477,12 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
-        <th class="cttiNoBorder" width="20%" style="font-size: 16px;">Plataforma</th>
-        <th class="cttiNoBorder" width="80%" style="font-size: 16px;">Servei</th>
+        <th class="cttiNoBorder" width="25%" style="font-size: 16px;">Plataforma</th>
+        <th class="cttiNoBorder" width="75%" style="font-size: 16px;">Servei</th>
     </tr>
     <tr>
-        <td width="20%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
-        <td width="80%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
+        <td width="25%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
+        <td width="75%" style="font-size: 16px;"><div align="left">Des de la consola web de les diferents plataformes es pot consultar de cada projecte la següent informació:</div>
         <div align="left">1. Estat dels desplegaments</div>
         <div align="left">2. Estat dels pods</div>
         <div align="left">3. Mètriques dels pods</div>
@@ -617,10 +617,10 @@ Disponibles actualment:
 Service Mesh es un terme que defineix aquells productes que busquen resoldre els problemes que generen les arquitectures basades en microserveis. Les seves funcionalitats clau inclouen seguretat, control del tràfic de xarxa i monitorització de l'aplicació.
 
 Es important entendre que no es només instal·lar-ho, cal configurar-ho correctament i aprofitar-ho.
+<br>
 
-<div align="left">
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;width:70%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">Diagrama</th>
         <th class="cttiNoBorder" style="font-size: 16px;">Casos d'ús</th>
@@ -635,8 +635,6 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
     </tr>
 </table>
 
-</div>
-<br>
 
 **Principals funcions:**
 
