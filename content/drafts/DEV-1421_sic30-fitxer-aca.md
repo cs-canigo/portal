@@ -178,7 +178,7 @@ On:
 del fitxer `pom.xml`. Per exemple: ```PUBLISH_PARAMS: -f ./pom.xml```.
 
 - En el cas de **Npm** s’executarà la comanda ```npm publish ${PUBLISH_PARAMS}``` per la qual cosa haurem d’indicar la ruta
-de la llibreria. Per exemple: ```PUBLISH_PARAMS: dist/lib```.
+de la llibreria. Per exemple: ```PUBLISH_PARAMS: ./dist/lib```.
 
 En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà
 automàticament a la comanda.
