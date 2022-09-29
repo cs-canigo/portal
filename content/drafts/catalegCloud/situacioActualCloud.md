@@ -475,7 +475,7 @@ Avantatges:
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
-<table align="left" cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;border-style:none;">
+<table align="left" cellpadding="7" cellspacing="1" style="padding-left:50px;width:70%;border-style:none;">
     <tr>
         <th class="cttiNoBorder" width="20%" style="font-size: 16px;">Plataforma</th>
         <th class="cttiNoBorder" width="80%" style="font-size: 16px;">Servei</th>
@@ -617,7 +617,7 @@ Service Mesh es un terme que defineix aquells productes que busquen resoldre el
 
 Es important entendre que no es només instal·lar-ho, cal configurar-ho correctament i aprofitar-ho.
 
-<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;width:70%;">
     <tr>
         <th class="cttiNoBorder" style="font-size: 16px;">Diagrama</th>
         <th class="cttiNoBorder" style="font-size: 16px;">Casos d'ús</th>
