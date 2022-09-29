@@ -477,8 +477,8 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 
 <table align="left" cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;border-style:none;">
     <tr>
-        <th class="cttiNoBorder" width="20%" style="font-size: 16px;"></th>
-        <th class="cttiNoBorder" width="80%" style="font-size: 16px;"></th>
+        <th class="cttiNoBorder" width="20%" style="font-size: 16px;">Plataforma</th>
+        <th class="cttiNoBorder" width="80%" style="font-size: 16px;">Servei</th>
     </tr>
     <tr>
         <td width="20%" style="font-size: 16px;"><div align="center"><img src="../img/openshift.png" width="48" alt="Openshift"></td>
@@ -617,16 +617,14 @@ Service Mesh es un terme que defineix aquells productes que busquen resoldre el
 
 Es important entendre que no es només instal·lar-ho, cal configurar-ho correctament i aprofitar-ho.
 
-<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;align:left;" align="left">
+<table cellpadding="7" cellspacing="1" class="noBorder" style="padding-left:50px;width:70%;">
     <tr>
-        <th class="cttiNoBorder" style="font-size: 16px;"></th>
-        <th class="cttiNoBorder" style="font-size: 16px;"></th>
+        <th class="cttiNoBorder" style="font-size: 16px;">Diagrama</th>
+        <th class="cttiNoBorder" style="font-size: 16px;">Casos d'ús</th>
     </tr>
     <tr>
         <td style="font-size: 16px;" width="40%"><div align="center"><img src="../img/servicemeshcasus.png" width="100%" alt="Service Mesh"></td>
         <td style="font-size: 16px;" width="60%"><div align="Left">
-        <div>Quins casos aconsellen l'ús d’un Service Mesh:</div>
-        <div></div>
         <div>- Aplicacions amb microserveis que es comuniquen directament entre ells de forma síncrona.</div>
         <div>- En el cas de comunicacions asíncrones, es més recomanable fer servir un gestor de cues, però un Service Mesh ens ajudaria en el cas de voler traces distribuïdes.</div>
         <div>- Aplicacions que requereixen de seguretat i/o control del tràfic entre microserveis.</div>
@@ -634,7 +632,7 @@ Es important entendre que no es només instal·lar-ho, cal configurar-ho correct
     </tr>
 </table>
 
-
+<br>
 
 **Principals funcions:**
 
