@@ -69,7 +69,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
     </tr>
     <tr>
         <th class="cttiNoBorder" width="9%" style="border-style: none;"></th>
-        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>Comnpose</strong></th>
+        <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>Compose</strong></th>
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>IBM Cloud</strong></th>
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>Azure</strong></th>
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD1</strong></th>
@@ -78,7 +78,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <th class="cttiNoBorder" width="13%" style="font-size: 20px;text-align: center;"><strong>CPD4</strong></th>
     </tr>
     <tr>
-        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>SaaS</strong></th>
+        <th class="cttiNoBorder" style="font-size: 20px;"><strong>SaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../img/apiconnect.png" width="30" alt="IBM Apiconnect"></td>
         <td align="center"><img src="../img/powerapps.png" width="30" alt="PowerApps"> <img src="../img/dynamics365.png" width="30" alt="Swarm"> <img src="../img/cdn.png" width="30" alt="CDN"></td>
@@ -88,7 +88,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"></td>
     </tr>
     <tr>
-        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>CaaS</strong></th>
+        <th class="cttiNoBorder" style="font-size: 20px;"><strong>CaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../img/kubernetes.png" width="30" alt="Kubernetes"></td>
         <td align="center"></td>
@@ -98,7 +98,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../img/openshift.png" width="30" alt="Openshift"></td>
     </tr>
     <tr>
-        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>xPaaS</strong></th>
+        <th class="cttiNoBorder" style="font-size: 20px;"><strong>xPaaS</strong></th>
         <td align="center"></td>
         <td align="center"><img src="../img/javaliberty.png" width="30" alt="JavaLiberty"> <img src="../img/python.png" width="30" alt="Python"> <img src="../img/ruby.png" width="30" alt="Ruby"> <img src="../img/nginx.png" width="30" alt="NGinx"> <img src="../img/php.png" width="30" alt="Php"> <img src="../img/nodejs.png" width="30" alt="NodeJS"> <img src="../img/go.png" width="30" alt="Go"></td>
         <td align="center"><img src="../img/microsoftnet.png" width="30" alt="Microsoft .Net"> <img src="../img/python.png" width="30" alt="Python"> <img src="../img/java.png" width="30" alt="Java"> <img src="../img/php.png" width="30" alt="Php"> <img src="../img/nodejs.png" width="30" alt="NodeJS"></td>
@@ -108,7 +108,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../img/istio.png" width="30" alt="Istio"></td>
     </tr>
     <tr>
-        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>DBaaS</strong></th>
+        <th class="cttiNoBorder" style="font-size: 20px;"><strong>DBaaS</strong></th>
         <td align="center"><img src="../img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../img/mongodb.png" width="30" alt="MongoDB"> <img src="../img/elasticsearch.png" width="30" alt="ElasticSearch"></td>
         <td align="center"><img src="../img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../img/mongodb.png" width="30" alt="MongoDB"> <img src="../img/redis.png" width="30" alt="Redis"> <img src="../img/elasticsearch.png" width="30" alt="ElasticSearch"></td>
         <td align="center"><img src="../img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../img/sqlserver.png" width="30" alt="SQLServer"> <img src="../img/mysql.png" width="30" alt="MySQL"></td>
@@ -118,7 +118,7 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
         <td align="center"><img src="../img/postgresql.png" width="30" alt="PostgreSQL"> <img src="../img/mysql.png" width="30" alt="MySQL"></td>
     </tr>
     <tr>
-        <th class="cttiNoBorder" align="right" style="font-size: 20px;text-align: right;"><strong>IaaS</strong></th>
+        <th class="cttiNoBorder" style="font-size: 20px;"><strong>IaaS</strong></th>
         <td align="center"></td>
         <td align="center"></td>
         <td align="center"><img src="../img/iaas.png" width="30" alt="IaaS"></td>
