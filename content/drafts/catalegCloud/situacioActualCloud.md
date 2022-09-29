@@ -475,7 +475,7 @@ Avantatges:
 
 Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
-<table cellpadding="7" cellspacing="1" style="padding-left:50px;width:70%;border-style:none;">
+<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
         <th class="cttiNoBorder" width="20%" style="font-size: 16px;">Plataforma</th>
         <th class="cttiNoBorder" width="80%" style="font-size: 16px;">Servei</th>
@@ -502,6 +502,7 @@ Al desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
         <td style="font-size: 16px;"><div align="left">Accés als logs online via client Kubctl sense persistència.</td>
     </tr>
 </table>
+
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
