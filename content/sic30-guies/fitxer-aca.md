@@ -1,5 +1,5 @@
 +++
-date = "2022-05-24"
+date = "2022-09-29"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -30,7 +30,7 @@ desplegament de l’aplicació o component.
 
 L'arxiu ha de tenir la següent **estructura general**:
 
-```
+```yaml
 version
 info
 global-env
@@ -47,7 +47,7 @@ Caldrà indicar la versió de l’arxiu ACA. Aquesta versió segueix un versiona
 cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha
 de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`. La versió actual és:
 
-```
+```yaml
 version: 2.0.0
 ```
 
@@ -55,7 +55,7 @@ version: 2.0.0
 
 Aquest element contindrà informació general del component:
 
-```
+```yaml
 info:
   version
   description
@@ -66,7 +66,7 @@ info:
 Versió funcional de l’aplicació o component que ha d’acomplir l’[Estàndard de versions](https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari).
 Per exemple:
 
-```
+```yaml
 info:
   version: 1.0.0
 ```
@@ -80,7 +80,7 @@ Per a més informació: [Howto automatitzar el descriptor sic.yml] (/howtos/2021
 
 Descripció de l'aplicació o component. Es tracta d’un camp de lliure contingut. Per exemple:
 
-```
+```yaml
 info:
   description: Backend de l'aplicació de Gestió de Continguts CTTI
 ```
@@ -131,11 +131,18 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
 
 </br>
-#### Per al desplegament a l’Api Manager:
+#### Per al desplegament a l’Api Manager (API Connect v.5.2):
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PRODUCT_FILE|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l’Api Manager|
+
+</br>
+#### Per al desplegament a l’Api Manager (API Connect >= v.10):
+
+|Variable|Requerit|Descripció|Valor per defecte|
+|--------|--------|----------|-----------------|
+|APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|
 
 </br>
 #### Per al desplegament al CloudFoundry IBMCloud:
@@ -200,7 +207,7 @@ En aquest cas, no serà necessari configurar cap directiva de `build` ni `deploy
 
 Exemple de definició de variables per al desplegament a Openshift:
 
-```
+```yaml
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile
   - CONTAINER_IMAGE_NAME: petclinic-test-os
@@ -225,7 +232,8 @@ Caldrà afegir l’element local (`local`) indicant:
 - `path`: ruta del Dockerfile de la imatge del contenidor
 
 Per exemple:
-```
+
+```yaml
 components:
   - custom-builder:
       steps:
@@ -242,7 +250,7 @@ El nom de la imatge (`name`) serà referenciada des de la secció de construcci�
 
 Relació de passes (`steps`) per a la construcció del projecte segons la següent estructura:
 
-```
+```yaml
 components:
   - build:
       steps:
@@ -256,12 +264,11 @@ On:
 
 - `execution`: informació de les comandes que cal executar per a la construcció del projecte
 
-
 #### components[].build.steps[].container
 
 Informació del contenidor encarregat de realitzar la construcció del projecte segons la següent estructura:
 
-```
+```yaml
 components:
   - build:
       steps:
@@ -297,7 +304,6 @@ La imatge pot ser de dos tipus:
 - `local`: si la imatge del contenidor constructor és pròpia (`custom builder`) creada en l’element
 [`components[].custom-builder`](#components-custom-builder).
 
-
 **components[].build.steps[].container.image.remote**
 
 Imatge i versió del contenidor constructor (`builder`) que cal utilitzar d’entre les disponibles al
@@ -305,7 +311,7 @@ Imatge i versió del contenidor constructor (`builder`) que cal utilitzar d’en
 
 Caldrà definir el nom de la imatge (`name`) segons la següent estructura:
 
-```
+```yaml
 components:
   - build:
       steps:
@@ -320,7 +326,7 @@ components:
 Imatge del contenidor constructor pròpia (custom builder) creada en l’element [components[].custom-builder](#components-custom-builder).
 Caldrà definir el nom de la imatge (`name`) segons la següent estructura:
 
-```
+```yaml
 components:
     build:
       steps:
@@ -336,7 +342,7 @@ Recursos de màquina necessaris per a que el contenidor pugui dur a terme la con
 recursos de CPU i memòria del contenidor, tant de `limits` (recursos màxims) com de `request` (recursos mínims), segons
 la següent estructura:
 
-```
+```yaml
 components:
     build:
       steps:
@@ -366,12 +372,11 @@ Els valors màxims establerts són: <b>3072Mi</b> de memòria i <b>3000m</b> de 
 Per a més informació sobre l’administració de recursos: https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/.
 </br></br>
 
-
 #### components[].build.steps[].execution
 
 Relació de comandes (`commands`) que s'han d'executar al contenidor per a la construcció del projecte segons la següent estructura:
 
-```
+```yaml
 components:
     build:
       steps:
@@ -383,7 +388,7 @@ components:
 
 Exemple de construcció d'una aplicació Maven 3.6 i Jdk 1.8:
 
-```
+```yaml
 components:
   - build:
       steps:
@@ -408,7 +413,7 @@ components:
 Informació sobre el repositori de codi font que conté els descriptors en format YML per al desplegament de l'aplicació a
 l'OpenShift i Kubernetes (`scm`), així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
 
-```
+```yaml
 components:
   - deployment:
       scm
@@ -421,7 +426,7 @@ On `scm` indica el repositori on es troben ubicats els orquestradors per a dur a
 
 Informació sobre els entorns (`name`) i les especificitats del desplegament sobre aquests, segons l'estructura següent:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -446,7 +451,7 @@ On:
 Únicament per a **desplegaments on-premise**, informació sobre els artefactes a desplegar indicant el seu: nom (`name`), ruta (`path`), tipus (`type`) i,
 en cas de desplegament en modalitat delegada, l'identificador de insfraestructura assignat (` infrastructure-id`), segons l'estructura següent:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -471,7 +476,7 @@ On:
 
 Per exemple:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -491,14 +496,13 @@ l'artefacte preestablerts pel sistema:
 
 - `path`: tmpBBDD
 
-
 ##### components[].deployment.enviroments[].actions.before-deploy
 
 Informació sobre el possible pas previ al desplegament `before-deploy` concebut per a poder dur a terme tasques que
 calgui executar abans del desplegament com, per exemple, modificar l'estat d'un API Gateway. Aquest pas és **compatible
 únicament amb plataformes Openshift i Kubernetes** segons la següent estructura:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -522,7 +526,7 @@ variables d’entorn:
 
 Per exemple:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -542,7 +546,7 @@ components:
 
 Informació sobre el desplegament de l’aplicació `deploy` segons la següent estructura:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -557,7 +561,6 @@ components:
 On caldrà indicar el detall de les execucions (`execution`) de cada pas (`steps`) a realitzar indicant les variables
 requerides en cada cas i que dependran de les necessitats de desplegament aplicant els següents criteris:
 
-
 ###### Per al **desplegament a l’Openshift i Kubernetes IBMCloud i CaaS**:
 
 |Variable|Valor|
@@ -566,13 +569,11 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |DEPLOYMENT_NAME|Nom de l'aplicació a l’Openshift o Kubernetes|
 |DEPLOYMENT_WAIT|Temps d'espera per al desplegament de l'aplicació a l’Openshift o Kubernetes|
 
-
 ###### Per al **desplegament a WebApp Azure**:
 
 |Variable|Valor|
 |-------|-------|
 |WEBAPP_NAME|Nom de l'aplicació al WebApp Azure|
-
 
 ###### Per al **desplegament a SwarmMe**:
 
@@ -585,13 +586,17 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |SWARMME_REPLICAS|Nombre d’instàncies del servei al SwarmMe|
 |EXTRA_PARAMS|Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud|
 
-
-###### Per al **desplegament a l’Api Manager**:
+###### Per al **desplegament a l’Api Manager (API Connect v.5.2)**:
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PLAN_MAP|Descripció del pla a utilitzar per al desplegament a l’Api Manager. Consultar a Suport Cloud|
 
+###### Per al **desplegament a l’Api Manager (API Connect >= v.10)**:
+
+|Variable|Descripció|Exemple|
+|--------|----------|-----------------|
+|APIC\_TARGET\_URL\_{N}|URL de destí de les API's. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 ###### Per al **desplegament al CloudFoundry IBMCloud**:
 
@@ -600,7 +605,6 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |CF_NAME|Nom al CloudFoundry|
 |CF_COMMAND|Comanda a executar al CloudFoundry|
 |CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per "|". Consultar a Suport Cloud|
-
 
 ###### Per al **desplegament On Premise**:
 
@@ -611,7 +615,7 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 
 ###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift i Kubernetes:
 
-```
+```yaml
 components:
   - deployment:
       scm: git.intranet.gencat.cat/0192/orchestrators.git
@@ -633,7 +637,7 @@ Informació sobre el possible pas posterior al desplegament `after-deploy` conce
 calgui executar després del desplegament com, per exemple, modificar l'estat d'un API Gateway. Aquest pas és **compatible
 únicament amb plataformes Openshift i Kubernetes** segons la següent estructura:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -655,10 +659,9 @@ variables d’entorn:
 |JOB_WAIT|Temps d'espera de la tasca|
 |JOB_ENVS|Variables d’entorn necessàries|
 
-
 Per exemple:
 
-```
+```yaml
 components:
   - deployment:
       environments:
@@ -680,7 +683,7 @@ Informació sobre el canal de notificació i destinataris davant accions manuals
 de les execucions. Actualment, el canal de notificació és mitjançant el correu electrònic, essent necessari indicar la
 relació de destinataris segons la següent estructura:
 
-```
+```yaml
 notifications:
   email:
     recipients:
@@ -689,7 +692,7 @@ notifications:
 
 Per exemple:
 
-```
+```yaml
 notifications:
   email:
     recipients:
@@ -701,7 +704,6 @@ Està previst implementar un sistema de validació que comprovi el format, el co
 en fer la pujada al Sistema de Custòdia de Codi.
 Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines online de validació disponibles
 com [**YAML Validator**](http://www.yamllint.com/).
-
 
 ## Exemples
 
@@ -735,7 +737,9 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Desplegament d'scripts de bbdd On Premise](/related/sic/3.0/aca_despl_bbdd_onpremise.yml)
 
-- [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager_v52.yml) (v5.2)
+- [Aplicació a desplegar a l’Api Manager (API Connect v.5.2)](/related/sic/3.0/aca_despl_api_manager_v52.yml)
+
+- [Aplicació a desplegar a l’Api Manager (API Connect >= v.10)](/related/sic/3.0/aca_despl_api_manager.yml)
 
 - [Construcció i publicació de llibreria Maven al Nexus](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
 
@@ -744,7 +748,6 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
 
 - [Construcció i publicació d'imatge pròpia al Registre corporatiu](/related/sic/3.0/aca_const_publi_harbor_image.yml)
-
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/).

@@ -31,14 +31,15 @@ de pipelines que permeten gestionar aquest cicle de vida d'una forma estandardit
     * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden)
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”
 
+Per a més informació, podeu consultar la documentació del [Servei d'API Manager Corporatiu](/apim/).
+<br/>
+
 Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
 incorporat exemples:
 
 - [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 - [Exemple fitxer ACA](/related/sic/3.0/aca_despl_api_manager.yml)
-
-Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
