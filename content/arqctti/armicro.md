@@ -2,8 +2,8 @@
 date        = "2021-05-01"
 title       = "Arquitectura de Referència de Microserveis"
 description = "Arquitectura de referència orientada al desplegament d'aplicacions en microserveis i microfrontends."
-sections    = ["drafts"]
-weight      = 4
+sections    = ["principis"]
+weight      = "4"
 +++
 
 # Arquitectura de referència de microserveis
