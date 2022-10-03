@@ -4,7 +4,7 @@ title       = "Principis d'Arquitectura de l'Entorn Digital de Treball"
 description = "Arquitectura de l'Entorn Digital de Treball"
 sections    = ["drafts"] 
 categories  = ["Data Architecture"]
-weight= 5
+weight= 2
 +++
 
 
