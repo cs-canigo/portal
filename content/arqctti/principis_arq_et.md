@@ -2,9 +2,9 @@
 date        = "2021-04-26"
 title       = "Principis d'Arquitectura de l'Entorn Digital de Treball"
 description = "Arquitectura de l'Entorn Digital de Treball"
-sections    = ["drafts"] 
+sections    = ["principis"]
 categories  = ["Data Architecture"]
-weight= 2
+weight      = "2"
 +++
 
 
