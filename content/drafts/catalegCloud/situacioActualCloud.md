@@ -1,5 +1,5 @@
 +++
-date        = "2022-08-24"
+date        = "2022-10-04"
 title       = "Situació Actual Cloud"
 description = "Situació Actual Cloud"
 sections    = "Cataleg Cloud"
@@ -27,10 +27,10 @@ estandards =  ["cataleg cloud"]
         3. [SIC: Desplegament d'aplicacions CaaS] (#SIC)
     2. [Cloud Públic] (#CloudPublic)
         1. [Catàleg de serveis] (#CatalegServeis)
-            1. [xPaaS] (#xPaaS)
-            2. [DBaaS] (#DBaaS)
-            3. [IaaS] (#IaaS)
-            4. [Storage] (#Storage)
+            1. [xPaaS] (#CatalegServeisxPaaS)
+            2. [DBaaS] (#CatalegServeisDBaaS)
+            3. [IaaS] (#CatalegServeisIaaS)
+            4. [Storage] (#CatalegServeisStorage)
 3. [Governança] (#Governança)
     1. [Monitorització, logs i traces] (#MonitoritzacioLogsTraces)
         1. [Openshift amb Istio] (#OpenshiftAmbIstio)
@@ -358,7 +358,7 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 
 #### **2.2.1. Catàleg de Serveis** {#CatalegServeis}
 
-##### **2.2.1.1. xPaaS** {#xPaaS}
+##### **2.2.1.1. xPaaS** {#CatalegServeisxxPaaS}
 <span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 El tarifari associat al núvol públic és específic de l’element a sol·licitar i de l’ús que se’n faci durant la vida del sistema d’informació.
@@ -397,7 +397,7 @@ El cas d’ús seria una aplicació de consulta simple amb temporalitat que pot 
 * Rastreig de xarxes socials.
 
 
-##### **2.2.1.2. DBaaS** {#CatalegServeis}
+##### **2.2.1.2. DBaaS** {#CatalegServeisxDBaaS}
 <span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
@@ -412,7 +412,7 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 
 Les versions de les BBDD no les governa el CTTI, si no el proveïdor que ofereix el SaaS, per tant, l’actualització de les versions no és negociable.
 
-##### **2.2.1.3. IaaS** {#CatalegServeis}
+##### **2.2.1.3. IaaS** {#CatalegServeisxIaaS}
 <span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **IaaS:** infraestructura com a servei - màquina virtual amb sistema operatiu inclòs desplegada sobre núvol públic.
@@ -459,7 +459,7 @@ Avantatges:
     * Màquines virtuals amb el SO triat
 
 
-##### **2.2.1.4. Storage** {#CatalegServeis}
+##### **2.2.1.4. Storage** {#CatalegServeisStorage}
 <span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
 **Consideracions tècniques generals**
