@@ -1,5 +1,5 @@
 +++
-date        = "2021-05-01"
+date        = "2021-02-03"
 title       = "Arquitectura de Referència de Microserveis"
 description = "Arquitectura de referència orientada al desplegament d'aplicacions en microserveis i microfrontends."
 sections    = ["principis"]
