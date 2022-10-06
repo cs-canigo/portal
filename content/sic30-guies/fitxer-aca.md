@@ -1,5 +1,5 @@
 +++
-date = "2022-09-29"
+date = "2022-10-06"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -129,6 +129,14 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |-------|-------|
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a SwarmMe|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
+
+</br>
+#### Per al desplegament d'scripts en BBDD en contenidors:
+
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor per al desplegament d'scripts|
+|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor per al desplegament d'scripts|
 
 </br>
 #### Per al desplegament a l’Api Manager (API Connect v.5.2):
@@ -734,6 +742,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 
 - [Construcció aplicació Maven i desplegament On Premise](/related/sic/3.0/aca_const_despl_maven_onpremise.yml)
+
+- [Desplegament d'scripts de bbdd en contenidors](/related/sic/3.0/aca_despl_bbdd_contenidors.yml)
 
 - [Desplegament d'scripts de bbdd On Premise](/related/sic/3.0/aca_despl_bbdd_onpremise.yml)
 

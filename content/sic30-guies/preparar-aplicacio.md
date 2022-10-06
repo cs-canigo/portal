@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2022-10-06"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -61,8 +61,15 @@ en el fitxer `pom.xml` pare i no un goal per cada submòdul.
 carpeta, caldrà crear l’arxiu de configuració `aca.yml` que proporcionarà la configuració necessària.
 Veure [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
 
-* Si es contempla l'execució de scripts de desplegament/migració de  BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
-Veure [Aplicacions APEX i PL/SQL, i migracions de BBDD](/sic30-guies/preparar-aplicacio/#Aplicacions APEX i PL/SQL, i migracions de BBDD).
+* Si es tracta d'un component a desplegar en una plataforma de contenidors mitjançant una imatge pròpia que caldrà construir, és necessari preparar el corresponent
+fitxer Dockerfile, així com els corresponents descriptors (orchestrators). Aquests components seran referenciats des del fitxer ACA indicat al punt anterior.
+
+* Si es contempla l'execució de scripts de desplegament/migració de BBDD on-premise, cal preparar el fitxer de `plans` i els corresponents scripts a una carpeta independent.
+Veure [Aplicacions APEX i PL/SQL, i migracions de BBDD on-premise](/sic30-guies/preparar-aplicacio/#Aplicacions APEX i PL/SQL, i migracions de BBDD on-premise).
+
+* Si es contempla l'execució de scripts de desplegament/migració de BBDD en plataforma de contenidors, cal preparar els corresponents scripts a una carpeta per versió.
+Aquesta versió es correspondrà amb la versió del component indicat al fitxer ACA indicat anteriorment.
+Veure [Migracions de BBDD en contenidors](/sic30-guies/preparar-aplicacio/#Migracions de BBDD en contenidors).
 
 ## Llibreries
 
@@ -79,7 +86,7 @@ caldrà sol·licitar al SIC la seva publicació manual mitjançant els [Canals d
 Es pot validar la existència o no de la llibreria pública accedint al [Repositori de llibreries](https://hudson.intranet.gencat.cat/nexus).
 En el cas de llibreries no públiques o pròpies publicades a repositoris privats, caldrà validar la resolució de les dependències del projecte dins l'entorn SIC.
 
-## Aplicacions APEX i PL/SQL, i migracions de BBDD
+## Aplicacions APEX i PL/SQL, i migracions de BBDD on-premise
 
 El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució de scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
 En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre artefacte, habitualment
@@ -119,6 +126,12 @@ Exemple:
 <br/>
 El projecte ha de contenir tot el codi de l'aplicació i el sistema de custòdia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
+
+## Migracions de BBDD en contenidors
+
+Cal disposar d'un projecte específic de desplegament/migració de BBDD i preparar el directori "scripts" (al primer nivell de carpeta) amb un subdirectori
+amb la versió associada a cada desplegament. Aquesta versió es correspondrà amb la versió del component indicat al fitxer ACA de configuració, de forma que
+s'executaran els scripts associats a la versió que es desplega en cada moment aplicant un ordre alfabètic.
 
 ## Funcionament de les pipelines de construcció i desplegament
 En realitzar una pujada de codi font, caldrà executar la corresponent pipeline de desplegament associada:

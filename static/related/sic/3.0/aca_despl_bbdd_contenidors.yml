@@ -1,0 +1,30 @@
+version: 2.0.0
+info:
+  version: 1.0.0
+  description: BBDD - Contenidors
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: sql-executor
+components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DEPLOYMENT_NAME: bbdd-scripts
+                      - DEPLOYMENT_WAIT: 480
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DEPLOYMENT_NAME: bbdd-scripts
+                      - DEPLOYMENT_WAIT: 480
+notifications:
+  email:
+    recipients:
+      - no_reply@gencat.cat
