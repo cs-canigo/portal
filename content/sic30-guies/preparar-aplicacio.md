@@ -131,7 +131,7 @@ el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer
 
 Cal disposar d'un projecte específic de desplegament/migració de BBDD i preparar el directori "scripts" (al primer nivell de carpeta) amb un subdirectori
 amb la versió associada a cada desplegament. Aquesta versió es correspondrà amb la versió del component indicat al fitxer ACA de configuració, de forma que
-s'executaran els scripts associats a la versió que es desplega en cada moment aplicant un ordre alfabètic.
+s'executaran els scripts associats a la versió que es desplega en cada moment en ordre alfabètic.
 
 ## Funcionament de les pipelines de construcció i desplegament
 En realitzar una pujada de codi font, caldrà executar la corresponent pipeline de desplegament associada:
