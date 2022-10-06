@@ -1,5 +1,5 @@
 +++
-date = "2022-05-24"
+date = "2022-10-06"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -282,7 +282,7 @@ funcionar.
 |-------|-------|
 |Oracle|19c, i anteriors|
 |SQL Server|2014, edició standard i express|
-|PostgreSQL|9.4.8, i anteriors|
+|PostgreSQL|13.8, i anteriors|
 |MongoDB|3.2.5, i anteriors|
 |MySQL|5.7.12, i anteriors|
 
