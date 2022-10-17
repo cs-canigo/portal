@@ -1,6 +1,6 @@
-version: 2.0.0
+version: 2.0.0 # aca schema version
 info:
-  version: 2.0.0
+  version: 2.0.0 # aca schema version
   description: WebApp azure
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile

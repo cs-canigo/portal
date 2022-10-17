@@ -1,5 +1,5 @@
 +++
-date = "2022-10-06"
+date = "2022-10-17"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -44,8 +44,9 @@ notifications
 ### version
 
 Caldrà indicar la versió de l’arxiu ACA. Aquesta versió segueix un versionat diferent del de l’aplicació o component, ja que
-cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha
-de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`. La versió actual és:
+cada increment de versió es correspondrà amb una nova versió de la definició de l'esquema utilitzat per a descriure l'estructura
+i les restriccions de contingut del fitxer. El seu valor ha
+de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>` i la versió actual és:
 
 ```yaml
 version: 2.0.0
