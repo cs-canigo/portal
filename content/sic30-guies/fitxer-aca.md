@@ -45,7 +45,7 @@ notifications
 
 Caldrà indicar la versió de l’arxiu ACA. Aquesta versió segueix un versionat diferent del de l’aplicació o component, ja que
 els dos primers dígits (versió major i minor) es correspondran amb la versió de la definició de l'esquema que descriu
-l'estructura i les restriccions de contingut del fitxer (_yml schema_); i el tercer dígit (versió pegat) es correspondrà
+l'estructura i les restriccions de contingut del fitxer (_yml schema version_); i el tercer dígit (versió pegat) es correspondrà
 amb la versió del fitxer de configuració. El seu valor ha de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`
 i la versió actual és:
 
