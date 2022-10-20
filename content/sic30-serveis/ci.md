@@ -118,7 +118,7 @@ seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 
 <CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages.png)</center>
 <br/>
-A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
+A continuació s'explica breument cadascuna de les etapes previstes per al desplegament de components i aplicacions:
 
 * **Init**: inicialitzacions internes.
 

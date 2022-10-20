@@ -89,8 +89,10 @@ Per a més informació: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 
 ### Generació de pipelines
 
+#### Desplegament d'aplicacions
+
 L'equip de SIC, mitjançant aquest servei, s'encarregarà de generar automàticament totes les pipelines necessàries, tant per al **desplegament del component o aplicació com
-altres pipelines per a dur a terme les operacions necessàries sobre [plataformes cloud](/cloud/plataformes-cloud/)**. Aquestes pipelines operatives es generaran dins d'un directori diferenciat
+altres pipelines per a dur a terme les operacions necessàries sobre [plataformes cloud](/cloud/plataformes-cloud/)**. Aquestes pipelines operatives s'aprovisionaran dins d'un directori diferenciat
 `/Advanced` dins del directori de tasques Jenkins associat al projecte i seran les següents:
 
 - **DEPLOY-START**: permet iniciar el servei.
@@ -118,6 +120,21 @@ per la pipeline principal. Aquestes pipelines no seran visibles per l'usuari i s
 desplegament de cada component a cada un dels entorns.
 
 - **CLEANER**: s'encarrega de l'esborrat d'espais de treball. Serà invocada per la pipeline principal en finalitzar.
+
+#### Desplegament d'APIS a l'API Manager corporatiu
+
+L'equip de SIC, mitjançant aquest servei, s'encarregarà de generar automàticament totes les pipelines necessàries, tant per a la **publicació d'APIS com
+altres pipelines per a gestionar el seu cicle de vida a l'[API Manager corporatiu](/apim/)**. En aquest segon cas, les pipelines
+s'aprovisionaran dins d'un directori diferenciat `/Advanced` dins del directori de tasques Jenkins associat al projecte:
+
+- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades
+- **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres)
+- Operatives:
+    * **DELETE**: eliminació del producte
+    * **DEPRECATE**: deprecació d’una versió del producte sense deixar cap versió vigent
+    * **REPLACE**: retirada d’una de les versions vigents del producte i migració de subscripcions
+    * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden)
+    * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”
 
 ### Tecnologies compatibles
 
