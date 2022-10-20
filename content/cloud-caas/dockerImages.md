@@ -1,5 +1,5 @@
 +++
-date          = "2020-06-11"
+date          = "2022-10-20"
 title         = "Criteris creació contenidors docker"
 description   = "Criteris per crear les imatges dels contenidors docker que es desplegaran als diferents clouds públics i privats"
 sections      = "Container Cloud"
@@ -45,7 +45,17 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * Executar el procés principal des d'un script, mai directament al Dockerfile.
 * Utilitzar el volum **/data** per desar la informació que cal persistir.
 * No executar múltiples processos a dins de la imatge docker. Docker està pensat per executar un únic procés.
+* Fer servir imatges confiables de repositoris oficials i verificats
+* Exposar només els ports necessaris, i sempre que sigui possible, configurar l’aplicació per treballar amb ports no-estandar
+* **No afegir mai credencials a les instruccions del Dockerfile ni afegir dades sensibles**
+* La imatge generada ha de ser independent de recursos externs i autosificient per arrencar a qualsevol entorn
+* Signar les imatges creades identificant l’equip que les ha generat
+* Prioritzar l’us de COPY sobre ADD
+* **Reduir el nº de layers tot el possible**, concatenant comandes que ho admetin (per exemple, RUN)
+* Ubicar les comandes que menys canvi presentin a l’inici del Dockerfile
 * **No escriure els logs de l'aplicació a fitxers. Enviar els logs sempre a la sortida estàndard**. D'aquesta manera la plataforma capturarà els logs i no caldrà entrar als contenidors per veure'ls.
+
+Per garantir el compliment de les bones pràctiques en la generació de les imatges, utilitzar l'eina [Haskell Dockerfile Linter (hadolint)](https://github.com/hadolint/hadolint).
 
 ## Criteris de seguretat
 
@@ -76,7 +86,7 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
         Veure la plana web [Openshift. Creating Images. Guidelines. OpenShift Origin-Specific Guidelines. Support Arbitrary User IDs](https://docs.openshift.com/container-platform/4.3/openshift_images/create-images.html) per més detalls.
 * Utilitzar variables d'entorn per la configuració.
 * Més informació de com construir les imatges de docker està disponible a :
-  * [Openshift 4.3. Creating Images. Guidelines](https://docs.openshift.com/container-platform/4.3/openshift_images/create-images.html#images-create-guide-openshift_create-images)
+  * [Openshift 4.10. Creating Images. Guidelines](https://docs.openshift.com/container-platform/4.10/openshift_images/create-images.html)
   * [Openshift 3.11. Creating Images. Guidelines](https://docs.openshift.com/container-platform/3.11/creating_images/guidelines.html)
   * [OpenShift Containers - Modification of /etc/passwd](https://access.redhat.com/articles/4859371)
 
