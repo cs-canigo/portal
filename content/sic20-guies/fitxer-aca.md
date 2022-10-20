@@ -77,11 +77,11 @@ resources:
     - id: int
       environment: int
       position: 1
-      deploymentType: AUTOMATIC
+      deploymentType: DELEGATED
     - id: pre
       environment: pre
       position: 2
-      deploymentType: DELEGATED
+      deploymentType: SEMIAUTOMATIC
     - id: pro
       environment: pro
       position: 3
