@@ -221,16 +221,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització per canvi d'un nom de departament i de dos acrònims.",
                 "ifitxer_doc": "Departaments_ATR.docx",
-                "ifitxer_xls": "Departaments.xlsx",
+                "ifitxer_xls": "deprecated/departaments_V03.xlsx",
                 "idatacreacio": "29/06/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/10/2022",
                 "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització per modificar el nom de \"Departament de Polítiques Digitals i Territori\" per \"Departament de Territori\", \"Departament d'Acció Exterior i Govern Obert\" per \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia\" per \"Departament de Justícia, Drets i Memòria\". També s'han modificat els seus codis i el codi del \"Departament d'Educació\".",
+                "ifitxer_doc": "Departaments_ATR.docx",
+                "ifitxer_xls": "Departaments.xlsx",
+                "idatacreacio": "25/10/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/10/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -238,7 +253,7 @@
         "nom_dinsBD": "DEPARTAMENTS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "30/06/2021"
+        "Data_actualitzacio": "26/10/2022"
     },
     {
         "Id": "dtarq102",
@@ -324,16 +339,31 @@
             },
             {
                 "inom": "V06",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització versió anterior per canvi de nom d'una direcció general: \"Direcció General de Planificació en Salut\" per \"Direcció General de Planificació i Recerca en Salut\".",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_V06.xlsx",
                 "idatacreacio": "21/07/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/10/2022",
                 "idatapublicacio": "27/07/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V07",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització versió anterior per canvi de nom de dues direccions generals: \"Direcció General d'Actuacions Territorials Estratègiques\" per \"Direcció General d'Estratègia Territorial\" i \"Direcció General d'Ordenació del Territori i Urbanisme\" per \"Direcció General d'Ordenació del Territori, Urbanisme i Arquitectura\". A més a més s'ha canviat el nom de 3 departaments: \"Departament de Territori\", \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia, Drets i Memòria\".",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "25/10/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/10/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -341,7 +371,7 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "27/07/2022"
+        "Data_actualitzacio": "26/10/2022"
     },
     {
         "Id": "dtarq103",
@@ -382,16 +412,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització segons la nova estructura de Govern, XIII Legislatura.",
                 "ifitxer_doc": "Secretaries_ATR.docx",
-                "ifitxer_xls": "Secretaries.xlsx",
+                "ifitxer_xls": "deprecated/secretaries_V03.xlsx",
                 "idatacreacio": "09/09/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/10/2022",
                 "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització per modificar el nom de \"Secretaria de Territori i Mobilitat\" per \"Secretaria de Mobilitat i Logística\" i \"Secretaria d'Estratègia, Informació i Coordinació Territorial\" per \"Secretaria d'Estratègia Territorial i Agenda Urbana\". A més a més s'ha canviat el nom de 3 departaments: \"Departament de Territori\", \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia, Drets i Memòria\".",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "25/10/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/10/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -399,7 +444,7 @@
         "nom_dinsBD": "SECRETARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "22/09/2021"
+        "Data_actualitzacio": "26/10/2022"
     },
     {
         "Id": "dtarq90",
@@ -1510,6 +1555,34 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "28/09/2022",
         "Data_actualitzacio": "28/09/2022"
+    },
+    {
+        "Id": "dtarq174",
+        "Nom": "Trams graus de discapacitat",
+        "Ambit": "Serveis socials",
+        "Subambit": "Discapacitat i dependència",
+        "Descripcio": "Agrupació de les discapacitats en franges, segons el grau de la discapacitat reconegut.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "DG Autonomia Personal i la Discapacitat- Departament Drets Socials",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Trams_graus_discapacitat_ATR.docx",
+                "ifitxer_xls": "Trams_graus_discapacitat.xlsx",
+                "idatacreacio": "11/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/10/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Trams-graus-de-discapacitat/jtte-qnrn",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TRAMS_GRAUS_DISCAPACITAT",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/10/2022",
+        "Data_actualitzacio": "26/10/2022"
     },
     {
         "Id": "dtarq56",
@@ -2872,5 +2945,4 @@
         "Data_publicacio": "26/01/2022",
         "Data_actualitzacio": "26/01/2022"
     }
-]
-}
+]}
