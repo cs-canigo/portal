@@ -33,9 +33,9 @@ build:
   steps:
     - id: bs001
       position: 1
-      tool: maven_3.2.2
-      jdk: JDK 1.8
-      parameters: clean package -Dmaven.test.skip=true
+      tool: maven_3.6
+      jdk: JDK 11-openjdk
+      parameters: package -Dmaven.test.skip=true
       generates:
         - artifact01
 deploy:
@@ -43,8 +43,8 @@ deploy:
     - id: dp001
       position: 1
       type: library
-      tool: maven_3.2.2
-      jdk: JDK 1.8
+      tool: maven_3.6
+      jdk: JDK 11-openjdk
       executionDir: lib
       parameters: deploy -f pom.xml
     - id: dp002

@@ -58,10 +58,10 @@ Cal introduir l'usuari i paraula de pas proporcionats per l'Oficina Tècnica de 
 Un cop realitzada l’autenticació per línia de comandes, podem baixar-nos la imatge escollida mitjançant:
 
 ```bash
-podman pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16
+podman pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-18
 ```
 
-On, en el cas d'exemple, estem descarregant-nos la imatge *node-builder* versió 1.0-16.
+On, en el cas d'exemple, estem descarregant-nos la imatge *node-builder* versió 1.0-18.
 
 ### Execució de les imatges
 
@@ -78,7 +78,7 @@ podman run -it \
 -v $HOME/.m2/settings.xml:/mnt/nexus/settings.xml \
 -v $HOME/.npmrc:/app/.npmrc \
 -v $PWD:/app:U -w "/app" \
-docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16 \
+docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-18 \
 /bin/sh
 ```
 
