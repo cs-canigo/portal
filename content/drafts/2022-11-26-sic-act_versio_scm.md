@@ -1,13 +1,13 @@
 +++
-date        = "2022-12-07"
+date        = "2022-11-09"
 title       = "SIC. Actualització de versió Gitlab"
-description = "El dia 23/07/2022 s'ha dut a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
-categories  = ["SIC"]
-sections    = ["Notícies", "home"]
-key         = "DESEMBRE2022"
+description = "El dia 26/11/2022 es durà a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
+#categories  = ["SIC"]
+#sections    = ["Notícies", "home"]
+#key         = "DESEMBRE2022"
 +++
 
-**El dia 26/11/2022 s'ha dut a terme l’actualització del Servei de Custòdia de Codi a la versió 14.10.5 de Gitlab**.
+**El dia 26/11/2022 es durà a terme l’actualització del Servei de Custòdia de Codi a la versió 14.10.5 de Gitlab**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
