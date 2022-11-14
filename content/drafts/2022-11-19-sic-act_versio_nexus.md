@@ -17,20 +17,24 @@ Les principals novetats d'aquesta actualització són les següents:
 
 |Issue|Descripció|
 |-----------|----------|
-|[NEXUS-28442](https://issues.sonatype.org/browse/NEXUS-28442)|XSS injection.|
-|[NEXUS-30666](https://issues.sonatype.org/browse/NEXUS-30666)|Upgrade logback to 1.2.9 to mitigate CVE-2021-42550.|
 |[NEXUS-28918](https://issues.sonatype.org/browse/NEXUS-28918)|L'API de cerca ordena el contingut de Maven per versió seguint els estàndards típics de Maven per al control de versions|
 
 * Millores de **rendiment i control d’errors**.
 <br/>
 
-* Correccions de **seguretat** importants.
+* Correccions de **seguretat** importants, entre d'altres:
+
+|Issue|Descripció|
+|-----------|----------|
+|[NEXUS-28442](https://issues.sonatype.org/browse/NEXUS-28442)|Resolució de diverses vulnerabilitats de cross-site scripting (XSS injection)|
+|[NEXUS-30666](https://issues.sonatype.org/browse/NEXUS-30666)|Actualització biblioteca de logback a 1.2.9 per a mitigar CVE-2021-42550|
+
 
 <br/>
 Per a més informació de les novetats de la versió podeu consultar:
 
 - [Release notes 2022] (https://help.sonatype.com/repomanager3/product-information/release-notes/2022-release-notes)
-- [122 issues tancades des de la versió 3.31.0 fins la versió 3.37.3] (https://issues.sonatype.org/browse/NEXUS-31092?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.37.0%2C3.37.1%2C3.37.2%2C3.37.3%2C3.36.1%2C3.36.0%2C3.35.0%2C3.34.0%2C3.34.1%2C3.33.1%2C3.33.0%2C3.32.0%2C3.32.1%2C3.31.0%2C3.31.1))
+- [136 issues tancades des de la versió 3.37.3 fins la versió 3.41.1] (https://issues.sonatype.org/browse/NEXUS-34642?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.38.0%2C%203.38.1%2C%203.39.0%2C%203.40.0%2C%203.40.1%2C%203.41.0%2C%203.41.1))
 
 <br/>
 <br/>

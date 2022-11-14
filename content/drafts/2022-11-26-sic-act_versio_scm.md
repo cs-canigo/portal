@@ -1,26 +1,32 @@
 +++
 date        = "2022-11-09"
 title       = "SIC. Actualització de versió Gitlab"
-description = "El dia 26/11/2022 es durà a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
+description = "Els dies 19/11/2022 i 26/11/2022 es durà a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
 #categories  = ["SIC"]
 #sections    = ["Notícies", "home"]
 #key         = "DESEMBRE2022"
 +++
 
-**El dia 26/11/2022 es durà a terme l’actualització del Servei de Custòdia de Codi a la versió 14.10.5 de Gitlab**.
+**Els dies 19/11/2022 i 26/11/2022 es durà a terme l’actualització del Servei de Custòdia de Codi a la versió 14.10.5 de Gitlab**.
+En aquest cas, l'actualització es farà en dues fases:
+- 19/11/2022: Gitlab 14.9.5
+- 26/11/2022: Gitlab 14.10.5
+
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
 <br>
 
 * Millores **generals**:
-    * Actualització de les versions de les eines internes: GitLab Workhorse 14.9.5, GitLab Shell 13.24.0, Ruby 2.7.5p203, Redis 6.2.6 i Rails 6.1.4.7.
+    * Actualització de les versions de les eines internes: GitLab Workhorse 14.10.5, GitLab Shell 13.25.1, Ruby 2.7.5p203, Redis 6.2.6 i Rails 6.1.4.7.
 
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants.
 
 <br>
-Per a més informació de les novetats de la versió podeu consultar [Gitlab v.14.10.5](https://docs.gitlab.com/omnibus/update/gitlab_14_changes.html).
+Per a més informació de les novetats de la versió podeu consultar [Gitlab v.14.10.5]:
+- [Gitlab Changelog](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/CHANGELOG.md?expanded=true&viewer=simple#L4712)
+- [GitLab 14 specific changes](https://docs.gitlab.com/omnibus/update/gitlab_14_changes.html)
 <br>
 <br>
 Amb aquesta actualització, s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als
