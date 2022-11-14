@@ -1,10 +1,10 @@
 +++
-date        = "2022-11-09"
+date        = "2022-11-14"
 title       = "SIC. Actualització de versió Nexus"
 description = "El dia 19/11/2022 es durà a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
-#categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
-#key         = "DESEMBRE2022"
+categories  = ["SIC"]
+sections    = ["Notícies", "home"]
+key         = "DESEMBRE2022"
 +++
 
 **El dia 19/11/2022 es durà a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.41.1 de Nexus**.
