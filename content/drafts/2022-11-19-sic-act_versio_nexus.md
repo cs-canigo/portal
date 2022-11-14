@@ -18,10 +18,10 @@ Les principals novetats d'aquesta actualització són les següents:
 |Issue|Descripció|
 |-----------|----------|
 |[Audit and Task Logs](https://help.sonatype.com/repomanager3/product-information/release-notes/2022-release-notes/nexus-repository-3.39.0-release-notes#NexusRepository3.39.0ReleaseNotes-ViewAudit,Cluster,andTaskLogsinUserInterfacelogs)|Posibilitat de veure els logs de les tasques a la UI|
-|[NEXUS-29558](https://issues.sonatype.org/browse/NEXUS-29558)|L'API REST de cerca ja no retorna un valor nul per a l'atribut *lastModified*|
+|[NEXUS-29558](https://issues.sonatype.org/browse/NEXUS-29558)|Resolució error que permetia seleccionar una versió RELEASE a la tasca d'eliminació de versions SNAPSHOT no utilitzades|
 |[NEXUS-30694](https://issues.sonatype.org/browse/NEXUS-30694)|Ordenació de components de Maven per versió en ordre alfanumèric|
 |[NEXUS-31305](https://issues.sonatype.org/browse/NEXUS-31305)|Incorporació de l'atribut *lastDownloaded* a l'API REST|
-|[NEXUS-31410](https://issues.sonatype.org/browse/NEXUS-31410)|Resolució error que permetia seleccionar una versió RELEASE a la tasca d'eliminació de versions SNAPSHOT no utilitzades|
+|[NEXUS-31410](https://issues.sonatype.org/browse/NEXUS-31410)|L'API REST de cerca ja no retorna un valor nul per a l'atribut *lastModified*||
 
 * Millores de **rendiment i control d’errors**.
 <br/>
@@ -30,9 +30,9 @@ Les principals novetats d'aquesta actualització són les següents:
 
 |Issue|Descripció|
 |-----------|----------|
-|[Database Migrator Spring 5.3.18](https://tanzu.vmware.com/security/cve-2022-22965)|Actualització Database Migrator a Spring 5.3.18|
-|[NEXUS-30443](https://issues.sonatype.org/browse/NEXUS-30443)|Solució vulnerabilitat d'injecció HTML: CVE-2021-43961|
-|[NEXUS-31630](https://issues.sonatype.org/browse/NEXUS-31630)|Solució falsificació de sol·licituds del costat del servidor: CVE-2022-27907|
+|[Spring 5.3.18](https://tanzu.vmware.com/security/cve-2022-22965)|Actualització Database Migrator a Spring 5.3.18|
+|[NEXUS-30443](https://issues.sonatype.org/browse/NEXUS-30443)|Resolució vulnerabilitat d'injecció HTML: CVE-2021-43961|
+|[NEXUS-31630](https://issues.sonatype.org/browse/NEXUS-31630)|Resolució falsificació de sol·licituds del costat del servidor (SSRF): CVE-2022-27907|
 
 <br/>
 Per a més informació de les novetats de la versió podeu consultar:
