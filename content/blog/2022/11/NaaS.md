@@ -6,7 +6,7 @@ responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
 blog_tags   = ["comunicacions", "cloud", "sd wan", "sdn"]
 categories  = ["comunicacions", "cloud", "sd wan", "sdn"]
-imatge      = "/images/bloc/2022/11/NaaS.png"
+imatge      = "/images/bloc/2022/11/Imatge1.jpg"
 key         = "NOVEMBRE2022"
 +++
 
