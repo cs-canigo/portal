@@ -1,5 +1,5 @@
 +++
-date = "2020-06-25"
+date = "2022-11-21"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -26,19 +26,29 @@ Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi fon
 * Els projectes han de crear-se dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs
 i creació de peticions Remedy s'associïn a l'aplicació corresponent. Per aquest mateix motiu, **no està contemplat la creació
 de subgrups de projectes**, tot i que l'eina ho permeti.
-* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la
-mida màxima dels arxius serà de 25MB. A tal efecte,
-s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
-* No es permet l'ús de versions **snapshot**, per lo que s'impedirà la pujada del fitxer `pom.xml` si aquest les referencia.
+
 * Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release
 Managers seran les encarregades de consolidar el codi i
 lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi
 distribuir als entorns dels serveis TIC centrals.
+
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER**
-i el contingut d’aquesta branca serà amb el que
-treballaran les pipelines de construcció i desplegament.
+i el contingut d’aquesta branca serà amb el que treballaran les pipelines de construcció i desplegament.
+
 * Les pipelines seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi
 construir els artefactes i TAGS de versió definitiva un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
+
+A continuació es detallen les restriccions aplicades a l'hora de fer el lliurament de codi:
+
+* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la
+mida màxima dels arxius serà de 25MB. A tal efecte,
+s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
+
+* No es permet l'ús de versions **snapshot**, per lo que s'impedirà la pujada del fitxer `pom.xml` si aquest les referencia.
+
+* No es permet incloure fitxers de configuració de les eines de construcció: `settings.xml` (Maven), `npmrc` (Npm) o
+`nuget.config` (.NET Framework). Aquestes configuracions seran injectades per SIC amb tota la configuració necessària.
+
 
 ## Estructura de projectes
 L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Contínua:

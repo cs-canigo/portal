@@ -1,5 +1,5 @@
 +++
-date = "2020-06-17"
+date = "2022-11-21"
 title = "Custòdia de codi font"
 description = "GitLab és l'eina implantada al SIC per la custòdia de codi font"
 aliases = [
@@ -51,8 +51,19 @@ Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticam
 <br/>
 Per accedir a la vista de grups i projectes, ho podrà fer des del menú d'opcions generals (botó <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> situat a la part superior esquerra).
 <br/>
-No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB.
-En tot cas, per a arxius de gran tamany, es podrá fer ús de l'extensió [Git-lfs](/howtos/2019-10-09-sic-Howto-Git-lfs).
+
+A continuació es detallen les restriccions aplicades a l'hora de fer el lliurament de codi:
+
+* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la
+mida màxima dels arxius serà de 25MB. A tal efecte,
+s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
+
+* No es permet l'ús de versions **snapshot**, per lo que s'impedirà la pujada del fitxer `pom.xml` si aquest les referencia.
+
+* No es permet incloure fitxers de configuració de les eines de construcció: `settings.xml` (Maven), `npmrc` (Npm) o
+`nuget.config` (.NET Framework). Aquestes configuracions seran injectades per SIC amb tota la configuració necessària.
+
+Per a arxius de gran mida, es podrá fer ús de l'extensió [Git-lfs](/howtos/2019-10-09-sic-Howto-Git-lfs).
 
 ### Creació de nous projectes
 
