@@ -64,7 +64,7 @@ Els clients poden implementar protocols d'encaminament i aplicar polítiques de 
 </div>
 <br>
 
-## **Principals avantatges i inconvenients ** {#AvantatgesInconvenients}
+## **Principals avantatges i inconvenients** {#AvantatgesInconvenients}
 
 Els principals avantatges del NaaS són: <br>
 
@@ -82,7 +82,7 @@ Els principals inconvenients del NaaS són: <br>
 * **Vinculació amb el  proveïdor.** Una vegada que els clients prenen els serveis d'un proveïdor de serveis, canviar a un altre proveïdor és complicat. A més, si la infraestructura del proveïdor falla o el proveïdor augmenta el cost, l'empresa pot veure's afectada.
 * **Centre de dades heretat.** Per una organització que encara executa aplicacions i processos al seu centre de dades intern, no al núvol, serà difícil moure grans aplicacions i processos al NaaS. <br>
 
-## **Models de Servei ** {#ModelServei}
+## **Models de Servei** {#ModelServei}
 
 NaaS engloba una àmplia gamma de serveis: com l'accés remot, la connectivitat privada L2 o L3 sota demanda (inclosa la VPN), SD-WAN segura, SASE, eines de seguretat, Wi-Fi gestionat en el núvol, serveis LTE privats, serveis empresarials 5G i serveis d’Ethernet metropolitana. <br>
 
@@ -110,29 +110,29 @@ Enterprise Networking Planet ha elaborat  una llista dels principals proveïdors
 </div>
 <br>
 
-**Aryaka SmartService**
+**Aryaka SmartService** <br>
 Aryaka ofereix un servei de xarxa i seguretat administrat basat en arquitectures SD-WAN i SASE per implementacions globals i regionals. El servei es basa en un model de consum de xarxa basat en OpEx que escala bé. L'oferta SD-WAN com a servei de Aryaka permet a les empreses consumir serveis de xarxa a través de la seva infraestructura de xarxa basada al núvol. <br>
 
-**Perimeter 81**
+**Perimeter 81** <br>
 El servei NaaS de Perimeter 81 integra la gestió de la xarxa i la seguretat en recursos locals i basats en núvol com AWS, Salesforce, Azure i Google Cloud. Aquest NaaS natiu del núvol inclou una sèrie d'eines de seguretat per a l'autenticació, seguretat Wi-Fi, Zero trust, filtratge DNS i prevenció de filtracions. Ajuda a reduir la latència de la xarxa col·locant els recursos de xarxa més a prop d'on són necessaris. <br>
 
-**Cloudflare Magic WAN**
+**Cloudflare Magic WAN** <br>
 Cloudflare Magic WAN pot substituir les arquitectures antigues de WAN per la xarxa de Cloudflare, proporcionant connectivitat global, seguretat basada en el núvol, rendiment i control a través d'una interfície. Connecta de manera segura qualsevol connectivitat que inclogui centres de dades, oficines, dispositius i el núvol a la xarxa de Cloudflare. Els usuaris poden configurar les polítiques d'encaminament públic i privat que necessiten. <br>
 
-**Cisco Plus NaaS**
+**Cisco Plus NaaS** <br>
 Cisco Plus inclou una varietat de solucions d'arquitectura creuada dissenyades per ser lliurades com a servei. L'arquitectura SASE de Cisco convergeix xarxes i seguretat en el núvol. <br>
 Cisco Plus Naas inclou la intel·ligència a partir de coneixements  i automatització impulsades per la IA per conduir el rendiment i l'optimització de costos. Cisco Plus Hybrid Cloud, per exemple, ofereix xarxes de centres de dades, computa i tecnologies d'emmagatzematge en un model de consum. <br>
 
-**Akamai Aura Managed CDN**
+**Akamai Aura Managed CDN** <br>
 Akamai es centra en les xarxes de lliurament de continguts (CDN) que s'utilitzen àmpliament per millorar el lliurament del trànsit d'Internet a tot el món. Akamai ofereix una plataforma altament distribuïda de servidors que respon directament a les sol·licituds d'usuari final de contingut web. Funciona com a intermediari entre un servidor de contingut i usuaris finals o clients. Aquests serveis de CDN gestionats inclouen la capacitat de proporcionar serveis de transmissió de vídeo i optimitzar la xarxa pel lliurament de contingut, alhora que es redueix el temps de desplegament i els costos inicials. <br>
 
-**Megaport MCR**
+**Megaport MCR** <br>
 Megaport Cloud Router (MCR) proporciona capacitats d'encaminament virtual per la connectivitat privada sota demanda de la Capa 3. Està preconfigurat en centres de dades en zones d'encaminament clau arreu del món, permetent la transferència de dades. Sense la necessitat d'infraestructura física, els usuaris poden aprofitar la xarxa de núvol a núvol i la connexió privada entre proveïdors de núvol. <br>
 
-**Amdocs NaaS**
+**Amdocs NaaS** <br>
 El NaaS programable d'Amdocs automatitza i organitza el disseny, les peticions i la gestió dels serveis de xarxa. El seu paquet  SD-WAN de virtualització de funcions de xarxa (NFV)  permet als MSP lliurar serveis gestionats SD-WAN, així com l’encaminament de serveis  VNF i altres recursos de xarxa necessaris per operar el servei. <br>
 
-**Palo Alto Prisma**
+**Palo Alto Prisma** <br>
 Palo Alto Networks Prisma ajuda a simplificar la gestió, habilitar polítiques SD-WAN definides per l'aplicació i lliurar un SD-WAN segura a les seus a través del núvol. Combina la tecnologia SD-WAN adquirida per CloudGenix amb l'experiència de Palo Alto en xarxes i seguretat. Els casos d'ús inclouen la modernització de l'encaminador, la migració al núvol i l'automatització de les operacions de xarxa. <br>
 
 
@@ -151,7 +151,7 @@ https://www.enterprisenetworkingplanet.com/data-center/top-naas-providers/ <br>
 
 
 ## **Glossari** {#Glossari}
-* ***NFV (Network Function Virtualization):** Virtualització de funcions de xarxa. Substitueix els dispositius de maquinari de xarxa com enrutadors o tallafocs, per màquines virtuals que executen programari i processos, i que es controlen mitjançant un hipervisor. 
+* **NFV (Network Function Virtualization):** Virtualització de funcions de xarxa. Substitueix els dispositius de maquinari de xarxa com enrutadors o tallafocs, per màquines virtuals que executen programari i processos, i que es controlen mitjançant un hipervisor. 
 * **VNF (Virtual Network Function):** Una funció de xarxa virtual és una tasca virtualitzada realitzada anteriorment per maquinari propietari i dedicat. VNF mou les funcions de xarxa fora dels dispositius de maquinari dedicat i cap al programari.
 * **OpenFlow:** És un protocol que permet a un servidor dir-li als commutadors de xarxa on enviar els paquets.
 * **SD-WAN:** Una xarxa d'àrea extensa definida per programari (SD-WAN). És una arquitectura de WAN virtual que permet a les empreses aprofitar qualsevol combinació de serveis de transport, inclosos MPLS, LTE i serveis d'Internet de banda ampla, per a connectar de manera segura els usuaris amb les aplicacions.
