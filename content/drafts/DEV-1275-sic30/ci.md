@@ -79,7 +79,7 @@ el responsable de revisar la incidència:
 
 En aquest cas, **el proveïdor d'aplicacions ha de fer la sol·licitud d'integració al proveïdor d'infraestructures (Cpd)
 remetent tota la informació que sigui requerida** per a habilitar aquesta modalitat de desplegament sobre les seves
-infraestructures. Un cop finalitzat aquest tràmit, ja podrà fer ús d'aquesta modalitat per a fer les corresponents
+infraestructures. Un cop finalitzat aquest tràmit, ja podrà fer ús d'aquesta modalitat per a dur a terme les corresponents
 validacions.
 
 ### Modalitat semiautomàtica
