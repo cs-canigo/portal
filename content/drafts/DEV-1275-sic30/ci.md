@@ -54,7 +54,6 @@ sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ a 
 
 La sortida de logs per consola indicarà si el desplegament ha acabat bé o s'han produït incidències,
 proporcionant tota la informació necessària per a identificar-ne el problema.
-
 Tota la informació de desplegament serà configurada per l'equip de SIC en col·laboració amb el
 proveïdor d'infraestructures (Suport Cloud/CPD) sense que sigui requerida cap acció específica per part del proveïdor d'aplicacions.
 
