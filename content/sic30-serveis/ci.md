@@ -41,38 +41,57 @@ registre de l'evolució i publicació de les versions del codi.
 * **Millora de la confiança del treball realitzat**: al garantir una qualitat del codi i poder realitzar entregues
 de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.
 
+
 ## Modalitats de desplegament
 
 Es contemplen diverses modalitats de desplegament:
 
-* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. En el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolutció del desplegament. Aquesta modalitat no aplica als desplegaments on-premise.
+### Modalitat automàtica al cloud
 
-* **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
-delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides. En aquest cas,
-si es produeix un error en el desplegament, de cara a tractar-lo i reportar-lo, caldrà aplicar el següent criteri:
+**Es construeixen els artefactes i es despleguen al cloud**. Aquesta modalitat s'aplica a desplegaments al cloud
+als diferents entorns. En el cas dels entorns preproductius i productius, es requerirà conformitat prèvia on es
+sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ a mode d'auditoria del desplegament.
+
+La sortida de logs per consola indicarà si el desplegament ha acabat bé o s'han produït incidències,
+proporcionant tota la informació necessària per a identificar-ne el problema.
+
+Tota la informació de desplegament serà configurada per l'equip de SIC en col·laboració amb el
+proveïdor d'infraestructures (Suport Cloud/CPD) sense que sigui requerida cap acció específica per part del proveïdor d'aplicacions.
+
+### Modalitat delegada
+
+**Es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es
+delega als CPD el desplegament automàtic** dels artefactes mitjançant un sistema de llibreries compartides.
+Aquesta modalitat s'aplica a desplegaments on-premise als entorns d'integració o preproductius, si i només si, el
+proveïdor d'infraestructures (CPD) dona cobertura a les tecnologies requerides. En el cas dels entorns preproductius i
+productius, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet
+Remedy CRQ a mode d'auditoria del desplegament.
+
+La sortida de logs per consola indicarà si el desplegament ha acabat bé o s'han produït incidències,
+proporcionant tota la informació necessària per a identificar-ne el problema i un codi d'error que indicarà qui és
+el responsable de revisar la incidència:
 
 |Codi d'error|Responsable|
 |-------|-------|
 |-1xx|Equip SIC|
 |-2xx|Proveïdor d'infraestructures (Cpd)|
-|-3xx|Lot d'aplicacions|
+|-3xx|Proveïdor d'aplicacions (lot)|
 
-Igual que amb el desplegament automàtic al cloud, en el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on se sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolució del desplegament.
+En aquest cas, **el proveïdor d'aplicacions ha de fer la sol·licitud d'integració al proveïdor d'infraestructures (Cpd)
+remetent tota la informació que sigui requerida** per a habilitar aquesta modalitat de desplegament sobre les seves
+infraestructures. Un cop finalitzat aquest tràmit, ja podrà fer ús d'aquesta modalitat per a fer les corresponents
+validacions.
 
-* **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
-un tiquet Remedy CRQ en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
+### Modalitat semiautomàtica
+
+**Es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
+un tiquet Remedy en mode "Draft"** (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
 que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies
-davant una possible marxa enrere aniran a càrrec de CPD/LdT.
+davant una possible marxa enrere aniran a càrrec de CPD/LdT. Aquesta modalitat s'aplica a desplegaments on-premise als
+entorns preproductius i productius, tot i que està previst que, a futur, acabi sent substituïda per la modalitat delegada.
 
-<!---* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i
-continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies
-davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
-
-Actualment, el sistema previst per entorn seria el següent:
-
-* Entorn **INT**: modalitat delegada, semi-automàtica o, en el cas de desplegaments al cloud, modalitat automàtica. **IMPORTANT:** En cas d’aplicar la modalitat semi-automàtica, donat la majoria de proveïdors disposen d’accés als servidors per a fer els desplegaments, el sistema s’encarregarà de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.
-* Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
-* **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
+La sortida de logs per consola indicarà si el procés ha acabat bé o s'han produït incidències,
+proporcionant tota la informació necessària per a identificar-ne el problema.
 
 ## Funcionament
 
