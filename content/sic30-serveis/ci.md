@@ -62,8 +62,8 @@ proveïdor d'infraestructures (Suport Cloud/CPD) sense que sigui requerida cap a
 **Es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es
 delega als CPD el desplegament automàtic** dels artefactes mitjançant un sistema de llibreries compartides.
 Aquesta modalitat s'aplica a desplegaments on-premise als entorns d'integració o preproductius, si i només si, el
-proveïdor d'infraestructures (CPD) dona cobertura a les tecnologies requerides. En el cas dels entorns preproductius i
-productius, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet
+proveïdor d'infraestructures (CPD) dona cobertura a les tecnologies requerides. En el cas dels entorns preproductius,
+es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet
 Remedy CRQ a mode d'auditoria del desplegament.
 
 La sortida de logs per consola indicarà si el desplegament ha acabat bé o s'han produït incidències,
