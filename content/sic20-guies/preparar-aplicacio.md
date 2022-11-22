@@ -46,7 +46,7 @@ s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat)
 
 * No es permet l'ús de versions **snapshot**, per lo que s'impedirà la pujada del fitxer `pom.xml` si aquest les referencia.
 
-* No es permet incloure fitxers de configuració de les eines de construcció: `settings.xml` (Maven), `npmrc` (Npm) o
+* No es permet incloure fitxers de configuració de les eines de construcció: `settings.xml` (Maven), `.npmrc` (Npm) o
 `nuget.config` (.NET Framework). Aquestes configuracions seran injectades per SIC amb tota la configuració necessària.
 
 
