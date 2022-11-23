@@ -354,16 +354,31 @@
             },
             {
                 "inom": "V07",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització versió anterior per canvi de nom de dues direccions generals: \"Direcció General d'Actuacions Territorials Estratègiques\" per \"Direcció General d'Estratègia Territorial\" i \"Direcció General d'Ordenació del Territori i Urbanisme\" per \"Direcció General d'Ordenació del Territori, Urbanisme i Arquitectura\". A més a més s'ha canviat el nom de 3 departaments: \"Departament de Territori\", \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia, Drets i Memòria\".",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_V07.xlsx",
                 "idatacreacio": "25/10/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/11/2022",
                 "idatapublicacio": "26/10/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V08",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització derivada de la reestructuració de l’organigrama.",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "22/11/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/11/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -371,7 +386,35 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "26/10/2022"
+        "Data_actualitzacio": "23/11/2022"
+    },
+    {
+        "Id": "dtarq177",
+        "Nom": "Naturalesa jurídica entitats sector públic",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Tipologies en què es poden classificar les entitats del sector públic institucional de l’Administració de la Generalitat.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Candidata proposada per DGADO i CTTI",
+                "ifitxer_doc": "Naturalesa_juridica_sector_public_ATR.docx",
+                "ifitxer_xls": "Naturalesa_juridica_sector_public.xlsx",
+                "idatacreacio": "22/11/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/11/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "NATURALESA_JURIDICA_ENTITAT_SECTOR_PUBLIC",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "23/11/2022",
+        "Data_actualitzacio": "23/11/2022"
     },
     {
         "Id": "dtarq103",
@@ -427,16 +470,31 @@
             },
             {
                 "inom": "V04",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització per modificar el nom de \"Secretaria de Territori i Mobilitat\" per \"Secretaria de Mobilitat i Logística\" i \"Secretaria d'Estratègia, Informació i Coordinació Territorial\" per \"Secretaria d'Estratègia Territorial i Agenda Urbana\". A més a més s'ha canviat el nom de 3 departaments: \"Departament de Territori\", \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia, Drets i Memòria\".",
                 "ifitxer_doc": "Secretaries_ATR.docx",
-                "ifitxer_xls": "Secretaries.xlsx",
+                "ifitxer_xls": "deprecated/secretaries_V04.xlsx",
                 "idatacreacio": "25/10/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/11/2022",
                 "idatapublicacio": "26/10/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització derivada de la reestructuració de l’organigrama.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "22/11/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/11/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -444,7 +502,7 @@
         "nom_dinsBD": "SECRETARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "26/10/2022"
+        "Data_actualitzacio": "23/11/2022"
     },
     {
         "Id": "dtarq90",
@@ -1832,16 +1890,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Tipus_identificador_persona_fisica_ATR.docx",
-                "ifitxer_xls": "Tipus_identificador_persona_fisica.xlsx",
+                "ifitxer_xls": "deprecated/tipus_identificador_persona_fisica_V01.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/11/2022",
                 "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
+                "idescripcio": "Modificació per incorporar el valor \"Document d’identitat estranger\".",
+                "ifitxer_doc": "Tipus_identificador_persona_fisica_ATR.docx",
+                "ifitxer_xls": "Tipus_identificador_persona_fisica.xlsx",
+                "idatacreacio": "22/11/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/11/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Tipus-Identificador/vzfi-u5tr",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1849,7 +1922,7 @@
         "nom_dinsBD": "TIPUS_IDENTIFICADOR_PERSONA_FISICA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/06/2022",
-        "Data_actualitzacio": "22/06/2022"
+        "Data_actualitzacio": "23/11/2022"
     },
     {
         "Id": "dtarq55",
