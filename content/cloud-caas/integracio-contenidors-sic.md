@@ -1,5 +1,5 @@
 +++
-date        = "2019-02-22"
+date        = "2022-11-23"
 title       = "Integració de contenidors a SIC"
 description = "Informació respecte a la integració d'aplicacions basades en contenidors amb el SIC."
 sections    = "Container Cloud"
@@ -48,10 +48,9 @@ Per plataformes basades en Kubernetes (Kubernetes/Openshift), al SIC estan dispo
 - Parada
 - Arrancada
 - Desplegament de ConfigMaps
-- Actualització d'algunes propietats dels descriptors de deployment/deploymentConfig:
-  - Variables d'entorn
-  - Quotes
-  - Punts de muntatge
+- Desplegament de deployment/deploymentConfig
+- Desplegament de statefulSet
+- Eliminació de components desplegats
 
 ### Swarm
 

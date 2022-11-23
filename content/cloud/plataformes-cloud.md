@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-16"
+date        = "2022-11-23"
 title       = "Plataformes Cloud"
 description = "Plataformes cloud disponibles a la Generalitat de catalunya"
 sections    = "Cloud"
@@ -24,7 +24,7 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 
 - Openshift: https://www.openshift.com/
 - Contenidors docker i orquestració amb Openshift
-- Versió:  **OpenShift Container Platform 4.6 i Kubernetes 1.19.**
+- Versió:  **OpenShift Container Platform 4.10 i Kubernetes 1.23.**
 - Disposa de Service Mesh. **Apte per desplegar aplicacions basades en microserveis.**
 
 Disponible a CPD2, CPD3 i CPD4 en entorns de consolidables.
@@ -45,7 +45,8 @@ Disponible a CPD1 en entorns de consolidables.
 
 - Basat en Kubernetes: https://kubernetes.io/
 - Contenidors docker i orquestració amb Kubernetes
-- Versió: **Kubernetes 1.18.10. Docker 18.9**
+- Versió: **Kubernetes 1.18.10. Docker 18.9** a CPD2 en entorns de consolidables
+- Versió: **Kubernetes 1.22.0. Docker 19.3** a CPD1 en entorns de consolidables
 
 Disponible a CPD1, CPD2 en entorns de consolidables.
 <br/><br/>
@@ -94,7 +95,7 @@ Disponible a CPD2 en entorns de consolidables.
 Contenidors docker desplegats sobre la plataforma Kubernetes
 
 - https://www.ibm.com/cloud-computing/bluemix/es/containers
-- Versió: **Kubernetes 1.19.14 Containerd 1.4.3**
+- Versió: **Kubernetes 1.23.14 Containerd 1.6.8**
 <br/><br/>
 
 ### DBaaS

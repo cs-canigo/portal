@@ -1,5 +1,5 @@
 +++
-date          = "2021-12-16"
+date          = "2022-11-23"
 title         = "Contenidors Kubernetes"
 description   = "Consideracions i exemples respecte els contenidors a Kubernetes"
 sections      = "Container Cloud"
@@ -15,9 +15,9 @@ En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes
 
 A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les següents plataformes:
 
-* IBMCloud al cloud públic. **Versió Kubernetes 1.19.8. Versió containerd 1.4.3**
+* IBMCloud al cloud públic. **Versió Kubernetes 1.23.14. Versió containerd 1.6.8**
 * IBM CaaS al cloud privat. **Versió Kubernetes 1.18.10. Versió docker 19.3.13**
-* CPD1 KuberMe al entorn consolidables. **Versió Kubernetes 1.18.4. Versió docker 19.3.13**
+* CPD1 KuberMe al entorn consolidables. **Versió Kubernetes 1.22.0. Versió docker 19.3.13**
 
 ## Imatges
 

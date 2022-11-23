@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-16"
+date        = "2022-11-23"
 title       = "Monitoratge i traces als contenidors"
 description = "Informació per accedir  al monitoratge i traces a les diferents plataformes de contenidors."
 sections    = "Container Cloud"
@@ -28,17 +28,17 @@ Des de la consola web de les diferents plataformes es pot consultar de cada proj
 
 Podeu trobar més informació al respecte a:
 
- - [OpenShift Container Platform 4.6 Documentation.](https://docs.openshift.com/container-platform/4.6/welcome/index.html)
+ - [OpenShift Container Platform 4.10 Documentation.](https://docs.openshift.com/container-platform/4.10/welcome/index.html)
 
 Addicionalment a la consola, també podeu accedir a la informació i configuracions utilitzant el client **oc**.
 
 Podeu trobar més informació a:
 
- -  [Get Started with the CLI. OCP 4.6](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
+ -  [Get Started with the CLI. OCP 4.10](https://docs.openshift.com/container-platform/4.10/cli_reference/openshift_cli/getting-started-cli.html)
 
 Podeu descarregar el client oc a:
 
--  [oc client v4.6](https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.6/)
+-  [oc client v4.10](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/)
 
 En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació.
 
@@ -113,12 +113,12 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 ```
         ibmcloud plugin install kubernetes-service -r 'IBM Cloud'
 ```
-- Instal·lar el cli de kubernetes (kubectl), la darrera versió de la 1.19
+- Instal·lar el cli de kubernetes (kubectl), la darrera versió de la 1.22
 
     El podeu descarregar de:
 
-  - Windows: https://storage.googleapis.com/kubernetes-release/release/v1.19.14/bin/windows/amd64/kubectl.exe
-  - Linux: https://storage.googleapis.com/kubernetes-release/release/v1.19.14/bin/linux/amd64/kubectl
+  - Windows: https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe
+  - Linux: https://dl.k8s.io/release/v1.23.0/bin/linux/amd64/kubectl
 
 ##### Configuració
 

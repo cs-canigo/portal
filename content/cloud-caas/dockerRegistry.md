@@ -1,5 +1,5 @@
 +++
-date          = "2018-06-06"
+date          = "2022-11-23"
 title         = "Registre docker privat"
 description   = "Descripció i ús del registre docker privat"
 sections      = "Container Cloud"
@@ -42,6 +42,7 @@ L'equip de suport cloud subministrarà al proveïdor d'aplicacions un usuari amb
 
 * Permís de lectura del projecte associat a l'aplicació del projecte.
 * Permís de lectura del projecte **gencatcloud** amb les imatges base mantingudes per l'equip de Suport Cloud.
+* Permís de lectura del projecte **gencat-sic-builders** amb els builders utilitzats a Jenkins
 
 ### Consola web
 Es pot accedir a la consola web introduint a un navegador la url d'accés.

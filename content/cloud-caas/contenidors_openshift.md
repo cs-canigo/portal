@@ -1,5 +1,5 @@
 +++
-date          = "2021-09-10"
+date          = "2022-11-23"
 title         = "Contenidors Openshift"
 description   = "Consideracions i exemples respecte els contenidors a Openshift"
 sections      = "Container Cloud"
@@ -11,7 +11,7 @@ categories    = ["cloud","docker","container","paas","openshift"]
 Openshift és un orquestrador d'imatges docker basat en Kubernetes.
 Actualment a la Generalitat de Catalunya existeixen diverses plataformes Opneshift:
 
-* **Openshift 4**. OpenShift Container Platform 4.6 i Kubernetes 1.19. Disponible a CPD2, CPD3 i CPD4.
+* **Openshift 4**. OpenShift Container Platform 4.10 i Kubernetes 1.23. Disponible a CPD2, CPD3 i CPD4.
 
 Les plataformes **Openshift 4** permeten l'ús de **Service Mesh** sent aptes per desplegar aplicacions basades en Microserveis. Podeu trobar més informació a [Openshift Service Mesh](https://canigo.ctti.gencat.cat/cloud-caas/service_mesh/).
 
@@ -250,4 +250,4 @@ spec:
 
 ## Informació relacionada
 
-* https://docs.openshift.com/container-platform/4.6/welcome/index.html
+* https://docs.openshift.com/container-platform/4.10/welcome/index.html
