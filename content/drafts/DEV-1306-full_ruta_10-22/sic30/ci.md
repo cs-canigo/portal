@@ -60,7 +60,15 @@ proveïdor d'infraestructures (Suport Cloud/CPD) sense que sigui requerida cap a
 ### Modalitat delegada
 
 **Es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es
-delega als CPD el desplegament automàtic** dels artefactes mitjançant un sistema de llibreries compartides.
+delega als CPD el desplegament automàtic als servidors web, servidors d'aplicacions i servidors
+de bases de dades** dels artefactes mitjançant un sistema de llibreries compartides. Aquesta modalitat és
+l'evolució de l'antiga modalitat automàtica aportant les següents millores:
+
+- Abans del desplegament, es fa una còpia de l'artefacte desplegat (backup)
+- Un cop finalitzat el desplegament, és dur a terme un reinici de totes les instàncies afectades, amb esborrat de caché i temporals (segons pertoqui)
+- Es comprova si l'aplicació queda en estat activa per a identificar possibles problemes al desplegament
+- En cas d'error, es realitza marxa enrere automàtica
+
 Aquesta modalitat s'aplica a desplegaments on-premise als entorns d'integració o preproductius, si i només si, el
 proveïdor d'infraestructures (CPD) dona cobertura a les tecnologies requerides. En el cas dels entorns preproductius,
 es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet
