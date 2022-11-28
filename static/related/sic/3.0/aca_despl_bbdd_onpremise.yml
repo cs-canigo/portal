@@ -6,10 +6,7 @@ global-env:
   - PLANS_PATH: 'sql_scripts'
   - PLANS_NAME: 'plans.xml'
 components:
-  - build:
-      steps:
-        - container: # Necesario este contenedor vacio para el build de scripts BBDD
-    deployment:
+  - deployment:
       environments:
         - name: integration
           deployment-type: delegated
