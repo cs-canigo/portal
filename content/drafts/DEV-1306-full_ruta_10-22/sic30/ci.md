@@ -65,7 +65,7 @@ de bases de dades** dels artefactes mitjançant un sistema de llibreries compart
 l'evolució de l'antiga modalitat automàtica aportant les següents millores:
 
 - Abans del desplegament, es fa una còpia de l'artefacte desplegat (backup)
-- Un cop finalitzat el desplegament, és dur a terme un reinici de totes les instàncies afectades, amb esborrat de caché i temporals (segons pertoqui)
+- Un cop finalitzat el desplegament, és duu a terme un reinici de totes les instàncies afectades, amb esborrat de caché i temporals (segons pertoqui)
 - Es comprova si l'aplicació queda en estat activa per a identificar possibles problemes al desplegament
 - En cas d'error, es realitza marxa enrere automàtica
 
