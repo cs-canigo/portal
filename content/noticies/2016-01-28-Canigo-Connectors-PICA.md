@@ -7,7 +7,7 @@ categories  = ["canigo"]
 key         = "FEBRER2016"
 +++
 
-S'han publicat noves versions dels connectors amb la PICA per a complir les noves restriccions d'esquema. És necessari informar les dades Nom i Nif d'emissor, així com informar les dades d'un funcionari en la majoria dels productes de la PICA. Els valors dels camps "nifEmisor" i "nomEmisor" a informar s’han de consultar a la [OT PICA](mailto:requeridors.otpica.ctti@gencat.cat). Per a més detall dels productes podeu visitar la Intranet d'Administració Electrònica ([IPAE](http://ipae.intranet.gencat.cat)).
+S'han publicat noves versions dels connectors amb la PICA per a complir les noves restriccions d'esquema. És necessari informar les dades Nom i Nif d'emissor, així com informar les dades d'un funcionari en la majoria dels productes de la PICA. Els valors dels camps "nifEmisor" i "nomEmisor" a informar s’han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/). Per a més detall dels productes podeu visitar la Intranet d'Administració Electrònica ([IPAE](http://ipae.intranet.gencat.cat)).
 
 A continuació es mostren les noves versions publicades dels connectors amb la PICA per Canigó 2 i Canigó 3:
 

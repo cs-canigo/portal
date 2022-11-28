@@ -147,7 +147,7 @@ A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6
 *.tributs.pica.emailFuncionari=[emailFuncionari]
 ```
 
-Els valors d finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors d finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
@@ -167,7 +167,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 *.pica.trustStore.password=[trustStore.password]
 ```
 
-Els valors entre [] s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 4.- Configurar l'arxiu /spring/app-integration-tributs.xml amb el següent contingut:
 

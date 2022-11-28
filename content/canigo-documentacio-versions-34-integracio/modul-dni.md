@@ -88,7 +88,7 @@ En el pom.xml;
 *.dni.emailFuncionari=[emailFuncionari]
 ```
 
-Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
@@ -108,7 +108,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 *.pica.trustStore.password=[trustStore.password]
 ```
 
-Els valors entre [] s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 4.- Configurar l'arxiu /spring/app-integration-dni.xml amb el següent contingut:
 
@@ -185,7 +185,7 @@ Les dades associades a la consulta d'un DNI es poden recuperar amb:
 resposta.getTitular();
 ```
 
-Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA Guia d'us del servei de DNI v.1.9.pdf disponible via petició a requeridors.otpica.ctti@gencat.cat
+Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA Guia d'us del servei de DNI v.1.9.pdf disponible via petició a [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 ### Exemple d'utilització Verificació DNI
 
@@ -223,4 +223,4 @@ Assert.assertEquals("TRAMITADA", estat.getDescripcio());
 Assert.assertEquals("0003", estat.getCodiEstat());
 ```
 
-Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA **Guia d'us del servei de DNI v.1.9.pdf** disponible via petició a requeridors.otpica.ctti@gencat.cat
+Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA **Guia d'us del servei de DNI v.1.9.pdf** disponible via petició a [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)

@@ -80,7 +80,7 @@ Propietat                                         | Requerit | Descripció
 *.notificacions.electroniques.nomEmissor		  | Sí		 | Nom de l'emissor
 *.notificacions.electroniques.nifEmissor		  | Sí	     | Nif de l'emissor
 
-Els valors de urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors de urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/moduls/moduls-integracio/modul-pica/) per el que també s'ha de configurar aquest.
 

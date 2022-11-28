@@ -42,7 +42,7 @@ Propietat          | Requerit | Descripció
 *.psis.nifFuncionari| Sí      | Nif del funcionari
 *.psis.emailFuncionari| Sí    | Email del funcionari
 
-Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/moduls/moduls-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
 

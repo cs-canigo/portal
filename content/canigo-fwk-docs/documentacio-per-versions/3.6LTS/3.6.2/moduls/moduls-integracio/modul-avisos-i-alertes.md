@@ -81,7 +81,7 @@ A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6
 *.avisosalertes.emailFuncionari=[emailFuncionari]
 ```
 
-Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
@@ -101,7 +101,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 *.pica.trustStore.password=[trustStore.password]
 ```
 
-Els valors entre [] s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
+Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 4.- Configurar l'arxiu /spring/app-integration-avisalert.xml amb el següent contingut:
 
@@ -147,7 +147,7 @@ String resposta = avisalertService.avisAlertCorreuESincron(from, to, title, mess
 
 L'estat de finalització dependrà del codi retornat:
 
-Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA **Guia d'us del servei Avisos i Alertes v2.2.pdf** disponible via petició a requeridors.otpica.ctti@gencat.cat
+Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA **Guia d'us del servei Avisos i Alertes v2.2.pdf** disponible via petició a [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
 #### Exemple d'utilització d'un Servei Asíncron
 
@@ -190,4 +190,4 @@ EstatAsincron estat = avisosAlertesConnector.getEstatAvisAlertSMSASincron(respos
 String dades = avisosAlertesConnector.getDadesAvisAlertSMSASincron(resposta.getServei());
 ```
 
-Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA **Guia d'us del servei Avisos i Alertes v2.2.pdf** disponible via petició a requeridors.otpica.ctti@gencat.cat
+Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA **Guia d'us del servei Avisos i Alertes v2.2.pdf** disponible via petició a [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
