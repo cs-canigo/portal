@@ -19,7 +19,7 @@ El connector amb la PICA disposa de dos tipus de comunicació, un d'ells a trav�
 Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```xml
-<canigo.integration.pica.version>[2.3.5,2.4.0)</canigo.integration.pica.version>
+<canigo.integration.pica.version>[2.3.0,2.4.0)</canigo.integration.pica.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
