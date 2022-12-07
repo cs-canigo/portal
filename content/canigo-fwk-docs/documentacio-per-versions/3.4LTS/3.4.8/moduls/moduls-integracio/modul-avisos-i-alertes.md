@@ -68,7 +68,7 @@ En el pom.xml:
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.avisosalertes.pica</artifactId>
-    <version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
+    <version>${canigo.integration.avisosalertes.pica.version}</version>
 </dependency>
 
 ```

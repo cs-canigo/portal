@@ -68,7 +68,7 @@ En el pom.xml:
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.avisosalertes.pica</artifactId>
-    <version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
+    <version>${canigo.integration.avisosalertes.pica.version}</version>
 </dependency>
 
 ```
@@ -109,7 +109,7 @@ Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.i
 
 4.- Configurar l'arxiu /spring/app-integration-avisalert.xml amb el següent contingut:
 
-```
+```xml
 <!-- BEAN DE LA PICA -->
 <bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
     <property name="axisDefinition" value="${pica.axisdefinition.location}"/>

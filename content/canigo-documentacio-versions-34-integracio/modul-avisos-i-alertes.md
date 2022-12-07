@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-20T13:04:49+01:00"
+date        = "2022-12-07"
 title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
 sections    = "Canigó. Documentació Versió 3.4"
@@ -51,9 +51,9 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 #### Requeriments
 
-El connector AVISALERT és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
+El connector AVISALERT és compatible amb la versió 1.8 de Java. Per a versions inferiors o superiors no està garantit el seu correcte funcionament.
 
-Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-34-integracio/modul-pica/) 1.2.0.
+Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-34-integracio/modul-pica/) 2.3.5.
 
 ### Configuració
 
@@ -71,7 +71,7 @@ En el pom.xml:
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.integration.avisosalertes.pica</artifactId>
-	<version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
+	<version>${canigo.integration.avisosalertes.pica.version}</version>
 </dependency>
 
 ```
