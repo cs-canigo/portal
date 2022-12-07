@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-26"
+date        = "2022-12-07"
 title       = "PICA"
 description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col·laboració Administrativa)."
 sections    = "Canigó. Documentació Versió 3.4"
@@ -18,13 +18,13 @@ El connector amb la PICA disposa de dos tipus de comunicació, un d'ells a trav�
 
 Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.integration.pica.version>[1.2.0,1.3.0)</canigo.integration.pica.version>
+```xml
+<canigo.integration.pica.version>[2.3.5,2.4.0)</canigo.integration.pica.version>
 
 <dependency>
-          <groupId>cat.gencat.ctti</groupId>
-          <artifactId>canigo.integration.pica</artifactId>
-          <version>${canigo.integration.pica.version}</version>
+    <groupId>cat.gencat.ctti</groupId>
+    <artifactId>canigo.integration.pica</artifactId>
+    <version>${canigo.integration.pica.version}</version>
 </dependency>
 ```
 
@@ -91,7 +91,7 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-integration-custom.xml
 
 Aquest arxiu XML conté la configuració de Spring per al servei de PICA. En l'exemple configurem el servei de PICA per invocar el producte/modalitat "PADRO_MUNICIPI_RESIDENCIA".
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
