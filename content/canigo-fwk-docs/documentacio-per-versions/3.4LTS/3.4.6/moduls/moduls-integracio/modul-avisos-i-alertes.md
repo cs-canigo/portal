@@ -1,5 +1,5 @@
 +++
-date        = "2021-05-11"
+date        = "2022-12-07"
 title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
 sections    = "Canigó. Documentació Versió 3.4"
@@ -61,7 +61,7 @@ Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar e
 En el pom.xml:
 
 ```
-<canigo.integration.avisosalertes.pica.version>[1.2.0,1.3.0)</canigo.integration.avisosalertes.pica.version>
+<canigo.integration.avisosalertes.pica.version>[2.3.0,2.4.0)</canigo.integration.avisosalertes.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-AVISALERT -->
