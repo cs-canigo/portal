@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-27"
+date        = "2022-12-07"
 title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -62,8 +62,8 @@ En el pom.xml:
 <!-- Dependencia del mòdul PICA-AVISALERT -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.integration.avisosalertes.pica</artifactId>
-	<version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
+    <artifactId>canigo.integration.avisosalertes.pica</artifactId>
+    <version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
 </dependency>
 ```
 
@@ -71,7 +71,7 @@ A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6
 
 2.- Crear l'arxiu /config/props/avisalert.properties amb el següent contingut:
 
-```
+```txt
 *.avisosalertes.pica.finalitat=[finalitat]
 *.avisosalertes.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.avisosalertes.pica.nifEmisor=[nifEmisor]
@@ -87,7 +87,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
 3.- Configurar l'arxiu /config/props/pica.properties amb el següent contingut:
 
-```
+```txt
 *.pica.modes.passwordType=PasswordText
 *.pica.requirer.signatureFile=classpath:config/cert/signature.properties
 *.pica.requirer.petitionerId=[petitionerId]
@@ -105,7 +105,7 @@ Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.i
 
 4.- Configurar l'arxiu /spring/app-integration-avisalert.xml amb el següent contingut:
 
-```
+```xml
 <!-- BEAN DE LA PICA -->
 <bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
     <property name="axisDefinition" value="${pica.axisdefinition.location}"/>

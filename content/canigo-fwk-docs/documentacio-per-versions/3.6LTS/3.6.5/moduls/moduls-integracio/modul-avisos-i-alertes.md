@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-23"
+date        = "2022-12-07"
 title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -59,20 +59,12 @@ Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar e
 En el pom.xml:
 
 ```xml
-  <properties>
-    ...
-    <canigo.integration.pica.avisosalertes.support.version>[3.0.0,3.1.0)</canigo.integration.pica.avisosalertes.support.version>
-  </properties>
-
-  <dependencies>
-    ...
-    <dependency>
-      <groupId>cat.gencat.ctti</groupId>
-      <artifactId>canigo.integration.pica.avisosalertes.support</artifactId>
-      <version>${canigo.integration.pica.avisosalertes.support.version}</version>
-    </dependency>
-  </dependencies>
-</project>
+<!-- Dependencia del mòdul PICA-AVISALERT -->
+<dependency>
+    <groupId>cat.gencat.ctti</groupId>
+    <artifactId>canigo.integration.avisosalertes.pica</artifactId>
+    <version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
+</dependency>
 ```
 
 A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.

@@ -48,9 +48,9 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 #### Requeriments
 
-El connector AVISALERT és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
+El connector AVISALERT és compatible amb la versió 1.8 de Java. Per a versions inferiors o superiors no està garantit el seu correcte funcionament.
 
-Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.6/moduls/moduls-integracio/modul-pica/) 1.2.0.
+Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.6/moduls/moduls-integracio/modul-pica/) 2.3.5.
 
 ### Configuració
 
@@ -60,22 +60,22 @@ Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar e
 
 En el pom.xml:
 
-```
+```xml
 <canigo.integration.avisosalertes.pica.version>[2.3.0,2.4.0)</canigo.integration.avisosalertes.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-AVISALERT -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.integration.avisosalertes.pica</artifactId>
-	<version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
+    <artifactId>canigo.integration.avisosalertes.pica</artifactId>
+    <version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
 </dependency>
 
 ```
 
 2.- Crear l'arxiu /config/props/avisalert.properties amb el següent contingut:
 
-```
+```txt
 *.avisosalertes.pica.finalitat=[finalitat]
 *.avisosalertes.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.avisosalertes.pica.nifEmisor=[nifEmisor]
@@ -91,7 +91,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
 3.- Configurar l'arxiu /config/props/pica.properties amb el següent contingut:
 
-```
+```txt
 *.pica.modes.passwordType=PasswordText
 *.pica.requirer.signatureFile=classpath:config/cert/signature.properties
 *.pica.requirer.petitionerId=[petitionerId]
@@ -109,7 +109,7 @@ Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.i
 
 4.- Configurar l'arxiu /spring/app-integration-avisalert.xml amb el següent contingut:
 
-```
+```xml
 <!-- BEAN DE LA PICA -->
 <bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
     <property name="axisDefinition" value="${pica.axisdefinition.location}"/>
