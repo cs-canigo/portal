@@ -1,5 +1,5 @@
 +++
-date = "2022-02-17"
+date = "2022-12-12"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
@@ -32,7 +32,7 @@ Es tracta d’un arxiu de text en **format YAML** en el que a continuació defin
 Caldrà indicar la versió de l'arxiu que, per tant, segueix un versionatge diferent al de l'aplicació ja que cada increment de versió es correspondrà amb **canvis en
 les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`.
 
-```
+```yaml
 version: x.y.z
 ```
 
@@ -41,7 +41,7 @@ version: x.y.z
 Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
 Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapsular dades repetibles.
 
-```
+```yaml
 parameters:
   - name: nom_param1
     value: valor_param1
@@ -49,13 +49,13 @@ parameters:
     value: valor_param2
 ```
 
-```
+```yaml
 build:
   steps:
     - id: step01
       position: 1
       tool: maven_3.6
-      jdk: JDK 1.8
+      jdk: JDK 11-openjdk
       parameters: ${nom_param1}
 ```
 
@@ -71,7 +71,7 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 
 Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada.
 
-```
+```yaml
 resources:
   environments:
     - id: int
@@ -105,7 +105,7 @@ Es relacionaran les denominacions d'infraestructures indicades pel proveïdor:
 * Entorns (`environments`)
 * Identificador del proveïdor (`provider`)
 
-```
+```yaml
 resources:
   (...)
   infrastructures:
@@ -133,7 +133,7 @@ resources:
 
 Només si cal enviar **variables d’entorn requerides per al desplegament** a les infraestructures, s'haurà d'emplenar la secció `vars`:
 
-```
+```yaml
 resources:
   (...)
   infrastructures:
@@ -181,7 +181,7 @@ La propietat `provider` suporta el següent conjunt de valors:
 
 El darrer element de la secció es centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran aquests.
 
-```
+```yaml
 resources:
   (...)
   artifacts:
@@ -245,14 +245,14 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 Cada pas de construcció disposa d'un identificador, una posició, l'eina de construcció i l'artefacte o llista d’artefactes que genera.
 Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondre's amb els declarats a la secció `resources.artifacts`.
 
-```
+```yaml
 build:
   steps:
     - id: bs001
       position: 1
       tool: maven_3.6
-      jdk: JDK 1.8
-      parameters: clean package -Dmaven.test.skip=true
+      jdk: JDK 11-openjdk
+      parameters: package -Dmaven.test.skip=true
       generates:
         - artifact01
 ```
@@ -273,17 +273,18 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |nodejs_12_LTS|
 |nodejs_14_LTS|
 |nodejs_16_LTS|
+|nodejs_18_LTS|
 
-```
+```yaml
 build:
   steps:
     - id: bs001
       position: 1
-      tool: nodejs_16_LTS
+      tool: nodejs_18_LTS
       parameters: install --scripts-prepend-node-path true
     - id: bs002
       position: 2
-      tool: nodejs_16_LTS
+      tool: nodejs_18_LTS
       parameters: run-script build --scripts-prepend-node-path true
       generates:
         - artifact01
@@ -310,17 +311,17 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 |maven_3.5|JDK 1.7|
 |maven_3.5|JDK 1.8 (per defecte)|
 |maven_3.6|JDK 1.7|
-|maven_3.6|JDK 1.8 (per defecte)|
-|maven_3.6|JDK 11-openjdk|
+|maven_3.6|JDK 1.8|
+|maven_3.6|JDK 11-openjdk (per defecte)|
 
-```
+```yaml
 build:
   steps:
     - id: bs001
       position: 1
       tool: maven_3.6
-      jdk: JDK 1.8
-      parameters: clean package -Dmaven.test.skip=true
+      jdk: JDK 11-openjdk
+      parameters: package -Dmaven.test.skip=true
       generates:
         - artifact01
         - artifact02
@@ -339,7 +340,7 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |MSBuild_14|
 |MSBuild_15|
 
-```
+```yaml
 build:
   steps:
     - id: bs001
@@ -363,7 +364,7 @@ Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la
 Caldrà seleccionar el literal "hugo" com a `tool` i, addicionalment, indicar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el
 directori on es troben els components i on es deixarà l’artefacte comprimit generat.
 
-```
+```yaml
 build:
   steps:
     - id: bs001
@@ -378,7 +379,7 @@ build:
 #### Compressió (zip, unzip)
 Caldrà seleccionar el literal "command" com a `tool` per tal d'executar les eines d'empaquetat (zip) i desempaquetat de la informació (unzip).
 
-```
+```yaml
 build:
   steps:
     - id: bs001
@@ -396,7 +397,7 @@ Caldrà que s'indiqui la comanda `zip` o `unzip` en els `parameters` d’execuci
 #### BBDD
 Caldrà seleccionar el literal "bbdd" com a `tool` per tal d'executar l'eina de desplegament de base de dades.
 
-```
+```yaml
 build:
  steps:
     - id: bs001
@@ -414,7 +415,7 @@ Veure: [**Com utilitzar imatges Docker Builder**](/howtos/2020-06-26-SIC-Howto-u
 </br>
 Exemple d'ús d'imatge del catàleg:
 
-```
+```yaml
 build:
  steps:
     - id: bs001
@@ -434,7 +435,7 @@ On:
 </br>
 Exemple d'ús d'imatge pròpia (custom):
 
-```
+```yaml
 build:
  steps:
     - id: bs001
@@ -534,7 +535,7 @@ generació i enviament de l'informe al SonarQube: `-Dmaven.main.skip=true -Dmave
 
 Exemple:
 
-```
+```yaml
 analysis:
   evalStaticCode: true
   checkQualityGates: true
@@ -571,7 +572,7 @@ A continuació es descriuen els diferents tipus de desplegament que es poden con
 Pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
 Exemple:
 
-```
+```yaml
 deploy:
   steps:
     - id: dp001
@@ -580,6 +581,7 @@ deploy:
       destination: 9999_tomcat
       artifact: artifact01
 ```
+
 </br>
 
 #### Llibreria (`library`)
@@ -590,20 +592,22 @@ serà suficient fer referència a l'`artifact` en qüestió i el sistema aprofit
 </br></br>
 
 Exemple especificant la `tool` i la `jdk`:
-```
+
+```yaml
 deploy:
   steps:
     - id: ds001
       position: 1
       type: library
       tool: maven_3.6
-      jdk: JDK 1.8
+      jdk: JDK 11-openjdk
       parameters: deploy -f pom.xml
 ```
 
 Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció
 (en cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat `artifact`):
-```
+
+```yaml
 deploy:
   steps:
     - id: ds001
@@ -614,26 +618,28 @@ deploy:
 ```
 
 Exemple utilitzant imatge docker específica del catàleg:
-```
+
+```yaml
 deploy: 
   steps:  
     - id: ds001 
       position: 1 
       type: library 
       tool: docker 
-      dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
+      dockerImageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
       parameters: mvn deploy -f pom.xml 
 ```
 
 Exemple amb diversos `parameters`:
-```
+
+```yaml
 deploy: 
   steps:
     - id: ds001 
       position: 1
       type: library 
       tool: docker 
-      dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
+      dockerImageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
       parameters: 
        -  mvn deploy -f app1/pom.xml 
        -  mvn deploy -f app2/pom.xml 
@@ -641,7 +647,8 @@ deploy:
 ```
 
 Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
-```
+
+```yaml
 deploy:
   steps:
     - id: ds001

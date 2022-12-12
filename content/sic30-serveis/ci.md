@@ -1,5 +1,5 @@
 +++
-date = "2022-09-22"
+date = "2022-12-12"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -291,6 +291,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |Versió .NET Core|Versió MSBuild|
 |-------|-------|
 |3.1|16.7|
+|6.0|17.1|
 
 <!---
 ### Maven/JDK
@@ -325,7 +326,8 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |10|6.11|
 |12|6.12|
 |14|6.14|
-|16|8.3|
+|16|8.19|
+|18|8.19|
 
 L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida,
 tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
