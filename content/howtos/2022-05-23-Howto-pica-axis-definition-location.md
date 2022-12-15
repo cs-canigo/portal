@@ -1,10 +1,10 @@
 +++
-date        = "2022-05-23"
+date        = "2022-12-15"
 title       = "Canigó. Configuració ruta definició client axis2 mòduls PICA"
 description = "Howto per a mostrar com configurar la ruta de la definició del client axis2 als mòduls de la PICA per a projectes generats amb canigó < 3.6.5"
 section     = "howtos"
 categories  = ["canigo"]
-key         = "JUNY2022"
+key         = "DESEMBRE2022"
 +++
 
 
@@ -67,6 +67,8 @@ Cal excloure la versió 1.9.2 i incloure la versió 1.10.0 del client de la PICA
   </dependencies>
 ...
 ```
+
+El `pom.xml` anterior fa referència a l'ús del mòdul: `canigo.integration.pica`. En cas d'utilitzar qualsevol altre mòdul d'integració de canigó i la pica, s'ha d'agregar la corresponent dependència en comptes de `canigo.integration.pica`.
 
 ### Modificar l'arxiu `pica.properties`
 
