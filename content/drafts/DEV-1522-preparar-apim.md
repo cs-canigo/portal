@@ -1,6 +1,6 @@
 +++
 date = "2022-12-16"
-title = "Com preparar productes i APIs per al desplegament a API Manager"
+title = "Com preparar productes i APIs per al desplegament a l'API Manager"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament de productes i APIs a l'API Manager corporatiu"
 sections = "SIC"
 toc = true
@@ -57,11 +57,53 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|-|
 |APIC\_TARGET\_URL\_{N}|Si|URL de destí de les API's. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
-<br/><br/>
-Per a més informació, podeu consultar:
+Per exemple:
+```yaml
+version: 2.0.0 # aca schema version
+info:
+  version: 1.0.0
+  description: Api Connect Product
+global-env:
+  - APIC_PRODUCT_FILE: 'product.yml'
+components:
+  - deployment:
+      environments:
+        - name: privat_pre
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pre'
+        - name: public_pre
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pre'
+        - name: privat
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pro'
+        - name: public
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pro'
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat
+```yaml
 
-- [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
-- [Exemple fitxer ACA](/related/sic/3.0/aca_despl_api_manager.yml)
+<br/><br/>
+Per a més informació, podeu consultar: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
 
 ## Funcionament
 
@@ -89,7 +131,7 @@ Cal tenir present que:
 ## Control i seguretat
 
 El SIC aplica una sèrie de mecanismes de control i seguretat (snippets) que poden implicar canvis respecte a la
-definició de productes i APIs del proveïdor:
+definició inicial de productes i APIs realitzada pel proveïdor:
 
 - S’aplicaran **plans estandarditzats CTTI amb aprovació obligatòria de subscripcions**:
 
@@ -124,11 +166,12 @@ visibility:
     enabled: true
 ```
 
-- S’establirà **un mateix OAuth Provider per a totes les APIS d’un mateix catàleg**. Es contemplen dos tipus, que seran configurats
-per l'equip de SIC: IBM Default o autenticació Gicar.
+- S’establirà **un mateix OAuth Provider per a totes les APIS d’un mateix catàleg**. Es contemplen dos tipus, que seran
+establerts per l'equip de SIC: IBM Default o GICAR.
 
-- No es permetrà configurar especificitats singulars per a les APIS dins un pla. En aquest sentit, la secció
-`x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` indicada al fitxer ACA:
+- **No es permetrà configurar especificitats singulars per a les APIS dins un pla**. En aquest sentit, la secció
+`x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` especificada al
+fitxer `aca.yml`:
 
 ```yaml
 execute:
