@@ -17,9 +17,11 @@ de les aplicacions**.
 Aquest servei permet gestionar el cicle de vida de les APIS de manera senzilla i segura amb l’objectiu de facilitar-ne
 tant la seva publicació com el seu consum.
 
-La organització de catàlegs, espais i productes és la següent:
+## Organització de catàlegs, espais i productes
 
-- Hi ha **quatre catàlegs segons el tipus d’entorn i el tipus de visibilitat**: privat-pre, public-pre, privat i public.
+L'organització de catàlegs, espais i productes és la següent:
+
+- Hi ha **quatre catàlegs segons el tipus d’entorn i el tipus de visibilitat**: `privat-pre`, `public-pre`, `privat` i `public`.
 - **Cada codi de diàleg disposarà d'un espai propi** amb la nomenclatura "CD" + <codi_diàleg> (agrupació de productes). Per exemple: "CD0192".
 - Un producte és una agrupació d’APIs i plans que les acompanyen (unitat mínima a versionar, desplegar i subscriure).
 
@@ -29,7 +31,7 @@ Un cop fet el desenvolupament amb [API Designer](https://www.ibm.com/docs/en/acv
 caldrà exportar els yml de definició del producte i les seves APIS per a repositar-los al sistema de gestió de
 codi font (SCM - Source Code Management) del SIC d'acord amb les següents premisses:
 
-* Cada producte es correspondrà amb un projecte dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs
+* Cada producte es correspondrà amb un projecte dins el **codi de diàleg** adient, de forma que tota la gestió posterior de pipelines
 i creació de peticions Remedy s'associïn a l'aplicació corresponent. Per aquest mateix motiu, **no està contemplat la creació
 de subgrups de projectes**, tot i que l'eina ho permeti.
 
@@ -82,7 +84,7 @@ Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim
 Cal tenir present que:
 
 - Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
-- Els jobs **notificaran** dels resultats a les adreces de correu assignades.
+- Les pipelines **notificaran** dels resultats a les adreces de correu assignades.
 
 ## Control i seguretat
 
@@ -126,7 +128,7 @@ visibility:
 per l'equip de SIC: IBM Default o autenticació Gicar.
 
 - No es permetrà configurar especificitats singulars per a les APIS dins un pla. En aquest sentit, la secció
-"x-ibm-configuration.assembly.execute" serà reemplaçada aplicant la configuració de *target-url' indicada al fitxer ACA:
+`x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` indicada al fitxer ACA:
 
 ```yaml
 execute:
@@ -155,9 +157,8 @@ execute:
 
 ## Projecte d'exemple
 
-Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/apim-demo-project.zip).
-
-
+Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/apim-demo-project.zip), que mostra una configuració
+completa d'un producte.
 
 <br/><br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
