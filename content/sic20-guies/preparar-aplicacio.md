@@ -27,7 +27,7 @@ Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi fon
 i creació de peticions Remedy s'associïn a l'aplicació corresponent. Per aquest mateix motiu, **no està contemplat la creació
 de subgrups de projectes**, tot i que l'eina ho permeti.
 
-* Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release
+* Aquest repositori **no és un entorn de desenvolupament**, per la qual cosa només les persones assignades com a Release
 Managers seran les encarregades de consolidar el codi i
 lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi
 distribuir als entorns dels serveis TIC centrals.
