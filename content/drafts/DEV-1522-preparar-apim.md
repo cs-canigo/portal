@@ -17,21 +17,17 @@ de les aplicacions**.
 Aquest servei permet gestionar el cicle de vida de les APIS de manera senzilla i segura amb l’objectiu de facilitar-ne
 tant la seva publicació com el seu consum.
 
-Es tracta d’una guia ràpida per a informar dels requisits i aspectes més rellevants a tenir en compte de cara al desplegament
-de productes i APIs a l'API Manager corporatiu.
-
-## Organització de catàlegs, espais i productes
+La organització de catàlegs, espais i productes és la següent:
 
 - Hi ha **quatre catàlegs segons el tipus d’entorn i el tipus de visibilitat**: privat-pre, public-pre, privat i public.
 - **Cada codi de diàleg disposarà d'un espai propi** amb la nomenclatura "CD" + <codi_diàleg> (agrupació de productes). Per exemple: "CD0192".
-- Un producte és una agrupacions d’APIs i plans que les acompanyen (unitat mínima a versionar, desplegar i subscriure).
-- Una API és una interfície de programació que es publica al servei (endpoint)
+- Un producte és una agrupació d’APIs i plans que les acompanyen (unitat mínima a versionar, desplegar i subscriure).
 
 ## Preparació de productes i APIs
 
-Un cop fet el desenvolupament amb [API Designer](https://canigo.ctti.gencat.cat/related/apim/APIM-Manual-Proveidor-APIs-V1.pdf),
+Un cop fet el desenvolupament amb [API Designer](https://www.ibm.com/docs/en/acvfc?topic=applications-creating-api-definitions-by-using-api-designer),
 caldrà exportar els yml de definició del producte i les seves APIS per a repositar-los al sistema de gestió de
-codi font (SCM - Source Code Management) del SIC segons les següents premisses:
+codi font (SCM - Source Code Management) del SIC d'acord amb les següents premisses:
 
 * Cada producte es correspondrà amb un projecte dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs
 i creació de peticions Remedy s'associïn a l'aplicació corresponent. Per aquest mateix motiu, **no està contemplat la creació
@@ -59,6 +55,7 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|-|
 |APIC\_TARGET\_URL\_{N}|Si|URL de destí de les API's. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
+<br/><br/>
 Per a més informació, podeu consultar:
 
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
@@ -66,21 +63,22 @@ Per a més informació, podeu consultar:
 
 ## Funcionament
 
-El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIS per a gestionar el seu cicle de vida,
+El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIS,
 atorgant la màxima agilitat i autonomia als equips de desenvolupament. En aquest sentit, es proporciona un conjunt de
-pipelines que permeten gestionar aquest cicle de vida d’una forma estandarditzada:
+pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditzada:
 
-- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades
-- **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres)
+- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades.
+- **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres).
 - Operatives:
     * **DELETE**: eliminació del producte
-    * **DEPRECATE**: deprecació d’una versió del producte sense deixar cap versió vigent
-    * **REPLACE**: retirada d’una de les versions vigents del producte i migració de subscripcions
-    * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden)
-    * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”
+    * **DEPRECATE**: deprecació d’una versió del producte sense deixar cap versió vigent.
+    * **REPLACE**: retirada d’una de les versions vigents del producte i migració de subscripcions.
+    * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden).
+    * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”.
 
 Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/).
 
+<br/>
 Cal tenir present que:
 
 - Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
@@ -91,7 +89,7 @@ Cal tenir present que:
 El SIC aplica una sèrie de mecanismes de control i seguretat (snippets) que poden implicar canvis respecte a la
 definició de productes i APIs del proveïdor:
 
-- S’aplicaran plans estandarditzats CTTI amb aprovació obligatòria de subscripcions:
+- S’aplicaran **plans estandarditzats CTTI amb aprovació obligatòria de subscripcions**:
 
 ```yaml
 plans:
@@ -108,7 +106,7 @@ plans:
         value: 300/1second
 ```
 
-- La visibilitat del producte serà sempre de tipus “authenticated”:
+- La **visibilitat del producte serà sempre de tipus `authenticated`**:
 
 ```yaml
 visibility:
@@ -124,11 +122,11 @@ visibility:
     enabled: true
 ```
 
-- S’establirà un mateix OAuth Provider per a totes les APIS d’un mateix catàleg. Es contemplen dos tipus, que seran configurats
+- S’establirà **un mateix OAuth Provider per a totes les APIS d’un mateix catàleg**. Es contemplen dos tipus, que seran configurats
 per l'equip de SIC: IBM Default o autenticació Gicar.
 
-- No es permetrà configurar especificitats singulars per a les APIS dins un pla. L'apartat "x-ibm-configuration.assembly.execute"
-serà injectada per SIC aplicant la configuració de *target-url' indicada al fitxer ACA:
+- No es permetrà configurar especificitats singulars per a les APIS dins un pla. En aquest sentit, la secció
+"x-ibm-configuration.assembly.execute" serà reemplaçada aplicant la configuració de *target-url' indicada al fitxer ACA:
 
 ```yaml
 execute:
@@ -157,7 +155,7 @@ execute:
 
 ## Projecte d'exemple
 
-Podeu descarregar el següent [Projecte d'exemple](related/sic/3.0/apim-demo-project.zip).
+Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/apim-demo-project.zip).
 
 
 
