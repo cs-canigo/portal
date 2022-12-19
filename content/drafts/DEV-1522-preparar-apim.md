@@ -113,21 +113,21 @@ pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditz
 
 - **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades.
 - **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres). Caldrà seleccionar
-el catàleg del que es desitja informació i indicar el nom del producte (CURRENT_API_PRODUCT). Per exemple: `consulta`.
+el catàleg del qual es desitja informació i indicar el nom del producte (*CURRENT_API_PRODUCT*). Per exemple: `consulta`.
 - Operatives:
-    * **DELETE**: eliminació del producte. Caldrà seleccionar el catàleg que es desitja esborrar i indicar el nom del
-    producte i la versió (CURRENT_API_PRODUCT). Per exemple: `consulta:1.1.0`.
+    * **DELETE**: eliminació del producte. Caldrà seleccionar el catàleg sobre el qual es desitja esborrar i indicar el nom del
+    producte i la versió (*CURRENT_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
     * **DEPRECATE**: deprecació d’una versió del producte sense deixar cap versió vigent. Caldrà seleccionar el catàleg
-    que es desitja deprecar i indicar el nom del producte i la versió (CURRENT_API_PRODUCT). Per exemple: `consulta:1.1.0`.
+    sobre el qual es desitja deprecar i indicar el nom del producte i la versió (*CURRENT_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
     * **REPLACE**: retirada d’una de les versions vigents del producte i migració de subscripcions. Caldrà seleccionar
-    el catàleg que es desitja reemplaçar, indicar el nom del producte i la versió actual (CURRENT_API_PRODUCT) i
-    el nom del producte i la nova versió (NEW_API_PRODUCT). Per exemple: `consulta:1.1.0`.
+    el catàleg sobre el qual es desitja reemplaçar, indicar el nom del producte i la versió actual (*CURRENT_API_PRODUCT*) i
+    el nom del producte i la nova versió (*NEW_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
     * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden). Caldrà
-    seleccionar el catàleg que es desitja retirar i indicar el nom del producte i la versió (CURRENT_API_PRODUCT).
+    seleccionar el catàleg sobre el qual es desitja retirar i indicar el nom del producte i la versió (*CURRENT_API_PRODUCT*).
     Per exemple: `consulta:1.1.0`.
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”. Caldrà
-    seleccionar el catàleg que es desitja fer el supersede, indicar el nom del producte i la versió actual (CURRENT_API_PRODUCT) i
-    el nom del producte i la nova versió (NEW_API_PRODUCT). Per exemple: `consulta:1.1.0`.
+    seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar el nom del producte i la versió actual (*CURRENT_API_PRODUCT*) i
+    el nom del producte i la nova versió (*NEW_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
 
 Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/).
 
