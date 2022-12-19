@@ -63,22 +63,22 @@ Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar e
 
 En el pom.xml:
 
-```
-<canigo.integration.avisosalertes.pica.version>[1.2.0,1.3.0)</canigo.integration.avisosalertes.pica.version>
+```xml
+<canigo.integration.avisosalertes.pica.version>[2.3.0,2.4.0)</canigo.integration.avisosalertes.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-AVISALERT -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.integration.avisosalertes.pica</artifactId>
-	<version>${canigo.integration.avisosalertes.pica.version}</version>
+    <artifactId>canigo.integration.avisosalertes.pica</artifactId>
+    <version>${canigo.integration.avisosalertes.pica.version}</version>
 </dependency>
 
 ```
 
 2.- Crear l'arxiu /config/props/avisalert.properties amb el següent contingut:
 
-```
+```txt
 *.avisosalertes.pica.finalitat=[finalitat]
 *.avisosalertes.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.avisosalertes.pica.nifEmisor=[nifEmisor]
@@ -94,7 +94,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
 3.- Configurar l'arxiu /config/props/pica.properties amb el següent contingut:
 
-```
+```txt
 *.pica.modes.passwordType=PasswordText
 *.pica.requirer.signatureFile=classpath:config/cert/signature.properties
 *.pica.requirer.petitionerId=[petitionerId]
@@ -112,7 +112,7 @@ Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.i
 
 4.- Configurar l'arxiu /spring/app-integration-avisalert.xml amb el següent contingut:
 
-```
+```xml
 <!-- BEAN DE LA PICA -->
 <bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
     <property name="axisDefinition" value="${pica.axisdefinition.location}"/>
@@ -122,7 +122,6 @@ Els valors entre [] s'han de consultar a la [OT PICA](http://transversals.ctti.i
     <property name="requeridor" ref="requeridor"/>
     <property name="modalitats">
         <map>
-
         </map>
     </property>
 </bean>
@@ -181,7 +180,7 @@ Es crida al servei amb les dades pertinents;
 String mobile = MOV_NUMBER;
 String serviceNumber = "6666";
 String message = "Test";
-			
+
 DataResponse resposta = avisosAlertesConnector.avisAlertSMSsimpleASincron(serviceNumber, mobile, message);
 ```
 
