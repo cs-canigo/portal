@@ -56,8 +56,8 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 |Variable|Requerit|Descripció|Valor per defecte|Exemple|
 |--------|--------|----------|-----------------|-------|
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|-|
-|APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<target-url\>|-|APIC\_TARGET\_URL: 'https\://backend/api'|
-|APIC\_TARGET\_URL\_{N}|Si|URL de destí de les APIs si no és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
+|APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<target-url\>|-|APIC\_TARGET\_URL: 'https\://backend/api'|
+|APIC\_TARGET\_URL\_{N}|Si|URL de destí de les APIs si NO és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 Per exemple:
 ```yaml
@@ -108,6 +108,8 @@ notifications:
       - noreply@gencat.cat
 ```
 
+On es pot comprovar que s'ha definit una *target-url* global i una d'específica per a l'API_C.
+
 <br/>
 Per a més informació, podeu consultar: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
 
@@ -117,8 +119,8 @@ El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIS,
 atorgant la màxima agilitat i autonomia als equips de desenvolupament. En aquest sentit, es proporciona un conjunt de
 pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditzada:
 
-- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades. El sistema permet redesplegar versions a Pre
-sempre que no hagin arribat a Pro.
+- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades. El sistema permet redesplegar versions als
+catàlegs preproductius sempre que no hagin arribat a producció.
 - **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres). Caldrà seleccionar
 el catàleg del qual es desitja informació i indicar el nom del producte (*CURRENT_API_PRODUCT*). Per exemple: `consulta`.
 - Operatives:
