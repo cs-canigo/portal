@@ -5,7 +5,7 @@ description = "HOWTOs d'utilitat"
 sections = "SIC"
 no_index = true
 taxonomies = []
-weight = 4
+weight = 5
 +++
 
 Un HOWTO és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.

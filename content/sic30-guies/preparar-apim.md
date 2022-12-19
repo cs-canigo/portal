@@ -5,7 +5,7 @@ description = "Guia amb la informació més rellevant a tenir en compte per la i
 sections = "SIC"
 toc = true
 taxonomies = []
-weight = 2
+weight = 3
 +++
 
 ## Introducció
