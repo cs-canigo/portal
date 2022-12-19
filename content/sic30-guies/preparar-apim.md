@@ -56,7 +56,7 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 |Variable|Requerit|Descripció|Valor per defecte|Exemple|
 |--------|--------|----------|-----------------|-------|
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|-|
-|APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats: <br/>- Format del valor: \<target-url\>|-|APIC\_TARGET\_URL: 'https\://backend/api'|
+|APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats.|-|APIC\_TARGET\_URL: 'https\://backend/api'|
 |APIC\_TARGET\_URL\_{N}|Si|URL de destí de les APIs si NO és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 Per exemple:
