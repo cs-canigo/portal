@@ -100,7 +100,7 @@ notifications:
   email:
     recipients:
       - noreply@gencat.cat
-```yaml
+```
 
 <br/><br/>
 Per a més informació, podeu consultar: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
