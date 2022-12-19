@@ -171,7 +171,7 @@ establerts per l'equip de SIC: IBM Default o GICAR.
 
 - **No es permetrà configurar especificitats singulars per a les APIS dins un pla**. En aquest sentit, la secció
 `x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` especificada al
-fitxer `aca.yml`:
+fitxer `aca.yml` de forma que sigui possible dur a terme un desplegament multientorn:
 
 ```yaml
 execute:
