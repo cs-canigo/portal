@@ -45,7 +45,8 @@ Managers seran les encarregades de consolidar el codi i
 lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi
 distribuir als entorns dels serveis TIC centrals.
 
-* Les **pipelines seran les encarregades de generar els TAGS de Release** de codi corresponents.
+* Les **pipelines seran les encarregades de generar els TAGS de Release** de codi corresponents tan bon punt es desplegui amb èxit
+a producció.
 
 ## Preparació de la integració al SIC
 
@@ -55,7 +56,8 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 |Variable|Requerit|Descripció|Valor per defecte|Exemple|
 |--------|--------|----------|-----------------|-------|
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|-|
-|APIC\_TARGET\_URL\_{N}|Si|URL de destí de les API's. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
+|APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<target-url\>|-|APIC\_TARGET\_URL: 'https\://backend/api'|
+|APIC\_TARGET\_URL\_{N}|Si|URL de destí de les APIs si no és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global. <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 Per exemple:
 ```yaml
@@ -74,28 +76,32 @@ components:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pre'
+                      - APIC_TARGET_URL: 'https://common-backend/pre'
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pre'
         - name: public_pre
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pre'
+                      - APIC_TARGET_URL: 'https://common-backend/pre'
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pre'
         - name: privat
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pro'
+                      - APIC_TARGET_URL: 'https://common-backend/pro'
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pro'
         - name: public
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend/pro'
+                      - APIC_TARGET_URL: 'https://common-backend/pro'
+                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pro'
 notifications:
   email:
     recipients:
@@ -111,7 +117,8 @@ El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIS,
 atorgant la màxima agilitat i autonomia als equips de desenvolupament. En aquest sentit, es proporciona un conjunt de
 pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditzada:
 
-- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades.
+- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades. El sistema permet redesplegar versions a Pre
+sempre que no hagin arribat a Pro.
 - **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres). Caldrà seleccionar
 el catàleg del qual es desitja informació i indicar el nom del producte (*CURRENT_API_PRODUCT*). Per exemple: `consulta`.
 - Operatives:
@@ -176,11 +183,33 @@ visibility:
 ```
 
 - S’establirà **un mateix OAuth Provider per a totes les APIS d’un mateix catàleg**. Es contemplen dos tipus, que seran
-establerts per l'equip de SIC: IBM Default o GICAR.
+establerts per l'equip de SIC: *IBM Default* o *GICAR*.
 
 - **No es permetrà configurar especificitats singulars per a les APIS dins un pla**. En aquest sentit, la secció
 `x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` especificada al
-fitxer `aca.yml` de forma que sigui possible dur a terme un desplegament multientorn:
+fitxer `aca.yml` de forma que sigui possible dur a terme un desplegament multientorn.
+
+En cas d'autenticació *IBM Default*:
+
+```yaml
+execute:
+  - invoke:
+      title: invoke
+      version: 2.0.0
+      verb: keep
+      target-url: '<replace_target_url>$(request.path)'
+      follow-redirects: false
+      timeout: 60
+      parameter-control:
+        type: blocklist
+      header-control:
+        type: blocklist
+        values:
+          - ^X-IBM-Client-Id$
+      inject-proxy-headers: true
+```
+
+En cas d'autenticació *Gicar*:
 
 ```yaml
 execute:
