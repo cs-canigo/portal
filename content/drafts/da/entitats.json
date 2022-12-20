@@ -36,16 +36,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Entitat Autònoma del Diari Oficial i de Publicacions de la Generalitat de Catalunya (EADOP) - Departament de la Presidència",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Diaris_butlletins_oficials_ATR.docx",
-                "ifitxer_xls": "Diaris_butlletins_oficials.xlsx",
+                "ifitxer_xls": "deprecated/Diaris_butlletins_oficials.xlsx",
                 "idatacreacio": "14/12/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "21/12/2022",
                 "idatapublicacio": "27/07/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Entitat Autònoma del Diari Oficial i de Publicacions de la Generalitat de Catalunya (EADOP) - Departament de la Presidència",
+                "idescripcio": "Actualització URL de \"Boletín Oficial de las Cortes Generales\" i incorporació del valor \"N-Lex, legislació estatal dels països de la UE\".",
+                "ifitxer_doc": "Diaris_butlletins_oficials_ATR.docx",
+                "ifitxer_xls": "Diaris_butlletins_oficials.xlsx",
+                "idatacreacio": "19/12/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/12/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Diaris-i-butlletins-oficials/g3hw-wsae",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -53,7 +68,7 @@
         "nom_dinsBD": "DIARIS_BUTLLETINS_OFICIALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "27/07/2022",
-        "Data_actualitzacio": "27/07/2022"
+        "Data_actualitzacio": "21/12/2022"
     },
     {
         "Id": "dtarq165",
@@ -1559,6 +1574,34 @@
         "Data_actualitzacio": "28/09/2022"
     },
     {
+        "Id": "dtarq178",
+        "Nom": "Graus de dependència",
+        "Ambit": "Serveis socials",
+        "Subambit": "Discapacitat i dependència",
+        "Descripcio": "Tipus de necessitats d'ajuda que té una persona per realitzar les activitats bàsiques de la vida diària, a partir del barem de valoració de la dependència (BVD).",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Graus_dependencia_ATR.docx",
+                "ifitxer_xls": "Graus_dependencia.xlsx",
+                "idatacreacio": "12/12/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/12/2022",
+                "iurl_dades_obertes": null,
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "GRAUS_DEPENDENCIA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/12/2022",
+        "Data_actualitzacio": "21/12/2022"
+    },
+    {
         "Id": "dtarq171",
         "Nom": "Graus de discapacitat",
         "Ambit": "Serveis socials",
@@ -2352,16 +2395,31 @@
             },
             {
                 "inom": "V10",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom del municipi \"Font d'En Carròs, la\" (nom anterior) per \"Font d'en Carròs, la\" (nom actualitzat). Codi 461271.",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_V10.xlsx",
                 "idatacreacio": "22/09/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "21/12/2022",
                 "idatapublicacio": "28/09/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V11",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi de nom del municipi \"Torre d’En Besora, la\" (nom anterior) per \"Torre d’en Besora, la\" (nom actualitzat). Codi 121191.",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "19/12/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/12/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2369,7 +2427,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "28/09/2022"
+        "Data_actualitzacio": "21/12/2022"
     },
     {
         "Id": "dtarq127",
@@ -2872,16 +2930,31 @@
             },
             {
                 "inom": "V09",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització versió anterior per canvi de nom del municipi Beniardá (nom anterior) per Beniardà (nom actualitzat).",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V09.xlsx",
                 "idatacreacio": "21/06/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "21/12/2022",
                 "idatapublicacio": "22/06/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V10",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització versió anterior per canvi de nom del municipi \"la Torre d’En Besora\" (nom anterior) per \"la Torre d’en Besora\" (nom actualitzat).",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "19/12/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/12/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2889,7 +2962,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "22/06/2022"
+        "Data_actualitzacio": "21/12/2022"
     },
     {
         "Id": "dtarq175",
