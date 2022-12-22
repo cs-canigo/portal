@@ -531,7 +531,7 @@ variables d’entorn:
 |-------|-------|
 |JOB_NAME_PREFIX|Prefix que se li assignarà a la tasca|
 |JOB_IMAGE|Nom de la imatge a utilitzar|
-|JOB_WAIT|Temps d'espera de la tasca|
+|JOB_WAIT|Temps d'espera de la tasca en unitats de segon|
 |JOB_ENVS|Variables d’entorn necessàries|
 
 Per exemple:
@@ -577,7 +577,7 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |-------|-------|
 |DESCRIPTORS_PATH|Ruta amb els descriptors en format YML dins el repositori definit a l’element *scm* de [components[].deployment](#components-deployment) per a desplegar l'aplicació a l’Openshift o Kubernetes|
 |DEPLOYMENT_NAME|Nom de l'aplicació a l’Openshift o Kubernetes|
-|DEPLOYMENT_WAIT|Temps d'espera per al desplegament de l'aplicació a l’Openshift o Kubernetes|
+|DEPLOYMENT_WAIT|Temps d'espera per al desplegament de l'aplicació a l’Openshift o Kubernetes en unitats de segon|
 
 ###### Per al **desplegament a WebApp Azure**:
 
@@ -666,7 +666,7 @@ variables d’entorn:
 |-------|-------|
 |JOB_NAME_PREFIX|Prefix que se li assignarà a la tasca|
 |JOB_IMAGE|Nom de la imatge a utilitzar|
-|JOB_WAIT|Temps d'espera de la tasca|
+|JOB_WAIT|Temps d'espera de la tasca en unitats de segon|
 |JOB_ENVS|Variables d’entorn necessàries|
 
 Per exemple:
