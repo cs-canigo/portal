@@ -7,7 +7,7 @@ build:
       position: 1
       tool: docker
       dockerFileName: Dockerfile
-      parameters: clean package -Dmaven.test.skip=true -U
+      parameters: package -Dmaven.test.skip=true -U
       generates:
         - artifact01
 deploy:

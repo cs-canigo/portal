@@ -34,11 +34,11 @@ build:
     - id: bs001
       position: 1
       tool: nodejs_18_LTS
-      parameters: install --loglevel verbose --scripts-prepend-node-path true
+      parameters: install
     - id: bs002
       position: 2
       tool: nodejs_18_LTS
-      parameters: run-script build --loglevel verbose --force --scripts-prepend-node-path true 
+      parameters: run-script build 
       generates:
         - artifact01
     - id: bs003

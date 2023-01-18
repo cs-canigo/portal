@@ -36,7 +36,7 @@ build:
       tool: docker
       dockerFilePath: /app/docker
       dockerFileName: DockerFile
-      parameters: clean package -Dmaven.test.skip=true
+      parameters: package -Dmaven.test.skip=true
       generates:
         - artifact01
 deploy:

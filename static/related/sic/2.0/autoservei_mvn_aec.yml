@@ -46,7 +46,7 @@ analysis:
     - id: aec001
       tool: MAVEN
       target: bs001
-      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
+      imageName: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
       commands: mvn verify sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode
 deploy:
   steps:

@@ -30,10 +30,10 @@ build:
       executionDir: src
       restoreParameters: app.sln
       buildParameters:
-         - app.csproj /p:Configuration=PRE /p:Platform=AnyCPU
-         - app.SPARQL.DS.csproj /p:Configuration=PRE /p:Platform=AnyCPU
-         - app.SPARQL.DAL.csproj /p:Configuration=PRE /p:Platform=AnyCPU
-         - app.DS.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+        - app.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+        - app.SPARQL.DS.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+        - app.SPARQL.DAL.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+        - app.DS.csproj /p:Configuration=PRE /p:Platform=AnyCPU
       generates: 
         - artifact01
 deploy:    
