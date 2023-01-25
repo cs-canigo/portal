@@ -9,12 +9,12 @@ weight= 5
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-Coordinadament amb la Direcció General d'Administració Digital i d'Organització (DGADO), responsable d’impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la DGADO garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
+Coordinadament amb la Direcció General d'Administració Digital (DGAD), responsable d’impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la DGAD garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
 
 En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups:
 
 <div style="width:100%; padding-left:30px">
-a) Dades de Referència consolidades i avalades per la DGADO que són d’obligat ús pels nous sistemes d’informació, i
+a) Dades de Referència consolidades i avalades per la DGAD que són d’obligat ús pels nous sistemes d’informació, i
 <br/><br/>	
 b) Dades de Referència que es troben en revisió per l’òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
 <br/><br/>

@@ -1049,6 +1049,62 @@
         "Data_actualitzacio": "23/02/2022"
     },
     {
+        "Id": "dtarq181",
+        "Nom": "Tipus identificador persona jurídica",
+        "Ambit": "Economia",
+        "Subambit": "Empresa i sector econòmic",
+        "Descripcio": "Llistat de possibles maneres d'identificar les persones jurídiques.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Tipus_identificador_persona_juridica_ATR.docx",
+                "ifitxer_xls": "Tipus_identificador_persona_juridica.xlsx",
+                "idatacreacio": "24/01/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/01/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_IDENTIFICADOR_PERSONA_JURIDICA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "25/01/2023",
+        "Data_actualitzacio": "25/01/2023"
+    },
+    {
+        "Id": "dtarq180",
+        "Nom": "Tipus persona jurídica",
+        "Ambit": "Economia",
+        "Subambit": "Empresa i sector econòmic",
+        "Descripcio": "Llista de tipus de modalitat legal que un professional o societat escull per dur a terme una activitat econòmica.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Tipus_persona_juridica_ATR.docx",
+                "ifitxer_xls": "Tipus_persona_juridica.xlsx",
+                "idatacreacio": "23/01/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/01/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_PERSONA_JURIDICA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "25/01/2023",
+        "Data_actualitzacio": "25/01/2023"
+    },
+    {
         "Id": "dtarq118",
         "Nom": "Educació CCED",
         "Ambit": "Educació, formació i universitats",
@@ -3034,6 +3090,34 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "17/02/2021",
         "Data_actualitzacio": "20/01/2021"
+    },
+    {
+        "Id": "dtarq179",
+        "Nom": "Tipus contracte laboral",
+        "Ambit": "Treball",
+        "Subambit": "Ocupació i inserció laboral",
+        "Descripcio": "Tipus d'acord entre l'empresari i el treballador pel qual aquest s'obliga a prestar determinats serveis per compte de l'empresari i sota la seva direcció, a canvi d'una retribució.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Observatori del Treball i Model Productiu - Secretaria de Treball",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Tipus_contracte_laboral_ATR.docx",
+                "ifitxer_xls": "Tipus_contracte_laboral.xlsx",
+                "idatacreacio": "11/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/01/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Tipus-contracte-laboral/72e7-rgfh",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_CONTRACTE_LABORAL",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "25/01/2023",
+        "Data_actualitzacio": "25/01/2023"
     },
     {
         "Id": "dtarq166",
