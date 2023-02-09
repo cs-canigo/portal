@@ -338,6 +338,7 @@ a la construcció de l'aplicació via **npm install**.
 |Versió|
 |-------|
 |0.27|
+|0.49|
 
 ## Matriu de desplegament en servidors (IAAS)
 
