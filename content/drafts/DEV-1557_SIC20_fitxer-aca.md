@@ -298,9 +298,9 @@ Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el
 Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` la versió de Java. Les combinacions previstes són les següents:
 
 <div class="message information">
-Darrerament, s'ha adaptat el SIC per a fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas cap a l'objectiu de migració.
-Aquest nou catàleg d'imatges de construcció anomenat "gencat-sic-builders" proporciona les imatges estrictament necessàries d'acord amb les compatibilitats de les diferents versions de la tecnologia Maven,
-tot i que, per raons de retrocompatibilitat de configuracions, es continuarà mantenint la cobertura del catàleg de tools/jdk utilitzades actualment pels projectes.
+Darrerament, s'ha adaptat el SIC per fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas cap a l'objectiu de migració.
+Aquest nou catàleg d'imatges de construcció ("gencat-sic-builders") proporciona les imatges estrictament necessàries d'acord amb les compatibilitats de les diferents versions de la tecnologia Maven,
+tot i que, per raons de retrocompatibilitat de configuracions, es mantindrà la cobertura del catàleg de tools/jdk utilitzades actualment pels projectes.
 </div>
 
 |Versions Maven|Versions JDK|
