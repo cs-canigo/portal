@@ -303,7 +303,7 @@ cap a l'objectiu de migració.
 Aquest nou <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">catàleg d'imatges de construcció</a>
 proporciona les imatges estrictament necessàries d'acord amb les compatibilitats de les diferents versions de la tecnologia Maven,
 tot i que, per raons de retrocompatibilitat de configuracions, es mantindrà la cobertura del catàleg de tools/jdk
-utilitzades actualment pels projectes.
+utilitzades actualment per les aplicacions.
 </div>
 
 |Versions Maven|Versions JDK|
