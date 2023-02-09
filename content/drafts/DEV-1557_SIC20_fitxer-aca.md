@@ -1,5 +1,5 @@
 +++
-date = "2023-01-18"
+date = "2023-02-09"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
@@ -298,10 +298,19 @@ Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el
 #### Java
 Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` la versió de Java. Les combinacions previstes són les següents:
 
+<div class="message information">
+Darrerament, s'ha adaptat el SIC per a fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas cap a l'objectiu de migració. </br>
+Aquest nou catàleg d'imatges de construcció anomenat "gencat-sic-builders" proporciona les imatges estrictament necessàries d'acord amb les compatibilitats de les diferents versions de la tecnologia Maven,
+tot i que, per raons de retrocompatibilitat de configuracions, es continuarà mantenint la cobertura del catàleg de tools/jdk utilitzades actualment pels projectes.
+</div>
+
 |Versions Maven|Versions JDK|
-|-------|-------|
-|maven_3.6|JDK 1.8|
-|maven_3.6|JDK 11-openjdk (per defecte)|
+|-------|-------|-------|
+|maven_2.2.1|JDK 1.7|
+|maven_2.2.1|JDK 1.8 (per defecte)|
+|maven_3.6|JDK 1.7|
+|maven_3.6|JDK 1.8 (per defecte)|
+|maven_3.6|JDK 11-openjdk|
 
 ```yaml
 build:
@@ -347,22 +356,6 @@ build:
 
 No caldrà que s'indiqui la comanda en el `restore/build_parameters` d’execució doncs aquesta vindrà donada per l'eina de _restore_ (Nuget) i _build_ (MSBuild) respectivament.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
-
-</br>
-#### Hugo (sites estàtiques)
-Caldrà seleccionar el literal "hugo" com a `tool` i, addicionalment, indicar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el
-directori on es troben els components i on es deixarà l’artefacte comprimit generat.
-
-```yaml
-build:
-  steps:
-    - id: bs001
-      position: 1
-      tool: hugo
-      pathDest: ./hugoGeneratedSite
-      generates:
-        - artifact01
-```
 
 </br>
 #### Compressió (zip, unzip)
