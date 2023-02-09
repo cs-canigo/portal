@@ -144,7 +144,7 @@ seguit del nom de la imatge base a utilitzar.
 Per exemple:
 
 ```bash
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
 ```
 
 </br>
@@ -172,7 +172,7 @@ Exemple:
 
 ```bash
 # S'utilitza una imatge base del SIC.
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
 
 # Es modifica el responsable de la imatge.
 LABEL maintainer="change.me@gencat.cat"
