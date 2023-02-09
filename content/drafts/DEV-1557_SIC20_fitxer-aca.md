@@ -229,7 +229,6 @@ Es contemplen les següents tecnologies:
 * **Node**
 * **Java**
 * **.NET**
-* **Hugo**
 * **Compressió** (zip, unzip)
 * **BBDD**
 * **Docker Image**
@@ -305,7 +304,7 @@ tot i que, per raons de retrocompatibilitat de configuracions, es continuarà ma
 </div>
 
 |Versions Maven|Versions JDK|
-|-------|-------|-------|
+|-------|-------|
 |maven_2.2.1|JDK 1.7|
 |maven_2.2.1|JDK 1.8 (per defecte)|
 |maven_3.6|JDK 1.7|
