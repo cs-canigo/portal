@@ -20,7 +20,7 @@ Aquestes imatges no cal construir-les via SIC i han de poder ser executades dins
 determinades configuracions (secrets, configMaps, variables d'entorn i altres).
 Per al desplegament d'imatges públiques de productes, caldrà configurar el registre extern, la imatge del producte i la
 versió corresponent, de manera que la pipeline pugui dur a terme correctament la descàrrega de la imatge del registre
-públic, fer un tag i publicar la imatge dins el projecte propi de l'aplicació al registre intern del SIC (Harbor).
+públic, fer un tag i publicar la imatge dins el projecte propi de l'aplicació al registre corporatiu d'imatges (Harbor).
 
 Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
 incorporat exemples:
