@@ -422,7 +422,7 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 <br/>
 Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l’objectiu de modelar, validar i finalment incorporar dins del Catàleg Tècnic de Dades de Referència aquí publicat.
 
-El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d'Administració Digital i d'Organització, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Direcció General d'Administració Digital i d'Organització, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
+El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d'Administració Digital, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Direcció General d'Administració Digital, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
 
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
@@ -430,7 +430,11 @@ A la següent figura es mostra a grans trets el procés de govern que se segueix
 <CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
 <br/>
 
-Tota aplicació que necessiti utilitzar alguna dada de referència, s’ha de descarregar la informació del Catàleg Tècnic de Dades de Referència aquí publicat, i carregar-la manualment en la seva aplicació. 
+Per utilitzar les dades de referència s'ha d'activar l'enllaç "**Accedir a les dades**" de la fitxa descriptiva de les entitats i que porta al Portal de Dades Obertes des d'on es pot visualitzar la informació de l'entitat. Per importar les dades cap a un sistema destí, es pot fer de dues maneres:
+
+- **De forma manual**: Fent servir l'opció "**Exporta**" per obtenir una còpia del fitxer de dades i fer ús d'aquest fitxer per importar la informació dins del sistema destí.<br/>
+
+- **De forma automàtica**: Fent servir l'opció "**API**" del portal de Dades Obertes s'aconsegueix un enllaç al punt d'accés API que es pot utilitzar dins del sistema destí. D'aquesta manera, la informació es manté sincronitzada. Això vol dir que qualsevol canvi en el conjunt de valors de l'entitat, es replica automàticament dins del sistema destí.<br/>
 
 En properes versions del Catàleg inclourem prestacions de subscripcions, notificacions i facilitats per recuperar automàticament el contingut de les dades de referència.
 
