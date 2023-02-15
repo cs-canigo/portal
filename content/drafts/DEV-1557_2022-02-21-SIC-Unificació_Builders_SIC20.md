@@ -44,14 +44,14 @@ FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.
 
 ### Data límit
 
-El dia 27/02/2023 es donarà de baixa el catàleg antic d'imatges builder. Per la qual cosa, a partir d'aquest moment
+**El dia 27/02/2023 es donarà de baixa el catàleg antic d'imatges builder**. Per la qual cosa, a partir d'aquest moment
 qualsevol referència a les imatges antigues implicarà incidències en l'execució. Preguem, per tant, dueu a terme les
 adaptacions necessàries als aplicatius.
 
 <br/><br/>
 Per a més informació:
 
-- [Integració contínua - Tecnologies de construcció](/sic20-serveis/ci/#matriu-de-tecnologies-de-construcció)
+- [Integració contínua. Tecnologies de construcció](/sic20-serveis/ci/#matriu-de-tecnologies-de-construcció)
 
 - [Catàleg corporatiu d'imatges de construcció](/sic30-serveis/cataleg-imatges/)
 
