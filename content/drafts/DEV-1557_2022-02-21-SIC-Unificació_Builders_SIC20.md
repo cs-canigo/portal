@@ -1,7 +1,7 @@
 +++
 date        = "2023-02-15"
-title       = "SIC. Unificació de les eines de construcció (builders)"
-description = "El SIC 2.0 passa a fer ús de les eines de construcció del catàleg del SIC 3.0, suposant un primer pas cap a l'objectiu de migració."
+title       = "SIC. Unificació de les eines de construcció"
+description = "El SIC 2.0 passa a fer ús de les eines de construcció (builders) del catàleg del SIC 3.0, suposant un primer pas cap a l'objectiu de migració."
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
 #key         = "MARÇ2023"
@@ -10,13 +10,13 @@ description = "El SIC 2.0 passa a fer ús de les eines de construcció del catà
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**. Actualment, es troben en servei dues plataformes CI/CD: SIC 2.0 i SIC 3.0, les quals han estat fent ús de
-catàlegs d'eines de construcció propis implicant sobrecostos de manteniment, adaptació tecnològica i evolució,
-a més de generar certa confusió als usuaris del servei.
+de les aplicacions**. Actualment, es troben en servei dues plataformes CI/CD: [SIC 2.0](/sic20-serveis/) i [SIC 3.0](/sic30-serveis/),
+les quals han estat fent ús de catàlegs d'eines de construcció propis implicant sobrecostos de manteniment,
+adaptació tecnològica i evolució, a més de generar certa confusió als usuaris del servei.
 
 ## Novetats
 
-Amb els objectius d'unificar criteris, evitar retreball i anar fent passes cap a l'objectiu de migració, **s'ha adaptat el
+Amb l'objectiu d'unificar criteris, evitar retreball i anar fent passes cap a l'objectiu de migració, **s'ha adaptat el
 SIC 2.0 per a passar a fer ús de les imatges de construcció del [Catàleg corporatiu del SIC 3.0](/sic30-serveis/cataleg-imatges/)**.
 Aquest catàleg únic d'imatges de construcció proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
 de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
@@ -24,12 +24,11 @@ es mantindrà la cobertura de configuració de tools/jdks referenciades actualme
 
 ### Impacte
 
-S'ha aplicat una estratègia basada en que el canvi sigui transparent per als usuaris, per la qual cosa, en general,
-**no serà necessària cap adaptació a les configuracions de les aplicacions integrades** al SIC.
-
-No obstant això, hi ha determinats casos en els que l'aplicació defineix la seva pròpia imatge de construcció
-personalitzada, que acostuma a estendre d'una imatge del catàleg corporatiu del SIC. En aquests casos, sí esdevindrà
-necessari **modificar la imatge de la qual hereta per a que passi a fer ser una imatges del nou catàleg "gencat-sic-builders"**.
+S'ha aplicat una estratègia basada en el fet que el canvi sigui transparent per als usuaris, per la qual cosa, en general,
+**no serà necessària cap adaptació a les configuracions de les aplicacions integrades** actualment al SIC.
+No obstant això, hi ha determinats casos en els quals l'aplicació defineix la seva pròpia imatge de construcció
+personalitzada, que acostuma a estendre d'una imatge del catàleg corporatiu del SIC. En aquests casos, sí que esdevindrà
+necessari **modificar la imatge de la qual hereta perquè passi a ser una imatge del nou catàleg "gencat-sic-builders"**.
 
 Per exemple:
 
@@ -46,14 +45,18 @@ FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.
 ### Data límit
 
 El dia 27/02/2023 es donarà de baixa el catàleg antic d'imatges builder. Per la qual cosa, a partir d'aquest moment
-qualsevol referència a les imatges antigues implicarà incidències en l'execució. Preguem dueu a terme les adaptacions
-necessàries als aplicatius.
+qualsevol referència a les imatges antigues implicarà incidències en l'execució. Preguem, per tant, dueu a terme les
+adaptacions necessàries als aplicatius.
 
-
+<br/><br/>
 Per a més informació:
+
 - [Integració contínua - Tecnologies de construcció](/sic20-serveis/ci/#matriu-de-tecnologies-de-construcció)
+
 - [Catàleg corporatiu d'imatges de construcció](/sic30-serveis/cataleg-imatges/)
+
 - [Com construir el fitxer ACA] (/sic20-guies/fitxer-aca/)
+
 - [Utilitzar imatges Docker Builder] (/howtos/2023-02-21-SIC-Howto-utilitzar-imatges-docker-builder-SIC20/)
 
 <br/><br/>
