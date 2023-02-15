@@ -1,5 +1,5 @@
 +++
-date = "2023-02-09"
+date = "2023-02-21"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
@@ -301,9 +301,9 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 Darrerament, s'ha adaptat el SIC per fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas
 cap a l'objectiu de migració.
 Aquest nou <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">catàleg d'imatges de construcció</a>
-proporciona les imatges estrictament necessàries d'acord amb les compatibilitats de les diferents versions de la tecnologia Maven,
-tot i que, per raons de retrocompatibilitat de configuracions, es mantindrà la cobertura del catàleg de tools/jdk
-utilitzades actualment per les aplicacions.
+proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
+de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
+es mantindrà la cobertura de configuració de tools/jdks referenciades actualment per les aplicacions.
 </div>
 
 |Versions Maven|Versions JDK|
