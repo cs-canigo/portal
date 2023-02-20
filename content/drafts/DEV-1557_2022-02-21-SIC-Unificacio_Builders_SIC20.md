@@ -11,12 +11,12 @@ description = "El SIC 2.0 passa a fer ús de les eines de construcció (builders
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
 de les aplicacions**. Actualment, es troben en servei dues plataformes CI/CD: [SIC 2.0](/sic20-serveis/) i [SIC 3.0](/sic30-serveis/),
-les quals han estat fent ús de catàlegs d'eines de construcció propis implicant sobrecostos de manteniment,
-adaptació tecnològica i evolució, a més de generar certa confusió als usuaris del servei.
+les quals han estat fent ús de catàlegs d'eines de construcció propis implicant sobrecostos de manteniment i adaptació tecnològica,
+a més de generar certa confusió als usuaris del servei.
 
 ## Novetats
 
-Amb l'objectiu d'unificar criteris, evitar retreball i anar fent passes cap a l'objectiu de migració, **s'ha adaptat el
+Amb l'objectiu d'unificar criteris, reduir costos de manteniment i anar fent passes cap a l'objectiu de migració, **s'ha adaptat el
 SIC 2.0 per a passar a fer ús de les imatges de construcció del [Catàleg corporatiu del SIC 3.0](/sic30-serveis/cataleg-imatges/)**.
 Aquest catàleg únic d'imatges de construcció proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
 de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
@@ -44,8 +44,8 @@ FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.
 
 ### Data límit
 
-**El dia 27/02/2023 es donarà de baixa el catàleg antic d'imatges builder**. Per la qual cosa, a partir d'aquest moment
-qualsevol referència a les imatges antigues implicarà incidències en l'execució. Preguem, per tant, dueu a terme les
+**El dia 27/02/2023 es donarà de baixa el catàleg antic d'imatges builder "gencatsic"**. Per la qual cosa, a partir d'aquest moment
+qualsevol referència a les imatges antigues implicarà incidències en els desplegaments. Preguem, per tant, dueu a terme les
 adaptacions necessàries als aplicatius.
 
 <br/><br/>
