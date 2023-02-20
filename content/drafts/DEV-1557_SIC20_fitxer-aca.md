@@ -588,8 +588,9 @@ deploy:
       parameters: deploy -f pom.xml
 ```
 
-Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció
-(en cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat `artifact`):
+Exemple sense indicar la `tool` i referenciant a un `artifact` generat a la construcció (`build.steps[].generates`)
+per a fer ús de la mateixa imatge de construcció. En cas d'indicar simultàniament l'eina i l'artefacte, el sistema
+utilitzarà la imatge associada a la `tool` indicada ignorant la propietat `artifact`:
 
 ```yaml
 deploy:
@@ -598,7 +599,7 @@ deploy:
       position: 1
       type: library
       parameters: deploy -f pom.xml
-      artifact: artifact1
+      artifact: artifact01
 ```
 
 Exemple utilitzant imatge docker específica del catàleg:
