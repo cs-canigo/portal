@@ -351,7 +351,7 @@ es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de s
 |Cpd1|-|
 |Cpd2|-|
 |Cpd3|Tomcat<br/>Apache<br/>Oracle|
-|Cpd4|Weblogic<br/>Apache<br/>Oracle|
+|Cpd4|Tomcat<br/>Weblogic<br/>Java stand-alone<br/>JBoss<br/>Apache<br/>IIS.NET<br/>Oracle<br/>MySQL<br/>SQL Server<br/>PostgreSQL|
 
 Les tasques d’execució de desplegament automatitzat fan un redesplegament de l’aplicació i no pas
 un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada prèviament.

@@ -278,40 +278,20 @@ a la construcció de l'aplicació via **npm install**.
 
 ## Matriu de desplegament en servidors (IAAS)
 
-Si es volen fer servir les tasques de desplegaments automatitzat des de SIC, cal que l’aplicació pugui
-ser desplegada sobre un dels següents servidors:
+Si es volen fer servir les tasques de desplegaments automatitzats des de SIC, caldrà escollir la
+modalitat de desplegament [**DELEGADA**](/sic20-serveis/ci/#modalitats-de-desplegament) per a que l’aplicació
+es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de servidor:
 
-### Microsoft
-|Tecnologia|Versions|
+|Proveïdor|Tipus de servidor|
 |-------|-------|
-|MS Web Deploy|3.6|
+|Cpd1|-|
+|Cpd2|-|
+|Cpd3|Tomcat<br/>Apache<br/>Oracle|
+|Cpd4|Tomcat<br/>Weblogic<br/>Java stand-alone<br/>JBoss<br/>Apache<br/>IIS.NET<br/>Oracle<br/>MySQL<br/>SQL Server<br/>PostgreSQL|
 
-### JEE
-|Tecnologia|Versions|
-|-------|-------|
-|Weblogic|9.2, 10.3.x, 11g, 12c|
-|Websphere|6.1, 8.5|
-|Tomcat|5.5, 6, 7, 8, 8.5|
-|JBoss|EAP 6.4, EAP 7.1|
-
-Les tasques d’execució de desplegament automatitzat fan un re-desplegament de l’aplicació i no pas
-un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada (en format empaquetat
-WAR/EAR). La petició per a fer aquest primer desplegament de l’aplicació corre a càrrec dels
-proveïdors de l’aplicació i en ella s’ha d’indicar a SAU de forma explicita que l’aplicació ha de
-desplegar-se en format empaquetat (WAR/EAR).
-Un cop integrada al SIC, qualsevol canvi que es faci en la referència a l'artefacte a desplegar
-o canvi en el nom de l’aplicació dins el servidor d’aplicacions,
-ha de ser notificat a l’equip del SIC, ja que en cas contrari el job de desplegament deixarà de
-funcionar.
-
-### BBDD
-|Tecnologia|Versions|
-|-------|-------|
-|Oracle|19c, i anteriors|
-|SQL Server|2014, edició standard i express|
-|PostgreSQL|14.5, i anteriors|
-|MongoDB|3.2.5, i anteriors|
-|MySQL|5.7.12, i anteriors|
+Les tasques d’execució de desplegament automatitzat fan un redesplegament de l’aplicació i no pas
+un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada prèviament.
+La petició per a fer aquest primer desplegament de l’aplicació va a càrrec dels proveïdors de l’aplicació.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic20-guies/). <br/>
