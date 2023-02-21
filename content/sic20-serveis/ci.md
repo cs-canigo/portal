@@ -1,5 +1,5 @@
 +++
-date = "2022-12-12"
+date = "2023-02-21"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -244,12 +244,14 @@ ans al contrari, l'estén per a acabar de concretar els requeriments propis del 
 ### Maven/JDK
 |Versió Maven|Versió JDK|
 |-------|-------|
-|2.2|7|
-|3.2|6<br />7<br />8|
-|3.5|7<br />8|
-|3.6 \*|7<br />8<br />11-openjdk|
+|2.2|7<br />8|
+|3.6|7<br />8<br />11-openjdk|
 
-(\*) Versió amb suport i manteniment.
+### Ant/JDK
+|Versió Ant|Versió JDK|
+|-------|-------|
+|1.8|8|
+|1.10|8|
 
 ### Node/npm
 |Versió Node|Versió Npm|
@@ -272,8 +274,7 @@ a la construcció de l'aplicació via **npm install**.
 |Versió|
 |-------|
 |0.27|
-|0.73|
-
+|0.49|
 
 ## Matriu de desplegament en servidors (IAAS)
 

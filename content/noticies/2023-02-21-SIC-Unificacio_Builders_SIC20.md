@@ -1,10 +1,10 @@
 +++
-date        = "2023-02-20"
+date        = "2023-02-21"
 title       = "SIC. Unificació de les eines de construcció"
 description = "El SIC 2.0 passa a fer ús de les eines de construcció (builders) del catàleg del SIC 3.0, suposant un primer pas cap a l'objectiu de migració."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "MARÇ2023"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "MARÇ2023"
 +++
 
 ## Introducció

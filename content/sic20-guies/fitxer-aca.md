@@ -1,5 +1,5 @@
 +++
-date = "2022-12-12"
+date = "2023-02-21"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
@@ -93,7 +93,6 @@ Recordem breument el funcionament de les diferents modalitats: </br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen als servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
 - <b>Delegada</b>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es delega als CPD el desplegament.</br>
 - <b>Semiautomàtica</b>: es construeixen els artefactes, es lliuren a CPD/LdT a través del servei de gestió de binaris i es genera un tiquet Remedy en mode "Draft".</br>
-<!--- - <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br> -->
 </div>
 
 </br>
@@ -230,7 +229,6 @@ Es contemplen les següents tecnologies:
 * **Node**
 * **Java**
 * **.NET**
-* **Hugo**
 * **Compressió** (zip, unzip)
 * **BBDD**
 * **Docker Image**
@@ -299,20 +297,22 @@ Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el
 #### Java
 Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` la versió de Java. Les combinacions previstes són les següents:
 
+<div class="message information">
+Darrerament, s'ha adaptat el SIC per fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas
+cap a l'objectiu de migració.
+Aquest nou <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">catàleg d'imatges de construcció</a>
+proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
+de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
+es mantindrà la cobertura de configuració de tools/jdks referenciades actualment per les aplicacions.
+</div>
+
 |Versions Maven|Versions JDK|
 |-------|-------|
 |maven_2.2.1|JDK 1.7|
-|maven_3.2.2|JDK 1.6|
-|maven_3.2.2|JDK 1.7|
-|maven_3.2.2|JDK 1.8 (per defecte)|
-|maven_3.3.9|JDK 1.6|
-|maven_3.3.9|JDK 1.7|
-|maven_3.3.9|JDK 1.8 (per defecte)|
-|maven_3.5|JDK 1.7|
-|maven_3.5|JDK 1.8 (per defecte)|
+|maven_2.2.1|JDK 1.8 (per defecte)|
 |maven_3.6|JDK 1.7|
-|maven_3.6|JDK 1.8|
-|maven_3.6|JDK 11-openjdk (per defecte)|
+|maven_3.6|JDK 1.8 (per defecte)|
+|maven_3.6|JDK 11-openjdk|
 
 ```yaml
 build:
@@ -358,22 +358,6 @@ build:
 
 No caldrà que s'indiqui la comanda en el `restore/build_parameters` d’execució doncs aquesta vindrà donada per l'eina de _restore_ (Nuget) i _build_ (MSBuild) respectivament.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
-
-</br>
-#### Hugo (sites estàtiques)
-Caldrà seleccionar el literal "hugo" com a `tool` i, addicionalment, indicar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el
-directori on es troben els components i on es deixarà l’artefacte comprimit generat.
-
-```yaml
-build:
-  steps:
-    - id: bs001
-      position: 1
-      tool: hugo
-      pathDest: ./hugoGeneratedSite
-      generates:
-        - artifact01
-```
 
 </br>
 #### Compressió (zip, unzip)
@@ -429,7 +413,7 @@ build:
 
 On:
 
-* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i l'etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.
+* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i l'etiqueta de versió (tag). Per exemple: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk.
 * `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 </br>
@@ -525,7 +509,7 @@ que hem definit més amunt i que s'afegirà com a sufix en l'enviament del proje
 Opcionalment es podran indicar les propietats:
 
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
-al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images)
+al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/sic-builders)
 
 - `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`. En el cas de `maven` serà necessari
 indicar els següents paràmetres per a evitar que es realitzi de nou la construcció i, per tant, l'execució del goal es limiti a la
@@ -543,19 +527,19 @@ analysis:
     - id: an001
       tool: maven
       target: bs001
-      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
-      commands: mvn -f app1/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode  
+      imageName: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
+      commands: mvn -f app1/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode
       executionDir: dir1
     - id: an002
       tool: maven
       target: bs002
-      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
+      imageName: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
       commands: mvn -f app2/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode
       executionDir: dir2
     - id: an003
       tool: maven
       target: bs003
-      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
+      imageName: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
       commands: mvn -f app3/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode
       executionDir: dir3
 ```
@@ -604,8 +588,9 @@ deploy:
       parameters: deploy -f pom.xml
 ```
 
-Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció
-(en cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat `artifact`):
+Exemple sense indicar la `tool` i referenciant a un `artifact` generat a la construcció (`build.steps[].generates`)
+per a fer ús de la mateixa imatge de construcció. En cas d'indicar simultàniament l'eina i l'artefacte, el sistema
+utilitzarà la imatge associada a la `tool` indicada ignorant la propietat `artifact`:
 
 ```yaml
 deploy:
@@ -614,35 +599,35 @@ deploy:
       position: 1
       type: library
       parameters: deploy -f pom.xml
-      artifact: artifact1
+      artifact: artifact01
 ```
 
 Exemple utilitzant imatge docker específica del catàleg:
 
 ```yaml
-deploy: 
-  steps:  
-    - id: ds001 
-      position: 1 
-      type: library 
-      tool: docker 
-      dockerImageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
-      parameters: mvn deploy -f pom.xml 
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: docker
+      dockerImageName: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
+      parameters: mvn deploy -f pom.xml
 ```
 
 Exemple amb diversos `parameters`:
 
 ```yaml
-deploy: 
+deploy:
   steps:
-    - id: ds001 
+    - id: ds001
       position: 1
-      type: library 
-      tool: docker 
-      dockerImageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
-      parameters: 
-       -  mvn deploy -f app1/pom.xml 
-       -  mvn deploy -f app2/pom.xml 
+      type: library
+      tool: docker
+      dockerImageName: gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
+      parameters:
+       -  mvn deploy -f app1/pom.xml
+       -  mvn deploy -f app2/pom.xml
        -  mvn deploy -f app3/pom.xml
 ```
 
@@ -661,31 +646,6 @@ deploy:
 
 En qualsevol cas, opcionalment es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 </br>
-
-<!---
-NRS: es comenta aquesta part perque no ha estat prou verificada i, de moment, no es considera que apliqui.
-- Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
-**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
-```
-deploy:
-  steps:
-    - id: dp001
-      position: 1
-      type: manual
-```
-</br>
-
-- Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
-Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
-```
-deploy:
-  steps:
-    - id: dp001
-      position: 1
-      type: custom
-      command: zip -r app.zip dist/
-```
--->
 
 </br>
 ### Notificacions
