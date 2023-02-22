@@ -1384,16 +1384,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Justícia, Drets i Memòria - CTEAJE",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Organs_judicials_Espanya_ATR.docx",
-                "ifitxer_xls": "Organs_judicials_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Organs_judicials_Espanya_V01.xlsx",
                 "idatacreacio": "23/04/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "22/02/2023",
                 "idatapublicacio": "22/12/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Justícia, Drets i Memòria - CTEAJE",
+                "idescripcio": "Actualització general del conjunt de valors segons dades del gener de l'any 2023.",
+                "ifitxer_doc": "Organs_judicials_Espanya_ATR.docx",
+                "ifitxer_xls": "Organs_judicials_Espanya.xlsx",
+                "idatacreacio": "17/02/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/02/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/%C3%92rgans-judicials-d-Espanya/uue8-bz7s",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1401,7 +1416,7 @@
         "nom_dinsBD": "ORGANS_JUDICIALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/12/2021",
-        "Data_actualitzacio": "22/12/2021"
+        "Data_actualitzacio": "22/02/2023"
     },
     {
         "Id": "dtarq148",
@@ -1740,6 +1755,62 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "26/10/2022",
         "Data_actualitzacio": "26/10/2022"
+    },
+    {
+        "Id": "dtarq183",
+        "Nom": "Categoria família monoparental",
+        "Ambit": "Serveis socials",
+        "Subambit": "Protecció de menors, famílies i gent gran",
+        "Descripcio": "Segons la normativa aplicable, s'entén per família monoparental aquella que està formada per un o més fills menors de vint-i-un anys, o de vint-i-sis si estudien, que conviuen amb una sola persona i en depenen econòmicament. Es distingeixen diversos tipus de famílies monoparentals, segons les seves característiques.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Categoria_familia_monoparental_ATR.docx",
+                "ifitxer_xls": "Categoria_familia_monoparental.xlsx",
+                "idatacreacio": "17/02/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/02/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CATEGORIA_FAMILIA_MONOPARENTAL",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "22/02/2023",
+        "Data_actualitzacio": "22/02/2023"
+    },
+    {
+        "Id": "dtarq182",
+        "Nom": "Categoria família nombrosa",
+        "Ambit": "Serveis socials",
+        "Subambit": "Protecció de menors, famílies i gent gran",
+        "Descripcio": "Segons la normativa aplicable, es distingeix varis tipus de família nombrosa que determinen la concreció dels beneficis per als diferents titulars.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Categoria_familia_nombrosa_ATR.docx",
+                "ifitxer_xls": "Categoria_familia_nombrosa.xlsx",
+                "idatacreacio": "17/02/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/02/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CATEGORIA_FAMILIA_NOMBROSA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "22/02/2023",
+        "Data_actualitzacio": "22/02/2023"
     },
     {
         "Id": "dtarq56",
