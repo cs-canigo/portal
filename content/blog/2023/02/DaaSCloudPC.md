@@ -145,7 +145,6 @@ https://www.citrix.com/solutions/vdi-and-daas/what-is-desktop-as-a-service-daas.
 * **WVD:**  Windows Virtual Desktop.
 * **BYOD:**  Bring your Own Device.
 
-
 <br>
 <br>
 ###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>
