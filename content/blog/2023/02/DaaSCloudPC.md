@@ -6,7 +6,7 @@ sections    = ["Blog", "home"]
 blog_tags   = ["cloud", "microsoft", "núvol", "virtualització"]
 categories  = ["cloud", "microsoft", "núvol", "virtualització"]
 imatge      = "/images/bloc/2023/02/Entrada.jpg"
-key         = "FEBRER2023"
+key         = "MARÇ2023"
 +++
 
 
