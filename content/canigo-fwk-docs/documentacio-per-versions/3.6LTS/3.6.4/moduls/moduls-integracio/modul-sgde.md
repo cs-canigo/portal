@@ -1,5 +1,5 @@
 +++
-date        = "2022-04-13"
+date        = "2023-03-02"
 title       = "SGDE"
 description = "Servei de Gestió del Document Electrònic."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -164,13 +164,13 @@ El primer conté només dos paràmetres,
 
 **sgde.forms.wsdl.url:** Url del WSDL del servei de formularis Adobe.
 
-* PRE: http://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
-* PRO: http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
+* PRE: https://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
+* PRO: https://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
 
 **sgde.std.wsdl.url:** Url del WSDL del STD.
 
-* PRE: http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
-* PRO: http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
+* PRE: https://preproduccio.std.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
+* PRO: https://std.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
 
 ### Utilització del Connector
 
