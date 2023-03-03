@@ -16,7 +16,7 @@ Per defecte, Docker està configurat per a utilitzar el registre públic [Docker
 No obstant això, **les imatges que utilitzarà SIC per a la construcció es troben allotjades un registre docker privat**
 escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
 
-![Harbor login](/related/sic/3.0/harbor_login-20210713.png)
+![Harbor login](/related/sic/3.0/harbor_login.png)
 </br>
 
 El registre Docker privat de la Generalitat de Catalunya, està disponible a: https://docker-registry.ctti.extranet.gencat.cat.
