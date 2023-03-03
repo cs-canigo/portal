@@ -13,30 +13,10 @@ El SIC actualment utilitza la [tecnologia Docker](https://www.docker.com/) per a
 de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors**. Aquest how-to va dirigit a tots aquells
 perfils tècnics que tinguin la necessitat de simular i executar les imatges Docker en un entorn local tal i com ho realitza el SIC.
 
-## Harbor
-
-Docker per defecte està configurat per a utilitzar el registre públic [Docker Hub](https://hub.docker.com/) com a repositori d’imatges.
-No obstant, **les imatges que utilitzarà SIC per a la construcció es troben allotjades un registre docker privat**
-escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
-
-![Pipeline del SIC](/related/sic/harbor_docker_images.png)
-</br>
-
-Podeu accedir al codi font del catàleg d'imatges del SIC, i a la documentació associada, mitjançant el següent enllaç: </br>
-https://git.intranet.gencat.cat/0192-intern/sic-builders.
-
-![Pipeline del SIC](/related/sic/docker_images_project.png)
-</br>
-
 ## Ús del registre privat
 
-El registre Docker privat de la Generalitat de Catalunya, està disponible a: https://docker-registry.ctti.extranet.gencat.cat.
-Es tracta d’un registre privat sense cap repositori d'accés públic.
-
-### Permisos d'accés
-Per a disposar d'accés a les imatges Docker utilitzades al SIC és necessari contactar amb l'Oficina Tècnica de Canigó a través dels
-canals establerts: https://canigo.ctti.gencat.cat/sic/suport/. L'Oficina subministrarà al proveïdor d’aplicacions un usuari
-amb permís de lectura al projecte **gencat-sic-builders** que conté les imatges Docker utilitzades pel SIC.
+En el [Catàleg d'imatges corporatiu](/sic30-serveis/cataleg-imatges/) podreu trobar informació sobre el registre
+d'imatges, el codi font, la documentació associada i el procediment per a disposar d'accés.
 
 ### Accés via consola web
 Es pot accedir al Harbor a través de la seva consola web mitjançant: https://docker-registry.ctti.extranet.gencat.cat.
