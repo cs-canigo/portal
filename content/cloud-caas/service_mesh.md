@@ -236,7 +236,7 @@ Es proposen dos models en funció del model de traces distribuïdes
 * Per afegir de manera automàtica el sidecar del Proxy Envoy
   * Afegir l'anotació
       * **sidecar.istio.io/inject: "true"**
-  * a l'apartat **spec.template** del Deployment/DeploymentConfig/   StatefulSet de l'aplicació
+  * a l'apartat **spec.template** del Deployment/DeploymentConfig/StatefulSet de l'aplicació
 * Configurar els recursos disponibles pel proxy Envoy
   * Afegir les anotacions
       * **sidecar.istio.io/proxyCPU: 200m**

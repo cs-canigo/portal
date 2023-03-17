@@ -18,9 +18,9 @@ Actualment, els nostres xPaaS disponibles al cloud públic són:
 - Azure database
 
 
-### Compose
+### IBMCloud
 
-Dins de la plataforma Compose, s'ofereixen les següents Bases de dades:
+Dins de la plataforma IBMCloud, s'ofereixen les següents Bases de dades:
 
 - MongoDB
 - ElasticSearch

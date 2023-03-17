@@ -1,5 +1,5 @@
 +++
-date        = "2015-01-24T17:11:42+01:00"
+date        = "2023-03-06T17:11:42+01:00"
 title       = "Documentació"
 description = "Documentació comú, manuals i formularis específics per cada plataforma"
 sections    = "SGDE"
@@ -27,7 +27,7 @@ Per poder utilitzar els serveis del SGDE és necessari donar-se d'alta en alguna
 
 - [Sobre l'STD](/sgde-related/intro-std)
 
-- [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.3.pdf)
+- [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.4.pdf)
 - [Manual de Creació de Plantilles](/related/sgde/CSCanigo.MU.P00.E01_Manual_creacio_plantilles_STD.pdf)
 
 - [Formulari d'Alta d'aplicació](/related/sgde/CSCanigo.PA.P00.STD_ALTA_ambit-aplicacio.xlsx)
