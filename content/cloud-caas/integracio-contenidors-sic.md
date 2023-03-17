@@ -48,8 +48,7 @@ Per plataformes basades en Kubernetes (Kubernetes/Openshift), al SIC estan dispo
 - Parada
 - Arrancada
 - Desplegament de ConfigMaps
-- Desplegament de deployment/deploymentConfig
-- Desplegament de statefulSet
+- Desplegament de Deployment/DeploymentConfig/StatefulSet/CronJob
 - Eliminació de components desplegats
 
 ### Swarm
