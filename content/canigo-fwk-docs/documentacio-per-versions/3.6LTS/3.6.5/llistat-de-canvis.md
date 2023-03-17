@@ -1,5 +1,5 @@
 +++
-date        = "2022-07-21"
+date        = "2023-03-16"
 title       = "Llistat de canvis"
 description = "Llistat de canvis Canigó 3.6.5"
 sections    = "canigo-fwk-docs"
@@ -9,9 +9,14 @@ aliases = [
 weight      = 1
 +++
 
-#### Canigó 3.6.5 (21/07/2022)
+#### Canigó 3.6.5 (16/03/2023)
 
 <br>
+
+**16/03/2023**:
+
+- [Actualització del _plugin_ Eclipse 1.8.7](/noticies/2023-03-16-CAN-Actualitzacio_plugin_eclipse_1_8_7/)
+   - Actualització del _plugin_ de l'Eclipse de Canigó versió 1.8.7 per a generar projectes amb Canigó 3.6.5 amb el template corresponent als canvis de "sarcat.webservice" de Sarcat i de "sgde.forms.wsdl.url" i "sgde.std.wsdl.url" de SGDE que apunten a HTTPS.
 
 **21/07/2022**:
 
