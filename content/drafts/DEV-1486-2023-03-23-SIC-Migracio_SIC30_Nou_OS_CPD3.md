@@ -1,5 +1,5 @@
 +++
-date        = "2023-03-17"
+date        = "2023-03-20"
 title       = "SIC. Migració SIC 3.0 a nova Plataforma Openshift de Cpd3"
 description = "El SIC 3.0 ha estat migrat a la nova Plataforma Openshift de Cpd3 amb l'objectiu de millorar el rendiment, el monitoratge i, en general, l'experiència d'usuari."
 #sections    = ["Notícies", "home"]
@@ -17,10 +17,13 @@ Cloud per a poder començar a desplegar-hi serveis.
 
 ## Novetats
 
-Amb l'objectiu principal de millorar l'experiència d'usuari, s'ha dut a terme la migració del SIC 3.0 als nous clústers
-Openshift de Cpd3, que permetrà, entra d'altres:
+Amb l'objectiu principal de millorar l'experiència d'usuari, s'ha dut a terme la **migració del SIC 3.0 als nous clústers
+Openshift de Cpd3**, que permetrà, entra d'altres:
+
 - Disposar d'entorns PRE i PRO aïllats.
+
 - Millorar el rendiment general del servei.
+
 - Millorar el monitoratge del servei.
 
 Un cop realitzada la posada en servei i posades a disposició les pipelines de construcció i desplegament de les
