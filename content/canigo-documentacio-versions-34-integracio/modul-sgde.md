@@ -155,8 +155,8 @@ El no afegir aquestes exclusions pot provocar que el connector SGDE no funcioni 
 				- formsWSDLUrl: Url de l'wsdl del servei de formularis per les operacions de: renderitzar, extracció de dades, aplanat, ...
 				- stdWSDLUrl: Url de l'wsdl del servei de Transformació de Documents(STD)
 		</description>
-    	<property name="formsWSDLUrl" value="${sgde.forms.wsdl.url:http://eformularis.pre.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl}" />
-		<property name="stdWSDLUrl" value="${sgde.std.wsdl.url:http://sgde.pre.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl}" />
+    	<property name="formsWSDLUrl" value="${sgde.forms.wsdl.url:https://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl}" />
+		<property name="stdWSDLUrl" value="${sgde.std.wsdl.url:https://preproduccio.std.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl}" />
     </bean>
 </beans>
 ```
@@ -172,12 +172,12 @@ El primer conté només dos paràmetres,
 **sgde.forms.wsdl.url:** Url del WSDL del servei de formularis Adobe.
 
 * PRE: http://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
-* PRO: http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
+* PRO: https://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
 
 **sgde.std.wsdl.url:** Url del WSDL del STD.
 
 * PRE: http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
-* PRO: http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
+* PRO: https://std.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
 
 ### Utilització del Connector
 
