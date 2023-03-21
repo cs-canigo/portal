@@ -3220,7 +3220,7 @@
     },
     {
         "Id": "dtarq184",
-        "Nom": null,
+        "Nom": "Tipus jornada laboral",
         "Ambit": "Treball",
         "Subambit": "Ocupació i inserció laboral",
         "Descripcio": "Tipologies de jornada de feina segons el nombre d'hores que un treballador dedica a l'activitat per a la qual ha estat contractat.",
