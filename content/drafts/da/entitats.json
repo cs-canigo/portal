@@ -1652,25 +1652,25 @@
         "Descripcio": "Tipus de necessitats d'ajuda que té una persona per realitzar les activitats bàsiques de la vida diària, a partir del barem de valoració de la dependència (BVD).",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "DGAD",
+                "ipromotor": "Direcció General de l'Autonomia Personal i la Discapacitat- Departament de Drets Socials",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Graus_dependencia_ATR.docx",
                 "ifitxer_xls": "Graus_dependencia.xlsx",
                 "idatacreacio": "12/12/2022",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/12/2022",
-                "iurl_dades_obertes": null,
+                "idatapublicacio": "22/03/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/ca/Societat-benestar/Graus-de-depend-ncia/hfkf-cwkt",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "GRAUS_DEPENDENCIA",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/12/2022",
-        "Data_actualitzacio": "21/12/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/03/2023",
+        "Data_actualitzacio": "22/03/2023"
     },
     {
         "Id": "dtarq171",
@@ -1761,56 +1761,56 @@
         "Nom": "Categoria família monoparental",
         "Ambit": "Serveis socials",
         "Subambit": "Protecció de menors, famílies i gent gran",
-        "Descripcio": "Segons la normativa aplicable, s'entén per família monoparental aquella que està formada per un o més fills menors de vint-i-un anys, o de vint-i-sis si estudien, que conviuen amb una sola persona i en depenen econòmicament. Es distingeixen diversos tipus de famílies monoparentals, segons les seves característiques.",
+        "Descripcio": "Segons la normativa aplicable, s'entén per família monoparental aquella que està formada per un o més fills menors de vint-i-un anys, o de vint-i-sis si estudien, que conviuen amb una sola persona progenitora i en depenen econòmicament. Es distingeixen diversos tipus de famílies monoparentals, segons les seves característiques.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "DGAD",
+                "ipromotor": "Direcció General de Prestacions Socials - Departament de Drets Socials",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Categoria_familia_monoparental_ATR.docx",
                 "ifitxer_xls": "Categoria_familia_monoparental.xlsx",
                 "idatacreacio": "17/02/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "22/02/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "22/03/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Categoria-fam-lia-monoparental/nm9s-u36p",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "CATEGORIA_FAMILIA_MONOPARENTAL",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "22/02/2023",
-        "Data_actualitzacio": "22/02/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/03/2023",
+        "Data_actualitzacio": "22/03/2023"
     },
     {
         "Id": "dtarq182",
         "Nom": "Categoria família nombrosa",
         "Ambit": "Serveis socials",
         "Subambit": "Protecció de menors, famílies i gent gran",
-        "Descripcio": "Segons la normativa aplicable, es distingeix varis tipus de família nombrosa que determinen la concreció dels beneficis per als diferents titulars.",
+        "Descripcio": "Segons la normativa aplicable, es distingeixen diferents composicions de família nombrosa que determinen la concreció dels beneficis per als diferents titulars.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "DGAD",
+                "ipromotor": "Direcció General de Prestacions Socials - Departament de Drets Socials",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Categoria_familia_nombrosa_ATR.docx",
                 "ifitxer_xls": "Categoria_familia_nombrosa.xlsx",
                 "idatacreacio": "17/02/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "22/02/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "22/03/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Categoria-fam-lia-nombrosa/7vp2-9548",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "CATEGORIA_FAMILIA_NOMBROSA",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "22/02/2023",
-        "Data_actualitzacio": "22/02/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/03/2023",
+        "Data_actualitzacio": "22/03/2023"
     },
     {
         "Id": "dtarq56",
@@ -3163,6 +3163,34 @@
         "Data_actualitzacio": "20/01/2021"
     },
     {
+        "Id": "dtarq185",
+        "Nom": "Durada jornada laboral",
+        "Ambit": "Treball",
+        "Subambit": "Ocupació i inserció laboral",
+        "Descripcio": "Llista de codis de durada de la jornada laboral utilitzats dins de l'Eurostat - Reference And Management Of Nomenclatures",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Durada_jornada_laboral_ATR.docx",
+                "ifitxer_xls": "Durada_jornada_laboral.xlsx",
+                "idatacreacio": "21/03/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/03/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "DURADA_JORNADA_LABORAL",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "22/03/2023",
+        "Data_actualitzacio": "22/03/2023"
+    },
+    {
         "Id": "dtarq179",
         "Nom": "Tipus contracte laboral",
         "Ambit": "Treball",
@@ -3189,6 +3217,34 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "25/01/2023",
         "Data_actualitzacio": "25/01/2023"
+    },
+    {
+        "Id": "dtarq184",
+        "Nom": null,
+        "Ambit": "Treball",
+        "Subambit": "Ocupació i inserció laboral",
+        "Descripcio": "Tipologies de jornada de feina segons el nombre d'hores que un treballador dedica a l'activitat per a la qual ha estat contractat.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "DGAD",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Tipus_jornada_laboral_ATR.docx",
+                "ifitxer_xls": "Tipus_jornada_laboral.xlsx",
+                "idatacreacio": "21/03/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/03/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_JORNADA_LABORAL",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "22/03/2023",
+        "Data_actualitzacio": "22/03/2023"
     },
     {
         "Id": "dtarq166",
