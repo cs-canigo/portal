@@ -40,23 +40,25 @@ Per entendre millor la seguretat, definim un dispositiu IoT,  com una peça de m
 
 Els dispositius IoT incorporen elements que els permeten interactuar amb l'entorn, com és el cas d'un termòstat intel·ligent, que pot realitzar mesuraments de la temperatura ambiental.  Aquests elements els confereixen la capacitat d'interacció amb el món físic. <br>
 
-A continuació es detallen algun dels elements:
+A continuació es detallen algun dels elements:<br>
+
 * **Sensors:** són capaços de realitzar mesuraments del món físic que seran processats, transformats i analitzats al món digital, entre d’altres com: temperatura, pressió, qualitat en l'aire, humitat, so, lluminositat, radiació de llum infraroja o velocitat. <br>
 * **Actuadors:** tenen la capacitat de modificar elements del món físic sobre la base dels mesuraments realitzats pels sensors o per ordres rebudes de qualsevol altre element com un ordinador remot. Algunes de les accions que poden fer són: obrir o tancar una vàlvula o un interruptor; actuar sobre un motor, per exemple, per a pujar o baixar una persiana o obrir o bloquejar una porta, posar una cançó. <br>
 
 També es disposa de diverses categories de dispositius IoT:<br>
-**Dispositius de consum**
+
+**Dispositius de consum** <br>
 * Dispositius de llar intel·ligents: càmeres de videovigilància, sensors de finestres, obertura de portes, control de temperatura, sistemes de seguretat, etc. <br>
 * Televisions, ràdios i descodificadors. <br>
 * Assistents Personals: Alexa, Google Home o Apple Siri.<br> 
 * Sistemes personals: rellotges, comptadors de passos, localitzadors, elements de benestar, etc. <br>
 
-**Dispositius empresarials/professionals**
+**Dispositius empresarials/professionals** <br>
 * Dispositius d’edificis intel·ligents (smart Building). <br>
 * Dispositius industrials: àmpliament utilitzats en transport, energia i indústria. <br>
 * Elements de ciutats intel·ligents (smart cities).<br>
 
-**Dispositius híbrids (components empresarials amb ús particular)**
+**Dispositius híbrids (components empresarials amb ús particular)** <br>
 * Cotxes intel·ligents.<br>
 * Drons d'ús professional o semi professional. <br>
 * Dispositius mèdics personals certificats. <br>
@@ -91,7 +93,7 @@ Els problemes de seguretat que s’hi poden trobar estan relacionats amb que els
 Aquesta capa serveix com a intermèdia entre la capa d'aplicació i la capa de xarxa dins els sistemes IoT. La capa de gestió s'utilitza per administrar els serveis IoT. En general, aquesta capa consisteix en una plataforma de gestió, sistema de monitoratge i plataforma d'actualització de programari. <br>
 Els proveïdors de solucions IoT interactuen amb aquesta capa a través de la interfície de gestió per gestionar el cicle de vida dels dispositius IoT. Per exemple, aquesta capa gestiona la provisió, el desplegament, el seguiment, l'actualització de programari i l'eliminació de dispositius IoT. <br>
 
-Els riscos de seguretat  que s’hi poden trobar son: 
+Els riscos de seguretat  que s’hi poden trobar son: <br>
 * **Injecció de programari maliciós al núvol:** injectant malware a la màquina virtual al núvol, l'atacant pot prendre el control d’aquesta i podria accedir a les peticions de servei i a la captura dades. <br>
 * **Atac d’Injecció SQL:** un atacant pot injectar peticions SQL malicioses i obtenir informació confidencial des de la base de dades i fins i tot, inserir dades a entrades de la base de dades. <br>
 * **Atac DDoS al núvol:** els atacants envien regularment moltes peticions, estenent la càrrega dels servidors i pot provocar un efecte important sobre la disponibilitat dels servidors. <br>
@@ -107,7 +109,7 @@ Les tecnologies de connectivitat aplicables per aquesta capa podrien ser: <br>
 * Connectivitat sense fil de dispositiu de llarg abast a passarel·la d'operador (LoRa, NB-IoT, Sigfox, etc.) 
 * Connectivitat sense fil de curt abast (Bluetooth, Zigbee, NFC, RFID, etc.)
 
-Les principals preocupacions de seguretat en aquesta capa, és que els atacants cerquin qualsevol servei de xarxa susceptible i puguin provocar: 
+Les principals preocupacions de seguretat en aquesta capa, és que els atacants cerquin qualsevol servei de xarxa susceptible i puguin provocar: <br>
 * **Atac de Denegació de Servei (DDoS):** és vulnerable als atacs de denegació de servei a causa de l'heterogeneïtat i complexitat de la infraestructura de les xarxes IoT.<br>
 * **Atacs d'encaminament:** l’atacant mostra una ruta d'encaminament més curta e incorpora nodes de xarxa per encaminar el trànsit a través d'ell. <br>
 * **Atac de força bruta:** l'atacant intenta accedir a un dispositiu a través de ports SSH o Telnet aplicant el mètode de prova i error de forma massiva amb una llista de credencials d'ús comú o recollides de credencials de compte de filtracions de dades. <br>
@@ -121,7 +123,7 @@ En aquesta capa s’han de valorar els següents punts: <br>
 * En tercer lloc: la robòtica, els motors, els actuadors i altres dispositius IoT que tenen algun tipus d'interacció cinètica amb l'entorn físic. 
 * En quart lloc: és possible que alguns dispositius IoT no es puguin connectar a Internet directament mitjançant el protocol d'Internet (IP), en aquest casos, les passarel·les IoT s'utilitzen en aquest escenari per funcionar com a pont de xarxa entre els dispositius IoT i Internet. <br>
 
-Alguns del atacs que s’hi poden trobar son: 
+Alguns del atacs que s’hi poden trobar son: <br>
 * **Booting atacs:** el temps d'arrencada és el període més vulnerable en qualsevol dispositiu IoT, ja que encara poden no estar actives les capacitats de seguretat i quan es reinicien els dispositius, els atacants poden explotar aquesta vulnerabilitat comprometent la seva seguretat. <br>
 * **Sleep deprivation attack:** aquest atac afecta al dispositius IoT amb recursos limitats d’energia (bateries petites) centrant-se en una denegació de servei, esgotant els recursos energètics del dispositiu.  <br>
 * **Injecció de codi maliciós:** l'atacant utilitza codis maliciosos per executar atacs a través dels ports físics d’accés . El codi maliciós s'insereix a la memòria dels nodes físics i com a resultat, els atacants poden forçar a realitzar operacions innecessàries o intentar accedir al dispositiu. <br>
