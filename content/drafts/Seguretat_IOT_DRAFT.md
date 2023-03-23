@@ -208,11 +208,13 @@ Més enllà dels  punts anteriors, és essencial conscienciar als usuaris sobre 
 
 Per tant, les aplicacions de IoT existents i futures han de complir amb les guies i regulacions estàndard de seguretat cibernètica per garantir la seguretat.  En aquest sentit hi ha dos marcs de treball que poden ajudar a l’hora de crear, desenvolupar i configurar un dispositiu IoT: <br>
 
-* **NIST CyberSecurity Framework** per a la gestió de la seguretat digital i la guia 800-82 del NIST ( https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-82r2.pdf ) <br>
+* **NIST CyberSecurity Framework** per a la gestió de la seguretat digital i la guia 800-82 del NIST <br>
+( https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-82r2.pdf ) <br>
 El Marc de Seguretat de la Informació de NIST (NIST) és un marc de referència per la gestió de la seguretat cibernètica als Estats Units. Va ser desenvolupat per l'Institut Nacional de Normes i Tecnologia (NIST) i s'utilitza àmpliament per empreses i organitzacions governamentals per protegir-se contra amenaces cibernètiques. Està basat en un conjunt de cinc categories: identificar, protegir, detectar, respondre i recuperar. Cadascuna d'aquestes categories inclou un conjunt de subcategories i objectius específics que han de complir-se per garantir una adequada gestió de la seguretat cibernètica. <br>
 La Publicació Especial 800-82 de l'Institut Nacional de Normes i Tecnologia (NIST), és una guia de referència per la gestió de la seguretat de la informació en xarxes industrials. Aquesta publicació proporciona recomanacions i directrius per la protecció de les xarxes industrials i la informació que circula per elles contra possibles amenaces i vulnerabilitats. Aquesta inclou informació sobre com dissenyar, implementar i mantenir una xarxa segura, així com protegir la informació que es transmet a través d'ella. També inclou recomanacions sobre com gestionar la seguretat de la informació en entorns industrials i sobre com respondre a possibles incidents de seguretat. <br>
 
-* **ISO 62443.  Normes i directrius de la seguretat dels sistemes de control industrials (ICS)** (https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards) <br>
+* **ISO 62443.  Normes i directrius de la seguretat dels sistemes de control industrials (ICS)** <br>
+(https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards) <br>
 La norma ISO 62443 és un conjunt de normes i directrius que s'utilitzen per a garantir la seguretat dels sistemes de control industrials. ICS es refereix als sistemes que s'empren en la indústria per a controlar processos industrials, com la producció d'energia, la fabricació i el transport. Aquests sistemes són especialment importants pel fet que la seva fallada o manipulació pot tenir conseqüències greus, com a interrupcions en la producció o fins i tot danys a la propietat. La norma ISO 62443 proporciona un marc per a la protecció dels sistemes ICS contra amenaces cibernètiques i garanteix la confidencialitat, integritat i disponibilitat de les dades i sistemes. <br>
 
 
