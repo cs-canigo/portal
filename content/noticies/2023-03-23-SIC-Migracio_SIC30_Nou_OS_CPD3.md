@@ -18,7 +18,7 @@ Cloud per a poder començar a desplegar-hi serveis.
 ## Novetats
 
 Amb l'objectiu principal de millorar l'experiència d'usuari, s'ha dut a terme la **migració del SIC 3.0 als nous clústers
-Openshift de Cpd3**, que permetrà, entra d'altres:
+Openshift de Cpd3**, que permetrà, entre d'altres:
 
 - Disposar d'entorns PRE i PRO aïllats.
 
