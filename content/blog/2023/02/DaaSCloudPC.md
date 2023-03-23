@@ -3,8 +3,8 @@ date        = "2023-02-27"
 title       = "DaaS i Cloud PC"
 description = "Aquest article pretén donar una visió del producte Cloud PC (Windows 365) de Microsoft, tot incloent les seves característiques, pros i contres, casos d’ús i novetats."
 sections    = ["Blog", "home"]
-blog_tags   = ["cloud", "microsoft", "núvol", "virtualització"]
-categories  = ["cloud", "microsoft", "núvol", "virtualització"]
+blog_tags   = ["cloud", "microsoft", "nuvol", "virtualització"]
+categories  = ["cloud", "microsoft", "nuvol", "virtualització"]
 imatge      = "/images/bloc/2023/02/Entrada.jpg"
 key         = "MARÇ2023"
 +++
