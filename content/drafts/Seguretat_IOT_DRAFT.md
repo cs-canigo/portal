@@ -44,7 +44,7 @@ A continuació es detallen algun dels elements:
 * **Sensors:** són capaços de realitzar mesuraments del món físic que seran processats, transformats i analitzats al món digital, entre d’altres com: temperatura, pressió, qualitat en l'aire, humitat, so, lluminositat, radiació de llum infraroja o velocitat. <br>
 * **Actuadors:** tenen la capacitat de modificar elements del món físic sobre la base dels mesuraments realitzats pels sensors o per ordres rebudes de qualsevol altre element com un ordinador remot. Algunes de les accions que poden fer són: obrir o tancar una vàlvula o un interruptor; actuar sobre un motor, per exemple, per a pujar o baixar una persiana o obrir o bloquejar una porta, posar una cançó. <br>
 
-També es disposa de diverses categories de dispositius IoT:
+També es disposa de diverses categories de dispositius IoT:<br>
 **Dispositius de consum**
 * Dispositius de llar intel·ligents: càmeres de videovigilància, sensors de finestres, obertura de portes, control de temperatura, sistemes de seguretat, etc. <br>
 * Televisions, ràdios i descodificadors. <br>
