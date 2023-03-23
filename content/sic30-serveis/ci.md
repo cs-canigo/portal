@@ -1,5 +1,5 @@
 +++
-date = "2022-12-12"
+date = "2023-03-23"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -104,7 +104,7 @@ proporcionant tota la informació necessària per a identificar-ne el problema.
 
 ### Accés als serveis
 
-Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://icdc.sic.intranet.gencat.cat <br/>
+Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://cicd.sic.intranet.gencat.cat <br/>
 Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de
 connectivitat, caldrà obrir una petició demanant l'obertura de Firewalls dels seus entorns.
 

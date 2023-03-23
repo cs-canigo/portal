@@ -1,10 +1,10 @@
 +++
-date        = "2023-03-20"
+date        = "2023-03-23"
 title       = "SIC. Migració SIC 3.0 a nova Plataforma Openshift de Cpd3"
 description = "El SIC 3.0 ha estat migrat a la nova Plataforma Openshift de Cpd3 amb l'objectiu de millorar el rendiment, el monitoratge i, en general, l'experiència d'usuari."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "ABRIL2023"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "ABRIL2023"
 +++
 
 ## Introducció

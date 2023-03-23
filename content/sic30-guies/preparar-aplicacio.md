@@ -1,5 +1,5 @@
 +++
-date = "2022-11-21"
+date = "2023-03-23"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -153,7 +153,7 @@ pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà e
 * Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
 * Els jobs **notificaran** dels resultats a les adreces de correu assignades.
 
-Per a poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://icdc.sic.intranet.gencat.cat).
+Per a poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://cicd.sic.intranet.gencat.cat).
 
 Per a més informació: [Integració Continua](/sic30-serveis/ci/).
 
