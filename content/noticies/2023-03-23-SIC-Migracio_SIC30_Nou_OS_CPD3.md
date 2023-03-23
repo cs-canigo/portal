@@ -30,7 +30,7 @@ Un cop realitzada la posada en servei i posades a disposició les pipelines de c
 aplicacions, el servei ha estat certificat des del passat dia 08/03/2023 per part d'un conjunt acotat d'aplicacions
 que han ajudat a validar el correcte funcionament dels diferents casos d'ús.
 
-Podeu accedir al servei mitjançant el següent enllaç: https://cicd.sic.intranet.gencat.cat.
+Podeu accedir al servei mitjançant el següent enllaç: **https://cicd.sic.intranet.gencat.cat**.
 
 ### Dates límit
 
