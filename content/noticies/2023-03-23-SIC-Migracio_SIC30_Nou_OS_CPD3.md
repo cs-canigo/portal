@@ -34,7 +34,7 @@ Podeu accedir al servei mitjançant el següent enllaç: https://cicd.sic.intran
 
 ### Dates límit
 
-**El dia 06/04/2023 la plataforma actual (https://icdc.sic.intranet.gencat.cat/) deixarà de donar servei** i
+**El dia 06/04/2023 la plataforma actual (https://icdc.sic.intranet.gencat.cat) deixarà de donar servei** i
 tots els desplegaments es faran pel nou sistema. Per la qual cosa, **és important que a aquesta data no hi hagi
 cap desplegament en curs** a la plataforma antiga donat ja no serà possible finalitzar-lo.
 
