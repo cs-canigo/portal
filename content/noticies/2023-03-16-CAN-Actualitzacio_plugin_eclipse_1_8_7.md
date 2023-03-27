@@ -4,7 +4,7 @@ title = "Canigó. Actualització plugin Eclipse 1.8.7"
 description = "S'ha publicat una nova versió del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.5 amb el template corresponent a la última versió del mòdul canigo.support.mailing"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
-key = "MARÇ2023"
+key = "ABRIL2023"
 +++
 
 ## Introducció
@@ -20,7 +20,9 @@ obtenint un projecte preconfigurat per al marc de treball Canigó i estalviant t
 
 ## Novetats _plugin_ Eclipse
 
-S'ha actualitzat el plugin de Canigó per a **generar projectes amb Canigó 3.6.5 amb el template corresponent als canvis de _sarcat.webservice_ de Sarcat i de _sgde.forms.wsdl.url_ i _sgde.std.wsdl.url_ de SGDE que apunten a HTTPS**. Podeu consultar la notícia de la [Actualització del _plugin_ Eclipse 1.8.7](/noticies/2023-03-16-CAN-Actualitzacio_plugin_eclipse_1_8_7/).
+S'ha actualitzat el plugin de Canigó per a **generar projectes amb Canigó 3.6.5 amb el template corresponent
+als canvis de _sarcat.webservice_ de Sarcat i de _sgde.forms.wsdl.url_ i _sgde.std.wsdl.url_ de SGDE que apunten a HTTPS**.
+Podeu consultar el [Llistat de canvis del _plugin_ Eclipse 1.8.7](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/1.8.7/llistat-de-canvis/).
 
 La nova versió 1.8.7 del _plugin_ fa servir la versió 1.7.5 de l'arquetipus per a generar projectes amb Canigó 3.6.5.
 Per a instal·lar o actualitzar aquesta versió del _plugin_ serà necessari seguir els passos descrits a la secció
