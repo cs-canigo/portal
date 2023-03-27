@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-23"
+date        = "2022-06-27"
 title       = "Llistat de canvis"
 description = "Llistat de canvis arquetip maven 1.7.5"
 sections    = "canigo-fwk-docs"
@@ -7,6 +7,12 @@ weight		= 1
 +++
 
 ## Arquetip maven 1.7.5
+
+**27/06/2022**:
+
+- Incorporació dependències addicionals per a configurar un origen de dades JDBC: `org.apache.commons.commons-dbcp2` i `org.apache.commons.commons-pool2`.
+
+**23/05/2022**:
 
 - [Actualització de l’_archetype_ 1.7.5 i del _plugin_ Eclipse 1.8.5](/noticies/2022-05-23-CAN-Actualitzacio_archetype_1_7_5_plugin_eclipse_1_8_5/)
    - Actualització de l’_archetype_ versió 1.7.5 i del _plugin_ de l'Eclipse de Canigó versió 1.8.5 per a generar projectes amb Canigó 3.6.5.
