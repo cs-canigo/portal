@@ -1280,10 +1280,10 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 
 <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%; align: left;">
     <tr>
-        <th class="cttiNoBorder" width="25%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
-        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><img src="../img/aws.png" width="48" alt="AWS"></th>
-        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><img src="../img/ibmcloud.png" width="48" alt="IBM Cloud"></th>
-        <th class="cttiNoBorder" width="75%" style="font-size: 16px;"><div align="center"><img src="../img/azure.png" width="48" alt="Azure"></th>
+        <th class="cttiNoBorder" width="10%" style="font-size: 16px;"><div align="center"><strong>Plataforma</strong></th>
+        <th class="cttiNoBorder" width="30%" style="font-size: 16px;"><div align="center"><img src="../img/aws.png" width="48" alt="AWS"></th>
+        <th class="cttiNoBorder" width="30%" style="font-size: 16px;"><div align="center"><img src="../img/ibmcloud.png" width="48" alt="IBM Cloud"></th>
+        <th class="cttiNoBorder" width="30%" style="font-size: 16px;"><div align="center"><img src="../img/azure.png" width="48" alt="Azure"></th>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center"><strong>SaaS</strong></td>
