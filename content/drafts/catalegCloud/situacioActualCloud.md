@@ -136,9 +136,11 @@ El tarifari de les solucions de contenidors es basa en:
 
 A continuació es mostra un gràfic per tal de mostrar una explicació visual de com es dimensionaria/distribuiria un sistema d'informació on hi hagués un sistema d'informació amb una série d'aplicacions i una base de dades on hi hagués dos agrupacions de contenidors dividits en dos namespaces (un per a aplicacions i un altre per a bases de dades) on la primera agrupació es dividis en dos grups de contenidors, el primer amb dos contenidors de 256 MBs i el segon amb tres contenidors de 256 MBs) i la segona agrupació de contenidors tingués un únic grup de contenidors amb dos contenidors de 512 MBs. A aquests contenidors se li afegiria un volum persistent de 200 MBs. La petició de catàleg final hauria d'incloure 2,256 GB de servei CaaS, 1 administració bàsica de BBDD i 200 GB d'emmagatzematge. Visualment quedaria resumit així:
 
+<br>
 <div align="left">
     <img src="../img/tarifa.png" style="width:60%;" />
 </div>
+<br>
 
 * Segons l’opció triada per desplegar el sistema d’informació, la CPU assignada varia tal i com s’observa en la taula següent:
 
@@ -292,10 +294,12 @@ A tenir en compte:
     7. L'equip del Centre de Suport SIC valida el desplegament del nou element
 
     Visualment, el procediment seria aquest:
-
+    
+    <br>
     <div align="left">
         <img src="../img/altacaasprivat.png" style="width:60%;" />
     </div>
+    <br>
 
 * Manteniment elemen​​t catàleg
     
@@ -306,10 +310,12 @@ A tenir en compte:
     3. L'equip del Centre de Suport SIC actualitza la imatge dins del SIC i valida la construcció del nou element (builders).
 
     Visualment, el procediment seria aquest:
-
+    
+    <br>
     <div align="left">
         <img src="../img/mantcaasprivat.png" style="width:60%;" />
     </div>
+    <br>
 
 <span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
 
@@ -940,12 +946,12 @@ En cas d’utilitzar aquestes imatges es recomana l’actualització a les imatg
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">6-java6​</td>
-        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:6-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">​6-java7​</td>
-        <td style="font-size: 16px;"><div align="center"></td>
+        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:6-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
@@ -955,17 +961,17 @@ En cas d’utilitzar aquestes imatges es recomana l’actualització a les imatg
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">​​7-java7</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:6-java7</td>
-    </tr>
-    <tr>
-        <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
-        <td style="font-size: 16px;"><div align="center">7​</td>
         <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:7-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
+        <td style="font-size: 16px;"><div align="center">7​</td>
+        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:7</td>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">8.0-java7​​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:7-java7</td>
+        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:8.0-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
@@ -1109,10 +1115,12 @@ Actualment s’ofereixen les següents bases de dades:
     10. L'equip del Centre de Suport SIC afegeix el nou element a la documentació CI/CD
 
     Visualment, el procediment seria aquest:
-
+    
+    <br>
     <div align="left">
         <img src="../img/altadbaasprivat.png" style="width:60%;" />
     </div>
+    <br>
 
 * Manteniment elemen​​t catàleg
     
