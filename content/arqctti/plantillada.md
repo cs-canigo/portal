@@ -27,6 +27,7 @@ A continuació proporcionem enllaços als documents relacionats:
 | Cloud public Gestionat | [Plantilla DA Cloud Públic Gestionat](/related/da/Plantilla_DA_CloudPublicGestionat_DT_DAQ_V2.2.docx) |
 | Cloud public No Gestionat | [Plantilla DA Cloud Públic No Gestionat](/related/da/Plantilla_DA_CloudPublicNoGestionat_DT_DAQ_V2.2.docx) |
 | Power Platform Suite | [Plantilla DA Power Platform Suite](/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
+| LowCode | [Plantilla DA LowCode](/related/da/Plantilla_DA_LowCode_DT_DAQ_V2.2.docx) |
 
 [Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 
