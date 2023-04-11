@@ -1,5 +1,5 @@
 +++
-date        = "2023-03-23"
+date        = "2023-04-11"
 title       = "SIC. Migració SIC 3.0 a nova Plataforma Openshift de Cpd3"
 description = "El SIC 3.0 ha estat migrat a la nova Plataforma Openshift de Cpd3 amb l'objectiu de millorar el rendiment, el monitoratge i, en general, l'experiència d'usuari."
 sections    = ["Notícies", "home"]
@@ -34,9 +34,9 @@ Podeu accedir al servei mitjançant el següent enllaç: **https://cicd.sic.intr
 
 ### Dates límit
 
-**El dia 11/04/2023 la plataforma actual (https://icdc.sic.intranet.gencat.cat) deixarà de donar servei** i
-tots els desplegaments es faran pel nou sistema. Per la qual cosa, **és important que a aquesta data no hi hagi
-cap desplegament en curs** a la plataforma antiga donat ja no serà possible finalitzar-lo.
+**El dia 11/04/2023 la plataforma actual (https://icdc.sic.intranet.gencat.cat) ha deixat de donar servei** i
+tots els desplegaments passen a fer-se pel nou sistema. Per la qual cosa, **si hi havia algun desplegament en curs a
+a la plataforma antiga, ja no serà possible finalitzar-lo**.
 
 <br/><br/>
 Per a més informació:
