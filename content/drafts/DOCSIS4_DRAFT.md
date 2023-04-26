@@ -75,11 +75,88 @@ De forma resumida les característiques principals de l’estàndard són les se
 
 A continuació es mostra la taula tècnica detallada del que incorpora l’estàndard  DOCSIS 4.0:<br>
 
-<br>
-<div align="center">
-  <img src="/images/bloc/2023/04/Foto1.png" text="Font: www.cablelabs.com"/>
-</div>
-<br>
+
+<table border="0" align="center">
+  <tr>
+    <td><strong>Detalls Tècnics</strong></td>
+    <td><strong>Descripció</strong></td>
+  </tr>  
+  <tr valign = "top">
+    <td>Any de llançament</td><td>2020</td>
+  </tr>  
+   <tr valign = "top">
+    <td>Màxima transferència de dades de baixada</td><td>10 Gbps</td>
+  </tr>  
+   <tr valign = "top">
+    <td>Màxima transferència de dades de pujada</td><td>6 Gbps</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Rang de freqüència</td><td>54 Mhz - 1218 Mhz</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Ample de banda del canal</td><td>25 khz - 200 Mhz</td>
+  </tr>  
+  <tr valign = "top">
+    <td>Modulació</td><td>OFDMA</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Modulació màxima</td><td>4096 - QAM</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Sub portadora ortogonal</td><td>1.8 khz</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Latència</td><td>Inferior a 1ms</td>
+  </tr>   
+  <tr valign = "top">
+    <td>Encriptació</td><td>AES-256</td>
+  </tr>   
+  <tr valign = "top">
+    <td>Security</td><td>Suport per a característiques de maquinari i programari.</td>
+  </tr>       
+  <tr valign = "top">
+    <td>Suport Ipv6</td><td>Si</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Retro compatibilitat</td><td>Si, amb DOCSIS 3.1 i versions anteriors</td>
+  </tr>   
+  <tr valign = "top">
+    <td>Arquitectura de Xarxa</td><td>Arquitectura d'accés distribuït (DAA)</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Unió de canals</td><td>fins a 8 canals de baixada i 4 canals de pujada</td>
+  </tr>        
+  <tr valign = "top">
+    <td>Active Queue Management</td><td>Si</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Ethernet Multi-Gigabit</td><td>Si</td>
+  </tr>     
+  <tr valign = "top">
+    <td>Priorització del tràfic</td><td>Si</td>
+  </tr>      
+  <tr valign = "top">
+    <td>Eficiència espectral millorada</td><td>Si</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Capacitat millorada per Hertz</td><td>Si</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Eficiència de potència millorada</td><td>Si</td>
+  </tr> 
+  <tr valign = "top">
+    <td>Administració de les interferències millorada</td><td>Si</td>
+  </tr> 
+    <tr valign = "top">
+    <td>Sincronització de xarxa millorada</td><td>Si</td>
+  </tr> 
+    <tr valign = "top">
+    <td>Allotjament dinàmic de l'ample de banda</td><td>Si</td>
+  </tr> 
+    <tr valign = "top">
+    <td>Taxa d'error de bits baixa</td><td>Si</td>
+  </tr> 
+</table>
 
 
 ## **Taula comparativa amb els estàndards anteriors** {#TaulaComparativa}
