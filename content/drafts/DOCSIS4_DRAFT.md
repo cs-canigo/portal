@@ -98,6 +98,7 @@ Tot seguit, es mostra una taula comparativa entre les diferents versions del DOC
 En aquest apartat es llisten els avantatges e inconvenients d’aquest estàndard:<br>
 
 **Avantatges:**<br>
+
 * **Major velocitat:** Ofereix velocitats de descàrrega i pujada més altes que les versions anteriors, el que significa que els usuaris podran descarregar i carregar contingut més ràpidament.<br>
 * **Eficiència i capacitat:** Utilitza la tecnologia OFDMA, millorant l’eficiència espectral i la capacitat de la xarxa.<br>
 * **Millora de la latència:** Utilitza la tecnologia de símbols reduïts OFDMA, que redueix la latència de la xarxa.<br>
@@ -106,11 +107,13 @@ En aquest apartat es llisten els avantatges e inconvenients d’aquest estàndar
 * **Millora de la seguretat:** Securitza la comunicació amb suport per xifrat de 256 bits i autenticació basada en certificats digitals.<br>
 
 **Inconvenients:**<br>
+
 * **Costos elevats:** Al ser una tecnologia relativament nova, els costos d'instal·lació i implementació poden ser elevats.<br>
 * **Impacte ambiental:** Pot tenir un impacte ambiental negatiu, ja que els seus components d’infraestructura tenen de forma general un consum energètic superior que en les versions anteriors.<br>
 * **Complicat de gestionar:** És una tecnologia complexa que és més difícil de gestionar pels proveïdors de serveis d'internet i els usuaris. Això pot portar a problemes de suport i una experiència d'usuari menys satisfactòria.<br>
 
 **Requeriments:**<br>
+
 * **Requereix una actualització del hardware:** Per aprofitar les avantatges de DOCSIS 4.0, seria  necessari actualitzar el hardware dels proveïdors de serveis d'internet, que pot ser costós i complicat.<br>
 * **Depèn de la infraestructura existent:** Depèn de la infraestructura existent, incloent cables de fibra òptica, nodes i amplificadors. Això vol dir que en llocs on la infraestructura no està actualitzada, els beneficis de DOCSIS 4.0 no seran tan significatius.<br>
 * **Pot requerir una actualització de la infraestructura interna dels usuaris:** Per aprofitar els avantatges, és possible que els usuaris també hagin de fer una actualització de la seva infraestructura interna, incloent el router i els dispositius connectats.<br>
