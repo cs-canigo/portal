@@ -157,7 +157,7 @@ A continuació es mostra la taula tècnica detallada del que incorpora l’està
     <td>Taxa d'error de bits baixa</td><td>Si</td>
   </tr> 
 </table>
-
+<br>
 
 ## **Taula comparativa amb els estàndards anteriors** {#TaulaComparativa}
 
@@ -237,7 +237,7 @@ Tot seguit, es mostra una taula comparativa entre les diferents versions del DOC
     <td><strong>DOCSIS 3.1</strong></td>
   </tr>  
 </table>
-
+<br>
 
 ## **Beneficis e Inconvenients** {#BeneficisInconvenients}
 
