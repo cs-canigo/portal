@@ -37,7 +37,7 @@ La versió més recent de l'estàndard, DOCSIS 3.1, es va publicar el 2013 i va 
 Finalment, DOCSIS 4.0, que és l'última versió de l'estàndard, es va presentar el 2020 i ofereix velocitats encara més ràpides, una capacitat més gran i un millor rendiment mitjançant l'ús de tecnologies avançades com la comunicació dúplex completa, l'espectre estès i la divisió de freqüència ortogonal d’accés múltiple (OFDMA). <br>
 
 
-### **Explicació de l'estàndard ** 
+### **Explicació de l'estàndard** 
 
 La tecnologia DOCSIS 4.0 permet la propera generació de xarxes de banda ampla híbrides de fibra coaxial (HFC), proporcionant velocitats multigigabit simètriques alhora que admet alta fiabilitat, alta seguretat i baixa latència. <br>
 
@@ -106,7 +106,7 @@ En aquest apartat es llisten els avantatges e inconvenients d’aquest estàndar
 * **Millora de la seguretat:** Securitza la comunicació amb suport per xifrat de 256 bits i autenticació basada en certificats digitals.<br>
 
 **Inconvenients:**<br>
-* **Costos elevats: Al ser una tecnologia relativament nova, els costos d'instal·lació i implementació poden ser elevats.<br>
+* **Costos elevats:** Al ser una tecnologia relativament nova, els costos d'instal·lació i implementació poden ser elevats.<br>
 * **Impacte ambiental:** Pot tenir un impacte ambiental negatiu, ja que els seus components d’infraestructura tenen de forma general un consum energètic superior que en les versions anteriors.<br>
 * **Complicat de gestionar:** És una tecnologia complexa que és més difícil de gestionar pels proveïdors de serveis d'internet i els usuaris. Això pot portar a problemes de suport i una experiència d'usuari menys satisfactòria.<br>
 
@@ -147,13 +147,16 @@ Algunes possibles evolucions es podrien incloure en els següents camps:<br>
 ### **Impacte potencial en la industria de l’ample de banda**
 
 DOCSIS 4.0 té el potencial de tenir un gran impacte en la indústria dels serveis de telecomunicacions, ja que ofereix una velocitat de transmissió de dades significativament més ràpida que les versions anteriors. Amb una capacitat teòrica de 10 Gbps de baixada i 6 Gbps de pujada, és capaç de suportar aplicacions d'internet cada vegada més exigents, com ara la transmissió de contingut de vídeo d'alta resolució i la realitat virtual.<br>
+
 Amb DOCSIS 4.0, els proveïdors de serveis d'internet podrien oferir velocitats més altes als clients existents i atreure nous clients amb promeses de velocitats de transmissió de dades cada vegada més ràpides. Això podria conduir a una competència més ferotge en el mercat de les telecomunicacions i potencialment també a una reducció de preus per als clients.<br>
+
 No obstant, també és important destacar que l'adopció requereix una inversió significativa en infraestructura per part dels proveïdors de serveis d'internet. Això pot restringir la seva capacitat per implementar el nou estàndard de forma generalitzada i també podria conduir a un augment de preus pels clients per compensar el cost d'aquesta inversió.<br>
 
 
 ## **Conclusions** {#Conclusions}
 
 DOCSIS 4.0 representa una millora significativa respecte a les versions anteriors de l'estàndard DOCSIS i té el potencial de permetre als operadors de cable oferir serveis d'Internet més ràpids i fiables als seus clients. <br>
+
 Gràcies a nous estàndards com DOCSIS 4.0, les noves tecnologies i aplicacions emergents i consumidors de serveis WAN que puguin aparèixer al mercat en un futur pròxim es podran dur a terme  encara que els seus requeriments a nivell d’ample de banda i latència siguin elevats. <br>
 
 
@@ -166,7 +169,7 @@ https://networkshardware.com/what-is-docsis-4-0/ <br>
 
 * **DOCSIS:** Especificació de la interfície de servei de dades per cable.
 * **HFC:** L'híbrid de fibra coaxial en telecomunicacions és un terme que defineix una xarxa de fibra òptica que incorpora tant fibra òptica com cable coaxial per crear una xarxa de banda ampla.
-* **PHY:**Capa física.
+* **PHY:** Capa física.
 * **CMTS:** Sistema de terminació del cable mòdem. 
 * **Ipv6:**  Protocol d’internet versió 6.
 
