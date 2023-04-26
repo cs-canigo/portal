@@ -73,8 +73,7 @@ De forma resumida les característiques principals de l’estàndard són les se
 
 ## **Taula de detall tècnic** {#TaulaDetall}
 
-A continuació es mostra la taula tècnica detallada del que incorpora l’estàndard  DOCSIS 4.0:<br>
-
+A continuació es mostra la taula tècnica detallada del que incorpora l’estàndard  DOCSIS 4.0:
 
 <table border="0" align="center">
   <tr>
@@ -161,7 +160,7 @@ A continuació es mostra la taula tècnica detallada del que incorpora l’està
 
 ## **Taula comparativa amb els estàndards anteriors** {#TaulaComparativa}
 
-Tot seguit, es mostra una taula comparativa entre les diferents versions del DOCSIS 1.X,2.0,3.0,3.1 i 4.0:<br>
+Tot seguit, es mostra una taula comparativa entre les diferents versions del DOCSIS 1.X,2.0,3.0,3.1 i 4.0:
 
 <table border="0" align="center">
   <tr>
