@@ -303,7 +303,7 @@ No obstant, també és important destacar que l'adopció requereix una inversió
 
 DOCSIS 4.0 representa una millora significativa respecte a les versions anteriors de l'estàndard DOCSIS i té el potencial de permetre als operadors de cable oferir serveis d'Internet més ràpids i fiables als seus clients. <br>
 
-Gràcies a nous estàndards com DOCSIS 4.0, les noves tecnologies i aplicacions emergents i consumidors de serveis WAN que puguin aparèixer al mercat en un futur pròxim es podran dur a terme  encara que els seus requeriments a nivell d’ample de banda i latència siguin elevats. <br>
+Gràcies a nous estàndards com DOCSIS 4.0, les noves tecnologies i aplicacions emergents i consumidors de serveis WAN que puguin aparèixer al mercat en un futur pròxim, es podran dur a terme encara que els seus requeriments a nivell d’ample de banda i latència, siguin elevats. <br>
 
 
 ## **Referències** {#Referencies}
