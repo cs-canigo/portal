@@ -1081,28 +1081,28 @@
         "Nom": "Tipus persona jurídica",
         "Ambit": "Economia",
         "Subambit": "Empresa i sector econòmic",
-        "Descripcio": "Llista de tipus de modalitat legal que un professional o societat escull per dur a terme una activitat econòmica.",
+        "Descripcio": "Modalitats legals de personalitat jurídica que adopten els professionals, les entitats privades i les entitats i organismes públics per dur a terme una activitat.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "DGAD",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Tipus_persona_juridica_ATR.docx",
                 "ifitxer_xls": "Tipus_persona_juridica.xlsx",
                 "idatacreacio": "23/01/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "25/01/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "26/04/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/Tipus-persona-jur-dica/ipet-cgpf",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "TIPUS_PERSONA_JURIDICA",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "25/01/2023",
-        "Data_actualitzacio": "25/01/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/04/2023",
+        "Data_actualitzacio": "26/04/2023"
     },
     {
         "Id": "dtarq118",
@@ -1501,6 +1501,34 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/09/2021",
         "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq186",
+        "Nom": "Delictes",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Execució penal i reinserció",
+        "Descripcio": "Llistat de tipus d'infraccions de la llei.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Justícia, Drets i Memòria",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Delictes_ATR.docx",
+                "ifitxer_xls": "Delictes.xlsx",
+                "idatacreacio": "25/04/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/04/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "DELICTES",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/04/2023",
+        "Data_actualitzacio": "26/04/2023"
     },
     {
         "Id": "dtarq160",
@@ -2359,16 +2387,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
-                "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Catalunya_Geo_V03",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/04/2023",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Actualització per afegir un atribut amb dades de georeferència.",
+                "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                "idatacreacio": "24/04/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/04/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2376,7 +2419,7 @@
         "nom_dinsBD": "MUNICIPIS_CAT_GEO",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "26/04/2023"
     },
     {
         "Id": "dtarq87",
@@ -2537,16 +2580,31 @@
             },
             {
                 "inom": "V11",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom del municipi \"Torre d’En Besora, la\" (nom anterior) per \"Torre d’en Besora, la\" (nom actualitzat). Codi 121191.",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_V11.xlsx",
                 "idatacreacio": "19/12/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/04/2023",
                 "idatapublicacio": "21/12/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V12",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Canvi de nom de 7 municipis: Codi 010474 \"Erriberabeitia\" (nom anterior) per \"Ribera Baja/Erriberabeitia\" (nom actualitzat), Codi 093538 \"Santa María Rivarredonda\" (nom anterior) per \"Santa María Ribarredonda\" (nom actualitzat), Codi 461803 \"Novetlè/Novelé\" (nom anterior) per \"Novetlè\" (nom actualitzat), Codi 120402 \"Castellón de la Plana/Castelló de la Plana\" (nom anterior) per \"Castelló de la Plana\" (nom actualitzat), Codi 311672 \"Mendigorría\" (nom anterior) per \"Mendigorria\" (nom actualitzat), Codi 100974 \"Higuera de Albalat \" (nom anterior) per \"Higuera de Albalat\" (nom actualitzat) i Codi 030844 \"Orxa, l’/Lorcha\" (nom anterior) per \"Orxa, l'/Lorcha\" (nom actualitzat).",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "24/04/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/04/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2554,7 +2612,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "21/12/2022"
+        "Data_actualitzacio": "26/04/2023"
     },
     {
         "Id": "dtarq127",
@@ -3072,16 +3130,31 @@
             },
             {
                 "inom": "V10",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització versió anterior per canvi de nom del municipi \"la Torre d’En Besora\" (nom anterior) per \"la Torre d’en Besora\" (nom actualitzat).",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V10.xlsx",
                 "idatacreacio": "19/12/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/04/2023",
                 "idatapublicacio": "21/12/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V11",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització versió anterior per canvi de nom de 3 municipis i unitats poblacionals del mateix nom: Codi 010474 Erriberabeitia (nom anterior) per Ribera Baja/Erriberabeitia, Codi 093538 Santa María Rivarredonda (nom anterior) per Santa María Ribarredonda (nom actualitzat) i Codi 461803 Novetlè/Novelé (nom anterior) per Novetlè (nom actualitzat).",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "24/04/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/04/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3089,7 +3162,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "21/12/2022"
+        "Data_actualitzacio": "26/04/2023"
     },
     {
         "Id": "dtarq175",
@@ -3226,25 +3299,25 @@
         "Descripcio": "Tipologies de jornada de feina segons el nombre d'hores que un treballador dedica a l'activitat per a la qual ha estat contractat.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "DGAD",
+                "ipromotor": "Òrgan extern - Eurostat",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Tipus_jornada_laboral_ATR.docx",
                 "ifitxer_xls": "Tipus_jornada_laboral.xlsx",
                 "idatacreacio": "21/03/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "22/03/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "26/04/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Tipus-jornada-laboral/uj49-ucav",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "TIPUS_JORNADA_LABORAL",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "22/03/2023",
-        "Data_actualitzacio": "22/03/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/04/2023",
+        "Data_actualitzacio": "26/04/2023"
     },
     {
         "Id": "dtarq166",
