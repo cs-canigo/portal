@@ -107,82 +107,17 @@ A continuació es mostra la taula tècnica detallada del que incorpora l’està
 ## **Taula comparativa amb els estàndards anteriors** {#TaulaComparativa}
 
 Tot seguit, es mostra una taula comparativa entre les diferents versions del DOCSIS 1.X,2.0,3.0,3.1 i 4.0:
-<div>
-<table border="0" align="center">
-  <tr>
-    <td><strong>Característiques</strong></td>
-    <td><strong>DOCSIS 1.x</strong></td>
-    <td><strong>DOCSIS 2.0</strong></td>
-    <td><strong>DOCSIS 3.0</strong></td>
-    <td><strong>DOCSIS 3.1</strong></td>
-    <td><strong>DOCSIS 4.0</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Any de llançament</strong></td>
-    <td>1997-2001</td>
-    <td>2002-2006</td>
-    <td>2006-2008</td>
-    <td>2013-2017</td>
-    <td><strong>2020</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Velocitat màxima descàrrega</strong></td>
-    <td>38 Mbps</td>
-    <td>42 Mbps</td>
-    <td>1 Gbps</td>
-    <td>10 Gbps</td>
-    <td><strong>10 Gbps</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Velocitat màxima pujada</strong></td>
-    <td>10 Mbps</td>
-    <td>30 Mbps</td>
-    <td>100 Mbps</td>
-    <td>1 Gbps</td>
-    <td><strong>6 Gbps</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Agrupació de canals</strong></td>
-    <td>N/A</td>
-    <td>4 de pujada, 4 de baixada</td>
-    <td>8 de pujada, 32 de baixada</td>
-    <td>2 de pujada, 32 de baixada</td>
-    <td><strong>4 de pujada, 8 de baixada</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Modulació</strong></td>
-    <td>QPSK, 16-QAM, 64-QAM</td>
-    <td>QPSK, 16-QAM, 64-QAM</td>
-    <td>QPSK, 16-QAM, 64-QAM, 256-QAM</td>
-    <td>QPSK, 16-QAM, 64-QAM, 256-QAM, 1024-QAM</td>
-    <td><strong>OFDMA</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Rang de freqüència</strong></td>
-    <td>5 MHz - 42 MHz (pujada) i 54 MHz - 1002 MHz (down)</td>
-    <td>5 MHz - 42 MHz (pujada) i 88 MHz - 1002 MHz (down)</td>
-    <td>5 MHz - 85 MHz (pujada) i 108 MHz - 1002 MHz (down)</td>
-    <td>5 MHz - 204 MHz (pujada) i 258 MHz - 1218 MHz (down)</td>
-    <td><strong>54 MHz - 1218 MHz</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Suport IPv6</strong></td>
-    <td>No</td>
-    <td>Si</td>
-    <td>Si</td>
-    <td>Si</td>
-    <td><strong>Si</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Compatibilitat cap enrere</strong></td>
-    <td>N/A</td>
-    <td>DOCSIS 1.x</td>
-    <td>DOCSIS 1.x i 2.0</td>
-    <td>DOCSIS 1.x, 2.0 i 3.0</td>
-    <td><strong>DOCSIS 3.1</strong></td>
-  </tr>  
-</table>
-</div>  
+
+| **Característiques** | **DOCSIS 1.x** | **DOCSIS 2.0** | **DOCSIS 3.0** | **DOCSIS 3.1** | **DOCSIS 4.0** |
+| --- | --- | --- | --- | --- | --- |
+| **Any de llançament** | 1997-2001 | 2002-2006 | 2006-2008 | 2013-2017 | **2020** |
+| **Velocitat màxima descàrrega** | 38 Mbps | 42 Mbps | 1 Gbps | 10 Gbps | **10 Gbps** |
+| **Velocitat màxima pujada** | 10 Mbps | 30 Mbps | 100 Mbps | 1 Gbps | **6 Gbps** |
+| **Agrupació de canals** | N/A | 4 de pujada, 4 de baixada | 8 de pujada, 32 de baixada |2 de pujada, 32 de baixada | **4 de pujada, 8 de baixada** |
+| **Modulació** | QPSK, 16-QAM, 64-QAM | QPSK, 16-QAM, 64-QAM | QPSK, 16-QAM, 64-QAM, 256-QAM | QPSK, 16-QAM, 64-QAM, 256-QAM, 1024-QAM | **OFDMA** |
+| **Rang de freqüència** | 5 MHz - 42 MHz (pujada) i 54 MHz - 1002 MHz (down) | 5 MHz - 42 MHz (pujada) i 88 MHz - 1002 MHz (down) | 5 MHz - 85 MHz (pujada) i 108 MHz - 1002 MHz (down) |5 MHz - 204 MHz (pujada) i 258 MHz - 1218 MHz (down) | **54 MHz - 1218 MHz** |
+| **Suport IPv6** | No | Si | Si | Si | **Si** |
+| **Compatibilitat cap enrere** | N/A | DOCSIS 1.x | DOCSIS 1.x i 2.0 | DOCSIS 1.x, 2.0 i 3.0 | **DOCSIS 3.1** |   
 <br>
 
 ## **Beneficis e Inconvenients** {#BeneficisInconvenients}
