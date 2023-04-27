@@ -78,167 +78,50 @@ De forma resumida les característiques principals de l’estàndard són les se
 
 A continuació es mostra la taula tècnica detallada del que incorpora l’estàndard  DOCSIS 4.0:
 
-<table border="0" align="center">
-  <tr>
-    <td><strong>Detalls Tècnics</strong></td>
-    <td><strong>Descripció</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td>Any de llançament</td><td>2020</td>
-  </tr>  
-   <tr valign = "top">
-    <td>Màxima transferència de dades de baixada</td><td>10 Gbps</td>
-  </tr>  
-   <tr valign = "top">
-    <td>Màxima transferència de dades de pujada</td><td>6 Gbps</td>
-  </tr>  
-  <tr valign = "top">
-    <td>Rang de freqüència</td><td>54 Mhz - 1218 Mhz</td>
-  </tr>  
-  <tr valign = "top">
-    <td>Ample de banda del canal</td><td>25 khz - 200 Mhz</td>
-  </tr>  
-  <tr valign = "top">
-    <td>Modulació</td><td>OFDMA</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Modulació màxima</td><td>4096 - QAM</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Sub portadora ortogonal</td><td>1.8 khz</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Latència</td><td>Inferior a 1ms</td>
-  </tr>   
-  <tr valign = "top">
-    <td>Encriptació</td><td>AES-256</td>
-  </tr>   
-  <tr valign = "top">
-    <td>Security</td><td>Suport per a característiques de maquinari i programari.</td>
-  </tr>       
-  <tr valign = "top">
-    <td>Suport Ipv6</td><td>Si</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Retro compatibilitat</td><td>Si, amb DOCSIS 3.1 i versions anteriors</td>
-  </tr>   
-  <tr valign = "top">
-    <td>Arquitectura de Xarxa</td><td>Arquitectura d'accés distribuït (DAA)</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Unió de canals</td><td>fins a 8 canals de baixada i 4 canals de pujada</td>
-  </tr>        
-  <tr valign = "top">
-    <td>Active Queue Management</td><td>Si</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Ethernet Multi-Gigabit</td><td>Si</td>
-  </tr>     
-  <tr valign = "top">
-    <td>Priorització del tràfic</td><td>Si</td>
-  </tr>      
-  <tr valign = "top">
-    <td>Eficiència espectral millorada</td><td>Si</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Capacitat millorada per Hertz</td><td>Si</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Eficiència de potència millorada</td><td>Si</td>
-  </tr> 
-  <tr valign = "top">
-    <td>Administració de les interferències millorada</td><td>Si</td>
-  </tr> 
-    <tr valign = "top">
-    <td>Sincronització de xarxa millorada</td><td>Si</td>
-  </tr> 
-    <tr valign = "top">
-    <td>Allotjament dinàmic de l'ample de banda</td><td>Si</td>
-  </tr> 
-    <tr valign = "top">
-    <td>Taxa d'error de bits baixa</td><td>Si</td>
-  </tr> 
-</table>
+| **Detalls Tècnics** | **Descripció** |
+| --- | --- |
+| Any de llançament | 2020 |
+| Màxima transferència de dades de baixada | 10 Gbps |
+| Màxima transferència de dades de pujada | 6 Gbps |
+| Rang de freqüència | 54 Mhz - 1218 Mhz |
+| Ample de banda del canal | 25 khz - 200 Mhz | 
+| Modulació | OFDMA |
+| Modulació màxima | 4096 - QAM |
+| Sub portadora ortogonal | 1.8 khz |
+| Latència | Inferior a 1ms |
+| Encriptació | AES-256 |
+| Security | Suport per a característiques de maquinari i programari. |
+| Suport Ipv6 | Si | 
+| Retro compatibilitat | Si, amb DOCSIS 3.1 i versions anteriors |
+| Arquitectura de Xarxa | Arquitectura d'accés distribuït (DAA) |
+| Unió de canals | Fins a 8 canals de baixada i 4 canals de pujada | 
+| Active Queue Management | Si |
+| Ethernet Multi-Gigabit | Si |
+| Priorització del tràfic | Si |
+| Eficiència espectral millorada | Si |
+| Capacitat millorada per Hertz | Si |
+| Eficiència de potència millorada | Si |
+| Administració de les interferències millorada | Si |
+| Sincronització de xarxa millorada | Si | 
+| Allotjament dinàmic de l'ample de banda | Si |
+| Taxa d'error de bits baixa | Si |
 <br>
 
 ## **Taula comparativa amb els estàndards anteriors** {#TaulaComparativa}
 
 Tot seguit, es mostra una taula comparativa entre les diferents versions del DOCSIS 1.X,2.0,3.0,3.1 i 4.0:
 
-<table border="0" align="center">
-  <tr>
-    <td><strong>Característiques</strong></td>
-    <td><strong>DOCSIS 1.x</strong></td>
-    <td><strong>DOCSIS 2.0</strong></td>
-    <td><strong>DOCSIS 3.0</strong></td>
-    <td><strong>DOCSIS 3.1</strong></td>
-    <td><strong>DOCSIS 4.0</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Any de llançament</strong></td>
-    <td>1997-2001</td>
-    <td>2002-2006</td>
-    <td>2006-2008</td>
-    <td>2013-2017</td>
-    <td><strong>2020</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Velocitat màxima descàrrega</strong></td>
-    <td>38 Mbps</td>
-    <td>42 Mbps</td>
-    <td>1 Gbps</td>
-    <td>10 Gbps</td>
-    <td><strong>10 Gbps</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Velocitat màxima pujada</strong></td>
-    <td>10 Mbps</td>
-    <td>30 Mbps</td>
-    <td>100 Mbps</td>
-    <td>1 Gbps</td>
-    <td><strong>6 Gbps</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Agrupació de canals</strong></td>
-    <td>N/A</td>
-    <td>4 de pujada, 4 de baixada</td>
-    <td>8 de pujada, 32 de baixada</td>
-    <td>2 de pujada, 32 de baixada</td>
-    <td><strong>4 de pujada, 8 de baixada</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Modulació</strong></td>
-    <td>QPSK, 16-QAM, 64-QAM</td>
-    <td>QPSK, 16-QAM, 64-QAM</td>
-    <td>QPSK, 16-QAM, 64-QAM, 256-QAM</td>
-    <td>QPSK, 16-QAM, 64-QAM, 256-QAM, 1024-QAM</td>
-    <td><strong>OFDMA</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Rang de freqüència</strong></td>
-    <td>5 MHz - 42 MHz (pujada) i 54 MHz - 1002 MHz (down)</td>
-    <td>5 MHz - 42 MHz (pujada) i 88 MHz - 1002 MHz (down)</td>
-    <td>5 MHz - 85 MHz (pujada) i 108 MHz - 1002 MHz (down)</td>
-    <td>5 MHz - 204 MHz (pujada) i 258 MHz - 1218 MHz (down)</td>
-    <td><strong>54 MHz - 1218 MHz</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Suport IPv6</strong></td>
-    <td>No</td>
-    <td>Si</td>
-    <td>Si</td>
-    <td>Si</td>
-    <td><strong>Si</strong></td>
-  </tr>  
-  <tr valign = "top">
-    <td><strong>Compatibilitat cap enrere</strong></td>
-    <td>N/A</td>
-    <td>DOCSIS 1.x</td>
-    <td>DOCSIS 1.x i 2.0</td>
-    <td>DOCSIS 1.x, 2.0 i 3.0</td>
-    <td><strong>DOCSIS 3.1</strong></td>
-  </tr>  
-</table>
+| **Característiques** | **DOCSIS 1.x** | **DOCSIS 2.0** | **DOCSIS 3.0** | **DOCSIS 3.1** | **DOCSIS 4.0** |
+| --- | --- | --- | --- | --- | --- |
+| **Any de llançament** | 1997-2001 | 2002-2006 | 2006-2008 | 2013-2017 | **2020** |
+| **Velocitat màxima descàrrega** | 38 Mbps | 42 Mbps | 1 Gbps | 10 Gbps | **10 Gbps** |
+| **Velocitat màxima pujada** | 10 Mbps | 30 Mbps | 100 Mbps | 1 Gbps | **6 Gbps** |
+| **Agrupació de canals** | N/A | 4 de pujada, 4 de baixada | 8 de pujada, 32 de baixada |2 de pujada, 32 de baixada | **4 de pujada, 8 de baixada** |
+| **Modulació** | QPSK, 16-QAM, 64-QAM | QPSK, 16-QAM, 64-QAM | QPSK, 16-QAM, 64-QAM, 256-QAM | QPSK, 16-QAM, 64-QAM, 256-QAM, 1024-QAM | **OFDMA** |
+| **Rang de freqüència** | 5 MHz - 42 MHz (pujada) i 54 MHz - 1002 MHz (down) | 5 MHz - 42 MHz (pujada) i 88 MHz - 1002 MHz (down) | 5 MHz - 85 MHz (pujada) i 108 MHz - 1002 MHz (down) |5 MHz - 204 MHz (pujada) i 258 MHz - 1218 MHz (down) | **54 MHz - 1218 MHz** |
+| **Suport IPv6** | No | Si | Si | Si | **Si** |
+| **Compatibilitat cap enrere** | N/A | DOCSIS 1.x | DOCSIS 1.x i 2.0 | DOCSIS 1.x, 2.0 i 3.0 | **DOCSIS 3.1** |   
+
 <br>
 
 ## **Beneficis e Inconvenients** {#BeneficisInconvenients}
