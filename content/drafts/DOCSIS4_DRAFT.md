@@ -118,6 +118,7 @@ Tot seguit, es mostra una taula comparativa entre les diferents versions del DOC
 | **Rang de freqüència** | 5 MHz - 42 MHz (pujada) i 54 MHz - 1002 MHz (down) | 5 MHz - 42 MHz (pujada) i 88 MHz - 1002 MHz (down) | 5 MHz - 85 MHz (pujada) i 108 MHz - 1002 MHz (down) |5 MHz - 204 MHz (pujada) i 258 MHz - 1218 MHz (down) | **54 MHz - 1218 MHz** |
 | **Suport IPv6** | No | Si | Si | Si | **Si** |
 | **Compatibilitat cap enrere** | N/A | DOCSIS 1.x | DOCSIS 1.x i 2.0 | DOCSIS 1.x, 2.0 i 3.0 | **DOCSIS 3.1** |   
+
 <br>
 
 ## **Beneficis e Inconvenients** {#BeneficisInconvenients}
