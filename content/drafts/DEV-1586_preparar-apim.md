@@ -157,12 +157,12 @@ nomenclatura aplicades són les següents:
 
 - Productes:
 
-    * `name` obligatori i immutable que es correspon amb el codi de diàleg i el nom del projecte. Per exemple: "0192-apim_demo_project".
-    * `title` obligatori amb prefix de codi de diàleg. Per exemple: "0192-APIM Demo Project".
+    * `name` obligatori i immutable que es correspon amb el codi de diàleg, el separador "-" i el nom del projecte. Per exemple: "0192-apim_demo_project".
+    * `title` obligatori amb prefix de codi de diàleg, un espai en blanc i un text lliure. Per exemple: "0192 APIM Demo Project".
 
 - APIs:
 
-    * `x-ibm-name` obligatori amb prefix de codi de diàleg. Per exemple: "0192-api_a".
+    * `x-ibm-name` obligatori amb prefix de codi de diàleg, el separador '-' i l'identificador de l'API. Per exemple: "0192-api_a".
     * `basePath` inclou el codi de diàleg. Per exemple: "/0192/api_a". Per tal de resoldre la crida al `target-url`
       de l’aplicació, s'implementa un pas a l’`Assembly` que s’encarrega d’eliminar el codi de diàleg del `requestPath`.
 
@@ -188,7 +188,7 @@ A continuació, es mostren exemples amb els criteris aplicats:
 ```yaml
 info:
   version: 1.0.1
-  title: 0192-APIM Demo Project
+  title: 0192 APIM Demo Project
   name: 0192-apim_demo_project
   categories:
     - '0192'
@@ -201,7 +201,7 @@ info:
 swagger: "2.0"
 info:
   version: 1.0.1
-  title: 0192-APIM Demo Project Api_a
+  title: 0192 APIM Demo Project Api_a
   x-ibm-name: 0192-api_a
 basePath: /0192/api_a
 x-ibm-configuration:
