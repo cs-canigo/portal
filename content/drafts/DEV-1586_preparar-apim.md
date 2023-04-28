@@ -61,7 +61,7 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 
 Per exemple:
 ```yaml
-version: 2.0.0
+version: 2.0.0 # aca schema version
 info:
   version: 1.0.1
   description: APIM Demo Project
@@ -108,7 +108,7 @@ notifications:
       - noreply@ticxcat.cat
 ```
 
-On es pot comprovar que s'ha definit una *target-url* global i una d'específica per a l'API_C.
+On es pot comprovar que s'ha definit una `target-url` global i una d'específica per a l'API_C.
 
 <br/>
 Per a més informació, podeu consultar: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
@@ -122,21 +122,21 @@ pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditz
 - **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades. El sistema permet redesplegar versions als
 catàlegs preproductius sempre que no hagin arribat a producció.
 - **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres). Caldrà seleccionar
-el catàleg del qual es desitja informació i indicar el nom del producte (*CURRENT_API_PRODUCT*). Per exemple: `consulta`.
+el catàleg del qual es desitja informació.
 - Operatives:
-    * **DELETE**: eliminació del producte. Caldrà seleccionar el catàleg sobre el qual es desitja esborrar i indicar el nom del
-    producte i la versió (*CURRENT_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    * **DELETE**: eliminació del producte. Caldrà seleccionar el catàleg sobre el qual es desitja esborrar i indicar la
+    versió del producte (*CURRENT_PRODUCT_VERSION*). Per exemple: `1.1.0`.
     * **DEPRECATE**: deprecació d’una versió del producte sense deixar cap versió vigent. Caldrà seleccionar el catàleg
-    sobre el qual es desitja deprecar i indicar el nom del producte i la versió (*CURRENT_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    sobre el qual es desitja deprecar i indicar la versió del producte (*CURRENT_PRODUCT_VERSION*). Per exemple: `1.1.0`.
     * **REPLACE**: retirada d’una de les versions vigents del producte i migració de subscripcions. Caldrà seleccionar
-    el catàleg sobre el qual es desitja reemplaçar, indicar el nom del producte i la versió actual (*CURRENT_API_PRODUCT*) i
-    el nom del producte i la nova versió (*NEW_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    el catàleg sobre el qual es desitja reemplaçar, indicar la versió actual del producte (*CURRENT_PRODUCT_VERSION*) i
+    la nova versió del producte (*NEW_PRODUCT_VERSION*). Per exemple: `1.1.0`.
     * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden). Caldrà
-    seleccionar el catàleg sobre el qual es desitja retirar i indicar el nom del producte i la versió (*CURRENT_API_PRODUCT*).
-    Per exemple: `consulta:1.1.0`.
+    seleccionar el catàleg sobre el qual es desitja retirar i indicar la versió del producte (*CURRENT_PRODUCT_VERSION*).
+    Per exemple: `1.1.0`.
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”. Caldrà
-    seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar el nom del producte i la versió actual (*CURRENT_API_PRODUCT*) i
-    el nom del producte i la nova versió (*NEW_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar la versió actual del producte
+    (*CURRENT_PRODUCT_VERSION*) i la nova versió del producte (*NEW_PRODUCT_VERSION*). Per exemple: `1.1.0`.
 
 Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/).
 
@@ -147,12 +147,12 @@ Cal tenir present que:
 - Les pipelines **notificaran** dels resultats a les adreces de correu assignades.
 
 
-## Estàndars de nomenclatura i categories
+## Estàndard de nomenclatura i categories
 
 ### Nomenclatura
 
 El SIC aplica una sèrie d'**estàndards de nomenclatura** amb l'objectiu de facilitar la identificació a simple vista de productes
-i APIS publicades per part dels subscriptors i, a més, mitigar el possible risc de solapament de recursos. Les regles de
+i APIs publicades per part dels subscriptors i, a més, mitigar el possible risc de solapament de recursos. Les regles de
 nomenclatura aplicades són les següents:
 
 - Productes:
@@ -164,12 +164,12 @@ nomenclatura aplicades són les següents:
 
     * `x-ibm-name` obligatori amb prefix de codi de diàleg. Per exemple: "0192-api_a".
     * `basePath` inclou el codi de diàleg. Per exemple: "/0192/api_a". Per tal de resoldre la crida al `target-url`
-      de l’aplicació, s'implementa un Step a l’Assembly que s’encarrega d’eliminar el codi de diàleg del `requestPath`.
+      de l’aplicació, s'implementa un pas a l’`Assembly` que s’encarrega d’eliminar el codi de diàleg del `requestPath`.
 
 En qualsevol cas, si aquests criteris no s'acompleixen a la configuració del producte o les APIs, **el SIC durà a terme
 els reemplaçaments necessaris per a assegurar la seva aplicació**.
 
-Finalment, donat el nom del producte és immutable, aquest no és demana de cara a l’execució de les pipelines operatives
+Finalment, donat el nom del producte és immutable, aquest no es demana de cara a l’execució de les pipelines operatives
 de gestió del cicle de vida: DELETE, DEPRECATE, REPLACE, RETIRE i SUPERSEDE.
 
 ### Categories
@@ -266,7 +266,7 @@ security:
   - clientID: []
 ```
 
-En cas d'autenticació *Gicar*:
+En cas d'autenticació *Gicar* (entorn productiu):
 
 ```yaml
 securityDefinitions:
