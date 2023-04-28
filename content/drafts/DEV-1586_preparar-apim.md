@@ -157,26 +157,27 @@ nomenclatura aplicades són les següents:
 
 - Productes:
 
-    * `name` obligatori i immutable que es correspon amb el codi de diàleg, el separador "-" i el nom del projecte. Per exemple: "0192-apim_demo_project".
+    * `name` obligatori i immutable que es correspon amb el codi de diàleg, el caràcter separador "-" i el nom del projecte.
+      Per exemple: "0192-apim_demo_project".
     * `title` obligatori amb prefix de codi de diàleg, un espai en blanc i un text lliure. Per exemple: "0192 APIM Demo Project".
 
 - APIs:
 
-    * `x-ibm-name` obligatori amb prefix de codi de diàleg, el separador '-' i l'identificador de l'API. Per exemple: "0192-api_a".
+    * `x-ibm-name` obligatori amb prefix de codi de diàleg, el caràcter separador '-' i l'identificador de l'API.
+      Per exemple: "0192-api_a".
     * `basePath` inclou el codi de diàleg. Per exemple: "/0192/api_a". Per tal de resoldre la crida al `target-url`
       de l’aplicació, s'implementa un pas a l’`Assembly` que s’encarrega d’eliminar el codi de diàleg del `requestPath`.
 
 En qualsevol cas, si aquests criteris no s'acompleixen a la configuració del producte o les APIs, **el SIC durà a terme
-els reemplaçaments necessaris per a assegurar la seva aplicació**.
-
-Finalment, donat el nom del producte és immutable, aquest no es demana de cara a l’execució de les pipelines operatives
-de gestió del cicle de vida: DELETE, DEPRECATE, REPLACE, RETIRE i SUPERSEDE.
+els reemplaçaments necessaris per a assegurar la seva aplicació**. Donat el nom del producte és immutable, aquest no es
+demana de cara a l’execució de les pipelines operatives de gestió del cicle de vida: DELETE, DEPRECATE, REPLACE, RETIRE
+i SUPERSEDE.
 
 ### Categories
 
 Amb l'objectiu de permetre l'aplicació de criteris de cerca sobre productes i APIs publicades als diferents catàlegs,
 el SIC s'encarrega de la **injecció automàtica de dos nivells estàndards de categories** per codi de diàleg i nom del
-projecte. Aquestes categories no invalidaran en cap cas les que es puguin haver configurat a la configuració,
+projecte. Aquestes categories no invalidaran en cap cas les que es puguin haver indicat a la configuració,
 simplement s'afegiran si no hi són.
 
 ### Exemples
