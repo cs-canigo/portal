@@ -1,6 +1,6 @@
 +++
 date        = "2023-05-02"
-title       = "SIC. Millores al desplegament API Manager corporatiu al SIC 3.0: nomenclatura, categories i altres"
+title       = "SIC. Millores al desplegament API Manager corporatiu al SIC 3.0: nomenclatura i categories de cerca"
 description = "El SIC 3.0 incorpora millores per a dur a terme la publicació i el desplegament automatitzat de les APIS de producte."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
@@ -44,7 +44,7 @@ els reemplaçaments necessaris per a assegurar la seva aplicació**. Donat el no
 demana de cara a l’execució de les pipelines operatives de gestió del cicle de vida: DELETE, DEPRECATE, REPLACE, RETIRE
 i SUPERSEDE.
 
-### Categories
+### Categories de cerca
 
 Amb l'objectiu de permetre l'aplicació de criteris de cerca sobre productes i APIs publicades als diferents catàlegs,
 el SIC s'encarrega de la **injecció automàtica de dos nivells estàndards de categories** per codi de diàleg i nom del
