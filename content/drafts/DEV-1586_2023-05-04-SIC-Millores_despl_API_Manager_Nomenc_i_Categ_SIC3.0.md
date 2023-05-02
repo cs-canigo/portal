@@ -92,17 +92,18 @@ x-ibm-configuration:
 Per la qual cosa, i pel que fa als productes integrats al SIC que requereixen regularització, es preveu la següent
 estratègia posterior a la posada en servei:
 
-- 1. El lot d'aplicacions desplega una nova versió del producte normalitzada mitjançant la pipeline de publicació de versions.
+1. El lot d'aplicacions desplega una nova versió del producte normalitzada mitjançant la pipeline de publicació de versions.
 
-- 2. A partir d'aquest moment, les pipelines del SIC de gestió del cicle de vida de les APIs (DELETE, DEPRECATE, REPLACE,
-  RETIRE i SUPERSEDE) deixaran de ser operatives temporalment ja que passaràn a gestionar el nou identificador de producte publicat.
-  Per la qual cosa, cal fer una [Petició de suport a la OT API Manager](/apim/suport/#aplicacions-en-servei) per tal de:
+2. A partir d'aquest moment, les pipelines del SIC de gestió del cicle de vida de les APIs (DELETE, DEPRECATE, REPLACE,
+RETIRE i SUPERSEDE) deixaran de ser operatives temporalment, ja que passaran a gestionar el nou identificador de producte
+publicat. Per la qual cosa, cal fer una [Petició de suport a l'OT API Manager](/apim/suport/#aplicacions-en-servei)
+per tal de:
 
-    * Indicar que el nou producte com a "migration target" del producte a retirar.
+    * Indicar que el nou producte com a "migration target" del producte a retirar,
 
-    * Dur a terme la migració de subscripcions cap al nou producte.
+    * Dur a terme la migració de subscripcions cap al nou producte,
 
-    * Retirar el producte antic, que haurà quedat sense subscripcions i ja es podrà esborrar sense impacte.
+    * Finalment, retirar el producte antic, que haurà quedat sense subscripcions i ja es podrà esborrar sense impacte.
 
 
 <br/><br/>

@@ -7,14 +7,12 @@ description = "El SIC preveu implementar el doble factor d'autenticació (MFA) e
 #key         = "MAIG2023"
 +++
 
-En breu està previst implementar el doble factor d’autenticació (MFA) per tal de millorar la seguretat en l’accés als
+En breu està previst **implementar el doble factor d’autenticació (MFA)** per tal de millorar la seguretat en l’accés als
 següents serveis:
 
-- CI/CD 3.0 (Jenkins)
-
-- Registre d'imatges (Harbor)
-
+- Servei d'Integració Contínua 3.0
 - Servei de Binaris
+- Servei Registre d'imatges
 
 Properament rebreu el comunicat de confirmació d’activació d’aquesta funcionalitat, indicant la data exacta en que
 s’activarà i les instruccions que haureu de seguir.
