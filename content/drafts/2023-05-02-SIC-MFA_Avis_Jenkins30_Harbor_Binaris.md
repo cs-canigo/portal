@@ -1,7 +1,7 @@
 +++
 date        = "2023-05-02"
 title       = "SIC. MFA als serveis del SIC"
-description = "El SIC preveu implementar el doble factor d'autenticació (MFA) en l'accés als serveis: CI/CD 3.0, Registre d'imatges i Servei de Binaris."
+description = "El SIC preveu implementar el doble factor d'autenticació (MFA) en l'accés als serveis: Integració Contínua 3.0, Binaris i Registre d'imatges."
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
 #key         = "MAIG2023"
