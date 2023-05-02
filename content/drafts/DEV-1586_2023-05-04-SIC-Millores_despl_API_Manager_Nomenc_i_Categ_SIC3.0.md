@@ -99,11 +99,11 @@ RETIRE i SUPERSEDE) deixaran de ser operatives temporalment, ja que passaran a g
 publicat. Per la qual cosa, cal fer una [Petició de suport a l'OT API Manager](/apim/suport/#aplicacions-en-servei)
 per tal de:
 
-    * Indicar que el nou producte com a "migration target" del producte a retirar,
+    2.1. Indicar que el nou producte com a "migration target" del producte a retirar,
 
-    * Dur a terme la migració de subscripcions cap al nou producte,
+    2.2 Dur a terme la migració de subscripcions cap al nou producte,
 
-    * Finalment, retirar el producte antic, que haurà quedat sense subscripcions i ja es podrà esborrar sense impacte.
+    2.3 Finalment, retirar el producte antic, que haurà quedat sense subscripcions i ja es podrà esborrar sense impacte.
 
 
 <br/><br/>
