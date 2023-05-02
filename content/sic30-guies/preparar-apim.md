@@ -240,7 +240,7 @@ execute:
 
 ## Projecte d'exemple
 
-Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/apim-demo-project.zip), que mostra una configuració
+Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/0192-apim_demo_project.zip), que mostra una configuració
 completa d'un producte.
 
 <br/><br/><br/>
