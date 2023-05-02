@@ -2,9 +2,9 @@
 date        = "2023-05-02"
 title       = "SIC. Millores al desplegament API Manager corporatiu al SIC 3.0: nomenclatura, categories i altres"
 description = "El SIC 3.0 incorpora millores per a dur a terme la publicació i el desplegament automatitzat de les APIS de producte."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "MAIG2023"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "MAIG2023"
 +++
 
 ## Introducció
