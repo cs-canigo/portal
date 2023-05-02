@@ -12,7 +12,7 @@ següents serveis:
 
 - Servei d'Integració Contínua 3.0
 - Servei de Binaris
-- Servei Registre d'imatges
+- Servei de Registre d'Imatges
 
 Properament rebreu el comunicat de confirmació d’activació d’aquesta funcionalitat, indicant la data exacta en que
 s’activarà i les instruccions que haureu de seguir.
