@@ -110,7 +110,7 @@ per tal de:
 Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
 incorporat exemples:
 
-- [Com preparar productes i APIs per al desplegament a l'API Manager](/drafts/DEV-1586_preparar-apim/)
+- [Com preparar productes i APIs per al desplegament a l'API Manager](/sic30-guies/preparar-apim/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
