@@ -1,5 +1,5 @@
 +++
-date = "2022-12-19"
+date = "2023-05-04"
 title = "Com preparar productes i APIs per al desplegament a l'API Manager"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament de productes i APIs a l'API Manager corporatiu"
 sections = "SIC"
@@ -63,8 +63,8 @@ Per exemple:
 ```yaml
 version: 2.0.0 # aca schema version
 info:
-  version: 1.0.0
-  description: Api Connect Product
+  version: 1.0.1
+  description: APIM Demo Project
 global-env:
   - APIC_PRODUCT_FILE: 'product.yml'
 components:
@@ -76,39 +76,39 @@ components:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL: 'https://common-backend/pre'
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pre'
+                      - APIC_TARGET_URL: 'https://common-backend/pre' # aplicable a totes les apis excepte API_C
+                      - APIC_TARGET_URL_1: 'api_c.yml:https://backend-apic/pre'
         - name: public_pre
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL: 'https://common-backend/pre'
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pre'
+                      - APIC_TARGET_URL: 'https://common-backend/pre' # aplicable a totes les apis excepte API_C
+                      - APIC_TARGET_URL_1: 'api_c.yml:https://backend-apic/pre'
         - name: privat
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL: 'https://common-backend/pro'
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pro'
+                      - APIC_TARGET_URL: 'https://common-backend/pro' # aplicable a totes les apis excepte API_C
+                      - APIC_TARGET_URL_1: 'api_c.yml:https://backend-apic/pro'
         - name: public
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - APIC_TARGET_URL: 'https://common-backend/pro'
-                      - APIC_TARGET_URL_1: 'api_1.0.0.yml:https://backend-api1/pro'
+                      - APIC_TARGET_URL: 'https://common-backend/pro' # aplicable a totes les apis excepte API_C
+                      - APIC_TARGET_URL_1: 'api_c.yml:https://backend-apic/pro'
 notifications:
   email:
     recipients:
       - noreply@gencat.cat
 ```
 
-On es pot comprovar que s'ha definit una *target-url* global i una d'específica per a l'API_C.
+On es pot comprovar que s'ha definit una `target-url` global i una d'específica per a l'API_C.
 
 <br/>
 Per a més informació, podeu consultar: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
@@ -122,21 +122,21 @@ pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditz
 - **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades. El sistema permet redesplegar versions als
 catàlegs preproductius sempre que no hagin arribat a producció.
 - **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres). Caldrà seleccionar
-el catàleg del qual es desitja informació i indicar el nom del producte (*CURRENT_API_PRODUCT*). Per exemple: `consulta`.
+el catàleg del qual es desitja informació.
 - Operatives:
-    * **DELETE**: eliminació del producte. Caldrà seleccionar el catàleg sobre el qual es desitja esborrar i indicar el nom del
-    producte i la versió (*CURRENT_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    * **DELETE**: eliminació del producte. Caldrà seleccionar el catàleg sobre el qual es desitja esborrar i indicar la
+    versió del producte (*CURRENT_PRODUCT_VERSION*). Per exemple: `1.1.0`.
     * **DEPRECATE**: deprecació d’una versió del producte sense deixar cap versió vigent. Caldrà seleccionar el catàleg
-    sobre el qual es desitja deprecar i indicar el nom del producte i la versió (*CURRENT_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    sobre el qual es desitja deprecar i indicar la versió del producte (*CURRENT_PRODUCT_VERSION*). Per exemple: `1.1.0`.
     * **REPLACE**: retirada d’una de les versions vigents del producte i migració de subscripcions. Caldrà seleccionar
-    el catàleg sobre el qual es desitja reemplaçar, indicar el nom del producte i la versió actual (*CURRENT_API_PRODUCT*) i
-    el nom del producte i la nova versió (*NEW_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    el catàleg sobre el qual es desitja reemplaçar, indicar la versió actual del producte (*CURRENT_PRODUCT_VERSION*) i
+    la nova versió del producte (*NEW_PRODUCT_VERSION*). Per exemple: `1.1.0`.
     * **RETIRE**: retirada d’una versió del producte sense deixar cap versió vigent (les subscripcions es perden). Caldrà
-    seleccionar el catàleg sobre el qual es desitja retirar i indicar el nom del producte i la versió (*CURRENT_API_PRODUCT*).
-    Per exemple: `consulta:1.1.0`.
+    seleccionar el catàleg sobre el qual es desitja retirar i indicar la versió del producte (*CURRENT_PRODUCT_VERSION*).
+    Per exemple: `1.1.0`.
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”. Caldrà
-    seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar el nom del producte i la versió actual (*CURRENT_API_PRODUCT*) i
-    el nom del producte i la nova versió (*NEW_API_PRODUCT*). Per exemple: `consulta:1.1.0`.
+    seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar la versió actual del producte
+    (*CURRENT_PRODUCT_VERSION*) i la nova versió del producte (*NEW_PRODUCT_VERSION*). Per exemple: `1.1.0`.
 
 Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/).
 
@@ -145,6 +145,74 @@ Cal tenir present que:
 
 - Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
 - Les pipelines **notificaran** dels resultats a les adreces de correu assignades.
+
+
+## Estàndard de nomenclatura i categories
+
+### Nomenclatura
+
+El SIC aplica una sèrie d'**estàndards de nomenclatura** amb l'objectiu de facilitar la identificació a simple vista de productes
+i APIs publicades per part dels subscriptors i, a més, mitigar el possible risc de solapament de recursos. Les regles de
+nomenclatura aplicades són les següents:
+
+- Productes:
+
+    * `name` obligatori i immutable que es correspon amb el codi de diàleg, el caràcter separador "-" i el nom del projecte.
+      Per exemple: "0192-apim_demo_project".
+    * `title` obligatori amb prefix de codi de diàleg, un espai en blanc i un text lliure. Per exemple: "0192 APIM Demo Project".
+
+- APIs:
+
+    * `x-ibm-name` obligatori amb prefix de codi de diàleg, el caràcter separador '-' i l'identificador de l'API.
+      Per exemple: "0192-api_a".
+    * `basePath` inclou el codi de diàleg. Per exemple: "/0192/api_a". Per tal de resoldre la crida al `target-url`
+      de l’aplicació, s'implementa un pas a l’`Assembly` que s’encarrega d’eliminar el codi de diàleg del `requestPath`.
+
+En qualsevol cas, si aquests criteris no s'acompleixen a la configuració del producte o les APIs, **el SIC durà a terme
+els reemplaçaments necessaris per a assegurar la seva aplicació**. Donat el nom del producte és immutable, aquest no es
+demana de cara a l’execució de les pipelines operatives de gestió del cicle de vida: DELETE, DEPRECATE, REPLACE, RETIRE
+i SUPERSEDE.
+
+### Categories de cerca
+
+Amb l'objectiu de permetre l'aplicació de criteris de cerca sobre productes i APIs publicades als diferents catàlegs,
+el SIC s'encarrega de la **injecció automàtica de dos nivells estàndards de categories** per codi de diàleg i nom del
+projecte. Aquestes categories no invalidaran en cap cas les que es puguin haver indicat a la configuració,
+simplement s'afegiran si no hi són.
+
+### Exemples
+
+A continuació, es mostren exemples amb els criteris aplicats:
+
+- Exemple de configuració de producte:
+
+```yaml
+info:
+  version: 1.0.1
+  title: 0192 APIM Demo Project
+  name: 0192-apim_demo_project
+  categories:
+    - '0192'
+    - '0192/apim_demo_project'
+```
+
+- Exemple de configuració d'API:
+
+```yaml
+swagger: "2.0"
+info:
+  version: 1.0.1
+  title: 0192 APIM Demo Project Api_a
+  x-ibm-name: 0192-api_a
+basePath: /0192/api_a
+x-ibm-configuration:
+  ...
+  categories:
+    - '0192'
+    - '0192/apim_demo_project'
+    - '0192/apim_demo_project/api_a'
+  ...
+```
 
 ## Control i seguretat
 
@@ -187,46 +255,64 @@ visibility:
 - S’establirà **un mateix OAuth Provider per a totes les APIS d’un mateix catàleg**. Es contemplen dos tipus, que seran
 establerts per l'equip de SIC: *IBM Default* o *GICAR*.
 
-- **No es permetrà configurar especificitats singulars per a les APIS dins un pla**. En aquest sentit, la secció
-`x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` especificada al
-fitxer `aca.yml` de forma que sigui possible dur a terme un desplegament multientorn.
-
 En cas d'autenticació *IBM Default*:
 
 ```yaml
-execute:
-  - invoke:
-      title: invoke
-      version: 2.0.0
-      verb: keep
-      target-url: '<replace_target_url>$(request.path)'
-      follow-redirects: false
-      timeout: 60
-      parameter-control:
-        type: blocklist
-      header-control:
-        type: blocklist
-        values:
-          - ^X-IBM-Client-Id$
-      inject-proxy-headers: true
+securityDefinitions:
+  clientID:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+security:
+  - clientID: []
 ```
 
-En cas d'autenticació *Gicar*:
+En cas d'autenticació *Gicar* (entorn productiu):
+
+```yaml
+securityDefinitions:
+  clientID:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  produccio-gicar:
+    type: oauth2
+    x-ibm-oauth-provider: pro-apic-keycloak-cpd4
+    flow: accessCode
+    authorizationUrl: >-
+      https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/auth
+    tokenUrl: >-
+      https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
+    scopes:
+      email: scope email
+      profile: scope profile
+security:
+  - clientID: []
+    produccio-gicar:
+      - email
+      - profile
+```
+
+- **No es permetrà configurar especificitats singulars per a les APIS dins un pla**. En aquest sentit, la secció
+`x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` especificada al
+fitxer `aca.yml` de forma que sigui possible dur a terme un desplegament multientorn, tenint en compte la regla de
+nomenclatura aplicada al `basePath`.
 
 ```yaml
 execute:
-  - set-variable:
+  - gatewayscript:
+      title: gatewayscript
       version: 2.0.0
-      title: set-variable
-      actions:
-        - set: message.headers.authorization
-          value: $(message.original.headers.authorization)
-          type: string
+      description: Set new request path
+      source: |
+        const requestPath = context.get('request.path');
+        const newRequestPath = requestPath.replace(/^\/\d*\.*\d*/, "");
+        context.set('new.request.path', newRequestPath);
   - invoke:
       title: invoke
       version: 2.0.0
       verb: keep
-      target-url: '<replace_target_url>$(request.path)'
+      target-url: '<replace_target_url>$(new.request.path)'
       follow-redirects: false
       timeout: 60
       parameter-control:

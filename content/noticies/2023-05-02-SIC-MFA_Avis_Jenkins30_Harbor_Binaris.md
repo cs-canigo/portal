@@ -2,9 +2,9 @@
 date        = "2023-05-02"
 title       = "SIC. MFA als serveis del SIC"
 description = "El SIC preveu implementar el doble factor d'autenticació (MFA) en l'accés als serveis: Integració Contínua 3.0, Binaris i Registre d'imatges."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "MAIG2023"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "MAIG2023"
 +++
 
 En breu està previst **implementar el doble factor d’autenticació (MFA)** per tal de millorar la seguretat en l’accés als

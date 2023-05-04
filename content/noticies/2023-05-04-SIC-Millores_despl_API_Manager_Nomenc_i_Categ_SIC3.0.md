@@ -1,5 +1,5 @@
 +++
-date        = "2023-05-02"
+date        = "2023-05-04"
 title       = "SIC. Millores al desplegament API Manager corporatiu al SIC 3.0: nomenclatura i categories de cerca"
 description = "El SIC 3.0 incorpora millores per a dur a terme la publicació i el desplegament automatitzat de les APIS de producte."
 sections    = ["Notícies", "home"]
