@@ -6,7 +6,7 @@ sections    = ["Blog", "home"]
 blog_tags   = ["comunicacions"]
 categories  = ["comunicacions"]
 imatge      = "/images/bloc/2023/04/Entrada.JPG"
-key         = "ABRIL2023"
+key         = "MAIG2023"
 +++
 
 ---

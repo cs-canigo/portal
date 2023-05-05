@@ -87,7 +87,7 @@ x-ibm-configuration:
 
 ## Impacte i estratègia de regularització
 
-**La posada en servei de la funcionalitat descrita prevista per al 04/05/2023 és disruptiva** donat el nom del producte
+**La posada en servei el 04/05/2023 de la funcionalitat descrita és disruptiva** donat el nom del producte
 (`info.name`) i de les APIs (`info.x-ibm-name`) sofreix canvis, així com el seu endpoint de consum (`basePath`).
 Per la qual cosa, i pel que fa als productes integrats al SIC que requereixen regularització, es preveu la següent
 estratègia posterior a la posada en servei:
