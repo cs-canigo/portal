@@ -1,5 +1,5 @@
 +++
-date        = "2023-05-23"
+date        = "2023-05-12"
 title       = "Roadmap"
 description = "Roadmap previst per a la evolució del Framework Canigó"
 sections    = "Canigó"
