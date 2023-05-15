@@ -19,3 +19,10 @@ Es posen a disposició els següents manuals d'usuari on es detallen les caracte
 
 - [Manual del proveïdor d'APIs](/related/apim/APIM-Manual-Proveidor-APIs-V1.pdf): conceptes generals del servei APIM i com publicar les APIs.
 - [Manual del consumidor d'APIs](/related/apim/APIM-Manual-Consumidor-APIs-v1.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
+
+## Manuals d'operacions
+
+- [Manual operatives APIM](/related/apim/APIM_Manual_Operatives_V1.pdf): conceptes generals de la operativa de la oficina tecnica del api manager
+- [Manual seguretat APIM](/related/apim/Manual_Seguretat_APIM_V1.0.pdf): conceptes generals de la seguretat del api manager
+
+[Enllaç a la documentqació privada del projecte](https://gencat.sharepoint.com/:f:/s/CSCloud/ErpT2CTYpQxMqDmYbuBGLdMBH0tFIChwmW5hr8DK3T6OOA?e=hSYOO2)
