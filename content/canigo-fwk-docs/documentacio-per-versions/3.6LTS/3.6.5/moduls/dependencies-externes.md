@@ -11,8 +11,6 @@ weight      = 3
 
 ## Canigó 3.6.5
 
-TODO NRS
-
 |          Dependències externes   |      Canigó 3.6.5     |
 |--------------------------------- |---------------------- |
 | springframework                  |  5.3.18               |
