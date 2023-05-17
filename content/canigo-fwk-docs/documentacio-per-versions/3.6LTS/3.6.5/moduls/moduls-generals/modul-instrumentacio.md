@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-23"
+date        = "2023-05-17"
 title       = "Instrumentació"
 description = "Mòdul per generar dades d’instrumentació (nombre de peticions, nombre d’errors, …) de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -21,11 +21,11 @@ Dins d'aquest mòdul podem trobar les següents funcionalitats:
 
 Per tal d'instal-lar el mòdul d'instrumentació es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
+```xml
 <dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.operation.instrumentation</artifactId>
-    <version>${canigo.operation.instrumentation.version}</version>
+  <groupId>cat.gencat.ctti</groupId>
+  <artifactId>canigo.operation.instrumentation</artifactId>
+  <version>${canigo.operation.instrumentation.version}</version>
 </dependency>
 ```
 
@@ -40,18 +40,18 @@ L'eina de desenvolupament també genera automàticament el fitxer de propietats 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/instrumentation.properties
 
 <table>
-    <tbody>
-        <tr>
-            <th><b>Propietat</b></th>
-            <th><b>Requerit</b></th>
-            <th><b>Descripció</b></th>
-        </tr>
-        <tr>
-            <td> *.instrumentation.interval </td>
-            <td> No </td>
-            <td> Interval de refresc de les dades instrumentades en l'aplicació de monitorització. Per defecte: 60000 </td>
-        </tr>
-    </tbody>
+  <tbody>
+    <tr>
+      <th><b>Propietat</b></th>
+      <th><b>Requerit</b></th>
+      <th><b>Descripció</b></th>
+    </tr>
+    <tr>
+      <td> *.instrumentation.interval </td>
+      <td> No </td>
+      <td> Interval de refresc de les dades instrumentades en l'aplicació de monitorització. Per defecte: 60000 </td>
+    </tr>
+  </tbody>
 </table>
 
 ### Utilització del Mòdul
@@ -84,62 +84,43 @@ Mitjançant anotacions Java, el desenvolupador pot crear els seus propis punts d
 Classe de servei que serà invocada des del Rest Controller:
 
 ```java
-/**
- * Check status for several backend
- *
- * @author
- *
- */
 @Service("statusService")
 public class StatusService {
 
-	@Autowired
-        private GenericDAO<User, Integer> dao;
+  @Autowired
+  private GenericDAO<User, Integer> dao;
 
+  @CheckStatus
+  public void checkPSIS() throws IOException {
+    URL myUrl = new URL("http://psis.catcert.net/psis/catcert/dss");
+    URLConnection myConn = (HttpURLConnection)myUrl.openConnection();
+    myConn.setRequestProperty("User-agent","Mozilla/4.0");
+    InputStreamReader is = null;
+    BufferedReader br = null;
+    
+    try {
+      is = new InputStreamReader(myConn.getInputStream());
+      br = new BufferedReader(is);
+      br.readLine();
+    } finally {
+      if(is!=null) {
+        is.close();
+      }
+      if(br!=null) {
+        br.close();
+      }
+    }
+  }
 
-	/**
-        * Check PSIS
-        * @throws IOException
-        */
-        @CheckStatus
-        public void checkPSIS() throws IOException{
-	        URL myUrl = new URL("http://psis.catcert.net/psis/catcert/dss");
-         	URLConnection myConn = (HttpURLConnection)myUrl.openConnection();
-        	myConn.setRequestProperty("User-agent","Mozilla/4.0");
-        	InputStreamReader is = null;
-        	BufferedReader br = null;
-        	try{
-	        	is = new InputStreamReader(myConn.getInputStream());
-		        br = new BufferedReader(is);
-            		br.readLine();
-          	}finally{
-	         	if(is!=null){
-		        	is.close();
-          		}
-	          	if(br!=null){
-		        	br.close();
-           		}
-	         }
-         }
+  @CheckStatus
+  public void checkDataBaseConnection() {
+    dao.get(1);
+  }
 
-	/**
-	 * Database check
-	 */
-	@CheckStatus
-	public void checkDataBaseConnection(){
-		dao.get(1);
-	}
-
-	/**
-	 * Always IOException
-	 * @throws IOException
-	 */
-	@CheckStatus
-	public void checkLDAP() throws IOException{
-	  .....
-          .....
-	}
-
+  @CheckStatus
+  public void checkLDAP() throws IOException {
+    .....
+  }
 }
 ```
 
@@ -156,21 +137,16 @@ Amb l'anotació @Trace, el desenvolupador pot marcar un mètode d'una classe ges
 ```java
 @Service("myService")
 public class ServiceImpl implements Service {
-
-
-	@Trace
-	public void doSomething(){
-		.....
-                .....
-	}
-
-
+  @Trace
+  public void doSomething(){
+    .....
+  }
 }
 ```
 
 On el resultat de l'execució del mètode ens deixarà la següent traça:
 
-```
+```txt
 canigo Message: XX XXX 2010 16:45:40,774 INFO  [main] cat.gencat.ctti.canigo.arch.operation.instrumentation.trace.AspectTrace - ea84cbe0-60ff-4ba5-a4e8-d90465101ac3;loc;nodeApp1;0;Service.doSomething();KO;
 ```
 
