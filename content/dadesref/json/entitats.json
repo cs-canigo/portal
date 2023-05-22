@@ -768,6 +768,21 @@
                 "idatapublicacio": "22/06/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2022-productes-comer%C3%A7-exterior-/ibt9-hnw2",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "NC 2023 - V01",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització, revisió any 2023. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "NC_PRODUCTES_COMERÇ_EXTERIOR",
@@ -927,6 +942,21 @@
                 "idatapublicacio": "22/06/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2020-productes-industrials-/w3ui-y7z7",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2021 - V01",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització, revisió any 2021. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "PRODCOM_EIP_PRODUCTES_INDUSTRIALS",
@@ -2270,6 +2300,21 @@
                 "idatapublicacio": "20/04/2020",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Comarques-Catalunya-i-Aran/gsjn-sema",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per afegir la comarca del Lluçanès. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "COMARQUES",
@@ -2414,6 +2459,21 @@
                 "idatapublicacio": "26/04/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per assingar muncipis a la nova comarca del Lluçanès. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "MUNICIPIS_CAT_GEO",
@@ -2607,6 +2667,21 @@
                 "idatapublicacio": "26/04/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V13",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
@@ -2764,6 +2839,21 @@
                 "idatapublicacio": "22/12/2021",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pa%C3%AFsos/u6te-2guv",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per afegir traducció del nom a l'anglès i al castellà. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "08/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "PAISOS",
@@ -3157,6 +3247,21 @@
                 "idatapublicacio": "26/04/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V12",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi i unitats poblacionals. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
@@ -3340,6 +3445,21 @@
                 "idatapublicacio": "27/04/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Festius-generals-de-Catalunya/8qnu-agns",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per afegir informació de l'any 2023. Data prevista actualització 24/05/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "22/05/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "FESTIUS_GENERALS_CAT",

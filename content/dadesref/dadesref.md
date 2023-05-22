@@ -1,5 +1,5 @@
 +++
-date        = "2023-04-26"
+date        = "2023-05-22"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -110,6 +110,8 @@ tr.shown td.details-control {
 	function construir_tab_instancies ( d ) {
 	    var vRowInstancia;
 		var vStyle;
+		var vButton;
+		
         
 		vRowInstancia='';
 		for(var i=0,z=d.instancies.length;i<z;i++){
@@ -119,6 +121,12 @@ tr.shown td.details-control {
 			{
 				vStyle='style="color:darkgrey;"';
 			}
+
+            vButton='<td></td>';
+			if (d.instancies[i].idatapublicacio!="")
+			{
+				vButton='<td style="text-align:center;"><button class="myButton">Detall</button></td>';
+			}			
 			
 			vRowInstancia=vRowInstancia+'<tr>'+
 					'<td '+vStyle+'>'+d.instancies[i].inom+'</td>'+
@@ -127,7 +135,7 @@ tr.shown td.details-control {
                     '<td '+vStyle+'>'+d.instancies[i].iestat+'</td>'+
 					'<td '+vStyle+'>'+d.instancies[i].idatapublicacio+'</td>'+
 					'<td '+vStyle+'>'+d.instancies[i].idataobsoleta+'</td>'+
-                    '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
+                    vButton+
 				'</tr>';
 		}
 
