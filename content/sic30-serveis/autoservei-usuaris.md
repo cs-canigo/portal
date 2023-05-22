@@ -1,5 +1,5 @@
 +++
-date = "2020-06-17"
+date = "2023-05-22"
 title = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)"
 aliases = [
@@ -152,12 +152,14 @@ Els mateixos usuaris Release Manager podran consultar, editar, afegir i eliminar
 Per a concedir accés sobre un projecte caldrà:
 
 * Accedir al **projecte**.
-* Mitjançant el menú superior cal seleccionar "**Settings**" i, dins aquest ,"**Members**".
+* Mitjançant el menú superior cal seleccionar "**Project information**" i, dins aquest ,"**Members**".
+* A la plana que apareix, pressionar el botó "**Invite members**".
 * Al formulari que apareix, cercar l'usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S'aconsella **cercar per NIF**.
 * Escollir el **rol** que ha de tenir l'usuari dins el projecte:
 	* Rol Mantainer: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
 	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).
-* Prémer el botó de "**Add to Project**"
+	* Rol Reporter: únicament permetrà visualitzar el codi font del projecte.
+* Prémer el botó de "**Invite**"
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
 <br/>
