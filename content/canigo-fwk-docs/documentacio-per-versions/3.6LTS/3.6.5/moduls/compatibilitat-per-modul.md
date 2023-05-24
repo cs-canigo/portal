@@ -1,5 +1,5 @@
 +++
-date        = "2023-05-17"
+date        = "2023-05-24"
 title       = "Compatibilitat per mòdul"
 description = "Compatibilitat per mòdul Canigó 3.6.5"
 sections    = "canigo-fwk-docs"
@@ -74,7 +74,7 @@ weight      = 1
 | **canigo.support.sftp**                            		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.support.sftp/3.0.4/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 |                                                   		|               																																|
-| **canigo.operation.instrumentation**               		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.operation.instrumentation/3.0.5/) |
+| **canigo.operation.instrumentation**               		| [3.0.6](/canigo-fwk-docs/documentacio-llibreries/canigo.operation.instrumentation/3.0.6/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.web.rs                                   			| [3.0.0,3.1.0) 																																|
 | canigo.support.mailing                           			| [3.0.0,3.1.0) 																																|
