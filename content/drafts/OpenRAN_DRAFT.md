@@ -37,6 +37,7 @@ Tradicionalment, en l'àmbit de les xarxes d'accés per ràdio (RAN), els operad
 El Open RAN és una tecnologia que es pot aplicar a qualsevol generació de xarxes mòbils (encara que hagi sorgit principalment per al seu ús, en les xarxes de 5G).<br>
 
 Està basada en 5 principis:
+
 * Interfícies obertes<br>
 * COTS com a maquinari<br>
 * Virtualització i funcionalitats definides per programari<br>
