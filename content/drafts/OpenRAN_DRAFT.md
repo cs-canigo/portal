@@ -127,7 +127,7 @@ S’estan identificant **alguns problemes** que s’han d'abordar a mesura que s
 * **Deficiència energètica:** El creixement de la IA i l'ús intensiu de recursos computacionals, poden plantejar desafiaments en termes de consum d'energia. A mesura que s'apliquen tècniques de IA/ML en Open RAN, és important trobar maneres d'optimitzar el rendiment energètic i reduir el consum d'energia. Això implica la implementació d'algorismes eficients, el disseny de maquinari energèticament eficient i l'adopció de polítiques de gestió d'energia adequades.<br>
 * **Costos i retorn d'inversió:** Si bé Open RAN té el potencial de reduir costos i augmentar la competència en permetre l'elecció de proveïdors, també pot generar desafiaments en termes de costos d'implementació i manteniment. Els operadors de xarxes han d'avaluar acuradament els costos associats cap a la transició a Open RAN i garantir un retorn d'inversió adequat.<br>
 
-### **La importància del Open RAN pel 5G** 
+### **La importància de l'Open RAN pel 5G** 
 
 El desenvolupament del 5G és un problema per les companyies de telecomunicacions. Els costos de la infraestructura de les xarxes anteriors ja eren elevats, i amb el 5G s'han disparat. Atès que el rang d'abast és molt més curt que el de les generacions anteriors i que les xarxes 5G necessiten més estacions base per a aconseguir donar la mateixa cobertura que amb altres xarxes, s’ ha d'invertir més en equipament. I si es segueix amb la dependència d'un fabricant pel seu desenvolupament i manteniment, els costos generals es disparen. D'aquí ve l’interès d’Open RAN, ja que augmenta l'oferta de components que es poden utilitzar, i per tant, la competència de preus.<br>
 
