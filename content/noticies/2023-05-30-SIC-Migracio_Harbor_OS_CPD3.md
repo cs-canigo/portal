@@ -1,10 +1,10 @@
 +++
 date        = "2023-05-30"
-title       = "SIC. Migració Registre d'imatges (Harbor) a Plataforma Openshift de Cpd3"
+title       = "SIC. Migració Registre d'imatges a Plataforma Openshift de Cpd3"
 description = "El Registre d'imatges (Harbor) s'ha migrat a la Plataforma Openshift de Cpd3 amb l'objectiu de disposar d'un producte actualitzat, millorar el rendiment, el monitoratge i, en general, l'experiència d'usuari."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "JUNY2023"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "JUNY2023"
 +++
 
 ## Introducció
