@@ -32,7 +32,6 @@ autoritzats, i que es puguin fer accessos no autoritzats sobre els serveis als q
 Per a poder utilitzar amb normalitat el nou sistema, i donat que és un element de seguretat personal, **és necessari que
 feu un procés d’incorporació al mateix de forma individual**. Us adjuntem un enllaç a la [**Guia de registre i utilització MFA**]
 (/related/gicar/guia-registre-i-utilitzacio-mfa-gicar-v4-mobil.pdf) que explica pas a pas el detall d’aquest procés.
-
 A partir de l’activació del nou element de seguretat, **cada cop que entreu als serveis**, a més del vostre codi d'usuari (NIF)
 i la contrasenya corporativa de GICAR, **se us sol·licitarà que proporcioneu el segon factor d’autenticació**. Aquest segon
 factor d’autenticació es podrà confirmar des del telèfon mòbil que hagueu registrat en el procés d’incorporació descrit
@@ -40,7 +39,8 @@ a la guia.
 
 
 <br/><br/>
-Si teniu alguna pregunta sobre el procés d'autenticació multifactor, no dubteu a posar-vos en contacte amb l'Oficina Tècnica
+Si teniu qualsevol dubte o problema sobre el procés d'autenticació multifactor, poseu-vos en contacte amb l'Oficina Tècnica
 de Gicar a través del canal [PAUTIC](https://pauticgencat.onbmc.com/).
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema sobre els serveis del SIC, podeu revisar les [**Preguntes Freqüents**] (/sic/faq)
+o utilitzar els canals de [**Suport**] (/sic/suport).
