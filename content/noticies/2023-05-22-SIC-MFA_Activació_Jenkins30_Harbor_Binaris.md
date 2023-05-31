@@ -1,5 +1,5 @@
 +++
-date        = "2023-05-23"
+date        = "2023-05-22"
 title       = "SIC. MFA als serveis del SIC"
 description = "El SIC posarà en servei el doble factor d'autenticació (MFA) en l'accés als serveis: Integració Contínua 3.0, Binaris i Registre d'imatges."
 sections    = ["Notícies", "home"]
