@@ -17,7 +17,7 @@ d’autenticació multifactor (MFA)**.
 
 ## Novetats
 
-El pròxim **dia 08/06/2023 està previst habilitar l'autenticació MFA en l'accés als següents serveis del SIC**:
+El pròxim **dia 13/06/2023 està previst habilitar l'autenticació MFA en l'accés als següents serveis del SIC**:
 
 - **Servei d'Integració Contínua 3.0**
 - **Servei de Binaris**

@@ -68,7 +68,7 @@ un tag productiu (DEPLOY-TAG).
 
 ### Posada en servei
 
-**El dia 08/06/2023 està previst posar en servei el nou Registre d'Imatges** (https://registreimatges.sic.intranet.gencat.cat/)
+**El dia 13/06/2023 està previst posar en servei el nou Registre d'Imatges** (https://registreimatges.sic.intranet.gencat.cat/)
 que passa a substituir el servei antic (https://docker-registry.ctti.extranet.gencat.cat).
 
 ### Impacte
