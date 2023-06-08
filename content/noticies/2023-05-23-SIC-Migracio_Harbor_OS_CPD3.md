@@ -51,14 +51,14 @@ A continuació es detalla la relació de principals canvis en l'operativa del se
 - Els **projectes d'imatges de les aplicacions s'aprovisionen automàticament** en cas de no existir i seran accessibles
 pels Release Managers del codi de diàleg.
 
-- Les pipelines de desplegament etiquetaran les imatges de les aplicacions amb l'etiqueta `production` si aquestes
-s'han desplegat amb èxit a producció. A tal efecte, les pipelines incorporen una nova etapa `Registry label` que
+- Les pipelines de desplegament etiquetaran les imatges de les aplicacions amb l'**etiqueta `production` si aquestes
+s'han desplegat amb èxit a producció**. A tal efecte, les pipelines incorporen una nova etapa `Registry label` que
 s'encarregarà de realitzar aquesta acció.
 
 - No s'aplica una política d'immutabilitat d'imatges, per la qual cosa, els usuaris poden tornar a pujar una imatge
 amb la mateixa etiqueta (tag) i això implicarà que la imatge anterior se sobreescriurà, de forma que l'etiqueta passarà
-a apuntar a la nova imatge quedant l'anterior sense aquesta. Aquestes imatges sense etiqueta seran eliminades automàticament
-pel procés de neteja setmanal. Cal, per tant, tenir-ho en compte i evitar referenciar imatges pel seu sha256 recomanant
+a apuntar a la nova imatge quedant l'anterior sense aquesta. Aquestes **imatges sense etiqueta seran eliminades automàticament
+pel procés de neteja setmanal**. Cal, per tant, tenir-ho en compte i evitar referenciar imatges pel seu sha256 recomanant
 fer-ho per etiqueta.
 
 - S'aplica una **política de retenció** sobre les imatges de les aplicacions, de forma que únicament es respectaran les
