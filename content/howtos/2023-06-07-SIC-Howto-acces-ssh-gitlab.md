@@ -9,35 +9,33 @@ key          = "JULIOL2023"
 
 ## Introducció
 
-Per tal de millorar la seguretat i facilitar als usuaris l'accés al [Servei de Custòdia de Codi] (/sic30-serveis/scm/),
-s'ha procedit a habilitar l'**autenticació xifrada amb parell de claus pública/privada via protocol SSH**.
+Per tal de millorar la seguretat i facilitar als usuaris l'accés al [Servei de Custòdia de Codi] (/sic30-serveis/scm/)
+(Gitlab), s'ha habilitat l'**autenticació xifrada amb parell de claus pública/privada via protocol SSH**.
 Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de fer-ne ús.
 
 ## Configuració
 
-S'indiquen les passes que cal seguir en un entorn local Linux amb les eines OpenSSH instal·lades.
-En cas de no disposar d'aquestes eines, podeu executar la següent comanda:
+A continuació, s'indiquen les passes que cal seguir en un entorn local Linux amb les eines OpenSSH instal·lades per a
+habilitar aquesta funcionalitat. En cas de no disposar d'aquestes eines, podeu executar la següent comanda:
 
 ```bash
 sudo apt install openssh-client
 ```
 
-A continuació, s'indica la configuració a realitzar.
-
 ### 1. Generar les claus SSH
 
-Cal generar un parell de claus SSH. En el següent exemple es crearà un directori específic per a desar-hi les claus:
+Caldrà generar un parell de claus SSH. En el següent exemple es crearà un directori específic per a desar-hi les claus:
 
 ```bash
 mkdir ~/.ssh/gitlab_ssh
 ssh-keygen -t rsa -b 4096 -C "<identificador>" -f ~/.ssh/gitlab_ssh/myuser
 ```
 
-NOTA: `-C “\<identificador\>”` és opcional. Si s’omet, l'eina genera automàticament un identificador en format `myuser@host`.
-En aquest article utilitzarem, de forma il·lustrativa, `myuser@host`.
+NOTA: el paràmetre `-C “\<identificador\>”` és opcional. Si s’omet, l'eina genera automàticament un identificador en
+format `myuser@host`. En aquest article utilitzarem, de forma il·lustrativa, `myuser@host`.
 </br>
 
-Exemple: 
+Per exemple:
 
 ```bash
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/gitlab_ssh/myuser
@@ -67,9 +65,7 @@ The key's randomart image is:
 
 ### 2. Afegir la clau privada a l’agent d’autenticació SSH
 
-A continuació, cal afegir la clau privada generada a l’agent d’autenticació SSH:
-
-Exemple:
+A continuació, caldrà afegir la clau privada generada a l’agent d’autenticació SSH. Per exemple:
 
 ```bash
 ssh-add ~/.ssh/gitlab_ssh/myuser
@@ -78,9 +74,7 @@ Identity added: /home/myuser/.ssh/gitlab_ssh/myuser (myuser@host)
 
 ### 3. Afegir entrada al fitxer de configuració SSH
 
-A continuació, cal afegir la següent entrada al fitxer de configuració de SSH: `~/.ssh/config`.
-
-Exemple:
+A continuació, caldrà afegir la següent entrada al fitxer de configuració SSH: `~/.ssh/config`. Per exemple:
 
 ```
 Host git.intranet.gencat.cat
@@ -91,9 +85,8 @@ Host git.intranet.gencat.cat
 
 ### 4. Obtenir la clau pública generada
 
-A continuació, cal copiar al porta-retalls el text/valor de la clau pública generada `~/.ssh/gitlab_ssh/myuser.pub`.
-
-Exemple:
+A continuació, caldrà obtenir el text/valor de la clau pública generada `~/.ssh/gitlab_ssh/myuser.pub`.
+Per exemple:
 
 ```bash
 cat /home/myuser/.ssh/gitlab_ssh/myuser.pub
@@ -108,18 +101,18 @@ xclip -sel clip < ~/.ssh/gitlab_ssh/mysuser.pub
 
 ### 5. Configurar la clau al compte Gitlab
 
-A continuació, cal crear la clau SSH a la configuració del nostre compte Gitlab:
+A continuació, caldrà crear la clau SSH a la configuració del nostre compte al Gitlab corporatiu:
 
-- Accedir a https://git.intranet.gencat.cat/-/profile/keys, i
+- Accediu a https://git.intranet.gencat.cat/-/profile/keys, i
 
-- Enganxar el valor de la clau pública indicant un títol identificador i, si convé, una data de caducitat.
+- Enganxeu el valor de la clau pública indicant un títol identificador i, si convé, una data de caducitat.
 
 ![Gitlab ssh key](/related/sic/gitlab-clau-ssh.png)
 </br>
 
-### 6. Test
+### 6. Test final
 
-Finalment, cal comprovar el correcte funcionament executant la següent comanda:
+Per acabar, caldrà comprovar el correcte funcionament executant la següent comanda:
 
 ```bash
 ssh -T git@git.intranet.gencat.cat
@@ -128,4 +121,5 @@ Welcome to GitLab, @XXXXXXXXB!
 
 ## Documentació de referència
 
-Per a més detall, podeu consultar: [Use SSH keys to communicate with GitLab](https://git.intranet.gencat.cat/help/user/ssh.md).
+Per a més informació, podeu consultar:
+[Use SSH keys to communicate with GitLab](https://git.intranet.gencat.cat/help/user/ssh.md).
