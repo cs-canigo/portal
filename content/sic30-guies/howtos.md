@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2023-06-09"
 title = "HOWTOs"
 description = "HOWTOs d'utilitat"
 sections = "SIC"
@@ -17,3 +17,4 @@ En aquest apartat s’aniran afegint un seguit d'articles per tal de facilitar l
 - [Definir exclusions al SonarQube](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube)
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
+- [Configurar accés SSH per connectar a Gitlab](/howtos/2023-06-07-SIC-Howto-acces-ssh-gitlab)

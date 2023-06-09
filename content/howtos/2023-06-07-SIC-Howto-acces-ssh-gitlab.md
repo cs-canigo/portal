@@ -2,9 +2,9 @@
 date         = "2023-06-07"
 title        = "SIC. Configurar accés SSH per connectar a Gitlab"
 description  = "Com configurar un sistema local per accés a Gitlab autenticant amb claus SSH"
-#section     = "howtos"
-#categories  = ["SIC"]
-#key         = "JULIOL2023"
+section      = "howtos"
+categories   = ["SIC"]
+key          = "JULIOL2023"
 +++
 
 ## Introducció
@@ -24,7 +24,7 @@ sudo apt install openssh-client
 
 A continuació, s'indica la configuració a realitzar.
 
-### 1. Generar claus SSH
+### 1. Generar les claus SSH
 
 Cal generar un parell de claus SSH. En el següent exemple es crearà un directori específic per a desar-hi les claus:
 
@@ -34,7 +34,7 @@ ssh-keygen -t rsa -b 4096 -C "<identificador>" -f ~/.ssh/gitlab_ssh/myuser
 ```
 
 NOTA: `-C “\<identificador\>”` és opcional. Si s’omet, l'eina genera automàticament un identificador en format `myuser@host`.
-En aquest document utilitzarem, de forma il·lustrativa, `myuser@host`.
+En aquest article utilitzarem, de forma il·lustrativa, `myuser@host`.
 </br>
 
 Exemple: 
@@ -65,7 +65,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-### 2. Afegir clau privada a l’agent d’autenticació SSH
+### 2. Afegir la clau privada a l’agent d’autenticació SSH
 
 A continuació, cal afegir la clau privada generada a l’agent d’autenticació SSH:
 
@@ -89,7 +89,7 @@ Host git.intranet.gencat.cat
   IdentityFile ~/.ssh/gitlab_ssh/myuser <--- Afegiu la ruta de la clau privada creada localment
 ```
 
-### 4. Obtenir clau pública generada
+### 4. Obtenir la clau pública generada
 
 A continuació, cal copiar al porta-retalls el text/valor de la clau pública generada `~/.ssh/gitlab_ssh/myuser.pub`.
 
@@ -106,20 +106,20 @@ O bé, executant:
 xclip -sel clip < ~/.ssh/gitlab_ssh/mysuser.pub
 ```
 
-### 5. Crear clau SSH a Gitlab
+### 5. Configurar la clau al compte Gitlab
 
 A continuació, cal crear la clau SSH a la configuració del nostre compte Gitlab:
 
-- Accedir a https://git.intranet.gencat.cat/-/profile/keys i
+- Accedir a https://git.intranet.gencat.cat/-/profile/keys, i
 
 - Enganxar el valor de la clau pública indicant un títol identificador i, si convé, una data de caducitat.
 
 ![Gitlab ssh key](/related/sic/gitlab-clau-ssh.png)
 </br>
 
-### 6. Executar test
+### 6. Test
 
-Finalment, cal comprovar el funcionament correcte executant el següent:
+Finalment, cal comprovar el correcte funcionament executant la següent comanda:
 
 ```bash
 ssh -T git@git.intranet.gencat.cat
@@ -128,4 +128,4 @@ Welcome to GitLab, @XXXXXXXXB!
 
 ## Documentació de referència
 
-Use SSH keys to communicate with GitLab: https://git.intranet.gencat.cat/help/user/ssh.md.
+Per a més detall, podeu consultar: [Use SSH keys to communicate with GitLab](https://git.intranet.gencat.cat/help/user/ssh.md).
