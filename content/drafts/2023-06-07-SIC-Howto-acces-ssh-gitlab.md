@@ -2,10 +2,11 @@
 date        = "2023-06-07"
 title       = "SIC. Configurar accés SSH per connectar a Gitlab"
 description = "Howto:Com configurar un sistema local per accés a Gitlab autenticant amb claus SSH"
-<!--- section     = "howtos" -->
-<!--- categories  = ["SIC"] -->
-<!--- key         = "JUNY2023" -->
+#section    = "howtos"
+#categories = ["SIC"]
+#key        = "JUNY2023"
 +++
+
 # Howto Connectar a Gitlab amb claus SSH
 
 ## Introducció
@@ -101,4 +102,4 @@ ssh -T git@git.intranet.gencat.cat
 
 ## Documents de referència
 Use SSH keys to communicate with GitLab
-* https://git.intranet.gencat.cat/help/user/ssh.md 
+* https://git.intranet.gencat.cat/help/user/ssh.md
