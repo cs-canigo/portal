@@ -1,10 +1,10 @@
 +++
-date        = "2023-06-07"
-title       = "SIC. Configurar accés SSH per connectar a Gitlab"
-description = "Howto:Com configurar un sistema local per accés a Gitlab autenticant amb claus SSH"
-#section    = "howtos"
-#categories = ["SIC"]
-#key        = "JUNY2023"
+date         = "2023-06-07"
+title        = "SIC. Configurar accés SSH per connectar a Gitlab"
+description  = "Com configurar un sistema local per accés a Gitlab autenticant amb claus SSH"
+#section     = "howtos"
+#categories  = ["SIC"]
+#key         = "JULIOL2023"
 +++
 
 # Howto Connectar a Gitlab amb claus SSH
