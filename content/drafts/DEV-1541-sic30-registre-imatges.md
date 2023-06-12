@@ -88,14 +88,14 @@ forma que, **cada imatge que es desplegui a les diferents plataformes en conteni
 
 Podrà accedir mitjançant el següent enllaç: https://registreimatges.sic.intranet.gencat.cat/.
 Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar
-de connectivitat, caldrà obrir una petició demanant l’obertura de Firewals dels seus entorns.
+de connectivitat, caldrà obrir una petició demanant l’obertura de Tallafocs dels seus entorns.
 
 </br>
-Haurà d’autenticar-se amb de les seves credencials d’accés GICAR, amb la següent visibilitat:
+Haurà d’autenticar-se amb les seves credencials d’accés GICAR, amb la següent visibilitat:
 
 - Disposaran d'**accés de lectura als diferents catàlegs públics** d'imatges,
 
-- **Els Release Managerss disposaran d'accés en mode lectura a les imatges de les seves aplicacions**. Si no disposa d’accés,
+- **Els Release Managers disposaran d'accés en mode lectura a les imatges de les seves aplicacions**. Si no disposa d’accés,
 haurà de sol·licitar-ho al seu responsable.
 
 ![Harbor login](/related/sic/3.0/harbor_login-new.png)

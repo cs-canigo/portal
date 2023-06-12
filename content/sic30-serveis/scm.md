@@ -31,7 +31,7 @@ Aquest repositori no és un entorn de desenvolupament, per lo que només les per
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
-Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l'obertura de Firewals dels seus entorns.
+Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l'obertura de Tallafocs dels seus entorns.
 
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei, així com la resta de membres de l'equip de desenvolupament als que es decideixi atorgar accés. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable. <br/>
 

@@ -110,7 +110,7 @@ proporcionant tota la informació necessària per a identificar-ne el problema.
 
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
 Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de
-connectivitat, caldrà obrir una petició demanant l'obertura de Firewalls dels seus entorns.
+connectivitat, caldrà obrir una petició demanant l'obertura de Tallafocs dels seus entorns.
 
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics
 de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
