@@ -1,5 +1,5 @@
 +++
-date        = "2018-11-15"
+date        = "2018-11-16"
 title       = "Principis d'arquitectura de sistemes d'informació"
 description = "Normas i directrius generals destinades a informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació."
 weight      = "1"
