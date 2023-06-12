@@ -27,7 +27,7 @@ Es tracta d’un registre privat sense cap repositori d'accés públic.
 Podeu accedir al catàleg d'imatges per a la construcció d'aplicacions (`builder`) mitjançant el següent enllaç:
 https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories.
 
-![Harbor images](/related/sic/harbor_docker_images.png)
+![Harbor images](/related/sic/3.0/harbor_docker_images.png)
 </br>
 
 ## Permisos d'accés
@@ -41,7 +41,7 @@ amb permís de lectura al projecte **gencat-sic-builders** que conté les imatge
 Podeu accedir al codi font del catàleg d'imatges, i a la documentació associada, mitjançant el següent enllaç: </br>
 https://git.intranet.gencat.cat/0192-intern/sic-builders.
 
-![Gitlab projects](/related/sic/docker_images_project.png)
+![Gitlab projects](/related/sic/3.0/docker_images_project.png)
 </br>
 
 ## Ús del registre privat
