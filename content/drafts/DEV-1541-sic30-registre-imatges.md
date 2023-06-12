@@ -105,7 +105,7 @@ haurà de sol·licitar-ho al seu responsable.
 
 Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2022-07-06-SIC-Howto-utilitzar-imatges-docker-builder).
 
-## Aspectes a tenir en compte
+### Aspectes a tenir en compte
 
 A continuació es detalla la relació de principals aspectes a tenir en compte:
 
