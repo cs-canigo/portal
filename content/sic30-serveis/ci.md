@@ -283,7 +283,7 @@ ans al contrari, l'estén per a acabar de concretar els requeriments propis del 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
-Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
+Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
 </div>
 
 <br/>

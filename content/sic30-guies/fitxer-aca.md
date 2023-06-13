@@ -227,7 +227,7 @@ global-env:
 ### components[].custom-builder
 
 Informació per a generar el contenidor que serà l'encarregat de construir l'aplicació o component. **Només caldrà indicar
-aquesta secció en cas que l’aplicació o component no pugui fer ús del** [**Registre d'imatges**](/sic30-serveis/cataleg-imatges/)
+aquesta secció en cas que l’aplicació o component no pugui fer ús del** [**Registre d'imatges**](/sic30-serveis/registre-imatges/)
 perquè disposa de requeriments propis.
 En aquest cas, l’element indicarà els diferents passos (`steps`) per a generar el contenidor, proporcionant informació sobre
 aquest (`container`) i les accions a executar (`execution`). Les imatges podran estendre del Registre d'imatges corporatiu.
@@ -309,7 +309,7 @@ components:
 La imatge pot ser de dos tipus:
 
 - `remote`: si la imatge del contenidor constructor (`builder`) és una de les imatges proporcionades al
-[Registre d'imatges corporatiu](/sic30-serveis/cataleg-imatges/).
+[Registre d'imatges corporatiu](/sic30-serveis/registre-imatges/).
 
 - `local`: si la imatge del contenidor constructor és pròpia (`custom builder`) creada en l’element
 [`components[].custom-builder`](#components-custom-builder).
@@ -317,7 +317,7 @@ La imatge pot ser de dos tipus:
 **components[].build.steps[].container.image.remote**
 
 Imatge i versió del contenidor constructor (`builder`) que cal utilitzar d’entre les disponibles al
-[**Registre d'imatges corporatiu**](/sic30-serveis/cataleg-imatges/).
+[**Registre d'imatges corporatiu**](/sic30-serveis/registre-imatges/).
 
 Caldrà definir el nom de la imatge (`name`) segons la següent estructura:
 

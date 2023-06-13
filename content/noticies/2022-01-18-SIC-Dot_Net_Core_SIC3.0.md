@@ -32,7 +32,7 @@ La **versió de .NET Core suportada actualment és la v.3.1** i s'anirà donant 
 
 <br/>
 Per a construir una aplicació o llibreria .NET Core al SIC 3.0 serà necessari fer ús d'una imatge de construcció disponible al
-[Catàleg d'imatges corporatiu](/sic30-serveis/cataleg-imatges/), on s'indica també com accedir al codi font d'aquestes.
+[Registre d'imatges corporatiu](/sic30-serveis/registre-imatges/), on s'indica també com accedir al codi font d'aquestes.
 
 ## Documentació
 
@@ -51,7 +51,7 @@ així com perde contrucció i publicació de llibreries:
 Per a més informació, podeu consultar els següents articles:
 
 - [Servei d'Integració contínua](/sic30-serveis/ci/)
-- [Catàleg d'imatges builder](/sic30-serveis/cataleg-imatges/)
+- [Registre d'imatges builder](/sic30-serveis/registre-imatges/)
 - [Com utilitzar imatges Docker Builder](/howtos/2022-07-06-SIC-Howto-utilitzar-imatges-docker-builder/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 

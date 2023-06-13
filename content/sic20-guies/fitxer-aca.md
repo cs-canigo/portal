@@ -300,7 +300,7 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 <div class="message information">
 Darrerament, s'ha adaptat el SIC per fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas
 cap a l'objectiu de migració.
-Aquest nou <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">catàleg d'imatges de construcció</a>
+Aquest nou <a href="https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/">registre d'imatges de construcció</a>
 proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
 de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
 es mantindrà la cobertura de configuració de tools/jdks referenciades actualment per les aplicacions.
@@ -509,7 +509,7 @@ que hem definit més amunt i que s'afegirà com a sufix en l'enviament del proje
 Opcionalment es podran indicar les propietats:
 
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
-al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/sic-builders)
+al [Registre d'imatges] (https://git.intranet.gencat.cat/0192-intern/sic-builders)
 
 - `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`. En el cas de `maven` serà necessari
 indicar els següents paràmetres per a evitar que es realitzi de nou la construcció i, per tant, l'execució del goal es limiti a la
