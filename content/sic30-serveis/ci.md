@@ -1,5 +1,5 @@
 +++
-date = "2023-03-23"
+date = "2023-06-12"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -106,7 +106,7 @@ proporcionant tota la informació necessària per a identificar-ne el problema.
 
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://cicd.sic.intranet.gencat.cat <br/>
 Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de
-connectivitat, caldrà obrir una petició demanant l'obertura de Firewalls dels seus entorns.
+connectivitat, caldrà obrir una petició demanant l'obertura de Tallafocs dels seus entorns.
 
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics
 de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
@@ -227,6 +227,8 @@ A continuació s'explica breument cadascuna de les etapes previstes per al despl
     * **Probe Test**: etapa prevista per a la verificació de sondes a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament.
 
     * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
+
+    * **Registry Label**: generació d'etiqueta "production" a la imatge del registre corporatiu d'imaatges. Etiqueta que marca que es tracta d'una versió desplegada amb èxit a producció.
 
     * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 

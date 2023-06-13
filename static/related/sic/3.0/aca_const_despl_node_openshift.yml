@@ -12,7 +12,7 @@ components:
         - container:
             image:
               remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-18
+                name: registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/node-builder:1.0-18
             resources:
               limits:
                 cpu: 1000m

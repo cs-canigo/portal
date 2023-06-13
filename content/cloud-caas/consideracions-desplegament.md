@@ -51,7 +51,7 @@ En cas de necessitar una imatge d'una tecnologia o producte no suportat, cal ten
 A l'hora d'utilitzar les imatges base, en cap cas les copieu i les modifiqueu, feu una imatge que hereti de la imatge base. Dockerfile ex:
 
 ```
-FROM docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8
+FROM registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java8
 
 ENV CATALINA_HOME /usr/local/tomcat
 
@@ -60,7 +60,7 @@ COPY artefacte ${CATALINA_HOME}/webapps
 
 Totes les imatges base estan repositades al registre docker privat del CTTI i el seu codi font és accessible al gitlab a [Imatges-docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker).
 
-Podeu trobar més informació a [Registre docker privat.](https://canigo.ctti.gencat.cat/cloud-caas/dockerRegistry/)
+Podeu trobar més informació a [Registre d'imatges](https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/).
 
 ## Desplegament
 

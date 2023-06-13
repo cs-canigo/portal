@@ -12,7 +12,7 @@ components:
         - container:
             image:
               remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/dotnet-builder:1.0-3.1
+                name: registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/dotnet-builder:1.0-3.1
             resources:
               limits: { cpu: 1000m, memory: 1024Mi }
               requests: { cpu: 100m, memory: 128Mi }

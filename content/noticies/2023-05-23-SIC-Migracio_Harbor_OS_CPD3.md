@@ -1,5 +1,5 @@
 +++
-date        = "2023-05-23"
+date        = "2023-06-12"
 title       = "SIC. Actualització i migració del Registre d'imatges a Openshift CPD3"
 description = "El Registre d'imatges (Harbor) s'ha migrat a la Plataforma Openshift de Cpd3 amb l'objectiu de disposar d'un producte actualitzat, millorar el rendiment, el monitoratge i, en general, l'experiència d'usuari."
 sections    = ["Notícies", "home"]
@@ -74,8 +74,8 @@ un tag productiu (DEPLOY-TAG).
 
 ### Posada en servei
 
-**El dia 13/06/2023 està previst posar en servei el nou Registre d'Imatges** (https://registreimatges.sic.intranet.gencat.cat/)
-que passa a substituir el servei antic (https://docker-registry.ctti.extranet.gencat.cat).
+**El dia 13/06/2023 s'ha dut a terme la posada en servei del nou Registre d'Imatges** (https://registreimatges.sic.intranet.gencat.cat/)
+que passa a substituir el servei antic (https://registreimatges.sic.intranet.gencat.cat).
 
 ### Impacte
 
@@ -88,7 +88,10 @@ En qualsevol cas, quan estigui previst donar de baixa el domini antic, es notifi
 
 ### Referències
 
-La documentació es troba en procés de revisió i serà actualitzada tan bon punt es dugui a terme la posada en servei.
+Per a més informació:
+
+- [Registre d'imatges](/sic30-serveis/registre-imatges/)
+- [Integració Contínua](/sic30-serveis/ci/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

@@ -25,7 +25,7 @@ Com novetat important, s'ha repositat el [codi font](https://git.intranet.gencat
 Aquest codi font ha estat eliminat de Github, i les imatges Docker de DockerHub, passant al registre Docker corporatiu.
 
 * https://github.com/gencat/ &rarr; https://git.intranet.gencat.cat/3048-intern/imatges-docker
-* https://hub.docker.com/u/gencatcloud/ &rarr; https://docker-registry.ctti.extranet.gencat.cat/
+* https://hub.docker.com/u/gencatcloud/ &rarr; https://registreimatges.sic.intranet.gencat.cat/
 
 ### Matriu catàleg Cloud
 

@@ -351,7 +351,7 @@ Destaquen les següents característiques:
 
 * **Accés​**
 
-    El registre docker privat de la Generalitat de Catalunya, està disponible a l’URL pública https://docker-registry.ctti.extranet.gencat.cat 
+    El registre docker privat de la Generalitat de Catalunya, està disponible a l’URL https://registreimatges.sic.intranet.gencat.cat
 
     És un registre privat sense cap repositori públic.
 
@@ -378,16 +378,16 @@ Destaquen les següents característiques:
     
     Per accedir a les imatges del registre des de docker, cal seguir els següents passos:
     
-    * Connectar-se al registre: docker login https://docker-registry.ctti.extranet.gencat.cat
+    * Connectar-se al registre: docker login https://registreimatges.sic.intranet.gencat.cat
     * Introduir les credencials proporcionades per l’equip de SuportCloud.
-    * Fer un pull de la imatge desitjada docker pull docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
-    * Desconnectar-se del registre: docker logout https://docker-registry.ctti.extranet.gencat.cat
+    * Fer un pull de la imatge desitjada docker pull registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8
+    * Desconnectar-se del registre: docker logout https://registreimatges.sic.intranet.gencat.cat
     * Construir una imatge depenent d’una imatge repositada al registre privat​
 
 Per exemple si tenim un dockerfile del tipus:​
 
 ```
-FROM docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
+FROM registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8
 
 MAINTAINER xxxx
 
@@ -399,9 +399,9 @@ COPY run.sh /
 
 *Important notar que el FROM ha d’incloure el registre privat*
 
-* Cal primer connectar-se al registre: docker login https://docker-registry.ctti.extranet.gencat.cat
+* Cal primer connectar-se al registre: docker login https://registreimatges.sic.intranet.gencat.cat
 * Construir la imatge docker build -t XXXX .
-* Desconnectar-se del registre: docker logout https://docker-registry.ctti.extranet.gencat.cat​
+* Desconnectar-se del registre: docker logout https://registreimatges.sic.intranet.gencat.cat​
 
 **Integració amb SIC**
 
@@ -489,7 +489,7 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 
 **Exemples**
 
-Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al ([registre docker privat](https://docker-registry.ctti.extranet.gencat.cat/)) projecte gencatcloud. Podeu trobar els Dockerfiles de les imatges a ([git imatges docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker/)).
+Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al ([registre docker privat](https://registreimatges.sic.intranet.gencat.cat/)) projecte gencatcloud. Podeu trobar els Dockerfiles de les imatges a ([git imatges docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker/)).
 
 Quan trobeu que per una tecnologia existeix la versió normal i la versió amb amb sufix -openshift, les imatges amb versió normal son compatibles amb docker(local) i Swarme i les imatges amb amb sufix -openshift són compatibles amb Kubernetes i Openshift.​
 
@@ -682,7 +682,7 @@ find /var -type d -exec chmod g+x {} +​
 
 Per facilitar la tasca de desenvolupament i creació d’aplicacions basades en contenidors, CTTI ofereix un conjunt d’imatges certificades i alineades amb les versions del software del ([Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)).
 
-Podeu trobar aquestes imatges certificades al ([registre privat](https://docker-registry.ctti.extranet.gencat.cat/)). Si necessiteu més informació d’aquest registre privat, podeu consultar ([Registre docker privat​​](https://espai.ctti.gencat.cat/Governanca-TIC/Sistemes-informacio/Infraestructura/Cataleg-CPD-cloud/Contenidors/Registre-docker-privat/Pagines/default.aspx)).
+Podeu trobar aquestes imatges certificades al ([registre privat](https://registreimatges.sic.intranet.gencat.cat/)). Si necessiteu més informació d’aquest registre privat, podeu consultar ([Registre docker privat​​](https://espai.ctti.gencat.cat/Governanca-TIC/Sistemes-informacio/Infraestructura/Cataleg-CPD-cloud/Contenidors/Registre-docker-privat/Pagines/default.aspx)).
 
 ​<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%;">
     <tr>
@@ -694,103 +694,103 @@ Podeu trobar aquestes imatges certificades al ([registre privat](https://docker-
     <tr>
         <td style="font-size: 16px;"><div align="center">Apache</td>
         <td style="font-size: 16px;"><div align="center">​2.4​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd:2.4</td>
         <td style="font-size: 16px;"><div align="center">([httpd](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/tree/2.4))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Apache GICAR Shibboleth</td>
         <td style="font-size: 16px;"><div align="center">1.0.3</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>
         <td style="font-size: 16px;"><div align="center">​([​gicar-shibboleth](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth/tree/1.0.3))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Apache GICAR Shibboleth Kubernetes/Openshift​</td>
         <td style="font-size: 16px;"><div align="center">​1.0.3</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>
         <td style="font-size: 16px;"><div align="center">([​gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Apache Proxy ElasticSearch</td>
         <td style="font-size: 16px;"><div align="center">​2.4-1.0</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>
         <td style="font-size: 16px;"><div align="center">([​httpd-prox​y-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/tree/2.4-1.0))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Nginx</td>
         <td style="font-size: 16px;"><div align="center">1.18</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.18</td>
         <td style="font-size: 16px;"><div align="center">([ngi​nx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.18))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">GICAR Nginx</td>
         <td style="font-size: 16px;"><div align="center">1.0.0</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>
         <td style="font-size: 16px;"><div align="center">([gic​ar-nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx/tree/1.0.0))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">GICAR Nginx Kubernetes/Openshift</td>
         <td style="font-size: 16px;"><div align="center">​1.0.0</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>
         <td style="font-size: 16px;"><div align="center">([gic​ar-nginx-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx-openshift/tree/1.0.0))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Java</td>
         <td style="font-size: 16px;"><div align="center">​8​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8</td>
         <td style="font-size: 16px;"><div align="center">([​ja​va](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Java</td>
         <td style="font-size: 16px;"><div align="center">11-openjdk​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/java:11-openjdk</td>
         <td style="font-size: 16px;"><div align="center">([java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/11))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">.Net Core</td>
         <td style="font-size: 16px;"><div align="center">​3.1</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/dotnet:1.0-3.1</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-3.1</td>
         <td style="font-size: 16px;"><div align="center">([​dot​net](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/3.1))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">NodeJS</td>
         <td style="font-size: 16px;"><div align="center">14</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:14</td>
         <td style="font-size: 16px;"><div align="center">([​no​de](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/14))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">NodeJS</td>
         <td style="font-size: 16px;"><div align="center">​16</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:16</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:16</td>
         <td style="font-size: 16px;"><div align="center">([no​de](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/16))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">PHP</td>
         <td style="font-size: 16px;"><div align="center">​8.0</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:8.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:8.0</td>
         <td style="font-size: 16px;"><div align="center">([ap​ache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/8.0))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Tomcat</td>
         <td style="font-size: 16px;"><div align="center">9.0-java8</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>
         <td style="font-size: 16px;"><div align="center">([​tom​​cat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java8))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Tomcat</td>
         <td style="font-size: 16px;"><div align="center">9.0-java11</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>
         <td style="font-size: 16px;"><div align="center">([​tom​cat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java11))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">9.0-java8</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>
         <td style="font-size: 16px;"><div align="center">([​tom​​cat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java8))</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">9.0-java11</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11​</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11​</td>
         <td style="font-size: 16px;"><div align="center">​([tomc​at](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java11))</td>
     </tr>
 </table>
@@ -826,227 +826,227 @@ En cas d’utilitzar aquestes imatges es recomana l’actualització a les imatg
     <tr>
         <td style="font-size: 16px;"><div align="center">​Apache GICAR Openshift</td>
         <td style="font-size: 16px;"><div align="center">1.0​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-openshift:1.0</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-openshift:1.0</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Nginx</td>
         <td style="font-size: 16px;"><div align="center">1.12​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.12</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Nginx</td>
         <td style="font-size: 16px;"><div align="center">1.14​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.14</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Nginx</td>
         <td style="font-size: 16px;"><div align="center">1.16​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.16</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​NodeJS</td>
         <td style="font-size: 16px;"><div align="center">4/td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:4</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:4</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​NodeJS</td>
         <td style="font-size: 16px;"><div align="center">6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​NodeJS</td>
         <td style="font-size: 16px;"><div align="center">8</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:8</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:8</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​NodeJS</td>
         <td style="font-size: 16px;"><div align="center">10​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:10</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​NodeJS</td>
         <td style="font-size: 16px;"><div align="center">​12</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/node:12</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​PHP</td>
         <td style="font-size: 16px;"><div align="center">5.6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:5.6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:5.6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​PHP</td>
         <td style="font-size: 16px;"><div align="center">7.1</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.1</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.1</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​PHP</td>
         <td style="font-size: 16px;"><div align="center">7.2​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.2</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​PHP</td>
         <td style="font-size: 16px;"><div align="center">7.3​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.3</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​PHP</td>
         <td style="font-size: 16px;"><div align="center">7.4​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.4</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Java</td>
         <td style="font-size: 16px;"><div align="center">6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/java:6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Java</td>
         <td style="font-size: 16px;"><div align="center">7​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/java:7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">6-java6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:6-java6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:6-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">6-java7​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:6-java7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:6-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">7-java6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:7-java6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:7-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">7-java7​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:7-java7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:7-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">7​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:7</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">8.0-java7​​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0-java7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:8.0-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">​8.0</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:8.0</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat</td>
         <td style="font-size: 16px;"><div align="center">8.5​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.5</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:8.5</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">6-java6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:6-java6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:6-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">​6-java7​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:6-java7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:6-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">7-java6​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:6-java6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:6-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">​​7-java7</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:7-java6</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:7-java6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">7​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">8.0-java7​​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:8.0-java7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:8.0-java7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">8.0​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:8.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:8.0</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​Tomcat amb suport de Sessions distribuïdes</td>
         <td style="font-size: 16px;"><div align="center">8.5​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:8.5</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:8.5</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Postgres</td>
         <td style="font-size: 16px;"><div align="center">9.3​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.3</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/postgres:9.3</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Postgres</td>
         <td style="font-size: 16px;"><div align="center">​9.4</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.4</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/postgres:9.4</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Postgres</td>
         <td style="font-size: 16px;"><div align="center">9.5​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.5</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/postgres:9.5</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Postgres</td>
         <td style="font-size: 16px;"><div align="center">​9.6</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/postgres:9.6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Postgres</td>
         <td style="font-size: 16px;"><div align="center">​10</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:10</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/postgres:10</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">Postgres</td>
         <td style="font-size: 16px;"><div align="center">11​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:11</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/postgres:11</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">MongoDB​</td>
         <td style="font-size: 16px;"><div align="center">​3.2​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.2</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/mongodb:3.2</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">MongoDB​</td>
         <td style="font-size: 16px;"><div align="center">3.4​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.4</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/mongodb:3.4</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">MongoDB​</td>
         <td style="font-size: 16px;"><div align="center">​3.6​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.6</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/mongodb:3.6</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">MongoDB​</td>
         <td style="font-size: 16px;"><div align="center">​4.0​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:4.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/mongodb:4.0</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">MongoDB​</td>
         <td style="font-size: 16px;"><div align="center">4.2​</td>
-        <td style="font-size: 16px;"><div align="center">​docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:4.2</td>
+        <td style="font-size: 16px;"><div align="center">​registreimatges.sic.intranet.gencat.cat/gencatcloud/mongodb:4.2</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​MySql</td>
         <td style="font-size: 16px;"><div align="center">5.7​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/mysql:5.7</td>
     </tr>
     <tr>
         <td style="font-size: 16px;"><div align="center">​MySql</td>
         <td style="font-size: 16px;"><div align="center">​8.0​​</td>
-        <td style="font-size: 16px;"><div align="center">docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:8.0</td>
+        <td style="font-size: 16px;"><div align="center">registreimatges.sic.intranet.gencat.cat/gencatcloud/mysql:8.0</td>
     </tr>
 </table>
 

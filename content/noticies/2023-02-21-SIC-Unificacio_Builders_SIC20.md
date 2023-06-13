@@ -33,13 +33,13 @@ necessari **modificar la imatge de la qual hereta perquè passi a ser una imatge
 Per exemple:
 
 ```bash
-FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-3.6-11-openjdk
+FROM registreimatges.sic.intranet.gencat.cat/gencatsic/maven-builder:1.0-3.6-11-openjdk
 ```
 
 Haurà de substituir-se per:
 
 ```bash
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
+FROM registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
 ```
 
 ### Data límit

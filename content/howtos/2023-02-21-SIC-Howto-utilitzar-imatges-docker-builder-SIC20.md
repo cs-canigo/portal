@@ -19,24 +19,24 @@ En el [Catàleg d'imatges corporatiu](/sic30-serveis/cataleg-imatges/) podreu tr
 d'imatges, el codi font, la documentació associada i el procediment per a disposar d'accés.
 
 ### Accés via consola web
-Es pot accedir al Harbor a través de la seva consola web mitjançant: https://docker-registry.ctti.extranet.gencat.cat.
+Es pot accedir al Harbor a través de la seva consola web mitjançant: https://registreimatges.sic.intranet.gencat.cat.
 Un cop dins es pot navegar a través de les carpetes de les imatges del projecte **gencat-sic-builders**.
 
 ### Login
 Per a poder descarregar les imatges en local primer ens hem de autenticar de la següent manera:
 
 ```bash
-docker login https://docker-registry.ctti.extranet.gencat.cat
+docker login https://registreimatges.sic.intranet.gencat.cat
 ```
 
-Cal introduir l'usuari i paraula de pas proporcionats per l'Oficina Tècnica de Canigó.
+Si no es tracta d'una imatge d'un projecte públic, caldrà introduir les credencials Gicar de l'usuari.
 
 ### Descàrrega d'imatges
 
 Un cop realitzada l’autenticació per linea de comandes, podem baixar-nos la imatge escollida mitjançant:
 
 ```bash
-docker pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
+docker pull registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
 ```
 
 On, en el cas d'exemple, estem descarregant-nos la imatge *mvn-builder* versió 1.0-3.6-11-openjdk.
@@ -54,7 +54,7 @@ docker run -it --rm \
   -v $HOME/.m2/settings.xml:/home/maven/.m2/settings.xml \
   -v $PWD:/home/maven/app:rw \
   -w "/home/maven/app" \
- docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk \
+ registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk \
  mvn package -Dmaven.test.skip=true
 ```
 
@@ -78,7 +78,7 @@ En cas contrari, es podria rebre errors del tipus *Received fatal alert: protoco
 Si volem desconnectar-nos del Harbor serà necessari realitzar un logout mitjançant:
 
 ```bash
-docker logout https://docker-registry.ctti.extranet.gencat.cat
+docker logout https://registreimatges.sic.intranet.gencat.cat
 ```
 
 ## Estendre d’imatges Docker de SIC
@@ -89,7 +89,7 @@ seguit del nom de la imatge base a utilitzar.
 Per exemple:
 
 ```bash
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-bulders/mvn-builder:1.0-3.6-11-openjdk
+FROM registreimatges.sic.intranet.gencat.cat/gencat-sic-bulders/mvn-builder:1.0-3.6-11-openjdk
 ```
 </br>
 
@@ -113,7 +113,7 @@ Exemple:
 
 ```bash
 # S'utilitza una imatge base del SIC.
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
+FROM registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-11-openjdk
 
 # Es modifica el responsable de la imatge.
 LABEL maintainer="change.me@gencat.cat"

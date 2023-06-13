@@ -104,7 +104,7 @@ La gestió de la sessió és la següent:
 
 ## Configuració
 
-Les imatges docker repositades al registre privat https://docker-registry.ctti.extranet.gencat.cat del tipus **gencatcloud/tomcat-hc:XX**, tenen configurades les llibreries i el Session Manager de Tomcat amb Hazelcast. Inclouen una configuració bàsica de Hazelcast que fa que es crei un cluster d'un únic node.
+Les imatges docker repositades al registre privat https://registreimatges.sic.intranet.gencat.cat del tipus **gencatcloud/tomcat-hc:XX**, tenen configurades les llibreries i el Session Manager de Tomcat amb Hazelcast. Inclouen una configuració bàsica de Hazelcast que fa que es crei un cluster d'un únic node.
 
 D'aquesta manera es poden utilitzar i provar les imatges a docker fent un *docker run* sense necessitat de disposar d'un Kubernetes.
 

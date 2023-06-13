@@ -17,7 +17,7 @@
       "azuregestionat": "--",
       "azurenogestionat": "--",
       "aws": "--",
-      "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0",
+      "imatgescatalegcloud": "registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd:2.4<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0",
       "observacions": "Observacions Servidors Web Apache"
     },
     {
@@ -36,7 +36,7 @@
       "azuregestionat": "--",
       "azurenogestionat": "--",
       "aws": "--",
-      "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0",
+      "imatgescatalegcloud": "registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.14<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.16<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.18<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0",
       "observacions": "Observacions Servidors Web Nginx"
     },
     {
@@ -93,7 +93,7 @@
       "azuregestionat": "xPaaS / 8 i 11",
       "azurenogestionat": "xPaaS / 8 i 11",
       "aws": "--",
-      "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk<br>",
+      "imatgescatalegcloud": "registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/java:11-openjdk<br>",
       "observacions": "Observacions Servidors d'Aplicacions JDK"
     },
     {
@@ -131,7 +131,7 @@
       "azuregestionat": "xPaaS / 12, 14 i 16",
       "azurenogestionat": "xPaaS / 12, 14 i 16",
       "aws": "--",
-      "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14<br>",
+      "imatgescatalegcloud": "registreimatges.sic.intranet.gencat.cat/gencatcloud/node:10<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/node:12<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/node:14<br>",
       "observacions": "Observacions Servidors d'Aplicacions Node.js"
     },
     {
@@ -150,7 +150,7 @@
       "azuregestionat": "xPaaS / 7.4 i 8.0",
       "azurenogestionat": "xPaaS / 7.4 i 8.0",
       "aws": "--",
-      "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4<br>",
+      "imatgescatalegcloud": "registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.2<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.3<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:7.4<br>",
       "observacions": "Observacions Servidors d'Aplicacions PHP"
     },
     {
@@ -188,7 +188,7 @@
       "azuregestionat": "--",
       "azurenogestionat": "--",
       "aws": "--",
-      "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11",
+      "imatgescatalegcloud": "registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java8<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java11<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8<br>\nregistreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11",
       "observacions": "Observacions Servidors d'Aplicacions Tomcat"
     },
     {
