@@ -103,7 +103,7 @@ haurà de sol·licitar-ho al seu responsable.
 
 ### Ús del registre privat
 
-Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2022-07-06-SIC-Howto-utilitzar-imatges-docker-builder).
+Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2023-02-21-SIC-Howto-utilitzar-imatges-docker-builder-SIC20).
 
 ### Aspectes a tenir en compte
 
