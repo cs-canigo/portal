@@ -1581,6 +1581,21 @@
                 "idatapublicacio": "27/04/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per modificar el nom de dues àrees bàsiques de salut i incorporar-ne dues de noves. Data prevista actualització 28/06/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "13/06/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
@@ -2682,6 +2697,21 @@
                 "idatapublicacio": "24/05/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V14",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi. Data prevista actualització 28/06/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "13/06/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
@@ -3262,6 +3292,21 @@
                 "idatapublicacio": "24/05/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V13",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi i unitats poblacionals. Data prevista actualització 28/06/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "13/06/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",

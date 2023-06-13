@@ -53,6 +53,10 @@
 	Plataforma Corporativa de RPA
 {{ end }}
 
+{{ if (eq $section "lowcode")}}
+	Plataformes LowCode
+{{ end }}
+
 {{ if in .URL "blog_tags" }}
 	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
 {{end}}

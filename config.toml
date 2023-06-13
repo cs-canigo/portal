@@ -107,3 +107,9 @@ Paginate = 10
     Weight = 23
     Identifier = "apim"
     URL = "/apim"
+
+[[menu.main]]
+	Name = "LowCode"
+    Weight = 25
+    Identifier = "lowcode"
+    URL = "/lowcode"
