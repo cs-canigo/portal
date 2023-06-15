@@ -17,7 +17,7 @@ a més de generar certa confusió als usuaris del servei.
 ## Novetats
 
 Amb l'objectiu d'unificar criteris, reduir costos de manteniment i anar fent passes cap a l'objectiu de migració, **s'ha adaptat el
-SIC 2.0 per a passar a fer ús de les imatges de construcció del [Catàleg corporatiu del SIC 3.0](/sic30-serveis/registre-imatges/)**.
+SIC 2.0 per a passar a fer ús de les imatges de construcció del [Catàleg corporatiu del SIC 3.0](/sic20-serveis/registre-imatges/)**.
 Aquest catàleg únic d'imatges de construcció proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
 de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
 es mantindrà la cobertura de configuració de tools/jdks referenciades actualment per les aplicacions.
@@ -53,7 +53,7 @@ Per a més informació:
 
 - [Integració contínua. Tecnologies de construcció](/sic20-serveis/ci/#matriu-de-tecnologies-de-construcció)
 
-- [Catàleg corporatiu d'imatges de construcció](/sic30-serveis/registre-imatges/)
+- [Registre corporatiu d'imatges de construcció](/sic20-serveis/registre-imatges/)
 
 - [Com construir el fitxer ACA] (/sic20-guies/fitxer-aca/)
 

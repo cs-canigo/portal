@@ -1,5 +1,5 @@
 +++
-date        = "2023-05-22"
+date        = "2023-06-12"
 title       = "SIC. MFA als serveis del SIC"
 description = "El SIC posarà en servei el doble factor d'autenticació (MFA) en l'accés als serveis: Integració Contínua 3.0, Binaris i Registre d'imatges."
 sections    = ["Notícies", "home"]
@@ -17,7 +17,7 @@ d’autenticació multifactor (MFA)**.
 
 ## Novetats
 
-El pròxim **dia 13/06/2023 està previst habilitar l'autenticació MFA en l'accés als següents serveis del SIC**:
+El **dia 13/06/2023 s'ha posat en marxa l'autenticació MFA en l'accés als següents serveis del SIC**:
 
 - **Servei d'Integració Contínua 3.0**
 - **Servei de Binaris**
