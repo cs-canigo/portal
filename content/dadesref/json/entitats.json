@@ -408,28 +408,28 @@
         "Nom": "Naturalesa jurídica entitats sector públic",
         "Ambit": "Administració pública, govern i relacions institucionals",
         "Subambit": "Organització de l'administració i sector públic",
-        "Descripcio": "Tipologies en què es poden classificar les entitats del sector públic institucional de l’Administració de la Generalitat.",
+        "Descripcio": "Tipologies en què es poden classificar les entitats del sector públic institucional de l'Administració de la Generalitat.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Candidata proposada per DGADO i CTTI",
-                "ifitxer_doc": "Naturalesa_juridica_sector_public_ATR.docx",
-                "ifitxer_xls": "Naturalesa_juridica_sector_public.xlsx",
+                "ipromotor": "Direcció General del Patrimoni de la Generalitat de Catalunya - Departament d'Economia i Hisenda",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Naturalesa_juridica_entitats_SP_ATR.docx",
+                "ifitxer_xls": "Naturalesa_juridica_entitats_SP.xlsx",
                 "idatacreacio": "22/11/2022",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "23/11/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "28/06/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Naturalesa-jur%C3%ADdica-entitats-sector-p%C3%BAblic/f4yb-6djt",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "NATURALESA_JURIDICA_ENTITAT_SECTOR_PUBLIC",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "23/11/2022",
-        "Data_actualitzacio": "23/11/2022"
+        "nom_dinsBD": "NATURALESA_JURIDICA_ENTITATS_SECTOR_PUBLIC",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "28/06/2023",
+        "Data_actualitzacio": "28/06/2023"
     },
     {
         "Id": "dtarq103",
@@ -1378,6 +1378,34 @@
         "Data_actualitzacio": "15/07/2020"
     },
     {
+        "Id": "dtarq186",
+        "Nom": "Delictes",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Administració de justícia",
+        "Descripcio": "Llistat de tipus d'infraccions de la llei.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Delictes_ATR.docx",
+                "ifitxer_xls": "Delictes.xlsx",
+                "idatacreacio": "25/04/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "28/06/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Delictes/bm5b-6t6f",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "DELICTES",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "28/06/2023",
+        "Data_actualitzacio": "28/06/2023"
+    },
+    {
         "Id": "dtarq147",
         "Nom": "Jurisdiccions",
         "Ambit": "Justícia i dret",
@@ -1533,34 +1561,6 @@
         "Data_actualitzacio": "22/09/2021"
     },
     {
-        "Id": "dtarq186",
-        "Nom": "Delictes",
-        "Ambit": "Justícia i dret",
-        "Subambit": "Execució penal i reinserció",
-        "Descripcio": "Llistat de tipus d'infraccions de la llei.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Departament de Justícia, Drets i Memòria",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Delictes_ATR.docx",
-                "ifitxer_xls": "Delictes.xlsx",
-                "idatacreacio": "25/04/2023",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "26/04/2023",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "DELICTES",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/04/2023",
-        "Data_actualitzacio": "26/04/2023"
-    },
-    {
         "Id": "dtarq160",
         "Nom": "Àrees bàsiques salut",
         "Ambit": "Salut",
@@ -1569,39 +1569,39 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
-                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "ifitxer_xls": "deprecated/Arees_basiques_salut_V01.xlsx",
                 "idatacreacio": "24/01/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "28/06/2023",
                 "idatapublicacio": "27/04/2022",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "V02",
-                "iestat": "Evolutiu",
-                "itipus": "",
-                "ipromotor": "",
-                "idescripcio": "En procés d'actualització per modificar el nom de dues àrees bàsiques de salut i incorporar-ne dues de noves. Data prevista actualització 28/06/2023.",
-                "ifitxer_doc": "",
-                "ifitxer_xls": "",
-                "idatacreacio": "13/06/2023",
-                "itipusvisual": "",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "Actualització per canvi de nom de dues ABS (LA RÀPITA-ALCANAR i BADIA DEL VALLÈS) i incorporació de dos registres (TERRASSA H i GUISSONA-LA SEGARRA).",
+                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "idatacreacio": "27/06/2023",
+                "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": ""
+                "idatapublicacio": "28/06/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
+                "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
         "Classificacio": "Consolidat",
         "Data_publicacio": "27/04/2022",
-        "Data_actualitzacio": "27/04/2022"
+        "Data_actualitzacio": "28/06/2023"
     },
     {
         "Id": "dtarq158",
@@ -2685,39 +2685,39 @@
             },
             {
                 "inom": "V13",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom d'un municipi: Codi 460288 Algar de Palancia (nom anterior) per Algar de Palància (nom actualitzat).",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_V13.xlsx",
                 "idatacreacio": "23/05/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "28/06/2023",
                 "idatapublicacio": "24/05/2023",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "V14",
-                "iestat": "Evolutiu",
-                "itipus": "",
-                "ipromotor": "",
-                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi. Data prevista actualització 28/06/2023.",
-                "ifitxer_doc": "",
-                "ifitxer_xls": "",
-                "idatacreacio": "13/06/2023",
-                "itipusvisual": "",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi de nom d'un municipi: Codi 460266 Alfarp (nom anterior) per Alfarb (nom actualitzat).",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "27/06/2023",
+                "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": ""
+                "idatapublicacio": "28/06/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "24/05/2023"
+        "Data_actualitzacio": "28/06/2023"
     },
     {
         "Id": "dtarq127",
@@ -3280,39 +3280,39 @@
             },
             {
                 "inom": "V12",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització per canvi de nom d'un municipi i unitats poblacionals del mateix nom: Algar de Palancia (nom anterior) per Algar de Palància (nom actualitzat). Codi unitats poblacionals afectades: 46028000000, 46028000100, 46028000101 i 46028000199.",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V12.xlsx",
                 "idatacreacio": "23/05/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "28/06/2023",
                 "idatapublicacio": "24/05/2023",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
                 "inom": "V13",
-                "iestat": "Evolutiu",
-                "itipus": "",
-                "ipromotor": "",
-                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi i unitats poblacionals. Data prevista actualització 28/06/2023.",
-                "ifitxer_doc": "",
-                "ifitxer_xls": "",
-                "idatacreacio": "13/06/2023",
-                "itipusvisual": "",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització per canvi de nom d'un municipi i unitats poblacionals del mateix nom: Alfarp (nom anterior) per Alfarb (nom actualitzat). Codi unitats poblacionals afectades: 46026000000, 46026000100, 46026000101 i 46026000199.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "27/06/2023",
+                "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": ""
+                "idatapublicacio": "28/06/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
+                "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "24/05/2023"
+        "Data_actualitzacio": "28/06/2023"
     },
     {
         "Id": "dtarq175",
