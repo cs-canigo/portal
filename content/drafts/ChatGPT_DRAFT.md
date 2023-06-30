@@ -272,19 +272,15 @@ En aquesta taula es mostren les característiques tècniques generals que permet
 | --- | --- | --- |
 | Arquitectura del model | GPT-3	| GPT-4 |
 | Dades d'entrenament	| Pre entrenat amb text divers d’internet	| Pre entrenat amb text divers d’ internet |
-| Límit de coneixement	| Setembre de 2021 | N/A (Suposant que ChatGPT-4,
- està entrenat després de setembre de 2021) |
+| Límit de coneixement	| Setembre de 2021 | N/A (Suposant que ChatGPT-4, està entrenat després de setembre de 2021) |
 | Intel·ligència conversacional	| Sí |	Sí |
 | Comprensió contextual |	Sí	| Sí |
-| Coherència de resposta |	A vegades pot generar respostes incoherents
- o sense sentit | 	Millora en la coherència 
-i la rellevància de les respostes |
+| Coherència de resposta |	A vegades pot generar respostes incoherents o sense sentit | 	Millora en la coherència i la rellevància de les respostes |
 | Límit de paraules	| Fins a 2048 tokens |	Millora probablement, però no es coneix un límit específic |
 | Suport multimodal	| No	| Millora probablement, però no es coneixen les capacitats específiques |
 | Rendiment	| Temps de resposta més lent en comparació amb GPT-4	| Millora probablement, però no es coneixen les mètriques de rendiment específiques |
 | Precisió	| Alta precisió en la comprensió i generació de text |	Millora probablement, però no es coneixen les mètriques de precisió específiques |
-| Afinament detallat |	Disponible per a personalització i 
-tasques específiques de domini	| Probablement disponible, però no es coneixen els detalls específics |
+| Afinament detallat |	Disponible per a personalització i tasques específiques de domini	| Probablement disponible, però no es coneixen els detalls específics |
 | Mitigació de prejudicis	| Mesures de mitigació de prejudicis limitades |	Millora probablement, però no es coneixen les mesures específiques |
 
 
