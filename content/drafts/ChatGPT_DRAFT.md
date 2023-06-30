@@ -38,7 +38,7 @@ ChatGPT és un sistema avançat de processament de llenguatge natural basat en m
 ChatGPT té una gran versatilitat i pot adaptar-se a diferents sectors  i tasques específiques mitjançant l'entrenament i l'ajustament fins i tot als requeriments particulars d'un usuari o aplicació. És una eina potent per millorar les interaccions amb els usuaris, automatitzar tasques de processament de llenguatge i millorar l'experiència de l'usuari en una àmplia gamma d'aplicacions. <br>
 
 
-### **1.2. Importància del ChatGPT en la indústria del processament del llenguatge natural** 
+### **Importància del ChatGPT en la indústria del processament del llenguatge natural** 
 
 Algunes de les raons per les quals ChatGPT és important per aquesta indústria son:<br>
 
@@ -47,6 +47,7 @@ Algunes de les raons per les quals ChatGPT és important per aquesta indústria 
 * Augment de l'eficiència en tasques de llenguatge: És una eina valuosa per automatitzar tasques de processament de llenguatge. Com per exemple la traducció automàtica, la generació de resums, l'extracció d'informació i altres tasques relacionades amb el llenguatge permetent millorar l'eficiència i la productivitat en diverses indústries.<br>
 * Adaptabilitat a diferents sectors : És flexible i pot ser entrenat i adaptat a diferents sectors: com la salut, el comerç electrònic, l'educació, el dret i altres indústries que requereixen d’una interacció efectiva en llenguatge natural.<br>
 * Investigació i desenvolupament continuat: L'existència de ChatGPT ha impulsat la investigació i el desenvolupament en el camp del PLN. Ha fomentat la creació de nous models i tècniques per millorar la generació de llenguatge natural, i ha estimulat la col·laboració entre investigadors i professionals del PLN.<br>
+
 
 
 ## **Arquitectura de ChatGPT** {#Arquitectura}
@@ -80,6 +81,7 @@ Com a beneficis principals s’ofereixen:<br>
 * **Generació de respostes coherents i contextualment rellevants:**  Millora la qualitat de les interaccions entre humans i màquines, proporcionant respostes més naturals i comprensibles.<br>
 * **Flexibilitat i adaptabilitat:** Es permet utilitzar en una àmplia gamma d'aplicacions, com ara: xatbots, assistents virtuals i sistemes de suport al client, adaptant-se a les necessitats particulars de cada context.<br>
 * **Capacitat de processament de llenguatge avançat:** Els mecanismes d'atenció i les capes de retroalimentació permeten captar les relacions entre les paraules i processar la informació de manera no lineal, millorant la comprensió del llenguatge humà.<br>
+
 
 
 ## **Diagrames de flux ChatGPT** {#Diagrames}
@@ -146,6 +148,7 @@ L'entrenament del model de llenguatge per a ChatGPT presenta diversos reptes i l
 * **Detecció d'informació falsa:** Els models de llenguatge  poden generar informació falsa o inexacta si no es controlen adequadament. Aquests models no tenen la capacitat de verificar o validar la informació que generen, per la qual cosa, és necessari implementar mecanismes per detectar i mitigar la propagació d’aquest tipus d'informació.<br>
 
 
+
 ## **Pre Processament de text** {#PreProcessament}
 
 ### **Visió general i tècniques utilitzades per la millora de rendiment**
@@ -160,6 +163,7 @@ El pre processament de text per ChatGPT implica una sèrie de passos per prepara
 * **Segmentació de seqüències llargues:** Les seqüències llargues poden presentar dificultats en el processament i l'entrenament eficient del model. Per abordar aquesta qüestió, les seqüències es poden dividir en parts més petites per adaptar-se als requisits de llargada del model.<br>
 * **Eliminació de signes de puntuació i caràcters especials:** Els signes de puntuació, els símbols i altres caràcters especials, no aporten molta informació al model de llenguatge. Eliminar-los ajuda a reduir el soroll i simplificar el procés d'entrenament.<br>
 * **Correcció ortogràfica:** Les dades de text sovint contenen errors ortogràfics o errades tipogràfiques. Fer servir tècniques de correcció ortogràfica, com ara utilitzar diccionaris específics del llenguatge o algoritmes com la distància de Levenshtein, pot millorar la qualitat de les dades d'entrada.<br>
+
 
 
 ## **Afinament i adaptació** {#AfinamentAdaptacio}
@@ -193,6 +197,7 @@ Però també s’hi poden trobar certes limitacions en l'afinament i adaptació:
 * **Necessitat de coneixement expert:** Es requereixen coneixements experts per triar adequadament els hiperparàmetres, el conjunt de dades d'entrenament i altres factors relacionats.<br> 
 
 
+
 ## **Mecanismes d'Atenció** {#Atencio}
 
 ### **Visió general**
@@ -212,6 +217,7 @@ El mecanisme d'atenció anomenat "Self-Attention" o "Scaled Dot-Product Attentio
 Un altre mecanisme molt utilitzat a ChatGPT és el "Multi-Head Attention". Aquest amplia la capacitat del model utilitzant atenció simultàniament. Cada una té una projecció lineal diferent, en el que permet capturar diferents tipus de relacions i característiques en el text. El Multi-Head Attention ajuda a millorar la representació del context i a capturar relacions més diverses i complexes entre les paraules.<br>
 
 En resum, aquests mecanismes són clau per capturar relacions, entendre el context i generar respostes coherents i contextualment rellevants.<br> 
+
 
 
 ## **Tècniques d'Optimització** {#Optimitzacio}
@@ -237,6 +243,7 @@ Les tècniques d'optimització utilitzades enfronten diversos desafiaments i ten
 * **Sobreafinament:** Aquestes tècniques poden ser susceptibles de generar models que s'ajustin massa a les dades d'entrenament i tinguin dificultats per generalitzar noves dades o situacions. Cal tenir cura de no sobreajustar el model a les dades d'entrenament específiques i utilitzar tècniques de regularització per millorar la seva capacitat de generalització.<br>
 * **Limitacions del conjunt de dades:** Si el conjunt de dades és petit, poc divers o no representa adequadament la varietat de situacions o dominis que el model enfrontarà, l'optimització pot ser menys efectiva.<br>
 * **Interdependència de les tècniques:** Els canvis en una tècnica poden requerir ajustaments en altres tècniques o afectar el rendiment global del model. Cal considerar aquestes interdependències i ajustar adequadament les tècniques utilitzades.<br>
+
 
 
 ## **Implementació i Escalabilitat** {#Implementacio}
@@ -284,6 +291,7 @@ En aquesta taula es mostren les característiques tècniques generals que permet
 | Mitigació de prejudicis	| Mesures de mitigació de prejudicis limitades |	Millora probablement, però no es coneixen les mesures específiques |
 
 
+
 ## **Consideracions ètiques** {#Consideracions}
 
 Les consideracions ètiques en l'arquitectura de ChatGPT inclouen la responsabilitat, la prevenció de biaixos i discriminació, la privadesa i seguretat de les dades, la transparència, la supervisió i control, així com el consentiment i la participació dels usuaris. És essencial abordar aquestes consideracions per garantir que sigui utilitzat de manera ètica i responsable.<br> 
@@ -297,6 +305,7 @@ A continuació, es presenta una visió general d’algunes d’aquestes consider
 * **Transparència:** És important ser transparent sobre com funciona l'arquitectura i proporcionar les explicacions clares sobre com s'obtenen les respostes generades fent que els usuaris comprenguin millor el sistema i puguin prendre decisions.<br>
 * **Supervisió i control:** Cal establir mecanismes de supervisió i control per evitar l'ús indegut o maliciós de ChatGPT. Cal aplicar polítiques d’ús, implementació de sistemes de moderació o altres formes de control per garantir un ús responsable.<br>
 * **Consentiment i participació:** És important obtenir el consentiment dels usuaris per utilitzar les seves dades i assegurar-se que són conscients de com s'utilitzen.<br> 
+
 
 
 ## **El futur de ChatGPT i el seu impacte potencial en la Indústria** {#Futur}
@@ -313,6 +322,7 @@ A continuació, es detallen algunes tendències i impactes potencials del seu fu
 * **Suport per tasques especialitzades:** Es preveu que ChatGPT continuï sent adaptat per tasques especialitzades de NLP. Inclou aplicacions en sectors com la salut, el comerç electrònic, el servei al client, l'educació i altres àmbits on la generació de llenguatge natural és crucial fet que milloraria l'eficiència i l'eficàcia de les tasques relacionades amb el llenguatge en aquests sectors.<br>
 * **Col·laboració entre humans i màquines:** El futur també implica una millor col·laboració entre humans i màquines. Els sistemes de xat basats en ChatGPT podrien ser utilitzats com assistents intel·ligents pels usuaris per millorar la productivitat, la comunicació i l'assistència en diferents àmbits.<br>
 * **Ús en tasques creatives i artístiques:** El futur pot incloure l'aplicació en tasques creatives i artístiques, com ara generació de textos literaris, creació de diàlegs per la indústria del cinema i la televisió, i altres aplicacions en les quals el llenguatge és fonamental per la creació artística.<br>
+
 
 
 ## **Referències** {#Referencies}
