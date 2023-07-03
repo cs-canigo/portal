@@ -332,5 +332,5 @@ https://chat.openai.com <br>
 
 <br>
 <br>
-###### **Unitat Arquitectura d'Entorn Digital de Treball i Comunicacions** <br>
+###### **Àrea d'Arquitectura d'Entorn Digital de Treball i Comunicacions** <br>
 ###### **Direcció Infraestructures**
