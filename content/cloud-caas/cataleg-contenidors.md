@@ -1,5 +1,5 @@
 +++
-date        = "2022-11-23"
+date        = "2023-07-17"
 title       = "Elements del catàleg de contenidors"
 description = "Descripció de les imatges docker base proporcionades pel CTTI."
 sections    = "Cloud"
