@@ -147,6 +147,21 @@
                 "idatapublicacio": "20/10/2021",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Agrupaci%C3%B3-tem%C3%A0tica-nivell-domini/gnue-xxk3",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per modificar la descripció dels valors de codi D05 i D08. Data prevista actualització 26/07/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "14/07/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "AGRUPACIO_TEMATICA_NIVELL_DOMINI",
@@ -2712,6 +2727,21 @@
                 "idatapublicacio": "28/06/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V15",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi. Data prevista actualització 26/07/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "14/07/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
@@ -3307,6 +3337,21 @@
                 "idatapublicacio": "28/06/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V14",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per canvi de nom d'un municipi i unitats poblacionals. Data prevista actualització 26/07/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "14/07/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
@@ -3505,6 +3550,21 @@
                 "idatapublicacio": "24/05/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Festius-generals-de-Catalunya/8qnu-agns",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per incorporar informació de l'any 2024. Data prevista actualització 26/07/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "14/07/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "FESTIUS_GENERALS_CAT",
