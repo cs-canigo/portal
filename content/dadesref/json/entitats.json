@@ -1611,6 +1611,21 @@
                 "idatapublicacio": "28/06/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per modificar el nom de diverses àrees bàsiques de salut i desdoblar-ne una. Data prevista actualització 26/07/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "14/07/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
