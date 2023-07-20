@@ -2519,6 +2519,21 @@
                 "idatapublicacio": "24/05/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V06",
+                "iestat": "Evolutiu",
+                "itipus": "",
+                "ipromotor": "",
+                "idescripcio": "En procés d'actualització per modificar la comarca del municipis de Biosca i Torà. Data prevista actualització 26/07/2023.",
+                "ifitxer_doc": "",
+                "ifitxer_xls": "",
+                "idatacreacio": "20/07/2023",
+                "itipusvisual": "",
+                "idataobsoleta": "",
+                "idatapublicacio": "",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": ""
             }
         ],
         "nom_dinsBD": "MUNICIPIS_CAT_GEO",
