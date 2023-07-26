@@ -31,12 +31,12 @@ El primer navegador web, anomenat **WorldWideWeb** va ser creat per Sir Tim Bern
 Amb el temps, els navegadors web han evolucionat per donar suport a més característiques, millors estàndards de compliment i millors experiències d'usuari.<br>
 
 
-### **Què és un navegador web?** 
+#### **Què és un navegador web?** 
 
 Un navegador web, també anomenat **“browser”** en anglès, és un programari o programa que permet accedir a Internet, recopilant els diferents elements a la seva disposició provinents de cada lloc, pàgina o URL concreta, per a servir-los a un usuari i que aquest pugui veure i consumir el contingut. <br>
 
 
-#### **Els navegadors més populars**
+##### **Els navegadors més populars**
 
 <br>
 <div align="center">
@@ -44,7 +44,7 @@ Un navegador web, també anomenat **“browser”** en anglès, és un programar
 </div>
 <br>
 
-#### **Els navegadors més populars per mòbils**
+##### **Els navegadors més populars per mòbils**
 
 <br>
 <div align="center">
@@ -55,7 +55,7 @@ Un navegador web, també anomenat **“browser”** en anglès, és un programar
 Cal tenir en compte que eines com el TikTok es posiciona com el cercador preferit de la Generació Z.<br>
 
 
-### **Què proporciona l'IA als navegadors web?** 
+#### **Què proporciona l'IA als navegadors web?** 
 
 L'ús de la intel·ligència artificial (IA) té el potencial de revolucionar la forma en què els usuaris interactuen amb els navegadors web. Els navegadors web que utilitzen aquesta tecnologia, són capaços de proporcionar als usuaris una experiència de navegació més personalitzada, eficient i atractiva.<br>
 
@@ -69,13 +69,12 @@ Mentrestant, el camp de la intel·ligència artificial també avançava. Des del
 
 Els algorismes d'aprenentatge automàtic i la creixent disponibilitat d'enormes conjunts de dades van portar al ràpid desenvolupament de la IA. Les empreses tecnològiques van començar a utilitzar-la per millorar els resultats de cerca, proporcionar recomanacions personalitzades i permetre la interacció amb el llenguatge natural a través d'assistents virtuals.<br>
 
-### **Convergència d'IA i Navegadors Web** 
+#### **Convergència d'IA i Navegadors Web** 
 
 La convergència de la IA i els navegadors web és un desenvolupament relativament recent. Google va ser un dels primers en adoptar la IA als  seus productes de navegació, introduint la cerca per veu en Google Chrome al 2011.<br> 
 L'aprenentatge automàtic també s'ha utilitzat per millorar l'eficiència de la navegació predictiva.<br>
 
 Més recentment, els navegadors web han començat a integrar assistents virtuals amb capacitat de IA per millorar-ne la usabilitat. També han sorgit noves característiques que milloren l'accessibilitat, com la transcripció de veu a text i la descripció d'imatges. Aquests avanços estan transformant ràpidament la forma en què s’interactua amb la web, la qual cosa promet un futur de navegació web més eficient, accessible i personalitzada.<br>
-
 
 
 ## **Navegadors i IA** {#Navegadors}
@@ -103,7 +102,7 @@ Aquest és un canvi significatiu respecte a la forma tradicional de cercar, que 
 
 ## **Navegadors amb Assistent Virtual d'IA** {#NavegadorsXatBot}
 
-### **Bing Xat**
+#### **Bing Xat**
 
 Bing és el motor de cerca de Microsoft utilitzat al navegador Edge. Bing, en la seva funció de xat disposa d’un LLM (Large Language Mode), que ha estat desenvolupat per la pròpia OpenAI, que és l'empresa creadora de ChatGPT.<br>
 
@@ -116,21 +115,17 @@ El model d’IA de Bing també s'estarà actualitzant constantment, evitant aix�
 Per entrar al xat, cal accedir a  la web oficial del cercador www.bing.com, i en la fila d'opcions de dalt, prémer l'opció Xat.<br>
 
 <br>
-<div align="center">
-  <img src="/images/bloc/2023/07/Imatge4.png" />
-  "Cercador Bing"
-</div>
+  <div align="center"><img src="/images/bloc/2023/07/Imatge4.png" /></div>
+  <div align="center">Cercador Bing</div>
 <br>
 
 <br>
-<div align="center">
-  <img src="/images/bloc/2023/07/Imatge5.png" />
-  "Quin temps farà avui utilitzant Bing"
-</div>
+  <div align="center"><img src="/images/bloc/2023/07/Imatge5.png" /></div>
+  <div align="center">Quin temps farà avui utilitzant Bing</div>
 <br>
 
 
-### **ChatGPT per Chrome**
+#### **ChatGPT per Chrome**
 
 Com el seu propi nom indica, aquesta és una extensió exclusiva pel Chrome, que permet afegir ChatGPT al navegador. Està creada a partir de l’API oficial d’OpenAI, i afegeix algunes funcionalitats que poden ser interessants.<br> 
 Per tal de fer-la funcionar, demana tenir un compte a OpenAI.<br>
@@ -140,7 +135,7 @@ En primer lloc, quan es realitzen les cerques a Google, apart dels resultats nor
 Enllaç: [Chrome Web Store](https://chrome.google.com/webstore/detail/searchgpt-for-chrome/ninecedhhpccjifamhafbdelibdjibgd?hl=es) <br>
 
 
-### **Bard, l'assistent virtual de Google**
+#### **Bard, l'assistent virtual de Google**
 
 Bard, l'assistent virtual d'intel·ligència artificial de Google, ja està disponible des del 13 de Juliol a Espanya. Aquesta eina podrà usar-se als 27 països de la Unió Europea (UE) i al Brasil, zones que van quedar excloses en el seu llançament inicial al febrer, quan el gegant tecnològic ho va anunciar com a resposta a la meteòrica popularitat de ChatGPT, del seu rival Microsoft.<br>
 
@@ -159,26 +154,20 @@ El model de llenguatge del programa d’OpenAI, es basa en GPT-4, una versió mi
 Enllaç: https://bard.google.com/
 
 <br>
-<div align="center">
-  <img src="/images/bloc/2023/07/Imatge6.png" />
-  "Quin temps farà avui utilitzant Bard"
-</div>
+  <div align="center"><img src="/images/bloc/2023/07/Imatge6.png" /></div>
+  <div align="center">Quin temps farà avui utilitzant Bard</div>
 <br>
 
-### **Ària,  ChatGPT per Opera**
+#### **Ària,  ChatGPT per Opera**
 
 Opera va renovar el seu navegador a l’abril del 2023 amb Ària, el seu assistent virtual d'IA basat en ChatGPT. Aquest assistent està sempre disponible en la barra lateral esquerra del navegador i es pot utilitzar de manera gratuïta.<br>
 
 Enllaç: https://www.opera.com/es/download
 
 <br>
-<div align="center">
-  <img src="/images/bloc/2023/07/Imatge7.png" />
-  "Quin temps farà avui utilitzant Ària"
-</div>
+<div align="center"><img src="/images/bloc/2023/07/Imatge7.png" /></div>
+<div align="center">Quin temps farà avui utilitzant Ària</div>
 <br>
-
-
 
 
 ## **Extensions IA per utilitzar al Navegador** {#Extensions}
@@ -215,8 +204,8 @@ https://www.xataka.com/basics/google-bard-vs-chatgpt-vs-bing-chat-comparativa-12
 ## **Glossari** {#Glossari}
 
 * **IA (Intel·ligència Artificial):** informàtica aplicada al desenvolupament de màquines amb capacitat de simular conductes humanes, com ara el raonament, l'aprenentatge, el processament i la interpretació d'estímuls sensorials.<br>
-* ***CSS (Cascading Style Sheets):** és un llenguatge de disseny gràfic per  definir i crear la presentació d'un document estructurat escrit en un llenguatge de marcat.2 És molt usat per establir el disseny visual dels documents web, i interfícies d'usuari escrites en HTML o XHTML.<br>
-* ***Assistent virtual:** programa que utilitza tècniques d'intel·ligència artificial que li permet interactuar amb éssers humans i especialment executar tasques i respondre preguntes plantejades per mitjà de llenguatge natural.<br>
+* **CSS (Cascading Style Sheets):** és un llenguatge de disseny gràfic per  definir i crear la presentació d'un document estructurat escrit en un llenguatge de marcat.2 És molt usat per establir el disseny visual dels documents web, i interfícies d'usuari escrites en HTML o XHTML.<br>
+* **Assistent virtual:** programa que utilitza tècniques d'intel·ligència artificial que li permet interactuar amb éssers humans i especialment executar tasques i respondre preguntes plantejades per mitjà de llenguatge natural.<br>
 * **LaMDA (Language Model for Dialogui Applications):** és una família de models de llenguatge neuronal conversacional desenvolupat per Google.<br>
 * **API (Application programming interface):** interfície associada als objectes d'un programa que permet cridar aquests objectes des de les eines o sentències d'un llenguatge o entorn de programació extern per desenvolupar aplicacions personalitzades que facin ús de la funcionalitat proporcionada per aquests objectes.<br>
 * **LLM (Large Language Mode):** model d'aprenentatge automàtic capaç de modificar una gran quantitat de paràmetres de manera autònoma mentre aprèn per efectuar diverses tasques de processament del llenguatge natural, com ara generar i classificar text, respondre preguntes de manera conversacional i traduir text.<br>
