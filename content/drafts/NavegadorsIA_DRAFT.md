@@ -55,7 +55,7 @@ Un navegador web, també anomenat **“browser”** en anglès, és un programar
 Cal tenir en compte que eines com el TikTok es posiciona com el cercador preferit de la Generació Z.<br>
 
 
-### **Què proporciona la IA als navegadors web?** 
+### **Què proporciona l'IA als navegadors web?** 
 
 L'ús de la intel·ligència artificial (IA) té el potencial de revolucionar la forma en què els usuaris interactuen amb els navegadors web. Els navegadors web que utilitzen aquesta tecnologia, són capaços de proporcionar als usuaris una experiència de navegació més personalitzada, eficient i atractiva.<br>
 
@@ -69,7 +69,7 @@ Mentrestant, el camp de la intel·ligència artificial també avançava. Des del
 
 Els algorismes d'aprenentatge automàtic i la creixent disponibilitat d'enormes conjunts de dades van portar al ràpid desenvolupament de la IA. Les empreses tecnològiques van començar a utilitzar-la per millorar els resultats de cerca, proporcionar recomanacions personalitzades i permetre la interacció amb el llenguatge natural a través d'assistents virtuals.<br>
 
-### **Convergència de IA i Navegadors Web** 
+### **Convergència d'IA i Navegadors Web** 
 
 La convergència de la IA i els navegadors web és un desenvolupament relativament recent. Google va ser un dels primers en adoptar la IA als  seus productes de navegació, introduint la cerca per veu en Google Chrome al 2011.<br> 
 L'aprenentatge automàtic també s'ha utilitzat per millorar l'eficiència de la navegació predictiva.<br>
