@@ -124,6 +124,7 @@ Per entrar al xat, cal accedir a  la web oficial del cercador www.bing.com, i en
   <div align="center">Quin temps farà avui utilitzant Bing</div>
 <br>
 
+<br><br>
 
 #### **ChatGPT per Chrome**
 
@@ -134,6 +135,7 @@ En primer lloc, quan es realitzen les cerques a Google, apart dels resultats nor
 
 Enllaç: [Chrome Web Store](https://chrome.google.com/webstore/detail/searchgpt-for-chrome/ninecedhhpccjifamhafbdelibdjibgd?hl=es) <br>
 
+<br><br>
 
 #### **Bard, l'assistent virtual de Google**
 
@@ -158,6 +160,8 @@ Enllaç: https://bard.google.com/
   <div align="center">Quin temps farà avui utilitzant Bard</div>
 <br>
 
+<br><br>
+
 #### **Ària,  ChatGPT per Opera**
 
 Opera va renovar el seu navegador a l’abril del 2023 amb Ària, el seu assistent virtual d'IA basat en ChatGPT. Aquest assistent està sempre disponible en la barra lateral esquerra del navegador i es pot utilitzar de manera gratuïta.<br>
@@ -169,6 +173,7 @@ Enllaç: https://www.opera.com/es/download
 <div align="center">Quin temps farà avui utilitzant Ària</div>
 <br>
 
+<br><br>
 
 ## **Extensions IA per utilitzar al Navegador** {#Extensions}
 
