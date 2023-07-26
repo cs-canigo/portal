@@ -185,6 +185,56 @@ Algunes de les extensions més importants amb IA que hi ha disponibles son: <br>
     <td align="center">[Voila IA - Assistent del navegador](https://www.getvoila.ai/)</td>
     <td align="left">Es tracta d'un assistent virtual pels navegadors de: Chrome, Edge i Firefox. La seva comesa és la de permetre usar ChatGPT en qualsevol pàgina web, només cal  desplegar l'extensió.</td>
   </tr>
+    <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/fireflies.png" /></div><div>Fireflies</div></td>
+    <td align="center">[Fireflies IA – IA per transcriure resumir reunions](https://fireflies.ai/)</td>
+    <td align="left">Extensió per gravar i passar a text les videotrucades de Google Meet, Zoom, Microsoft Teams, Google Voice, Skype,.. entre altres.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/otter.png" /></div><div>Otter</div></td>
+    <td align="center">[Otter IA – Notes de les reunions de veu i transcripció en temps real](https://otter.ai/)</td>
+    <td align="left">Extensió per transcriure reunions, videotrucades i xats en general. No només es limita a passar a text, sinó que pot resumir i editar la transcripció per fer-la més àgil i fàcil de llegir, permetent diferenciar entre les persones que parlen.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/youtube.jpg" /></div><div>YouTube & Article Summary powered by ChatGPT</div></td>
+    <td align="center">[YouTube – Resum en text d’un video de YouTube](https://chrome.google.com/webstore/detail/youtube-article-summary-p/nmmicjeknamkfloonkhhcjmomieiodli)</td>
+    <td align="left">Extensió de Chrome que utilitza ChatGPT per generar resums en text d'un vídeo de YouTube. En instal·lar l'extensió, s'afegeix un botó "Generate Summary" sota el vídeo de YouTube que s'està reproduint.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/murf.png" /></div><div>Murf</div></td>
+    <td align="center">[murf.ai – IA Generador de Veus](https://murf.ai/)</td>
+    <td align="left">Extensió que permet gravar i editar el so de les presentacions. És un generador de veu que: converteix textos en discursos, genera veu en off o fa dictats. Un dels seus punts forts és la personalització, on pot crear veus que sonin naturals, i a més ho fa amb una interfície molt intuïtiva. Hi ha més de 100 veus en 15 idiomes diferents i es pot triar accents, tons, propòsits, pauses...</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/openai.jpg" /></div><div>OpenAI Translator</div></td>
+    <td align="center">[OpenAI Translator - Traductor] (https://github.com/openai-translator/openai-translator)</td>
+    <td align="left">És un traductor que utilitza GPT per realitzar les traduccions mitjançant intel·ligència artificial. Pot traduir en 55 idiomes diferents, amb mode streaming També hi ha funcions de text a veu, i capacitat de copiar les traduccions.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/grammarly.png" /></div><div>Grammarly</div></td>
+    <td align="center">[Grammarly- Assistència a l’escriptura](https://www.grammarly.com/)</td>
+    <td align="left">Extensió per generar contingut en anglès, empra processament de llenguatge natural per oferir suport a la llengua anglesa, fa tasques tan variades com la de verificar la gramàtica, ofereix correccions, millorar el to i l'estructura, ajuda a fer millors textos i fins i tot, a comprovar si hi ha plagis.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/arcwise.png" /></div><div>Arcwise</div></td>
+    <td align="center">[Arcwise AI – GPT per fulls de càlcul](https://arcwise.app/ai)</td>
+    <td align="left">És una eina d’assistència impulsada per GPT per Google Sheets que ajuda als usuaris a entendre, netejar i processar dades de forma fàcil.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/compose.png" /></div><div>Compose</div></td>
+    <td align="center">[Compose AI: Assistent de redacció de textos](https://www.compose.ai/)</td>
+    <td align="left">És una eina per assistir en la redacció de textos, facilitant la creació de contingut de qualitat i optimitzant el temps emprat en el procés.</td>
+  </tr>
+  <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/jasper.png" /></div><div>Jasper</div></td>
+    <td align="center">[Jasper.ai – Assistent de plagis](https://www.jasper.ai/)</td>
+    <td align="left">Una de les extensions més populars que pot ser molt útil per  professionals del màrqueting. Entre les funcions que ofereix aquest assistent d'escriptura, es troben la correcció i comprovador de plagis de textos escrits, la generació de respostes que sonen a humà, control de la gramàtica i generació de  contingut de tota mena: des d'un fil de Twitter, un guió, un correu electrònic... disposa de més de 60 plantilles per adaptar les seves respostes.</td>
+  </tr>
+    <tr>
+    <td align="center"><div><img src="/images/bloc/2023/07/copyleaks.png" /></div><div>Copyleaks</div></td>
+    <td align="center">[Copyleaks – Detector de contingut d’IA](https://copyleaks.com/ai-content-detector) </td>
+    <td align="left">Aquesta extensió ajuda a identificar l'origen del contingut enfront d'eines com ChatGPT. Només s’ha de seleccionar un text, donar-li a la icona i automàticament donarà el seu veredicte.</td>
+  </tr>
 </table>
 
 En conclusió, per aprofitar al màxim aquestes eines, és essencial conèixer les seves particularitats i seleccionar la més adequada segons les necessitats específiques de l'usuari.<br>
