@@ -16,7 +16,7 @@ categories  = ["Intel·ligència artificial", "Navegadors"]
 1. [Introducció] (#Introduccio)
 2. [Evolució dels Navegadors Web] (#Evolucio)
 3. [Navegadors i IA] (#Navegadors)
-4. [Navegadors amb xatbots d'IA] (#NavegadorsXatBot)
+4. [Navegadors amb Assistent Virtual d'IA] (#NavegadorsXatBot)
 5. [Extensions IA per utilitzar al Navegador] (#Extensions)
 6. [El futur dels Navegadors] (#Futur)
 7. [Referències] (#Referencies)
@@ -48,7 +48,7 @@ Un navegador web, també anomenat **“browser”** en anglès, és un programar
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2023/07/Imatge3" />
+  <img src="/images/bloc/2023/07/Imatge3.png" />
 </div>
 <br>
 
@@ -98,7 +98,7 @@ Aquest és un canvi significatiu respecte a la forma tradicional de cercar, que 
 * És important tenir en compte que les capacitats i característiques específiques de la IA que ofereixen els navegadors poden variar depenent d’aquest i de les tecnologies subjacents utilitzades. Els navegadors poden tenir diferents nivells d'integració i confiança en la IA per a diverses funcionalitats.<br>
 
 
-## **Navegadors amb xatbots d'IA** {#NavegadorsXatBot}
+## **Navegadors amb Assistent Virtual d'IA** {#NavegadorsXatBot}
 
 ### **Bing Xat**
 
@@ -137,9 +137,9 @@ En primer lloc, quan es realitzen les cerques a Google, apart dels resultats nor
 Enllaç: [Chrome Web Store](https://chrome.google.com/webstore/detail/searchgpt-for-chrome/ninecedhhpccjifamhafbdelibdjibgd?hl=es) <br>
 
 
-### **Bard, el xatbot  de Google**
+### **Bard, l'assistent virtual de Google**
 
-Bard, el xatbot d'intel·ligència artificial de Google, ja està disponible des del 13 de Juliol a Espanya. Aquesta eina podrà usar-se als 27 països de la Unió Europea (UE) i al Brasil, zones que van quedar excloses en el seu llançament inicial al febrer, quan el gegant tecnològic ho va anunciar com a resposta a la meteòrica popularitat de ChatGPT, del seu rival Microsoft.<br>
+Bard, l'assistent virtual d'intel·ligència artificial de Google, ja està disponible des del 13 de Juliol a Espanya. Aquesta eina podrà usar-se als 27 països de la Unió Europea (UE) i al Brasil, zones que van quedar excloses en el seu llançament inicial al febrer, quan el gegant tecnològic ho va anunciar com a resposta a la meteòrica popularitat de ChatGPT, del seu rival Microsoft.<br>
 
 Bard és un complement a la cerca de Google, però no és un cercador en si mateix. En aquest sentit, aquesta IA no es presenta com una eina capaç de resumir respostes definitives a una pregunta, sinó que, segons Google, actua com un “assessor” capaç d'estimular la imaginació de l'usuari.<br>
 
@@ -162,16 +162,16 @@ Enllaç: https://bard.google.com/
 </div>
 <br>
 
-### **Aria,  ChatGPT per Opera**
+### **Ària,  ChatGPT per Opera**
 
-Opera va renovar el seu navegador a l’abril del 2023 amb Aria, el seu  xatbot de IA basat en ChatGPT. Aquest assistent està sempre disponible en la barra lateral esquerra del navegador i es pot utilitzar de manera gratuïta.<br>
+Opera va renovar el seu navegador a l’abril del 2023 amb Ària, el seu assistent virtual d'IA basat en ChatGPT. Aquest assistent està sempre disponible en la barra lateral esquerra del navegador i es pot utilitzar de manera gratuïta.<br>
 
 Enllaç: https://www.opera.com/es/download
 
 <br>
 <div align="center">
   <img src="/images/bloc/2023/07/Imatge7.png" />
-  "Quin temps farà avui utilitzant Aria"
+  "Quin temps farà avui utilitzant Ària"
 </div>
 <br>
 
@@ -181,6 +181,7 @@ Enllaç: https://www.opera.com/es/download
 
 Algunes de les extensions més importants amb IA que hi ha disponibles son: <br>
 
+TAULA _____________________________________________________
 
 
 En conclusió, per aprofitar al màxim aquestes eines, és essencial conèixer les seves particularitats i seleccionar la més adequada segons les necessitats específiques de l'usuari.<br>
@@ -201,13 +202,14 @@ En resum, la integració de la IA als navegadors web està canviant l'arquitectu
 ## **Referències** {#Referencies}
 https://blog.phonehouse.es/2023/05/18/navegadores-web-ia-chatgp/ <br>
 https://www.xataka.com/basics/18-extensiones-basadas-inteligencia-artificial-chatgpt-para-chrome-edge-firefox-safari <br>
+https://www.xataka.com/basics/google-bard-vs-chatgpt-vs-bing-chat-comparativa-12-diferencias-que-puedes-hacer-estos-chats-inteligencia-artificial <br>
 
 
 ## **Glossari** {#Glossari}
 
 * **IA (Intel·ligència Artificial):** informàtica aplicada al desenvolupament de màquines amb capacitat de simular conductes humanes, com ara el raonament, l'aprenentatge, el processament i la interpretació d'estímuls sensorials.<br>
 * ***CSS (Cascading Style Sheets):** és un llenguatge de disseny gràfic per  definir i crear la presentació d'un document estructurat escrit en un llenguatge de marcat.2 És molt usat per establir el disseny visual dels documents web, i interfícies d'usuari escrites en HTML o XHTML.<br>
-* ***xatbot:** programa que utilitza tècniques d'intel·ligència artificial que li permet interactuar amb éssers humans i especialment executar tasques i respondre preguntes plantejades per mitjà de llenguatge natural.<br>
+* ***Assistent virtual:** programa que utilitza tècniques d'intel·ligència artificial que li permet interactuar amb éssers humans i especialment executar tasques i respondre preguntes plantejades per mitjà de llenguatge natural.<br>
 * **LaMDA (Language Model for Dialogui Applications):** és una família de models de llenguatge neuronal conversacional desenvolupat per Google.<br>
 * **API (Application programming interface):** interfície associada als objectes d'un programa que permet cridar aquests objectes des de les eines o sentències d'un llenguatge o entorn de programació extern per desenvolupar aplicacions personalitzades que facin ús de la funcionalitat proporcionada per aquests objectes.<br>
 * **LLM (Large Language Mode):** model d'aprenentatge automàtic capaç de modificar una gran quantitat de paràmetres de manera autònoma mentre aprèn per efectuar diverses tasques de processament del llenguatge natural, com ara generar i classificar text, respondre preguntes de manera conversacional i traduir text.<br>
