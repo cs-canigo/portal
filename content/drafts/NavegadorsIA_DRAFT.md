@@ -228,5 +228,5 @@ https://www.xataka.com/basics/google-bard-vs-chatgpt-vs-bing-chat-comparativa-12
 
 <br>
 <br>
-###### **Unitat Arquitectura d'Entorn Digital de Treball i Comunicacions** <br>
+###### **Àrea d'Arquitectura d'Entorn Digital de Treball i Comunicacions** <br>
 ###### **Direcció Infraestructures**
