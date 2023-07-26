@@ -9,7 +9,7 @@ key = "JULIOL2023"
 
 ## Introducció
 
-El dia 28/07/2023 s'ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar tres entitats publicades d'obligat compliment i afegir-ne dues de noves.
+El dia 28/06/2023 s'ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar tres entitats publicades d'obligat compliment i afegir-ne dues de noves.
  
 ## Novetats
 
