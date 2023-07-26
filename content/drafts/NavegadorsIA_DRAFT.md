@@ -55,9 +55,10 @@ Un navegador web, també anomenat **“browser”** en anglès, és un programar
 Cal tenir en compte que eines com el TikTok es posiciona com el cercador preferit de la Generació Z.<br>
 
 
-### **Què proporciona la IA als navegadors web?** 
+### **Què proporciona l'IA als navegadors web?** 
 
 L'ús de la intel·ligència artificial (IA) té el potencial de revolucionar la forma en què els usuaris interactuen amb els navegadors web. Els navegadors web que utilitzen aquesta tecnologia, són capaços de proporcionar als usuaris una experiència de navegació més personalitzada, eficient i atractiva.<br>
+
 
 
 ## **Evolució dels Navegadors Web** {#Evolucio}
@@ -68,12 +69,13 @@ Mentrestant, el camp de la intel·ligència artificial també avançava. Des del
 
 Els algorismes d'aprenentatge automàtic i la creixent disponibilitat d'enormes conjunts de dades van portar al ràpid desenvolupament de la IA. Les empreses tecnològiques van començar a utilitzar-la per millorar els resultats de cerca, proporcionar recomanacions personalitzades i permetre la interacció amb el llenguatge natural a través d'assistents virtuals.<br>
 
-### **Convergència de IA i Navegadors Web** 
+### **Convergència d'IA i Navegadors Web** 
 
 La convergència de la IA i els navegadors web és un desenvolupament relativament recent. Google va ser un dels primers en adoptar la IA als  seus productes de navegació, introduint la cerca per veu en Google Chrome al 2011.<br> 
 L'aprenentatge automàtic també s'ha utilitzat per millorar l'eficiència de la navegació predictiva.<br>
 
 Més recentment, els navegadors web han començat a integrar assistents virtuals amb capacitat de IA per millorar-ne la usabilitat. També han sorgit noves característiques que milloren l'accessibilitat, com la transcripció de veu a text i la descripció d'imatges. Aquests avanços estan transformant ràpidament la forma en què s’interactua amb la web, la qual cosa promet un futur de navegació web més eficient, accessible i personalitzada.<br>
+
 
 
 ## **Navegadors i IA** {#Navegadors}
@@ -96,6 +98,7 @@ Hi ha certes característiques impulsades per IA en els navegadors que ja estan 
 Aquest és un canvi significatiu respecte a la forma tradicional de cercar, que implicava escriure paraules clau a una barra de cerca.<br>  
 
 * És important tenir en compte que les capacitats i característiques específiques de la IA que ofereixen els navegadors poden variar depenent d’aquest i de les tecnologies subjacents utilitzades. Els navegadors poden tenir diferents nivells d'integració i confiança en la IA per a diverses funcionalitats.<br>
+
 
 
 ## **Navegadors amb Assistent Virtual d'IA** {#NavegadorsXatBot}
@@ -177,6 +180,7 @@ Enllaç: https://www.opera.com/es/download
 
 
 
+
 ## **Extensions IA per utilitzar al Navegador** {#Extensions}
 
 Algunes de les extensions més importants amb IA que hi ha disponibles son: <br>
@@ -185,6 +189,7 @@ TAULA _____________________________________________________
 
 
 En conclusió, per aprofitar al màxim aquestes eines, és essencial conèixer les seves particularitats i seleccionar la més adequada segons les necessitats específiques de l'usuari.<br>
+
 
 
 ## **El futur dels Navegadors** {#Futur}
@@ -199,10 +204,12 @@ L'impacte de la IA als navegadors web està tot just començant. Conforme avanç
 En resum, la integració de la IA als navegadors web està canviant l'arquitectura de la web tal com es coneix. A mesura que la tecnologia avança, és probable que es vegi un futur de navegació més intel·ligent, personalitzat i inclusiu. Les possibilitats són infinites i, sens dubte, emocionants.<br>
 
 
+
 ## **Referències** {#Referencies}
 https://blog.phonehouse.es/2023/05/18/navegadores-web-ia-chatgp/ <br>
 https://www.xataka.com/basics/18-extensiones-basadas-inteligencia-artificial-chatgpt-para-chrome-edge-firefox-safari <br>
 https://www.xataka.com/basics/google-bard-vs-chatgpt-vs-bing-chat-comparativa-12-diferencias-que-puedes-hacer-estos-chats-inteligencia-artificial <br>
+
 
 
 ## **Glossari** {#Glossari}
