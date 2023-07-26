@@ -180,7 +180,7 @@ Enllaç: https://www.opera.com/es/download
 Algunes de les extensions més importants amb IA que hi ha disponibles son: <br>
 
 | --- | --- | --- |
-| <div><img src="/images/bloc/2023/07/voila.png" /></div><div>Voila</div> | [Voila IA - Assistent del navegador] (https://www.getvoila.ai/) | Es tracta d'un assistent virtual pels navegadors de: Chrome, Edge i Firefox. La seva comesa és la de permetre usar ChatGPT en qualsevol pàgina web, només cal  desplegar l'extensió. | 
+| <div><img src="/images/bloc/2023/07/voila.png" /></div><div>Voila</div> | [Voila IA - Assistent del navegador](https://www.getvoila.ai/) | Es tracta d'un assistent virtual pels navegadors de: Chrome, Edge i Firefox. La seva comesa és la de permetre usar ChatGPT en qualsevol pàgina web, només cal  desplegar l'extensió. | 
 
 
 En conclusió, per aprofitar al màxim aquestes eines, és essencial conèixer les seves particularitats i seleccionar la més adequada segons les necessitats específiques de l'usuari.<br>
