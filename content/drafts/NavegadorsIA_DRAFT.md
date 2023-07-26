@@ -232,7 +232,7 @@ Algunes de les extensions més importants amb IA que hi ha disponibles son: <br>
   </tr>
     <tr>
     <td align="center"><div><img src="/images/bloc/2023/07/copyleaks.png" /></div><div>Copyleaks</div></td>
-    <td align="center">[Copyleaks – Detector de contingut d’IA](https://copyleaks.com/ai-content-detector) </td>
+    <td align="center">[Copyleaks – Detector de contingut d’IA](https://copyleaks.com/ai-content-detector)</td>
     <td align="left">Aquesta extensió ajuda a identificar l'origen del contingut enfront d'eines com ChatGPT. Només s’ha de seleccionar un text, donar-li a la icona i automàticament donarà el seu veredicte.</td>
   </tr>
 </table>
