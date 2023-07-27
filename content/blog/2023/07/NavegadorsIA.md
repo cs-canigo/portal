@@ -1,8 +1,7 @@
 +++
 date        = "2023-07-27"
 title       = "Navegadors IA"
-description = "L’era de la informació ha convertit els navegadors web en una part integral de les nostres vides a través de les quals, s’explora l’ univers d'informació disponible en Internet. Però, i si aquests navegadors poguessin entendre millor les necessitats i oferissin una experiència de navegació més personalitzada, intuïtiva i eficient?  
-La integració amb la Intel·ligència Artificial (IA) lliura aquesta experiència."
+description = "L’era de la informació ha convertit els navegadors web en una part integral de les nostres vides a través de les quals, s’explora l’ univers d'informació disponible en Internet. Però, i si aquests navegadors poguessin entendre millor les necessitats i oferissin una experiència de navegació més personalitzada, intuïtiva i eficient?. La integració amb la Intel·ligència Artificial (IA) lliura aquesta experiència."
 sections    = ["Blog", "home"]
 blog_tags   = ["intelligència artificial", "navegadors"]
 categories  = ["intelligència artificial", "navegadors"]
