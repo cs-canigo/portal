@@ -23,7 +23,8 @@ categories  = ["blog","gestors"]
 
 ## Solucions homologades
 
-##<a name="cloud-reqs"></a>"Què és cloud computing"
+### "Què és cloud computing"
+<a name="cloud-reqs"></a>
 
 Entenem per Cloud Computing el pool de recursos ofert per un tercer, al que podem accedir a través d'Internet i que ens permet executar diferents tasques (computació, emmagatzematge o serveis empaquetats) amb modalitats més o menys administrades pel propi proveïdor de cloud.
 
