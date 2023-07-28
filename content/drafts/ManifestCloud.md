@@ -12,7 +12,7 @@ categories  = ["blog","gestors"]
 ## MANIFEST
 
 
-* Les opcions disponibles per desplegar solucions a núvol públic es poden consultar a **Què és cloud computing**(#cloud-reqs). Aquestes opcions recullen: proveïdors de núvol públic hiperescalars, lowcode i les ubicacions possibles tant a nivell físic com lògic.
+* Les opcions disponibles per desplegar solucions a núvol públic es poden consultar a [**Què és cloud computing**](#cloud-reqs). Aquestes opcions recullen: proveïdors de núvol públic hiperescalars, lowcode i les ubicacions possibles tant a nivell físic com lògic.
 * La comunicació entre sistemes desplegats a núvol públic amb sistemes desplegats on-premise només es pot fer via les interfícies de servei que el sistema exposi (APIs). 
 * Excepcionalment, per les solucions SaaS que no estiguin en la llista de solucions homologades hauran de complir com a mínim amb una certificació de seguretat reconeguda internacionalment. 
 * Les consideracions recollides al manifest, formen part de la solvència tècnica  de les solucions que es poden proposar.
@@ -23,7 +23,7 @@ categories  = ["blog","gestors"]
 
 ## Solucions homologades
 
-## <a name="cloud-reqs"></a>["Què és cloud computing"]
+<a name="cloud-reqs"></a>## "Què és cloud computing"
 
 Entenem per Cloud Computing el pool de recursos ofert per un tercer, al que podem accedir a través d'Internet i que ens permet executar diferents tasques (computació, emmagatzematge o serveis empaquetats) amb modalitats més o menys administrades pel propi proveïdor de cloud.
 
