@@ -46,7 +46,7 @@ jobs:
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-arm64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3.5.3
         with:
           submodules: recursive
       - name: Build with Hugo
@@ -65,7 +65,7 @@ jobs:
           && npm install request \
           && node index-algolia.js
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1.0.4
+        uses: actions/upload-pages-artifact@v2.0.0
         with:
           path: ./public
 
@@ -74,9 +74,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1.2.2
+        uses: actions/deploy-pages@v2.0.3
