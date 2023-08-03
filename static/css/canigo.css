@@ -34,19 +34,20 @@ body h3:first-child{margin-top:0em;}
 }
 
 /*#TableOfContents ul li:nth-child(3n),*/
-#TableOfContents ul li.col-last,
+#TableOfContents ul li.col-last{
 /*#TableOfContents ul li:last-child{*/
     border-bottom:3px solid #ddd;
 }
 
 #TableOfContents ul{
-  border:0px solid !important;
+  _border:0px solid !important;
 }
 
 #TableOfContents ul li{
   margin:0;
   border-bottom: 1px solid #ddd;
   padding: .5em 0;
+  list-style-type: none;
 }
 
 #TableOfContents ul li.no-border{
@@ -302,5 +303,3 @@ tr.head_row td + td {
 .aa-suggestion .highlight_hit{
   background-color: #BA9EB0; 
 }
-
-/*.container-radar{width:1500px;}*/

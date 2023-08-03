@@ -10,10 +10,9 @@
 
 	{{ if and (isset .Params "toc") (eq (index .Params "toc") true) }}
 
-	<div class="row" id="TOC">
+	<div class="row">
 		<div class="col-md-12 col-xs-12"> 
 			{{ .TableOfContents }}
     	</div>
 	</div>
-
 	{{ end }}
