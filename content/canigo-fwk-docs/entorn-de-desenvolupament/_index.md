@@ -6,4 +6,5 @@ sections    = "canigo-fwk-docs"
 aliases = [
     "/canigo/entorn-desenvolupament/"
 ]
+weight = 4
 +++

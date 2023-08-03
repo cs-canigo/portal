@@ -3,7 +3,7 @@ date        = "2019-02-21"
 title       = "Elements del catàleg DBaaS"
 description = "Descripció dels elements DBaaS disponibles a la Generalitat de Catalunya."
 sections    = "Cloud"
-weight      = 1
+weight      = 9
 toc = true
 categories  = ["cloud","dbaas","compose","azure"]
 +++

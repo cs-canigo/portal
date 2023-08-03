@@ -8,7 +8,7 @@ toc 		= true
 aliases = [
     "/canigo/roadmap/"
 ]
-weight 		= 5
+weight = 5
 +++
 
 Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3

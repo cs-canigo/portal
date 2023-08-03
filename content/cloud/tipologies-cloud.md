@@ -100,4 +100,3 @@ Les bases de dades com a servei són un cas concret de xPaaS on:
 - El desenvolupador no gestiona el maquinari, però si tot el programari.
 - El desenvolupador disposa de credencials d’administrador per gestionar el servidor com consideri oportú.
 - El desenvolupador és responsable d’instal·lar i mantenir tot el programari necessari.
-
