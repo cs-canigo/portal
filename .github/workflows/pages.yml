@@ -29,24 +29,24 @@ jobs:
   # Build job
   build:
     environment: github-pages
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
-      NVM_VERSION: 0.39.1
-      HUGO_VERSION: 0.49.2
+      NVM_VERSION: 0.39.4
+      HUGO_VERSION: 0.116.1
     steps:
       - name: Install NodeJS with NVM
         run: |
           wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v${NVM_VERSION}/install.sh | bash \
           && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
-          && nvm install 8.17.0 \
-          && nvm alias default 8.17.0 \
+          && nvm install 18.17.0 \
+          && nvm alias default 18.17.0 \
           && node -v
       - name: Install Hugo CLI
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3.5.3
         with:
           submodules: recursive
       - name: Build with Hugo
@@ -65,7 +65,7 @@ jobs:
           && npm install request \
           && node index-algolia.js
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1.0.4
+        uses: actions/upload-pages-artifact@v2.0.0
         with:
           path: ./public
 
@@ -74,9 +74,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1.2.2
+        uses: actions/deploy-pages@v2.0.3
