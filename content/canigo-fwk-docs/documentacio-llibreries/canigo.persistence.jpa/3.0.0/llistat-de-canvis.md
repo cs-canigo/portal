@@ -1,4 +1,4 @@
-++
++++
 date        = "2021-11-01"
 title       = "Llistat de canvis"
 description = "Llistat de canvis canigo.persistence.jpa 3.0.0"

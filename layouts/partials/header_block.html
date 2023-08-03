@@ -10,27 +10,21 @@
 									<li>
 										<a href="/">Inici</a>
 									</li>
-									<li class="breadcrumbs2">
 									{{ if and (ne $title "cercador") (ne $section "") }}
-										<a href="/{{ .Section | urlize }}">
-											{{ partial "breadcrumbs.html" . }}
-										</a>
-										{{ partial "breadcrumbs_subsection.html" . }}
+										{{ partial "breadcrumbs.html" . }}
 									{{ else }}
 										{{ if ne $title "cercador"}}
 											{{ partial "breadcrumbs.html" . }}
-											{{ partial "breadcrumbs_subsection.html" . }}
 										{{ else }}
 											{{ .Title }}
 										{{ end }}
 									{{ end }}
-									</li>
 
 								</ol>
 
-								<h1 class="capcelera_flotant pull-left" data-txt="{{index .Params "teletext_id"}}.title">
+								<h1 class="capcelera_flotant pull-left">
 									{{ if and (eq $section "") (ne $title "cercador") }}
-										{{ if (eq (in .URL "blog_tags") false) }}
+										{{ if (eq (in .Permalink "blog_tags") false) }}
 											{{ partial "breadcrumbs.html" . }}
 										{{ end }}
 										{{ partial "titles_subsection.html" . }}
@@ -78,7 +72,7 @@
 								</form>
 								{{end}}
 
-								{{ if or (eq $title (.Site.Params.blog_section)) (in .URL "blog_tags") }}
+								{{ if or (eq $title (.Site.Params.blog_section)) (in .Permalink "blog_tags") }}
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Blog&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>

@@ -1,83 +1,14 @@
-{{ $title := .Title | html | lower}}
-{{ $section := .Section | html | lower}}
+{{ $.Scratch.Set "level" 0 }}
 
-{{ if or (eq $title "canigos") (eq $section "canigo")}}
-	Framework Canigó
-{{ end }}
-
-{{ if or (eq $title "sics") (eq $section "sic") }}
-	Servei d'Integració Contínua
-{{ end }}
-
-{{ if or (eq $title "sgdes") (eq $section "sgde") }}
-	Servei de Gestió del Document Electrònic
-{{ end }}
-
-{{ if or (eq $title "noticies") (eq $section "noticies") }}
-	Notícies
-{{ end }}
-
-{{ if (eq $section "howtos") }}
-	How to
-{{ end }}
-
-{{ if or (eq $title (.Site.Params.blog_section)) (eq $section .Site.Params.blog_section) }}
-	Blog d'Arquitectura
-{{ end }}
-
-{{ if or (eq $title "cs") (eq $section "cs") }}
-	Centres de Suport
-{{ end }}
-
-{{ if or (eq $title "gicars") (eq $section "gicar") }}
-	GICAR
-{{ end }}
-
-{{ if or (eq $title "clouds") (eq $section "cloud") }}
-	Container Cloud
-{{ end }}
-
-{{ if (eq $section "arqctti")}}
-	Arquitectura CTTI
-{{ end }}
-
-{{ if (eq $section "dadesref")}}
-	Gestió Tècnica de Dades
-{{ end }}
-
-{{ if (eq $section "eventhub")}}
-    EventHub
-{{ end }}
-
-{{ if (eq $section "rpa")}}
-	Plataforma Corporativa de RPA
-{{ end }}
-
-{{ if (eq $section "lowcode")}}
-	Plataformes LowCode
-{{ end }}
-
-{{ if in .URL "blog_tags" }}
-	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
+{{ range .Ancestors.Reverse }}
+	{{if gt ($.Scratch.Get "level") 0}}
+		<li>
+			<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+		</li>
+	{{end}}
+	{{ $.Scratch.Add "level" 1 }}
 {{end}}
 
-{{ if (eq $section "canigo-fwk-docs")}}
-
-	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-	{{ $.Scratch.Add "path" .Site.BaseURL }}
-	{{ $.Scratch.Add "path" "/" }}
-	
-	{{ range $index, $element := split $url "/" }}
-	  {{ $.Scratch.Add "path" $element }}
-	  {{ if ne $element "" }}
-	  	{{ $.Scratch.Add "path" "/" }}
-	  	{{ if gt $index 1 }}
-	  		<li>
-	  	{{ end }}
-	  	<a href='{{ $.Scratch.Get "path" }}'>{{ replace (replace (replace . "-" " ") "%C3%B2" "ò") "%C3%B3" "ó" }}</a>
-	  	{{ if gt $index 1 }}
-	  		</li>
-	  	{{ end }}
-	  {{ end }}
-	{{ end }}
-{{end}}
+<li>
+	{{ .LinkTitle }}
+</li>
