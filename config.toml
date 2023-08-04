@@ -13,6 +13,8 @@ disablePathToLower = false
 
 Paginate = 10
 
+[markup.goldmark.renderer]
+    unsafe= true
 
 [params]
 	noticieshome = 10
