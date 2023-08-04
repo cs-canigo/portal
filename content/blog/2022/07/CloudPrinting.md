@@ -7,23 +7,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["cloud", "nuvol", "impressió"]
 categories  = ["cloud", "nuvol", "impressió"]
 imatge      = "/images/bloc/2022/07/Entrada.jpg"
+toc = true
 key         = "JULIOL2022"
 +++
-
----
-
-# **Cloud Printing**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques i funcionalitats] (#Caracteristiques)
-3. [Principals Pros i Contres] (#ProsContres)
-4. [Casos d'ús] (#CasosUs)
-5. [Novetats] (#Novetats)
-6. [Referències] (#Referencies)
-7. [Glossari] (#Glossari)
 
 ---
 

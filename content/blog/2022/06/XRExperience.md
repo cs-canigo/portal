@@ -7,31 +7,10 @@ sections    = ["Blog", "home"]
 blog_tags   = ["computació espacial", "realitat virtual"]
 categories  = ["computació espacial", "realitat virtual"]
 imatge      = "/images/bloc/2022/06/Imatge1.jpg"
+toc = true
 key         = "JUNY2022"
 +++
 
----
-
-# **XR Experiences**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-  1. [Realitat Virtual (VR)](#RealitatVirtual)
-  2. [Realitat Augmentada (AR)](#RealitatAugmentada)
-  3. [Realitat Mixta (MR)](#RealitatMixta)
-2. [Tecnologia XR] (#TecnologiaXR)
-  1. [Dispositius per experiències XR] (#DispositiusXR)
-  2. [Plataformes de programari XR] (#SFTXR)
-3. [Experiències XR] (#ExperienciesXR)
-  1. [Aplicacions reals i futures] (#AplicacionsRealsFutures)
-  2. [Reptes XR] (#ReptesXR)
-  3. [Vídeos d'experiències XR] (#VideosXR)
-4. [Referències] (#Referencies)
-5. [Glossari] (#Glossari)
-
----
 
 ## **Introducció** {#Introduccio}
 

@@ -7,26 +7,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["comunicacions", "cloud", "sd wan", "sdn"]
 categories  = ["comunicacions", "cloud", "sd wan", "sdn"]
 imatge      = "/images/bloc/2022/11/Imatge1.jpg"
+toc = true
 key         = "NOVEMBRE2022"
 +++
-
----
-
-# **NaaS. Visió General**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Què és NaaS] (#QueEsNaaS)
-3. [Característiques de la tecnologia] (#Caracteristiques)
-4. [Principals avantatges i inconvenients] (#AvantatgesInconvenients)
-5. [Models de Servei] (#ModelServei)
-6. [Principals proveïdors de NaaS] (#Proveidors)
-7. [Referències] (#Referencies)
-8. [Glossari] (#Glossari)
-
----
 
 ## **Introducció** {#Introduccio}
 

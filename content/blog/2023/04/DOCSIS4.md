@@ -6,26 +6,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["comunicacions"]
 categories  = ["comunicacions"]
 imatge      = "/images/bloc/2023/04/Entrada.JPG"
+toc = true
 key         = "MAIG2023"
 +++
-
----
-
-# **DOCSIS 4.0**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques de DOCSIS 4.0] (#Caracteristiques)
-3. [Taula de detall tècnic] (#TaulaDetall)
-4. [Taula comparativa amb els estàndards anteriors] (#TaulaComparativa)
-5. [Beneficis e Inconvenients] (#BeneficisInconvenients)
-6. [Adopció i casos d'ús] (#Adopcio)
-7. [El futur de DOCSIS 4.0] (#Futur)
-8. [Conclusions] (#Conclusions)
-9. [Referències] (#Referencies)
-10. [Glossari] (#Glossari)
 
 ---
 

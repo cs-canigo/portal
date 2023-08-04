@@ -6,22 +6,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["comunicacions"]
 categories  = ["comunicacions"]
 imatge      = "/images/bloc/2023/05/Entrada1.jpg"
+toc = true
 key         = "JUNY2023"
 +++
----
-
-# **Open RAN**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Components de l'Arquitectura Open RAN] (#ComponentsArquitectura)
-3. [Avantatges i reptes Open RAN] (#AvantatgesReptes)
-4. [Conclusions] (#Conclusions)
-5. [Referències] (#Referencies)
-6. [Glossari] (#Glossari)
-
 ---
 
 ## **Introducció** {#Introduccio}

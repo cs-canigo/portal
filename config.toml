@@ -5,18 +5,20 @@ contentDir = "content"
 layoutDir = "layouts"
 publishDir = "public"
 buildDrafts = true
-baseURL = "https://canigo.ctti.gencat.cat"
+#baseURL = "https://canigo.ctti.gencat.cat"
 canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
 pluralizelisttitles = false
-disablePathToLower = true
+disablePathToLower = false
 
 Paginate = 10
 
+[markup.goldmark.renderer]
+    unsafe= true
 
 [params]
 	noticieshome = 10
-	destacatshome = 4
+	destacatshome = 5
 	google_analytics_id = "G-277LZ40QYF"
 	titol = "Centre de Telecomunicacions i Tecnologies de la Informació"
 	subtitol = "Arquitectura CTTI"
@@ -38,78 +40,24 @@ Paginate = 10
 
 [[menu.main]]
 	Name = "Arquitectura CTTI"
-    Weight = 3
-    Identifier = "arqctti"
-    URL = "/arqctti"
+    Weight = 2
+    Identifier = "arquitectura"
+    URL = "/arquitectura"
 
 [[menu.main]]
 	Name = "Blog"
-    Weight = 5
+    Weight = 3
     Identifier = "blog"
     URL = "/blog"
 
 [[menu.main]]
-	Name = "Cloud"
-    Weight = 7
-    Identifier = "cloud"
-    URL = "/cloud"
-
-[[menu.main]]
-	Name = "Canigó"
-    Weight = 9
-    Identifier = "framework"
-    URL = "/canigo-fwk-docs"
-
-[[menu.main]]
-	Name = "SIC"
-    Weight = 11
-    Identifier = "sic"
-    URL = "/sic"
-
-[[menu.main]]
-	Name = "SGDE"
-    Weight = 13
-    Identifier = "sgde"
-    URL = "/sgde"
-
-[[menu.main]]
-	Name = "GICAR"
-    Weight = 15
-    Identifier = "gicar"
-    URL = "/gicar"
+	Name = "Plataformes i Frameworks"
+    Weight = 4
+    Identifier = "plataformes"
+    URL = "/plataformes"
 
 [[menu.main]]
 	Name = "Centres de Suport"
-    Weight = 17
+    Weight = 5
     Identifier = "suport"
-    URL = "/cs"
-
-[[menu.main]]
-	Name = "Gestió Tècnica de Dades"
-    Weight = 19
-    Identifier = "dadesrefsuport"
-    URL = "/dadesref"
-
-[[menu.main]]
-	Name = "EventHub"
-    Weight = 21
-    Identifier = "eventhub"
-    URL = "/eventhub"
-
-[[menu.main]]
-	Name = "RPA"
-    Weight = 21
-    Identifier = "rpa"
-    URL = "/rpa"
-    
-[[menu.main]]
-	Name = "APIM"
-    Weight = 23
-    Identifier = "apim"
-    URL = "/apim"
-
-[[menu.main]]
-	Name = "LowCode"
-    Weight = 25
-    Identifier = "lowcode"
-    URL = "/lowcode"
+    URL = "/centres-suport"

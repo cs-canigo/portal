@@ -1,4 +1,12 @@
-+++ date = "2021-05-01" title = "Arquitectura de Referència de Microserveis" description = "Davant la ràpida evolució dels estils d’arquitecturals, s'ha identificat la necessitat d’establir una arquitectura de referència per aquelles aplicacions que opten per arquitectures altament distribuïdes tant a nivell lògic com a nivell físic. L'arquitectura presentada en aquesta pàgina s'orienta al desplegament d'aplicacions en microserveis i microfrontends de forma que un arquitecte la pugui usar com a punt de partida per fer el disseny d'una solució." responsable = "Unitat d'Arquitectura" sections = ["drafts"] blog_tags = ["microserveis","monolits","referència","arquitectura","reutilització"] categories = ["microserveis","monolits","referència","arquitectura","reutilització"] key = "MAIG2021" +++
++++ date = "2021-05-01" 
+title = "Arquitectura de Referència de Microserveis" 
+description = "Davant la ràpida evolució dels estils d’arquitecturals, s'ha identificat la necessitat d’establir una arquitectura de referència per aquelles aplicacions que opten per arquitectures altament distribuïdes tant a nivell lògic com a nivell físic. L'arquitectura presentada en aquesta pàgina s'orienta al desplegament d'aplicacions en microserveis i microfrontends de forma que un arquitecte la pugui usar com a punt de partida per fer el disseny d'una solució." 
+responsable = "Unitat d'Arquitectura" 
+sections = ["drafts"] 
+blog_tags = ["microserveis","monolits","referència","arquitectura","reutilització"] 
+categories = ["microserveis","monolits","referència","arquitectura","reutilització"] 
+key = "MAIG2021" 
++++
 
 # Arquitectura de referència de microserveis
 

@@ -9,13 +9,6 @@
 		document.write("<meta name=\"description\" content=\"{{.Description}}\" />");
 	</script>
 
-	{{ if isset .Params "teletext_id" }}
-
-    <script type="text/javascript" src="https://teletext.io/js/latest/txt-min.js"></script>
-    <script type="text/javascript" src="/js/teletext.js"></script>
-
-	{{ end }}
-
 </head>
 <body class="single">
 	<div class="contenidor unfixed">
@@ -27,8 +20,6 @@
 	<section class="border-start">
 
 			{{ partial "header_block.html" .}}
-			
-
 
 		   <div class="padding-xs container">
 	    	{{ if not .Lastmod.IsZero }}
@@ -41,15 +32,7 @@
  		
 					{{ partial "table-of-contents.html" . }}
 
-					{{ if isset .Params "teletext_id" }}
-						<div data-txt="{{index .Params "teletext_id"}}.content">
-					{{ end }}
-
-						{{ .Content }}
-
-					{{ if isset .Params "teletext_id" }}
-						</div>
-					{{ end }}
+					{{ .Content }}
 
 					{{ if eq .Section .Site.Params.blog_section }}
 						<a name="comments"></a>

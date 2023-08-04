@@ -13,17 +13,18 @@ no_index 	= true
 </div>
 
 <div class="row">
-		    <div id="left-column" class="col-xs-12 col-md-4">
-		      <div id="tags" class="facet"></div>
-		    </div>
 
-		    <div id="hits" class="list-group col-xs-12 col-md-8">
-		    	
-		    </div>
+<!--div id="left-column" class="col-xs-12 col-md-4">
+	<div id="tags" class="facet"></div>
+</div-->
 
-			<div class="column paginacio">
-		      <div id="pagination"></div>
-			</div>	
+<div id="hits" class="list-group col-xs-12 col-md-12">
+	
+</div>
+
+<div class="column paginacio">
+	<div id="pagination"></div>
+</div>	
 </div>
 
 </section>
@@ -34,11 +35,11 @@ no_index 	= true
         <h2><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h2>
         <div class="block-with-text">
         	{{#description}}
-        	{{{_highlightResult.description.value}}}
+        		{{{_highlightResult.description.value}}}
         	{{/description}}
 
         	{{^description}}
-        	{{{_highlightResult.content.value}}}
+        		{{{_highlightResult.content.value}}}
         	{{/description}}
         </div>
 	</div>
@@ -57,7 +58,7 @@ no_index 	= true
 <!-- /TEMPLATES -->
 
 <!--<div id="logo-algolia"> -->
-	<!-- <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" /> -->
+<!-- <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" /> -->
 <!--</div> -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>

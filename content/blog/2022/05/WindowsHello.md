@@ -7,22 +7,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["Windows", "microsoft"]
 categories  = ["Windows", "microsoft"]
 imatge      = "/images/bloc/2022/05/entrada.jpg"
+toc = true
 key         = "MAIG2022"
 +++
-
----
-
-# **Windows Hello**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-
-1. [Introducció] (#Introduccio)
-2. [Windows Hello versus Windows Hello For Business] (#WindowsHelloVSWindowsHelloFBusiness)
-3. [Novetats] (#Novetats)
-4. [Referències] (#Referencies)
-5. [Glossari] (#Glossari)
 
 ---
 

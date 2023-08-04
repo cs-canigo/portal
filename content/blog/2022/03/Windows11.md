@@ -7,25 +7,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["windows", "microsoft"]
 categories  = ["windows", "microsoft"]
 imatge      = "/images/bloc/2022/03/entrada.jpg"
+toc = true
 key         = "MARÇ2022"
 +++
-
----
-
-# **Windows 11. Visió General**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-
-1. [Introducció] (#Introduccio)
-2. [Característiques principals de Windows 11] (#CaracteristiquesPrincipals)
-  1. [Seguretat i escaneig] (#SeguretatEscaneig)
-  2. [Accés més fàcil als nous serveis] (#AccesFacilServeis)
-  3. [Personalització de l'Experiència d'Escriptori] (#PersonalitzacioExperienciaEscriptori)
-  4. [Utilització de les antigues i noves aplicacions de forma millorada] (#UtilitzacioMillorada)
-  5. [Desplegament i Servei] (#DesplegamentServei)
-3. [Referències] (#Referencies)
 
 ---
 

@@ -34,7 +34,7 @@
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if or (eq $section (.Site.Params.blog_section)) (in .URL "blog_tags") }}
+	{{ if or (eq $section (.Site.Params.blog_section)) (in .Permalink "blog_tags") }}
 		<script src="/js/bloc.js"></script>
 	{{ end }}
 

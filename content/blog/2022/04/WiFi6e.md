@@ -7,27 +7,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["wifi"]
 categories  = ["wifi"]
 imatge      = "/images/bloc/2022/04/foto1.png"
+toc = true
 key         = "ABRIL2022"
 +++
-
----
-
-# **Wi-Fi 6E: Visió General i evolució**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques tècniques funcionals de Wi-Fi 6 i 6E] (#CaracteristiquesFuncionals)
-  1. [Descripció de l’estàndard Wi-Fi 6 i 6E] (#Descripcio)
-  2. [Equipament Wi-Fi 6E Certificat] (#Equipament)
-3. [Requeriments tècnics i riscos] (#RequerimentsTecnicsRiscos)
-4. [Visió general de Wi-Fi 7] (#CaracteristiquesPrincipals)
-  1. [Característiques de Wi-Fi 7] (#CaracteristiquesWifi7)
-  2. [Quan sortirà Wi-Fi 7] (#SortirWifi7)
-5. [Conclusions] (#Conclusions)
-6. [Referències] (#Referencies)
-7. [Glossari] (#Glossari)
 
 ---
 

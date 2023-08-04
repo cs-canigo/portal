@@ -6,24 +6,10 @@ sections    = ["Blog", "home"]
 blog_tags   = ["cloud", "microsoft", "nuvol", "virtualització"]
 categories  = ["cloud", "microsoft", "nuvol", "virtualització"]
 imatge      = "/images/bloc/2023/02/Entrada.jpg"
+toc = true
 key         = "MARÇ2023"
 +++
 
-
----
-
-# **DaaS i Cloud PC**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques i funcionalitats] (#Caracteristiques)
-3. [Principals avantatges e inconvenients] (#AvantatgesInconvenients)
-4. [Casos d'ús] (#CasosUs)
-5. [Novetats] (#Novetats)
-6. [Referències] (#Referencies)
-7. [Glossari] (#Glossari)
 
 ---
 

@@ -60,8 +60,9 @@ function app(opts) {
       },
       transformData : function(item){
         item.content = converter.makeHtml(item.content);
+        item.path = item.path.toLowerCase();
         if(item._highlightResult && item._highlightResult.content){
-          item._highlightResult.content.value = converter.makeHtml(replaceHighLight(item._highlightResult.content.value));
+          item._highlightResult.content.value = "aaa" + converter.makeHtml(replaceHighLight(item._highlightResult.content.value));
         }
         if(item._snippetResult && item._snippetResult.content){
           item._snippetResult.content.value = converter.makeHtml(replaceHighLight(item._snippetResult.content.value));
@@ -101,7 +102,7 @@ function app(opts) {
     })
   );
 
-  search.addWidget(
+  /*search.addWidget(
     instantsearch.widgets.refinementList({
       container: '#tags',
       attributeName: 'sections',
@@ -124,7 +125,7 @@ function app(opts) {
         }
       }
     })
-  )
+  )*/
 
   search.start();
 }
