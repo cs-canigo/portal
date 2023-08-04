@@ -38,24 +38,78 @@ Paginate = 10
 
 [[menu.main]]
 	Name = "Arquitectura CTTI"
-    Weight = 2
+    Weight = 3
     Identifier = "arquitectura"
     URL = "/arquitectura"
 
 [[menu.main]]
 	Name = "Blog"
-    Weight = 3
+    Weight = 5
     Identifier = "blog"
     URL = "/blog"
 
 [[menu.main]]
-	Name = "Plataformes i Frameworks"
-    Weight = 4
-    Identifier = "plataformes"
-    URL = "/plataformes"
+	Name = "Cloud"
+    Weight = 7
+    Identifier = "cloud"
+    URL = "/cloud"
+
+[[menu.main]]
+	Name = "Canigó"
+    Weight = 9
+    Identifier = "framework"
+    URL = "/canigo-fwk-docs"
+
+[[menu.main]]
+	Name = "SIC"
+    Weight = 11
+    Identifier = "sic"
+    URL = "/sic"
+
+[[menu.main]]
+	Name = "SGDE"
+    Weight = 13
+    Identifier = "sgde"
+    URL = "/sgde"
+
+[[menu.main]]
+	Name = "GICAR"
+    Weight = 15
+    Identifier = "gicar"
+    URL = "/gicar"
 
 [[menu.main]]
 	Name = "Centres de Suport"
-    Weight = 5
+    Weight = 17
     Identifier = "suport"
-    URL = "/centres-suport"
+    URL = "/cs"
+
+[[menu.main]]
+	Name = "Gestió Tècnica de Dades"
+    Weight = 19
+    Identifier = "dadesrefsuport"
+    URL = "/dadesref"
+
+[[menu.main]]
+	Name = "EventHub"
+    Weight = 21
+    Identifier = "eventhub"
+    URL = "/eventhub"
+
+[[menu.main]]
+	Name = "RPA"
+    Weight = 21
+    Identifier = "rpa"
+    URL = "/rpa"
+    
+[[menu.main]]
+	Name = "APIM"
+    Weight = 23
+    Identifier = "apim"
+    URL = "/apim"
+
+[[menu.main]]
+	Name = "LowCode"
+    Weight = 25
+    Identifier = "lowcode"
+    URL = "/lowcode"

@@ -4,7 +4,7 @@ title       = "Descripció del servei"
 description = "Informació general del servei GICAR"
 sections    = "GICAR"
 taxonomies  = []
-toc 		= true
+toc 		= false
 weight 		= 1
 +++
 
