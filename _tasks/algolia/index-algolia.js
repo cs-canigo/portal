@@ -64,7 +64,7 @@ function runIndex(){
 				}catch(e){
 					//...
 				}
-				_readedIndex = {};
+				_readedIndex = {}; //comment when you need only "delta"
 				var compare = compareIndexs(_readedIndex, _newIdx);
 				console.log("INSERT: " + compare.index.length)
 				console.log("DELETE: " + compare.del.length)

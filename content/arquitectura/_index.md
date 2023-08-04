@@ -1,0 +1,6 @@
++++
+title = "Arquitectura"
+aliases = [
+    "/arqctti"
+]
++++
