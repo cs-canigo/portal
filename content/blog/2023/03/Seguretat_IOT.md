@@ -6,22 +6,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["seguretat", "iot"]
 categories  = ["seguretat", "iot"]
 imatge      = "/images/bloc/2023/03/Entrada.webp"
+toc = true
 key         = "MARÇ2023"
 +++
-
----
-
-# **Seguretat IoT**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Reptes de ciberseguretat en IoT] (#Reptes)
-3. [Millors pràctiques en seguretat IoT] (#MillorsPractiques)
-4. [Conclusions] (#Conclusions)
-5. [Referències] (#Referencies)
-6. [Glossari] (#Glossari)
 
 ---
 

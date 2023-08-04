@@ -6,25 +6,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["intelligència artificial", "navegadors"]
 categories  = ["intelligència artificial", "navegadors"]
 imatge      = "/images/bloc/2023/07/Imatge1.png"
+toc = true
 key         = "AGOST2023"
 +++
----
-
-
-# **Navegadors IA**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Evolució dels Navegadors Web] (#Evolucio)
-3. [Navegadors i IA] (#Navegadors)
-4. [Navegadors amb Assistent Virtual d'IA] (#NavegadorsXatBot)
-5. [Extensions IA per utilitzar al Navegador] (#Extensions)
-6. [El futur dels Navegadors] (#Futur)
-7. [Referències] (#Referencies)
-8. [Glossari] (#Glossari)
-
 ---
 
 ## **Introducció** {#Introduccio}

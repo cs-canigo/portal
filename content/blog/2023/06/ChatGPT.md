@@ -6,30 +6,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["intel·ligència artificial"]
 categories  = ["intel·ligència artificial"]
 imatge      = "/images/bloc/2023/06/Entrada.jpg"
+toc = true
 key         = "JULIOL2023"
 +++
----
-
-# **ChatGPT**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Arquitectura de ChatGPT] (#Arquitectura)
-3. [Diagrames de flux ChatGPT] (#Diagrames)
-4. [Entrenament del model de Llenguatge] (#Entrenament)
-5. [Pre Processament de text] (#PreProcessament)
-6. [Afinament i adaptació] (#AfinamentAdaptacio)
-7. [Mecanismes d'Atenció] (#Atencio)
-8. [Tècniques d'Optimització] (#Optimitzacio)
-9. [Implementació i Escalabilitat] (#Implementacio)
-10. [Taula comparativa ChatGPT 3.5 vs ChatGPT 4.0] (#TaulaComparativa)
-11. [Consideracions ètiques] (#Consideracions)
-12. [El futur de ChatGPT i el seu impacte potencial en la Indústria] (#Futur)
-13. [Referències] (#Referencies)
-14. [Glossari] (#Glossari)
-
 ---
 
 ## **Introducció** {#Introduccio}

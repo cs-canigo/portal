@@ -7,23 +7,9 @@ sections    = ["Blog", "home"]
 blog_tags   = ["IoT"]
 categories  = ["IoT"]
 imatge      = "/images/bloc/2022/09/Imatge1.jpg"
+toc = true
 key         = "SETEMBRE2022"
 +++
-
----
-
-# **Internet de les coses de banda estreta (NB-IoT)**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques i funcionalitats] (#Caracteristiques)
-3. [Principals Pros i Contres] (#ProsContres)
-4. [Arquitectura i Implementació] (#Arquitectura)
-5. [Casos d'ús] (#CasosUs)
-6. [Referències] (#Referencies)
-7. [Glossari] (#Glossari)
 
 ---
 
