@@ -39,15 +39,7 @@
  		
 					{{ partial "table-of-contents.html" . }}
 
-					{{ if isset .Params "teletext_id" }}
-						<div data-txt="{{index .Params "teletext_id"}}.content">
-					{{ end }}
-
-						{{ .Content }}
-
-					{{ if isset .Params "teletext_id" }}
-						</div>
-					{{ end }}
+					{{ .Content }}
 
 					{{ if eq .Section .Site.Params.blog_section }}
 						<a name="comments"></a>
