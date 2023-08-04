@@ -16,7 +16,7 @@ Paginate = 10
 
 [params]
 	noticieshome = 10
-	destacatshome = 4
+	destacatshome = 5
 	google_analytics_id = "G-277LZ40QYF"
 	titol = "Centre de Telecomunicacions i Tecnologies de la Informació"
 	subtitol = "Arquitectura CTTI"

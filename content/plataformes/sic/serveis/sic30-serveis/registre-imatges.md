@@ -2,7 +2,7 @@
 date = "2023-06-12"
 title = "Registre d'imatges"
 description = "El Registre d'imatges del SIC proporciona un catàleg d'imatges per als proveïdors d'aplicacions i allotja les imatges de les aplicacions desplegades via SIC a diferents plataformes de contenidors."
-sections = "SIC"
+section = "SIC"
 toc = true
 taxonomies = []
 weight = 6

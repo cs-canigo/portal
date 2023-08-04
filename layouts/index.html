@@ -96,21 +96,23 @@
 							</div>
 						</div>-->
 
-						{{ if gt (len (where .Data.Pages "Section" "destacats")) 0 }}
+						{{ if gt (len (where .Site.Pages "Section" "destacats")) 0 }}
 
 						<div class="inform_relacionada">
 							<div class="inform_relacionada_cont">
 								<h4><strong>Destacats</strong></h4>
 								<div class="llistat_enllacos_filet">
 									<ul class="llistat_enllacos_filet_cont icones list-group">
-									{{ range first .Site.Params.destacatshome (where .Data.Pages "Section" "destacats") }}
+									{{ range first .Site.Params.destacatshome (where .Site.Pages "Section" "destacats") }}
+										{{if ne .Title "Destacats"}}
 										<li class="list-group-item bullet">
 										  {{ if isset .Params "enllac" }}
 										    <a href="{{ index .Params "enllac" }}">{{ .Title }}</a>
 											 {{ else }}
 											   <span class="enllac">{{ .Title }}</span>
 											 {{ end }}
-											{{ .Description }}
+											 {{ .Description }}
+										  {{ end }}
 										</li>
 									{{ end }}
 									</ul>
@@ -126,7 +128,7 @@
 								<div class="llistat_enllacos_filet">
 									<ul class="llistat_enllacos_filet_cont icones list-group">
 										<li class="list-group-item bullet">
-											<a href="/cs">Centres de suport</a>
+											<a href="/centres-suport">Centres de suport</a>
 										</li>
 									</ul>
 								</div>
