@@ -101,7 +101,7 @@ function app(opts) {
     })
   );
 
-  search.addWidget(
+  /*search.addWidget(
     instantsearch.widgets.refinementList({
       container: '#tags',
       attributeName: 'sections',
@@ -124,7 +124,7 @@ function app(opts) {
         }
       }
     })
-  )
+  )*/
 
   search.start();
 }

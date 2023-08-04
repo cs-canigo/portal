@@ -13,11 +13,12 @@ no_index 	= true
 </div>
 
 <div class="row">
-<div id="left-column" class="col-xs-12 col-md-4">
-	<div id="tags" class="facet"></div>
-</div>
 
-<div id="hits" class="list-group col-xs-12 col-md-8">
+<!--div id="left-column" class="col-xs-12 col-md-4">
+	<div id="tags" class="facet"></div>
+</div-->
+
+<div id="hits" class="list-group col-xs-12 col-md-12">
 	
 </div>
 
