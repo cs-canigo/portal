@@ -1,8 +1,0 @@
-+++
-date        = "2020-12-12"
-title       = "canigo.integration.sarcat"
-description = "Mòdul canigo.integration.sarcat"
-sections    = "canigo-fwk-docs"
-enllac		= "/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sarcat/"
-weight		= 33
-+++
