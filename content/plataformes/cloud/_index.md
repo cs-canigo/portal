@@ -5,4 +5,7 @@ description = "Descripció de les plataformes de cloud públic i privat disponib
 sections    = "Cloud"
 categories  = ["cloud","docker","hiperescalars"]
 weight		= 1
+aliases = [
+    "/cloud"
+]
 +++
