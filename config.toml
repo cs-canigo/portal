@@ -9,7 +9,7 @@ buildDrafts = true
 canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
 pluralizelisttitles = false
-disablePathToLower = false
+disablePathToLower = true
 
 Paginate = 10
 
