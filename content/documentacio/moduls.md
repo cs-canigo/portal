@@ -13,7 +13,6 @@ no_index 	= true
 </div>
 
 <div class="row">
-
             <div id="left-column" class="col-xs-12 col-md-9">
                 <div id="major" class="facet col-xs-12 col-md-4"></div>
                 <div id="chart_majors" class="chart col-xs-12 col-md-8"></div>
@@ -23,11 +22,8 @@ no_index 	= true
                 <div id="chart_moduls" class="chart col-xs-12 col-md-5"></div>
                 <div id="modules_version" class="facet col-xs-12 col-md-12"></div>
             </div>
-
             <div id="hits" class="list-group col-xs-12 col-md-3">
-                
             </div>
-
             <div class="column paginacio">
               <div id="pagination"></div>
             </div>  
