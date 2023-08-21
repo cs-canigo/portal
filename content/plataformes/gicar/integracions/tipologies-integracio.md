@@ -35,32 +35,32 @@ A continuació s'exposen de forma resumida les ***modalitats d'integració propo
 
 Amb aquesta modalitat d'integració es poden assolir les següents funcionalitats d’autenticació:
 
--	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.] (/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
--	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.] (/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
--	[Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-2-certificat/)
--	[Autenticació amb la Passarel·la GICAR- Vàlid] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-4-passarelagicarvalid/)
--	[Autenticació contra el directori de l’EACAT.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-3-EACAT/)
+-	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
+-	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
+-	[Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-2-certificat/)
+-	[Autenticació amb la Passarel·la GICAR- Vàlid](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-4-passarelagicarvalid/)
+-	[Autenticació contra el directori de l’EACAT.]([/gicar-novesintegracions-funcionalitats-autenticacio/auth-3-EACAT/](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-3-EACAT/)
 
 Entenem per aquesta modalitat d’integració aquella aplicació que delega el login a GICAR via protocol SAML2. Això inclou les següents possibilitats tècniques d'implementació:
 
--	**[Integració a través d'Agent de Shibboleth](/gicar-novesintegracions-tecniques-autenticacio/auth-saml2-1-agent_shibboleth/)**: es disposa d’un frontal Apache o Nginx, a un CPD OnPremise o al Núvol on s’instal·la un agent de Shibboleth. Aquest agent de Shibboleth fa la gestió de tot el protocol SAML2 amb GICAR, i com a resultat proporciona unes capçaleres HTTP d’autenticació a l’aplicació.
--	**[Integració d'una aplicació que admet SAML out of the box ](/gicar-novesintegracions-tecniques-autenticacio/auth-saml2-2-out-of-the-box/)**: l’aplicació és capaç de forma nativa de delegar el login a un proveïdor d’autenticació SAML2, sense necessitat d’instal·lar res a banda.
--	**[Aplicació feta a mida autenticant via SAML2 sense utilitzar Agent de Shibboleth (Canigó SAML o llibreria de tercers) ](/gicar-novesintegracions-tecniques-autenticacio/auth-saml2-3-fet-a-mida/)**: una aplicació desenvolupada amb Framework Canigó pot delegar el login a GICAR de forma nativa via SAML2. A una aplicació feta a mida se li pot desplegar una llibreria que implementa SAML2 des del punt de vista d’un SP, i per tant permet delegar-li el login a GICAR de forma directa.
--	**[Aplicació Microsoft integrada amb GICAR via ADFS ](/gicar-novesintegracions-tecniques-autenticacio/auth-saml2-4-adfs/)**: aplicacions Microsoft que estan preparades per a ser integrades via ADFS, poden parlar amb GICAR a través del ADFS.
+-	**[Integració a través d'Agent de Shibboleth](/plataformes/gicar/integracions/tecniques-autenticacio/auth-saml2-1-agent_shibboleth/)**: es disposa d’un frontal Apache o Nginx, a un CPD OnPremise o al Núvol on s’instal·la un agent de Shibboleth. Aquest agent de Shibboleth fa la gestió de tot el protocol SAML2 amb GICAR, i com a resultat proporciona unes capçaleres HTTP d’autenticació a l’aplicació.
+-	**[Integració d'una aplicació que admet SAML out of the box ](/plataformes/gicar/integracions/tecniques-autenticacio/auth-saml2-2-out-of-the-box/)**: l’aplicació és capaç de forma nativa de delegar el login a un proveïdor d’autenticació SAML2, sense necessitat d’instal·lar res a banda.
+-	**[Aplicació feta a mida autenticant via SAML2 sense utilitzar Agent de Shibboleth (Canigó SAML o llibreria de tercers) ](/plataformes/gicar/integracions/tecniques-autenticacio/auth-saml2-3-fet-a-mida/)**: una aplicació desenvolupada amb Framework Canigó pot delegar el login a GICAR de forma nativa via SAML2. A una aplicació feta a mida se li pot desplegar una llibreria que implementa SAML2 des del punt de vista d’un SP, i per tant permet delegar-li el login a GICAR de forma directa.
+-	**[Aplicació Microsoft integrada amb GICAR via ADFS ](/plataformes/gicar/integracions/tecniques-autenticacio/auth-saml2-4-adfs/)**: aplicacions Microsoft que estan preparades per a ser integrades via ADFS, poden parlar amb GICAR a través del ADFS.
 
 **(*2) Amb la modalitat d’integració per Protocol OIDC** 
 
 Es poden assolir les següents modalitats d’autenticació:
 
--	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-1-dc/)
--	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-1-dc/)
--	[Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-2-certificat/)
--	[Autenticació contra el directori de l’EACAT.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-3-EACAT/)
+-	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
+-	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
+-	[Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-2-certificat/)
+-	[Autenticació contra el directori de l’EACAT.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-3-EACAT/)
 
 Entenem per aquesta modalitat d’integració aquella aplicació que delega el login a GICAR via protocol OIDC i OAUTH. Això inclou les següents possibilitats tècniques d'implementació:
 
--	**[OIDC - Integració amb OIDC per SPAs des de codi font](/gicar-novesintegracions-tecniques-autenticacio/auth-oidc-1-oidc_codifont/)**: es tracta d’una aplicació, típicament una SPA la qual fa crides a diverses API, la qual crida el Keycloak de GICAR via OIDC per obtenir el token d’autenticació.
--	**[OIDC - Integració d'una aplicació que admet OIDC out of the box](/gicar-novesintegracions-tecniques-autenticacio/auth-oidc-2-out-of-the-box/)**: l’aplicació és capaç de forma nativa de delegar el login a un proveïdor d’autenticació OIDC, sense necessitat d’instal·lar res a banda.
+-	**[OIDC - Integració amb OIDC per SPAs des de codi font](/plataformes/gicar/integracions/tecniques-autenticacio/auth-oidc-1-oidc_codifont/)**: es tracta d’una aplicació, típicament una SPA la qual fa crides a diverses API, la qual crida el Keycloak de GICAR via OIDC per obtenir el token d’autenticació.
+-	**[OIDC - Integració d'una aplicació que admet OIDC out of the box](/plataformes/gicar/integracions/tecniques-autenticacio/auth-oidc-2-out-of-the-box/)**: l’aplicació és capaç de forma nativa de delegar el login a un proveïdor d’autenticació OIDC, sense necessitat d’instal·lar res a banda.
 
 
 **(*3). Amb la modalitat de AD, LDAP, o BBDD aprovisionada per GICAR**:
