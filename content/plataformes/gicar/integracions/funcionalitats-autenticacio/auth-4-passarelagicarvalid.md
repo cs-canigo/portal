@@ -61,7 +61,7 @@ L’experiència d’usuari amb aquest contenidor seria la següent:
 
 ## Implementació tècnica de la solució:
 
-Per a implementar tècnicament la solució el més senzill seguir els passos exposats a l'apartat al següent [enllaç](/gicar-tecniques-autenticacio-2021/auth-saml2-1-agent_shibboleth/)
+Per a implementar tècnicament la solució el més senzill seguir els passos exposats a l'apartat al següent [enllaç](/plataformes/gicar/integracions/tecniques-autenticacio/auth-saml2-1-agent_shibboleth/)
 
 Un cop es disposa el frontal de l'aplicació integrat amb l'agent de Shibboleth es pot configurar aquest agent de Shibboleth (al cloud, via contenidor, o on premise) de cara a que faci una de les següents dues opcions:
 
