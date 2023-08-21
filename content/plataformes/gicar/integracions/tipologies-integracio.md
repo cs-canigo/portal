@@ -35,8 +35,8 @@ A continuació s'exposen de forma resumida les ***modalitats d'integració propo
 
 Amb aquesta modalitat d'integració es poden assolir les següents funcionalitats d’autenticació:
 
--	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-1-dc/)
--	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-1-dc/)
+-	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.] (/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
+-	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.] (/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
 -	[Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-2-certificat/)
 -	[Autenticació amb la Passarel·la GICAR- Vàlid] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-4-passarelagicarvalid/)
 -	[Autenticació contra el directori de l’EACAT.] (/gicar-novesintegracions-funcionalitats-autenticacio/auth-3-EACAT/)
