@@ -38,8 +38,8 @@ Amb aquesta modalitat d'integració es poden assolir les següents funcionalitat
 -	[Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
 -	[Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-1-dc/)
 -	[Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-2-certificat/)
--	[Autenticació amb la Passarel·la GICAR- Vàlid](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-4-passarelagicarvalid/)
--	[Autenticació contra el directori de l’EACAT.]([/gicar-novesintegracions-funcionalitats-autenticacio/auth-3-EACAT/](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-3-EACAT/)
+-	[Autenticació amb la Passarel·la GICAR- Vàlid.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-4-passarelagicarvalid/)
+-	[Autenticació contra el directori de l’EACAT.](/plataformes/gicar/integracions/funcionalitats-autenticacio/auth-3-EACAT/)
 
 Entenem per aquesta modalitat d’integració aquella aplicació que delega el login a GICAR via protocol SAML2. Això inclou les següents possibilitats tècniques d'implementació:
 
