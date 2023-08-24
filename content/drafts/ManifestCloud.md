@@ -29,10 +29,10 @@ Proveïdors de núvol públic hiperescalars disponibles:
 
 * Els hiperescalars admesos per CTTI són: **Microsoft Azure**, **AWS**, **Google Cloud Platform** i **IBM Cloud**.
 * Per als anteriors, cal tenir en compte les següents normes bàsiques: 
-* Tots els serveis han d'estar allotjats dins de la Unió Europea.
-* Tots els serveis han d'ubicar-se dintre dels tenants / organitzacions de cloud públic de la Generalitat. 
-* Tota comunicació entre un sistema desplegat a una plataforma (tenant/organització) de núvol públic concreta i l’exterior (sigui un CPD on-premise, una altra plataforma de núvol públic, un servei SaaS, etc) haurà de fer-se sempre a través del servei de gestió de comunicacions i de seguretat perimetral (NET0) de les plataformes de núvol públic de la Generalitat de Catalunya.
-* Altres normes de treball a tenir en compte a l’hora de desplegar solucions a núvol públic com, per exemple, l’obligatorietat de doble factor d’autenticació pels comptes d’accés a subscripcions, integració amb GICAR i el desplegament basat en IaC, es poden consultar aquí.
+** Tots els serveis han d'estar allotjats dins de la Unió Europea.
+** Tots els serveis han d'ubicar-se dintre dels tenants / organitzacions de cloud públic de la Generalitat. 
+** Tota comunicació entre un sistema desplegat a una plataforma (tenant/organització) de núvol públic concreta i l’exterior (sigui un CPD on-premise, una altra plataforma de núvol públic, un servei SaaS, etc) haurà de fer-se sempre a través del servei de gestió de comunicacions i de seguretat perimetral (NET0) de les plataformes de núvol públic de la Generalitat de Catalunya.
+** Altres normes de treball a tenir en compte a l’hora de desplegar solucions a núvol públic com, per exemple, l’obligatorietat de doble factor d’autenticació pels comptes d’accés a subscripcions, integració amb GICAR i el desplegament basat en IaC, es poden consultar aquí.
 
 
 ### Lowcode
