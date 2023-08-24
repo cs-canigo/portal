@@ -3,7 +3,7 @@ date        = "2021-12-17"
 title       = "Migració versió anterior"
 description = "Migració de versió 3.6.1 a Canigó 3.6.2"
 sections    = "canigo-fwk-docs"
-enllac		= "/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/migracio-versio-anterior/"
+enllac		= "/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.2/migracio-versio-anterior/"
 weight		= 3
 +++
 
