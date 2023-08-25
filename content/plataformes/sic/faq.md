@@ -100,4 +100,4 @@ d'artefactes per al desplegament d'aplicacions.
 <br/><br/>
 
 <br/>
-Si teniu qualsevol dubte o problema utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema utilitzeu el canal de [**Suport**](/sic/suport/) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
