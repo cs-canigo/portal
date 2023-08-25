@@ -154,5 +154,5 @@ Per a poder efectuar certes tasques caldrà accedir a la plataforma mitjançat e
 Per a més informació: [Integració Continua](/sic-serveis/ci/).
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic20-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic20-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

@@ -88,5 +88,5 @@ Teniu a la vostra disposició alguns articles relacionats amb el servei:
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

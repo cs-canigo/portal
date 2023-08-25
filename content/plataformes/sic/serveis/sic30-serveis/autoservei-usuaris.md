@@ -171,5 +171,5 @@ En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'e
 **AVÍS**: Si desitja concedir permisos a un usuari per a un grup que no disposa de cap projecte, caldrà prèviament crear el projecte per a poder dur a terme l'assignació desitjada.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

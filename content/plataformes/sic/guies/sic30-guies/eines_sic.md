@@ -77,5 +77,5 @@ Per a més informació: [Servei de binaris] (/sic30-serveis/binaris/)
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
 <br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
