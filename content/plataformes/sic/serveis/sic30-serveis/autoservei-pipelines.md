@@ -147,5 +147,5 @@ Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/">
 </div>
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
