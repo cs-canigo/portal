@@ -123,5 +123,5 @@ fer-ho per etiqueta.
 últimes 10 versions productives de cada repositori i altres versions amb antiguitat inferior o igual a 90 dies.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

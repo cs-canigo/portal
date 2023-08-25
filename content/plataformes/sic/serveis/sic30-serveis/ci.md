@@ -360,5 +360,5 @@ un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada prèvia
 La petició per a fer aquest primer desplegament de l’aplicació va a càrrec dels proveïdors de l’aplicació.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
