@@ -68,7 +68,7 @@ Propietat           | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
-Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.5/moduls/moduls-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA] (/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.5/moduls/moduls-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

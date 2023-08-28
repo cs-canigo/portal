@@ -30,4 +30,4 @@ Aquestes eines d’automatització cobreixen en dues grans disciplines:
 - Minimitzar la intervenció humana en el tiqueting.
 - Eliminar la compartició de recursos entre aplicacions.
 
-Podeu veure les tasques que són responsabilitat de l'equip de desenvolupament a [Tasques OPS del desenvolupament al Cloud.](https://canigo.ctti.gencat.cat/cloud/ops-Cloud/)
+Podeu veure les tasques que són responsabilitat de l'equip de desenvolupament a [Tasques OPS del desenvolupament al Cloud.](https://canigo.ctti.gencat.cat/plataformes/cloud/ops-Cloud/)

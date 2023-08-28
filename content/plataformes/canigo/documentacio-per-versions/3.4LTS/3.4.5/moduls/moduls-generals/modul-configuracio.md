@@ -677,7 +677,7 @@ Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @Pr
 
 Indicant el path on es troba aquest fitxer.
 
-Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.5/moduls/moduls-generals/modul-seguretat/)
+Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.5/moduls/moduls-generals/modul-seguretat/)
 
 
 Preguntes freqüents

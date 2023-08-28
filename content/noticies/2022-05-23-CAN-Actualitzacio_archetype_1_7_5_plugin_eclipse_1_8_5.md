@@ -21,7 +21,7 @@ obtenint un projecte preconfigurat per al marc de treball Canigó i estalviant t
 S'ha actualitzat l'arquetipus i el plugin de Canigó per a **generar projectes amb Canigó 3.6.5**.
 
 Podeu consultar l'abast complet de la nova versió al
-[Llistat de canvis](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/).
+[Llistat de canvis](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/).
 
 ## Novetats _archetype_
 

@@ -71,7 +71,7 @@ Exemples:
 
 La url per accedir al mòdul d'administració de logs és http://localhost:8080/loggingAdministration.html
 
-Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.3/moduls/moduls-generals/modul-logging-admin/)
+Per a més informació sobre aquest mòdul consultar la [documentació](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.3/moduls/moduls-generals/modul-logging-admin/)
 
 ## Afegir/Esborrar nous mòduls
 

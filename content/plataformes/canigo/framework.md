@@ -191,7 +191,7 @@ projecte auto-executable.
 
 
 <br/><br/><br/>
-La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/canigo-fwk-docs/documentacio-per-versions/">documentació del portal web</a>.
+La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/plataformes/canigo/documentacio-per-versions/">documentació del portal web</a>.
 
 ## Centre de Suport Canigó pel Framework Canigó
 

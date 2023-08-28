@@ -5,5 +5,5 @@ description = "S'oficialitzen el JIRA CSTD i Remedy com a canals de comunicació
 sections    = ["Cloud"]
 categories  = ["cloud"]
 key         = "FEBRER2018"
-enllac      = "/cloud/comunicacio-suport-cloud/"
+enllac      = "/plataformes/cloud/comunicacio-suport-cloud/"
 +++

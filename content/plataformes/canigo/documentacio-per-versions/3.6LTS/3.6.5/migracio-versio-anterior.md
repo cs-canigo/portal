@@ -18,4 +18,4 @@ Per a la migració de la versió 3.4 a Canigó 3.6 hi ha disponible el how to:
 La versió 3.6.4 és compatible amb la versió 3.6.5 de Canigó.
 
 Només és necessari actualitzar les versions de les llibreries seguint la [Matriu de Compatibilitats]
-(/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/).
+(/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/).

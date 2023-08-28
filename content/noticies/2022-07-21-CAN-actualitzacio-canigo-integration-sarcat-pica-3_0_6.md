@@ -8,7 +8,7 @@ key = "AGOST2022"
 +++
 
 S'ha actualitzat la **versió 3.0.6 del [Mòdul integració Sarcat mitjançant la PICA]
-(/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-integracio/modul-sarcat-pica/)
+(/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-integracio/modul-sarcat-pica/)
 de Canigó** incorporant 4 atributs addicionals.
 
 Podeu consultar l'abast complet de la nova versió en [canigo.integration.sarcat.pica:3.0.6]

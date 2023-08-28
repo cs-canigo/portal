@@ -50,7 +50,7 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 El connector AVISALERT és compatible amb la versió 1.8 de Java. Per a versions inferiors o superiors no està garantit el seu correcte funcionament.
 
-Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-integracio/modul-pica/) 2.3.5.
+Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-integracio/modul-pica/) 2.3.5.
 
 ### Configuració
 

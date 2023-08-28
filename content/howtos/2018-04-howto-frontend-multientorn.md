@@ -18,7 +18,7 @@ Els passos descrits en aquest document apliquen a la versió 3.2 del Framework C
 ### Introducció
 
 Les aplicacions Canigó estan configurades per utilitzar propietats multi-entorn. Això vol dir que les propietats prenen un valor o un altre depenent de l'entorn on s'ha desplegat l'aplicació.
-Aquesta funcionalitat de [configuració multi-entorn](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-configuracio/) només aplica al backend de l'aplicació, el qual mitjançant la propietat de sistema "entorn" obté la informació específica de l'entorn on s'ha desplegat.
+Aquesta funcionalitat de [configuració multi-entorn](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-configuracio/) només aplica al backend de l'aplicació, el qual mitjançant la propietat de sistema "entorn" obté la informació específica de l'entorn on s'ha desplegat.
 
 El frontend de l'aplicació (típicament SPAs) no disposa d'aquesta informació, i per tant, si no s'aplica alguna solució per configuració multi-entorn cal generar versions diferents per a cada entorn.
 

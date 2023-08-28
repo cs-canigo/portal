@@ -211,4 +211,4 @@ Podeu trobar més informació als següents enllaços:
 
 - [Principis d'arquitectura de sistemes d'informació](/arqctti/principis_arq/)
 
-- [Documentació del Mòdul de Correu](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-suport/modul-correu/)
+- [Documentació del Mòdul de Correu](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-suport/modul-correu/)

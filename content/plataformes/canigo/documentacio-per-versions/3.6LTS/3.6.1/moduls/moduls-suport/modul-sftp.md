@@ -47,7 +47,7 @@ Per tal d'instal-lar el mòdul d'SFTP es pot incloure automàticament a través 
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.1/moduls/compatibilitat-per-modul/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.1/moduls/compatibilitat-per-modul/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

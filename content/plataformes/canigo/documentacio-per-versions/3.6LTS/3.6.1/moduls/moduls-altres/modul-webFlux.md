@@ -127,11 +127,11 @@ Afegirem les dependències de Mongodb
 			</exclusions>
 ```
 
-A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.1/moduls/compatibilitat-per-modul/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.1/moduls/compatibilitat-per-modul/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 
-Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.1/moduls/moduls-altres/modul-mongodb-reactiu/)
+Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.1/moduls/moduls-altres/modul-mongodb-reactiu/)
 
 Afegirem la propietat per la connexió a Mongodb
 ```properties
