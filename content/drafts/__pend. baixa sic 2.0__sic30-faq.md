@@ -15,7 +15,7 @@ weight = 9
 <br/><br/>
 
 #### **Des de la nostra oficina no tenim connectivitat cap als serveis del SIC. Com podem resoldre aquest problema?** ####
-Caldrà configurar la vostra VPN/Lan2Lan/PPP per a que disposi d'accés a les adreces IP del SIC. Si us cal saber les adreces IP dels serveis podeu obrir una consulta a [Framework SIC](/sic/suport).
+Caldrà configurar la vostra VPN/Lan2Lan/PPP per a que disposi d'accés a les adreces IP del SIC. Si us cal saber les adreces IP dels serveis podeu obrir una consulta a [Framework SIC](/plataformes/sic/suport).
 <br/><br/>
 
 #### **Com puc concedir permisos a altres membres als meus codis d'aplicació?** ####
