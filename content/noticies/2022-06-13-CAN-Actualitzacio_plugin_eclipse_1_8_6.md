@@ -34,7 +34,7 @@ virtual de Java versió 11.
 ## Documentació addicional
 
 Podeu consultar l'abast complet de la nova versió al
-[Llistat de canvis](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/).
+[Llistat de canvis](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/).
 
 Podeu consultar la notícia de la publicació de la [versió 3.6.5 de Canigó]
 (/noticies/2022-05-23-CAN-actualitzacio-canigo-3_6_5/).

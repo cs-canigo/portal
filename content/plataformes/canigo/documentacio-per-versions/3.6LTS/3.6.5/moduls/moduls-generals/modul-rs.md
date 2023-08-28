@@ -41,7 +41,7 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

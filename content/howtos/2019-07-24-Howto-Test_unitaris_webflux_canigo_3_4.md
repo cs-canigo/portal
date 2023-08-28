@@ -14,7 +14,7 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessit
 ### Introducció
 
 Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incorporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
-Teniu disponible la documentació de WebFlux de Canigó 3.4 a [modul-webFlux](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-altres/modul-webFlux/) i, per a més informació sobre programació funcional amb Spring 5, podeu consultar: https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn.
+Teniu disponible la documentació de WebFlux de Canigó 3.4 a [modul-webFlux](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-altres/modul-webFlux/) i, per a més informació sobre programació funcional amb Spring 5, podeu consultar: https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn.
 
 
 Per a realitzar el **test de serveis WebFlux** hi intervenen dos objectes principals:
@@ -24,7 +24,7 @@ Per a realitzar el **test de serveis WebFlux** hi intervenen dos objectes princi
 - *reactor.test.StepVerifier*: aquest component del projecte reactor s'utilitza per a verificar els serveis exposats en reactiu. En el nostre cas l'utilitzarem per a verificar la resposta dels serveis web REST exposats amb WebFlux.
 
 Per a més informació sobre com realitzar test amb programació reactiva podeu consultar [Test unitaris amb programació reactiva a Canigó 3.4](/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/).
-En aquest article utilitzarem els serveis exposats amb WebFlux seguint la guia [modul-webFlux](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-altres/modul-webFlux/).
+En aquest article utilitzarem els serveis exposats amb WebFlux seguint la guia [modul-webFlux](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-altres/modul-webFlux/).
 
 ### Cas d’exemple
 

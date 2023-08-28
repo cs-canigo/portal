@@ -14,7 +14,7 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessit
 
 ## Capçaleres HTTP
 
-Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT. Per a més informació sobre l’opció sense JWT podeu consultar el [Mòdul de Seguretat](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-seguretat/).
+Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT. Per a més informació sobre l’opció sense JWT podeu consultar el [Mòdul de Seguretat](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-seguretat/).
 
 Gicar, per l'autenticació, proporciona les capçaleres HTTP:
 
@@ -309,7 +309,7 @@ Amb aquesta configuració, s'aconsegueix disposar d’una aplicació Canigó 3.4
 
 Podeu trobar més informació als següents enllaços:
 
-- [Mòdul de Seguretat de Canigó](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-seguretat/)
+- [Mòdul de Seguretat de Canigó](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-seguretat/)
 
 - [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 

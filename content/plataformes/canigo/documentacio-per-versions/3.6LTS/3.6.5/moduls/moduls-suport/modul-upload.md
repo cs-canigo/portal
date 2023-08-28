@@ -46,7 +46,7 @@ Propietat | Requerit | Descripció
 El mòdul de pujada d'arxius ja incorpora la dependència transitiva del mòdul d'antivirus, per tant, no és necessari
 modificar el fitxer `pom.xml` a tal efecte. No obstant això, i només en cas de fer servir l'escaneig de fitxers amb el servei
 d'antivirus, com és el cas del següent exemple d'ús, caldrà incorporar i configurar el
-[Mòdul d'antivirus](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-integracio/modul-antivirus/)
+[Mòdul d'antivirus](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-integracio/modul-antivirus/)
 al projecte.
 
 ```java

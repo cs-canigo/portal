@@ -190,7 +190,7 @@ serà necessari **reimplementar el connector tal com s’ha mostrat en aquest ar
 
 Per a més informació, podeu consultar:
 
-- [Connector de Canigó a Sarcat](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-integracio/modul-sarcat/)
+- [Connector de Canigó a Sarcat](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-integracio/modul-sarcat/)
 
 - [Roadmap Framework Canigó](/canigo/roadmap/)
 

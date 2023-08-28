@@ -53,7 +53,7 @@ En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.3/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.3/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul de configuració:
 ```xml
@@ -654,7 +654,7 @@ Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @Pr
 
 Indicant el path on es troba aquest fitxer.
 
-Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.3/moduls/moduls-generals/modul-seguretat/)
+Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.3/moduls/moduls-generals/modul-seguretat/)
 
 
 Preguntes freqüents

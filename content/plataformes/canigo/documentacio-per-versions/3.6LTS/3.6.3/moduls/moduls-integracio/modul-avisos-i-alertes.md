@@ -48,7 +48,7 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 #### Requeriments
 
-Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.3/moduls/moduls-integracio/modul-pica/) .
+Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.3/moduls/moduls-integracio/modul-pica/) .
 
 ### Configuració
 
@@ -67,7 +67,7 @@ En el pom.xml:
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.3/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.3/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/avisalert.properties amb el següent contingut:
 
