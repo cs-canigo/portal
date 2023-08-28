@@ -58,7 +58,7 @@ desenvolupament com en els entorns del SIC.
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
-Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
+Veure: <a href="https://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
 </div>
 
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
@@ -155,7 +155,7 @@ pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà e
 
 Per a poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://cicd.sic.intranet.gencat.cat).
 
-Per a més informació: [Integració Continua](/sic30-serveis/ci/).
+Per a més informació: [Integració Continua](/plataformes/sic/serveis/sic30-serveis/ci/).
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>

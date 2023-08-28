@@ -279,7 +279,7 @@ a la construcció de l'aplicació via **npm install**.
 ## Matriu de desplegament en servidors (IAAS)
 
 Si es volen fer servir les tasques de desplegaments automatitzats des de SIC, caldrà escollir la
-modalitat de desplegament [**DELEGADA**](/sic20-serveis/ci/#modalitats-de-desplegament) per a que l’aplicació
+modalitat de desplegament [**DELEGADA**](/plataformes/sic/serveis/sic20-serveis/ci/#modalitats-de-desplegament) per a que l’aplicació
 es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de servidor:
 
 |Proveïdor|Tipus de servidor|

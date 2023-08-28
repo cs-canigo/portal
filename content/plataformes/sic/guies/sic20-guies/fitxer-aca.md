@@ -300,7 +300,7 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 <div class="message information">
 Darrerament, s'ha adaptat el SIC per fer ús de les imatges de construcció del catàleg del SIC 3.0, suposant un primer pas
 cap a l'objectiu de migració.
-Aquest nou <a href="https://canigo.ctti.gencat.cat/sic20-serveis/registre-imatges/">registre d'imatges de construcció</a>
+Aquest nou <a href="https://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic20-serveis/registre-imatges/">registre d'imatges de construcció</a>
 proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
 de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
 es mantindrà la cobertura de configuració de tools/jdks referenciades actualment per les aplicacions.
