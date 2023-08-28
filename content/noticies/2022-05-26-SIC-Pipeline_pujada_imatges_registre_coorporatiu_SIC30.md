@@ -30,7 +30,7 @@ Per a la publicació d'imatges pròpies, a més de la versió, únicament serà 
 `Dockerfile` i el nom de la imatge a generar. Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i
 quin serà el funcionament, s’ha adaptat la documentació i s’han incorporat exemples:
 
-- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+- [Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 - [Exemple fitxer ACA](/related/sic/3.0/aca_const_publi_harbor_image.yml)
 

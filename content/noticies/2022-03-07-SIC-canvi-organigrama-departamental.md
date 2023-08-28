@@ -17,9 +17,9 @@ de grups Ldap d'usuaris responsables a nivell d'àmbit.
 **El SIC habilita l'accés per part de responsables d'àmbit als següents serveis**, d'acord amb la informació de
 l'inventari d'aplicacions i la corresponent estructura departamental:
 
-- [Servei de Custòdia de codi font](/sic30-serveis/scm/)
-- [Servei d'Integració Contínua - SIC 2.0](/sic20-serveis/ci/)
-- [Servei d'Integració Contínua - SIC 3.0](/sic30-serveis/ci/)
+- [Servei de Custòdia de codi font](/plataformes/sic/serveis/sic30-serveis/scm/)
+- [Servei d'Integració Contínua - SIC 2.0](/plataformes/sic/serveis/sic20-serveis/ci/)
+- [Servei d'Integració Contínua - SIC 3.0](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 ## Novetats
 

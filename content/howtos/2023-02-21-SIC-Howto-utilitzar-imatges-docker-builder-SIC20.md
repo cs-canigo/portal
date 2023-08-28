@@ -15,7 +15,7 @@ perfils tècnics que tinguin la necessitat de simular i executar les imatges Doc
 
 ## Ús del registre privat
 
-En el [Registre d'imatges corporatiu](/sic20-serveis/registre-imatges/) podreu trobar informació sobre el registre
+En el [Registre d'imatges corporatiu](/plataformes/sic/serveis/sic20-serveis/registre-imatges/) podreu trobar informació sobre el registre
 d'imatges, el codi font, la documentació associada i el procediment per a disposar d'accés.
 
 ### Accés via consola web
