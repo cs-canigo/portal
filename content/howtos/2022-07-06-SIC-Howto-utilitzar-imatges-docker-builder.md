@@ -34,7 +34,7 @@ Altres referències:
 
 ## Ús del registre privat
 
-En el [Registre d'imatges corporatiu](/sic30-serveis/registre-imatges/) podreu trobar informació sobre el registre
+En el [Registre d'imatges corporatiu](/plataformes/sic/serveis/sic30-serveis/registre-imatges/) podreu trobar informació sobre el registre
 d'imatges, el codi font, la documentació associada i el procediment per a disposar d'accés.
 
 ### Accés via consola web

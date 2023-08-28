@@ -27,8 +27,8 @@ conèixer la solució, el procés de transició i els principals canvis en l’o
 <br/>
 Per a més informació:
 
-- [Integració Continua](/sic30-serveis/ci/)
-- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+- [Integració Continua](/plataformes/sic/serveis/sic30-serveis/ci/)
+- [Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o

@@ -10,14 +10,14 @@ key         = "MARÇ2023"
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**. Actualment, es troben en servei dues plataformes CI/CD: [SIC 2.0](/sic20-serveis/) i [SIC 3.0](/sic30-serveis/),
+de les aplicacions**. Actualment, es troben en servei dues plataformes CI/CD: [SIC 2.0](/plataformes/sic/serveis/sic20-serveis/) i [SIC 3.0](/plataformes/sic/serveis/sic30-serveis/),
 les quals han estat fent ús de catàlegs d'eines de construcció propis implicant sobrecostos de manteniment i adaptació tecnològica,
 a més de generar certa confusió als usuaris del servei.
 
 ## Novetats
 
 Amb l'objectiu d'unificar criteris, reduir costos de manteniment i anar fent passes cap a l'objectiu de migració, **s'ha adaptat el
-SIC 2.0 per a passar a fer ús de les imatges de construcció del [Catàleg corporatiu del SIC 3.0](/sic20-serveis/registre-imatges/)**.
+SIC 2.0 per a passar a fer ús de les imatges de construcció del [Catàleg corporatiu del SIC 3.0](/plataformes/sic/serveis/sic20-serveis/registre-imatges/)**.
 Aquest catàleg únic d'imatges de construcció proporciona les imatges estrictament necessàries d'acord amb les compatibilitats
 de les diferents versions de les tecnologies, tot i que, per raons de retrocompatibilitat de configuracions, en el cas de Maven,
 es mantindrà la cobertura de configuració de tools/jdks referenciades actualment per les aplicacions.
@@ -51,9 +51,9 @@ adaptacions necessàries als aplicatius.
 <br/><br/>
 Per a més informació:
 
-- [Integració contínua. Tecnologies de construcció](/sic20-serveis/ci/#matriu-de-tecnologies-de-construcció)
+- [Integració contínua. Tecnologies de construcció](/plataformes/sic/serveis/sic20-serveis/ci/#matriu-de-tecnologies-de-construcció)
 
-- [Registre corporatiu d'imatges de construcció](/sic20-serveis/registre-imatges/)
+- [Registre corporatiu d'imatges de construcció](/plataformes/sic/serveis/sic20-serveis/registre-imatges/)
 
 - [Com construir el fitxer ACA] (/sic20-guies/fitxer-aca/)
 

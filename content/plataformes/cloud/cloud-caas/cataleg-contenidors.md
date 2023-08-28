@@ -14,7 +14,7 @@ En aquesta secció es descriuen les diferents imatges docker homologades pel CTT
 
 Per facilitar la tasca de desenvolupament i creació d'aplicacions basades en contenidors, CTTI ofereix un conjunt d'imatges certificades i alineades amb les versions del software del [Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
-Podeu trobar aquestes imatges certificades al [registre privat](https://registreimatges.sic.intranet.gencat.cat). Si necessiteu més informació d'aquest registre privat, podeu consultar [Registre d'imatges](http://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/).
+Podeu trobar aquestes imatges certificades al [registre privat](https://registreimatges.sic.intranet.gencat.cat). Si necessiteu més informació d'aquest registre privat, podeu consultar [Registre d'imatges](http://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/registre-imatges/).
 
 **Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
 ------------ | ------------ |-------------------- |-----------

@@ -41,7 +41,7 @@ a la plataforma antiga, ja no serà possible finalitzar-lo**.
 <br/><br/>
 Per a més informació:
 
-- [Integració contínua](/sic30-serveis/ci/)
+- [Integració contínua](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 - [Serveis del SIC i com fer-ne ús](/sic30-guies/eines_sic/)
 

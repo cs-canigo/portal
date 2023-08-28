@@ -16,7 +16,7 @@ weight = 4
 ## Introducció
 
 El SIC proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis.
-Abans d'entrar en el [funcionament](/sic30-serveis/autoservei-usuaris/#funcionament) de l'autoservei d'usuaris,
+Abans d'entrar en el [funcionament](/plataformes/sic/serveis/sic30-serveis/autoservei-usuaris/#funcionament) de l'autoservei d'usuaris,
 explicarem breument l'actual estructura de permisos del SIC.
 
 ## Estructura de permisos
@@ -137,7 +137,7 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crea
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
-Per a més informació: [Custòdia de codi font] (/sic30-serveis/scm/)
+Per a més informació: [Custòdia de codi font] (/plataformes/sic/serveis/sic30-serveis/scm/)
 
 ### Permisos d'accés
 

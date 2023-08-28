@@ -271,7 +271,7 @@ l'auditoria de l'activitat dels desplegaments als entorns de Preproducció i Pro
 L'Autoservei de pipelines permet als usuaris la **generació de pipelines per a l'automatització de la construcció i el desplegament
 de les aplicacions** a partir de la configuració d'una sèrie de fitxers en format YML. D'aquesta manera, els proveïdors d'aplicacions
 disposen d'autonomia per a configurar el seu comportament.
-Per a més informació: [Autoservei de pipelines] (/sic30-serveis/autoservei-pipelines/)
+Per a més informació: [Autoservei de pipelines] (/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies de construcció
 
@@ -283,7 +283,7 @@ ans al contrari, l'estén per a acabar de concretar els requeriments propis del 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
-Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
+Veure: <a href="https://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
 </div>
 
 <br/>
@@ -345,7 +345,7 @@ a la construcció de l'aplicació via **npm install**.
 ## Matriu de desplegament en servidors (IAAS)
 
 Si es volen fer servir les tasques de desplegaments automatitzats des de SIC, caldrà escollir la
-modalitat de desplegament [**DELEGADA**](/sic30-serveis/ci/#modalitats-de-desplegament) per a que l’aplicació
+modalitat de desplegament [**DELEGADA**](/plataformes/sic/serveis/sic30-serveis/ci/#modalitats-de-desplegament) per a que l’aplicació
 es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de servidor:
 
 |Proveïdor|Tipus de servidor|

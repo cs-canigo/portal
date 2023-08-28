@@ -22,7 +22,7 @@ sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat 
 incorporat exemples:
 
 - [Plataformes Cloud](/cloud/plataformes-cloud/)
-- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+- [Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
 - [Exemple fitxer ACA](/related/sic/3.0/aca_const_despl_node_openshift.yml)
 
 <br/><br/>

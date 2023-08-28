@@ -90,8 +90,8 @@ En qualsevol cas, quan estigui previst donar de baixa el domini antic, es notifi
 
 Per a més informació:
 
-- [Registre d'imatges](/sic30-serveis/registre-imatges/)
-- [Integració Contínua](/sic30-serveis/ci/)
+- [Registre d'imatges](/plataformes/sic/serveis/sic30-serveis/registre-imatges/)
+- [Integració Contínua](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

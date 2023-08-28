@@ -39,8 +39,8 @@ La solució ha de:
 
 S'estableixen una sèrie de requeriments per a estar en disposició d'integrar l'aplicació mitjançant aquest servei:
 
-* Conèixer els **entorns** on es desplegarà l'aplicació i les [**modalitats de desplegament**](/sic30-serveis/ci/#modalitats-de-desplegament) aplicables en cada cas.
-* L'aplicació [**ha de ser integrable**](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció) amb el servei d'automatització de la construcció i desplegament.
+* Conèixer els **entorns** on es desplegarà l'aplicació i les [**modalitats de desplegament**](/plataformes/sic/serveis/sic30-serveis/ci/#modalitats-de-desplegament) aplicables en cada cas.
+* L'aplicació [**ha de ser integrable**](/plataformes/sic/serveis/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció) amb el servei d'automatització de la construcció i desplegament.
 * Aplicació [**ha d'estar preparada i acomplir els requeriments**](/sic30-guies/preparar-aplicacio/) per a poder ser desplegada.
 * Per als entorns amb modalitat de desplegament automàtic o delegat a Cpd, disposar dels **identificadors d'infraestructures** de desplegament que proporcionarà l'equip SIC o Cpd (respectivament).
 * **Col·laboració**: el proveïdor d'aplicacions i el proveïdor d'infraestructures han d'estar disposats a col·laborar i mantenir una comunicació.
@@ -138,12 +138,12 @@ s'aprovisionaran dins d'un directori diferenciat `/Advanced` dins del directori 
 
 ### Tecnologies compatibles
 
-Veure: [Matriu de tecnologies](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció)
+Veure: [Matriu de tecnologies](/plataformes/sic/serveis/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció)
 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
-Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
+Veure: <a href="https://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/registre-imatges/">Registre d'imatges corporatiu</a>.
 </div>
 
 <br/><br/><br/>

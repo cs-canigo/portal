@@ -66,7 +66,7 @@ del desplegament. En aquest cas la pipeline es cancel·la indicant que s'han pro
 <br/>
 Per a més informació:
 
-- [Servei d'Integració Contínua](/sic30-serveis/ci/)
+- [Servei d'Integració Contínua](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

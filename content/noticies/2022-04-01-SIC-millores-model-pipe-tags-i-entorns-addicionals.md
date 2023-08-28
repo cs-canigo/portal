@@ -38,7 +38,7 @@ El model d'etapes de la pipeline de desplegament queda de la següent manera:
 <br/>
 Per a més informació:
 
-- [Servei d'Integració Contínua](https://canigo.ctti.gencat.cat/sic30-serveis/ci/)
+- [Servei d'Integració Contínua](https://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/ci/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

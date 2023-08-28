@@ -23,7 +23,7 @@ segons pertoqui, dugui a terme el desplegament.
 **La modalitat de desplegament delegat acabarà substituint la modalitat automàtica**, però aquesta possibilitat varia en
 funció del grau d'avançament del projecte amb cada proveïdor d'infraestructures.
 
-Per a més informació: [Modalitats de desplegament] (https://canigo.ctti.gencat.cat/sic20-serveis/ci/#modalitats-de-desplegament)
+Per a més informació: [Modalitats de desplegament] (https://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic20-serveis/ci/#modalitats-de-desplegament)
 
 ## Novetats
 
@@ -33,7 +33,7 @@ dels desplegaments en modalitat automàtica per a donar cobertura a la versió p
 Aquesta actualització permetrà mantenir automatitzats els desplegaments a mesura que les aplicacions vagin migrant,
 sense requerir canvis pel que fa a la configuració de les pipelines.
 
-Per a més informació: [Integració contínua](/sic20-serveis/ci/).
+Per a més informació: [Integració contínua](/plataformes/sic/serveis/sic20-serveis/ci/).
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
