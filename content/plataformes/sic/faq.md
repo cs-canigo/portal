@@ -4,6 +4,9 @@ title = "FAQ"
 description = "Preguntes freqüents sobre els serveis del SIC"
 sections = "SIC"
 taxonomies = []
+aliases = [
+  "/sic/faq"
+]
 weight = 5
 +++
 
