@@ -4,6 +4,9 @@ title       = "Què és el Servei d'Integració Contínua"
 description = "Conceptes, motivació, modalitats d’integració i serveis que es proporcionen"
 sections    = "SIC"
 toc         = true
+aliases = [
+   "/sic/about/"
+]
 taxonomies  = []
 weight 		= 1
 +++
