@@ -45,6 +45,7 @@ caldrà comunicar-ho via [**Remedy**](https://pautic.gencat.cat/).
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de FRAMEWORK SIC a Remedy**. <br/>
 
 <br/>
+
 #### Obrir nova petició a SAU-Remedy
 
 Aquesta guia s’ha elaborat a partir de la "Guia d’usuari del Portal d’Autoservei" oficial de Remedy per a que serveixi de guia per a aquells usuaris que no estiguin
