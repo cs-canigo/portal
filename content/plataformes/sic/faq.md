@@ -99,8 +99,8 @@ S’executa un procés d'esborrat de binaris de manera que **únicament es respe
 repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat
 pujades durant els últims 6 mesos (180 dies).
 El Servei de Binaris no està concebut, per tant, com un servei de custòdia permanent sinó com un sistema d'intercanvi
-d'artefactes per al desplegament d'aplicacions.
-<br/><br/>
+d'artefactes per al desplegament d'aplicacions.  
+  
 
-<br/>
-Si teniu qualsevol dubte o problema utilitzeu el canal de [**Suport**](/sic/suport/) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+  
+Si teniu qualsevol dubte o problema utilitzeu el canal de [Suport](/sic/suport/) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
