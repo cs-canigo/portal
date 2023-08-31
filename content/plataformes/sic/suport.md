@@ -58,15 +58,23 @@ Cal tenir pressent:
 * **Adjuntar qualsevol document que pugui ser útil** per a la resolució de la petició (formularis, captures de pantalla, exemples... etcètera).
 
 <br/>
+
 ##### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://pautic.gencat.cat. <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir-se al portal d'autoservei. <br/>
 **OBSERVACIÓ**: El perfil de l'usuari pot condicionar les opcions habilitades en cada cas.
-<CENTER>![Pàgina principal](/related/sic/Remedy1.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/sic/Remedy1.png)
+
+</center>
+
 <br/>
 
 <br/>
+
 ##### Procediment
 
 A Remedy no hi ha tipus de peticions específiques per als serveis SIC, totes les peticions s’han de demanar a partir de tres categories generals:
@@ -76,13 +84,20 @@ A Remedy no hi ha tipus de peticions específiques per als serveis SIC, totes le
 * **Necessito demanar**: per a realitzar sol·licituds.
 
 <br/>
+
 ###### Avaria o mal funcionament (incidències)
 
 Tipus de petició per reportar qualsevol tipus d'incidència relacionada amb els serveis del SIC: problemes d'accés als serveis, errors d'execució de jobs... etcètera.
 
 Caldrà seleccionar la categoria: `Avaria o mal funcionament → Incidència en aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/sic/Remedy2.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/sic/Remedy2.png)
+
+</center>
+
 <br/>
 
 Informació a emplenar:
@@ -108,13 +123,20 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la incidència.
 
 <br/>
+
 ###### Necessito saber (consultes)
 
 Tipus de petició per a demanar qualsevol tipus d'informació relacionada amb els serveis del SIC.
 
 Caldrà seleccionar la categoria: `Necessito saber → Consulta sobre aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/sic/Remedy3.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/sic/Remedy3.png)
+
+</center>
+
 <br/>
 
 Informació a emplenar:
@@ -135,6 +157,7 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la consulta.
 
 <br/>
+
 ###### Necessito demanar (sol·licituds)
 
 Tipus de petició per a demanar:
@@ -146,7 +169,13 @@ Tipus de petició per a demanar:
 
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/sic/Remedy4.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/sic/Remedy4.png)
+
+</center>
+
 <br/>
 
 Informació a emplenar:
@@ -167,6 +196,7 @@ Informació a emplenar:
 aproximació sobre la tasca, la llibreria a publicar... etcètera.
 
 <br/>
+
 #### Contactar amb bústia SAU
 
 En cas que el **servei Remedy no es trobi disponible**, podrà optar per obrir una petició via bústia SAU: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat). <br/>
@@ -185,6 +215,7 @@ Contingut:
    - Descripció de la consulta
 
 <br/>
+
 [**Per a reportar una incidència:**](mailto:sau.tic@gencat.cat?subject=Incid%C3%A8ncia%20sobre%20aplicaci%C3%B3%20FRAMEWORK%20SIC&body=-%20Codi%20de%20la%20etiqueta%20o%20el%20nom%20del%20seu%20ordinador%3A%20SIC-Incid%C3%A8ncia%0A-%20Tel%C3%A8fon%20de%20contacte%0A-%20Problema%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20SIC%0A%0A-%20Descripci%C3%B3%20de%20l%27error%20o%20problema%20que%20es%20mostra%20a%20la%20pantalla)
 
 Assumpte: "Incidència sobre aplicació FRAMEWORK SIC"  <br/>
@@ -197,6 +228,7 @@ Contingut:
    - Descripció de l'error o problema que es mostra a la pantalla
 
 <br/>
+
 [**Petició de suport:**](mailto:sau.tic@gencat.cat?subject=Petici%C3%B3%20de%20suport%20funcional%20per%20a%20l%27aplicaci%C3%B3%20FRAMEWORK%20SIC&body=-%20Urg%C3%A8ncia%3A%20Alta%2C%20Mitjana%20o%20Baixa%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20SIC%0A-%20Descripci%C3%B3%20breu%20del%20suport%0A%0A-%20Descripci%C3%B3%20detallada%20del%20suport%0A)
 
 Assumpte: "Petició de suport funcional per a l'aplicació FRAMEWORK SIC" <br/>
