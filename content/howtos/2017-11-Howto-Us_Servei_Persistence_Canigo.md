@@ -84,7 +84,7 @@ Per exemple:
 
 Spring Data també permet la utilització d'expressions com DISTINCT, permet la concatenació de camps al criteri de la query amb AND i OR , la ordenació dels resultats amb ASC o DESC i més funcionalitats.
 
-Per a més informació de la creació de quèries es pot consultar la documentació de [Spring Data] (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation)
+Per a més informació de la creació de quèries es pot consultar la documentació de [Spring Data](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation)
 
 ### Query DSL
 
@@ -134,4 +134,4 @@ Un exemple d'aquest ús es pot trobar al mètode findPaginated d'EquipamentServi
 
 No és obligatori utilitzar el GenericPredicateBuilder per a construir els predicates. El servei de persistència suporta qualsevol Predicate vàlid.
 
-Podeu trobar més informació a la documentació de [Spring Data] (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#core.extensions.querydsl) o de [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
+Podeu trobar més informació a la documentació de [Spring Data](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#core.extensions.querydsl) o de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)

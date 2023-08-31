@@ -7,12 +7,12 @@ taxonomies = []
 weight = 3
 +++
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/rpa/faq) i utilitzeu els canals de comunicació que s'estableixen:
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/rpa/faq) i utilitzeu els canals de comunicació que s'estableixen:
 [**Remedy**](https://pautic.gencat.cat/)
 
 ## Peticions a Remedy
 
-Per peticions, dubtes o incidències en el desenvolupament, proves i execució de processos robotitzats, caldrà comunicar-ho via [**Remedy**] (https://pautic.gencat.cat/).
+Per peticions, dubtes o incidències en el desenvolupament, proves i execució de processos robotitzats, caldrà comunicar-ho via [**Remedy**](https://pautic.gencat.cat/).
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de Plataforma Corporativa RPA a Remedy**. <br/>
 
 <br/>

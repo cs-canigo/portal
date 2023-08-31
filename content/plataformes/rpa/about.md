@@ -37,4 +37,4 @@ El desplegament de processos robotitzats dins la plataforma es defineix al proce
 
 ![Gestio Demanda](/related/rpa/demanda.png)
 
-La interacció amb l'Oficina Tècnica es realitzarà a través de PAUTIC. Més informació a [Centres de Suport] (/cs)
+La interacció amb l'Oficina Tècnica es realitzarà a través de PAUTIC. Més informació a [Centres de Suport](/cs)

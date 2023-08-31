@@ -13,77 +13,77 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
-- [Com resoldre la vulnerabilitat detectada Spring4Shell] (/howtos/2022-04-13-Howto-canigo-Spring4Shell/)
+- [Com resoldre la vulnerabilitat detectada Spring4Shell](/howtos/2022-04-13-Howto-canigo-Spring4Shell/)
 
-- [Com resoldre la vulnerabilitat detectada Log4Shell] (/howtos/2021-12-13-Howto-canigo-log4jshell/)
+- [Com resoldre la vulnerabilitat detectada Log4Shell](/howtos/2021-12-13-Howto-canigo-log4jshell/)
 
-- [Com configurar propietats en fitxers YAML per a proves unitàries] (/howtos/2021-11-26-Howto-yaml_test_file/)
+- [Com configurar propietats en fitxers YAML per a proves unitàries](/howtos/2021-11-26-Howto-yaml_test_file/)
 
-- [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó] (/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)
+- [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó](/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)
 
-- [Com utilitzar Spring Retry per a realitzar reintents d'accions] (/howtos/2021-07-26-Howto-spring_retry/)
+- [Com utilitzar Spring Retry per a realitzar reintents d'accions](/howtos/2021-07-26-Howto-spring_retry/)
 
-- [Com exposar i capturar mètriques amb Prometheus i Grafana] (/howtos/2021-01-02-Howto-spring-expose-metrics/)
+- [Com exposar i capturar mètriques amb Prometheus i Grafana](/howtos/2021-01-02-Howto-spring-expose-metrics/)
 
-- [Com implementar el patró Circuit Breaker] (/howtos/2021-01-02-Howto-circuit_breaker/)
+- [Com implementar el patró Circuit Breaker](/howtos/2021-01-02-Howto-circuit_breaker/)
 
-- [Com corregir l’error de parseig del connector Sarcat PICA] (/howtos/2021-05-11-Howto-sarcat_pica_error_parseig_prefix/)
+- [Com corregir l’error de parseig del connector Sarcat PICA](/howtos/2021-05-11-Howto-sarcat_pica_error_parseig_prefix/)
 
-- [Com utilitzar Google Error-Prone] (/howtos/2021-01-02-Howto-google_error_prone/)
+- [Com utilitzar Google Error-Prone](/howtos/2021-01-02-Howto-google_error_prone/)
 
-- [Com instal·lar les VBOX guest additions] (/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
+- [Com instal·lar les VBOX guest additions](/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
 
-- [Com permetre l'intercanvi creuat de recursos (CORS)] (/howtos/2021-01-02-Howto-spring_cors/)
+- [Com permetre l'intercanvi creuat de recursos (CORS)](/howtos/2021-01-02-Howto-spring_cors/)
 
-- [Com definir handler exception personalitzat] (/howtos/2020-10-08-Definir_handler_exception_personalitzat/)
+- [Com definir handler exception personalitzat](/howtos/2020-10-08-Definir_handler_exception_personalitzat/)
 
-- [Com personalitzar les validacions del token JWT] (/howtos/2020-09-30-Personalitzar_validacio_token_jwt/)
+- [Com personalitzar les validacions del token JWT](/howtos/2020-09-30-Personalitzar_validacio_token_jwt/)
 
-- [Com canviar el domini on està allotjat el plugin de l'eclipse] (/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/)
+- [Com canviar el domini on està allotjat el plugin de l'eclipse](/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/)
 
-- [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó] (/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/)
+- [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó](/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/)
 
-- [Comprovació automàtica de dependències vulnerables per aplicacions Canigó] (/howtos/2019-08-13-Howto-Dependency-check/)
+- [Comprovació automàtica de dependències vulnerables per aplicacions Canigó](/howtos/2019-08-13-Howto-Dependency-check/)
 
-- [Com implementar tests unitaris amb Webflux a Canigó 3.4] (/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/)
+- [Com implementar tests unitaris amb Webflux a Canigó 3.4](/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/)
 
-- [Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó] (/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/)
+- [Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó](/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/)
 
-- [Com configurar i utilitzar IronPort a una aplicació Canigó] (/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/)
+- [Com configurar i utilitzar IronPort a una aplicació Canigó](/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/)
 
-- [Resolució problema optimització Spring a Canigó 2] (/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/)
+- [Resolució problema optimització Spring a Canigó 2](/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/)
 
-- [Afegir les dev tools de Spring a Canigó 3.4.0] (/howtos/2019-04-Howto-afegir_dev_tools_spring/)
+- [Afegir les dev tools de Spring a Canigó 3.4.0](/howtos/2019-04-Howto-afegir_dev_tools_spring/)
 
-- [Test unitaris amb programació reactiva a Canigó 3.4] (/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/)
+- [Test unitaris amb programació reactiva a Canigó 3.4](/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/)
 
-- [Actualitzar aplicació de Canigó 3.2 a Canigó 3.4] (/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
+- [Actualitzar aplicació de Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
 
-- [Definició sondes per aplicacions Canigó a AppAgile] (/howtos/2019-03-HowTo-Definicio-sondes-aplicacions-Canigo-AppAgile)
+- [Definició sondes per aplicacions Canigó a AppAgile](/howtos/2019-03-HowTo-Definicio-sondes-aplicacions-Canigo-AppAgile)
 
-- [Ús de Hikari CP a Canigó 3.2] (/howtos/2018-11-Howto-Canigo3-HikariCP)
+- [Ús de Hikari CP a Canigó 3.2](/howtos/2018-11-Howto-Canigo3-HikariCP)
 
-- [Migració Canigó 3 de Java 7 a Java 8] (/howtos/2018-10-10-HowTo-Canigo-Java8/)
+- [Migració Canigó 3 de Java 7 a Java 8](/howtos/2018-10-10-HowTo-Canigo-Java8/)
 
-- [Configuració de MongoDB a Canigó 3.2.6] (/howtos/2018-09-Howto-MongoDB/)
+- [Configuració de MongoDB a Canigó 3.2.6](/howtos/2018-09-Howto-MongoDB/)
 
-- [Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2] (/howtos/2018-08-Canigo-SAML/)
+- [Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2](/howtos/2018-08-Canigo-SAML/)
 
-- [Propietats Multientorn al Front-End] (/howtos/2018-04-howto-frontend-multientorn/)
+- [Propietats Multientorn al Front-End](/howtos/2018-04-howto-frontend-multientorn/)
 
-- [Jocs de proves API REST] (/howtos/2018-02-howto-swagger_soapui/)
+- [Jocs de proves API REST](/howtos/2018-02-howto-swagger_soapui/)
 
-- [Proves Unitàries Mòduls de Canigó] (/howtos/2018-01-howto-test_jars_canigo/)
+- [Proves Unitàries Mòduls de Canigó](/howtos/2018-01-howto-test_jars_canigo/)
 
-- [Integració d'una aplicació Canigó a SIC 2.0] (/howtos/2017-12-howto-integracio_canigo_sic/)
+- [Integració d'una aplicació Canigó a SIC 2.0](/howtos/2017-12-howto-integracio_canigo_sic/)
 
-- [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.2] (/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/)
+- [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.2](/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/)
 
 - [Ús de Spring Cache (Caffeine) en Canigó 3.2](/howtos/2017-10-Howto-Us_Spring_Cache_Canigo/)
 
 - [Actualització aplicació de Canigó 3.1 a Canigó 3.2](/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/)
 
-- [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x] (/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)
+- [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x](/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)
 
 - [Connectar amb una BBDD Mongo amb SSL a través de NodeJS](/howtos/2017-05-Howto-Connectar_nodejs_amb_mongo_ssl)
 

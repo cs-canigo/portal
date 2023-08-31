@@ -26,4 +26,4 @@ Amb aquestes actualitzacions, s’assoleix un dels objectius que es persegueix d
 Es preveu l'actualització tecnològica programada de forma trimestral i anual per anar incorporant millores i nova funcionalitat.
 <br>
 <br>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

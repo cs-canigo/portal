@@ -78,7 +78,7 @@ L'estàndard Wi-Fi 6E utilitza demanera predeterminada 160 MHz d'ample de banda 
 <br><br>
 A diferència de les altres bandes wifi de 2,4 GHz i 5 GHz, els 6 GHz tenen algunes restriccions, com que els punts d'accés només poden utilitzar-se en interiors, incloent avions i trens però no en cotxes. Només es permetrà el seu ús en exteriors en dispositius portàtils utilitzant molt baixa potència, excloent en tot cas, l'ús per a drons.
 <br>
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br><br>
 
 ##### **Modulació**
@@ -131,7 +131,7 @@ Wi-Fi Alliance està exigint la certificació de seguretat WPA3, que reforça el
 La seguretat WPA3 no és obligatoria a Wi-Fi 6.
 <br><br>
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ### **Equipament Wi-Fi 6E Certificat** {#Equipament}
 Wi-Fi Alliance certifica que els equips fabricats per les marques compleixen amb l'estàndard i siguin interoperables entre si.
@@ -162,7 +162,7 @@ En cas de complir els requisits tècnics, es poden trobar diferents problemes a 
 * Tenir talls a la xarxa wifi per no tenir bona cobertura.  
 * Igual que amb qualsevol tecnologia emergent, l'adopció de Wi-Fi 6E té el potencial per crear nous riscos de ciberseguretat, com vulnerabilitats.
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ## **Visió general de Wi-Fi 7 (Esborrany 802.11be)** {#CaracteristiquesPrincipals}
 Encara que Wi-Fi 6E  acaba de llançar-se al públic, ja es parla de Wi-Fi 7 i del que vindrà en els propers anys.
@@ -195,7 +195,7 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 * **Multi-Access Point Coordination** on els punts d'accés utilitzen els mateixos canals i es coordinen entre ells per a acordar la potència mínima imprescindible, de manera que puguin emetre alhora sense molestar-se.
 * **Hybrid Automatic Repeat Request (HARQ)**, es un sistema de control d'errors, més eficient que recupera els paquets corromputs, durant la transmissió.
 <br>
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 
 ##### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
@@ -244,7 +244,7 @@ https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
 * **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
 * **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 <br>
 ###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>

@@ -12,8 +12,8 @@ Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, per
 
 Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:
 
-* [Spring Data JPA] (https://docs.spring.io/spring-data/jpa/docs/2.5.4/reference/html/#reference).
-* [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
+* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/2.5.4/reference/html/#reference).
+* [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
 ## Instal·lació i Configuració
 
@@ -65,7 +65,7 @@ Si es requereix configurar un origen de dades JDBC es requereixen aquestes depen
 <dependencies>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i
 el que executa el test unitari del mòdul de persistència:

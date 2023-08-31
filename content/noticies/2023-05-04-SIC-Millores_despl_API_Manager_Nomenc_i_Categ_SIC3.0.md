@@ -113,4 +113,4 @@ incorporat exemples:
 - [Com preparar productes i APIs per al desplegament a l'API Manager](/sic30-guies/preparar-apim/)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

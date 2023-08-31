@@ -55,9 +55,9 @@ Per a més informació:
 
 - [Registre corporatiu d'imatges de construcció](/plataformes/sic/serveis/sic20-serveis/registre-imatges/)
 
-- [Com construir el fitxer ACA] (/sic20-guies/fitxer-aca/)
+- [Com construir el fitxer ACA](/sic20-guies/fitxer-aca/)
 
-- [Utilitzar imatges Docker Builder] (/howtos/2023-02-21-SIC-Howto-utilitzar-imatges-docker-builder-SIC20/)
+- [Utilitzar imatges Docker Builder](/howtos/2023-02-21-SIC-Howto-utilitzar-imatges-docker-builder-SIC20/)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

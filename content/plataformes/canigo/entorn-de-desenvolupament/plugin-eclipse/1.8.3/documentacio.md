@@ -20,7 +20,7 @@ L'última versió del plugin està certificada amb la versió d'Eclipse 2019-03,
 
 ### Prerequisit
 
-Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó] (/canigo-fwk-docs/documentacio-llibreries/)
+Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó](/canigo-fwk-docs/documentacio-llibreries/)
 
 ### Instal·lació
 

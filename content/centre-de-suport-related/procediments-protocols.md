@@ -10,12 +10,12 @@ weight 		= 1
 
 En els següents pàgines s'expliquen diferents qüestions de l'espai de suport (incidències, consultes i peticions de canvis).
 
- - [Estats i workflow de l'espai de suport.] (/centre-de-suport-related/estat-workflow espai suport)
- - [Millores en l'espai de suport.] (/centre-de-suport-related/millores-espai-suport)
+ - [Estats i workflow de l'espai de suport.](/centre-de-suport-related/estat-workflow espai suport)
+ - [Millores en l'espai de suport.](/centre-de-suport-related/millores-espai-suport)
  
 ### Procediment per classificar un canvi.
 
-Aquí podrà consultar els procediments que es segueixen per classificar i atendre les peticions de canvis: [Procediment de Canvis] ()
+Aquí podrà consultar els procediments que es segueixen per classificar i atendre les peticions de canvis: [Procediment de Canvis]()
 
 ### Procediment per classificar una incidència.
 
@@ -46,4 +46,4 @@ Per tant, si una activitat RESOLTA no es tanca en el temps previst, aquesta es t
 Addicionalment, l'Oficina Tècnica de Canigó podrà tancar activitats reportades per:
 
  - "<b>Fora d'àmbit.</b>"Independentment de l'estat en que es trobi l'activitat, es considera que l'assumpte tractat en l'activitat no és de la competència de l'Oficina Tècnica de Canigó.
- - "<b>Desconeixement del Framework</b>".Independentment de l'estat en què es trobi l'activitat, es considera que el reportador de l'activitat demostra un desconeixement del framework Canigó, en aquests casos, s'acostumarà a redirigir a l'usuari reportador al Portal de Canigó a l'apartat de [documentació] (/canigo-documentacio).
+ - "<b>Desconeixement del Framework</b>".Independentment de l'estat en què es trobi l'activitat, es considera que el reportador de l'activitat demostra un desconeixement del framework Canigó, en aquests casos, s'acostumarà a redirigir a l'usuari reportador al Portal de Canigó a l'apartat de [documentació](/canigo-documentacio).

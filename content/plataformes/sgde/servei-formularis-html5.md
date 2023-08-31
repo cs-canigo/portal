@@ -102,7 +102,7 @@ Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les seg
 
 - Exportar el formulari HTML5 a l'AEM autor de desenvolupament: AEM Start -> Forms -> Forms & Documents -> Sel·leccionar formulari -> Download
 
-- Crear una petició al CSTD, [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) especificant aquesta informacio:
+- Crear una petició al CSTD, [servei STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF) especificant aquesta informacio:
 
 	- àmbit, aplicació, nom formulari i versió (opcional, en cas que ja hi hagi alguna altre desplegada i no es vulgui sobreescriure)
 	- adjunt zip amb el conjunt d'assets resultat de l'exportació del formulari
@@ -128,7 +128,7 @@ Es recomana però que els formularis siguin sempre **backward compatible**, evit
 
 ### Baixa
 
-Quan un formulari o una versió en concreta estigui en desús, s'haurà de demanar al CS Canigó la seva baixa. La petició s'haurà de fer al [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) informant la URL que l'identifica a cada entorn.
+Quan un formulari o una versió en concreta estigui en desús, s'haurà de demanar al CS Canigó la seva baixa. La petició s'haurà de fer al [servei STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF) informant la URL que l'identifica a cada entorn.
 
 ## Configuracions
 

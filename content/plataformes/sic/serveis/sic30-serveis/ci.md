@@ -271,7 +271,7 @@ l'auditoria de l'activitat dels desplegaments als entorns de Preproducció i Pro
 L'Autoservei de pipelines permet als usuaris la **generació de pipelines per a l'automatització de la construcció i el desplegament
 de les aplicacions** a partir de la configuració d'una sèrie de fitxers en format YML. D'aquesta manera, els proveïdors d'aplicacions
 disposen d'autonomia per a configurar el seu comportament.
-Per a més informació: [Autoservei de pipelines] (/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
+Per a més informació: [Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies de construcció
 
@@ -361,4 +361,4 @@ La petició per a fer aquest primer desplegament de l’aplicació va a càrrec 
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

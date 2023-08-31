@@ -16,4 +16,4 @@ el funcionament del sistema i les possibilitats de personalització. **En aquest
 no impedirà continuar amb el desplegament de l'aplicació**. En el moment en que passi a aplicar-se un criteri restrictiu,
 es notificarà als proveïdors amb antelació.
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

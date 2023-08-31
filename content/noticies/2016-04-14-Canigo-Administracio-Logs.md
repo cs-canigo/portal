@@ -27,7 +27,7 @@ Aquest mòdul "canigo.operation.logging" ofereix les següents funcionalitats:
 
 ### Plugin Canigó per Eclipse
 
-També s'ha publicat la versió 1.5.1 del [Plugin de Canigó per Eclipse] (/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf) el qual inclou la possibilitat d'afegir/eliminar aquest mòdul a una aplicació Canigó 3.1.
+També s'ha publicat la versió 1.5.1 del [Plugin de Canigó per Eclipse](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf) el qual inclou la possibilitat d'afegir/eliminar aquest mòdul a una aplicació Canigó 3.1.
 
 Amb el Plugin de Canigó per Eclipse, en cas de crear una aplicació amb arquitectura REST+HTML5/JS el mòdul d'administració de logs ja ve inclòs per defecte.
 

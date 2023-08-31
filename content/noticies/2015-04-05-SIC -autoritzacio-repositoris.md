@@ -12,7 +12,7 @@ Aquesta nova característica ha permès limitar els permisos del grup d'administ
 
 <CENTER>![sic](/images/news/RML_vs_CPD_permissions.png)</center>
 
-Els nous repositoris de [Subversion] (http://svn.intranet.gencat.cat/) compten ara amb un total de 532 codis de diàleg donats d'alta. En el següent gràfic es mostren el total de codis de diàleg distribuïts per àmbits:
+Els nous repositoris de [Subversion](http://svn.intranet.gencat.cat/) compten ara amb un total de 532 codis de diàleg donats d'alta. En el següent gràfic es mostren el total de codis de diàleg distribuïts per àmbits:
 
-Per qualsevol consulta referent a la política d'accés als repositoris de Subversion es pot fer arribar una petició de consulta al JIRA CSTD al servei [SICQ] (https://cstd.ctti.gencat.cat/jiracstd/browse/SICQ) o [s'ha d'obrir una petició Remedy de consulta al SIC](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta).
+Per qualsevol consulta referent a la política d'accés als repositoris de Subversion es pot fer arribar una petició de consulta al JIRA CSTD al servei [SICQ](https://cstd.ctti.gencat.cat/jiracstd/browse/SICQ) o [s'ha d'obrir una petició Remedy de consulta al SIC](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta).
 

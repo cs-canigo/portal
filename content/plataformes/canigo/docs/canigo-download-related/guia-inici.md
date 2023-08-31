@@ -15,12 +15,12 @@ Aquest document pretén oferir al desenvolupador d'aplicacions Canigó 3.0 un en
 
 Es recomana utilitzar l'entorn de desenvolupament basat en Eclipse i Maven que us donem al centre de Suport de Canigó. Per construir aquest entorn cal descarregar el següent arxiu:
 
-- [InstallCanigo3.exe]: inclou (apache-maven-2.2.1, apache-tomcat-6.0.28, eclipse helios, jdk1.6.0_18, workspace). Descarregar [aquí] (http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html).
-- [Entorn de treball propi]: en el cas que es tingui un entorn de treball propi prèviament instal.lat amb els components anomenats al punt anterior i vulguem seguir fent-lo servir podem optar només per instal.lar els "Plug-ins de Canigó 3.0" a través d'Eclipse seguint els passos del següent enllaç: [Instal.lar només el plug-in] (/canigo-download-related/instalar-plugin)
+- [InstallCanigo3.exe]: inclou (apache-maven-2.2.1, apache-tomcat-6.0.28, eclipse helios, jdk1.6.0_18, workspace). Descarregar [aquí](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html).
+- [Entorn de treball propi]: en el cas que es tingui un entorn de treball propi prèviament instal.lat amb els components anomenats al punt anterior i vulguem seguir fent-lo servir podem optar només per instal.lar els "Plug-ins de Canigó 3.0" a través d'Eclipse seguint els passos del següent enllaç: [Instal.lar només el plug-in](/canigo-download-related/instalar-plugin)
 
 ### Passos a seguir
 
-- Cal descarregar l'entorn de treball en el següent [enllaç] (http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html)
+- Cal descarregar l'entorn de treball en el següent [enllaç](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html)
 - <b><font color=red>IMPORTANT!</font>Aquest instal·lable reemplaça el settings.xml dintre del repositori maven per defecte</b> (C:\Documents and Settings{usuari}\.m2\settings.xml),<b> el procés d'instal·lació deixa una còpia del fitxer a $DIRECTORI_INSTALACIO/nsi-backup</b>
 - Un cop instal·lat amb el directori per defecte es crearà una carpeta anomenada "canigo3" que conté totes les eines necessàries per començar a treballar amb Canigó 3.0.
 <br>

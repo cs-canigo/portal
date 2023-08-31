@@ -13,12 +13,12 @@ categories  = ["seguretat", "iot"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Reptes de ciberseguretat en IoT] (#Reptes)
-3. [Millors pràctiques en seguretat IoT] (#MillorsPractiques)
-4. [Conclusions] (#Conclusions)
-5. [Referències] (#Referencies)
-6. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Reptes de ciberseguretat en IoT](#Reptes)
+3. [Millors pràctiques en seguretat IoT](#MillorsPractiques)
+4. [Conclusions](#Conclusions)
+5. [Referències](#Referencies)
+6. [Glossari](#Glossari)
 
 ---
 

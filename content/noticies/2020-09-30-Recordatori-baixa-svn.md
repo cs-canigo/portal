@@ -15,4 +15,4 @@ Recomanem als lots d'aplicació que migrin el més aviat possible el codi de les
 Us recordem que es va publicar un tutorial sobre com realitzar la migració de SVN a Git en un
 <a href="http://canigo.ctti.gencat.cat/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/" target="blank_">howto al web d'Arquitectura</a>.
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

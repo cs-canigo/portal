@@ -216,7 +216,7 @@ Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%
 
 L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la
 intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
-Per a més informació: [Autoservei de pipelines] (/sic-serveis/autoservei-pipelines/)
+Per a més informació: [Autoservei de pipelines](/sic-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies de construcció
 
@@ -295,4 +295,4 @@ La petició per a fer aquest primer desplegament de l’aplicació va a càrrec 
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic20-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

@@ -13,14 +13,14 @@ categories  = ["Intel·ligència artificial", "Navegadors"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Evolució dels Navegadors Web] (#Evolucio)
-3. [Navegadors i IA] (#Navegadors)
-4. [Navegadors amb Assistent Virtual d'IA] (#NavegadorsXatBot)
-5. [Extensions IA per utilitzar al Navegador] (#Extensions)
-6. [El futur dels Navegadors] (#Futur)
-7. [Referències] (#Referencies)
-8. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Evolució dels Navegadors Web](#Evolucio)
+3. [Navegadors i IA](#Navegadors)
+4. [Navegadors amb Assistent Virtual d'IA](#NavegadorsXatBot)
+5. [Extensions IA per utilitzar al Navegador](#Extensions)
+6. [El futur dels Navegadors](#Futur)
+7. [Referències](#Referencies)
+8. [Glossari](#Glossari)
 
 ---
 

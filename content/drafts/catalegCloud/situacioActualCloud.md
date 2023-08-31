@@ -19,34 +19,34 @@ estandards =  ["cataleg cloud"]
 
 # **Taula de Continguts** {#TaulaContiguts}
 
-1. [Introducció] (#Introduccio)
-2. [Situació actual] (#SituacioActual)
-    1. [Cloud Privat] (#CloudPrivat)
-        1. [CaaS] (#CaaS)
-           1. [Registre dockers privat] (#RegistreDockerPrivat)
-           2. [Creació de contenidors] (#CreacioContenidors)
-           3. [Imatges de contenidors base] (#ImatgesContenidorsBase)
-        2. [DBaaS] (#DBaaS)
-        3. [SIC: Desplegament d'aplicacions CaaS] (#SIC)
-        4. [Monitorització, logs i traces] (#MonitoritzacioLogsTraces)
-           1. [Openshift amb Istio] (#OpenshiftAmbIstio)
-        5. [Ticketing/Incidental] (#TicketingIncidental)
-    2. [Cloud Públic] (#CloudPublic)
-        1. [Catàleg de serveis] (#CatalegServeis)
-            1. [xPaaS] (#CatalegServeisxPaaS)
-            2. [DBaaS] (#CatalegServeisDBaaS)
-            3. [IaaS] (#CatalegServeisIaaS)
-            4. [Storage] (#CatalegServeisStorage)
-    3. [Cloud Híbrid] (#CloudHibrid)
-3. [Annexes] (#Annexes)
-    1. [SaaS sobre contenidors] (#SaaSsobreContenidors)
-        1. [Service Mesh] (#ServiceMesh)
-        2. [API Manager] (#APIManager)
+1. [Introducció](#Introduccio)
+2. [Situació actual](#SituacioActual)
+    1. [Cloud Privat](#CloudPrivat)
+        1. [CaaS](#CaaS)
+           1. [Registre dockers privat](#RegistreDockerPrivat)
+           2. [Creació de contenidors](#CreacioContenidors)
+           3. [Imatges de contenidors base](#ImatgesContenidorsBase)
+        2. [DBaaS](#DBaaS)
+        3. [SIC: Desplegament d'aplicacions CaaS](#SIC)
+        4. [Monitorització, logs i traces](#MonitoritzacioLogsTraces)
+           1. [Openshift amb Istio](#OpenshiftAmbIstio)
+        5. [Ticketing/Incidental](#TicketingIncidental)
+    2. [Cloud Públic](#CloudPublic)
+        1. [Catàleg de serveis](#CatalegServeis)
+            1. [xPaaS](#CatalegServeisxPaaS)
+            2. [DBaaS](#CatalegServeisDBaaS)
+            3. [IaaS](#CatalegServeisIaaS)
+            4. [Storage](#CatalegServeisStorage)
+    3. [Cloud Híbrid](#CloudHibrid)
+3. [Annexes](#Annexes)
+    1. [SaaS sobre contenidors](#SaaSsobreContenidors)
+        1. [Service Mesh](#ServiceMesh)
+        2. [API Manager](#APIManager)
 
 ---
 
 ## **1. Introducció** {#Introduccio}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 La demanda d’arquitectures basades en solucions de núvol públic i/o contenidors ha augmentat de forma considerable en els darrers temps.
 
@@ -61,7 +61,7 @@ Ateses les grans diferències que es poden trobar en la manera de sol·licitar i
 Així mateix, com a conclusió també es reservarà un espai per tractar les solucions basades en arquitectures híbrides.
 
 ## **2. Situació actual** {#SituacioActual}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 A la figura es mostren a molt alt nivell les solucions, les tecnologies disponibles i on es poden desplegar:
 
@@ -111,13 +111,13 @@ A la figura es mostren a molt alt nivell les solucions, les tecnologies disponib
 </table>
 
 ### **2.1. Cloud Privat** {#CloudPrivat}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 El cloud privat proporciona una sèrie d’avantatges respecte els altres, permet una integració més senzilla amb la resta de solucions de l'Àmbit mantenint els costos de forma moderada, etc. Per contra té una sèrie de limitacions com són l’alt risc l’obsolescència, baixa escalabilitat i flexibilitat davant pics de demanda, etc.  
 
 Actualment es disposa de 3 tipus de plataforma on poder desplegar solucions de cloud privat : CaaS, xPaaS i DBaaS, les quals es detallen a continuació:
 
 #### **2.1.1. CaaS** {#CaaS}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 El CTTI disposa de 5 opcions per poder desplegar solucions basades en contenidors. En totes elles el proveïdor ofereix el marc (o plataforma d’orquestració) on es desplegaran i gestionaran els contenidors. Hi ha dues tecnologies d’orquestració:
 
@@ -317,10 +317,10 @@ A tenir en compte:
     </div>
     <br>
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 #### **2.1.1.1. Registre dockers privat** {#RegistreDockerPrivat}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **Introducció**
 
@@ -408,7 +408,7 @@ COPY run.sh /
 Totes les aplicacions basades en contenidors desplegades via SIC, estan integrades amb el Registre Docker privat. Cada imatge que es desplegui a les diferents plataformes docker (Openshift, Kubernetes o SwarmMe), quedarà repositada al registre privat.​​​​​​
 
 #### **2.1.1.2. Creació de contenidors** {#CreacioContenidors}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **Introducció**
 
@@ -676,7 +676,7 @@ find /var -type d -exec chmod g+x {} +​
 ​
 
 #### **2.1.1.3. Imatges de contenidors base** {#ImatgesContenidorsBase}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **​​​​Imatges de contenidors certificades**
 
@@ -1051,7 +1051,7 @@ En cas d’utilitzar aquestes imatges es recomana l’actualització a les imatg
 </table>
 
 #### **2.1.2. DBaaS** {#DBaaS}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 Les bases de dades com a servei són un cas concret de CaaS on la base de dades és gairebé una “commodity” i gairebé no hi ha administració. L'administració que pot arribar a fer el proveidor d'infraestructura es redueix a gestionar la disponbilitat i l'obsolescència, així com configurar l'alta disponibilitat i el sistema de còpies de seguretat i recuperació. En cas que la base de dades no sigui administrada pel proveïdor d'infraestructura aquestes tasques recauen en el proveïdor d'aplicacions.
 
 
@@ -1133,10 +1133,10 @@ Actualment s’ofereixen les següents bases de dades:
     5. L'equip d'operacions del Centre de Suport Cloud realitza la gestió del canvi amb el proveïdor d'aplicacions.
     6. L'equip del Centre de Suport SIC modifica l'executor de scripts per a incorporar-ho al SIC
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 #### **2.1.3. SIC: Desplegament d'aplicacions CaaS** {#SIC}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **Tasques d’operació disponibles al SIC:**
 
@@ -1161,7 +1161,7 @@ Arrancada, parada i reinici: actualització d’algunes propietats dels descript
         * Nom del descriptor de desplegament de Kubernetes/Openshift.
 
 #### **2.1.4. Monitorització, logs i traces** {#MonitoritzacioLogsTraces}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 En desplegar una aplicació en contenidors es proporciona a lot d’aplicacions un usuari amb permisos de lectura de les traces del seu projecte.
 
@@ -1218,7 +1218,7 @@ En desplegar una aplicació en contenidors es proporciona a lot d’aplicacions 
 <span style="font-size: 10px;font-style: italic;">(**)Tots els proveïdors ofereixen monitorització i logs a nivell d’aplicació (mètriques genèriques). En el cas de les traces, només la instal·lació d’Istio sobre Openshift permetrà la visualització de traces</span>
 
 ##### **2.1.4.1. Openshift amb Istio** {#OpenshiftAmbIstio}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen eines per a la monitorització del sistema. El seguiment de mètriques, logs i traces dels microserveis (i de la resta del Sistema d’Informació si es configura així) es poden dur a terme amb les eines que proporciona Istio.
 
@@ -1244,7 +1244,7 @@ Amb la implementació d’un Service Mesh (en aquest cas Istio) s’afegeixen ei
 </table>
 
 #### **2.1.5. Ticketing/Incidental** {#TicketingIncidental}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 En funció de l'estat del projecte, el funcionament serà el següent:
 
@@ -1271,7 +1271,7 @@ En funció de l'estat del projecte, el funcionament serà el següent:
 </div>
 
 ### **2.2. Cloud Públic** {#CloudPublic}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 El cloud públic permet una escalabilitat i flexibilitat molt bona respecte a pics de demanda, un risc baix d’obsolescència, etc. en canvi els costos són més elevats i la integració amb la resta de solucions de l’empresa són més complexes.  
 
@@ -1326,7 +1326,7 @@ En el núvol públic hi podem desplegar tres tipologies principals de serveis:
 </table>
 
 ##### **2.2.1.1. xPaaS** {#CatalegServeisxPaaS}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **Tarifes**
 
@@ -1387,7 +1387,7 @@ Referent a l'emmagatzemament
 
 
 ##### **2.2.1.2. DBaaS** {#CatalegServeisxDBaaS}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **DBaaS:** la informació dels elements disponibles es pot consultar a https://canigo.ctti.gencat.cat/cloud-dbaas/cataleg-dbaas/ en la secció de núvol públic.
 
@@ -1436,7 +1436,7 @@ A diferència de les bases de dades a contenidors, els DBaaS incorporen serveis 
 Es poden sol·licitar altres elements disponibles als núvols públics que es posen a disposició de les ATIC que no estiguin homologats sempre i quan l'ATIC es faci responsable d'assumir el cost que generi. ​
 
 ##### **2.2.1.3. IaaS** {#CatalegServeisxIaaS}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **IaaS:** infraestructura com a servei - màquina virtual, consistent en un servei de computació (CPU + memòria) i un servei d’emmagatzematge, amb un sistema operatiu (suportat per la plataforma de núvol públic) inclòs desplegada sobre núvol públic.​
 
@@ -1474,7 +1474,7 @@ Referent a l'emmagatzemament:
 * **Azure:** Disc gestionat associat al servei. De manera addicional es pot crear un volum d'emmagatzemament (Azure Storage Account) orientat a (amb una lògica externa proporcionada per a, per exemple, un planificador de tasques) executar funcionalitats com càrregues de dades. En funció del tipus de volum d'emmagatzemament, aquest volum es pot compartir entre serveis.
 
 ##### **2.2.1.4. Storage** {#CatalegServeisStorage}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 **Consideracions tècniques generals**
 
@@ -1482,13 +1482,13 @@ Referent a l'emmagatzemament:
 * **Azure:** Disc gestionat associat a màquina o crear un Storage Account que es pot compartir entre màquines.
 
 ### **2.3. Cloud Híbrid** {#CloudHibrid}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 El cloud híbrid el podríem considerar com una solució intermèdia, on es combinen elements de catàleg de cloud privat i cloud públic al mateix temps. Aquesta solució potència les debilitats del cloud privat i del cloud públic alhora que manté les fortaleses respectives de cada solució.​
 
 ## **3. Annexes** {#Annexes}
 
 ### **3.1. SaaS sobre contenidors** {#SaaSsobreContenidors}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 Anomenarem així als serveis, que:
 
@@ -1501,7 +1501,7 @@ Disponibles actualment:
 * API-Manager.
 
 #### **3.1.1. Service Mesh** {#ServiceMesh}
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>
 
 * Cas d'ús:
 
@@ -1581,4 +1581,4 @@ Funcions de l’API-Manager:
     * Protecció dels sistemes de backoffice.
   * Aïllar els consumidors dels publicadors de serveis i dades.
 
-<span style="font-size: 9px;"> [Inici] (#TaulaContiguts)</span>
+<span style="font-size: 9px;"> [Inici](#TaulaContiguts)</span>

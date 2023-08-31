@@ -45,7 +45,7 @@ Per a més informació:
 
 - [Serveis del SIC i com fer-ne ús](/sic30-guies/eines_sic/)
 
-- [Com construir el fitxer ACA] (/sic30-guies/fitxer-aca/)
+- [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

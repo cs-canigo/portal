@@ -22,9 +22,9 @@ Per a fer-ho es desplega l’aplicació demo que genera el plugin de Canigó, pe
 
 En aquest primer exemple no se li especifica cap proveïdor específic de caching (caffeine, ehcache, etc.) de tal manera que l'exemple utilitzarà simplement ConcurrentHashMap.
 
-A una aplicació real es pot triar la implementació de caching que es desitgi, però es important utilitzar l'abstracció que proporciona [Spring Cache] (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#boot-features-caching) (estàndard JSR-107) ja que a banda de complir els estàndards no fixa una aplicació a un proveïdor de caching en concret i facilita en un futur qualsevol modificació.
+A una aplicació real es pot triar la implementació de caching que es desitgi, però es important utilitzar l'abstracció que proporciona [Spring Cache](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#boot-features-caching) (estàndard JSR-107) ja que a banda de complir els estàndards no fixa una aplicació a un proveïdor de caching en concret i facilita en un futur qualsevol modificació.
 
-En un segon exemple es mostra com utilitzar un proveïdor de caching, en aquest exemple [Caffeine] (https://github.com/ben-manes/caffeine) com llibreria de caching
+En un segon exemple es mostra com utilitzar un proveïdor de caching, en aquest exemple [Caffeine](https://github.com/ben-manes/caffeine) com llibreria de caching
 
 ## Exemple Configuració Spring Cache
 
@@ -136,7 +136,7 @@ Si ara s'arrenca l'aplicació i es crida a /equipaments/howto i el resultat al l
 	
 Ara es pot veure que les dos primeres crides trigen 3 segons ja que l'aplicació obté per primera vegada aquests Equipaments. Però per als 4 següents, entrega els objectes de manera immediata (sense entrar al mètode i per tant sense aturar-se els 3 segons que hem simulat).
 
-Es recomana utilitzar un dels proveïdors compatibles amb [Spring Cache] (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#_supported_cache_providers) ja que la configuració per defecte té evidents problemes com que l'objecte desat a Cache es manté indefinidament, amb els inconvenients que això comporta.
+Es recomana utilitzar un dels proveïdors compatibles amb [Spring Cache](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#_supported_cache_providers) ja que la configuració per defecte té evidents problemes com que l'objecte desat a Cache es manté indefinidament, amb els inconvenients que això comporta.
 
 ## Ús de Caffeine
 

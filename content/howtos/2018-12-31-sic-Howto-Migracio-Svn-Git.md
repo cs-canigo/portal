@@ -15,7 +15,7 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que encara no hagin mig
 
 L'eina actual de custodia de codi font al SIC és Gitlab i l'anterior eina SVN (Subversion) ha quedat operativa en mode lectura fins a finalitzar la migració de repositoris.
 
-Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custodia de codi font](/sic-serveis/scm/)
 
 ## Requisits que cal complir
 
@@ -44,7 +44,7 @@ Un cop finalitzat aquest procés al Git es disposarà del tag més recent. L'his
 <br/>
 ### 2. Obtenir els autors
 
-En primer lloc, s'ha de consultar qui ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins] (https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
+En primer lloc, s'ha de consultar qui ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins](https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
 
 S'ha d'executar aquest job informant els següents paràmetres:
 
@@ -55,7 +55,7 @@ Una vegada executat el job envia per email el fitxer author.txt a l'usuari que h
 
 S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /migració.
 
-A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer] (/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procés per a evitar errors en el següent pas.
+A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer](/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procés per a evitar errors en el següent pas.
 
 <br/>
 ### 3. Obtenir les dades del SVN

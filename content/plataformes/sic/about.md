@@ -47,7 +47,7 @@ Quan l'equip de desenvolupament té una nova versió del codi font llesta per ll
 La persona de l'equip que efectua aquesta acció és la que té el rol de Release Manager o **Gestor de Lliuraments**. 
 Tot i que qualsevol usuari de l'equip de desenvolupament podria accedir al servei de custòdia de codi font de SIC, es recomana que l'accés sigui efectuat només per les figures dels Release Manager. Es considera que l'equip de desenvolupament ja té el seu propi repositori de codi a les seves instal·lacions i que allà és on es fan les proves pertinents fins que es considera el codi llest per lliurar.
 
-Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custòdia de codi font](/sic-serveis/scm/)
 
 ### Integració contínua
 
@@ -59,17 +59,17 @@ La tasca inclourà accions de construcció d'artefactes, versionat de codi, exec
 
 Per a més informació:
 
-- [Integració contínua (SIC 2.0)] (/plataformes/sic/serveis/sic20-serveis/ci/)
-- [Integració contínua (SIC 3.0)] (/plataformes/sic/serveis/sic30-serveis/ci/)
+- [Integració contínua (SIC 2.0)](/plataformes/sic/serveis/sic20-serveis/ci/)
+- [Integració contínua (SIC 3.0)](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 ### Binaris
 
 Si les aplicacions no permeten la construcció i desplegament d'artefactes mitjançant el sistema d'integració contínua, el SIC proporciona un servei per a que les aplicacions puguin **lliurar els artefactes** (.war, .ear, .jar, .zip, etc.) a CPD/LdT mitjançant el sistema de gestió de binaris de SIC. 
 
-Per a més informació: [Binaris] (/sic-serveis/binaris/)
+Per a més informació: [Binaris](/sic-serveis/binaris/)
 
 ### Autoservei d’usuaris
 
 Els usuaris Release Managers, responsables de lot i tècnics de CPD assignats disposaran d’accés als corresponents serveis del SIC. No obstant, es podran incloure **nous membres del grup de Release Managers** mitjançant l’autoservei d’usuaris.
 
-Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
+Per a més informació: [Autoservei d'usuaris](/sic-serveis/autoservei-usuaris/)

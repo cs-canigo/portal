@@ -39,7 +39,7 @@ Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://
 
 #### Mòdul de Persistència (JPA) [_ACTUALITZAT!_]
 
-[Spring Data JPA] (http://projects.spring.io/spring-data-jpa/) i [QueryDSL] (http://www.querydsl.com/) passen a ser les llibreries de suport principals per l'accés a dades.
+[Spring Data JPA](http://projects.spring.io/spring-data-jpa/) i [QueryDSL](http://www.querydsl.com/) passen a ser les llibreries de suport principals per l'accés a dades.
 
 Gràcies a Spring Data JPA i l'ús de repositoris es redueix el codi necessari per fer accessos a la base de dades. Les operacions més habituals són proporcionades pels repositoris i afegir nous mètodes d'accés a dades a aquests repositoris és molt fàcil.
 

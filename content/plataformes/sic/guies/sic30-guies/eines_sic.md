@@ -39,7 +39,7 @@ Les modalitats **Sense automatització** i **Sense integrar** són casos excepci
 * **Com organitzar els projectes**: els projectes s'ubiquen dins el grup del codi d'aplicació, creant tants projectes com conjunts de codi susceptibles de ser versionats de forma independent.
 * **Quan i com fer el lliurament d'una nova versió**: un cop validat als entorns de desenvolupament, es consolidarà, es realitzarà l'increment de versió i es pujarà al repositori. Si el projecte disposa d’una tasca de construcció i desplegament automàtic, caldrà executar-la mitjançant l'opció `BuildWithParameters`.
 
-Per a més informació: [Custòdia de codi font] (/plataformes/sic/serveis/sic30-serveis/scm/)
+Per a més informació: [Custòdia de codi font](/plataformes/sic/serveis/sic30-serveis/scm/)
 
 ## Integració contínua
 
@@ -61,7 +61,7 @@ Per a més informació: [Custòdia de codi font] (/plataformes/sic/serveis/sic30
 * **Com publicar noves llibreries**: per a la publicació de noves llibreries no públiques (pròpies o de tercers) caldrà sol·licitar-ho a l'equip de SIC.
 
 <br/>
-Per a més informació: [Integració contínua] (/plataformes/sic/serveis/sic30-serveis/ci/)
+Per a més informació: [Integració contínua](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 ## Servei de binaris
 
@@ -72,10 +72,10 @@ Per a més informació: [Integració contínua] (/plataformes/sic/serveis/sic30-
 * **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada. Si l'aplicació no està exempta de repositar codi al Git, abans de cada pujada haurà d'assegurar-se d'haver **actualitzat el codi font** o el sistema no li permetrà realitzar la operació.
 * **Com recuperar artefactes**: localitzar el codi d'aplicació, projecte i versió i podrà descarregar el contingut necessari.
 
-Per a més informació: [Servei de binaris] (/plataformes/sic/serveis/sic30-serveis/binaris/)
+Per a més informació: [Servei de binaris](/plataformes/sic/serveis/sic30-serveis/binaris/)
 
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
 <br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

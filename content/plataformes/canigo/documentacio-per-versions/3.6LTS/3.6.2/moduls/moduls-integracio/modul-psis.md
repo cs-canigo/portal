@@ -24,7 +24,7 @@ Per tal d'instal- lar el mòdul de PSIS es pot incloure automàticament a travé
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.2/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.2/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -44,7 +44,7 @@ Propietat          | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
-Aquest mòdul és dependent del [mòdul de la PICA] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.2/moduls/moduls-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.2/moduls/moduls-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

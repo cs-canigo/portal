@@ -93,7 +93,7 @@ A continuació es proporciona un fragment de codi Javascript que, posat a dins d
 	window.location.replace(targeturl);
 	</script>
 
-Aquest fragment de codi font té una dependència amb la llibreria "rawdeflate.js" que pot ser descarregada del següent [enllaç] (/related/gicar/rawdeflate.js)
+Aquest fragment de codi font té una dependència amb la llibreria "rawdeflate.js" que pot ser descarregada del següent [enllaç](/related/gicar/rawdeflate.js)
 
 Caldrà que l'equip desenvolupador faci una petició a l’equip GICAR per a incorporar aquesta aplicació com a consumidora del Identity Provider. Com a mínim els responsables de l'aplicació hauran de facilitar la següent informació a l’equip GICAR per a poder autenticar aquest servei:
 

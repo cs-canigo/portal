@@ -13,12 +13,12 @@ categories  = ["comunicacions", "cloud", "iot", "realitat virtual"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques principals de la tecnologia 6G] (#Caracteristiques)
-3. [Casos d'ús] (#CasosUs)
-4. [Reptes de la tecnologia] (#Reptes)
-5. [Referències] (#Referencies)
-6. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Característiques principals de la tecnologia 6G](#Caracteristiques)
+3. [Casos d'ús](#CasosUs)
+4. [Reptes de la tecnologia](#Reptes)
+5. [Referències](#Referencies)
+6. [Glossari](#Glossari)
 
 ---
 

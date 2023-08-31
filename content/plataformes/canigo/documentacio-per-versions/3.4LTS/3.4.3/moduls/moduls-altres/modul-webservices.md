@@ -188,7 +188,7 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
 
 	</beans>
 
-En aquesta configuració destacar el bean [marshaller] (https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html#oxm-jaxb2) on a la propietat contextPath posem el package de les classes generades, en aquest exemple.
+En aquesta configuració destacar el bean [marshaller](https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html#oxm-jaxb2) on a la propietat contextPath posem el package de les classes generades, en aquest exemple.
 
 #### Definir el client que realitzarà la crida
 

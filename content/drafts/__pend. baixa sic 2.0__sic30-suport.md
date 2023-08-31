@@ -8,7 +8,7 @@ taxonomies = []
 weight = 7
 +++
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
 [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
@@ -27,7 +27,7 @@ assignar el tiquet a la persona que ha de donar resposta en cada cas.
 Per les aplicacions en servei que s’integraran amb SIC, la comunicació també s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
 Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
 
-En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines] (/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
+En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
 qui crearà la petició en aquest servei** indicant el motiu. Caldrà indicar com a mínim el **codi de diàleg** i la
 descripció el més detallada possible del **motiu de la petició**. L’equip de SIC donarà resposta tant aviat com sigui possible i, en endavant, tota la comunicació
 es farà per aquest canal recordant assignar el tiquet a la persona que ha de donar resposta en cada cas.
@@ -36,7 +36,7 @@ es farà per aquest canal recordant assignar el tiquet a la persona que ha de do
 ## Altres dubtes o problemàtiques
 
 Per dubtes o incidències en l’ús dels serveis del SIC, incloent aspectes relacionats amb les tasques d’automatització del desplegament de les aplicacions,
-caldrà comunicar-ho via [**Remedy**] (https://pautic.gencat.cat/).
+caldrà comunicar-ho via [**Remedy**](https://pautic.gencat.cat/).
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de FRAMEWORK SIC a Remedy**. <br/>
 
 <br/>

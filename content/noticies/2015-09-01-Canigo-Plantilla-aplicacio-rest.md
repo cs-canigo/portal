@@ -7,11 +7,11 @@ categories  = ["canigo"]
 key         = "SEPTEMBRE2015"
 +++
 
-Des del CS Canigó es recomana utilitzar arquitectures client/servidor desacoblades basades en serveis REST i HTML5/JS [(comunicat Agost 2015)] (/noticies/2015-07-24-Canigo-Arquitectura-aplicacio-recomanada). Per el frontend es dóna llibertat a utilitzar la tecnologia desitjada sempre que compleixi el PIV de Gencat. 
+Des del CS Canigó es recomana utilitzar arquitectures client/servidor desacoblades basades en serveis REST i HTML5/JS [(comunicat Agost 2015)](/noticies/2015-07-24-Canigo-Arquitectura-aplicacio-recomanada). Per el frontend es dóna llibertat a utilitzar la tecnologia desitjada sempre que compleixi el PIV de Gencat. 
 
 A partir de la versió 1.2.1** del Plugin de Canigó per Eclipse es pot generar l'esquelet d'una aplicació Canigó 3.1 amb arquitectura REST+HTML5/Javascript.A la plantilla que es crea amb el plugin, la part frontend corrersponent a un CRUD (Create-Read-Update-Delete) molt bàsic es troba realitzada amb HTML5/Javascript. No s'ha utilitzat cap llibreria de frontend (AngularJS, Bootstrap, EmberJS...), ja que és decisió de l'usuari triar la tecnologia més adient per la seva aplicació.
 
-Al HowTo publicat [aquest mes] (/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf) es descriu com fer la instal·lació de l'última versió del plugin (1.4.0) i la creació de l'esquelet d'una aplicació Canigó.
+Al HowTo publicat [aquest mes](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf) es descriu com fer la instal·lació de l'última versió del plugin (1.4.0) i la creació de l'esquelet d'una aplicació Canigó.
 
 Respecte a les tecnologies emprades a Canigó 3.1 per al backend les més rellevants són les següents:
 

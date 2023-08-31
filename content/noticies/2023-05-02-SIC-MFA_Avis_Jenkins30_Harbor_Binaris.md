@@ -18,4 +18,4 @@ Properament rebreu el comunicat de confirmació d’activació d’aquesta funci
 s’activarà i les instruccions que haureu de seguir.
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

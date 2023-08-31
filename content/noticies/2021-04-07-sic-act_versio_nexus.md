@@ -40,8 +40,8 @@ Les principals novetats d'aquesta actualització són les següents:
 <br/>
 Per a més informació de les novetats de la versió podeu consultar:
 
-- [Release notes 2020] (https://help.sonatype.com/repomanager3/release-notes/2020-release-notes)
-- [87 issues tancades des de la versió 3.27.0] (https://issues.sonatype.org/browse/NEXUS-26251?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.28.0%2C%203.28.1%2C%203.29.0%2C%203.29.1%2C%203.29.2))
+- [Release notes 2020](https://help.sonatype.com/repomanager3/release-notes/2020-release-notes)
+- [87 issues tancades des de la versió 3.27.0](https://issues.sonatype.org/browse/NEXUS-26251?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.28.0%2C%203.28.1%2C%203.29.0%2C%203.29.1%2C%203.29.2))
 
 <br/>
 <br/>
@@ -52,4 +52,4 @@ millores i nova funcionalitat.
 <br/>
 <br/>
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

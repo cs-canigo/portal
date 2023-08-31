@@ -10,7 +10,7 @@ key         = "ABRIL2016"
 
 Hi ha diverses maneres de crear versions de codi al repositori SVN del SIC (sota directori /tags). Aquest article pretén recollir-ne algunes i aconsellar l'ús d'una en particular.
 
-Es parteix del fet que, tal com s'esmenta al [Manual d'Integració amb SIC] (http://canigo.ctti.gencat.cat/related/sic/manual-integracio.pdf), ja s'ha realitzat una primera pujada del codi font al directori /trunk del repositori de l'aplicació al SVN del SIC.
+Es parteix del fet que, tal com s'esmenta al [Manual d'Integració amb SIC](http://canigo.ctti.gencat.cat/related/sic/manual-integracio.pdf), ja s'ha realitzat una primera pujada del codi font al directori /trunk del repositori de l'aplicació al SVN del SIC.
 <center>![etiquetatge_svn_trunk.PNG](/images/news/etiquetatge_svn_trunk.PNG)</center>
 
 Les posteriors versions (estables) del codi haurien de constar al directori /tags del repositori SVN de l'aplicació. Aquestes versions es poden generar de les següents maneres:

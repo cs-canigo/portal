@@ -35,8 +35,8 @@ Les principals novetats d'aquesta actualització són les següents:
 <br/>
 Per a més informació de les novetats de la versió podeu consultar:
 
-- [Release notes 2021] (https://help.sonatype.com/repomanager3/release-notes/2021-release-notes)
-- [54 issues tancades des de la versió 3.29.2] (https://issues.sonatype.org/browse/NEXUS-27444?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.30.0%2C%203.30.1))
+- [Release notes 2021](https://help.sonatype.com/repomanager3/release-notes/2021-release-notes)
+- [54 issues tancades des de la versió 3.29.2](https://issues.sonatype.org/browse/NEXUS-27444?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.30.0%2C%203.30.1))
 
 <br/>
 <br/>
@@ -47,4 +47,4 @@ millores i nova funcionalitat.
 <br/>
 <br/>
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

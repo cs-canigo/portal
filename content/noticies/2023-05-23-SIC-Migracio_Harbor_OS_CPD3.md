@@ -94,4 +94,4 @@ Per a més informació:
 - [Integració Contínua](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

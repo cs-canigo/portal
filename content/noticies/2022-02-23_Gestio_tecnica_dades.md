@@ -50,6 +50,6 @@ En la darrera actualització del Catàleg Tècnic de Dades, publicada el 23/02/2
 
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
 
-* [Gestió Tècnica de Dades] (https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
-* [Dades de Referència] (https://canigo.ctti.gencat.cat/dadesref/dadesref/)
+* [Gestió Tècnica de Dades](https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
+* [Dades de Referència](https://canigo.ctti.gencat.cat/dadesref/dadesref/)
 

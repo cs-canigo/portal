@@ -34,6 +34,6 @@ Detall de les accions realitzades sobre del Catàleg Tècnic de Dades:
 
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
 
-* [Gestió Tècnica de Dades] (https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
-* [Dades de Referència] (https://canigo.ctti.gencat.cat/dadesref/dadesref/)
+* [Gestió Tècnica de Dades](https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
+* [Dades de Referència](https://canigo.ctti.gencat.cat/dadesref/dadesref/)
 

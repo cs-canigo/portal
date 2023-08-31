@@ -25,7 +25,7 @@ L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitza
 
 ### Configuració de dependències
 
-A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats/canigo-32/) es poden veure les versions dels mòduls i components de Canigó de les versions 3.1.x i 3.2.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.2.
+A la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats/canigo-32/) es poden veure les versions dels mòduls i components de Canigó de les versions 3.1.x i 3.2.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.2.
 
 En cas de tenir alguna dependència de Spring al POM de l'aplicació s'ha d'actualitzar a la versió "4.3.4.RELEASE"
 
@@ -225,7 +225,7 @@ Per:
 
 ### Configuració de dependències
 
-A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats/canigo-32/) es poden veure les versions dels mòduls i components de Canigó de les versions 3.1.x i 3.2.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.2.
+A la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats/canigo-32/) es poden veure les versions dels mòduls i components de Canigó de les versions 3.1.x i 3.2.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.2.
 
 En cas d'utilitzar el mòdul "canigo.operation.instrumentation", l'última versió d'aquest mòdul és només per a aplicacions REST. S'ha de treure la dependència a aquest mòdul i afegir la dependència al nou mòul "canigo.operation.instrumentation.jsf":
 

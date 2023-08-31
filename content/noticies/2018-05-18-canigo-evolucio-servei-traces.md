@@ -9,7 +9,7 @@ key         = "JUNY2018"
 
 ### Traces
 
-El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-traces/) va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l'ús d'aquesta nova versió de la llibreria. D'entre elles volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, de l'ús de [loggers asíncrons] (https://logging.apache.org/log4j/2.x/manual/async.html).
+El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-traces/) va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l'ús d'aquesta nova versió de la llibreria. D'entre elles volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, de l'ús de [loggers asíncrons](https://logging.apache.org/log4j/2.x/manual/async.html).
 
 Els **loggers asíncrons** representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns esdeveniments podrien arribar a perdre's. Si es volgués utilitzar en auditories, o alguna funcionalitat on no fos acceptable perdre cap registre, s'hauria d'implementar un mecanisme de fallback i utilitzar-lo en cas de detectar algun error (Ex. disc sense espai, problema de connectivitat, ...).
 

@@ -137,7 +137,7 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crea
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
-Per a més informació: [Custòdia de codi font] (/plataformes/sic/serveis/sic30-serveis/scm/)
+Per a més informació: [Custòdia de codi font](/plataformes/sic/serveis/sic30-serveis/scm/)
 
 ### Permisos d'accés
 
@@ -172,4 +172,4 @@ En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'e
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

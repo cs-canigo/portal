@@ -18,8 +18,8 @@ estandards =  ["cataleg cloud"]
 
 # **Taula de Continguts** {#TaulaContiguts}
 
-1. [Productes Middleware] (#ProductesMiddleware)
-2. [Informació CPDs] (#InformacióCPDs)
+1. [Productes Middleware](#ProductesMiddleware)
+2. [Informació CPDs](#InformacióCPDs)
 
 ---
 

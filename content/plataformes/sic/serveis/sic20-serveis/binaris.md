@@ -37,7 +37,7 @@ Haurà d'autenticar-se amb les seves credencials d'accés GICAR, de forma que:
 * Els **Release Manager i responsables de lot** disposaran d'accés al servei de pujada de binaris i també a la descàrrega dels mateixos.
 * Els **tècnics de CPD i llocs de treball** només disposaran d’accés a la descàrrega de binaris.
 
-En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
+En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris](/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
 ## Dipositar artefactes al SIC
 
@@ -47,7 +47,7 @@ Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la se
 
 <br/>
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
-procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/). No obstant, també està pensat
+procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua](/sic-serveis/ci/). No obstant, també està pensat
 per a fer-ne ús com a **procediment de contingència** en el desplegament d’aplicacions.
 
 <br/>
@@ -127,4 +127,4 @@ d'artefactes per al desplegament d'aplicacions.
 <br/><br/><br/>
 Podeu accedir al [**Material formatiu**](/related/sic/2.0/formacio-binaris-20.pdf). <br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic20-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

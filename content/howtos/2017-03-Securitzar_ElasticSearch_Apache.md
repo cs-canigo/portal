@@ -21,7 +21,7 @@ En aquest HowTo expliquem com configurar un Apache 2.2 / 2.4 per a que faci aque
 
 ### Elasticsearch
 
-Per aquest howto hem instal·lat mitjançant Docker un [ES] (https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
+Per aquest howto hem instal·lat mitjançant Docker un [ES](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
 
 Hem modificat el fitxer "elasticsearch.yml" per a configurar el CORS:
 
@@ -51,7 +51,7 @@ Una vegada desplegat al accedir a http://localhost:9200 el navegador ens ha de m
 	
 ### Exemple aplicació Angular
 
-Hem utilitzat la [següent aplicació AngularJS] (https://github.com/spalger/elasticsearch-angular-example) per l'accés a l'ES.
+Hem utilitzat la [següent aplicació AngularJS](https://github.com/spalger/elasticsearch-angular-example) per l'accés a l'ES.
 
 Una vegada seguits els passos pel seu desplegament, accedim amb el navegador al fitxer index.html i ens trobem amb el següent error:
 
@@ -61,7 +61,7 @@ Aquest error és degut al fet que tenim l'ES securitzat i no hem especificat les
 
 ### Configuració Apache
 
-Per aquest Howto hem desplegat un Apache amb [Docker] (https://hub.docker.com/r/gencatcloud/httpd/) amb els següents canvis al fitxer httpd.conf:
+Per aquest Howto hem desplegat un Apache amb [Docker](https://hub.docker.com/r/gencatcloud/httpd/) amb els següents canvis al fitxer httpd.conf:
 
 Hem afegit els següents mòduls:
 	

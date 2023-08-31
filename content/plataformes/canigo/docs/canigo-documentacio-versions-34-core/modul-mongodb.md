@@ -449,7 +449,7 @@ A un repositori es poden crear mètodes per a cada query que es vulgui definir. 
 _find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
-Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
+Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
 
 <br/>
 #### Utilització de QueryDSL
@@ -554,7 +554,7 @@ A un repositori es poden crear mètodes per a cada query que es vulgui definir. 
 _find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
-Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
+Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
 
 ## Test
 
@@ -1173,7 +1173,7 @@ public class EquipamentEmbeddedMongoRepositoryTest extends EquipamentMongoReposi
 }
 ```
 
-Per a més informació, podeu consultar la documentació oficial de [Embeded MongoDB] (https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
+Per a més informació, podeu consultar la documentació oficial de [Embeded MongoDB](https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
 
 ### Reactiu
 

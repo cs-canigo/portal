@@ -13,13 +13,13 @@ categories  = ["IoT"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques i funcionalitats] (#Caracteristiques)
-3. [Principals Pros i Contres] (#ProsContres)
-4. [Arquitectura i Implementació] (#Arquitectura)
-5. [Casos d'ús] (#CasosUs)
-6. [Referències] (#Referencies)
-7. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Característiques i funcionalitats](#Caracteristiques)
+3. [Principals Pros i Contres](#ProsContres)
+4. [Arquitectura i Implementació](#Arquitectura)
+5. [Casos d'ús](#CasosUs)
+6. [Referències](#Referencies)
+7. [Glossari](#Glossari)
 
 ---
 

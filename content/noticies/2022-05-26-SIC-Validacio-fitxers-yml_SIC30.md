@@ -24,7 +24,7 @@ de les pipelines del SIC 3.0 (`Init Stage`) incorpora una validació prèvia de 
 per a assegurar que aquests acompleixen l'especificació. En cas de detectar un error, aquest es mostrarà a la sortida per
 consola de l'execució.
 
-Per a més informació: [Autoservei de pipelines] (/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
+Per a més informació: [Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

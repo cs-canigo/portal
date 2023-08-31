@@ -35,4 +35,4 @@ quin serà el funcionament, s’ha adaptat la documentació i s’han incorporat
 - [Exemple fitxer ACA](/related/sic/3.0/aca_const_publi_harbor_image.yml)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

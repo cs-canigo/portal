@@ -18,6 +18,6 @@ weight		= 2
 
 ## canigo.security.saml 2.2.0
 
-- [Autorització GICAR a Canigó] (/noticies/2019-10-22-Actualitzacio_modul_Seguretat)
+- [Autorització GICAR a Canigó](/noticies/2019-10-22-Actualitzacio_modul_Seguretat)
    - Actualització del mòdul de seguretat per a incorporar l’opció de l’obtenció dels rols de
    l’usuari a través de GICAR (autorització).

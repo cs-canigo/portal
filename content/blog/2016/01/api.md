@@ -35,7 +35,7 @@ Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofer
  
 - GET = select
 - POST = insert
-- [PATCH o PUT] (http://www.baeldung.com/http-put-patch-difference-spring) = update 
+- [PATCH o PUT](http://www.baeldung.com/http-put-patch-difference-spring) = update 
 - DELETE
 - OPTIONS 
 

@@ -75,7 +75,7 @@ info:
 
 **NOTA:** Si es vol automatitzar la versió es pot optar per eliminar aquest element i fer ús del descriptor `sic.yml`.
 </br>
-Per a més informació: [Howto automatitzar el descriptor sic.yml] (/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml).
+Per a més informació: [Howto automatitzar el descriptor sic.yml](/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml).
 </br></br>
 
 #### info.description
@@ -764,4 +764,4 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/).
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

@@ -13,13 +13,13 @@ categories  = ["cloud", "microsoft", "núvol", "virtualització"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Característiques i funcionalitats] (#Caracteristiques)
-3. [Principals avantatges e inconvenients] (#AvantatgesInconvenients)
-4. [Casos d'ús] (#CasosUs)
-5. [Novetats] (#Novetats)
-6. [Referències] (#Referencies)
-7. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Característiques i funcionalitats](#Caracteristiques)
+3. [Principals avantatges e inconvenients](#AvantatgesInconvenients)
+4. [Casos d'ús](#CasosUs)
+5. [Novetats](#Novetats)
+6. [Referències](#Referencies)
+7. [Glossari](#Glossari)
 
 ---
 

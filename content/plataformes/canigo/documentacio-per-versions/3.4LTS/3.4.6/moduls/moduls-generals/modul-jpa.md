@@ -12,8 +12,8 @@ Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, per
 
 Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:
 
-* [Spring Data JPA] (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/). 
-* [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
+* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/). 
+* [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
 ## Instal·lació i Configuració
 
@@ -379,7 +379,7 @@ La classe GenericRepository també proporciona un mètode per a realitzar insert
 
 	public <S extends T> List<S> bulkSave(Iterable<S> entities);
 	
-Es pot veure un exemple de com utilitzar aquesta classe al següent [howto] (/drafts/2017-03-Howto-SaveBatch-Canigo32)
+Es pot veure un exemple de com utilitzar aquesta classe al següent [howto](/drafts/2017-03-Howto-SaveBatch-Canigo32)
 ### Exemple 
 	
 Per exemple a l'aplicació inicial que genera el plugin de Canigó es generen els següents fitxers:

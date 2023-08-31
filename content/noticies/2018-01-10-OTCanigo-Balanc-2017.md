@@ -44,11 +44,11 @@ A mode resum, destacaríem les següents:
 
 - Publicació de [**Canigó 3.2.0**](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: Spring Boot, Swagger, JWT,...
 - Publicació de [**Canigó 3.2.1**](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars, millores i resolució d'incidències
-- Publicació de [**Canigó 3.2.2**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463) amb millores per donar suport a les best practices per la implementació d'APIs REST, actualització de llibreries, millores i resolució d'incidències
-- Publicació de [**Canigó 3.2.3**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
-- Nova política de [**versions LTS**] (/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
+- Publicació de [**Canigó 3.2.2**](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463) amb millores per donar suport a les best practices per la implementació d'APIs REST, actualització de llibreries, millores i resolució d'incidències
+- Publicació de [**Canigó 3.2.3**](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
+- Nova política de [**versions LTS**](/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
 - Certificació Canigó 3.2 en **JBoss EAP 6.4**
-- Publicació de la [**versió 2.0.0 del entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb actualització de programari
+- Publicació de la [**versió 2.0.0 del entorn de desenvolupament de Canigó**](/canigo/entorn-desenvolupament/) amb actualització de programari
 
 
 ### **SGDE (Servei de Gestió del Document Electrònic)**

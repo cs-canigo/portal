@@ -13,11 +13,11 @@ categories  = ["Windows", "Microsoft"]
 
 ## **Taula de Continguts** {#TaulaContiguts}
 
-1. [Introducció] (#Introduccio)
-2. [Windows Hello versus Windows Hello For Business] (#WindowsHelloVSWindowsHelloFBusiness)
-3. [Novetats] (#Novetats)
-4. [Referències] (#Referencies)
-5. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Windows Hello versus Windows Hello For Business](#WindowsHelloVSWindowsHelloFBusiness)
+3. [Novetats](#Novetats)
+4. [Referències](#Referencies)
+5. [Glossari](#Glossari)
 
 ---
 

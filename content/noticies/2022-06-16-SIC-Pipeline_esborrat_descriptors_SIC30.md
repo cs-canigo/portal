@@ -44,4 +44,4 @@ no hagi estat desplegat prèviament, la pipeline aturarà l'operació en aquell 
 Per a més informació: [Autoservei de pipelines](/plataformes/sic/serveis/sic30-serveis/autoservei-pipelines/).
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

@@ -34,7 +34,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
   </dependencies>
 ```
 
-A la [Matriu de Compatibilitats] (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <br/>
 Caldrà també afegir el _plugin_ que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i
@@ -358,7 +358,7 @@ A un repositori es poden crear mètodes per a cada query que es vulgui definir. 
 _find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
-Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/3.3.4/reference/html/#reference).
+Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/3.3.4/reference/html/#reference).
 
 <br/>
 
@@ -389,7 +389,7 @@ A un repositori es poden crear mètodes per a cada query que es vulgui definir. 
 _find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
-Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
+Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
 
 ## Test
 
@@ -628,7 +628,7 @@ public class EquipamentEmbeddedMongoRepositoryTest extends EquipamentMongoReposi
 }
 ```
 
-Per a més informació, podeu consultar la documentació oficial de [Embeded MongoDB] (https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
+Per a més informació, podeu consultar la documentació oficial de [Embeded MongoDB](https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
 
 ### Reactiu
 

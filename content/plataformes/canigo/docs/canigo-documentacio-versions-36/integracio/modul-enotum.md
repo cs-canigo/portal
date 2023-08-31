@@ -42,7 +42,7 @@ Per tal d'instal·lar el mòdul de notificacions electròniques es pot incloure 
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -82,7 +82,7 @@ Propietat                                         | Requerit | Descripció
 
 Els valors de urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
-Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-36/integracio/modul-pica/) per el que també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA](/canigo-documentacio-versions-36/integracio/modul-pica/) per el que també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

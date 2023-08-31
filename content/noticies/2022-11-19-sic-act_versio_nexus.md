@@ -37,8 +37,8 @@ Les principals novetats d'aquesta actualització són les següents:
 <br/>
 Per a més informació de les novetats de la versió podeu consultar:
 
-- [Release notes 2022] (https://help.sonatype.com/repomanager3/product-information/release-notes/2022-release-notes)
-- [136 issues tancades des de la versió 3.37.3 fins la versió 3.41.1] (https://issues.sonatype.org/browse/NEXUS-34642?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.38.0%2C%203.38.1%2C%203.39.0%2C%203.40.0%2C%203.40.1%2C%203.41.0%2C%203.41.1))
+- [Release notes 2022](https://help.sonatype.com/repomanager3/product-information/release-notes/2022-release-notes)
+- [136 issues tancades des de la versió 3.37.3 fins la versió 3.41.1](https://issues.sonatype.org/browse/NEXUS-34642?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.38.0%2C%203.38.1%2C%203.39.0%2C%203.40.0%2C%203.40.1%2C%203.41.0%2C%203.41.1))
 
 <br/>
 <br/>
@@ -49,4 +49,4 @@ millores i nova funcionalitat.
 <br/>
 <br/>
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

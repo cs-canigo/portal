@@ -49,7 +49,7 @@ Les funcions de seguretat i privadesa de Windows 11 són similars a Windows 10. 
 * **Les funcions de seguretat d'aplicacions** ajuden a evitar que s'executi codi no desitjat o maliciós, aïllar llocs web i fitxers d'Office no fiables i protegir contra llocs web de phising o programari maliciós.<br>
 
 * **Windows Hello for Business** ajuda a protegir els usuaris i les identitats. Substitueix les contrasenyes i utilitza un PIN o biomètric que es manté localment al dispositiu. Els fabricants de dispositius inclouen funcions de maquinari més segures, com ara càmeres IR i xips TPM. Aquestes funcions s'utilitzen amb Windows Hello for Business per ajudar a protegir les identitats dels usuaris als dispositius de les organitzacions. 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ### **Accés més fàcil als nous serveis** {#AccesFacilServeis}
 * **Windows 365** és un escriptori virtual que també és un servei al núvol. Des d'un altre dispositiu connectat a Internet, inclosos els dispositius Android i macOS, es pot executar Windows 365, igual que com si fos una màquina virtual.<br>
@@ -65,7 +65,7 @@ Les funcions de seguretat i privadesa de Windows 11 són similars a Windows 10. 
 Aquesta versió de Microsoft Teams és per a comptes personals. Per als comptes d'organització, Microsoft Teams es pot desplegar amb les eines de gestió de dispositius (SCCM, Intune,CA,...).<br>
 
 * **Power Automate** per a escriptori s'inclou amb el sistema operatiu. Els usuaris poden crear fluxos amb aquesta aplicació per ajudar-los amb les tasques quotidianes. 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ### **Personalització de l’experiència d’escriptori** {#PersonalitzacioExperienciaEscriptori}
 En linies generals, es proporciona una nova aparença en la l’interficie d’usuari, la qual seria més similar a la d’un entorn basat en Linux o MacOSX on es destaquen els següents punts:
@@ -115,7 +115,7 @@ Amb les polítiques, es pot implementar la barra de tasques personalitzada als d
   <img src="/images/bloc/2022/03/foto7.jpg" />
 </div>
 <br>
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ### **Utilització de les antigues i noves aplicacions de forma millorada** {#UtilitzacioMillorada}
 * **A partir de Windows 11**, els usuaris poden baixar i instal·lar aplicacions d'Android™️ des de Microsoft Store. Aquesta funció s'anomena subsistema de Windows per a Android i permet als usuaris utilitzar aplicacions d'Android als seus dispositius Windows, de manera similar a altres aplicacions instal·lades de la botiga de Microsoft. Els usuaris obren la Microsoft Store, instal·len l'aplicació Amazon Appstore i inicien sessió amb el seu compte d'Amazon. Quan inicien la sessió, poden cercar, baixar i instal·lar aplicacions d'Android.
@@ -138,7 +138,7 @@ Amb les polítiques, es pot implementar la barra de tasques personalitzada als d
 
 * **El navegador Microsoft Edge Chromium** s'inclou amb el sistema operatiu i és el navegador predeterminat. Internet Explorer (IE) no està disponible a Windows 11. A Microsoft Edge Chromium, es pot utilitzar el mode IE si un lloc web necessita Internet Explorer. 
 <br><br>
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ### **Desplegament i servei** {#DesplegamentServei}
 En referencia a aquest punt, cal citar que s’haurà de ser curós amb els requeriments de maquinari, degut a que és un requisit el fet que els dispositius tinguin el Mòdul de plataforma de confiança en la seva versió 2.0 i que no tots els processadors son compatibles amb Windows 11. Per la resta de punts, es destaquen:
@@ -163,7 +163,7 @@ En referencia a aquest punt, cal citar que s’haurà de ser curós amb els requ
 
 * **L'optimització d'actualitzacions i lliurament de Windows** ajuda a gestionar les actualitzacions i a gestionar les funcions dels dispositius. A partir de Windows 11, les actualitzacions de les funcions del sistema operatiu s'instal·len anualment.
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 
 ## **Referències** {#Referencies}
 https://docs.microsoft.com/en-us/windows-hardware/get-started/what-s-new-in-windows <br>

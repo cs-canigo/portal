@@ -330,4 +330,4 @@ Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/0192-apim_de
 completa d'un producte.
 
 <br/><br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

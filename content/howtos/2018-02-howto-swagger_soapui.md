@@ -17,7 +17,7 @@ Els passos descrits en aquest document apliquen a la versió 3.2 del Framework C
 
 ### Prerequisits
 
-Es necessita la versió 5.2.1 o superior de [SOAP-UI] (https://www.soapui.org/downloads/soapui.html)
+Es necessita la versió 5.2.1 o superior de [SOAP-UI](https://www.soapui.org/downloads/soapui.html)
 
 ### Introducció
 

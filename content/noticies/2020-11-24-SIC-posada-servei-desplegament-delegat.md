@@ -14,4 +14,4 @@ d'Integració Continua per a la sol·licitud i preparació de connectivitats.
 Durant el 2021, en col·laboració amb els diferents proveïdors d'infraestructures, es començaran a desplegar aplicacions mitjançant aquesta nova modalitat que passarà a ser el sistema de desplegament automàtic de preferència per a totes les aplicacions.
 <br/>
 
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

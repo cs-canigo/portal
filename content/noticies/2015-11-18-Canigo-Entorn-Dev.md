@@ -20,14 +20,14 @@ A continuació s'especifiquen les característiques més rellevants d'aquest nou
 
 **IDE**
 
-L'IDE és [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 7 (Oracle) i els següents plugins:
+L'IDE és [Spring Tool Suite](https://spring.io/tools) (basat en Eclipse Mars) amb JDK 7 (Oracle) i els següents plugins:
 
 * M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
 * CTTI Canigó per creació aplicacions Canigó 3.1 basades en arquitectura REST+HTML5/JS o JSF
 * Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
 * Docker Tooling per manegar els contenidors [Docker](https://www.docker.com/)
-* Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
-* SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
+* Subclipse per integració amb [Subversion](https://subversion.apache.org/)
+* SonarQube per integració amb [SonarQube](http://www.sonarqube.org/) (antic Sonar)
 
 **Altres**
 
@@ -38,7 +38,7 @@ L'IDE és [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) 
 * Accessos directes a eines CTTI: SIC ([SVN](http://svn.intranet.gencat.cat) i [Jenkins](http://hudson.intranet.gencat.cat)), [JIRA CSTD](https://cstd.ctti.gencat.cat/), [Portal Frameworks i Solucions d'Arquitectura](http://canigo.ctti.gencat.cat/).
 
 
-A més d'aquest nou entorn de desenvolupament des del CS Canigó també s'ha publicat una aplicació demo [Equipaments](https://github.com/gencat/equipaments) amb la finalitat de proporcionar als proveïdors d'aplicacions un exemple d'aplicació Canigó 3.1 per a ser desplegada en contenidors Docker. L'ús d'aquests contenidors Docker pretén simular el desplegament en els PaaS del [Full de ruta de CTTI] (https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta). El stack on es desplega aquesta aplicació demo Equipaments és Apache 2.4/Tomcat 7/MySQL 5.6.
+A més d'aquest nou entorn de desenvolupament des del CS Canigó també s'ha publicat una aplicació demo [Equipaments](https://github.com/gencat/equipaments) amb la finalitat de proporcionar als proveïdors d'aplicacions un exemple d'aplicació Canigó 3.1 per a ser desplegada en contenidors Docker. L'ús d'aquests contenidors Docker pretén simular el desplegament en els PaaS del [Full de ruta de CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta). El stack on es desplega aquesta aplicació demo Equipaments és Apache 2.4/Tomcat 7/MySQL 5.6.
 
 A la secció ["Framework Canigó"](http://canigo.ctti.gencat.cat/canigo/) -> ["Entorn de desenvolupament"](http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) dins d'aquest portal podeu trobar més informació amb el detall del procés d'instal·lació, execució de l'aplicació demo Equipaments així com d'altra informació d'interès per a treballar amb aquest nou entorn de desenvolupament.
 

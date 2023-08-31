@@ -13,14 +13,14 @@ categories  = ["comunicacions", "cloud", "sd wan", "sdn"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Què és NaaS] (#QueEsNaaS)
-3. [Característiques de la tecnologia] (#Caracteristiques)
-4. [Principals avantatges i inconvenients] (#AvantatgesInconvenients)
-5. [Models de Servei] (#ModelServei)
-6. [Principals proveïdors de NaaS] (#Proveidors)
-7. [Referències] (#Referencies)
-8. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Què és NaaS](#QueEsNaaS)
+3. [Característiques de la tecnologia](#Caracteristiques)
+4. [Principals avantatges i inconvenients](#AvantatgesInconvenients)
+5. [Models de Servei](#ModelServei)
+6. [Principals proveïdors de NaaS](#Proveidors)
+7. [Referències](#Referencies)
+8. [Glossari](#Glossari)
 
 ---
 

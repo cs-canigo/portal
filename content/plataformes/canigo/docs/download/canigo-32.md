@@ -20,7 +20,7 @@ weight     = 3
 <!--
 - Descàrrega de l'[entorn base de treball](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html) *És necessari actualitzar el plugin
 de Canigó per Eclipse a la versió 1.2.0.
-- [Guia d'inici] (/canigo-download-related/guia-inici) per a la configuració d'un entorn de desenvolupament
+- [Guia d'inici](/canigo-download-related/guia-inici) per a la configuració d'un entorn de desenvolupament
 -->
 
 Veure: [Entorn desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)
@@ -28,7 +28,7 @@ Veure: [Entorn desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/ent
 Altra informació d'interès:
 
 * [Plugin Canigó 3.2 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
-* [Codi plantilla Demo Canigó 3.2] (https://github.com/gencatcloud/plantilla-demo-canigo32)
+* [Codi plantilla Demo Canigó 3.2](https://github.com/gencatcloud/plantilla-demo-canigo32)
 
 ### Configuració de Maven (manual)
 

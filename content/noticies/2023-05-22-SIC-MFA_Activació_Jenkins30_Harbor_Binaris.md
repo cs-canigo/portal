@@ -42,5 +42,5 @@ a la guia.
 Si teniu qualsevol dubte o problema sobre el procés d'autenticació multifactor, poseu-vos en contacte amb l'OT Gicar a
 través del canal [**PAUTIC**](https://pauticgencat.onbmc.com/).
 
-Si teniu qualsevol dubte o problema sobre els serveis del SIC, podeu revisar les [**Preguntes Freqüents**] (/sic/faq)
-o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema sobre els serveis del SIC, podeu revisar les [**Preguntes Freqüents**](/sic/faq)
+o utilitzar els canals de [**Suport**](/sic/suport).

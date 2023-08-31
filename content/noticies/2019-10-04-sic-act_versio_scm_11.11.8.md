@@ -68,4 +68,4 @@ Per a més informació sobre les funcionalitats que proporciona Gitlab a la vers
 - [238 issues tancades](https://gitlab.com/gitlab-org/gitlab-foss/issues?scope=all&utf8=%E2%9C%93&state=all&milestone_title=11.11)
 
 <br>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

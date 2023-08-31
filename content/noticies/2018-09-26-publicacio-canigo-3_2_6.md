@@ -27,8 +27,8 @@ S'ha publicat un nou mòdul de Canigó 3 per a connexions amb bases de dades Mon
 
 El nou mòdul "canigo.persistence.mongodb" utilitza Spring Data MongoDB i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:
 
-* [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/). 
-* [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
+* [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/). 
+* [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
 Com amb el mòdul JPA per a bases de dades relacionals, en aquest nou mòdul per a bases de dades MongoDB, es proporcionen les configuracions i funcionalitats per a la generació de consultes de forma fàcil i senzilla.
 

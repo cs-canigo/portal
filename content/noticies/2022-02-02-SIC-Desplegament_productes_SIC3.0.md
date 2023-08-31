@@ -30,4 +30,4 @@ incorporat exemples:
 - [Exemple fitxer ACA](/related/sic/3.0/aca_const_despl_external_product_openshift.yml)
 
 <br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

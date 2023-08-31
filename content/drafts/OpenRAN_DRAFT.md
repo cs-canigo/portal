@@ -13,12 +13,12 @@ categories  = ["comunicacions"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Components de l'Arquitectura Open RAN] (#ComponentsArquitectura)
-3. [Avantatges i reptes Open RAN] (#AvantatgesReptes)
-4. [Conclusions] (#Conclusions)
-5. [Referències] (#Referencies)
-6. [Glossari] (#Glossari)
+1. [Introducció](#Introduccio)
+2. [Components de l'Arquitectura Open RAN](#ComponentsArquitectura)
+3. [Avantatges i reptes Open RAN](#AvantatgesReptes)
+4. [Conclusions](#Conclusions)
+5. [Referències](#Referencies)
+6. [Glossari](#Glossari)
 
 ---
 

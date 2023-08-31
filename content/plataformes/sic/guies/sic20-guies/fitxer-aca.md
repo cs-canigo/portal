@@ -509,7 +509,7 @@ que hem definit més amunt i que s'afegirà com a sufix en l'enviament del proje
 Opcionalment es podran indicar les propietats:
 
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
-al [Registre d'imatges] (https://git.intranet.gencat.cat/0192-intern/sic-builders)
+al [Registre d'imatges](https://git.intranet.gencat.cat/0192-intern/sic-builders)
 
 - `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`. En el cas de `maven` serà necessari
 indicar els següents paràmetres per a evitar que es realitzi de nou la construcció i, per tant, l'execució del goal es limiti a la
@@ -682,4 +682,4 @@ A continuació s'adjunten exemples de casos d'ús:
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic20-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).

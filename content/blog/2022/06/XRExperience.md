@@ -34,7 +34,7 @@ El primer sistema de realitat virtual va venir al 1962 on Morton Heilig va crear
 
 Avui en dia, amb l'ajuda de la tecnologia, es pot gaudir d'experiències molt més reals i concretes que permeten la immersió de la persona, això és possible gràcies a la **realitat virtual** i la **realitat augmentada** o combinades, en un entorn mixt.
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 
 ### **Realitat virtual (VR)** {#RealitatVirtual}
@@ -72,7 +72,7 @@ La realitat mixta es pot trobar a les aplicacions de col·laboració més recent
 </div>
 <br>
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 
 ## **Tecnologia XR** {#TecnologiaXR}
@@ -159,7 +159,7 @@ Els visors de realitat virtual són HDM combinats amb unitats de mesurament iner
 Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desplaçant el punt de vista de cada una, per crear l’efecte estereoscopi proporcionant profunditat.
 <br>
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 
 #### **Altres dispositius per AR i MR** 
@@ -209,7 +209,7 @@ Les aplicacions de realitat virtual divideixen la pantalla en dues meitats, desp
 
 Certs dispositius permeten utilitzar les mans o gestos específics per obrir menús i executar aplicacions, però a hores d’ara, si es vol nivells de control i operacions molt exactes, la utilització de controladors de mà dona més precisió que les mans. 
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 
 ### **Plataformes de programari XR** {#SFTXR}
@@ -236,7 +236,7 @@ Per altra banda, s’ha de tenir en compte que qualsevol aplicació VR requereix
 La latència també és un factor important a les aplicacions XR, ja que el maquinari ha de minimitzar qualsevol retard  entre el moviment del dispositiu i l'actualització de la imatge que es veu. Si hi ha un desajust entre l’oïda interna i els ulls, això condueix ràpidament al vertigen. Una velocitat de fotogrames ràpida i una baixa latència són molt més importants que la resolució de la imatge.
 <br>
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 
 ## **Experiències XR** {#ExperienciesXR}
@@ -328,7 +328,7 @@ Algunes veus crítiques fins i tot, podrien dir que la majoria de les aplicacion
 * FeelReal’s multi-sensory mask (https://www.youtube.com/watch?v=0rLw2nFmGnc&t=102s)
 * Experiència gastronòmica (https://www.youtube.com/watch?v=PoAX52FiDOM)
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 
 ## **Referències** {#Referencies}
@@ -348,7 +348,7 @@ https://vivevirtual.es/realidad-virtual-inmersiva-aumentada-mixta/ <br>
 * **MX (Mixed Reality):** Realitat mixta. Combina la realitat virtual i la realitat augmentada, de manera que l'usuari se senti immers en un entorn on hi ha objectes virtuals integrats dins el món real.
 
 
-###### [Inici] (#TaulaContiguts)
+###### [Inici](#TaulaContiguts)
 <br>
 <br>
 ###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>

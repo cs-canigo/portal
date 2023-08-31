@@ -18,7 +18,7 @@ La última versió del plugin està certificada amb la versió d'Eclipse Mars, q
 
 ### Prerequisit
 
-Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó] (/canigo/download)
+Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó](/canigo/download)
 
 ### Instal·lació
 
