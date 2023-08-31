@@ -4,7 +4,7 @@ title       = "Guies"
 description = "Guies disponibles i HOWTOs d'utilitat"
 sections    = "SIC"
 aliases = [
-   "/sic/guies/"
+   "/sic-guies/"
 ]
 taxonomies  = []
 weight=3

@@ -4,6 +4,9 @@ title       = "SIC 3.0 i procés de transició"
 description = "Nova Plataforma SIC 3.0 i procés de transició previst"
 sections    = "SIC"
 toc         = true
+aliases = [
+   "/sic-serveis/sic20-sic30/"
+]
 taxonomies  = []
 weight      = 1
 +++
