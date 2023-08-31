@@ -5,6 +5,7 @@ description = "Guia amb la informació de construcció del fitxer ACA per a l'Au
 sections = "SIC"
 toc = true
 aliases = [
+       "/sic20-guies/fitxer-aca/",
        "/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA/",
        "/sic-welcome-pack/fitxer-aca/",
        "/sic-guies/fitxer-aca/"

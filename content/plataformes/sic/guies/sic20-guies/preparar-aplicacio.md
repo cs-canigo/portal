@@ -5,6 +5,7 @@ description = "Guia amb la informació més rellevant a tenir en compte per la i
 sections = "SIC"
 toc = true
 aliases = [
+    "/sic20-guies/preparar-aplicacio/",
     "/sic-welcome-pack/preparar-aplicacio/",
     "/sic-guies/preparar-aplicacio/"
 ]

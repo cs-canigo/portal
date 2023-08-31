@@ -5,6 +5,7 @@ description = "Guia amb la informació més rellevant per a l'ús dels serveis q
 sections = "SIC"
 toc = true
 aliases = [
+    "/sic20-guies/eines_sic/",
     "/noticies/2018-05-16-SIC-Autoservei-pipelines/",
     "/sic-welcome-pack/eines_sic/",
     "/sic-guies/eines_sic/"

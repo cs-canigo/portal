@@ -4,6 +4,9 @@ title = "Quin són els serveis del SIC i com fer-ne ús"
 description = "Guia amb la informació més rellevant per a l'ús dels serveis que proporciona el SIC"
 sections = "SIC"
 toc = true
+aliases = [
+    "/sic30-guies/eines_sic/"
+]
 taxonomies = []
 weight = 1
 +++

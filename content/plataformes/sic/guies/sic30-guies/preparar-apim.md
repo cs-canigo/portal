@@ -4,6 +4,9 @@ title = "Com preparar productes i APIs per al desplegament a l'API Manager"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament de productes i APIs a l'API Manager corporatiu"
 sections = "SIC"
 toc = true
+aliases = [
+    "/sic30-guies/preparar-apim/"
+]
 taxonomies = []
 weight = 3
 +++

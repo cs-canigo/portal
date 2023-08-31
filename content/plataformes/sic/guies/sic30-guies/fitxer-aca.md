@@ -4,6 +4,9 @@ title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
 toc = true
+aliases = [
+       "/sic30-guies/fitxer-aca/"
+]
 taxonomies = []
 weight = 4
 +++

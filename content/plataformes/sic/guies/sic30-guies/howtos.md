@@ -4,6 +4,9 @@ title = "HOWTOs"
 description = "HOWTOs d'utilitat"
 sections = "SIC"
 no_index = true
+aliases = [
+    "/sic30-guies/howtos/"
+]
 taxonomies = []
 weight = 5
 +++

@@ -5,6 +5,7 @@ description = "Guia per a la integració amb eina d’anàlisi de codi de l'Ofic
 sections = "SIC"
 toc = true
 aliases = [
+    "/sic20-guies/guia-integracio-sonarqube/",
     "/sic-welcome-pack/guia-integracio-sonarqube/",
     "/sic-guies/guia-integracio-sonarqube/"
 ]

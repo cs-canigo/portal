@@ -5,6 +5,7 @@ description = "HOWTOs d'utilitat"
 sections = "SIC"
 no_index = true
 aliases = [
+    "/sic20-guies/howtos/",
     "/sic-guies/howtos/"
 ]
 taxonomies  = []
