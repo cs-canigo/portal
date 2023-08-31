@@ -9,7 +9,7 @@ key          = "JULIOL2023"
 
 ## Introducció
 
-Per tal de millorar la seguretat i facilitar als usuaris l'accés al [Servei de Custòdia de Codi] (/plataformes/sic/serveis/sic30-serveis/scm/)
+Per tal de millorar la seguretat i facilitar als usuaris l'accés al [Servei de Custòdia de Codi](/plataformes/sic/serveis/sic30-serveis/scm/)
 (Gitlab), s'ha habilitat l'**autenticació xifrada amb parell de claus pública/privada via protocol SSH**.
 Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de fer-ne ús.
 
