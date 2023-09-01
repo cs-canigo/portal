@@ -36,7 +36,7 @@ a l'usuari, per exemple, identificar la versió desplegada en cada moment.
 
 Per a fer servir el [_spring-boot-maven-plugin_](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/#?.?)
 serà necessari afegir-lo al fitxer `pom.xml` de l'aplicació i configurar el goal _build-info_.
-En cas de generar l'aplicació mitjançant el [Plugin de Canigó per Eclipse](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/),
+En cas de generar l'aplicació mitjançant el [Plugin de Canigó per Eclipse](/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/),
 el projecte ja disposarà d'aquest plugin configurat per defecte. No obstant això, caldrà afegir el corresponent goal
 tal com es mostra a continuació:
 

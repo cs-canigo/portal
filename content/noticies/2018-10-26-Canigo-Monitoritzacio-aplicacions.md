@@ -4,6 +4,6 @@ title       = "Canigó. Monitorització d'aplicacions"
 description = "Opcions que existeixen a l'actualitat per la monitorització d'aplicacions Canigó"
 categories  = ["canigo"]
 sections    = ["Notícies","home"]
-enllac      = "/canigo/monitoritzacio/"
+enllac      = "/plataformes/canigo/docs/monitoritzacio/"
 key         = "NOVEMBRE2018"
 +++

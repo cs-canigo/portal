@@ -22,11 +22,11 @@ obtenint un projecte preconfigurat per al marc de treball Canigó i estalviant t
 
 S'ha actualitzat el plugin de Canigó per a **generar projectes amb Canigó 3.6.5 amb el template corresponent
 als canvis de _sarcat.webservice_ de Sarcat i de _sgde.forms.wsdl.url_ i _sgde.std.wsdl.url_ de SGDE que apunten a HTTPS**.
-Podeu consultar el [Llistat de canvis del _plugin_ Eclipse 1.8.7](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/1.8.7/llistat-de-canvis/).
+Podeu consultar el [Llistat de canvis del _plugin_ Eclipse 1.8.7](/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/1.8.7/llistat-de-canvis/).
 
 La nova versió 1.8.7 del _plugin_ fa servir la versió 1.7.5 de l'arquetipus per a generar projectes amb Canigó 3.6.5.
 Per a instal·lar o actualitzar aquesta versió del _plugin_ serà necessari seguir els passos descrits a la secció
-"Instal·lació" de la documentació del [plugin de Canigó](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/).
+"Instal·lació" de la documentació del [plugin de Canigó](/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/).
 
 Cal destacar que per a utilitzar el plugin a partir de la versió 1.8.0, és necessari iniciar l'eclipse amb la màquina
 virtual de Java versió 11.

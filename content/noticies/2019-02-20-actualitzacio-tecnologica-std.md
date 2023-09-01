@@ -35,7 +35,7 @@ Els contenidors desplegats a AppAgile tenen configurades sondes per garantir la 
 
 A continuació es detalla les actualitzacions de versions i canvis de productes més rellevants:
 
-* Tots els serveis es basen en [**Canigó**](https://canigo.ctti.gencat.cat/canigo/), i s'actualitzen a la versió [3.2.7](https://canigo.ctti.gencat.cat/canigo/roadmap/)
+* Tots els serveis es basen en [**Canigó**](https://canigo.ctti.gencat.cat/canigo/), i s'actualitzen a la versió [3.2.7](https://canigo.ctti.gencat.cat/plataformes/canigo/roadmap/)
 * Es canvia l'engine de conversió de MS Office a PDF, passant de [J-Interop](http://www.j-interop.org/) a [**documents4j**](https://documents4j.com/)
 * S'actualitza la versió de **MS Office** de 2010 a 2016
 * S'actualitza OpenOffice 4.0.1 a **LibreOffice** 5.4.5.1

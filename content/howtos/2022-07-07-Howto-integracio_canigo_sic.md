@@ -14,7 +14,7 @@ Aquest how-to va dirigit a tots aquells desenvolupadors que hagin d'integrar al 
 ## Prerequisits
 
 Els passos descrits en aquest document apliquen a la versió 3.x del Framework Canigó i el punt de partida és una aplicació
-generada pel [Plugin de Canigó per a Eclipse](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/), un projecte repositat al
+generada pel [Plugin de Canigó per a Eclipse](/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/), un projecte repositat al
 [Sistema de Custòdia](/plataformes/sic/serveis/sic30-serveis/scm/) del SIC i un usuari amb permisos per a treballar-hi.
 
 ## Integració al SIC

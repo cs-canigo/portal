@@ -6,7 +6,7 @@ sections    = "Canigó"
 taxonomies  = []
 toc 		= true
 aliases = [
-    "/canigo/roadmap/"
+    "/plataformes/canigo/roadmap/"
 ]
 weight = 5
 +++

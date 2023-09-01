@@ -40,4 +40,4 @@ categories  = ["canigo","sic"]
 
 *Aquest Roadmap està subjecte a canvis*
 <br><br>
-Al següent [enllaç](/canigo/roadmap/) es pot trobar el roadmap del Framework Canigó
+Al següent [enllaç](/plataformes/canigo/roadmap/) es pot trobar el roadmap del Framework Canigó

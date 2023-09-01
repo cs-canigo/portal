@@ -26,7 +26,7 @@ a la última versió del mòdul _canigo.support.mailing_**. Podeu consultar la n
 
 La nova versió 1.8.6 del _plugin_ fa servir la versió 1.7.5 de l'arquetipus per a generar projectes amb Canigó 3.6.5.
 Per a instal·lar o actualitzar aquesta versió del _plugin_ serà necessari seguir els passos descrits a la secció
-"Instal·lació" de la documentació del [plugin de Canigó](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/).
+"Instal·lació" de la documentació del [plugin de Canigó](/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/).
 
 Cal destacar que per a utilitzar el plugin a partir de la versió 1.8.0, és necessari iniciar l'eclipse amb la màquina
 virtual de Java versió 11.

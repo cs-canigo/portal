@@ -12,7 +12,7 @@ S'ha actualitzat la **versió 3.0.6 del [Mòdul integració Sarcat mitjançant l
 de Canigó** incorporant 4 atributs addicionals.
 
 Podeu consultar l'abast complet de la nova versió en [canigo.integration.sarcat.pica:3.0.6]
-(/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sarcat.pica/3.0.6/).
+(/plataformes/canigo/documentacio-llibreries/canigo.integration.sarcat.pica/3.0.6/).
 
 ## Canigó Sarcat PICA 3.0.6
 

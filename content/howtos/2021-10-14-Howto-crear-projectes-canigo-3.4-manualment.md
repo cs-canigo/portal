@@ -19,7 +19,7 @@ l’actualització del *plugin*, únicament es podrà generar projectes Canigó 
 No obstant això, si es necessita crear projectes amb Canigó 3.4, podeu utilitzar aquesta guia per a generar
 projectes de forma manual i incorporar-ne els mòduls necessaris.
 
-Podeu consultar les versions amb suport al [Roadmap de Canigó](/canigo/roadmap/).
+Podeu consultar les versions amb suport al [Roadmap de Canigó](/plataformes/canigo/roadmap/).
 
 ## Creació de projectes
 

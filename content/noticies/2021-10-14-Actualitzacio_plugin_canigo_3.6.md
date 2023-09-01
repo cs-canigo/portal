@@ -25,4 +25,4 @@ instal·lada del plugin o bé, si ja s'ha instal·lat l'actualització, podeu se
 
 ## Documentació
 
-Podeu consultar les versions amb suport al [Roadmap de Canigó](/canigo/roadmap/).
+Podeu consultar les versions amb suport al [Roadmap de Canigó](/plataformes/canigo/roadmap/).

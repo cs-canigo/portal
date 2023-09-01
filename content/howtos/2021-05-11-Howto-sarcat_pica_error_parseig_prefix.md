@@ -192,7 +192,7 @@ Per a més informació, podeu consultar:
 
 - [Connector de Canigó a Sarcat](/plataformes/canigo/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-integracio/modul-sarcat/)
 
-- [Roadmap Framework Canigó](/canigo/roadmap/)
+- [Roadmap Framework Canigó](/plataformes/canigo/roadmap/)
 
 - [Matrius de Compatibilitats de Canigó 3.4.x](/canigo-download-related/matrius-compatibilitats/canigo-34/)
 

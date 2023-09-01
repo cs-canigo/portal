@@ -11,7 +11,7 @@ S'ha actualitzat la **versió 3.0.5 del [Mòdul d'enviament de correus]
 (/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-suport/modul-correu/)
 de Canigó** per a permetre la configuració de paràmetres dinàmics.
 
-Podeu consultar l'abast complet de la nova versió en [canigo.support.mailing:3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.support.mailing/3.0.5/).
+Podeu consultar l'abast complet de la nova versió en [canigo.support.mailing:3.0.5](/plataformes/canigo/documentacio-llibreries/canigo.support.mailing/3.0.5/).
 
 ## Canigó Mailing 3.0.5
 

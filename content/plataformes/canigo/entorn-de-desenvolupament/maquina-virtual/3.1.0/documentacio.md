@@ -116,7 +116,7 @@ amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)
 * Maven 3.8.5
 
 * IDE - [Spring Tool Suite 4.13.0](https://spring.io/tools) (basat en Eclipse 2.3.800.v20211124-1800), i els següents plugins:
-  - [Plugin CTTI Canigó]((/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/)) per a la creació aplicacions Canigó 3.6.x basades en arquitectura REST+HTML5/JS.
+  - [Plugin CTTI Canigó]((/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/)) per a la creació aplicacions Canigó 3.6.x basades en arquitectura REST+HTML5/JS.
   - Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects).
   - SonarLint permet detectar i solucionar problemes de qualitat al codi (actualment Java, JavaScript, Python i PHP) [SonarLint](https://www.sonarlint.org/).
 
