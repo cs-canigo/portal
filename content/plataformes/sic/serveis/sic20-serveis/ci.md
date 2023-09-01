@@ -5,6 +5,7 @@ description = "Jenkins és l'eina implantada al SIC per la integració contínua
 sections = "SIC"
 toc = true
 aliases = [
+    "/sic20-serveis/ci/",
     "/sic/integracions-dev/",
     "/sic/clau/",
     "/sic-documentacio",

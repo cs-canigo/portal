@@ -3,6 +3,7 @@ date = "2022-11-21"
 title = "Custòdia de codi font"
 description = "GitLab és l'eina implantada al SIC per la custòdia de codi font"
 aliases = [
+    "/sic30-serveis/scm/",
     "/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/"
 ]
 sections = "SIC"

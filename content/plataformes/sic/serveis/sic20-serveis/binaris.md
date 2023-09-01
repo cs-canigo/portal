@@ -4,6 +4,7 @@ title = "Servei de Binaris"
 description = "Eina SIC per al lliurament d'artefactes a CPD/LldT"
 sections = "SIC"
 aliases = [
+  "/sic20-serveis/binaris/",
   "/noticies/2017-07-05-SIC-Gestio-binaris/",
   "/sic-serveis/binaris/"
 ]

@@ -3,6 +3,7 @@ date = "2023-05-22"
 title = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)"
 aliases = [
+    "/sic30-serveis/autoservei-usuaris/",
     "/sic/autoservei-usuaris/",
     "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/",
     "/sic-serveis/autoservei-usuaris/"

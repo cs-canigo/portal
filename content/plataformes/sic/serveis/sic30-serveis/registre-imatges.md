@@ -4,6 +4,9 @@ title = "Registre d'imatges"
 description = "El Registre d'imatges del SIC proporciona un catàleg d'imatges per als proveïdors d'aplicacions i allotja les imatges de les aplicacions desplegades via SIC a diferents plataformes de contenidors."
 section = "SIC"
 toc = true
+aliases = [
+    "/sic30-serveis/registre-imatges/"
+]
 taxonomies = []
 weight = 6
 +++

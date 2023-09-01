@@ -3,6 +3,9 @@ date = "2023-05-22"
 title = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)"
 sections = "SIC"
+aliases = [
+    "/sic20-serveis/autoservei-usuaris/"
+]
 taxonomies = []
 toc = true
 weight = 4
