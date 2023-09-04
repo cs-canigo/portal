@@ -102,10 +102,10 @@ function app(opts) {
     })
   );
 
-  /*search.addWidget(
+  search.addWidget(
     instantsearch.widgets.refinementList({
       container: '#tags',
-      attributeName: 'sections',
+      attributeName: 'categories',
       autoHideContainer: true,
       limit: 10,
       operator: 'or',
@@ -125,7 +125,7 @@ function app(opts) {
         }
       }
     })
-  )*/
+  )
 
   search.start();
 }
