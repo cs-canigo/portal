@@ -41,10 +41,19 @@
 
 						<!-- switch per subseccions -->
 						{{ if isset .Params "enllac" }}
-							<a href="{{ index .Params "enllac" }}" title="{{ .Title }}">{{ .Title }}</a>
+							<a href="{{ index .Params "enllac" }}" title="{{ .Title }}">
+								{{ .Title }}
+							</a>
         				{{ else }}
-							<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+							<a href="{{ .Permalink }}" title="{{ .Title }}">
+								{{ .Title }}
+								{{ if and (eq .Section "comunicat") (gt ($.Scratch.Get "level") 1) }}
+									{{ $nommes := index  .Site.Data.parametres_comunicat.mesos (.Date.Format "January") }}
+									{{ print $nommes }}
+								{{ end }}
+							</a>
         				{{ end }}
+
 
 						</h2>
 						<p> {{ .Description | safeHTML }}</p>
