@@ -135,12 +135,11 @@ A continuació es llisten els relacionats amb els principis d'arquitectura
 - 4.1.3 Arquitectura mínima. Cal tenir en compte l’escalabilitat i fer una previsió (mínim 1 any) amb l’objectiu d’aconseguir una arquitectura sostenible en el temps.
 
 
-**4.2 Benefici màxim al menor cost i risc possible**. Cal tenir presents els costos d’infraestructura i el model de llicenciament requerits per a posar en marxa una solució, ja que representen un cost recurrent. A l'hora de concebre una solució s’ha d’identificar quin tipus de llicenciament serà el millor per la solució desitjada. Quan s’escull un producte (opensource o comercial) o es tria fer un desenvolupament a mida, cal fer una avaluació del cost vs. benefici de l’opció triada respecte a les altres: 
+**4.2 Benefici màxim al menor cost i risc possible**. Cal tenir presents els costos d’infraestructura i el model de llicenciament requerits per a posar en marxa una solució, ja que representen un cost recurrent. A l'hora de concebre una solució s’ha d’identificar quin tipus de llicenciament serà el millor per la solució desitjada. Quan s’escull un producte (opensource o comercial) <span class="new">en modalitat SaaS, es tria construir amb plataformes LowCode, o bé s'acaba decidint </span>fer un desenvolupament a mida, cal fer una avaluació del cost vs. benefici de l’opció triada respecte a les altres: 
 
 - 4.2.1 Per a problemes comuns, utilitzar “Opensource”. 
-- 4.2.2 Per a problemes poc comuns, comprar. 
-- 4.2.3 Per a problemes únics, desenvolupar a mida.
-
+- 4.2.2 Per a problemes poc comuns, comprar, <span class="new">preferentment en modalitat SaaS</span>. 
+- 4.2.3 Per a problemes únics, <span class="new">construir amb LowCode o desenvolupar a mida, en modalitat cloud native preferentment</span>.
 
 **4.3 Impacte d’actualització**, pensar en l’impacte d’actualització que pugui tenir un canvi de sistema operatiu, middleware o producte allà on s'executa l’aplicació: quant menys acoblament amb el sistema de base i més utilització d’estàndards existeix, més senzilla serà l’actualització o l’ampliació de funcionalitats de l’aplicació. <span class="new">
 Per exemple, containeritzar les aplicacions per a aïllar-les de l'entorn d'execució i incloure-hi les seves dependències a l'artefacte.</span>

@@ -116,7 +116,3 @@ $(function(){
 	});
 
 });
-
-function mdExpandCollapse(){
-
-}
