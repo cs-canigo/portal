@@ -63,3 +63,60 @@ autocomplete('#cerca2', {hint: false}, [
     console.log(suggestion, dataset);
 	window.location.replace(suggestion.path);
 });
+
+//Expand and collapse markdown sections
+
+const getMdNextEl = function(item, collapseNext){
+	let el = [];
+	let next = $(item).parent();
+	let found;
+	for(let i=0,z=collapseNext.length;i<z;i++){
+		next = $(next).next();
+		found=false;
+		while(!found){
+			if($(next).prop('nodeName').toLowerCase()===collapseNext[i]){
+				found=true;
+				el.push($(next));
+			}
+		}		
+	}
+	return el;
+}
+
+$(function(){
+
+	$(".collapseMD").each(function(i, item){
+
+		let collapseNext = $(item).data("collapse-next");
+		collapseNext = collapseNext ? collapseNext.split(" ") : [];
+		const el = getMdNextEl(item, collapseNext);
+		
+		$(item).text("[+]");
+		$(item).css("cursor", "pointer");
+		$(item).css("color", "red");
+
+		$(item).on( "click", function() {
+			if($(item).text()==="[+]"){
+				$(item).text("[-]");
+				for(let i=0,z=el.length;i<z;i++){
+					el[i].removeClass("hidden");
+				}
+			}else{
+				$(item).text("[+]");
+				for(let i=0,z=el.length;i<z;i++){
+					el[i].addClass("hidden");
+				}
+			};
+		});
+
+		for(let i=0,z=el.length;i<z;i++){
+			el[i].addClass("hidden");
+		}
+
+	});
+
+});
+
+function mdExpandCollapse(){
+
+}

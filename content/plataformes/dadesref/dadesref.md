@@ -13,20 +13,14 @@ Coordinadament amb la Direcció General d'Administració Digital (DGAD), respons
 
 En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups:
 
-<div style="width:100%; padding-left:30px">
 a) Dades de Referència consolidades i avalades per la DGAD que són d’obligat ús pels nous sistemes d’informació, i
 <br/><br/>	
 b) Dades de Referència que es troben en revisió per l’òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
 <br/><br/>
-</div>
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l’Oficina de Gestió Tècnica de Dades CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
 
-
-
-<br/>
 ## Catàleg Tècnic de Dades
-<br/>
 
 Posem a disposició de les aplicacions el catàleg tècnic d’entitats de referència organitzades en els dos grups mencionats anteriorment:
 
@@ -36,7 +30,7 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
 
-> 
+ 
 > Destaquem que, en la majoria de les entitats modelades, per garantir el compliment del nivell de **completesa** que s'exigeix en la valoració de la **qualitat de les dades**, s'han afegit dos valors genèrics:
 > 
 > + **"No consta"**: Aquest valor es pot utilitzar en aquells casos que té sentit tenir un registre per representar la situació en què es desconeix la dada.
@@ -423,11 +417,8 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
     </table>
 </div>
 
-
-
-<br/>
 ## Breu descripció  de la gestió tècnica i operativa
-<br/>
+
 Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l’objectiu de modelar, validar i finalment incorporar dins del Catàleg Tècnic de Dades de Referència aquí publicat.
 
 El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d'Administració Digital, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Direcció General d'Administració Digital, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
@@ -435,8 +426,7 @@ El procés de gestió de les dades de referència es realitza de manera coordina
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
 
-<CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
-<br/>
+![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)
 
 Per utilitzar les dades de referència s'ha d'activar l'enllaç "**Accedir a les dades**" de la fitxa descriptiva de les entitats i que porta al Portal de Dades Obertes des d'on es pot visualitzar la informació de l'entitat. Per importar les dades cap a un sistema destí, es pot fer de dues maneres:
 

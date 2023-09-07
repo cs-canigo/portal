@@ -33,8 +33,6 @@ Des d'un punt de vista d'arquitectura empresarial, l'arbre de decisió que guiar
 
 <br />
 
-
-
 - <span class="new"> **Ús de SaaS preferentment**: per a solucions d'ús habitual a diferents indústries o casos de negoci concrets, on existeixen productes consolidats i provats, seleccionarem productes SaaS, que extendrem amb els mecanismes que ofereixi el mateix producte per adaptar-lo a les necessitats dels processos de la Generalitat.</span>
  
 - <span class="new"> Construcció mitjançant **plataformes LowCode**: en cas que un SaaS no cobreixi un percentatge important del procés de negoci, la següent preferència serà la construcció amb les [plataformes LowCode corporatives](/plataformes/lowcode/) o bé extendre alguna funcionalitat del SaaS amb aquesta tecnologia si els mecanismes del SaaS no ho permeten.</span>
@@ -47,7 +45,7 @@ Des d'un punt de vista d'arquitectura empresarial, l'arbre de decisió que guiar
 
 **2.1 Segregació de funcions/responsabilitats**. 
 
-Les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.
+Les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits. <span class="collapseMD" data-collapse-next="p ul"></span>
 
 Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:
 
@@ -57,8 +55,8 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 - Processos batch
 - Extraccions (ETL)
 
-**2.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada** per permetre als components i aplicacions mantenir-se completament autònoms i independents:
-
+**2.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada** per permetre als components i aplicacions mantenir-se completament autònoms i independents
+<span class="collapseMD" data-collapse-next="ul"></span>
 - 2.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.
 - 2.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components, només mantenint la seva interfície de comunicació, la seva signatura.
 - 2.2.3 Desacoblament entre aplicacions: cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament. Per exemple, relacions en l'àmbit de base de dades, ús de llibreries compartides, fitxers de configuració compartits, etc. En aquest sentit, el cloud ens ajuda a tenir elements dedicats per sistema d'informació, ja que la granularitat (potència, recursos, ...) dels components es pot ajustar al consum i no cal compartir entre sistemes.</span>
@@ -67,16 +65,14 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 
 **2.4 Model de qualitat**, a l'hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el [Portal de Qualitat](https://qualitat.solucions.gencat.cat/).
 
-**2.5 Integració contínua, infraestructura com a Codi i custòdia de codi**
+**2.5 Integració contínua, Infraestructura com a Codi i custòdia de codi**
 
 - 2.5.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.
 - 2.5.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel [Sistema d'Integració Continua](/plataformes/sic/about/).
 - 2.5.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o Preproducció s'ha de poder desplegar a Producció sense necessitat de fer-hi canvis.	
 - <span class="new">2.5.4 Les aplicacions que es depleguin a cloud públic es faran sota el paradigma d'Infraestructura com a Codi (IaC) i l'estàndard de codificació serà Terraform.</span>
 	
-**2.6** [**Solucions transversals**](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/). Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="solucions"><a href="#" onclick="(document.getElementById('solucions').classList.value.indexOf('hidden')>-1?document.getElementById('solucions').classList.remove('hidden'):document.getElementById('solucions').classList.add('hidden')); return false;">[+]</a></span>
-
-<div class="hidden solucions" id="solucions">
+**2.6** [**Solucions transversals**](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/). Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="collapseMD" data-collapse-next="p ul"></span>
 
 A continuació es detallen algunes de les solucions transversals més esteses.
 
@@ -96,8 +92,6 @@ A continuació es detallen algunes de les solucions transversals més esteses.
 
 - **2.6.8 Tramitador d'ajuts i subvencions** ([**TAIS**](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/tramitacio-i-gestio-de-serveis/tais/)). Sistema d'informació per a la gestió electrònica d'expedients de gestió de subvencions.
 
-</div>
-
 ## 3. Principis sobre la Tecnologia
 
 **3.1 Continuïtat tecnològica**. D’acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:
@@ -110,7 +104,9 @@ A continuació es detallen algunes de les solucions transversals més esteses.
 
 **3.3 Interoperabilitat**. El programari i el maquinari han d’ajustar-se a estàndards definits que promouen la interoperabilitat de dades, aplicacions i tecnologia.
 
-**3.4 [Els estàndards de qualitat](https://qualitat.solucions.gencat.cat/estandards/)** definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. A continuació es llisten els relacionats amb els principis d'arquitectura
+**3.4 [Els estàndards de qualitat](https://qualitat.solucions.gencat.cat/estandards/)** definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. <span class="collapseMD" data-collapse-next="p ul"></span>
+
+A continuació es llisten els relacionats amb els principis d'arquitectura
 
 - **3.4.1 Full de ruta**. Davant solucions estàndard s’utilitzaran preferentment els components que es troben al [Full de Ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) en la versió "versió actual CTTI". Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies que, eventualment, podran passar a formar-ne part. La reutilització d'infraestructura ja existent no eximeix del requeriment d'actualitzar el programari en cas que aquest ja no estigui suportat pel fabricant.
 - **3.4.2 Principis de la guia Web Gencat**, són d'aplicació els principis detallats a la [Guia Web Gencat per aplicacions orientades a la ciutadania.](http://guiaweb.gencat.cat/ca/inici/). 
@@ -120,11 +116,10 @@ A continuació es detallen algunes de les solucions transversals més esteses.
 
 **3.5 Ús de Cloud Públic**. Cal valorar l'ús d'entorns de Cloud Públic. Recomanat per aplicacions amb les característiques detallades a continuació:
 
-- Aplicacions que no siguin crítiques pel negoci.
-- Utilitzades des d'internet. 
-- Sense requeriments de seguretat alts. 
-- Si requereix integració amb altres serveis de Generalitat de Catalunya, aquesta ha de ser lleugera. 
-
+- <span class="new">~~Aplicacions que no siguin crítiques pel negoci.~~</span>
+- <span class="new">~~Utilitzades des d'internet.~~</span>
+- <span class="new">~~Sense requeriments de seguretat alts.~~</span>
+- <span class="new">~~Si requereix integració amb altres serveis de Generalitat de Catalunya, aquesta ha de ser lleugera.~~</span>
 
 **3.6 Ús d'Https**. Les urls de les aplicacions i els serveis publicats tant a internet com a xCAT (xarxa intranet de la Generalitat) es faran mitjançant l'ús de protocols segurs (https).	
 
@@ -133,7 +128,7 @@ A continuació es detallen algunes de les solucions transversals més esteses.
 
 ## 4. Principis sobre el cost i manteniment de les solucions
 
-**4.1 Optimització de costos**, pensar en els costos i en la seva optimització:
+**4.1 Optimització de costos**, pensar en els costos i en la seva optimització, <span class="new">sobretot ajustant el recursos necessaris, establint polítiques d'escalat i utilitzar serveis que es puguin apagar quan no s'usen</span> <span class="collapseMD" data-collapse-next="ul"></span>
 
 - 4.1.1 Monitoritzar els serveis per a identificar necessitats d’ampliació o reducció de recursos i poder ajustar els costos en conseqüència.
 - 4.1.2 Dissenyar l’arquitectura amb una planificació de les càrregues de treball òptima en costos, de forma que s’equilibrin quan sigui possible les finestres d’execució dels components (online, extraccions, analítica, processos batch ...), per evitar els pics de càrrega i que es reparteixi de forma balancejada segons les necessitats del negoci.
@@ -147,4 +142,5 @@ A continuació es detallen algunes de les solucions transversals més esteses.
 - 4.2.3 Per a problemes únics, desenvolupar a mida.
 
 
-**4.3 Impacte d’actualització**, pensar en l’impacte d’actualització que pugui tenir un canvi de sistema operatiu, middleware o producte allà on s'executa l’aplicació: com menys acoblament amb el sistema de base i més utilització d’estàndards existeix, més senzilla serà l’actualització o l’ampliació de funcionalitats de l’aplicació.
+**4.3 Impacte d’actualització**, pensar en l’impacte d’actualització que pugui tenir un canvi de sistema operatiu, middleware o producte allà on s'executa l’aplicació: quant menys acoblament amb el sistema de base i més utilització d’estàndards existeix, més senzilla serà l’actualització o l’ampliació de funcionalitats de l’aplicació. <span class="new">
+Per exemple, containeritzar les aplicacions per a aïllar-les de l'entorn d'execució i incloure-hi les seves dependències a l'artefacte.</span>
