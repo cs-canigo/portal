@@ -93,7 +93,7 @@ $(function(){
 		
 		$(item).text("[+]");
 		$(item).css("cursor", "pointer");
-		$(item).css("color", "red");
+		$(item).css("color", "#BF0000");
 
 		$(item).on( "click", function() {
 			if($(item).text()==="[+]"){
