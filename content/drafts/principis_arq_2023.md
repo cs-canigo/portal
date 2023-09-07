@@ -20,8 +20,7 @@ langs = ["ca","es"]
 
 Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en diferents segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb. Entre elles, destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions de programari lliure.
 
-A continuació detallem quins són aquests principis.
-
+A continuació detallem quins són aquests principis:
 
 ## <span class="new">1. Principis estratègics</span>
 
@@ -55,8 +54,7 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 - Processos batch
 - Extraccions (ETL)
 
-**2.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada** per permetre als components i aplicacions mantenir-se completament autònoms i independents
-<span class="collapseMD" data-collapse-next="ul"></span>
+**2.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada** per permetre als components i aplicacions mantenir-se completament autònoms i independents. <span class="collapseMD" data-collapse-next="ul"></span>
 - 2.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.
 - 2.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components, només mantenint la seva interfície de comunicació, la seva signatura.
 - 2.2.3 Desacoblament entre aplicacions: cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament. Per exemple, relacions en l'àmbit de base de dades, ús de llibreries compartides, fitxers de configuració compartits, etc. En aquest sentit, el cloud ens ajuda a tenir elements dedicats per sistema d'informació, ja que la granularitat (potència, recursos, ...) dels components es pot ajustar al consum i no cal compartir entre sistemes.</span>
@@ -65,7 +63,7 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 
 **2.4 Model de qualitat**, a l'hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el [Portal de Qualitat](https://qualitat.solucions.gencat.cat/).
 
-**2.5 Integració contínua, Infraestructura com a Codi i custòdia de codi**
+**2.5 <span class="new">El cicle de vida serà automàtic</span>**, <span class="new">tant de les aplicacions (Integració contínua - CI/CD) com de la infraestructura (Infraestructura com a Codi -Terraform-), així com la custòdia de codi que es farà als repositoris de la Generalitat. </span> <span class="collapseMD" data-collapse-next="ul"></span>
 
 - 2.5.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.
 - 2.5.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel [Sistema d'Integració Continua](/plataformes/sic/about/).
@@ -74,7 +72,7 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 	
 **2.6** [**Solucions transversals**](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/). Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="collapseMD" data-collapse-next="p ul"></span>
 
-A continuació es detallen algunes de les solucions transversals més esteses.
+A continuació es detallen algunes de les solucions transversals més esteses:
 
 - **2.6.1 Ús del framework Canigo**. Per aplicacions JEE s'ha de fer ús del [Framework Canigó](/plataformes/canigo/framework/).
 - **2.6.2 Servidors SMTP transversals**, utilitzar els servidors SMTP transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
@@ -106,7 +104,7 @@ A continuació es detallen algunes de les solucions transversals més esteses.
 
 **3.4 [Els estàndards de qualitat](https://qualitat.solucions.gencat.cat/estandards/)** definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. <span class="collapseMD" data-collapse-next="p ul"></span>
 
-A continuació es llisten els relacionats amb els principis d'arquitectura
+A continuació es llisten els relacionats amb els principis d'arquitectura:
 
 - **3.4.1 Full de ruta**. Davant solucions estàndard s’utilitzaran preferentment els components que es troben al [Full de Ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) en la versió "versió actual CTTI". Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies que, eventualment, podran passar a formar-ne part. La reutilització d'infraestructura ja existent no eximeix del requeriment d'actualitzar el programari en cas que aquest ja no estigui suportat pel fabricant.
 - **3.4.2 Principis de la guia Web Gencat**, són d'aplicació els principis detallats a la [Guia Web Gencat per aplicacions orientades a la ciutadania.](http://guiaweb.gencat.cat/ca/inici/). 
@@ -128,7 +126,7 @@ A continuació es llisten els relacionats amb els principis d'arquitectura
 
 ## 4. Principis sobre el cost i manteniment de les solucions
 
-**4.1 Optimització de costos**, pensar en els costos i en la seva optimització, <span class="new">sobretot ajustant el recursos necessaris, establint polítiques d'escalat i utilitzar serveis que es puguin apagar quan no s'usen</span> <span class="collapseMD" data-collapse-next="ul"></span>
+**4.1 Optimització de costos**, pensar en els costos i en la seva optimització, <span class="new">sobretot ajustant el recursos necessaris, establint polítiques d'escalat i utilitzar serveis que es puguin apagar quan no s'usen.</span> <span class="collapseMD" data-collapse-next="ul"></span>
 
 - 4.1.1 Monitoritzar els serveis per a identificar necessitats d’ampliació o reducció de recursos i poder ajustar els costos en conseqüència.
 - 4.1.2 Dissenyar l’arquitectura amb una planificació de les càrregues de treball òptima en costos, de forma que s’equilibrin quan sigui possible les finestres d’execució dels components (online, extraccions, analítica, processos batch ...), per evitar els pics de càrrega i que es reparteixi de forma balancejada segons les necessitats del negoci.
