@@ -21,7 +21,7 @@ A continuació detallem quins són aquests principis:
 ## <span class="new">0. Principis estratègics</span>
 
 <span class="new">
-Des d'un punt de vista d'arquitectura empresarial, l'arbre de decisió que guiarà la selecció de tecnologia es basarà en el següent arbre de decisió:</span>
+Des d'un punt de vista d'arquitectura empresarial, l'arbre de decisió que guiarà la selecció de tecnologia es basarà en el següent:</span>
 <br /><br />
 
 ### <span class="new">SaaS > LowCode > Cloud Native</span>
