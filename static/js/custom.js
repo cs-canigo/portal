@@ -70,15 +70,18 @@ const getMdNextEl = function(item, collapseNext){
 	let el = [];
 	let next = $(item).parent();
 	let found;
+	let count;
 	for(let i=0,z=collapseNext.length;i<z;i++){
 		next = $(next).next();
 		found=false;
-		while(!found){
+		cont = 0;
+		while(!found && cont<10){
 			if($(next).prop('nodeName').toLowerCase()===collapseNext[i]){
 				found=true;
 				el.push($(next));
 			}
-		}		
+			cont++;
+		}
 	}
 	return el;
 }

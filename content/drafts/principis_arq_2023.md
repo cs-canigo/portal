@@ -88,7 +88,7 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 
 ## 2. Principis sobre la Tecnologia
 
-**2.1 Continuïtat tecnològica**. Per a facilitar la segregació de responsabilitats i mantenibilitat de les aplicacions es proposa desacoblar frontend i backend, així com exposar la lògica necessària mitjançant serveis (REST principalment) ~~D'acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:~~ <span class="collapseMD" data-collapse-next="p ul"></span>
+**2.1 Continuïtat tecnològica**. Per a facilitar la segregació de responsabilitats i mantenibilitat de les aplicacions es proposa desacoblar frontend i backend, així com exposar la lògica necessària mitjançant serveis (REST principalment) ~~D'acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:~~ <span class="collapseMD" data-collapse-next="ul"></span>
 
 - 2.1.1 Per a la creació d’aplicacions orientades a serveis, els serveis (backend) exposaran el seu negoci mitjançant REST i en format JSON (REST permet ser consumit per qualsevol tecnologia que interpreti HTTP).
 - 2.1.2 En el cas d’aplicacions web, la presentació estarà construïda amb tecnologies estàtiques  (html5/javascript/css) i consumirà els serveis que li proporcioni el backend. 
