@@ -96,7 +96,7 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 
 **2.2 Estabilitat de les versions de programari**. Les versions de les diferents peces (productes, llibreries...) que composen un sistema han de ser el més estables possible. S'ha de fer ús de versions LTS (Long-Term Support) o bé, o en la seva mancança, la GA (General Availability) o la nomenclatura que hagi donat el fabricant com a estable. Un sistema productiu no pot incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formin part.
 
-**2.3 Interoperabilitat**. El programari i el maquinari han d’ajustar-se a estàndards definits que promouen la interoperabilitat de dades, aplicacions i tecnologia.
+**2.3 Interoperabilitat**. <span class="new">S'ha de garantir l'intercanvi d'informació i dades entre sistemes, i aquest es farà preferentment amb les plataformes corporatives orientades a aquest ús: API Manager i EventHub/Kafka.</span> ~~El programari i el maquinari han d’ajustar-se a estàndards definits que promouen la interoperabilitat de dades, aplicacions i tecnologia.~~
 
 **2.4 [Els estàndards de qualitat](https://qualitat.solucions.gencat.cat/estandards/)** definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. <span class="collapseMD" data-collapse-next="p ul"></span>
 
@@ -108,17 +108,16 @@ A continuació es llisten els relacionats amb els principis d'arquitectura:
 - **2.4.4 Nomenclatura de les infraestructures**, s'ha de complir l'estàndard pel que fa al nom de les infraestructures detallat al document [Estàndard nomenclatura infraestructures](https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/).
 
 
-**2.5 Ús de Cloud Públic**. Cal valorar l'ús d'entorns de Cloud Públic. Recomanat per aplicacions amb les característiques detallades a continuació:
+**2.5 Ús de Cloud Públic**. S'ha de plantejar l'ús de cloud públic preferentment vs l'ús d'entorns d'execució onpremise. ~~Cal valorar l'ús d'entorns de Cloud Públic. Recomanat per aplicacions amb les característiques detallades a continuació:~~
 
 - <span class="new">~~Aplicacions que no siguin crítiques pel negoci.~~</span>
 - <span class="new">~~Utilitzades des d'internet.~~</span>
 - <span class="new">~~Sense requeriments de seguretat alts.~~</span>
 - <span class="new">~~Si requereix integració amb altres serveis de Generalitat de Catalunya, aquesta ha de ser lleugera.~~</span>
 
-**2.6 Ús d'Https**. Les urls de les aplicacions i els serveis publicats tant a internet com a xCAT (xarxa intranet de la Generalitat) es faran mitjançant l'ús de protocols segurs (https).	
+**2.6 Ús d'HTTPS**. Les urls de les aplicacions i els serveis publicats tant a internet com a xCAT (xarxa intranet de la Generalitat) es faran mitjançant l'ús de protocols segurs (https).	
 
-**2.7 Mateixa arquitectura per Preproducció i Producció**. Perquè les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al disseny, encara que els recursos assignats a preproducció siguin inferiors.
-
+**2.7 Mateixa arquitectura per Preproducció i Producció**. Per a què les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al disseny, encara que els recursos assignats a preproducció siguin inferiors. <span class="new">En aquest cas, l'ús de cloud públic i infraestructura com a codi facilitarà la replicabilitat i equivalència d'entorns.<span>
 
 ## 3. Principis sobre el cost i manteniment de les solucions
 
