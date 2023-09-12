@@ -1,10 +1,10 @@
 +++
-date        = "2023-07-26"
+date        = "2023-09-12"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
-categories  = ["Data Architecture"]
-weight= 5
+categories  = ["Data Architecture","Detall"]
+weight= 2
 +++
 
   <div>
@@ -240,7 +240,7 @@ weight= 5
 			
 			var nomFitAtr=dades.instancies[numInstancia].ifitxer_doc;
 			
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ nomFitAtr);
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/plataformes/dadesref/entitats/"+ nomFitAtr);
 			frame.style.width= "100%"
 			frame.style.height= "300px";
 			celda.appendChild(frame);
@@ -330,7 +330,7 @@ weight= 5
 			else
 			{
 				var frame = document.createElement('iframe');
-		frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades.instancies[numInstancia].ifitxer_xls);
+		frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/plataformes/dadesref/entitats/"+ dades.instancies[numInstancia].ifitxer_xls);
 				frame.style.width= "100%"
 				frame.style.height= "400px";
 				celda.appendChild(frame);

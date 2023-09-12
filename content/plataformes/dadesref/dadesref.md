@@ -4,7 +4,7 @@ title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
-weight= 5
+weight= 1
 +++
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
@@ -262,7 +262,7 @@ tr.shown td.details-control {
 		// Passem la posicio de la instancia seleccionada
         localStorage.setItem('pos', posicio);
 
-        window.location = "./../detall/detalldadesref";
+        window.location = "./../detalldadesref";
     } );
 
     // Add event listener for opening and closing details
@@ -342,7 +342,7 @@ tr.shown td.details-control {
 		// Passem la posicio de la instancia seleccionada
         localStorage.setItem('pos', posicio);
 
-        window.location = "./detalldadesref";
+        window.location = "./../detalldadesref";
     } );
 
     $('.dataTables_filter').css('float','right');  
