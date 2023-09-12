@@ -11,9 +11,11 @@ public_folder: "/images" # The src attribute for uploaded media will begin with 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}/{{month}}/{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    folder: "content/blog" 
+    create: true 
+    slug: "{{slug}}"
+    path: '{{year}}/{{month}}/{{day}}'
+    sortable_fields: ['date']
     fields: # The fields for each document, usually in front matter
       - {label: "Títol", name: "title", widget: "string"}
       - {label: "Descripció", name: "description", widget: "string"}
