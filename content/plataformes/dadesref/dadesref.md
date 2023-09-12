@@ -262,7 +262,7 @@ tr.shown td.details-control {
 		// Passem la posicio de la instancia seleccionada
         localStorage.setItem('pos', posicio);
 
-        window.location = "./../detalldadesref";
+        window.location = "./../detall/detalldadesref";
     } );
 
     // Add event listener for opening and closing details
@@ -342,7 +342,7 @@ tr.shown td.details-control {
 		// Passem la posicio de la instancia seleccionada
         localStorage.setItem('pos', posicio);
 
-        window.location = "./../detalldadesref";
+        window.location = "./../detall/detalldadesref";
     } );
 
     $('.dataTables_filter').css('float','right');  

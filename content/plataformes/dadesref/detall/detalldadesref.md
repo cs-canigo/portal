@@ -1,9 +1,9 @@
 +++
 date        = "2023-09-12"
 title       = "Detall Dades de Referència"
-description = "Arquitectura de Dades de CTTI"
-sections    = ["Data Architecture"]
-categories  = ["Data Architecture"]
+description = "Visualització del detall d'una dada de referència"
+sections    = ["Dades Referencia"]
+categories  = ["Dades Referencia"]
 toc 	    = false
 weight= 5
 +++
