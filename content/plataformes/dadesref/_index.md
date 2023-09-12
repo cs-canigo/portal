@@ -4,7 +4,7 @@ title       = "Gestió tècnica de dades"
 description = "Descripció de la Gestió Tècnica de Dades i Catàleg Tècnic de Dades de referència"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
-weight      = 1
+weight      = 5
 aliases = [
     "/dadesref"
 ]

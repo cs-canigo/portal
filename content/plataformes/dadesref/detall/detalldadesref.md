@@ -3,8 +3,9 @@ date        = "2023-09-12"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
-categories  = ["Data Architecture","Detall"]
-weight= 2
+categories  = ["Data Architecture"]
+toc 	    = false
+weight= 5
 +++
 
   <div>
@@ -268,7 +269,7 @@ weight= 2
 			if (bMostraAtributs)
 			{
 				var link_valors = document.createElement('a');
-    link_valors.setAttribute('href', '../../dadesref/entitats/' + dades.instancies[numInstancia].ifitxer_doc);
+    link_valors.setAttribute('href', './../../entitats/' + dades.instancies[numInstancia].ifitxer_doc);
 				link_valors.innerHTML = "Descarregar definició atributs";
 				celda.appendChild(link_valors);
 			}
@@ -289,7 +290,7 @@ weight= 2
 				if ((dades.Classificacio=="Consolidat") && (dades.instancies[numInstancia].iestat=="Vigent") && (dades.instancies[numInstancia].iurl_dades_obertes=="")  )
 				{
 					var link = document.createElement('a');
-		link.setAttribute('href', '../../dadesref/entitats/' + dades.instancies[numInstancia].ifitxer_xls);
+		link.setAttribute('href', './../../entitats/' + dades.instancies[numInstancia].ifitxer_xls);
 					link.innerHTML = "Descarregar fitxer de dades";
 					celda.appendChild(link);
 				}
