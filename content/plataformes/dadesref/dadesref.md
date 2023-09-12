@@ -84,13 +84,13 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 }
 
 td.details-control {
-    background: url('/images/dadesref/details_open.png') no-repeat center center;
+    background: url('./../detall/details_open.png') no-repeat center center;
     cursor: pointer;
 	padding-left:15px;
 	padding-right:15px;
 }
 tr.shown td.details-control {
-    background: url('/images/dadesref/details_close.png') no-repeat center center;
+    background: url('./../detall/details_close.png') no-repeat center center;
 }
 
 </style>
@@ -262,7 +262,7 @@ tr.shown td.details-control {
 		// Passem la posicio de la instancia seleccionada
         localStorage.setItem('pos', posicio);
 
-        window.location = "./detalldadesref";
+        window.location = "./../detall/detalldadesref";
     } );
 
     // Add event listener for opening and closing details
