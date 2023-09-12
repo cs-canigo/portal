@@ -59,14 +59,15 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 
 **1.4 Model de qualitat**, a l'hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el [Portal de Qualitat](https://qualitat.solucions.gencat.cat/).
 
-**1.5 <span class="new">El cicle de vida serà automàtic</span>**, <span class="new">tant de les aplicacions (Integració contínua - CI/CD) com de la infraestructura (Infraestructura com a Codi -Terraform-), així com la custòdia de codi que es farà als repositoris de la Generalitat. </span> <span class="collapseMD" data-collapse-next="ul"></span>
+**1.5 <span class="new">El cicle de vida serà automàtic</span>**, <span class="new">tant de les aplicacions (Integració contínua - CI/CD) com de la infraestructura (Infraestructura com a Codi - IaC), així com la custòdia de codi que es farà als repositoris de la Generalitat. </span> <span class="collapseMD" data-collapse-next="ul"></span>
 
 - 1.5.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.
 - 1.5.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel [Sistema d'Integració Continua](/plataformes/sic/about/).
-- 1.5.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o Preproducció s'ha de poder desplegar a Producció sense necessitat de fer-hi canvis.	
+- 1.5.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o Preproducció s'ha de poder desplegar a Producció sense necessitat de fer-hi canvis. Això implica que les configuracions depenents de l'entorn han d'injectar-se en temps de desplegament com a variables d'entorn i no en temps de construcció.	
 - <span class="new">1.5.4 Les aplicacions que es depleguin a cloud públic es faran sota el paradigma d'Infraestructura com a Codi (IaC) i l'estàndard de codificació serà Terraform.</span>
-	
-**1.6** [**Solucions transversals**](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/). Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="collapseMD" data-collapse-next="p ul"></span>
+- <span class="new">1.5.5 Les aplicacions han de ser concebudes des del seu disseny per no requerir operació (NoOps). Totes les accions que pugui requerir l'aplicació per la seva evolució (desplegaments) i manteniment (tasques operacionals) han d'estar degudament automatitzades.</span>
+
+**1.7** [**Solucions transversals**](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/). Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="collapseMD" data-collapse-next="p ul"></span>
 
 A continuació es detallen algunes de les solucions transversals més esteses:
 
