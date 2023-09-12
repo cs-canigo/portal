@@ -5,6 +5,7 @@ description = "Descripció dels elements IaaS disponibles a la Generalitat de Ca
 sections    = "IaaS Cloud"
 weight      = 1
 categories  = ["cloud","iaas","azure"]
+aliases     = ["/cloud/cloud-iaas/cataleg-iaas/"]
 +++
 
 Els IaaS són màquines virtuals al Cloud.

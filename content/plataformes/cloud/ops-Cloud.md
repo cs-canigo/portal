@@ -6,6 +6,7 @@ sections    = "Cloud"
 weight      = 4
 toc = true
 categories  = ["cloud","docker","container","kubernetes"]
+aliases     = ["/cloud/ops-Cloud/"]
 key = "JUNY2018"
 +++
 

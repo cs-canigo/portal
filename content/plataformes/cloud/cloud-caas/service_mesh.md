@@ -6,6 +6,7 @@ sections      = "Container Cloud"
 weight        = 15
 toc           = true
 categories    = ["cloud","docker","container","caas","openshift","microservices","mesh"]
+aliases       = ["/cloud/cloud-caas/service_mesh/"]
 +++
 
 ## Introducció

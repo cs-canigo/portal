@@ -4,6 +4,7 @@ title       = "Tipologies Cloud"
 description = "Descripció dels diferents tipus de cloud i les seves característiques més importants"
 sections    = "Cloud"
 categories  = ["cloud","docker","container","paas","openshift","kubernetes","swarm","azure"]
+aliases     = ["/cloud/tipologies-cloud/"]
 weight = 1
 +++
 

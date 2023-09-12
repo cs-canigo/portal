@@ -5,6 +5,7 @@ description = "Descripció del procediment per configurar Gicar a les diferents 
 sections    = "Container Cloud"
 weight      = 11
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
+aliases     = ["/cloud/cloud-caas/configuracio-gicar/"]
 +++
 
 La configuració de Gicar a les plataformes de contenidors dependrà de la plataforma en concret.

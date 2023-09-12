@@ -5,6 +5,7 @@ description = "Consideracions generals a tenir present en desplegaments de conte
 sections    = "Container Cloud"
 weight      = 9
 categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
+aliases     = ["/cloud/cloud-caas/consideracions-desplegament/"]
 +++
 
 Al desplegar una aplicació a les diferents plataformes de contenidors cal tenir present una sèrie de consideracions.

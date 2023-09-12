@@ -5,6 +5,7 @@ description = "Informació per accedir al monitoratge i traces a les diferents p
 sections    = "IaaS Cloud"
 weight      = 3
 categories  = ["cloud","iaas","azure"]
+aliases     = ["/cloud/cloud-iaas/monitoritatge-iaas/"]
 +++
 
 Dins del marc de la metodologia DevOps, s'ofereixen a lot d'aplicacions un conjunt d'eines per a que monitorin i tinguin accés a les traces de les diferents plataformes IaaS.

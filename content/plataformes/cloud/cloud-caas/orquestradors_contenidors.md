@@ -5,6 +5,7 @@ description   = "Consideracions respecte als orquestradors de contenidors"
 sections      = "Container Cloud"
 weight        = 4
 categories    = ["cloud","docker","container","paas","openshift","kubernetes","swarm"]
+aliases       = ["/cloud/cloud-caas/orquestradors_contenidors/"]
 +++
 ## Introducció
 

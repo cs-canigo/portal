@@ -4,6 +4,7 @@ title       = "Devops"
 description = "Model Devops"
 sections    = "Cloud"
 categories  = ["cloud","docker","container","paas","openshift","kubernetes","swarm","azure", "devops"]
+aliases     = ["/cloud/devops-cloud/"]
 weight = 3
 +++
 

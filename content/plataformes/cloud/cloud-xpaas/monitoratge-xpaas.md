@@ -5,6 +5,7 @@ description = "Informació per accedir al monitoratge i traces a les diferents p
 sections    = "xPaaS Cloud"
 weight      = 4
 categories  = ["cloud","xpaas","ibmcloud","azure","cloudfoundry"]
+aliases     = ["/cloud/cloud-xpaas/monitoratge-xpaas/"]
 +++
 
 Dins del marc de la metodologia DevOps, s'ofereixen a lot d'aplicacions un conjunt d'eines per a que monitorin i tinguin accés a les traces de les diferents plataformes xPaaS.

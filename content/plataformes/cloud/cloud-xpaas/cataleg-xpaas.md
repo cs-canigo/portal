@@ -6,6 +6,7 @@ sections    = "Cloud"
 weight      = 1
 toc = true
 categories  = ["cloud","xpaas","ibmcloud","azure","cloudfoundry"]
+aliases     = ["/cloud/cloud-xpaas/cataleg-xpaas/"]
 +++
 
 Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS disponibles són:

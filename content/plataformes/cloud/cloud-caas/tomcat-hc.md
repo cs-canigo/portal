@@ -6,6 +6,7 @@ sections    = "Container Cloud"
 weight      = 14
 toc         = true
 categories  = ["cloud","container","kubernetes","openshift","tomcat"]
+aliases     = ["/cloud/cloud-caas/tomcat-hc/"]
 +++
 
 Tomcat, a diferència d'altres servidors d'aplicacions com poden ser Weblogic o JBoss, no presenta de manera nativa una gestió eficient de sessions http entre diferents instàncies.
@@ -191,7 +192,6 @@ La versió de **Hazelcast 3.12.x és compatible amb java 8 o superior.**
 
 La versió de **Hazelcast 3.11.x és compatible amb java 6 i 7.**
 
-<br/>
 #### Configuració de Hazelcast 3.12.x (java 8 o superior)
 
 Per configurar Hazelcast a Kubernetes/Openshift cal definir al fitxer xml les següents propietats:

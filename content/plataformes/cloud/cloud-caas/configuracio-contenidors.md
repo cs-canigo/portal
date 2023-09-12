@@ -5,6 +5,7 @@ description = "Model de gestió de configuracions en orquestradors basats en Kub
 sections    = "Container Cloud"
 weight      = 10
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
+aliases     = ["/cloud/cloud-caas/configuracio-contenidors/"]
 +++
 
 La gestió de configuracions als Orquestradors docker, es poden distingir dos escenaris clarament diferenciats:

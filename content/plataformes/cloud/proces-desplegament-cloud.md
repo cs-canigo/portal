@@ -4,6 +4,7 @@ title       = "Procés de desplegament de solucions Cloud"
 description = "Descripció simplificada del procés de desplegament de solucions Cloud"
 sections    = "Cloud"
 categories  = ["cloud","docker","container","paas","openshift","kubernetes","swarm","azure"]
+aliases     = ["/cloud/proces-desplegament-cloud/"]
 weight = 5
 +++
 
@@ -327,4 +328,4 @@ Un cop l'aplicació està en servei es realitza el tancament del projecte.
 
 ## Comunicació amb CS Cloud
 
-La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [[Comunicació proveïdors d'aplicacions amb Suport Cloud.](https://canigo.ctti.gencat.cat/plataformes/cloud/comunicacio-suport-cloud/)
+La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [Comunicació proveïdors d'aplicacions amb Suport Cloud.](https://canigo.ctti.gencat.cat/plataformes/cloud/comunicacio-suport-cloud/)

@@ -6,6 +6,7 @@ sections    = "Cloud"
 weight      = 9
 toc = true
 categories  = ["cloud","dbaas","compose","azure"]
+aliases     = ["/cloud/cloud-dbaas/cataleg-dbaas/"]
 +++
 
 Els DBaaS són serveis de bases de dades administrades al Cloud.

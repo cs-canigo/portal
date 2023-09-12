@@ -5,6 +5,7 @@ description   = "Consideracions i exemples respecte els contenidors a Openshift"
 sections      = "Container Cloud"
 weight        = 5
 categories    = ["cloud","docker","container","paas","openshift"]
+aliases       = ["/cloud/cloud-caas/contenidors_openshift/"]
 +++
 
 ## Introducció

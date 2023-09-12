@@ -6,6 +6,7 @@ sections    = "Cloud"
 weight      = 1
 toc = true
 categories  = ["cloud","docker","container", "kubernetes","openshift","swarm", "swamme", "ibm", "caas"]
+aliases     = ["/cloud/cloud-caas/cataleg-contenidors/"]
 +++
 
 En aquesta secció es descriuen les diferents imatges docker homologades pel CTTI i utilitzables a les diferents plataformes de contenidors.
@@ -39,9 +40,8 @@ Tomcat  	 | 9.0-java11   | registreimatges.sic.intranet.gencat.cat/gencatcloud/t
 Tomcat amb suport de Sessions distribuïdes | 9.0-java8   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java8)
 Tomcat amb suport de Sessions distribuïdes  | 9.0-java11   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java11)
 
-<br>
 **IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques de construcció i desplegament s'ha de fer ús de les corresponents pipelines al Jenkins del SIC.
-<br>
+
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat d'aquestes.
 

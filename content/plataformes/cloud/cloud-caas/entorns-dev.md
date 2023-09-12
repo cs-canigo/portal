@@ -5,6 +5,7 @@ description = "Entorns de desenvolupament recomanats compatibles amb les Platafo
 sections    = "Container Cloud"
 weight      = 7
 categories  = ["cloud","docker","container","paas"]
+aliases     = ["/cloud/cloud-caas/entorns-dev/"]
 +++
 
 ## Openshift 4

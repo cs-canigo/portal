@@ -4,6 +4,7 @@ title       = "Comunicació proveïdors d'aplicacions amb Suport Cloud"
 description = "Canals de comunicació disponibles pels proveïdors d'aplicacions amb Suport Cloud"
 sections    = "Cloud"
 categories  = ["cloud"]
+aliases     = ["/cloud/comunicacio-suport-cloud/"]
 weight      = 6
 +++
 

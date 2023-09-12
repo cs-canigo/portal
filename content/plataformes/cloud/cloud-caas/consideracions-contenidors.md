@@ -5,6 +5,7 @@ description = "Consideracions generals a tenir present en els contenidors"
 sections    = "Container Cloud"
 weight      = 8
 categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
+aliases     = ["/cloud/cloud-caas/consideracions-contenidors/"]
 +++
 
 * Els contenidors són volatils. Es poden destruir i reconstruir en qualsevol moment.

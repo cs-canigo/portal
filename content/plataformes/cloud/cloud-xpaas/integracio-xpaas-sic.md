@@ -5,6 +5,7 @@ description = "Informació respecte a la integració d'aplicacions basades en xP
 sections    = "xPaaS Cloud"
 weight      = 3
 categories  = ["cloud","IBMCloud","cloudfoundry","sic"]
+aliases     = ["/cloud/cloud-xpaas/integracio-xpaas-sic/"]
 +++
 
 ## Informació necessària per la integració amb SIC

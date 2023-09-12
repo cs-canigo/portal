@@ -5,6 +5,7 @@ description   = "Consideracions i exemples respecte els contenidors a Kubernetes
 sections      = "Container Cloud"
 weight        = 6
 categories    = ["cloud","docker","container","paas","kubernetes"]
+aliases       = ["/cloud/cloud-caas/contenidors_kubernetes/"]
 +++
 
 ## Introducció

@@ -5,6 +5,7 @@ description = "Plataformes cloud disponibles a la Generalitat de catalunya"
 sections    = "Cloud"
 weight      = 2
 categories  = ["cloud","caas","xpaas","dbaas","iaas"]
+aliases     = ["/cloud/plataformes-cloud/"]
 +++
 
 Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per CPD, són les seguents:

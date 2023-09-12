@@ -5,6 +5,7 @@ description = "Consideracions generals a tenir present en desplegaments sobre pl
 sections    = "xPaaS Cloud"
 weight      = 2
 categories  = ["cloud","cloudfoundry", "ibmcloud"]
+aliases     = ["/cloud/cloud-xpaas/consideracions-desplegament/"]
 +++
 
 Al desplegar una aplicació a les diferents plataformes xPaaS cal tenir present una sèrie de consideracions.

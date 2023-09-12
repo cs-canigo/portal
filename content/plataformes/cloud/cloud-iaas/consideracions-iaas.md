@@ -5,6 +5,7 @@ description = "Consideracions generals a tenir present en els aplicacions desple
 sections    = "IaaS Cloud"
 weight      = 2
 categories  = ["cloud","iaas","azure"]
+aliases     = ["/cloud/cloud-iaas/consideracions-iaas/"]
 +++
 
 * Només és recomanable utilitzar plataforms IaaS en cas de que l'aplicació no encaixi en un model CaaS o PaaS:

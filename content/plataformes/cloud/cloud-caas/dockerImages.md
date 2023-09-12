@@ -5,6 +5,7 @@ description   = "Criteris per crear les imatges dels contenidors docker que es d
 sections      = "Container Cloud"
 weight        = 3
 categories    = ["cloud","docker","container","paas","openshift"]
+aliases       = ["/cloud/cloud-caas/dockerImages/"]
 +++
 
 ## Introducció

@@ -6,6 +6,7 @@ sections    = "Container Cloud"
 weight      = 13
 toc         = true
 categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
+aliases     = ["/cloud/cloud-caas/monitoratge-contenidors/"]
 +++
 
 Dins del marc de la metodologia DevOps, s'ofereixen a lot d'aplicacions un conjunt d'eines per a que monitorin i tinguin accés a les traces dels diferents contenidor.

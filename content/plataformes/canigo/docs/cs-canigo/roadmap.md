@@ -5,6 +5,7 @@ title       = "Roadmap CS Canigó"
 description = "Roadmap del CS Canigó: Canigó i SIC"
 sections    = "Roadmap"
 weight      = 5
+draft		= true
 categories  = ["canigo","sic"]
 +++
 <!--Aquest és el Roadmap del CS Canigó per als serveis Canigó i SIC:
