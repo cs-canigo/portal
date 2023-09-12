@@ -4,8 +4,7 @@ title       = "Detall Dades de Referència"
 description = "Visualització del detall d'una dada de referència"
 sections    = ["Dades Referencia"]
 categories  = ["Dades Referencia"]
-toc 	    = false
-no_index    = true
+hidden      = true
 weight= 5
 +++
 
