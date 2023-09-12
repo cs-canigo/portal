@@ -2,7 +2,8 @@ backend:
   name: github
   repo: cs-canigo/portal
   branch: master    
-  base_url: https://8nfrl3q3vj.execute-api.eu-west-1.amazonaws.com/default/cms/
+  #base_url: https://8nfrl3q3vj.execute-api.eu-west-1.amazonaws.com/default/cms/
+  base_url: https://cms-auth.fly.dev/
 
 media_folder: "static/images"
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
