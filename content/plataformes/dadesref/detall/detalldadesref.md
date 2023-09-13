@@ -2,7 +2,11 @@
 date        = "2023-09-12"
 title       = "Detall Dades de Referència"
 description = "Visualització del detall d'una dada de referència"
-headless    = true
+sections    = ["Data Architecture"]
+categories  = ["Data Architecture"]
+[_build]
+  list = false
+  render = false
 +++
 
   <div>
