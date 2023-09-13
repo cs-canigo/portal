@@ -5,8 +5,8 @@ description = "Visualització del detall d'una dada de referència"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 [_build]
-  list = false
-  render = false
+  list = never
+  render = always
 +++
 
   <div>
