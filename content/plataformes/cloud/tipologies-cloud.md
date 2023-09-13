@@ -1,12 +1,22 @@
-+++
-date        = "2019-02-25"
-title       = "Tipologies Cloud"
-description = "Descripció dels diferents tipus de cloud i les seves característiques més importants"
-sections    = "Cloud"
-categories  = ["cloud","docker","container","paas","openshift","kubernetes","swarm","azure"]
-aliases     = ["/cloud/tipologies-cloud/"]
-weight = 1
-+++
+---
+title: Tipologies Cloud
+description: Descripció dels diferents tipus de cloud i les seves
+  característiques més importants.
+date: 2019-02-25
+sections: Cloud
+categories:
+  - cloud
+  - docker
+  - container
+  - paas
+  - openshift
+  - kubernetes
+  - swarm
+  - azure
+aliases:
+  - /cloud/tipologies-cloud/
+weight: 1
+---
 
 Bàsicament es poden distingir 3 tipus de cloud:
 
