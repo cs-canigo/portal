@@ -4,6 +4,9 @@ title       = "Detall Dades de Referència"
 description = "Visualització del detall d'una dada de referència"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
+aliases = [
+    "/descripcio-arquitectura/detalldadesref"
+]
 [_build]
   list = 'never'
   publishResources = false

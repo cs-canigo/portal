@@ -5,6 +5,9 @@ description = "Gestió Tècnica de Dades"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 1
+aliases = [
+    "/dadesref/gestiodades"
+]
 +++
 
 ### Gestió Tècnica de Dades
