@@ -24,7 +24,8 @@ var indexSetup = {
 	"excludes" : [
 		"/drafts",
 		"/comunicat",
-		"/plataformes/dadesref"
+		"/plataformes/dadesref/json",
+		"/plataformes/dadesref/entitats"
 	]
 }
 
