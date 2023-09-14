@@ -1,0 +1,109 @@
+  <style>
+    @media (max-width:768px){
+      .cmsAction{display: block;}
+    }
+  </style>
+
+  {{ $chars := split .File.Dir "" }}
+  {{ $pathIndex := -1 }}
+
+  {{ range $index, $val := $chars }}
+      {{ if eq $val "\\" }}
+        {{ $pathIndex = $index}}
+        {{ break }}
+      {{ end }}
+  {{ end }}
+
+  <div class="row" style="display:none; margin-top:.5em; padding:.5em; padding-left: 1em; border:1px solid #ccc!important; background-color: #000; color: #fff" id="cms-editor">
+
+
+    {{/* $collection := substr .File.Dir 0 $pathIndex */}}
+
+    {{ $collection := .Section }}
+
+    {{ $filename := replace (print .File.Dir .File.BaseFileName) "\\" "/" }}
+    {{ $filename = replace $filename $collection "" }}
+
+    <div>
+      <span id="login" style="margin-right: .5em; display: none;"> Login </span>
+
+      <!--span github-auth-button style="margin-right: .5em;">Log in </span-->
+
+      {{ if .IsPage }}
+        <a href="/admin/#/collections/{{ $collection }}/entries{{ safeURL $filename }}" class="cmsAction" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">
+          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editPageText" }}
+        </a>
+      {{ end }}
+
+      {{ if .IsSection }}
+        <a href="/admin/#/collections/{{ $collection }}/new" id="cms-editor-link-add" class="cmsAction" style="color: #fff; margin-right: .5em;">
+          <span class="glyphicon glyphicon-plus text-small" aria-hidden="true"></span>{{ $.Scratch.Get "addPageText" }}
+        </a>
+        <!--a href="/admin/#/collections/{{ $collection }}/entries{{ safeURL $filename }}" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">
+          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editSectionText" }}
+        </a-->
+      {{ end }}
+
+      {{ if or .IsHome .IsSection}}
+        <!--a href="#" id="cms-editor-link-add" class="cmsAction" style="color: #fff; margin-right: .5em;" onclick="$('#addSectionBlock').css('display','inline'); return false;">
+          <span class="glyphicon glyphicon-plus text-small" aria-hidden="true"></span>{{ $.Scratch.Get "addSubSectionText" }}
+        </a>
+        <span style="display:none" id="addSectionBlock" class="cmsAction">
+          <input type="text" id="sectionName" style="color: #000;" />
+          <button type="button" id="sectionNameButton" class="btn btn-info" >
+            <span class="glyphicon glyphicon-ok"></span> OK
+          </button>
+        </span-->
+      {{ end }}
+  </div>
+
+  <script>
+   //CMS related stuff 
+   (function(w,o){
+        var url = w.location.href;
+        var cms=false;
+        try{url = new URL(url);cms=url.searchParams.get("cms")=='true'?true:false;}
+        catch(e){cms = url.indexOf("cms=true")>-1?true:false}
+
+        const login = document.getElementById("login");
+        login.style.display = "block";
+        login.style.cursor = "pointer";
+
+        login.onclick = function(){
+          githubAuth(function(){
+            console.log("logged");
+            login.style.display = "none";
+          });
+        }
+
+        let token = window.localStorage.getItem("decap-cms-user") || null;
+        token = token ? (JSON.parse(window.localStorage.getItem("decap-cms-user")).token || null) : window.localStorage.getItem("token");
+
+        if(token){
+          login.style.display = "none";
+        }
+
+        if(window.localStorage.getItem("decap-cms-user")){
+          cms=true;
+        }
+
+        if(cms){
+          var r;
+          for(var i=2,z=arguments.length; i<z;i++){
+            if(arguments[i].indexOf(".js")>-1){
+              r=o.createElement('script');r.async=1;
+              r.src=arguments[i];
+            }else if(arguments[i].indexOf(".css")>-1){
+              r=o.createElement('link');r.rel="stylesheet";
+              r.href=arguments[i];
+            }
+            o.getElementsByTagName('head')[0].appendChild(r);
+          }
+
+          //langs
+          if(!w.cms){w.cms = {};}
+          /*w.cms.currentlang = "{{.Lang}}";
+          w.cms.langs = "{{ $.Scratch.Get "lang" }}";*/
+        }
+    })(window,document,'/js/cms.js','/js/tingle.min.js','/css/tingle.min.css');
+  </script>
