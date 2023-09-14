@@ -19,7 +19,7 @@ var _indexDir = "../../public/"; //read index from and write to...
 
 var indexSetup = {
 	"dir" : "../../content/",
-	"index_empty_content" : true,
+	"index_empty_content" : false,
 	"excludeIfProps" : ["enllac","no_index"],
 	"excludes" : [
 		"/drafts",
