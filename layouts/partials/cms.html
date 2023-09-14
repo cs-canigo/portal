@@ -14,7 +14,7 @@
       {{ end }}
   {{ end }}
 
-  <div class="row" style="display:none; margin-top:.5em; padding:.5em; padding-left: 1em; border:1px solid #ccc!important; background-color: #000; color: #fff" id="cms-editor">
+  <div class="row" style="display:none; margin-top:.5em; padding:.5em; padding-left: 1em; border:1px solid #ccc!important; background-color: #ff0000; color: #fff" id="cms-editor">
 
 
     {{/* $collection := substr .File.Dir 0 $pathIndex */}}
@@ -39,6 +39,11 @@
         <a href="/admin/#/collections/{{ $collection }}/new" id="cms-editor-link-add" class="cmsAction" style="color: #fff; margin-right: .5em;">
           <span class="glyphicon glyphicon-plus text-small" aria-hidden="true"></span>{{ $.Scratch.Get "addPageText" }}
         </a>
+
+        <a href="/admin/#/collections/{{ $collection }}/entries/_index" class="cmsAction" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">
+          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editPageText" }}
+        </a>
+
         <!--a href="/admin/#/collections/{{ $collection }}/entries{{ safeURL $filename }}" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">
           <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editSectionText" }}
         </a-->
@@ -55,6 +60,7 @@
           </button>
         </span-->
       {{ end }}
+      </div>
   </div>
 
   <script>

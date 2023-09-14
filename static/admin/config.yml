@@ -6,6 +6,9 @@ backend:
   base_url: https://cms-auth.fly.dev/
   client_id: 51c93d314ea3c142bf03
 
+site_url: https://canigo.ctti.gencat.cat
+display_url: https://canigo.ctti.gencat.cat
+
 media_folder: "static/images"
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -16,14 +19,14 @@ collections:
     identifier_field: "name"
     create: true 
     fields:
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "name", widget: "string", required: false}
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Àlies (url)", name: "aliases", widget: "list"}
-      - {label: "Ordre", name: "weight", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Àlies (url)", name: "aliases", widget: "list", required: false}
+      - {label: "Ordre", name: "weight", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "plataformes"
     label: "Plataformes"
@@ -31,13 +34,13 @@ collections:
     create: true 
     fields:
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Àlies (url)", name: "aliases", widget: "list"}
-      - {label: "Ordre", name: "weight", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Àlies (url)", name: "aliases", widget: "list", required: false}
+      - {label: "Ordre", name: "weight", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "destacats"
     label: "Destacats"
@@ -45,11 +48,11 @@ collections:
     create: true 
     fields:
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Enllaç", name: "enllac", widget: "string"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Key", name: "key", widget: "string"}
+      - {label: "Enllaç", name: "enllac", widget: "string", required: false}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Key", name: "key", widget: "string", required: false}
 
   - name: "destacats-related"
     label: "Destacats (relacionats)"
@@ -57,10 +60,10 @@ collections:
     create: true 
     fields:
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "blog"
     label: "Blog"
@@ -71,14 +74,14 @@ collections:
     sortable_fields: ['date']
     fields:
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Etiquetes", name: "tags", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Imatge", name: "imatge", widget: "image"}
-      - {label: "Key", name: "key", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Etiquetes", name: "tags", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Imatge", name: "imatge", widget: "image", required: false}
+      - {label: "Key", name: "key", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
     
   - name: "howtos"
     label: "How To's"
@@ -86,12 +89,12 @@ collections:
     create: true 
     fields:
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Key", name: "key", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Key", name: "key", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "noticies"
     label: "Notícies"
@@ -101,9 +104,9 @@ collections:
       - {label: "Títol", name: "title", widget: "string"}
       - {label: "Descripció", name: "description", widget: "text"}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "drafts"
     label: "Drafts"
@@ -111,7 +114,7 @@ collections:
     create: true 
     fields:
       - {label: "Títol", name: "title", widget: "string"}
-      - {label: "Descripció", name: "description", widget: "text"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Seccions", name: "sections", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Seccions", name: "sections", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
