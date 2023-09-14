@@ -25,7 +25,7 @@
     {{ $filename = replace $filename $collection "" }}
 
     <div>
-      <span id="login" style="margin-right: .5em; display: none;"> Login </span>
+      <!--span id="login" style="margin-right: .5em; display: none;"> Login </span-->
 
       <!--span github-auth-button style="margin-right: .5em;">Log in </span-->
 
@@ -65,7 +65,7 @@
         try{url = new URL(url);cms=url.searchParams.get("cms")=='true'?true:false;}
         catch(e){cms = url.indexOf("cms=true")>-1?true:false}
 
-        const login = document.getElementById("login");
+        /*const login = document.getElementById("login");
         login.style.display = "block";
         login.style.cursor = "pointer";
 
@@ -81,7 +81,7 @@
 
         if(token){
           login.style.display = "none";
-        }
+        }*/
 
         if(window.localStorage.getItem("decap-cms-user")){
           cms=true;
