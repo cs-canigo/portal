@@ -1,3 +1,4 @@
+process.env.ALGOLIA_API_KEY = "7e6c4126f27e6aa7d9884cda392df546"
 if(!process.env.ALGOLIA_API_KEY){
 	console.error("No API KEY defined");
 	process.exit(0);
@@ -93,7 +94,7 @@ function runIndex(){
 
 /* refresh index by cleaning and indexing all*/
 function refreshIndex(_index){
-	algolia.deleteByQuery("", function(err) {
+	algolia.deleteBy("", function(err) {
 		if (!err) {
 			console.log('success deleting all');
 		}
@@ -168,7 +169,7 @@ function saveAlgolia(idx){
 /* Delete files from algolia */
 function deleteAlgolia(idx){
 	idx.map(function(_file){
-		algolia.deleteObject(new Buffer(_file).toString('base64'), function(err) {
+		algolia.deleteObject(Buffer.from(_file).toString('base64'), function(err) {
 			if (!err) {
 				console.log(_file + ' deleted');
 			}
