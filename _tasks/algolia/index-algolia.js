@@ -93,7 +93,7 @@ function runIndex(){
 
 /* refresh index by cleaning and indexing all*/
 function refreshIndex(_index){
-	algolia.deleteBy("", function(err) {
+	algolia.deleteByQuery("", function(err) {
 		if (!err) {
 			console.log('success deleting all');
 		}
@@ -168,7 +168,7 @@ function saveAlgolia(idx){
 /* Delete files from algolia */
 function deleteAlgolia(idx){
 	idx.map(function(_file){
-		algolia.deleteObject(Buffer.from(_file).toString('base64'), function(err) {
+		algolia.deleteObject(new Buffer(_file).toString('base64'), function(err) {
 			if (!err) {
 				console.log(_file + ' deleted');
 			}
