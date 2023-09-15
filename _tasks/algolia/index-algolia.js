@@ -1,4 +1,3 @@
-process.env.ALGOLIA_API_KEY = "7e6c4126f27e6aa7d9884cda392df546"
 if(!process.env.ALGOLIA_API_KEY){
 	console.error("No API KEY defined");
 	process.exit(0);
