@@ -61,9 +61,9 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 
 * 1.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.
 * 1.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components, només mantenint la seva interfície de comunicació, la seva signatura.
-* 1.2.3 Desacoblament entre aplicacions: cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament. Per exemple, relacions en l'àmbit de base de dades, ús de llibreries compartides, fitxers de configuració compartits, etc. En aquest sentit, el cloud ens ajuda a tenir elements dedicats per sistema d'informació, ja que la granularitat (potència, recursos, ...) dels components es pot ajustar al consum i no cal compartir entre sistemes.
+* 1.2.3 Desacoblament entre aplicacions: cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament. Per exemple, evitar relacions en l'àmbit de base de dades (utilitzar una base de dades per servei), evitar ús de llibreries i fitxers de configuració compartits, etc. En aquest sentit, el cloud ens ajuda a tenir elements dedicats per sistema d'informació, ja que la granularitat (potència, recursos, ...) dels components es pot ajustar al consum i no cal compartir entre sistemes.
 
-**1.3 Arquitectura orientada a serveis**. Les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacions s'han de dur a terme mitjançant serveis, principalment REST.
+**1.3 Arquitectura orientada a serveis**. Les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacions s'han de dur a terme mitjançant patrons síncrons o asíncrons segons (REST, event driven, ...).
 
 **1.4 Model de qualitat**, a l'hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el [Portal de Qualitat](https://qualitat.solucions.gencat.cat/).
 
@@ -75,7 +75,7 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 * 1.5.4 Les aplicacions que es depleguin a cloud públic es faran sota el paradigma d'Infraestructura com a Codi (IaC)
 * 1.5.5 Les aplicacions han de ser concebudes des del seu disseny per no requerir operació (NoOps). Totes les accions que pugui requerir l'aplicació per la seva evolució (desplegaments) i manteniment (tasques operacionals) han d'estar degudament automatitzades.
 
-**1.7** **[Solucions transversals](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/)**. Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="collapseMD" data-collapse-next="p ul"></span>
+**1.6** **[Solucions transversals](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/)**. Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. <span class="collapseMD" data-collapse-next="p ul"></span>
 
 A continuació es detallen algunes de les solucions transversals més esteses:
 
@@ -103,7 +103,7 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 
 **2.2 Estabilitat de les versions de programari**. Les versions de les diferents peces (productes, llibreries...) que composen un sistema han de ser el més estables possible. S'ha de fer ús de versions LTS (Long-Term Support) o bé, o en la seva mancança, la GA (General Availability) o la nomenclatura que hagi donat el fabricant com a estable. Un sistema productiu no pot incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formin part.
 
-**2.3 Interoperabilitat**. S'ha de garantir l'intercanvi d'informació i dades entre sistemes, i aquest es farà preferentment amb les plataformes corporatives orientades a aquest ús: API Manager i EventHub/Kafka.
+**2.3 Interoperabilitat**. S'ha de garantir l'intercanvi d'informació i dades entre sistemes, amb patrons síncrons o asínrons, i aquest es farà preferentment amb les plataformes corporatives orientades a aquest ús: API Manager i EventHub/Kafka.
 
 **2.4 [Els estàndards de qualitat](https://qualitat.solucions.gencat.cat/estandards/)** definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. <span class="collapseMD" data-collapse-next="p ul"></span>
 
