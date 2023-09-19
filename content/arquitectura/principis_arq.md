@@ -5,7 +5,7 @@ langs:
 title: Principis d'arquitectura de sistemes d'informació
 description: Normas i directrius generals destinades a informar i recolzar la
   forma en què CTTI vol que s'implementin els Sistemes d'Informació.
-date: 2023-09-13
+date: 2023-09-19T11:31:32.976Z
 sections:
   - principis
 imatge: /images/bloc/principis.png
