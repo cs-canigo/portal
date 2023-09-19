@@ -45,9 +45,7 @@ Des d'un punt de vista d'arquitectura empresarial, l'arbre de decisió que guiar
 
 ## 1. Principis sobre el disseny d’aplicacions
 
-**1.1 Segregació de funcions/responsabilitats**. 
-
-Les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits. <span class="collapseMD" data-collapse-next="p ul"></span>
+**1.1 Segregació de funcions/responsabilitats**. Les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits. <span class="collapseMD" data-collapse-next="p ul"></span>
 
 Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:
 
