@@ -6,6 +6,7 @@ backend:
   base_url: https://cms-auth.fly.dev/
   client_id: 51c93d314ea3c142bf03
 
+publish_mode: editorial_workflow
 site_url: https://canigo.ctti.gencat.cat
 display_url: https://canigo.ctti.gencat.cat
 
