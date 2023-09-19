@@ -62,6 +62,7 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 * 1.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.
 * 1.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components, només mantenint la seva interfície de comunicació, la seva signatura.
 * 1.2.3 Desacoblament entre aplicacions: cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament. Per exemple, evitar relacions en l'àmbit de base de dades (utilitzar una base de dades per servei), evitar ús de llibreries i fitxers de configuració compartits, etc. En aquest sentit, el cloud ens ajuda a tenir elements dedicats per sistema d'informació, ja que la granularitat (potència, recursos, ...) dels components es pot ajustar al consum i no cal compartir entre sistemes.
+* 1.2.4 Alta disponibilitat dels components: utilitzar els mecanismes d'alta disponibilitat que ofereixen els diferents serveis (p.e. balanceig per a la capa d'aplicacions, preferentment *stateless, o* bases de dades amb rèpliques de lectura o altres mecanismes de HA). 
 
 **1.3 Arquitectura orientada a serveis**. Les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacions s'han de dur a terme mitjançant patrons síncrons o asíncrons segons (APIs REST, Event Driven, ...).
 
@@ -100,9 +101,9 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 * 2.1.1 Per a la creació d’aplicacions orientades a serveis, els serveis (backend) exposaran el seu negoci mitjançant REST i en format JSON (REST permet ser consumit per qualsevol tecnologia que interpreti HTTP).
 * 2.1.2 En el cas d’aplicacions web, la presentació estarà construïda amb tecnologies estàtiques  (html5/javascript/css) i consumirà els serveis que li proporcioni el backend. 
 
-**2.2 Estabilitat de les versions de programari**. Les versions de les diferents peces (productes, llibreries...) que composen un sistema han de ser el més estables possible. S'ha de fer ús de versions LTS (Long-Term Support) o bé, o en la seva mancança, la GA (General Availability) o la nomenclatura que hagi donat el fabricant com a estable. Un sistema productiu no pot incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formin part.
+**2.2 Estabilitat de les versions de programari**. Les versions de les diferents peces (productes, llibreries...) que composen un sistema han de ser el més estables possible. S'ha de fer ús de versions LTS (Long-Term Support) o bé, o en la seva mancança, la GA (General Availability) o la nomenclatura que hagi donat el fabricant com a estable. Un sistema productiu no pot incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formin part. 
 
-**2.3 Interoperabilitat**. S'ha de garantir l'intercanvi d'informació i dades entre sistemes, amb patrons síncrons o asínrons, i aquest es farà preferentment amb les plataformes corporatives orientades a aquest ús: API Manager i EventHub/Kafka.
+**2.3 Interoperabilitat**. S'ha de garantir l'intercanvi d'informació i dades entre sistemes, amb patrons síncrons o asínrons, i aquest es farà preferentment amb les plataformes corporatives orientades a aquest ús: [API Manager](/plataformes/apim/) i [EventHub/Kafka](/related/eventhub/WelcomePackKafka_latest.pdf).
 
 **2.4 [Els estàndards de qualitat](https://qualitat.solucions.gencat.cat/estandards/)** definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. <span class="collapseMD" data-collapse-next="p ul"></span>
 
@@ -117,7 +118,7 @@ A continuació es llisten els relacionats amb els principis d'arquitectura:
 
 * La comunicació entre sistemes desplegats a núvol públic amb sistemes desplegats on-premise només es pot fer via les interfícies de servei que el sistema exposi (APIs).
 
-**2.6 Ús d'HTTPS**. Les urls de les aplicacions i els serveis publicats tant a internet com a xCAT (xarxa intranet de la Generalitat) es faran mitjançant l'ús de protocols segurs (https).	
+**2.6 Ús de protocols segurs** per a les aplicacions publicades, així com d'altres mecanismes per a evitar atacs de DDoS, SQL Injection, Cross Site Scripting i d'altres. També s'ha de valorar per a aplicacions crítiques l'encriptat de dades en repòs.	
 
 **2.7 Mateixa arquitectura per Preproducció i Producció**. Per a què les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al disseny, encara que els recursos assignats a preproducció siguin inferiors. En aquest cas, l'ús de cloud públic i infraestructura com a codi facilitarà la replicabilitat i equivalència d'entorns.
 
