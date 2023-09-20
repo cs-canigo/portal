@@ -62,7 +62,7 @@ Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot d
 * 1.2.3 Desacoblament entre aplicacions: cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament. Per exemple, evitar relacions en l'àmbit de base de dades (utilitzar una base de dades per servei), evitar ús de llibreries i fitxers de configuració compartits, etc. En aquest sentit, el cloud ens ajuda a tenir elements dedicats per sistema d'informació, ja que la granularitat (potència, recursos, ...) dels components es pot ajustar al consum i no cal compartir entre sistemes.
 * 1.2.4 Alta disponibilitat dels components: utilitzar els mecanismes d'alta disponibilitat que ofereixen els diferents serveis (p.e. balanceig per a la capa d'aplicacions, preferentment *stateless, o* bases de dades amb rèpliques de lectura o altres mecanismes de HA). 
 
-**1.3 Arquitectura orientada a serveis**. Les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacions s'han de dur a terme mitjançant patrons síncrons o asíncrons segons (APIs REST, Event Driven, ...).
+**1.3 Arquitectura orientada a serveis**. Les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacions s'han de dur a terme mitjançant patrons síncrons o asíncrons segons el cas (APIs REST, Event Driven, ...).
 
 **1.4 Model de qualitat**, a l'hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el [Portal de Qualitat](https://qualitat.solucions.gencat.cat/).
 
