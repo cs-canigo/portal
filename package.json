@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegoptim": "^8.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "lint-staged": "^14.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{jpeg,jpg,png,svg}": [
+      "node ./_tasks/imagemin/asset-optim.js",
+      "git add"
+    ]
+  }
+}

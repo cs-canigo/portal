@@ -1,0 +1,70 @@
+
+const searchClient = algoliasearch(
+  'SQZ0PDH35B',
+  '36b9c3ee8bb800e0212913189cd5cdea'
+);
+
+const search = instantsearch({
+  indexName: 'prod_MODULS-CANIGO',
+  searchClient,
+  insights: true,
+});
+
+search.addWidgets([
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+  }),
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item: (hit, { html, components }) => html`
+        <article>
+          <h1 style="text-align: left">${components.Highlight({ hit, attribute: 'codi' })}</h1>
+          <p style="text-align: left">${components.Highlight({ hit, attribute: 'nom' })}</p>
+          <p style="text-align: left">${components.Highlight({ hit, attribute: 'rev' })}</p>
+          <p style="text-align: left">${components.Highlight({ hit, attribute: 'modules' })}</p>
+        </article>
+      `,
+    },
+  }),
+  instantsearch.widgets.stats({
+    container: '#stats',
+    templates:  {
+      text(data, { html }) {
+        let count = '';
+  
+        if (data.hasManyResults) {
+          count += `S'han trobat ${data.nbHits} resultats`;
+        } else if (data.hasOneResult) {
+          count += `S'ha trobat 1 resultat`;
+        } else {
+          count += `No s'han trobat resultats`;
+        }
+  
+        return html`<span>${count} en ${data.processingTimeMS}ms</span>`;
+      },
+    }
+  }),
+  instantsearch.widgets.configure({
+    hitsPerPage: 8,
+  }),
+  instantsearch.widgets.refinementList({
+      container: '#filters-list',
+      operator: 'or',
+      limit: 10,
+      attribute: 'major',
+  }),
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+  }),
+]);
+
+search.start();
+
+function getTemplate(templateName) {
+  return document.querySelector('#' + templateName + '-template').innerHTML;
+}
+
+function getHeader(title) {
+  return '<h3>' + title + '</h3>';
+}

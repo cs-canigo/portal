@@ -4,7 +4,7 @@ var algoliasearch = require('algoliasearch');
 var client = algoliasearch('SQZ0PDH35B', process.env.ALGOLIA_API_KEY);
 var algolia = client.initIndex('prod_MODULS-CANIGO-V2');
 
-data = readFile("./data/canigoAppsInfoV3.json");
+data = readFile("./data/canigoAppsInfoV2.json");
 
 console.log('Processing JSON data ...');
 var _index = processData(JSON.parse(data));
