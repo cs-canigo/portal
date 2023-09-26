@@ -1,5 +1,5 @@
 +++
-date        = "2023-07-17"
+date        = "2023-09-26"
 title       = "Elements del catàleg de contenidors"
 description = "Descripció de les imatges docker base proporcionades pel CTTI."
 sections    = "Cloud"
@@ -19,26 +19,22 @@ Podeu trobar aquestes imatges certificades al [registre privat](https://registre
 
 **Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
 ------------ | ------------ |-------------------- |-----------
-Apache 		 | 2.4    | registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd:2.4   | [httpd](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/tree/2.4)
-Apache GICAR Shibboleth| 1.0.3    |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3   | [gicar-shibboleth](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth/tree/1.0.3)
-Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3   | [gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
-Apache Proxy ElasticSearch  	 | 2.4-1.0   |registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0   | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/tree/2.4-1.0)
-Nginx  	 | 1.20   |registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.20   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.20)
-GICAR Nginx 	 | 1.0.0  |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0   | [gicar-nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx/tree/1.0.0)
-GICAR Nginx Kubernetes/Openshift	 | 1.0.0  |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0   | [gicar-nginx-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx-openshift/tree/1.0.0)
-Java		 | 8  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8)
-Java		 | 11-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:11-openjdk   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/11)
-.Net Core    | 3.1   | registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-3.1   | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/3.1)
+Apache 		 | 2.4.57    | registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd:2.4.57   | [httpd]([https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/tree/2.4](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/-/tree/2.4.57)
+Apache GICAR Shibboleth| 2.0.0    |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth:2.0.0   | [gicar-shibboleth](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth/-/tree/v2.0.0)
+Apache GICAR Shibboleth Kubernetes/Openshift| 2.0.0    |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:2.0.0   | [gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/-/tree/2.0.0)
+Apache Proxy ElasticSearch  	 | 2.4.1-alpine-3.18   |registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4.1-alpine-3.18  | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/-/tags/2.4.1-alpine-3.18)
+Nginx  	 | 1.22   |registreimatges.sic.intranet.gencat.cat/gencatcloud/nginx:1.22   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/-/tree/1.22)
+GICAR Nginx 	 | 2.1  |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx:2.1   | [gicar-nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx/-/tree/2.1)
+GICAR Nginx Kubernetes/Openshift	 | 2.1  |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-nginx-openshift:2.1   | [gicar-nginx-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx-openshift/-/tree/2.1)
+Java		 | 8  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8-alpine-3.18   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/8-alpine-3.18)
+Java		 | 11-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:11.0.20-alpine-3.18   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/11.0.20-alpine-3.18)
+Java		 | 17-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:17.0.8-openjdk  | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/17.0.8-openjdk)
 .Net Core    | 6.0.19   | registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-6.0.19   | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/1.0-6.0.19)
-NodeJS 		 | 14   | registreimatges.sic.intranet.gencat.cat/gencatcloud/node:14   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/14)
-NodeJS 		 | 16   | registreimatges.sic.intranet.gencat.cat/gencatcloud/node:16   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/16)
-NodeJS 		 | 18   | registreimatges.sic.intranet.gencat.cat/gencatcloud/node:18   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/18)
-PHP 		 | 8.0   | registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:8.0   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/8.0)
+NodeJS 		 | 18.16.1   | registreimatges.sic.intranet.gencat.cat/gencatcloud/node:18.16.1   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/-/tree/18.16.1)
 PHP 		 | 8.1   | registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:8.1   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/8.1)
-Tomcat  	 | 9.0-java8   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java8   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java8)
-Tomcat  	 | 9.0-java11   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9.0-java11   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java11)
-Tomcat amb suport de Sessions distribuïdes | 9.0-java8   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java8)
-Tomcat amb suport de Sessions distribuïdes  | 9.0-java11   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java11)
+Tomcat  	 | 9.0-java8   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9-java8-alpine-3.18   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/-/tree/9-alpine-3.18-java8)
+Tomcat  	 | 10.0-java17   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:10-alpine-3.18   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/-/tree/10-alpine-3.18)
+Tomcat amb suport de Sessions distribuïdes  | 10.0-java17   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat-hc:10-alpine-3.18   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/-/tree/10-alpine-3.18)
 
 **IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques de construcció i desplegament s'ha de fer ús de les corresponents pipelines al Jenkins del SIC.
 
