@@ -19,7 +19,7 @@ Podeu trobar aquestes imatges certificades al [registre privat](https://registre
 
 **Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
 ------------ | ------------ |-------------------- |-----------
-Apache 		 | 2.4.57    | registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd:2.4.57   | [httpd]([https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/tree/2.4](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/-/tree/2.4.57)
+Apache 		 | 2.4.57    | registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd:2.4.57   | [httpd](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd/-/tree/2.4.57)
 Apache GICAR Shibboleth| 2.0.0    |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth:2.0.0   | [gicar-shibboleth](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth/-/tree/v2.0.0)
 Apache GICAR Shibboleth Kubernetes/Openshift| 2.0.0    |registreimatges.sic.intranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:2.0.0   | [gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/-/tree/2.0.0)
 Apache Proxy ElasticSearch  	 | 2.4.1-alpine-3.18   |registreimatges.sic.intranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4.1-alpine-3.18  | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/-/tags/2.4.1-alpine-3.18)
