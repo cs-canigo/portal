@@ -62,7 +62,10 @@ En el núvol públic hi podem desplegar diferents tipologies principals de serve
 
 
 ## Cloud híbrid
-El cloud híbrid el podríem considerar com una solució intermèdia, on es combinen elements de catàleg de cloud privat i cloud públic al mateix temps. Aquesta solució potència les debilitats del cloud privat i del cloud públic alhora que manté les fortaleses respectives de cada solució.​
+
+El cloud híbrid el podríem considerar com una solució intermitja, on es combinen elements de catàleg de cloud privat i cloud públic al mateix temps. 
+
+En el cas de projectes híbrids, la comunicació entre CPDs On-prem i el Cloud Públic ha de fer-se sempre a través de la NET0.
 
 ## Resum de tecnologies
 

@@ -10,6 +10,7 @@ canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
 pluralizelisttitles = false
 disablePathToLower = true
+preserveTaxonomyNames = false
 
 Paginate = 10
 

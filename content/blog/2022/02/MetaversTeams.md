@@ -4,8 +4,8 @@ title       = "Metavers al Microsoft Teams"
 description = "Microsoft actualment té una línia de treball  per ampliar l’eina col·laborativa Teams al Metavers."
 responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
-blog_tags   = ["office365", "microsoft"]
-categories  = ["office365", "microsoft"]
+blog_tags   = ["office365", "Microsoft"]
+categories  = ["office365", "Microsoft"]
 imatge      = "/images/bloc/2022/02/Mesh_Avatars.JPG"
 key         = "FEBRER2022"
 +++

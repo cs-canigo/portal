@@ -3,8 +3,8 @@ date        = "2017-09-01"
 title       = "Angular: Estat actual i evolució"
 description = "Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom"
 sections    = ["Blog", "home"]
-blog_tags   = ["desenvolupament", "Eines", "SPA", "Frameworks", "Angular"]
-categories  = ["desenvolupament", "Eines", "SPA", "Frameworks"]
+blog_tags   = ["desenvolupament", "eines", "SPA", "Frameworks", "Angular"]
+categories  = ["desenvolupament", "eines", "SPA", "Frameworks"]
 imatge      = "/images/bloc/201709/logoAngularllarg.png"
 key         = "SETEMBRE2017"
 +++
