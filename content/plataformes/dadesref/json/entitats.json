@@ -1642,16 +1642,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Actualització per canvi de nom de diverses ABS (Codis ABS afectades: 103, 138, 140, 141, 169, 206, 255, 256, 329, 371 i 372) i desdoblar l'ABS de codi 176 PENEDÈS RURAL en 405 PENEDÈS RURAL EST i 406 PENEDÈS RURAL OEST.",
                 "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
-                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "ifitxer_xls": "deprecated/Arees_basiques_salut_V03.xlsx",
                 "idatacreacio": "25/07/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/09/2023",
                 "idatapublicacio": "26/07/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "Es modifica el nom de l'ABS de codi 385: \"BARCELONA 8J\" (nom anterior) per \"BARCELONA 8-J\" (nom actualitzat).",
+                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "idatacreacio": "26/09/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/09/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1659,7 +1674,7 @@
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
         "Classificacio": "Consolidat",
         "Data_publicacio": "27/04/2022",
-        "Data_actualitzacio": "26/07/2023"
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq158",
@@ -2023,16 +2038,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament d'Igualtat i Feminismes",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Genere_ATR.docx",
-                "ifitxer_xls": "Genere.xlsx",
+                "ifitxer_xls": "deprecated/Genere_V01.xlsx",
                 "idatacreacio": "31/03/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/09/2023",
                 "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament d'Igualtat i Feminismes",
+                "idescripcio": "Es modifica el nom \"No binari\" (valor anterior) per \"No-binari\" (valor actualitzat).",
+                "ifitxer_doc": "Genere_ATR.docx",
+                "ifitxer_xls": "Genere.xlsx",
+                "idatacreacio": "26/09/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/09/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/G-nere/rpg6-9mu9",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2040,7 +2070,7 @@
         "nom_dinsBD": "GENERE",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "31/03/2021"
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq54",
@@ -2107,16 +2137,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Relacio_Parentiu_ATR.docx",
-                "ifitxer_xls": "Relacio_Parentiu.xlsx",
+                "ifitxer_xls": "deprecated/Relacio_Parentiu_V01.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/09/2023",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
+                "idescripcio": "S'afegeix el valor \"Germanastre/Germanastra\" i es modifica \"Pare/Mare\" (valor anterior) per \"Progenitor/Progenitora\" (valor actualitzat).",
+                "ifitxer_doc": "Relacio_Parentiu_ATR.docx",
+                "ifitxer_xls": "Relacio_Parentiu.xlsx",
+                "idatacreacio": "26/09/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/09/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Relaci%C3%B3-parentiu/drhd-wfr8",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2124,7 +2169,7 @@
         "nom_dinsBD": "RELACIO_PARENTIU",
         "Classificacio": "Consolidat",
         "Data_publicacio": "23/02/2022",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq45",
@@ -2206,16 +2251,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
                 "idescripcio": "Modificació per incorporar el valor \"Document d’identitat estranger\".",
                 "ifitxer_doc": "Tipus_identificador_persona_fisica_ATR.docx",
-                "ifitxer_xls": "Tipus_identificador_persona_fisica.xlsx",
+                "ifitxer_xls": "deprecated/Tipus_identificador_persona_fisica_V02.xlsx",
                 "idatacreacio": "22/11/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/09/2023",
                 "idatapublicacio": "23/11/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General de Serveis Digitals i Experiència Ciutadana",
+                "idescripcio": "Es modifiquen els valors del registre de codi 03: Targeta d'identificació Sanitaria TIS (versió anterior) per Targeta sanitària individual TSI (versió actualitzada).",
+                "ifitxer_doc": "Tipus_identificador_persona_fisica_ATR.docx",
+                "ifitxer_xls": "Tipus_identificador_persona_fisica.xlsx",
+                "idatacreacio": "26/09/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/09/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Tipus-Identificador/vzfi-u5tr",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2223,7 +2283,7 @@
         "nom_dinsBD": "TIPUS_IDENTIFICADOR_PERSONA_FISICA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/06/2022",
-        "Data_actualitzacio": "23/11/2022"
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq55",
@@ -2788,16 +2848,31 @@
             },
             {
                 "inom": "V15",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom d'un municipi: Codi 310403 Atez/Atetz (nom anterior) per Atetz (nom actualitzat).",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_V15.xlsx",
                 "idatacreacio": "25/07/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/09/2023",
                 "idatapublicacio": "26/07/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V16",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització per canvi de nom d'un municipi: Codi 240362 Candín (nom anterior) per Valle de Ancares (nom actualitzat).",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "26/09/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/09/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2805,7 +2880,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "26/07/2023"
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq127",
@@ -3398,16 +3473,31 @@
             },
             {
                 "inom": "V14",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització per canvi de nom d'una unitat poblacional: Codi 31040000000 Atez/Atetz (nom anterior) per Atetz (nom actualitzat).",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V14.xlsx",
                 "idatacreacio": "25/07/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/09/2023",
                 "idatapublicacio": "26/07/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V15",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització per canvi de nom d'una municipi: Candín (nom anterior) per Valle de Ancares (nom actualitzat). Codis de les unitats poblacionals afectades: 24036000000, 24036000200, 24036000201.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "26/09/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/09/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3415,7 +3505,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "26/07/2023"
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq175",
@@ -3524,25 +3614,25 @@
         "Descripcio": "Llista de codis de durada de la jornada laboral utilitzats dins de l'Eurostat - Reference And Management Of Nomenclatures",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "DGAD",
-                "idescripcio": "Versió inicial",
+                "ipromotor": "Direcció General d'Administració Digital",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Durada_jornada_laboral_ATR.docx",
                 "ifitxer_xls": "Durada_jornada_laboral.xlsx",
                 "idatacreacio": "21/03/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "22/03/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "27/09/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Durada-jornada-laboral/rsf6-47q3",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "DURADA_JORNADA_LABORAL",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "22/03/2023",
-        "Data_actualitzacio": "22/03/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "27/09/2023",
+        "Data_actualitzacio": "27/09/2023"
     },
     {
         "Id": "dtarq179",
