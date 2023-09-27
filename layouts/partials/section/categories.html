@@ -15,9 +15,9 @@
 					
 					<div class="panel-body fons_blanc">
 						<ul class="llistat_enllacos_filet_cont list-group">
-						  {{ range $name, $taxonomy := .Site.Taxonomies.blog_tags }}
-							<!--li><a href="/blog_tags/{{ $name | lower | urlize }}">{{ lower (replace $name "-" " ") }} ({{len $taxonomy}})</a></li-->
-						  	<li><a href="/blog_tags/{{ $name }}">{{ lower $name }} ({{len $taxonomy}})</a></li>
+						  {{ range  .Site.Taxonomies.blog_tags.Alphabetical  }}
+						  	<li><a href="/blog_tags/{{ .Term }}">{{ lower .Term }} ({{ .Count}}) 
+							</a></li>
 						  {{ end }}
 						</ul>
 					</div>
