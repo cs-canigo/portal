@@ -36,7 +36,6 @@ A nivell mundial, hi ha més de mil milions de connexions 5G a través de la cin
 
 Les xarxes 5G SA es construeixen amb una infraestructura tant a la xarxa d'accés de ràdio (RAN) com a la xarxa bàsica, juntament amb principis nadius del núvol, com ara la virtualització, els contenidors i els microserveis. Són més flexibles, escalables i eficients en l'ús dels recursos de la xarxa, cosa que produeix una millor experiència d'usuari final per als consumidors, i costos més baixos pels operadors sense fil.<br><br>
 
-
 ### **Característiques del 5G SA** 
 
 Les  principals característiques del 5G Standalone (5G SA) milloren significativament la connectivitat e impulsen la innovació a través de diverses industries.<br>
