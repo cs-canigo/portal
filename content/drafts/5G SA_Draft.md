@@ -34,10 +34,8 @@ El **5G SA** és una variant de la tecnologia 5G, que pertany a la cinquena gene
 
 A nivell mundial, hi ha més de mil milions de connexions 5G a través de la cinquena generació d'estàndards de comunicació sense fil, inclosa la versió 5G Standalone (5G SA). Tot i que la majoria són compatibles amb xarxes 5G no autònomes (NSA) que depenen de xarxes 4G LTE per funcionar, els operadors sense fil, estan desplegant cada cop més la tecnologia 5G autònoma (SA), que es considera la tecnologia 5G autèntica.<br>
 
-Les xarxes 5G SA es construeixen amb una infraestructura tant a la xarxa d'accés de ràdio (RAN) com a la xarxa bàsica, juntament amb principis nadius del núvol, com ara la virtualització, els contenidors i els microserveis. Són més flexibles, escalables i eficients en l'ús dels recursos de la xarxa, cosa que produeix una millor experiència d'usuari final per als consumidors, i costos més baixos pels operadors sense fil.<br>
+Les xarxes 5G SA es construeixen amb una infraestructura tant a la xarxa d'accés de ràdio (RAN) com a la xarxa bàsica, juntament amb principis nadius del núvol, com ara la virtualització, els contenidors i els microserveis. Són més flexibles, escalables i eficients en l'ús dels recursos de la xarxa, cosa que produeix una millor experiència d'usuari final per als consumidors, i costos més baixos pels operadors sense fil.<br><br>
 
-<br>
-<br>
 
 ### **Característiques del 5G SA** 
 
@@ -96,25 +94,19 @@ El elements essencials de la xarxa central són:
 
 * **Antenes Intel·ligents (MIMO Massive):** Les antenes MIMO (Multiple-Input, Multiple-Output) són un component clau de la RA. Aquestes antenes permeten diverses transmissions simultànies d'informació i milloren la capacitat i la fiabilitat de la connexió sense fil.<br>
 
-* **Infraestructura de Computació (Edge):** La computació Edge es col·loca  estratègicament més a prop dels usuaris finals, reduint la latència i permetent el processament en temps real per aplicacions com la realitat augmentada, els vehicles autònoms i l'IoT.<br>
+* **Infraestructura de Computació (Edge):** La computació Edge es col·loca  estratègicament més a prop dels usuaris finals, reduint la latència i permetent el processament en temps real per aplicacions com la realitat augmentada, els vehicles autònoms i l'IoT.<br><br>
 
-<br>
-<br>
 
 ### **Xarxa d'Accés per Ràdio (RAN)**
 
 * **Núvol de Control (Control Plane):** Aquesta part de la xarxa és responsable de gestionar i controlar les comunicacions entre els dispositius i els elements de la xarxa. Coordina les connexions, el manteniment de la connexió i la gestió de la mobilitat dels dispositius.<br>
-* **Núvol de Dades (Data Plane):** Aquesta part de la xarxa és on es transmeten les dades entre els dispositius i altres components de la xarxa. Proporciona una connexió d'alta velocitat i baixa latència per garantir que les aplicacions i els serveis funcionin amb eficàcia.<br>
+* **Núvol de Dades (Data Plane):** Aquesta part de la xarxa és on es transmeten les dades entre els dispositius i altres components de la xarxa. Proporciona una connexió d'alta velocitat i baixa latència per garantir que les aplicacions i els serveis funcionin amb eficàcia.<br><br>
 
-<br>
-<br>
 
 ### **Network Slicing**
 
-El tall de xarxa és un component crític al 5G SA, permetent que la xarxa es divideixi virtualment en múltiples segments. Aquest component gestiona la creació i la gestió dels  diferents segments. Cada segment és una xarxa virtual independent que pot estar optimitzat per un cas d'ús específic com aplicacions d'Internet de les Coses (IoT), realitat augmentada (AR) o vehicles autònoms. Aquesta capacitat permet una personalització de la xarxa segons les necessitats.<br>
+El tall de xarxa és un component crític al 5G SA, permetent que la xarxa es divideixi virtualment en múltiples segments. Aquest component gestiona la creació i la gestió dels  diferents segments. Cada segment és una xarxa virtual independent que pot estar optimitzat per un cas d'ús específic com aplicacions d'Internet de les Coses (IoT), realitat augmentada (AR) o vehicles autònoms. Aquesta capacitat permet una personalització de la xarxa segons les necessitats.<br><br>
 
-<br>
-<br>
 
 ### **Funcions virtualitzades i components d’orquestració**
 
@@ -124,10 +116,8 @@ El tall de xarxa és un component crític al 5G SA, permetent que la xarxa es di
 
 ## **5G SA vs 5G NSA** {#Comparativa}
 
-L'elecció entre 5G Standalone (5G SA) i 5G Non-Standalone (5G NSA) és una decisió crucial en el desplegament de les xarxes 5G, ja que afecta directament la forma en què les xarxes són construïdes i les capacitats que ofereixen. En aquesta comparació detallada, s’explorarà les diferències entre aquestes dues variants de 5G.<br>
+L'elecció entre 5G Standalone (5G SA) i 5G Non-Standalone (5G NSA) és una decisió crucial en el desplegament de les xarxes 5G, ja que afecta directament la forma en què les xarxes són construïdes i les capacitats que ofereixen. En aquesta comparació detallada, s’explorarà les diferències entre aquestes dues variants de 5G.<br><br>
 
-<br>
-<br>
 
 ### **Diferències**
 
@@ -143,10 +133,8 @@ Es destaquen les diferencies principals en tres blocs:<br><br>
 
 **Flexibilitat i Personalització de la Xarxa:**
 * **5G SA:** Permet una major flexibilitat i personalització de la xarxa mitjançant el segments de xarxa (network slicing). Aquest fet possibilita la creació de xarxes virtuals independents adaptades a casos d'ús específics.<br>
-* **5G NSA:** Té limitacions en la flexibilitat de la xarxa, ja que encara depèn de la xarxa 4G per algunes funcions, la qual cosa pot restringir les opcions de personalització.<br>
+* **5G NSA:** Té limitacions en la flexibilitat de la xarxa, ja que encara depèn de la xarxa 4G per algunes funcions, la qual cosa pot restringir les opcions de personalització.<br><br>
 
-<br>
-<br>
 
 ### **Quan triar 5G SA, en comptes de 5G NSA**
 
@@ -167,7 +155,7 @@ El 5G Standalone (5G SA) està obrint la porta a una àmplia gamma de casos d'ú
 * **Vehicles Autònoms:** El baixíssim temps de latència de 5G SA permet la comunicació en temps real entre vehicles autònoms i la infraestructura viària, millorant la seguretat i la coordinació en el trànsit.<br>
 
 **Sanitat Avançada:**
-* ***Cirurgia Remota:** Amb una baixa latència, els cirurgians poden realitzar cirurgies a distància amb precisió mil·limètrica utilitzant robots quirúrgics connectats a través de xarxes 5G.<br>
+* **Cirurgia Remota:** Amb una baixa latència, els cirurgians poden realitzar cirurgies a distància amb precisió mil·limètrica utilitzant robots quirúrgics connectats a través de xarxes 5G.<br>
 
 **Realitat Augmentada (RA) i Realitat Virtual (RV):**
 * **Jocs Immersius:** Permet jocs en línia més rics i immersius amb gràfics d'alta qualitat i respostes instantànies.<br>
@@ -192,10 +180,7 @@ El 5G Standalone (5G SA) està obrint la porta a una àmplia gamma de casos d'ú
 * **Conferències i Col·laboració en Línia:** Les empreses poden millorar les seves comunicacions i col·laboració amb conferències de vídeo i eines de comunicació en línia de qualitat superior.<br>
 
 **Serveis d'Emergència Millorats:**
-* **Resposta Ràpida:** Permet una millora significativa en les comunicacions d'emergència, reduint el temps de resposta en situacions crítiques.<br>
-
-<br>
-<br>
+* **Resposta Ràpida:** Permet una millora significativa en les comunicacions d'emergència, reduint el temps de resposta en situacions crítiques.<br><br>
 
 Aquests són alguns dels exemples on el 5G SA pot habilitar. La baixa latència, l'amplada de banda, la seguretat millorada i la flexibilitat de les xarxes 5G SA obren la porta a la innovació i la millora en una àmplia gamma d'indústries i àmbits d'aplicació. A mesura que aquesta tecnologia es desplegui i es desenvolupin més casos d'ús, es poden esperar canvis significatius en la forma en què vivim i treballem.<br>
 
@@ -221,10 +206,8 @@ En resum, el 5G SA adopta una sèrie de mesures de seguretat per abordar els des
 
 ### **Què és el Network Slicing?**
 
-És una característica arquitectònica central de la tecnologia 5G Standalone (5G SA) que permet als operadors de xarxes crear múltiples xarxes virtuals, cadascuna adaptada a casos d'ús o serveis específics. Permet compartir eficientment una única infraestructura física de xarxa 5G mentre proporciona recursos de xarxa aïllats i dedicats per a diferents aplicacions.<br>
+És una característica arquitectònica central de la tecnologia 5G Standalone (5G SA) que permet als operadors de xarxes crear múltiples xarxes virtuals, cadascuna adaptada a casos d'ús o serveis específics. Permet compartir eficientment una única infraestructura física de xarxa 5G mentre proporciona recursos de xarxa aïllats i dedicats per a diferents aplicacions.<br><br>
 
-<br>
-<br>
 
 ### **Implementació i Desafiaments**
 
@@ -244,10 +227,8 @@ De forma resumida, és una capacitat potent que permet als operadors de xarxes p
 
 ## **Desplegament i llançament de 5G SA** {#Desplegament}
 
-La implementació i desplegament de les xarxes 5G Standalone han guanyat impuls a tot el món, obrint una nova era de connectivitat. En aquest apartat es tractarà l'adopció global, els reptes, les consideracions i els plans de futur per l'expansió.<br>
+La implementació i desplegament de les xarxes 5G Standalone han guanyat impuls a tot el món, obrint una nova era de connectivitat. En aquest apartat es tractarà l'adopció global, els reptes, les consideracions i els plans de futur per l'expansió.<br><br>
 
-<br>
-<br>
 
 ### **Adopció a Nivell Mundial**
 
@@ -276,10 +257,8 @@ Es destaca els següents punts a nivell general  a tenir en compte:<br>
 
 ## **5G SA i més enllà** {#MesEnlla}
 
-L'evolució de les tecnologies de comunicació sense fils és un viatge en curs, i el 5G Standalone (5G SA) representa una fita significativa. En aquest apartat es tractarà el potencial evolutiu del 5G SA, el camí cap al 6G i les tecnologies i tendències emergents.<br>
+L'evolució de les tecnologies de comunicació sense fils és un viatge en curs, i el 5G Standalone (5G SA) representa una fita significativa. En aquest apartat es tractarà el potencial evolutiu del 5G SA, el camí cap al 6G i les tecnologies i tendències emergents.<br><br>
 
-<br>
-<br>
 
 ### **Potencial Evolutiu**
 
@@ -287,10 +266,8 @@ L'evolució de les tecnologies de comunicació sense fils és un viatge en curs,
 * **Integració d'Internet de les Coses (IoT):** El 5G SA continuarà jugant un paper fonamental en la connexió de milers de milions d'aparells IoT.<br>
 * **Computació Edge (Edge Computing):** La integració de la computació edge amb el 5G SA reduirà la latència i millorarà el processament en temps real per aplicacions com vehicles autònoms i realitat augmentada.<br>
 * **Intel·ligència Artificial (IA) i Aprenentatge Automàtic (ML):** La sinergia entre el 5G SA i la IA/ML portarà a xarxes més intel·ligents, manteniment predictiu i millores en les experiències d'usuari.<br>
-* **Connectivitat Massiva:** La capacitat del 5G SA per a la connectivitat massiva fomentarà innovacions en la monitorització remota, les xarxes elèctriques intel·ligents i la detecció ambiental.<br>
+* **Connectivitat Massiva:** La capacitat del 5G SA per a la connectivitat massiva fomentarà innovacions en la monitorització remota, les xarxes elèctriques intel·ligents i la detecció ambiental.<br><br>
 
-<br>
-<br>
 
 ### **El Camí a 6G**
 
@@ -327,7 +304,6 @@ https://www.itu.int/en/mediacentre/backgrounders/Pages/5G-fifth-generation-of-mo
 * **Terahertz:** Una unitat de mesura de freqüència a la gamma de terahertz (THz), 1000 vegades més elevada que gigahertz (GHz), sovint utilitzada per a comunicacions sense fils d'altíssima freqüència.<br>
 * **Metamaterials:** Materials artificials dissenyats per tenir propietats electromagnètiques úniques no trobades a la naturalesa.<br>
 * **Orquestració de Xarxa:** L'automatització i gestió dels recursos de la xarxa per optimitzar el rendiment.<br>
-
 
 
 <br>
