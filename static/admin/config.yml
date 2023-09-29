@@ -82,6 +82,7 @@ collections:
       - {label: "Categories", name: "categories", widget: "list", required: false}
       - {label: "Imatge", name: "imatge", widget: "image", required: false}
       - {label: "Key", name: "key", widget: "string", required: false}
+      - {label: "Taula de continguts", name: "toc", widget: "boolean", default: false, required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
     
   - name: "howtos"
