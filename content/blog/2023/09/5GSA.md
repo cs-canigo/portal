@@ -77,11 +77,11 @@ El elements essencials de la xarxa central són:
 
 * **Xarxa Central (CN):** La xarxa central és on es realitza gran part de la intel·ligència i el processament al 5G. És totalment nativa de 5G, el que significa que no depèn de la infraestructura 4G. Inclou els següents components:<br>
 
-      * Funció del Pla d'Usuari (UPF): Responsable del reenviament i encaminament de paquets de dades.
-      * Funció del Pla de Control (CPF): Gestiona missatges de senyalització i de control.
-      * Funció de Gestió de Sessions (SMF): Gestiona l'establiment i el manteniment de les sessions d'usuari.
-      * Funció de Gestió d'Accés i Mobilitat (AMF): Gestiona el control d'accés, la gestió de la mobilitat i la seguretat.
-      * Funció Servidor d'Autenticació (AUSF): Gestionar l'autenticació de l'usuari i la generació de claus de seguretat.
+  * Funció del Pla d'Usuari (UPF): Responsable del reenviament i encaminament de paquets de dades.
+  * Funció del Pla de Control (CPF): Gestiona missatges de senyalització i de control.
+  * Funció de Gestió de Sessions (SMF): Gestiona l'establiment i el manteniment de les sessions d'usuari.
+  * Funció de Gestió d'Accés i Mobilitat (AMF): Gestiona el control d'accés, la gestió de la mobilitat i la seguretat.
+  * Funció Servidor d'Autenticació (AUSF): Gestionar l'autenticació de l'usuari i la generació de claus de seguretat.
 
 * **Estacions Base 5G (gNB):** Les estacions base 5G, també conegudes com gNB (gNodeB), són els punts d'accés de ràdio de 5G que connecten els dispositius mòbils a la xarxa. Aquestes estacions base són responsables de l'enviament i la recepció de senyals.<br>
 
