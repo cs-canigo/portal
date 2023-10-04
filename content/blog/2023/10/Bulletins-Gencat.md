@@ -1,7 +1,7 @@
 ---
 title: Guia per a poder inscriure't en el butlletí Gencat
 description: Guia passo a pansa per a inscriure't en els butlletins de la generalitat
-date: 2023-09-28
+date: 2023-10-04
 sections:
   - Blog
   - home
@@ -26,7 +26,7 @@ No limiti d'inscripció als butlletins es pot inscriure a tots els butlletins.
 Per a això us explicarem com us podeu inscriure als serveis que mes us interessa.
 
 
-## **Que avantatges té usar inscriure't ** {#Components}
+## **Que avantatges té usar inscriure't** {#Components}
 Els avantatges que té inscriure't els butlletins de gencat
 * **Podràs gestionar lliurement al fet que butlletins et pots inscriure**
 * **Podràs descriure't dels butlletins en qualsevol moment**
@@ -41,7 +41,7 @@ Una vegada s'ha accedit a l' url s'haurà d'iniciar sessió
 
 
 <br>
-<div align="center"> <img src="/images/bloc/2023/10/paso1.jpg" /></div>
+<div align="center"> <img src="/images/bloc/2023/10/paso1.jpg" style="width: 100%;"/></div>
 <div align="center">Font: https://dgtlinfra.com/</div>
 <br>
 
@@ -53,7 +53,7 @@ A continuació es vora la següent la següent pantalla
 
 
 <br>
-<div align="center"> <img src="/images/bloc/2023/10/paso2.jpg" /></div>
+<div align="center"> <img src="/images/bloc/2023/10/paso2.jpg" style="width: 100%;"/></div>
 <div align="center">Font: https://dgtlinfra.com/</div>
 <br>
 
@@ -62,28 +62,28 @@ A continuació es vora la següent la següent pantalla
 Premerem l'en l'apartat de Vull suscriure'm a mes butlletin.
 
 <br>
-<div align="center"> <img src="/images/bloc/2023/10/paso3.1.jpg" /></div>
+<div align="center"> <img src="/images/bloc/2023/10/paso3.1.jpg" style="width: 100%;"/></div>
 <div align="center">Font: https://dgtlinfra.com/</div>
 <br>
 
 En la següent pantalla veurem un llistat de departaments als quals podem subscriure'ns, els departaments aquesta separats per categories per a poder veure departaments hi ha dins de cada categoria només hem de prémer en la categoria que volem visualitzar.
 
 <br>
-<div align="center"> <img src="/images/bloc/2023/10/paso3.2.jpg" /></div>
+<div align="center"> <img src="/images/bloc/2023/10/paso3.2.jpg" style="width: 100%;"/></div>
 <div align="center">Font: https://dgtlinfra.com/</div>
 <br>
 
 Seleccionem el departament que volem subscriure'ns i anem al final de tot i premem el botó d'alta.
 
 <br>
-<div align="center"> <img src="/images/bloc/2023/10/paso3.3.jpg" /></div>
+<div align="center"> <img src="/images/bloc/2023/10/paso3.3.jpg" style="width: 100%;"/></div>
 <div align="center">Font: https://dgtlinfra.com/</div>
 <br>
 
 Una vegada premut el botó veurem el següent missatge i el butlletí al qual ens hem subscrit.
 
 <br>
-<div align="center"> <img src="/images/bloc/2023/10/paso3.4.jpg" /></div>
+<div align="center"> <img src="/images/bloc/2023/10/paso3.4.jpg" style="width: 100%;"/></div>
 <div align="center">Font: https://dgtlinfra.com/</div>
 <br>
 
