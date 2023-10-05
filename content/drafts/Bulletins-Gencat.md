@@ -20,7 +20,9 @@ key: OCTUBRE2023
 ---
 ## **Introducció** {#Introduccio}
 
-Per estar al dia de les darreres novetats d'Arquitectura CTTI, podeu fer-ho a través del butlletí electrònic que ofereix la plataforma de [Butlletins gencat](https://butlletins.gencat.cat/). Podreu donar-vos d'alta o baixa del butlletí en qualsevol moment.
+Per estar al dia de les darreres novetats d'Arquitectura CTTI, a partir del mes vinent podreu fer-ho a través del butlletí electrònic que ofereix la plataforma de [Butlletins gencat](https://butlletins.gencat.cat/). Podeu donar-vos d'alta o baixa del butlletí en qualsevol moment.
+
+
 
 ## **Pas 1: Accedir a Butlletins gencat** {#Components}
 
