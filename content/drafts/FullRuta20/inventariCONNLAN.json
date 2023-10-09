@@ -25,4 +25,5 @@
 {"id":22,"producte":"Aruba 3810M  Switch Series ","categoria":"Sistema Operatiu Xarxa - Aruba OS ","obsolet":"<16.08.x","suportat":"16.11.x-16.08.x","versioactual":"16.11","roadmap":"N/A","emergent":"N/A","B1":"16.10.0021","B2":"N/A","B3":"N/A","B4":"N/A"},
 {"id":23,"producte":"Aruba 2930F  Switch Series  ","categoria":"Sistema Operatiu Xarxa - Aruba OS ","obsolet":"<16.08.x","suportat":"16.11.x-16.08.x","versioactual":"16.11","roadmap":"N/A","emergent":"N/A","B1":"16.10.0021","B2":"N/A","B3":"N/A","B4":"N/A"},
 {"id":24,"producte":"Aruba APs - AP 515","categoria":"Sistema Operatiu Xarxa - Aruba Instant","obsolet":"<8.7","suportat":"10.5-8.7","versioactual":"10.4","roadmap":"N/A","emergent":"N/A","B1":"8.6.0.11_80920","B2":"N/A","B3":"N/A","B4":"N/A"},
-{"id":25,"producte":"Aruba APs - AP 577","categoria":"Sistema Operatiu Xarxa - Aruba Instant","obsolet":"<8.7","suportat":"10.5-8.7","versioactual":"10.4","roadmap":"N/A","emergent":"N/A","B1":"8.7.1.7_82184","B2":"N/A","B3":"N/A","B4":"N/A"},]}
+{"id":25,"producte":"Aruba APs - AP 577","categoria":"Sistema Operatiu Xarxa - Aruba Instant","obsolet":"<8.7","suportat":"10.5-8.7","versioactual":"10.4","roadmap":"N/A","emergent":"N/A","B1":"8.7.1.7_82184","B2":"N/A","B3":"N/A","B4":"N/A"}
+]}
