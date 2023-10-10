@@ -2,7 +2,7 @@
 date        = "2019-06-14"
 title       = "Howto Procediments de manteniment llibreries transversals"
 description = "Definició del procediment per mantenir les llibreries transversals en mode col·laboratiu"
-section = ""
+sections    = ["drafts"]
 categories = [""]
 key = ""
 +++
