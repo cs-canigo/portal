@@ -1,5 +1,5 @@
 +++
-date         = "2023-10-10"
+date         = "2023-10-11"
 title        = "Títol: Com Generar un Projecte de Spring Boot amb Apicur.io"
 description  = "Aprèn a utilitzar Apicur.io per a crear projectes Spring Boot pas a pas en aquesta guia en català."
 #section     = "howtos"
@@ -86,7 +86,6 @@ Apicur.io admet l'Especificació OpenAPI (OAS) i pot ajudar-te a crear i documen
    <br>
      <div align="center"> <img src="/images/howtos/2023/10/7.png" style="width: 100%;"/></div>
    <br>
-
 
 ## 8. Descarrega el Projecte:
  - Fes clic a "Descarrega" per descarregar un arxiu ZIP que contingui el teu projecte de Spring Boot generat.
