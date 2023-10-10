@@ -1,9 +1,9 @@
 +++
 date         = "2023-10-11"
-title        = "Títol: Com Generar un Projecte de Spring Boot amb Apicur.io"
+title        = "Com Generar un Projecte de Spring Boot amb Apicur.io"
 description  = "Aprèn a utilitzar Apicur.io per a crear projectes Spring Boot pas a pas en aquesta guia en català."
 sections    = ["drafts"]
-#categories  = ["canigo"]
+categories  = ["canigo"]
 key          = "NOVEMBRE2023"
 +++
 
