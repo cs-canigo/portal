@@ -29,7 +29,7 @@ A continuació proporcionem enllaços als documents relacionats:
 | Power Platform Suite | [Plantilla DA Power Platform Suite](/static/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
 | LowCode | [Plantilla DA LowCode](/static/related/da/Plantilla_DA_LowCode_DT_DAQ_V2.2.docx) |
 | SaaS | [Plantilla DA SaaS](/static/related/da/Plantilla_DA_SaaS_DT_DAQ_V2.2.docx) |
-| Sharepoint | [Plantilla DA SaaS](/static/related/da/Plantilla_DA_Sharepoint_DT_DAQ_V2.2.docx) |
+| Sharepoint | [Plantilla DA Sharepoint](/static/related/da/Plantilla_DA_Sharepoint_DT_DAQ_V2.2.docx) |
 
 [Pàgina d'ajuda a la generació del DA](https://canigo.ctti.gencat.cat/arquitectura/ajuda_da/)
 
