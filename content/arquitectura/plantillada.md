@@ -21,18 +21,18 @@ A continuació proporcionem enllaços als documents relacionats:
 
 | TIPUS D'ARQUITECTURA | PLANTILLA |
 | --- | --- |
-| Plantilla genèrica (arquitectures híbrides) | [Plantilla DA genèrica](/static/related/da/Plantilla_DA_Híbrid_DT_DAQ_V2.2.docx) |
-| On Premise | [Plantilla DA On Premise](/static/related/da/Plantilla_DA_OnPremise_DT_DAQ_V2.2.docx) |
-| Cloud privat | [Plantilla DA Cloud Privat](/static/related/da/Plantilla_DA_CloudPrivat_DT_DAQ_V2.2.docx) |
-| Cloud public Gestionat | [Plantilla DA Cloud Públic Gestionat](/static/related/da/Plantilla_DA_CloudPublicGestionat_DT_DAQ_V2.2.docx) |
-| Cloud public No Gestionat | [Plantilla DA Cloud Públic No Gestionat](/static/related/da/Plantilla_DA_CloudPublicNoGestionat_DT_DAQ_V2.2.docx) |
-| Power Platform Suite | [Plantilla DA Power Platform Suite](/static/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
-| LowCode | [Plantilla DA LowCode](/static/related/da/Plantilla_DA_LowCode_DT_DAQ_V2.2.docx) |
-| SaaS | [Plantilla DA SaaS](/static/related/da/Plantilla_DA_SaaS_DT_DAQ_V2.2.docx) |
-| Sharepoint | [Plantilla DA Sharepoint](/static/related/da/Plantilla_DA_Sharepoint_DT_DAQ_V2.2.docx) |
+| Plantilla genèrica (arquitectures híbrides) | [Plantilla DA genèrica](/related/da/Plantilla_DA_Híbrid_DT_DAQ_V2.2.docx) |
+| On Premise | [Plantilla DA On Premise](/related/da/Plantilla_DA_OnPremise_DT_DAQ_V2.2.docx) |
+| Cloud privat | [Plantilla DA Cloud Privat](/related/da/Plantilla_DA_CloudPrivat_DT_DAQ_V2.2.docx) |
+| Cloud public Gestionat | [Plantilla DA Cloud Públic Gestionat](/related/da/Plantilla_DA_CloudPublicGestionat_DT_DAQ_V2.2.docx) |
+| Cloud public No Gestionat | [Plantilla DA Cloud Públic No Gestionat](/related/da/Plantilla_DA_CloudPublicNoGestionat_DT_DAQ_V2.2.docx) |
+| Power Platform Suite | [Plantilla DA Power Platform Suite](/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
+| LowCode | [Plantilla DA LowCode](/related/da/Plantilla_DA_LowCode_DT_DAQ_V2.2.docx) |
+| SaaS | [Plantilla DA SaaS](/related/da/Plantilla_DA_SaaS_DT_DAQ_V2.2.docx) |
+| Sharepoint | [Plantilla DA Sharepoint](/related/da/Plantilla_DA_Sharepoint_DT_DAQ_V2.2.docx) |
 
 [Pàgina d'ajuda a la generació del DA](https://canigo.ctti.gencat.cat/arquitectura/ajuda_da/)
 
-[Guia de generació de Vistes i Perspectives](static/related/da/Guia_vistes_DA.pdf)
+[Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 
-[DA Exemple](static/related/da/Exemple_DA_1.0.docx)
+[DA Exemple](/related/da/Exemple_DA_1.0.docx)
