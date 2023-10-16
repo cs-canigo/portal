@@ -1,6 +1,6 @@
 +++
 date        = "2023-09-27"
-title       = "Publicació Catàleg Tècnic de Dades - Setembre23"
+title       = "Publicació Catàleg Tècnic de Dades - Octubre23"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per evolucionar entitats publicades d'obligat compliment i afegir-ne de noves."
 categories  = ["Data Architecture"]
 sections    = ["Notícies", "home"]
@@ -28,6 +28,6 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
 
-* [Gestió Tècnica de Dades] (https://canigo.ctti.gencat.cat/plataformes/dadesref/gestiodades/)
-* [Dades de Referència] (https://canigo.ctti.gencat.cat/plataformes/dadesref/dadesref/)
+* [Gestió Tècnica de Dades](https://canigo.ctti.gencat.cat/plataformes/dadesref/gestiodades/)
+* [Dades de Referència](https://canigo.ctti.gencat.cat/plataformes/dadesref/dadesref/)
 
