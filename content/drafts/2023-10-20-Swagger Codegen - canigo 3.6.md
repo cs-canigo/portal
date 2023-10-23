@@ -1,7 +1,7 @@
 +++
 date         = "2023-10-11"
-title        = "Generació de Client amb Swagger Codegen per a la Integració amb Canigo 3.6.2"
-description  = "Aprèn a generar un client per a la integració amb Canigo 3.6.2 utilitzant Swagger Codegen en aquesta guia pas a pas."
+title        = "Generació de Client amb Swagger Codegen per a la Integració amb Canigo 3.6"
+description  = "Aprèn a generar un client per a la integració amb Canigo 3.6 utilitzant Swagger Codegen en aquesta guia pas a pas."
 weight      = "1"
 sections    = ["drafts"]
 key          = "NOVEMBRE2023"
@@ -9,7 +9,7 @@ key          = "NOVEMBRE2023"
 
 ## Introducció
 
-En aquesta guia, adquiriràs coneixements sobre com utilitzar Swagger Codegen per generar un client que s'integri amb l'entorn Canigo 3.6.2. Canigo és un marc de treball ampliament utilitzat en el desenvolupament d'aplicacions a Catalunya. Swagger Codegen és una eina que permet generar codi a partir d'una especificació Swagger (OpenAPI) per interactuar amb serveis web.
+En aquesta guia, adquiriràs coneixements sobre com utilitzar Swagger Codegen per generar un client que s'integri amb l'entorn Canigo 3.6. Canigo és un marc de treball ampliament utilitzat en el desenvolupament d'aplicacions a Catalunya. Swagger Codegen és una eina que permet generar codi a partir d'una especificació Swagger (OpenAPI) per interactuar amb serveis web.
 
 ## Requisits Previs
 
@@ -41,6 +41,6 @@ Substitueix `ruta/al/archivo/swagger.yaml` per la ubicació del vostre arxiu d'e
 
 ## Conclusió
 
-Amb aquests passos, heu generat un client utilitzant Swagger Codegen que s'integra amb Canigo 3.6.2. Ara podeu aprofitar la generació automàtica de codi a partir de l'especificació Swagger per facilitar la interacció amb serveis web a la vostra aplicació.
+Amb aquests passos, heu generat un client utilitzant Swagger Codegen que s'integra amb Canigo 3.6. Ara podeu aprofitar la generació automàtica de codi a partir de l'especificació Swagger per facilitar la interacció amb serveis web a la vostra aplicació.
 
-Recordeu personalitzar el client segons les necessitats del vostre projecte i consultar la documentació de Canigo 3.6.2 per obtenir informació addicional sobre la integració.
+Recordeu personalitzar el client segons les necessitats del vostre projecte i consultar la documentació de Canigo 3.6 per obtenir informació addicional sobre la integració.
