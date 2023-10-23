@@ -295,7 +295,7 @@ S'ha de crear una taula com la de la plantilla per cada un dels entorns que form
 | **Tipus de Servei** | <br>PaaS <br>IaaS <br>Hosting |
 | **Programari i versió** | Nom del programari i versió que s'instal·la. Ha d'estar alineat amb el full de ruta del programari. En cas de sistemes/serveis nous, caldrà que les versions siguin les actuals segons el [Full de Ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#annex-a-normatiu-programari-estandarditzat:29540b9fba4cb00170570a076b9df531). |
 | **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. <br><img src="/images/PlantillaDA/Talles.JPG" style="width:500px;" /> |
-| **Nivell de Servei** | Continu - AD 24x7 <br>Continu 24x7 <br>Laboral - AD 12x5 <br>Laboral 12x5 <br>No productiu 12x5 |
+| **Nivell de Servei** | Continu - A - 2h 24x7 <br>Continu - STD - 1d <br>Laboral - B - 4s |
 
 ### **Taula d'emmagatzematge** {#TaulaDisc}
 
@@ -455,6 +455,16 @@ L’aplicació està preparada per l’escalabilitat horitzontal?
 
 ###### [Inici](#TaulaContiguts)
 ## **Disponibilitat** {#Disponibilitat}
+
+**Directrius**
+
+_La següent taula aclara el que impliquen els diferents nivells de servei._
+
+| | **Horari de servei** | **RTO** | **Disponibilitat** | **Continuïtat** |
+| --- | --- | --- | --- | --- |
+| **Continu-A-2h** | 24x7 | 2h | 99'90% | 2 hores |
+| **Continu-STD-1d** | 24x7 | 8h | 99'50% | 24 hores |
+| **Laboral-B-4s** | 12x5 | 12h | 95'00% | 4 setmanes |
 
 ### **RTO del Sistema** {#RTO}
 Temps que pot estar el negoci amb el servei aturat.
