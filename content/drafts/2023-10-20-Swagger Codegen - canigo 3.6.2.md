@@ -2,8 +2,8 @@
 date         = "2023-10-11"
 title        = "Generació de Client amb Swagger Codegen per a la Integració amb Canigo 3.6.2"
 description  = "Aprèn a generar un client per a la integració amb Canigo 3.6.2 utilitzant Swagger Codegen en aquesta guia pas a pas."
-sections     = ["drafts"]
-categories   = ["canigo"]
+weight      = "1"
+sections    = ["drafts"]
 key          = "NOVEMBRE2023"
 +++
 

@@ -2,8 +2,8 @@
 date         = "2023-10-11"
 title        = "Configuració de l'Exporter per a Mostrar Informació d'Estat de Components Interns en Canigó 3.6.2"
 description  = "Guia corporativa sobre com configurar l'Exporter per mostrar informació sobre l'estat de components interns com MySQL o MongoDB en una aplicació Canigó 3.6.2, incloent la personalització de comprovacions d'estat."
-sections     = ["drafts"]
-categories   = ["canigo"]
+weight      = "1"
+sections    = ["drafts"]
 key          = "NOVEMBRE2023"
 +++
 

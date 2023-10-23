@@ -2,8 +2,8 @@
 date         = "2023-10-11"
 title        = "Proves Mock amb Comprovació d'Objectes en Projectes Canigó 3.6.2"
 description  = "Guia detallada sobre com realitzar proves mock amb Mockito en un projecte Canigó 3.6.2, incloent la comprovació d'objectes passats com a arguments en les crides als mètodes."
-sections     = ["drafts"]
-categories   = ["canigo"]
+weight      = "1"
+sections    = ["drafts"]
 key          = "NOVEMBRE2023"
 +++
 
