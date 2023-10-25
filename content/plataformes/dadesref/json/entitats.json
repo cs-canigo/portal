@@ -1734,7 +1734,7 @@
     },
     {
         "Id": "dtarq191",
-        "Nom": "Marques de vehicle",
+        "Nom": "Models de vehicle",
         "Ambit": "Mobilitat i transports",
         "Subambit": "Mobilitat i trànsit",
         "Descripcio": "Llista de gammes de vehicles associades a cada un dels fabricants.",
