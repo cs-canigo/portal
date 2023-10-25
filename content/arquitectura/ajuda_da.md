@@ -46,7 +46,7 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
 Enumerem a continuació diferents indicacions a tenir en compte a l'hora d'informar un DA:
 
 * **Estructura del DA:** No està permès modificar l'estructura del DA. En cas de no informar un punt OPCIONAL, indicar _NO APLICA_ en comptes d'esborrar aquest punt. Si està permès, per contra, afegir punts per sota del segon nivell (per exemple a la vista de Desplegament -punt 2.6- afegir un nivell per sota seria "2.6.1").
-* **Versió de la plantilla:** S'ha de fer servir la versió actual de la plantilla del DA, que podeu trobar al  [següent enllaç(https://canigo.ctti.gencat.cat/arquitectura/ajuda_da/)].
+* **Versió de la plantilla:** S'ha de fer servir la versió actual de la plantilla del DA, que podeu trobar al  [següent enllaç](https://canigo.ctti.gencat.cat/arquitectura/ajuda_da/)
 * **Dades de l'aplicació (Codi de Diàleg i Nom):** S'han d'informar, com a mínim, aquestes dues dades. En el cas de sistemes d'informació nous, si encarà no se sap el codi de diàleg, es pot no informar, però cal indicar que aquesta dada no es coneix encara.
 * **Dades de les revisions del document, l'autoria i el responsable del CTTI:** Les versions han de quadrar amb el quadre resum i el quadre de detall de canvis. A més es valida que el nom de l'Arquitecte estigui a la llista d'Arquitectes autoritzats pels lots.
 * **Arquitecte que redacta i/o revisa el DA:** Al menys un d'ells (si no son el mateix) han d'estar a la llista d'Arquitectes autoritzats per els diferents lots.
