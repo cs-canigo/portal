@@ -241,6 +241,34 @@
         "Data_actualitzacio": "22/12/2021"
     },
     {
+        "Id": "dtarq187",
+        "Nom": "Col·lectius professionals",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Agrupació de personal al servei de l’Administració de la Generalitat i el seu sector públic classificat en funció del caràcter homogeni de les funcions a realitzar.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Secretaria d’Administració i Funció Pública - Departament de la Presidència",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Col.lectius_professionals_Gencat_ATR.docx",
+                "ifitxer_xls": "Col.lectius_professionals_Gencat.xlsx",
+                "idatacreacio": "26/07/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Col-lectius-professionals-de-la-Generalitat-de-Cat/54ty-nmbt",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "COLLECTIUS_PROFESSIONALS_GENCAT",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "25/10/2023",
+        "Data_actualitzacio": "25/10/2023"
+    },
+    {
         "Id": "dtarq101",
         "Nom": "Departaments",
         "Ambit": "Administració pública, govern i relacions institucionals",
@@ -427,16 +455,31 @@
             },
             {
                 "inom": "V08",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització derivada de la reestructuració de l’organigrama.",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_V08.xlsx",
                 "idatacreacio": "22/11/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "25/10/2023",
                 "idatapublicacio": "23/11/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V09",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Es modifica el nom de les delegacions territorials del govern per eliminar la partícula \"de la Generalitat\" (id: 669, 674, 15432, 15433, 11898, 680, 685 i 20432), s’incorpora la \"Direcció General d'Afers de la Unió Europea\" (id: 22950) i s'elimina \"Direcció General de la Representació del Govern a l'Exterior i de la Unió Europea\" (id: 21706).",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "24/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -444,7 +487,35 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "23/11/2022"
+        "Data_actualitzacio": "25/10/2023"
+    },
+    {
+        "Id": "dtarq192",
+        "Nom": "Entitats del sector públic",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Conjunt d'entitats amb identificació social pròpia que gestionen serveis públics, produeixen béns i serveis o fan funcions i/o activitats que són competència de l'Administració, i que disposen d'identificació fiscal i d'un acrònim o marca regularitzat al Registre d'entitats del sector públic.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d’Administració Digital",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Entitats_sector_public_ATR.docx",
+                "ifitxer_xls": "Entitats_sector_public.xlsx",
+                "idatacreacio": "25/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "ENTITATS_SECTOR_PUBLIC",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "25/10/2023",
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq177",
@@ -543,16 +614,31 @@
             },
             {
                 "inom": "V05",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització derivada de la reestructuració de l’organigrama.",
                 "ifitxer_doc": "Secretaries_ATR.docx",
-                "ifitxer_xls": "Secretaries.xlsx",
+                "ifitxer_xls": "deprecated/Secretaries_V05.xlsx",
                 "idatacreacio": "22/11/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "25/10/2023",
                 "idatapublicacio": "23/11/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V06",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Es canvia la denominació de la “Secretaria d'Acció Exterior del Govern” (id: 13801) per “Secretaria d'Acció Exterior del Govern i de la Unió Europea”.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "24/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -560,7 +646,7 @@
         "nom_dinsBD": "SECRETARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "23/11/2022"
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq90",
@@ -670,16 +756,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General d'Administració Local (DGAL)",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Territori_Mancomunitats_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_Mancomunitats.xlsx",
+                "ifitxer_doc": "Mancomunitats_ATR.docx",
+                "ifitxer_xls": "deprecated/Mancomunitats_V01.xlsx",
                 "idatacreacio": "01/04/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "25/10/2023",
                 "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Es modifica el nom de 5 mancomunitats (codis: 9006150006, 9007490004, 9008470005, 9010690004 i 9011360009) i es suprimeixen 13 mancomunitats (codis: 9000760009, 9003330008, 9003640003, 9004310007, 9004460009, 9004970005, 9007520002, 9008630008, 9010750006, 9012060009, 9012130008, 9012710007 i 9013470005).",
+                "ifitxer_doc": "Mancomunitats_ATR.docx",
+                "ifitxer_xls": "Mancomunitats.xlsx",
+                "idatacreacio": "24/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Mancomunitats/96mh-m3ge",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -687,7 +788,7 @@
         "nom_dinsBD": "MANCOMUNITATS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "20/04/2020"
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq106",
@@ -1602,6 +1703,62 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/09/2021",
         "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq190",
+        "Nom": "Marques de vehicle",
+        "Ambit": "Mobilitat i transports",
+        "Subambit": "Mobilitat i trànsit",
+        "Descripcio": "Llista de fabricants de vehicles.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d’Administració Digital",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Marques_vehicle_ATR.docx",
+                "ifitxer_xls": "Marques_vehicle.xlsx",
+                "idatacreacio": "25/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "MARQUES_VEHICLE",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "25/10/2023",
+        "Data_actualitzacio": "25/10/2023"
+    },
+    {
+        "Id": "dtarq191",
+        "Nom": "Marques de vehicle",
+        "Ambit": "Mobilitat i transports",
+        "Subambit": "Mobilitat i trànsit",
+        "Descripcio": "Llista de gammes de vehicles associades a cada un dels fabricants.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d’Administració Digital",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Models_vehicle_ATR.docx",
+                "ifitxer_xls": "Models_vehicle.xlsx",
+                "idatacreacio": "25/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "MODELS_VEHICLE",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "25/10/2023",
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq160",
@@ -2915,7 +3072,7 @@
         "Nom": "Nom de carrers de Catalunya",
         "Ambit": "Territori, infraestructures i urbanisme",
         "Subambit": "Ordenació del territori, paisatge i urbanisme",
-        "Descripcio": "Llistat de noms de via (carrers) associats a municipis de Catalunya.",
+        "Descripcio": "Llistat de noms de via (carrers) associats a unitats poblacionals de Catalunya.",
         "instancies": [
             {
                 "inom": "V01",
@@ -2949,16 +3106,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
-                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V03.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "25/10/2023",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "S'incorpora l'identificador de la unitat poblacional a on pertany el nom de carrer, s'elimina la relació amb el municipi i s'actualitza el conjunt de valors segons la darrera versió facilitada pel promotor.",
+                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "idatacreacio": "24/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2966,7 +3138,7 @@
         "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "21/04/2021",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq125",
@@ -3053,6 +3225,34 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "26/05/2021",
         "Data_actualitzacio": "24/05/2023"
+    },
+    {
+        "Id": "dtarq189",
+        "Nom": "Polígons industrials de Catalunya",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
+        "Descripcio": "Llista de sòls destinats a l'ús industrial que responen a una localització específica de les indústries, assenyalats en el pla urbanístic.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d’Administració Digital",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
+                "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
+                "idatacreacio": "10/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "POLIGONS_INDUSTRIALS_CATALUNYA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "25/10/2023",
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq85",
@@ -3177,16 +3377,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "S'incorpora el valor \"Eix\".",
-                "ifitxer_doc": "Codis_Territori_TipusVia_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_TipusVia.xlsx",
+                "ifitxer_doc": "Tipus_Via_ATR.docx",
+                "ifitxer_xls": "deprecated/Tipus_Via_V02.xlsx",
                 "idatacreacio": "21/04/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "25/10/2023",
                 "idatapublicacio": "21/04/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "S'incorporen nous valors, s'afegeix l’atribut Idioma i la traducció de tots els valors a l'occità – aranès.",
+                "ifitxer_doc": "Tipus_Via_ATR.docx",
+                "ifitxer_xls": "Tipus_Via.xlsx",
+                "idatacreacio": "24/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/10/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3194,7 +3409,7 @@
         "nom_dinsBD": "TIPUS_VIA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "23/09/2020",
-        "Data_actualitzacio": "21/04/2021"
+        "Data_actualitzacio": "25/10/2023"
     },
     {
         "Id": "dtarq139",
@@ -3577,34 +3792,6 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "17/02/2021",
         "Data_actualitzacio": "20/01/2021"
-    },
-    {
-        "Id": "dtarq187",
-        "Nom": "Col·lectius professionals",
-        "Ambit": "Treball",
-        "Subambit": "Ocupació i inserció laboral",
-        "Descripcio": "Conjunts de persones que exerceixen la mateixa professió.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "DGAD",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Col.lectius_professionals_Gencat_ATR.docx",
-                "ifitxer_xls": "Col.lectius_professionals_Gencat.xlsx",
-                "idatacreacio": "26/07/2023",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "26/07/2023",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "COLLECTIUS_PROFESSIONALS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/07/2023",
-        "Data_actualitzacio": "26/07/2023"
     },
     {
         "Id": "dtarq185",
