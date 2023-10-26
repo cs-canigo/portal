@@ -135,7 +135,7 @@ En la taula següent es mostren algunes d'aquestes característiques:<br>
 
 ## **Integracions amb Microsoft 365 Copilot** {#Integracions}
 
-A continuació es mostra una llista d’aplicacions que s'integra amb Microsoft 365 Copilot:<br>
+A continuació es mostra una llista d’aplicacions que s'integren amb Microsoft 365 Copilot:<br>
 
 * **ChatGPT** és un model de llenguatge desenvolupat per OpenAI i s’entrena en una gamma diversa de text d'Internet, el que li permet generar respostes humanes a una varietat d'indicadors. El ChatGPT es pot utilitzar per diverses tasques de processament del llenguatge natural, com ara la resposta a preguntes, la conversa i la generació de text.<br> 
 * **Microsoft 365 (abans Microsoft Office 365):** Outlook, OneDrive, Word, Excel, PowerPoint, OneNote, SharePoint, Microsoft Teams, Engage (abans Yammer) i molts més.<br>
