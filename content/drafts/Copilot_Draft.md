@@ -137,6 +137,7 @@ En la taula següent es mostren algunes d'aquestes característiques:<br>
 
 A continuació es mostra una llista d’aplicacions que s'integra amb Microsoft 365 Copilot:<br>
 
+* **ChatGPT** és un model de llenguatge desenvolupat per OpenAI i s’entrena en una gamma diversa de text d'Internet, el que li permet generar respostes humanes a una varietat d'indicadors. El ChatGPT es pot utilitzar per diverses tasques de processament del llenguatge natural, com ara la resposta a preguntes, la conversa i la generació de text.<br> 
 * **Microsoft 365 (abans Microsoft Office 365):** Outlook, OneDrive, Word, Excel, PowerPoint, OneNote, SharePoint, Microsoft Teams, Engage (abans Yammer) i molts més.<br>
 * **Microsoft Teams:** Espai de treball compartit on es pot xatejar, reunir-se, compartir fitxers i treballar amb aplicacions empresarials.<br>
 * **Microsoft PowerPoint:** Creació de presentacions. Transmet les idees amb un disseny, animació, moviment, models 3D i icones.<br>
@@ -144,16 +145,13 @@ A continuació es mostra una llista d’aplicacions que s'integra amb Microsoft 
 * **Microsoft OneNote:** Bloc de notes digital. Amb una navegació i una cerca fàcils, per trobar les notes.<br> 
 * **Microsoft Excel:** Crea fàcilment fulls de càlcul a partir de plantilles i utilitza fórmules per realitzar càlculs. Els diagrames i gràfiques ajuden a presentar les dades.<br>
 * **Microsoft LooP:**  Permet compartir pàgines, dades i fitxers amb l’equip. Creació conjunta que reuneix equips, contingut i tasques en les seves eines i dispositius. És un espai de treball únic amb capacitats d'intel·ligència artificial dissenyades per portar tot el que un usuari necessita a una aplicació, eliminant la necessitat de canviar entre diferents aplicacions.<br>
-* **Microsoft Power Platform:** Analitza dades, crea solucions, automatitza processos i crea agents virtuals. Copilot en Power Platform pot ajudar a optimitzar i accelerar el  treball amb eines de low code com Power Automate, Power Apps, Power BI o Power Virtual Agent. A continuació, es descriuen algunes de les accions que es poden fer amb aquest Copilot:<br><br>
-
-           * **Generació de codi:** Copilot pot generar codi automàticament en llenguatge de fórmules M per Power Query, en llenguatge DAX per Power BI i en llenguatge Power Automate per fluxos de treball. Es pot       
+* **Microsoft Power Platform:** Analitza dades, crea solucions, automatitza processos i crea agents virtuals. Copilot en Power Platform pot ajudar a optimitzar i accelerar el  treball amb eines de low code com Power Automate, Power Apps, Power BI o Power Virtual Agent. A continuació, es descriuen algunes de les accions que es poden fer amb aquest Copilot:<br>
+   * **Generació de codi:** Copilot pot generar codi automàticament en llenguatge de fórmules M per Power Query, en llenguatge DAX per Power BI i en llenguatge Power Automate per fluxos de treball. Es pot       
 demanar una descripció del que es desitja aconseguir i Copilot generarà el codi corresponent.<br>
-           * **Suggeriments de funcions i fórmules:** Quan s’està escrivint fórmules en Power Apps o Power Automate, Copilot pot suggerir funcions i fórmules rellevants en funció del context. Això ajuda trobar ràpidament la funció o fórmula adequada i estalviar temps de cerca.<br>
-           * **Ajuda amb la sintaxi:** Si hi ha dubtes sobre la sintaxi d'una funció o es necessita recordar com s'escriu una fórmula específica, Copilot  proporciona exemples de codi i explicacions detallades per ajudar a entendre i utilitzar correctament la sintaxi.<br>
-           * **Optimització de consultes i fluxos de treball:** Copilot  analitza les consultes en Power Query o els fluxos de treball en Power Automate i proposa millores per optimitzar el rendiment i l'eficiència.<br> 
-           * **Resolució de problemes:** Si hi ha un error o un problema en l’aplicació de Power Apps o en el flux de Power Automate, Copilot pot ajudar a identificar i solucionar el problema en proporcionar suggeriments i possibles solucions.<br>
-
-* **ChatGPT** és un model de llenguatge desenvolupat per OpenAI i s’entrena en una gamma diversa de text d'Internet, el que li permet generar respostes humanes a una varietat d'indicadors. El ChatGPT es pot utilitzar per diverses tasques de processament del llenguatge natural, com ara la resposta a preguntes, la conversa i la generació de text.<br> 
+   * **Suggeriments de funcions i fórmules:** Quan s’està escrivint fórmules en Power Apps o Power Automate, Copilot pot suggerir funcions i fórmules rellevants en funció del context. Això ajuda trobar ràpidament la funció o fórmula adequada i estalviar temps de cerca.<br>
+   * **Ajuda amb la sintaxi:** Si hi ha dubtes sobre la sintaxi d'una funció o es necessita recordar com s'escriu una fórmula específica, Copilot  proporciona exemples de codi i explicacions detallades per ajudar a entendre i utilitzar correctament la sintaxi.<br>
+   * **Optimització de consultes i fluxos de treball:** Copilot  analitza les consultes en Power Query o els fluxos de treball en Power Automate i proposa millores per optimitzar el rendiment i l'eficiència.<br> 
+   * **Resolució de problemes:** Si hi ha un error o un problema en l’aplicació de Power Apps o en el flux de Power Automate, Copilot pot ajudar a identificar i solucionar el problema en proporcionar suggeriments i possibles solucions.<br>
 
 
 ## **Usos de Microsoft 365 Copilot** {#Usos}
