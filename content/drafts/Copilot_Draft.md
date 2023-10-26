@@ -126,7 +126,7 @@ En la taula següent es mostren algunes d'aquestes característiques:<br>
     <td align="left">S’obtenen suggeriments de coaching sobre claredat, sentiment i to, juntament amb una avaluació general de missatges i suggeriments per millorar.</td>
   </tr>  
   <tr>
-    <td align="center"><div>Outlook</div><div><img src="/images/bloc/2023/10/Teams.wepb" /></div></td>
+    <td align="center"><div>Teams</div><div><img src="/images/bloc/2023/10/Teams.webp" /></div></td>
     <td align="left">Reunions</td>
     <td align="left">Els usuaris poden invocar Copilot en reunions. Copilot utilitza la transcripció en temps real per a respondre a les preguntes de l'usuari. Només fa servir la transcripció i coneix el nom de l'usuari que escriu la pregunta. L'usuari pot escriure qualsevol pregunta o utilitzar missatges predefinits, no obstant això, Copilot només respondrà a les preguntes relacionades amb la conversa de la reunió de la transcripció. L'usuari pot copiar o enganxar una resposta i accedir a Copilot una vegada finalitzada la reunió en la pàgina Resum. L'historial d'interacció de Copilot amb l'usuari es manté durant 24 hores.</td>
   </tr>    
