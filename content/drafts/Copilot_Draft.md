@@ -17,7 +17,7 @@ categories  = ["microsoft", "office365", "intel·ligència artificial"]
 2. [Caracteristíques principals] (#Caracteristiques)
 3. [Integracions amb Microsoft 365 Copilot] (#Integracions)
 4. [Usos de Microsoft 365 Copilot] (#Usos)
-5. [Limitacions i consioderacions] (#Limitacions)
+5. [Limitacions i consideracions] (#Limitacions)
 6. [Conclusions] (#Conclusions)
 7. [Referències] (#Referencies)
 8. [Glossari] (#Glossari)
@@ -264,7 +264,7 @@ Algunes de les coses que es poden fer són:<br>
 <br>
 
 
-## **Limitacions i consioderacions** {#Limitacions}
+## **Limitacions i consideracions** {#Limitacions}
 
 En general, Microsoft 365 Copilot és una eina que pot ajudar als usuaris a ser més productius. No obstant això, és important tenir en compte les consideracions i limitacions per a aprofitar al màxim l'eina.<br>
 
