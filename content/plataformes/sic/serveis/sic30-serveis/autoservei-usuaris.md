@@ -1,19 +1,17 @@
-+++
-date = "2023-05-22"
-title = "Autoservei d'usuaris"
-description = "Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)"
-aliases = [
-    "/sic30-serveis/autoservei-usuaris/",
-    "/sic/autoservei-usuaris/",
-    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/",
-    "/sic-serveis/autoservei-usuaris/"
-]
-sections = "SIC"
-taxonomies = []
-toc = true
-weight = 4
-+++
-
+---
+toc: true
+title: Autoservei d'usuaris
+description: Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)
+date: 2023-05-22
+sections: SIC
+taxonomies: []
+aliases:
+  - /sic30-serveis/autoservei-usuaris/
+  - /sic/autoservei-usuaris/
+  - /noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/
+  - /sic-serveis/autoservei-usuaris/
+weight: 4
+---
 ## Introducció
 
 El SIC proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis.
@@ -55,7 +53,7 @@ Aquest tipus de grup recull als **responsables del lot d'aplicacions: equip d'ar
 Aquest grup és un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis
 de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
 Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
-disposant d'un grup per a cada un dels lots d'aplicacions segons la contractació vigent [AM01-AM20].
+disposant d'un grup per a cada un dels lots d'aplicacions segons la contractació vigent \[AM01-AM20].
 
 ### Grups d'àmbit
 
@@ -65,44 +63,44 @@ de les aplicacions** i podent realitzar les mateixes accions que un Release Mana
 Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
 disposant d'un grup per a cada un dels departaments/unitats previstes d'acord amb l'organigrama departamental vigent.
 
-|Relació de grups d'àmbit|
-|-------|
-|DEPARTAMENT D'ACCIÓ CLIMÀTICA, ALIMENTACIÓ I AGENDA RURAL|
-|AGÈNCIA CATALANA DE CONSUM (ACC)|
-|AGÈNCIA PER A LA COMPETITIVITAT DE L'EMPRESA (ACCIO)|
-|AGÈNCIA CATALANA DE TURISME (ACT)|
-|AUTORITAT CATALANA DE PROTECCIÓ DE DADES (APDCAT)|
-|AGÈNCIA TRIBUTÀRIA DE CATALUNYA|
-|DEPARTAMENT DE DRETS SOCIALS|
-|CONSORCI ADMINISTRACIÓ OBERTA DE CATALUNYA|
-|D.G. D'ATENCIÓ CIUTADANA|
-|CONSELL CATALA DE L'ESPORT|
-|FUNDACIÓ CENTRE DE LA SEGURETAT DE LA INFORM. CAT.|
-|DEPARTAMENT DE CULTURA|
-|CENTRE DE TELECOMUNICACIONS I TECNOLOGIES DE LA INFORMACIO|
-|DIRECCIÓ GENERAL DE LA POLICIA|
-|ENT.AUTONOMA DIARI OFICIAL I PUBLICACIONS DE LA GENERALITAT|
-|ESCOLA D'ADMINISTRACIÓ PÚBLICA DE CATALUNYA (EAPC)|
-|DEPARTAMENT D'ECONOMIA I HISENDA|
-|DEPARTAMENT D'EMPRESA I TREBALL|
-|DEPARTAMENT D'EDUCACIÓ|
-|DEPARTAMENT D'ACCIÓ EXTERIOR I GOVERN OBERT|
-|INSTITUT CATALÀ D'ENERGIA (ICAEN)|
-|INSTITUT CATALÀ DE LA SALUT|
-|DEPARTAMENT D'IGUALTAT I FEMINISMES|
-|DEPARTAMENT D'INTERIOR|
-|DEPARTAMENT DE JUSTÍCIA|
-|OFICINA ANTIFRAU DE CATALUNYA|
-|DEPT. PDA -CONNECTIVITAT CENTRALITZADA|
-|DEPARTAMENT DE POLÍTIQUES DIGITALS I ADMINISTRACIÓ PÚBLICA|
-|DEPARTAMENT DE LA PRESIDÈNCIA|
-|SINDICATURA DE COMPTES DE CATALUNYA|
-|SERVEI CATALA DE TRANSIT|
-|SISTEMA D'EMERGÈNCIES MÈDIQUES, SA (SEMSA)|
-|SERVEI CATALÀ DE LA SALUT|
-|SERVEI D'OCUPACIÓ DE CATALUNYA|
-|DEPARTAMENT DE RECERCA I UNIVERSITATS|
-|DEPARTAMENT DE VICEPRESIDÈNCIA I DE POLÍTIQUES DIGITALS I TERRITORI|
+| Relació de grups d'àmbit                                            |
+| ------------------------------------------------------------------- |
+| DEPARTAMENT D'ACCIÓ CLIMÀTICA, ALIMENTACIÓ I AGENDA RURAL           |
+| AGÈNCIA CATALANA DE CONSUM (ACC)                                    |
+| AGÈNCIA PER A LA COMPETITIVITAT DE L'EMPRESA (ACCIO)                |
+| AGÈNCIA CATALANA DE TURISME (ACT)                                   |
+| AUTORITAT CATALANA DE PROTECCIÓ DE DADES (APDCAT)                   |
+| AGÈNCIA TRIBUTÀRIA DE CATALUNYA                                     |
+| DEPARTAMENT DE DRETS SOCIALS                                        |
+| CONSORCI ADMINISTRACIÓ OBERTA DE CATALUNYA                          |
+| D.G. D'ATENCIÓ CIUTADANA                                            |
+| CONSELL CATALA DE L'ESPORT                                          |
+| FUNDACIÓ CENTRE DE LA SEGURETAT DE LA INFORM. CAT.                  |
+| DEPARTAMENT DE CULTURA                                              |
+| CENTRE DE TELECOMUNICACIONS I TECNOLOGIES DE LA INFORMACIO          |
+| DIRECCIÓ GENERAL DE LA POLICIA                                      |
+| ENT.AUTONOMA DIARI OFICIAL I PUBLICACIONS DE LA GENERALITAT         |
+| ESCOLA D'ADMINISTRACIÓ PÚBLICA DE CATALUNYA (EAPC)                  |
+| DEPARTAMENT D'ECONOMIA I HISENDA                                    |
+| DEPARTAMENT D'EMPRESA I TREBALL                                     |
+| DEPARTAMENT D'EDUCACIÓ                                              |
+| DEPARTAMENT D'ACCIÓ EXTERIOR I GOVERN OBERT                         |
+| INSTITUT CATALÀ D'ENERGIA (ICAEN)                                   |
+| INSTITUT CATALÀ DE LA SALUT                                         |
+| DEPARTAMENT D'IGUALTAT I FEMINISMES                                 |
+| DEPARTAMENT D'INTERIOR                                              |
+| DEPARTAMENT DE JUSTÍCIA                                             |
+| OFICINA ANTIFRAU DE CATALUNYA                                       |
+| DEPT. PDA -CONNECTIVITAT CENTRALITZADA                              |
+| DEPARTAMENT DE POLÍTIQUES DIGITALS I ADMINISTRACIÓ PÚBLICA          |
+| DEPARTAMENT DE LA PRESIDÈNCIA                                       |
+| SINDICATURA DE COMPTES DE CATALUNYA                                 |
+| SERVEI CATALA DE TRANSIT                                            |
+| SISTEMA D'EMERGÈNCIES MÈDIQUES, SA (SEMSA)                          |
+| SERVEI CATALÀ DE LA SALUT                                           |
+| SERVEI D'OCUPACIÓ DE CATALUNYA                                      |
+| DEPARTAMENT DE RECERCA I UNIVERSITATS                               |
+| DEPARTAMENT DE VICEPRESIDÈNCIA I DE POLÍTIQUES DIGITALS I TERRITORI |
 
 ### Grups de CPDs i LdTs
 
@@ -144,12 +142,19 @@ Per a més informació: [Custòdia de codi font](/plataformes/sic/serveis/sic30-
 
 En crear projectes dins els grups d'aplicació, la resta d'usuaris del lot que no siguin Release Manager no disposaran de visibilitat.
 
-<CENTER>![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)</center>
-<br/>
-Els mateixos usuaris Release Manager podran consultar, editar, afegir i eliminar membres del projecte, però ho hauran de fer **a nivell de projecte**, no de grup de projectes.
 
-<CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)</center>
-<br/>
+
+[Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)
+
+
+Els mateixos usuaris Release Manager podran consultar, editar, afegir i eliminar membres del projecte, però ho hauran de fer \*\*a nivell de projecte\*\*, no de grup de projectes.
+
+
+
+[Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)
+
+
+
 Per a concedir accés sobre un projecte caldrà:
 
 * Accedir al **projecte**.
@@ -157,20 +162,32 @@ Per a concedir accés sobre un projecte caldrà:
 * A la plana que apareix, pressionar el botó "**Invite members**".
 * Al formulari que apareix, cercar l'usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S'aconsella **cercar per NIF**.
 * Escollir el **rol** que ha de tenir l'usuari dins el projecte:
-	* Rol Mantainer: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
-	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).
-	* Rol Reporter: únicament permetrà visualitzar el codi font del projecte.
+  		 *Rol Mantainer: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.*
+  		 Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).
+  		* Rol Reporter: únicament permetrà visualitzar el codi font del projecte.
 * Prémer el botó de "**Invite**"
 
-<CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
-<br/>
+
+
+[Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)
+
+
+
 
 En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custòdia de codi, gestió de binaris i integració contínua.
-<CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
-<br/>
+
+
+
+[Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)
+
+
+
 
 **AVÍS**: Si desitja concedir permisos a un usuari per a un grup que no disposa de cap projecte, caldrà prèviament crear el projecte per a poder dur a terme l'assignació desitjada.
 
-<br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).
+
+
+
+Si voleu més informació podeu consultar la secció de **[Guies](/plataformes/sic/guies/sic30-guies/)**.
+
+Si teniu qualsevol dubte o problema podeu revisar les **[Preguntes Freqüents](/sic/faq)** o utilitzar els canals de **[Suport](/sic/suport)**.
