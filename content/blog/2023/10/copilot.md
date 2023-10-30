@@ -7,25 +7,10 @@ blog_tags   = ["microsoft", "office365", "intel·ligència artificial"]
 categories  = ["microsoft", "office365", "intel·ligència artificial"]
 imatge      = "/images/bloc/2023/10/inicial.png"
 key         = "NOVEMBRE2023"
+toc         = true
 +++
----
-
 
 # **Microsoft 365 Copilot**
-
----
-
-## **Taula de Continguts** {#TaulaContiguts}
-1. [Introducció] (#Introduccio)
-2. [Caracteristíques principals] (#Caracteristiques)
-3. [Integracions amb Microsoft 365 Copilot] (#Integracions)
-4. [Usos de Microsoft 365 Copilot] (#Usos)
-5. [Limitacions i consideracions] (#Limitacions)
-6. [Conclusions] (#Conclusions)
-7. [Referències] (#Referencies)
-8. [Glossari] (#Glossari)
-
----
 
 ## **Introducció** {#Introduccio}
 
