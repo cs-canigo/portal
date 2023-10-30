@@ -296,5 +296,5 @@ Microsoft 365 Copilot és una plataforma que encara està en desenvolupament i c
 
 <br>
 <br>
-\*\*Àrea d'Arquitectura d'Entorn Digital de Treball i Comunicacions\*\* <br>
-\*\*Direcció Infraestructures\*\*
+**Àrea d'Arquitectura d'Entorn Digital de Treball i Comunicacions** <br>
+**Direcció Infraestructures**
