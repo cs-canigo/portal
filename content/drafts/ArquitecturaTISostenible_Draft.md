@@ -201,21 +201,23 @@ Tot i que requereix un volum important de dades i un alt nivell d'experiència, 
 En aquest apartat s’introdueix la noció de la petjada de carboni amb:<br>
 
 * **Energia:** L'energia caracteritza el canvi d'estat d'un sistema. Es consumeix energia quan:<br>
-      * Canvia la velocitat <br>
-      * S’escalfa o es refreda alguna cosa <br>
-      * Es deforma alguna cosa <br>
-      * Emet llum <br>
+
+* Canvia la velocitat <br>
+* S’escalfa o es refreda alguna cosa <br>
+* Es deforma alguna cosa <br>
+* Emet llum <br>
 
 D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el KiloWatt-hora.<br>
 
 * **Comptabilitat del carboni:** La comptabilitat del carboni és un mètode de mesura de les emissions de gasos d'efecte hivernacle (GEH) que permet avaluar les emissions directes o indirectes produïdes per la teva activitat o el teu territori. És aplicable a tot tipus d'activitats: empreses industrials o terciàries, administracions, comunitats, etc. Aquest és el primer pas en el diagnòstic climàtic d'una activitat o d'un lloc. En prioritzar diferents elements d'emissió segons la seva importància, permetent definir accions prioritàries per reduir aquestes emissions.<br>
 
 A l’implementar-la s’habilita el següent:<br>
-      * Comprensió de com reduir les emissions de GEH.<br>
-      * Reducció de  les emissions de GEH.<br>
-      * Compliment amb la normativa.<br>
-      * Capacitat d’anticipar-se als canvis del sector i innovar.<br>
-      * Estalviar diners.<br>
+
+* Comprensió de com reduir les emissions de GEH.<br>
+* Reducció de  les emissions de GEH.<br>
+* Compliment amb la normativa.<br>
+* Capacitat d’anticipar-se als canvis del sector i innovar.<br>
+* Estalviar diners.<br>
 
 ### **Procés de la Comptabilitat**
 
