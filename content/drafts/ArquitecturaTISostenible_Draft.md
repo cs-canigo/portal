@@ -201,6 +201,7 @@ Tot i que requereix un volum important de dades i un alt nivell d'experiència, 
 En aquest apartat s’introdueix la noció de la petjada de carboni amb:<br>
 
 * **Energia:** L'energia caracteritza el canvi d'estat d'un sistema. Es consumeix energia quan:<br>
+
       * Canvia la velocitat <br>
       * S’escalfa o es refreda alguna cosa <br>
       * Es deforma alguna cosa <br>
@@ -211,6 +212,7 @@ D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el 
 * **Comptabilitat del carboni:** La comptabilitat del carboni és un mètode de mesura de les emissions de gasos d'efecte hivernacle (GEH) que permet avaluar les emissions directes o indirectes produïdes per la teva activitat o el teu territori. És aplicable a tot tipus d'activitats: empreses industrials o terciàries, administracions, comunitats, etc. Aquest és el primer pas en el diagnòstic climàtic d'una activitat o d'un lloc. En prioritzar diferents elements d'emissió segons la seva importància, permetent definir accions prioritàries per reduir aquestes emissions.<br>
 
 A l’implementar-la s’habilita el següent:<br>
+
       * Comprensió de com reduir les emissions de GEH.<br>
       * Reducció de  les emissions de GEH.<br>
       * Compliment amb la normativa.<br>
@@ -310,19 +312,20 @@ Algunes de les bones pràctiques són:<br>
 
 * **Design Thinking:** Com més aviat s’intervingui durant l’anàlisi d’un requeriment, disseny funcional i modelatge, més gran serà l'efecte de reducció de la petjada ambiental. El dissenyador UX (experiència), quan treballa en el disseny, dona prioritat als requisits de l'usuari per tal de millorar la satisfacció del client. Això inclou: <br>
 
-    •	Definir el problema <br>
-    •	Entendre els usuaris <br>
-    •	Generació de tasques i fluxos d'usuaris <br>
-    •	Creació d'esbossos, wireframes i prototips <br>
-    •	Proves d'usabilitat <br>
+    * Definir el problema <br>
+    * Entendre els usuaris <br>
+    * Generació de tasques i fluxos d'usuaris <br>
+    * Creació d'esbossos, wireframes i prototips <br>
+    * Proves d'usabilitat <br>
 
 
 El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
 
-    •	Esquemes de colors <br>
-    •	Tipus de lletra específics <br>
-    •	Iconografia <br>
-    •	La disposició <br>
+    * Esquemes de colors <br>
+    * Tipus de lletra específics <br>
+    * Iconografia <br>
+    * La disposició <br>
+
 
 Abans de passar a la fase de disseny, és crucial avaluar els requisits amb precisió per evitar afegir funcionalitats innecessàries sense voler. Al voltant del 45% de les funcions sol·licitades no s'utilitzen mai i el 70% no són essencials.<br>
 
