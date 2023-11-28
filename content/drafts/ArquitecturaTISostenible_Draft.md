@@ -321,6 +321,7 @@ Algunes de les bones pràctiques són:<br>
 
 El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
 
+
     * Esquemes de colors <br>
     * Tipus de lletra específics <br>
     * Iconografia <br>
