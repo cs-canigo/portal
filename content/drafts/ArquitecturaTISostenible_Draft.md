@@ -213,7 +213,7 @@ D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el 
 
 * **Comptabilitat del carboni:** La comptabilitat del carboni és un mètode de mesura de les emissions de gasos d'efecte hivernacle (GEH) que permet avaluar les emissions directes o indirectes produïdes per la teva activitat o el teu territori. És aplicable a tot tipus d'activitats: empreses industrials o terciàries, administracions, comunitats, etc. Aquest és el primer pas en el diagnòstic climàtic d'una activitat o d'un lloc. En prioritzar diferents elements d'emissió segons la seva importància, permetent definir accions prioritàries per reduir aquestes emissions.<br>
 
-* A l’implementar-la s’habilita el següent:<br>
+A l’implementar-la s’habilita el següent:<br>
 
    * Comprensió de com reduir les emissions de GEH.<br>
    * Reducció de  les emissions de GEH.<br>
