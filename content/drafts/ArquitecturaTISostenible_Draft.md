@@ -202,10 +202,10 @@ En aquest apartat s’introdueix la noció de la petjada de carboni amb:<br>
 
 * **Energia:** L'energia caracteritza el canvi d'estat d'un sistema. Es consumeix energia quan:<br>
 
-* Canvia la velocitat <br>
-* S’escalfa o es refreda alguna cosa <br>
-* Es deforma alguna cosa <br>
-* Emet llum <br>
+    * Canvia la velocitat <br>
+    * S’escalfa o es refreda alguna cosa <br>
+    * Es deforma alguna cosa <br>
+    * Emet llum <br>
 
 D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el KiloWatt-hora.<br>
 
@@ -213,11 +213,11 @@ D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el 
 
 A l’implementar-la s’habilita el següent:<br>
 
-* Comprensió de com reduir les emissions de GEH.<br>
-* Reducció de  les emissions de GEH.<br>
-* Compliment amb la normativa.<br>
-* Capacitat d’anticipar-se als canvis del sector i innovar.<br>
-* Estalviar diners.<br>
+    * Comprensió de com reduir les emissions de GEH.<br>
+    * Reducció de  les emissions de GEH.<br>
+    * Compliment amb la normativa.<br>
+    * Capacitat d’anticipar-se als canvis del sector i innovar.<br>
+    * Estalviar diners.<br>
 
 ### **Procés de la Comptabilitat**
 
@@ -321,12 +321,10 @@ Algunes de les bones pràctiques són:<br>
 
 El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
 
-
     * Esquemes de colors <br>
     * Tipus de lletra específics <br>
     * Iconografia <br>
     * La disposició <br>
-
 
 Abans de passar a la fase de disseny, és crucial avaluar els requisits amb precisió per evitar afegir funcionalitats innecessàries sense voler. Al voltant del 45% de les funcions sol·licitades no s'utilitzen mai i el 70% no són essencials.<br>
 
