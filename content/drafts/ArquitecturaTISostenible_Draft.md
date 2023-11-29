@@ -202,17 +202,16 @@ En aquest apartat s’introdueix la noció de la petjada de carboni amb:<br>
 
 * **Energia:** L'energia caracteritza el canvi d'estat d'un sistema. Es consumeix energia quan:<br>
 
-    * Canvia la velocitat <br>
-    * S’escalfa o es refreda alguna cosa <br>
-    * Es deforma alguna cosa <br>
-    * Emet llum <br>
+    * Canvia la velocitat<br>
+    * S’escalfa o es refreda alguna cosa<br>
+    * Es deforma alguna cosa<br>
+    * Emet llum<br>
 
 D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el KiloWatt-hora.<br>
 
 * **Comptabilitat del carboni:** La comptabilitat del carboni és un mètode de mesura de les emissions de gasos d'efecte hivernacle (GEH) que permet avaluar les emissions directes o indirectes produïdes per la teva activitat o el teu territori. És aplicable a tot tipus d'activitats: empreses industrials o terciàries, administracions, comunitats, etc. Aquest és el primer pas en el diagnòstic climàtic d'una activitat o d'un lloc. En prioritzar diferents elements d'emissió segons la seva importància, permetent definir accions prioritàries per reduir aquestes emissions.<br>
 
 A l’implementar-la s’habilita el següent:<br>
-
     * Comprensió de com reduir les emissions de GEH.<br>
     * Reducció de  les emissions de GEH.<br>
     * Compliment amb la normativa.<br>
@@ -313,19 +312,19 @@ Algunes de les bones pràctiques són:<br>
 
 * **Design Thinking:** Com més aviat s’intervingui durant l’anàlisi d’un requeriment, disseny funcional i modelatge, més gran serà l'efecte de reducció de la petjada ambiental. El dissenyador UX (experiència), quan treballa en el disseny, dona prioritat als requisits de l'usuari per tal de millorar la satisfacció del client. Això inclou: <br>
 
-    * Definir el problema <br>
-    * Entendre els usuaris <br>
-    * Generació de tasques i fluxos d'usuaris <br>
-    * Creació d'esbossos, wireframes i prototips <br>
-    * Proves d'usabilitat <br>
+    * Definir el problema<br>
+    * Entendre els usuaris<br>
+    * Generació de tasques i fluxos d'usuaris<br>
+    * Creació d'esbossos, wireframes i prototips<br>
+    * Proves d'usabilitat<br>
 
 
 El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
 
-    * Esquemes de colors <br>
-    * Tipus de lletra específics <br>
-    * Iconografia <br>
-    * La disposició <br>
+    * Esquemes de colors<br>
+    * Tipus de lletra específics<br>
+    * Iconografia<br>
+    * La disposició<br>
 
 Abans de passar a la fase de disseny, és crucial avaluar els requisits amb precisió per evitar afegir funcionalitats innecessàries sense voler. Al voltant del 45% de les funcions sol·licitades no s'utilitzen mai i el 70% no són essencials.<br>
 
@@ -505,7 +504,7 @@ Com a conclusions, es poden llistar de la següent forma els rols i tasques del 
 * Reutilitzar/Reparar: Fer que els dispositius durin el màxim temps possible.<br>
 * Reciclar  quan la reparació no sigui possible, assegureu-vos que els vostres dispositius estiguin recollits.<br>
 * Tornar a la Terra: Compost: Compensa plantant arbres.<br>
-<br>
+<br><br>
 
 * **Polítiques públiques i institucions:**<br>
 * Comunicar.<br>
@@ -514,7 +513,7 @@ Com a conclusions, es poden llistar de la següent forma els rols i tasques del 
 * Implementar directives europees (Gestió de residus, lluita contra l'obsolescència programada).<br>
 * Adoptar lleis i definir un marc normatiu per assolir els objectius marcats pels governs que van signar els acords de París.<br>
 * Control.<br>
-<br>
+<br><br>
 
 * **Educació:**<br>
 * Informar sobre els impactes de la tecnologia digital.<br>
@@ -526,7 +525,7 @@ Com a conclusions, es poden llistar de la següent forma els rols i tasques del 
 * Creació de "campus sostenibles".<br>
 * Aprendre a utilitzar eines d'Eco Disseny (Avaluació del Cicle de Vida, Comptabilitat del Carboni...).<br>
 * Posar en pràctica tècniques d'Eco Disseny.<br>
-<br>
+<br><br>
 
 * **Associacions i organitzacions:**<br> 
 * Elaboració d'un informe d'estudi sobre TI Sostenible.<br>
@@ -534,14 +533,14 @@ Com a conclusions, es poden llistar de la següent forma els rols i tasques del 
 * Sensibilització.<br>
 * Promoció de bones pràctiques.<br>
 * Projectes pilot amb agents socials.<br>
-<br>
+<br><br>
 
 * **Industries:**<br>
 * Produir de manera més responsable: menys i millor.<br>
 * Eco Dissenyar els seus productes, gràcies a l'Avaluació del Cicle de Vida (ACV).<br>
 * Triar les solucions i els socis adequats.<br>
 * Influir en la cadena de valor.<br>
-<br>
+<br><br>
 
 * **Companyies:**
 * Fer la seva part i prendre consciència del seu paper en el canvi climàtic.<br>
@@ -551,7 +550,7 @@ Com a conclusions, es poden llistar de la següent forma els rols i tasques del 
 * Implementar una carta Green IT.<br>
 * Integrar la TI Sostenible en l'estratègia de RSC.<br>
 * Demanar als seus socis la seva estratègia de descarbonització.<br>
-<br>
+<br><br>
 
 La implementació d’un apropament cap a les tecnologies d’informació verdes en una organització, dona diversos beneficis:<br>
 
@@ -560,7 +559,6 @@ La implementació d’un apropament cap a les tecnologies d’informació verdes
 * **Eficiència operacional:** A través de polítiques de sobrietat, racionalització, mutualització i concentració que facilita les operacions.<br>
 * **Guanys financers:** vinculat a la millor distribució.<br>
 * **Palanca d’innovació:** Aplicant l’eco-disseny en un sector que canvia ràpidament.<br>
-
 
 
 ## **Referències** {#Referencies}
