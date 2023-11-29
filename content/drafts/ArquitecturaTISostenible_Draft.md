@@ -123,7 +123,8 @@ Com qualsevol producte, un servei digital té un cicle de vida: Expressió, Defi
 
 Cada servei digital està implementat i suportat per dispositius (servidors, ordinadors, tauletes, etc.). Aquest maquinari també té el seu propi cicle de vida, similar al cicle de vida del producte descrit anteriorment.<br>
 
-Durant el desenvolupament d'un projecte de servei digital, aquests dos cicles de vida s'han de tenir en compte i considerar per tal d'integrar eficaçment l'eco disseny.<br>
+Durant el desenvolupament d'un projecte de servei digital, aquests dos cicles de vida s'han de tenir en compte i considerar per tal d'integrar eficaçment l'eco disseny.<br><br>
+
 
 <u>Objectius de sostenibilitat i KPI:</u><br>
 
@@ -169,6 +170,7 @@ Exemple de resultats:
 <div align="left"><i>Com interpretar aquest gràfic: S'indica, per exemple, que "les impressores tenen un impacte de carboni força elevat, que es deu principalment a la fase de muntatge, així com a la fase de distribució"</i>
 </div>
 <br>
+<br>
 
 <u>Focalització en telèfons intel·ligents</u>:
 
@@ -212,6 +214,7 @@ D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el 
 * **Comptabilitat del carboni:** La comptabilitat del carboni és un mètode de mesura de les emissions de gasos d'efecte hivernacle (GEH) que permet avaluar les emissions directes o indirectes produïdes per la teva activitat o el teu territori. És aplicable a tot tipus d'activitats: empreses industrials o terciàries, administracions, comunitats, etc. Aquest és el primer pas en el diagnòstic climàtic d'una activitat o d'un lloc. En prioritzar diferents elements d'emissió segons la seva importància, permetent definir accions prioritàries per reduir aquestes emissions.<br>
 
 A l’implementar-la s’habilita el següent:<br>
+
     * Comprensió de com reduir les emissions de GEH.<br>
     * Reducció de  les emissions de GEH.<br>
     * Compliment amb la normativa.<br>
@@ -319,7 +322,7 @@ Algunes de les bones pràctiques són:<br>
     * Proves d'usabilitat<br>
 
 
-El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
+El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:
 
     * Esquemes de colors<br>
     * Tipus de lletra específics<br>
