@@ -1,5 +1,5 @@
 +++
-date        = "2023-10-25"
+date        = "2023-11-29"
 title       = "Detall Dades de Referència"
 description = "Visualització del detall d'una dada de referència"
 sections    = ["Data Architecture"]

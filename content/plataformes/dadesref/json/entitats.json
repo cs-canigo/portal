@@ -494,28 +494,28 @@
         "Nom": "Entitats del sector públic",
         "Ambit": "Administració pública, govern i relacions institucionals",
         "Subambit": "Organització de l'administració i sector públic",
-        "Descripcio": "Conjunt d'entitats amb identificació social pròpia que gestionen serveis públics, produeixen béns i serveis o fan funcions i/o activitats que són competència de l'Administració, i que disposen d'identificació fiscal i d'un acrònim o marca regularitzat al Registre d'entitats del sector públic.",
+        "Descripcio": "Conjunt d'entitats amb identificació social pròpia que gestionen serveis públics, produeixen béns i serveis o fan funcions i/o activitats que són competència de l'Administració, i que disposen d'identificació fiscal i d'un acrònim o marca regularitzat al Registre d'entitats del sector públic. Només es mostren les entitats actives: amb estat registral Alta o Prebaixa.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Direcció General d’Administració Digital",
-                "idescripcio": "Versió inicial",
+                "ipromotor": "Direcció General del Patrimoni de la Generalitat de Catalunya - Departament d'Economia i Hisenda",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Entitats_sector_public_ATR.docx",
                 "ifitxer_xls": "Entitats_sector_public.xlsx",
                 "idatacreacio": "25/10/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "25/10/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "29/11/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Entitats-sector-public/knbx-8dhe",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "ENTITATS_SECTOR_PUBLIC",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "25/10/2023",
-        "Data_actualitzacio": "25/10/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "29/11/2023",
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq177",
@@ -629,16 +629,31 @@
             },
             {
                 "inom": "V06",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Es canvia la denominació de la “Secretaria d'Acció Exterior del Govern” (id: 13801) per “Secretaria d'Acció Exterior del Govern i de la Unió Europea”.",
                 "ifitxer_doc": "Secretaries_ATR.docx",
-                "ifitxer_xls": "Secretaries.xlsx",
+                "ifitxer_xls": "deprecated/Secretaries_V06.xlsx",
                 "idatacreacio": "24/10/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V07",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                "idescripcio": "S'actualitza la denominació de la “Secretaria de Transformació Educativa” (id: 15417) per “Secretaria de Polítiques Educatives”.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -646,7 +661,7 @@
         "nom_dinsBD": "SECRETARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "25/10/2023"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq90",
@@ -672,16 +687,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General d'Administració Local (DGAL)",
                 "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Ajuntaments_ATR.docx",
-                "ifitxer_xls": "Ajuntaments.xlsx",
+                "ifitxer_xls": "deprecated/Ajuntaments_V02.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "S'actualitza la denominació de l'ajuntament de \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
+                "ifitxer_doc": "Ajuntaments_ATR.docx",
+                "ifitxer_xls": "Ajuntaments.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -689,7 +719,7 @@
         "nom_dinsBD": "AJUNTAMENTS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq91",
@@ -2550,16 +2580,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
-                "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                "ifitxer_xls": "deprecated/Codi_Postal_Municipis_Cat_V02.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització per canvi de nom d'un municipi: Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat). Identificadors dels registres afectats: 0505, 0506, 0507.",
+                "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2567,7 +2612,7 @@
         "nom_dinsBD": "CODI_POSTAL_MUNICIPIS_CAT",
         "Classificacio": "Consolidat",
         "Data_publicacio": "26/05/2021",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq82",
@@ -2684,6 +2729,34 @@
         "Data_actualitzacio": "23/09/2020"
     },
     {
+        "Id": "dtarq193",
+        "Nom": "Estats dels Estats Units d'Amèrica",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
+        "Descripcio": "Llista dels estats que integren el país dels Estats Units d'Amèrica (EUA) incloent-hi el districte federal.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d’Administració Digital",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Estats_EUA_ATR.docx",
+                "ifitxer_xls": "Estats_EUA.xlsx",
+                "idatacreacio": "28/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Estats-dels-Estats-Units-d-Am%C3%A8rica/95iw-858v",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "ESTATS_EUA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "29/11/2023",
+        "Data_actualitzacio": "29/11/2023"
+    },
+    {
         "Id": "dtarq128",
         "Nom": "Municipis Catalunya Geo",
         "Ambit": "Territori, infraestructures i urbanisme",
@@ -2767,16 +2840,31 @@
             },
             {
                 "inom": "V06",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Modificació de la comarca dels municipis de Biosca (codi 250557) i Torà (codi 252234), que s'han segregat de la Segarra i s'han agregat al Solsonès i de Sant Feliu Sasserra (codi 082129) que ha retornat al Bages.",
                 "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
-                "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Catalunya_Geo_V06.xlsx",
                 "idatacreacio": "25/07/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "26/07/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V07",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Actualització per canvi nom del municipi de codi 170486: \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
+                "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2784,7 +2872,7 @@
         "nom_dinsBD": "MUNICIPIS_CAT_GEO",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "26/07/2023"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq87",
@@ -3020,16 +3108,31 @@
             },
             {
                 "inom": "V16",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització per canvi de nom d'un municipi: Codi 240362 Candín (nom anterior) per Valle de Ancares (nom actualitzat).",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_V16.xlsx",
                 "idatacreacio": "26/09/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "27/09/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V17",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi de nom d'un municipi: Codi 170486 Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat).",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3037,7 +3140,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "27/09/2023"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq127",
@@ -3121,16 +3224,31 @@
             },
             {
                 "inom": "V04",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "S'incorpora l'identificador de la unitat poblacional a on pertany el nom de carrer, s'elimina la relació amb el municipi i s'actualitza el conjunt de valors segons la darrera versió facilitada pel promotor.",
                 "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
-                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V04.xlsx",
                 "idatacreacio": "24/10/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Actualització per modificar el nom del municipi \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
+                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3138,7 +3256,7 @@
         "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "21/04/2021",
-        "Data_actualitzacio": "25/10/2023"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq125",
@@ -3465,16 +3583,31 @@
             },
             {
                 "inom": "V04",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V04.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització per canvi nom del municipi de codi 1704860000000: \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
+                "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3482,7 +3615,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "04/12/2020",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq140",
@@ -3703,16 +3836,31 @@
             },
             {
                 "inom": "V15",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització per canvi de nom d'una municipi: Candín (nom anterior) per Valle de Ancares (nom actualitzat). Codis de les unitats poblacionals afectades: 24036000000, 24036000200, 24036000201.",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V15.xlsx",
                 "idatacreacio": "26/09/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "29/11/2023",
                 "idatapublicacio": "27/09/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V16",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització per canvi de nom d'una municipi: Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat). Codi de la unitat poblacional afectada: 17048000000.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "29/11/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3720,7 +3868,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "27/09/2023"
+        "Data_actualitzacio": "29/11/2023"
     },
     {
         "Id": "dtarq175",
