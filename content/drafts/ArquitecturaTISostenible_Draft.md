@@ -219,6 +219,7 @@ A l’implementar-la s’habilita el següent:<br>
     * Capacitat d’anticipar-se als canvis del sector i innovar.<br>
     * Estalviar diners.<br>
 
+
 ### **Procés de la Comptabilitat**
 
 És important destacar els 4 passos per la comptabilitat de la petjada del carboni:<br>
