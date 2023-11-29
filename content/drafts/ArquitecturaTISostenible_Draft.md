@@ -213,13 +213,13 @@ D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el 
 
 * **Comptabilitat del carboni:** La comptabilitat del carboni és un mètode de mesura de les emissions de gasos d'efecte hivernacle (GEH) que permet avaluar les emissions directes o indirectes produïdes per la teva activitat o el teu territori. És aplicable a tot tipus d'activitats: empreses industrials o terciàries, administracions, comunitats, etc. Aquest és el primer pas en el diagnòstic climàtic d'una activitat o d'un lloc. En prioritzar diferents elements d'emissió segons la seva importància, permetent definir accions prioritàries per reduir aquestes emissions.<br>
 
-A l’implementar-la s’habilita el següent:<br>
+* A l’implementar-la s’habilita el següent:<br>
 
-    * Comprensió de com reduir les emissions de GEH.<br>
-    * Reducció de  les emissions de GEH.<br>
-    * Compliment amb la normativa.<br>
-    * Capacitat d’anticipar-se als canvis del sector i innovar.<br>
-    * Estalviar diners.<br>
+   * Comprensió de com reduir les emissions de GEH.<br>
+   * Reducció de  les emissions de GEH.<br>
+   * Compliment amb la normativa.<br>
+   * Capacitat d’anticipar-se als canvis del sector i innovar.<br>
+   * Estalviar diners.<br>
 
 
 ### **Procés de la Comptabilitat**
@@ -322,12 +322,12 @@ Algunes de les bones pràctiques són:<br>
     * Proves d'usabilitat<br>
 
 
-El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:
+El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
 
-    * Esquemes de colors<br>
-    * Tipus de lletra específics<br>
-    * Iconografia<br>
-    * La disposició<br>
+   * Esquemes de colors<br>
+   * Tipus de lletra específics<br>
+   * Iconografia<br>
+   * La disposició<br>
 
 Abans de passar a la fase de disseny, és crucial avaluar els requisits amb precisió per evitar afegir funcionalitats innecessàries sense voler. Al voltant del 45% de les funcions sol·licitades no s'utilitzen mai i el 70% no són essencials.<br>
 
