@@ -23,7 +23,6 @@ blog_tags:
   - bones-pràctiques
   - desenvolupament
 ---
-
 ## **Introducció** {#Introduccio}
 
 La TI s'ha desenvolupat, innovat e implantat a tots els nivells de les empreses, centrant-se en l'eficiència funcional, tècnica i de màrqueting. Aquest desplegament s'ha dut a terme independentment dels impactes mediambientals de maquinari i de les activitats humanes, ja que s’està avançant en el món virtual.<br>
@@ -36,19 +35,15 @@ En aquesta introducció a la TI sostenible, es revisaran:<br>
 A continuació, es nombraran alguns dels abasts de TI verdes i Eco Disseny:<br>
 
 * **Canvi climàtic:** L'era industrial que va començar amb l'ús del carbó i la gasolina, ha anat evolucionant progressivament. La combustió d'aquests combustibles fòssils ha provocat un augment de la concentració de gasos i, per tant, ha potenciat l'efecte hivernacle (GEH). La seva principal conseqüència, és un augment de la temperatura mitjana global anomenat també alteració climàtica.<br>
-
 * **Col·lapse de la biodiversitat:** L'impacte de les activitats humanes en el medi ambient es descriu utilitzant el concepte de petjada ecològica, que defineix la pressió exercida pels humans sobre els recursos naturals. Per a cada habitant, el nombre d'hectàrees globals necessàries per produir recursos i absorbir residus es mesura a partir d'una mitjana global d'un any determinat. Aquesta mateixa unitat s'utilitza per identificar la biocapacitat d'un continent que representa la seva superfície bioproductiva.<br>
-Es pot afirmar un descens massiu de la biodiversitat quan la petjada ecològica és més gran que la biocapacitat; el que significa que les necessitats humanes són més grans que la capacitat de la terra per produir-les o absorbir els residus.<br>
-
+  Es pot afirmar un descens massiu de la biodiversitat quan la petjada ecològica és més gran que la biocapacitat; el que significa que les necessitats humanes són més grans que la capacitat de la terra per produir-les o absorbir els residus.<br>
 * **Esgotament dels recursos abiòtics:** Els recursos abiòtics caracteritzen els recursos no vius que es troben de manera natural al medi, que no són creats ni produïts per l'home o l'activitat humana. Entre aquests recursos hi ha les terres rares, que estan formades per 17 metalls utilitzats en la fabricació de productes d'alta tecnologia (xips de telèfons intel·ligents, pantalles, etc.). La seva extracció, a més de provocar l'alliberament de productes tòxics contaminants, augmenta a causa del desenvolupament dels usos digitals.<br>
-Distribuïdes de manera desigual per tot el món i difícils de produir, les terres rares s'estan convertint en una preocupació geopolítica i 
-econòmica.<br>
-
+  Distribuïdes de manera desigual per tot el món i difícils de produir, les terres rares s'estan convertint en una preocupació geopolítica i 
+  econòmica.<br>
 * **La bretxa social:** A més del canvi climàtic i els problemes relacionats, l'augment de l'ús de les tecnologies digitals també està provocant desigualtats a la societat i arreu del món. En alguns països, al llarg de la cadena de producció d'equips, no es respecten els drets dels treballadors. La tecnologia digital pot crear dependència i aïllament social i es desconeixen tots els efectes sobre la salut de les pantalles i les seves ones.<br>
-La tecnologia digital aïlla les persones que no la saben utilitzar o que viuen en zones geogràfiques sense cobertura. Això es coneix com la **bretxa digital**. El 2021, s'estima que el 37% de la població mundial, o 2.900 milions de persones, no ha utilitzat mai Internet (Font: ITU).<br>
-No saber utilitzar les eines digitals és un desavantatge per una part de la població. Aquest analfabetisme digital afecta especialment a les persones més vulnerables.<br>
-Encara que s’utilitzin termes com "núvol" o "virtual", hi ha una realitat física i tangible darrera de la tecnologia digital. De mitjana en el 2018, un nord-americà posseeix prop de 10 dispositius digitals connectats i consumeix 140 gigabytes de dades al mes. L'indi mitjà només té un dispositiu i consumeix 2 gigabytes de dades al mes.<br>
-
+  La tecnologia digital aïlla les persones que no la saben utilitzar o que viuen en zones geogràfiques sense cobertura. Això es coneix com la **bretxa digital**. El 2021, s'estima que el 37% de la població mundial, o 2.900 milions de persones, no ha utilitzat mai Internet (Font: ITU).<br>
+  No saber utilitzar les eines digitals és un desavantatge per una part de la població. Aquest analfabetisme digital afecta especialment a les persones més vulnerables.<br>
+  Encara que s’utilitzin termes com "núvol" o "virtual", hi ha una realitat física i tangible darrera de la tecnologia digital. De mitjana en el 2018, un nord-americà posseeix prop de 10 dispositius digitals connectats i consumeix 140 gigabytes de dades al mes. L'indi mitjà només té un dispositiu i consumeix 2 gigabytes de dades al mes.<br>
 
 Addicionalment, es sap que les TIC consumeixen energia, els terminals es connecten entre si mitjançant infraestructures de xarxa per intercanviar informació emmagatzemada i processada als centres de dades.<br>
 
@@ -79,7 +74,6 @@ Es sap que les tecnologies TI ofereixen uns determinats serveis com podrien ser 
 * Governança eco-responsable.<br>
 * Implementació d'un anàlisis digital del cicle de vida.<br>
 
-
 ## **Estàndards i Avaluació del Cicle de Vida** {#Estandards}
 
 En aquest apartat es llistaran els estàndards disponibles de l’Eco Disseny i la responsabilitat digital a través d'una introducció a les normes, les normatives i l'avaluació del cicle de vida (LCA).<br>
@@ -88,7 +82,6 @@ En aquest apartat es llistaran els estàndards disponibles de l’Eco Disseny i 
 <div align="center"> <img src="/images/bloc/2023/11/Foto1.png" /></div>
 <div align="center">Font: Capgemini </div>
 <br>
-
 
 ### **Regulacions i Legislació**
 
@@ -113,7 +106,7 @@ Després, cal conèixer el que marca el reglament:<br>
 * **Directiva de bateries:** Assegurar la durada del maquinari permetent que es canviïn les bateries.<br>
 * **GDPR:** Garantir el tractament igualitari de les dades personals a tota la Unió Europea.<br>
 * **WCAG (Web Content Accessibility Guidelines):** Directrius d'accessibilitat de contingut web, un estàndard per fer accessibles les eines digitals.<br>
-<br>
+  <br>
 
 ### **Optimització del cicle de vida**
 
@@ -124,7 +117,6 @@ Com qualsevol producte, un servei digital té un cicle de vida: Expressió, Defi
 Cada servei digital està implementat i suportat per dispositius (servidors, ordinadors, tauletes, etc.). Aquest maquinari també té el seu propi cicle de vida, similar al cicle de vida del producte descrit anteriorment.<br>
 
 Durant el desenvolupament d'un projecte de servei digital, aquests dos cicles de vida s'han de tenir en compte i considerar per tal d'integrar eficaçment l'eco disseny.<br><br>
-
 
 <u>Objectius de sostenibilitat i KPI:</u><br>
 
@@ -196,18 +188,16 @@ Tot i que requereix un volum important de dades i un alt nivell d'experiència, 
 * Es poden evitar les transferències de contaminació.<br>
 * L'impacte de la tecnosfera sobre la biosfera es pot reduir.<br>
 
-
-
 ## **Petjada de Carboni** {#Petjada}
 
 En aquest apartat s’introdueix la noció de la petjada de carboni amb:<br>
 
 * **Energia:** L'energia caracteritza el canvi d'estat d'un sistema. Es consumeix energia quan:<br>
 
-    * Canvia la velocitat<br>
-    * S’escalfa o es refreda alguna cosa<br>
-    * Es deforma alguna cosa<br>
-    * Emet llum<br>
+  * Canvia la velocitat<br>
+  * S’escalfa o es refreda alguna cosa<br>
+  * Es deforma alguna cosa<br>
+  * Emet llum<br>
 
 D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el KiloWatt-hora.<br>
 
@@ -215,32 +205,24 @@ D'alguna manera, l'energia mesura l'abast del canvi, l'energia es mesura amb el 
 
 A l’implementar-la s’habilita el següent:<br>
 
-   * Comprensió de com reduir les emissions de GEH.<br>
-   * Reducció de  les emissions de GEH.<br>
-   * Compliment amb la normativa.<br>
-   * Capacitat d’anticipar-se als canvis del sector i innovar.<br>
-   * Estalviar diners.<br>
-
+* Comprensió de com reduir les emissions de GEH.<br>
+* Reducció de  les emissions de GEH.<br>
+* Compliment amb la normativa.<br>
+* Capacitat d’anticipar-se als canvis del sector i innovar.<br>
+* Estalviar diners.<br>
 
 ### **Procés de la Comptabilitat**
 
 És important destacar els 4 passos per la comptabilitat de la petjada del carboni:<br>
 
 1. Definició d’una funció a analitzar, el seu abast i una data de referència.<br>
-<br>
-<div align="center"> <img src="/images/bloc/2023/11/foto5.png" /></div>
-<div align="center">Font: Capgemini </div>
-<br>
-
+   <br>
 2. Recollida de dades (o mostreig per si la recollida de dades no és factible).<br>
-<br>
-<div align="center"> <img src="/images/bloc/2023/11/foto6.png" /></div>
-<div align="center">Font: Capgemini </div>
-<br>
-
+   <br>
 3. Calcular les emissions de GEH:<br>
-      * Comprovar l'ordre de magnitud dels resultats i les unitats de les dades recollides : Transports = km / Energia = kWh <br>
-      * Comprovar els factors d'emissió corresponents : kgCO2 per km / KgC02 per kWh <br>
+
+   * Comprovar l'ordre de magnitud dels resultats i les unitats de les dades recollides : Transports = km / Energia = kWh <br>
+   * Comprovar els factors d'emissió corresponents : kgCO2 per km / KgC02 per kWh <br>
 
 <br>
 <div align="center"> <img src="/images/bloc/2023/11/foto7.png" /></div>
@@ -248,13 +230,12 @@ A l’implementar-la s’habilita el següent:<br>
 <br>
 
 4. Crear un pla d'acció<br>
-Una vegada finalitzada l'avaluació dels GEH, s'han de determinar les accions prioritàries:<br>
+   Una vegada finalitzada l'avaluació dels GEH, s'han de determinar les accions prioritàries:<br>
 
 <br>
 <div align="center"> <img src="/images/bloc/2023/11/foto8bis.png" /></div>
 <div align="center">Font: Capgemini </div>
 <br>
-
 
 ## **Concepte de l'Eco Disseny** {#Concepte}
 
@@ -269,23 +250,16 @@ El vincle entre el desenvolupament d'aplicacions i l'entorn és molt fort, és a
 
 L’Eco Disseny de programari té com a objectiu reduir l'impacte a cadascun d'aquests nivells. De fet, es tracta d'adoptar un enfocament responsable, global i a llarg termini, a través del desenvolupament de l'aplicació i la vida del servei.<br>
 
-
 ### **Aplicacions verdes**
 
 En destaquen aquests punts clau:<br>
 
 * **Simplificar i racionalitzar el requisit:** És important simplificar i racionalitzar el requisit. És a dir, poder identificar allò que no és necessari, per eliminar-lo o reduir-lo. Això no sempre és fàcil.<br>
-
 * **Sobrietat:** És important prendre decisions sòbries, sobretot a l'hora de seleccionar un disseny. Un disseny senzill i estàtic consumirà menys energia que un disseny complex amb animacions.<br>
-
 * **Visió global del producte:** Tenir una visió global del producte és fonamental. Saber per què s'utilitza el producte ajudarà a identificar determinades opcions que cal fer pel que fa a les característiques.<br>
-
 * **Reduir el consum i la complexitat:** A nivell de desenvolupament, és possible reduir el consum i la complexitat d'aquesta etapa mitjançant diverses pràctiques.<br>
-
 * **Ampliar la vida útil dels equips:** Un aspecte clau a tenir en compte és allargar la vida útil de l'equip, sobretot lluitant contra l'obsolescència del programari.<br>
-
 * **Optimitzar la política de gestió de dades:** També s'ha de tenir en compte la política de gestió de dades, optimitzant-la, i fins i tot anticipant-la.<br>
-
 * **Selecció d'infraestructures d'impacte moderat:** També és possible fer opcions d'infraestructures d'impacte moderat.<br>
 
 Els seus beneficis per blocs són els següents:<br>
@@ -304,39 +278,33 @@ Una aplicació sòbria, proporciona més accessibilitat on una aplicació senzil
 Algunes de les bones pràctiques són:<br>
 
 * Eficàcia i sobrietat de la solució aportada. <br>
-
 * **Simplificació i racionalització del requisit:** De fet, són els requisits dels usuaris, traduïts en especificacions funcionals, després en especificacions tècniques i després en codi font, els que determinen en gran mesura la petjada final dels recursos del programari. Sabent que el 45% de les característiques no s'utilitzen mai, és fonamental reduir els requisits funcionals dels usuaris a les característiques que són realment essencials.<br>
-
 * **Treballar en iteració:** La metodologia utilitzada per gestionar el projecte ha d'estar centrada en l'usuari i centrada en els requisits de l'usuari. Els mètodes de desenvolupament iteratius poden reduir significativament la quantitat de codi produït i permetre una millora contínua.<br>
-
 * **Prendre el temps per identificar la solució tècnica adequada:** Per tal de minimitzar l'impacte del servei, cal dedicar-se el temps a identificar la solució tècnica adequada. Això significa dedicar més temps al disseny del programari i pensar-hi perquè sigui el més eficient possible i tingui el menor impacte en el medi ambient.<br>
-
 * **Treballar la visió del producte amb l'equip de desenvolupament:** Això ajuda a preveure els canvis en el servei i a garantir la sostenibilitat de les solucions proposades.<br>
-
 * **Design Thinking:** Com més aviat s’intervingui durant l’anàlisi d’un requeriment, disseny funcional i modelatge, més gran serà l'efecte de reducció de la petjada ambiental. El dissenyador UX (experiència), quan treballa en el disseny, dona prioritat als requisits de l'usuari per tal de millorar la satisfacció del client. Això inclou: <br>
 
-    * Definir el problema<br>
-    * Entendre els usuaris<br>
-    * Generació de tasques i fluxos d'usuaris<br>
-    * Creació d'esbossos, wireframes i prototips<br>
-    * Proves d'usabilitat<br>
+  * Definir el problema<br>
+  * Entendre els usuaris<br>
+  * Generació de tasques i fluxos d'usuaris<br>
+  * Creació d'esbossos, wireframes i prototips<br>
+  * Proves d'usabilitat<br>
 
 El dissenyador d'IU (interfície) fa que els productes siguin fàcils d'utilitzar. Es centren en la jerarquia visual i els models que donen indicis visuals als usuaris. Per això, utilitzen i treballen en:<br>
 
-   * Esquemes de colors<br>
-   * Tipus de lletra específics<br>
-   * Iconografia<br>
-   * La disposició<br>
+* Esquemes de colors<br>
+* Tipus de lletra específics<br>
+* Iconografia<br>
+* La disposició<br>
 
 Abans de passar a la fase de disseny, és crucial avaluar els requisits amb precisió per evitar afegir funcionalitats innecessàries sense voler. Al voltant del 45% de les funcions sol·licitades no s'utilitzen mai i el 70% no són essencials.<br>
 
 * **Enfocament "el mòbil primer":** Dissenyar una solució amb l'enfocament "Mobile first" implica:<br>
 
-    * **Pensar en el disseny:** Si es pensa en l’aplicació d'una manera "responsive", no cal fer l'aplicació dues vegades perquè el disseny s'adaptarà fàcilment al format de PC o tauleta. A més, si el servei funciona al telèfon, funcionarà en dispositius més potents com ara una tauleta o un ordinador.<br>
-    * **Pensar en el rendiment:** El servei ha d'estar dissenyat per terminals mòbils amb poca potència i una connexió de xarxa no òptima (3G en lloc de 4G per exemple). Aquestes limitacions tècniques obliguen els dissenyadors a centrar-se en l'essencial i crear un servei digital de baix impacte. Així, fins i tot els dispositius "vells" poden accedir al servei.<br>
+  * **Pensar en el disseny:** Si es pensa en l’aplicació d'una manera "responsive", no cal fer l'aplicació dues vegades perquè el disseny s'adaptarà fàcilment al format de PC o tauleta. A més, si el servei funciona al telèfon, funcionarà en dispositius més potents com ara una tauleta o un ordinador.<br>
+  * **Pensar en el rendiment:** El servei ha d'estar dissenyat per terminals mòbils amb poca potència i una connexió de xarxa no òptima (3G en lloc de 4G per exemple). Aquestes limitacions tècniques obliguen els dissenyadors a centrar-se en l'essencial i crear un servei digital de baix impacte. Així, fins i tot els dispositius "vells" poden accedir al servei.<br>
 
 Aquest enfocament ajuda a combatre l'obsolescència del programari per incompatibilitat, ja que permet utilitzar serveis en la majoria de dispositius, amb connexions diferents. Centrar-se en l'essencial garanteix no només la sobrietat de l'aplicació, sinó també la seva funcionalitat.<br>
-
 
 ### **Gestió de les dades**
 
@@ -354,14 +322,11 @@ Addicionalment, hi ha 2 conceptes importants més:<br>
 
 * **Principi de microservei:** es basa en el fet que un servei és igual a una funció. Això correspon a una divisió de la lògica empresarial. El benefici és que cada servei és independent i mínim en termes de recursos utilitzats per executar la funcionalitat considerada.<br>
 * **Enfocament sense servidor (serverless):** l'objectiu és utilitzar els recursos informàtics necessaris per l'aplicació només en el moment adequat i només quan sigui necessari. Quan no es requereix, els recursos s'alliberen per l'ús d'altres aplicacions.<br>
-L'objectiu d'aquests dos conceptes és dividir les funcions (microservei) i utilitzar-les només quan sigui necessari (sense servidor).<br>
-
+  L'objectiu d'aquests dos conceptes és dividir les funcions (microservei) i utilitzar-les només quan sigui necessari (sense servidor).<br>
 
 ### **Infraestructura**
 
 La selecció d'infraestructures i servidors és important i ha d'incloure els temes següents: eficiència energètica, política de Centres de Dades, energies renovables, etc.<br>
-
-
 
 ## **Infraestructura Verda** {#Infraestructura}
 
@@ -401,7 +366,6 @@ Si es comparen els impactes en la cadena de comunicació en tres blocs (usuaris,
 
 Els dispositius d'infraestructura són aquells que funcionen les 24 hores del dia i els 365 dies de l'any, com ara encaminadors, commutadors, punts d’accés, servidors, etc. Lògicament, la petjada d'aquests dispositius se situa principalment en la fase d'ús. Es relaciona principalment amb la generació d'electricitat consumida per aquests dispositius.<br>
 
-
 ### **Centre de Dades**
 
 Fluxos entrants i sortints d’un Centre de Dades:<br>
@@ -422,7 +386,6 @@ Es detecten aquestes tipologies de tràfic de dades:<br>
 * El 15% de dades de tràfic, corresponen a les dades que van del Data Center als usuaris (web, emails,....) <br>
 * Un altre 15% de dades de tràfic, corresponen al flux de dades entre Centres de Dades. <br>
 * I el 70% de dades de tràfic restants, correspon a la transmissió  de dades en el mateix Centre de Dades. <br>
-
 
 ### **Virtualització de màquines**
 
@@ -453,14 +416,13 @@ Addicionalment, és important destacar aquestes millors pràctiques pel núvol:<
 * **Rendiment energètic:** Quan es triï el maquinari o allotjament, sempre es recomana prioritzar els dispositius etiquetats. Les etiquetes són un testimoni d'aquestes avaluacions de rendiment energètic.<br>
 * **Consum de maquinari:** Assegurar que el consum de maquinari no superi la capacitat total de distribució elèctrica. Això requereix preparar prèviament un pressupost elèctric, així com la configuració del maquinari informàtic per optimitzar la gestió de l'energia.<br>
 * **Origen del maquinari:** Comprovar l'origen del maquinari en la fase preliminar del projecte de prevenda.
-Recomanacions ASHRAE: Assegurar que el maquinari que s'ha d'afegir a la cartera admet les recomanacions ASHRAE (+27 °C - Higrometria 80%).<br>
+  Recomanacions ASHRAE: Assegurar que el maquinari que s'ha d'afegir a la cartera admet les recomanacions ASHRAE (+27 °C - Higrometria 80%).<br>
 * **Centrar-se en la capacitat d'emmagatzematge:** L'intercanvi i l'emmagatzematge de dades es consideren com els principals problemes ambientals i econòmics de les infraestructures. Per exemple, es pot planificar una seqüència d'aturada de serveis que tinguin menys valor o poca criticitat pel negoci.<br>
 * **Servidors:** Virtualitzar i compartir servidors.<br>
 * **Auto-monitor:** Autocontrol per assegurar el nivell de les instal·lacions, per exemple la instal·lació de sensors per visualitzar i optimitzar el consum elèctric.<br>
 * **Proveïdors d'electricitat:** Assegurar que els proveïdors d'electricitat siguin escollits adequadament pel que fa a les qüestions de Green IT.<br>
 * **Política de gestió de residus:** Implementar una política de gestió de residus amb un certificat de traçabilitat (reciclatge d'aparells antics o eliminació). La implementació d'aquesta política, no només allarga la vida útil del dispositiu, sinó que també augmenta la consciència dels empleats sobre la gestió de residus.<br>
 * **Programari:** El programari també és un aspecte important de la infraestructura. El cicle de vida del programari i el seu emmagatzematge s'han de determinar segons el seu ús i la seva rellevància.<br>
-
 
 ### **Centres de Dades “Verds”**
 
@@ -486,7 +448,6 @@ Alguns indicadors:<br>
 * **CUE (Carbon Usage Effectiveness):** Basat en el mateix principi que PUE.<br>
 * **WUE (Water Usage Effectiveness):** Basat en el mateix principi que PUE.<br>
 
-
 ## **Conclusions** {#Conclusions}
 
 Per poder extreure unes conclusions sobre les tecnologies d’informació verdes i el seu disseny Eco Disseny s’han de plantejar 2 preguntes d’alt nivell: <i>Qui està afectat i què es pot fer?</i><br>
@@ -501,67 +462,67 @@ En primera instancia es poden tipificar els següents interlocutors: Ciutadans, 
 Com a conclusions, es poden llistar de la següent forma els rols i tasques del que s’ha de fer per cada pilar:<br>
 
 * **Ciutadans:**
-   * Rebutjar: Reconsiderar les compres.<br>
-   * Reduir: Menys vídeos, resolució més baixa, menys contingut en línia, menys dispositius...<br>
-   * Reutilitzar/Reparar: Fer que els dispositius durin el màxim temps possible.<br>
-   * Reciclar  quan la reparació no sigui possible, assegureu-vos que els vostres dispositius estiguin recollits.<br>
-   * Tornar a la Terra: Compost: Compensa plantant arbres.<br>
-<br><br>
 
+  * Rebutjar: Reconsiderar les compres.<br>
+  * Reduir: Menys vídeos, resolució més baixa, menys contingut en línia, menys dispositius...<br>
+  * Reutilitzar/Reparar: Fer que els dispositius durin el màxim temps possible.<br>
+  * Reciclar  quan la reparació no sigui possible, assegureu-vos que els vostres dispositius estiguin recollits.<br>
+  * Tornar a la Terra: Compost: Compensa plantant arbres.<br>
+    <br><br>
 * **Polítiques públiques i institucions:**
-   * Comunicar.<br>
-   * Subvencionar i fomentar l'acció.<br>
-   * Donar suport a l'economia i al desenvolupament de la informàtica sostenible mitjançant          subvencions, lleis, etiquetes, desenvolupament de bases de dades, aportació de mètodes per quantificar el rendiment ambiental de la informàtica, etc.<br>
-   * Implementar directives europees (Gestió de residus, lluita contra l'obsolescència programada).<br>
-   * Adoptar lleis i definir un marc normatiu per assolir els objectius marcats pels governs que van signar els acords de París.<br>
-   * Control.<br>
-<br><br>
 
+  * Comunicar.<br>
+  * Subvencionar i fomentar l'acció.<br>
+  * Donar suport a l'economia i al desenvolupament de la informàtica sostenible mitjançant          subvencions, lleis, etiquetes, desenvolupament de bases de dades, aportació de mètodes per quantificar el rendiment ambiental de la informàtica, etc.<br>
+  * Implementar directives europees (Gestió de residus, lluita contra l'obsolescència programada).<br>
+  * Adoptar lleis i definir un marc normatiu per assolir els objectius marcats pels governs que van signar els acords de París.<br>
+  * Control.<br>
+    <br><br>
 * **Educació:**
-   * Informar sobre els impactes de la tecnologia digital.<br>
-   * Educar en solucions i eines per afrontar els reptes socioambientals de la tecnologia digital.<br>
-   * Implementar una política de compra responsable.<br>
-   * Comprendre les causes del canvi climàtic.<br>
-   * Aprendre les millors pràctiques a seguir.<br>
-   * Formar els futurs grups d'interès i redefinir els seus negocis.<br>
-   * Creació de "campus sostenibles".<br>
-   * Aprendre a utilitzar eines d'Eco Disseny (Avaluació del Cicle de Vida, Comptabilitat del Carboni...).<br>
-   * Posar en pràctica tècniques d'Eco Disseny.<br>
-<br><br>
 
+  * Informar sobre els impactes de la tecnologia digital.<br>
+  * Educar en solucions i eines per afrontar els reptes socioambientals de la tecnologia digital.<br>
+  * Implementar una política de compra responsable.<br>
+  * Comprendre les causes del canvi climàtic.<br>
+  * Aprendre les millors pràctiques a seguir.<br>
+  * Formar els futurs grups d'interès i redefinir els seus negocis.<br>
+  * Creació de "campus sostenibles".<br>
+  * Aprendre a utilitzar eines d'Eco Disseny (Avaluació del Cicle de Vida, Comptabilitat del Carboni...).<br>
+  * Posar en pràctica tècniques d'Eco Disseny.<br>
+    <br><br>
 * **Associacions i organitzacions:**
-   * Elaboració d'un informe d'estudi sobre TI Sostenible.<br>
-   * Creació d'infografies i cartes per tal d'informar i donar suport a tots els agents socials cap a una TI més sostenible.<br>
-   * Sensibilització.<br>
-   * Promoció de bones pràctiques.<br>
-   * Projectes pilot amb agents socials.<br>
-<br><br>
 
+  * Elaboració d'un informe d'estudi sobre TI Sostenible.<br>
+  * Creació d'infografies i cartes per tal d'informar i donar suport a tots els agents socials cap a una TI més sostenible.<br>
+  * Sensibilització.<br>
+  * Promoció de bones pràctiques.<br>
+  * Projectes pilot amb agents socials.<br>
+    <br><br>
 * **Industries:**
-   * Produir de manera més responsable: menys i millor.<br>
-   * Eco Dissenyar els seus productes, gràcies a l'Avaluació del Cicle de Vida (ACV).<br>
-   * Triar les solucions i els socis adequats.<br>
-   * Influir en la cadena de valor.<br>
-<br><br>
 
+  * Produir de manera més responsable: menys i millor.<br>
+  * Eco Dissenyar els seus productes, gràcies a l'Avaluació del Cicle de Vida (ACV).<br>
+  * Triar les solucions i els socis adequats.<br>
+  * Influir en la cadena de valor.<br>
+    <br><br>
 * **Companyies:**
-   * Fer la seva part i prendre consciència del seu paper en el canvi climàtic.<br>
-   * Comprar de manera responsable (productes etiquetats/renovats).<br>
-   * Ampliar la vida útil dels equips, potenciar el flex office, oferir tutorials per perfil, formar, sensibilitzar, etc.<br>
-   * Fer-se auditar i etiquetar.<br>
-   * Implementar una carta Green IT.<br>
-   * Integrar la TI Sostenible en l'estratègia de RSC.<br>
-   * Demanar als seus socis la seva estratègia de descarbonització.<br>
-<br><br>
+
+  * Fer la seva part i prendre consciència del seu paper en el canvi climàtic.<br>
+  * Comprar de manera responsable (productes etiquetats/renovats).<br>
+  * Ampliar la vida útil dels equips, potenciar el flex office, oferir tutorials per perfil, formar, sensibilitzar, etc.<br>
+  * Fer-se auditar i etiquetar.<br>
+  * Implementar una carta Green IT.<br>
+  * Integrar la TI Sostenible en l'estratègia de RSC.<br>
+  * Demanar als seus socis la seva estratègia de descarbonització.<br>
+    <br><br>
 
 La implementació d’un apropament cap a les tecnologies d’informació verdes en una organització, dona diversos beneficis:<br>
 
-   * **Impacte ambiental reduït:** Degut a menys emissions GHE i consums d’aigua i electricitat.<br>
-   * **Imatge de companyia:** Amb una millor imatge de companyia pels clients i treballadors. <br>
-   * **Eficiència operacional:** A través de polítiques de sobrietat, racionalització, mutualització i concentració que facilita les operacions.<br>
-   * **Guanys financers:** vinculat a la millor distribució.<br>
-   * **Palanca d’innovació:** Aplicant l’eco-disseny en un sector que canvia ràpidament.<br>
-
+* **Impacte ambiental reduït:** Degut a menys emissions GHE i consums d’aigua i electricitat.<br>
+* **Imatge de companyia:** Amb una millor imatge de companyia pels clients i treballadors. <br>
+* **Eficiència operacional:** A través de polítiques de sobrietat, racionalització, mutualització i concentració que facilita les operacions.<br>
+* **Guanys financers:** vinculat a la millor distribució.<br>
+* **Palanca d’innovació:** Aplicant l’eco-disseny en un sector que canvia ràpidament.<br>
 
 ## **Referències** {#Referencies}
 
@@ -569,7 +530,6 @@ La implementació d’un apropament cap a les tecnologies d’informació verdes
 * https://charter.isit-europe.org/ <br>
 * https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en <br>
 * https://eco-conception.designersethiques.org/guide/en/ <br>
-
 
 ## **Glossari** {#Glossari}
 
@@ -582,9 +542,7 @@ La implementació d’un apropament cap a les tecnologies d’informació verdes
 * **CUE (Carbon Usage Effectiveness):** Eficàcia de l’ús del carboni.<br>
 * **WUE (Water Usage Effectiveness):** Eficàcia de l’ús de l’aigua.<br>
 
-
-
 <br>
 <br>
-**Àrea d'Arquitectura d'Entorn Digital de Treball i Comunicacions** <br>
-**Direcció Infraestructures**
+\*\*Àrea d'Arquitectura d'Entorn Digital de Treball i Comunicacions\*\* <br>
+\*\*Direcció Infraestructures\*\*
