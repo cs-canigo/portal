@@ -501,67 +501,67 @@ En primera instancia es poden tipificar els següents interlocutors: Ciutadans, 
 
 Com a conclusions, es poden llistar de la següent forma els rols i tasques del que s’ha de fer per cada pilar:<br>
 
-* **Ciutadans:**<br>
-* Rebutjar: Reconsiderar les compres.<br>
-* Reduir: Menys vídeos, resolució més baixa, menys contingut en línia, menys dispositius...<br>
-* Reutilitzar/Reparar: Fer que els dispositius durin el màxim temps possible.<br>
-* Reciclar  quan la reparació no sigui possible, assegureu-vos que els vostres dispositius estiguin recollits.<br>
-* Tornar a la Terra: Compost: Compensa plantant arbres.<br>
+* **Ciutadans:**
+   * Rebutjar: Reconsiderar les compres.<br>
+   * Reduir: Menys vídeos, resolució més baixa, menys contingut en línia, menys dispositius...<br>
+   * Reutilitzar/Reparar: Fer que els dispositius durin el màxim temps possible.<br>
+   * Reciclar  quan la reparació no sigui possible, assegureu-vos que els vostres dispositius estiguin recollits.<br>
+   * Tornar a la Terra: Compost: Compensa plantant arbres.<br>
 <br><br>
 
-* **Polítiques públiques i institucions:**<br>
-* Comunicar.<br>
-* Subvencionar i fomentar l'acció.<br>
-* Donar suport a l'economia i al desenvolupament de la informàtica sostenible mitjançant subvencions, lleis, etiquetes, desenvolupament de bases de dades, aportació de mètodes per quantificar el rendiment ambiental de la informàtica, etc.<br>
-* Implementar directives europees (Gestió de residus, lluita contra l'obsolescència programada).<br>
-* Adoptar lleis i definir un marc normatiu per assolir els objectius marcats pels governs que van signar els acords de París.<br>
-* Control.<br>
+* **Polítiques públiques i institucions:**
+   * Comunicar.<br>
+   * Subvencionar i fomentar l'acció.<br>
+   * Donar suport a l'economia i al desenvolupament de la informàtica sostenible mitjançant          subvencions, lleis, etiquetes, desenvolupament de bases de dades, aportació de mètodes per quantificar el rendiment ambiental de la informàtica, etc.<br>
+   * Implementar directives europees (Gestió de residus, lluita contra l'obsolescència programada).<br>
+   * Adoptar lleis i definir un marc normatiu per assolir els objectius marcats pels governs que van signar els acords de París.<br>
+   * Control.<br>
 <br><br>
 
-* **Educació:**<br>
-* Informar sobre els impactes de la tecnologia digital.<br>
-* Educar en solucions i eines per afrontar els reptes socioambientals de la tecnologia digital.<br>
-* Implementar una política de compra responsable.<br>
-* Comprendre les causes del canvi climàtic.<br>
-* Aprendre les millors pràctiques a seguir.<br>
-* Formar els futurs grups d'interès i redefinir els seus negocis.<br>
-* Creació de "campus sostenibles".<br>
-* Aprendre a utilitzar eines d'Eco Disseny (Avaluació del Cicle de Vida, Comptabilitat del Carboni...).<br>
-* Posar en pràctica tècniques d'Eco Disseny.<br>
+* **Educació:**
+   * Informar sobre els impactes de la tecnologia digital.<br>
+   * Educar en solucions i eines per afrontar els reptes socioambientals de la tecnologia digital.<br>
+   * Implementar una política de compra responsable.<br>
+   * Comprendre les causes del canvi climàtic.<br>
+   * Aprendre les millors pràctiques a seguir.<br>
+   * Formar els futurs grups d'interès i redefinir els seus negocis.<br>
+   * Creació de "campus sostenibles".<br>
+   * Aprendre a utilitzar eines d'Eco Disseny (Avaluació del Cicle de Vida, Comptabilitat del Carboni...).<br>
+   * Posar en pràctica tècniques d'Eco Disseny.<br>
 <br><br>
 
-* **Associacions i organitzacions:**<br> 
-* Elaboració d'un informe d'estudi sobre TI Sostenible.<br>
-* Creació d'infografies i cartes per tal d'informar i donar suport a tots els agents socials cap a una TI més sostenible.<br>
-* Sensibilització.<br>
-* Promoció de bones pràctiques.<br>
-* Projectes pilot amb agents socials.<br>
+* **Associacions i organitzacions:**
+   * Elaboració d'un informe d'estudi sobre TI Sostenible.<br>
+   * Creació d'infografies i cartes per tal d'informar i donar suport a tots els agents socials cap a una TI més sostenible.<br>
+   * Sensibilització.<br>
+   * Promoció de bones pràctiques.<br>
+   * Projectes pilot amb agents socials.<br>
 <br><br>
 
-* **Industries:**<br>
-* Produir de manera més responsable: menys i millor.<br>
-* Eco Dissenyar els seus productes, gràcies a l'Avaluació del Cicle de Vida (ACV).<br>
-* Triar les solucions i els socis adequats.<br>
-* Influir en la cadena de valor.<br>
+* **Industries:**
+   * Produir de manera més responsable: menys i millor.<br>
+   * Eco Dissenyar els seus productes, gràcies a l'Avaluació del Cicle de Vida (ACV).<br>
+   * Triar les solucions i els socis adequats.<br>
+   * Influir en la cadena de valor.<br>
 <br><br>
 
 * **Companyies:**
-* Fer la seva part i prendre consciència del seu paper en el canvi climàtic.<br>
-* Comprar de manera responsable (productes etiquetats/renovats).<br>
-* Ampliar la vida útil dels equips, potenciar el flex office, oferir tutorials per perfil, formar, sensibilitzar, etc.<br>
-* Fer-se auditar i etiquetar.<br>
-* Implementar una carta Green IT.<br>
-* Integrar la TI Sostenible en l'estratègia de RSC.<br>
-* Demanar als seus socis la seva estratègia de descarbonització.<br>
+   * Fer la seva part i prendre consciència del seu paper en el canvi climàtic.<br>
+   * Comprar de manera responsable (productes etiquetats/renovats).<br>
+   * Ampliar la vida útil dels equips, potenciar el flex office, oferir tutorials per perfil, formar, sensibilitzar, etc.<br>
+   * Fer-se auditar i etiquetar.<br>
+   * Implementar una carta Green IT.<br>
+   * Integrar la TI Sostenible en l'estratègia de RSC.<br>
+   * Demanar als seus socis la seva estratègia de descarbonització.<br>
 <br><br>
 
 La implementació d’un apropament cap a les tecnologies d’informació verdes en una organització, dona diversos beneficis:<br>
 
-* **Impacte ambiental reduït:** Degut a menys emissions GHE i consums d’aigua i electricitat.<br>
-* **Imatge de companyia:** Amb una millor imatge de companyia pels clients i treballadors. <br>
-* **Eficiència operacional:** A través de polítiques de sobrietat, racionalització, mutualització i concentració que facilita les operacions.<br>
-* **Guanys financers:** vinculat a la millor distribució.<br>
-* **Palanca d’innovació:** Aplicant l’eco-disseny en un sector que canvia ràpidament.<br>
+   * **Impacte ambiental reduït:** Degut a menys emissions GHE i consums d’aigua i electricitat.<br>
+   * **Imatge de companyia:** Amb una millor imatge de companyia pels clients i treballadors. <br>
+   * **Eficiència operacional:** A través de polítiques de sobrietat, racionalització, mutualització i concentració que facilita les operacions.<br>
+   * **Guanys financers:** vinculat a la millor distribució.<br>
+   * **Palanca d’innovació:** Aplicant l’eco-disseny en un sector que canvia ràpidament.<br>
 
 
 ## **Referències** {#Referencies}
