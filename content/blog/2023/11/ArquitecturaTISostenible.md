@@ -1,17 +1,27 @@
-+++
-date        = "2023-11-29"
-title       = "Arquitectura TI Sostenible"
-description = "Apoderant la Tecnologia del Futur amb Solucions Sostenibles. En aquest article, es descriuen  els  principis i conceptes que es segueixen en el disseny d’arquitectures TI sostenibles."
-sections    = ["Blog", "home"]
-blog_tags   = ["cloud", "desplegament", "principis", "bones-pràctiques", "desenvolupament"]
-categories  = ["cloud", "desplegament", "principis", "bones-pràctiques", "desenvolupament"]
-imatge      = "/images/bloc/2023/11/Entrada3.jpg"
-key         = "DESEMBRE2023"
-+++
 ---
-
-# **Arquitectura TI Sostenible**
-
+title: Arquitectura TI Sostenible
+description: Apoderant la Tecnologia del Futur amb Solucions Sostenibles. En
+  aquest article, es descriuen  els  principis i conceptes que es segueixen en
+  el disseny d’arquitectures TI sostenibles.
+date: 2023-11-29
+sections:
+  - Blog
+  - home
+categories:
+  - cloud
+  - desplegament
+  - principis
+  - bones-pràctiques
+  - desenvolupament
+imatge: /images/bloc/2023/11/Entrada3.jpg
+key: DESEMBRE2023
+toc: true
+blog_tags:
+  - cloud
+  - desplegament
+  - principis
+  - bones-pràctiques
+  - desenvolupament
 ---
 
 ## **Introducció** {#Introduccio}
