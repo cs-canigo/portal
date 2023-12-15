@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 8
 +++
 
@@ -92,7 +92,7 @@ En el pom.xml;
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/psgd.properties amb el següent contingut:
 

@@ -1,14 +1,14 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Migració versió anterior"
-description = "Migració de versió 3.4 a Canigó 3.6"
+description = "Migració de versió 3.4 a Canigó 3.8"
 sections    = "canigo-fwk-docs"
-enllac		= "/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/migracio-versio-anterior/"
+enllac		= "/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/migracio-versio-anterior/"
 weight		= 3
 +++
 
-## Migració de versió 3.4 a Canigó 3.6
+## Migració de versió 3.4 a Canigó 3.8
 
-Per a la migració de la versió 3.4 a Canigó 3.6 hi ha disponible el how to:
+Per a la migració de la versió 3.4 a Canigó 3.8 hi ha disponible el how to:
 
-[Actualització Canigó 3.4 a Canigó 3.6](/howtos/2021-10-Howto-Actualitzacio_Canigo3_4_Canigo3_6/).
+[Actualització Canigó 3.4 a Canigó 3.8](/howtos/2021-10-Howto-Actualitzacio_Canigo3_4_Canigo3_6/).

@@ -1,8 +1,8 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Cues JMS"
 description = "Missatgeria estándard JMS"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 2
 +++
 
@@ -101,7 +101,7 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 <dependency>
 	<groupId>org.apache.xbean</groupId>
 	<artifactId>com.springsource.org.apache.xbean.spring</artifactId>
-	<version>3.6.0</version>
+	<version>3.8.0</version>
 </dependency>
 <dependency>
 	<groupId>org.apache.geronimo.specs</groupId>

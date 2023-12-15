@@ -1,14 +1,14 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Dependències externes"
-description = "Dependències externes Canigó 3.6.0"
+description = "Dependències externes Canigó 3.8.0"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 
-## Canigó 3.6.0
+## Canigó 3.8.0
 
-|          Dependències externes       |      Canigó 3.6.0     |
+|          Dependències externes       |      Canigó 3.8.0     |
 |---------------------------------     |---------------------- |
 | springframework                      |  5.3.9                |
 | spring.security                      |  5.5.2                |

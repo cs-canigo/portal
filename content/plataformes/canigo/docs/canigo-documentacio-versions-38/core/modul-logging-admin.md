@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Administració de logs"
 description = "Mòdul per administrar els logs de l'aplicació"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 11
 +++
 
@@ -30,7 +30,7 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

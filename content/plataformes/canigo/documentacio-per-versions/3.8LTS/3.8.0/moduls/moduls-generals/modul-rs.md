@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Mòdul RS"
 description = "Mòdul RESTful Services"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 2
 +++
 
@@ -22,7 +22,7 @@ Tot el contingut es serveix en format JSON.
 
 ### Instal·lació
 
-El mòdul RS i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.6.
+El mòdul RS i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.8.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
 En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
 
@@ -41,7 +41,7 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

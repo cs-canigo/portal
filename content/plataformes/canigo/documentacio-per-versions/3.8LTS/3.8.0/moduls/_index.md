@@ -1,7 +1,7 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Mòduls"
-description = "Mòduls Canigó 3.6.0"
+description = "Mòduls Canigó 3.8.0"
 sections    = "canigo-fwk-docs"
-enllac		= "/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/"
+enllac		= "/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/"
 +++

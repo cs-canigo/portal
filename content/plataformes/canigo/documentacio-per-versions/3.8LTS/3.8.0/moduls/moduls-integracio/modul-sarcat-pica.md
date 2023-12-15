@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 9
 +++
 
@@ -46,7 +46,7 @@ Per tal d'instal-lar el mòdul de Sarcat Pica es pot incloure automàticament a 
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -68,7 +68,7 @@ Propietat           | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la [OT PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 
-Aquest mòdul és dependent del [mòdul de la PICA](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/moduls-integracio/modul-pica/) pel que també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-integracio/modul-pica/) pel que també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

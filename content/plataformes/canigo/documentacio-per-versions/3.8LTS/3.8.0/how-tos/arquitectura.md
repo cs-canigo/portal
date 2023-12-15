@@ -1,7 +1,7 @@
 +++
-date        = "2022-07-14"
+date        = "2024-01-15"
 title       = "Guies d'ús d'arquitectura"
-description = "Guies d'ús (HowTOs) d'arquitectura 3.6.0"
+description = "Guies d'ús (HowTOs) d'arquitectura 3.8.0"
 sections    = "canigo-fwk-docs"
 weight        = 1
 +++

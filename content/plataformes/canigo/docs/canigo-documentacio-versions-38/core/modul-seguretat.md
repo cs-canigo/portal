@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 9
 +++
 
@@ -26,7 +26,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ## Configuració
 

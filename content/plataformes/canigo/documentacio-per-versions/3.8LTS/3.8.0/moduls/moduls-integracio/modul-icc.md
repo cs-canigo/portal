@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "ICC"
 description = "Serveis de normalització d'adreces de l'Institut Cartogràfic de Catalunya."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 5
 +++
 
@@ -68,7 +68,7 @@ Per tal d'instal-lar el connector ICC es pot incloure automàticament a través 
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 #### Configuració
 

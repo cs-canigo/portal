@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Correu"
 description = "Enviament de correu electrònic."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 1
 +++
 
@@ -32,7 +32,7 @@ Per tal d'instal-lar el mòdul d'enviament de correu es pot incloure automàtica
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

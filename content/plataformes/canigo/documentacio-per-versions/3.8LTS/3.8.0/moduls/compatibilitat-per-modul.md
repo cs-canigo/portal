@@ -1,14 +1,14 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Compatibilitat per mòdul"
-description = "Compatibilitat per mòdul Canigó 3.6.0"
+description = "Compatibilitat per mòdul Canigó 3.8.0"
 sections    = "canigo-fwk-docs"
 weight      = 1
 +++
 
-## Canigó 3.6.0
+## Canigó 3.8.0
 
-|                                                   		| 01/11/2021 (3.6.0)																														|
+|                                                   		| 01/11/2021 (3.8.0)																														|
 |---------------------------------------------------		|------------------																															|
 | **canigo.test**                                   		| [3.0.0](/plataformes/canigo/documentacio-llibreries/canigo.test/3.0.0/)  							|
 |                                                   		|               																																|

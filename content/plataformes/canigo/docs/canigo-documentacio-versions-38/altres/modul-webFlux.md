@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "WebFlux"
-description = "Com configurar aplicació Canigó 3.6 per utilitzar WebFlux"
-sections    = "Canigó. Documentació Versió 3.6"
+description = "Com configurar aplicació Canigó 3.8 per utilitzar WebFlux"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 5
 +++
 
@@ -12,13 +12,13 @@ El propòsit d’aquest apartat és introduïr al desenvolupador la programació
 
 ## Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.6 del Framework Canigó
+Els passos descrits en aquest document apliquen a la versió 3.8 del Framework Canigó
 
 ## Introducció
 
-A la versió 3.6 de Canigó conté la possibilitat d'utilitzar les funcionalitats de WebFlux
+A la versió 3.8 de Canigó conté la possibilitat d'utilitzar les funcionalitats de WebFlux
 
-L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.6.0 de Canigó.
+L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.8.0 de Canigó.
 
 ### Introducció WebFlux
 
@@ -127,7 +127,7 @@ Afegirem les dependències de Mongodb
 			</exclusions>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 

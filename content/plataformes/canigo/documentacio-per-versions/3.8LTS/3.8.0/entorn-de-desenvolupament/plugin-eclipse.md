@@ -1,7 +1,7 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Plugin eclipse 1.8.0"
-description = "Plugin eclipse 1.8.0 Canigó 3.6.0"
+description = "Plugin eclipse 1.8.0 Canigó 3.8.0"
 sections    = "canigo-fwk-docs"
 enllac		= "/plataformes/canigo/entorn-de-desenvolupament/plugin-eclipse/1.8.0/"
 weight		= 2

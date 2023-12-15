@@ -1,6 +1,6 @@
 +++
-date        = "2021-11-01"
-title       = "3.6.0"
-description = "Versió 3.6.0"
+date        = "2024-01-15"
+title       = "3.8.0"
+description = "Versió 3.8.0"
 sections    = "canigo-fwk-docs"
 +++

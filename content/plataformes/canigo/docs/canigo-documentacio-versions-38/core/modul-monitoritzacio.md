@@ -1,14 +1,14 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Monitorització"
 description = "Monitorització de l'aplicació."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 8
 +++
 
 ## Introducció
 
-A la versió 3.6 del Framework Canigó disposa d'un component de monitorització de l'aplicació sense haver de fer cap desenvolupament addicional per part dels desenvolupadors de les aplicacions. Aquest component permet:
+A la versió 3.8 del Framework Canigó disposa d'un component de monitorització de l'aplicació sense haver de fer cap desenvolupament addicional per part dels desenvolupadors de les aplicacions. Aquest component permet:
 
 * Fer un seguiment de les peticions que rep l'aplicació.
 * Comprovar l'estat del sistema.

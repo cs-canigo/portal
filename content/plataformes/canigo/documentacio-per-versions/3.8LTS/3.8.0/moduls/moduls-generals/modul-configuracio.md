@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Mòdul de configuració"
 description = "Configuracio de les propietats dels components de l'aplicació."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 3
 toc 		    = true
 +++
@@ -22,7 +22,7 @@ de beans - propietats.
 
 ## Limitacions
 
-Per aplicacions Canigó 3.6 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
+Per aplicacions Canigó 3.8 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
 
 * no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
 
@@ -34,7 +34,7 @@ A la propera versió de Canigó, es preveu deprecar aquest mòdul de configuraci
 
 ## Instal.lació
 
-El mòdul de configuració i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.6.
+El mòdul de configuració i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.8.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
 En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
@@ -53,7 +53,7 @@ En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul de configuració:
 ```xml
@@ -91,7 +91,7 @@ Aquesta configuració de l'entorn es utilitzada pel servei de configuració per 
 
 ## Configuració propietats en format yaml
 
-A la versió Canigó 3.6 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
+A la versió Canigó 3.8 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
 
 Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
 
@@ -654,7 +654,7 @@ Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @Pr
 
 Indicant el path on es troba aquest fitxer.
 
-Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/moduls-generals/modul-seguretat/)
+Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-generals/modul-seguretat/)
 
 
 Preguntes freqüents

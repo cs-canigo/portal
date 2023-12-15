@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 13
 +++
 
@@ -106,14 +106,14 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 ### Requeriments
 
-Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/moduls-integracio/modul-pica/).
+Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-integracio/modul-pica/).
 
 ## Configuració
 
 
 Per configurar el mòdul d'integració PICA-DNI és necessari configurar els següents arxius:
 
-1.- Importar el mòdul PICA-DNI amb el plugin de Canigó 3.6 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
+1.- Importar el mòdul PICA-DNI amb el plugin de Canigó 3.8 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
 
 En el pom.xml:
 
@@ -126,7 +126,7 @@ En el pom.xml:
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/tributs.properties amb el següent contingut:
 

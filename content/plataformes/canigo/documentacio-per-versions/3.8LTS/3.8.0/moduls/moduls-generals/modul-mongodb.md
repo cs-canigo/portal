@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Mòdul MongoDB"
 description = "Mòdul de persistència de Base de Dades per MongoDB."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 3
 +++
 
@@ -12,7 +12,7 @@ El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’exec
 Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/3.2.4/reference/html/#reference)
 i [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
-A la versió 3.6 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
+A la versió 3.8 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
 
 ## Instal·lació
 
@@ -41,7 +41,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
     </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <br/>
 Caldrà també afegir el _plugin_ que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i

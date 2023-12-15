@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 12
 +++
 
@@ -40,7 +40,7 @@ Els principals serveis que ofereix el connector són els següents:
     * CAdES-BES-PDF: Attached / Detached
     * XAdES-BES: Enveloping / Enveloped / Detached
 
-Actualment el connector de Canigó de la versió 3.6 utilitza el client de SSC versió 1.3.3 
+Actualment el connector de Canigó de la versió 3.8 utilitza el client de SSC versió 1.3.3 
 
 ### Alta Servei
 
@@ -85,7 +85,7 @@ La instal·lació del connector requereix la utilització de la llibreria 'canig
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 #### Configuració
 
@@ -102,7 +102,7 @@ A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibil
 	<bean id="sscService" class="cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl">
 
 		<description>
-			SSC Service for Canigó 3.6
+			SSC Service for Canigó 3.8
 		</description>
 
 		<property name="host" value="${ssc.host}" />

@@ -1,8 +1,8 @@
 +++
-date = "2021-10-21"
+date = "2024-01-15"
 title       = "Planificador de tasques"
 description = "Planificador de tasques"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 1
 +++
 

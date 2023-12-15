@@ -1,5 +1,5 @@
 +++
-date        = "2015-02-06T17:11:42+01:00"
+date        = "2024-01-15T17:11:42+01:00"
 title       = "Versió 1.x"
 description = "Documentació de la versió 1 del Framework Canigó"
 sections    = "Documentació versions Canigó"

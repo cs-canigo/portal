@@ -1,8 +1,8 @@
 +++
-date        = "2022-05-23"
+date        = "2024-01-15"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 1
 +++
 

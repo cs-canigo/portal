@@ -1,8 +1,8 @@
 +++
-date        = "2021-10-21"
+date        = "2024-01-15"
 title       = "Proves"
 description = "Proves unitàries"
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 4
 +++
 
@@ -33,7 +33,7 @@ Utilitzant Canigó3 on cal realitzar cap pas addicional per a tenir instal·lat 
 
 **Dependència pom.xml**
 
-A Canigó 3.6 incorpora la dependència d'Spring Test en scope test, aquesta dependència la incorpora canigo-test. A Canigó 3.6 la versió utilitzada de Junit és la 4, però si és necessari es pot utilitzar Junit 5 ja que amb spring-boot-starter-test 2.5.4 utilitza Junit 5
+A Canigó 3.8 incorpora la dependència d'Spring Test en scope test, aquesta dependència la incorpora canigo-test. A Canigó 3.8 la versió utilitzada de Junit és la 4, però si és necessari es pot utilitzar Junit 5 ja que amb spring-boot-starter-test 2.5.4 utilitza Junit 5
 
 ## Utilització
 

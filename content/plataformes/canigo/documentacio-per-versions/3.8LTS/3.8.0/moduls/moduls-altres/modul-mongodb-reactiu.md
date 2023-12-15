@@ -1,8 +1,8 @@
 +++
-date        = "2021-11-01"
+date        = "2024-01-15"
 title       = "Mongodb reactiu"
-description = "Com configurar aplicació Canigó 3.6 per utilitzar mongo db reactiu"
-sections    = "Canigó. Documentació Versió 3.6"
+description = "Com configurar aplicació Canigó 3.8 per utilitzar mongo db reactiu"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 6
 +++
 
@@ -12,21 +12,21 @@ El propòsit d’aquest apartat és introduïr a les funcionalitats de reactiu e
 
 ### Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.6 del Framework Canigó
+Els passos descrits en aquest document apliquen a la versió 3.8 del Framework Canigó
 
 ### Introducció
 
-A la versió 3.6 de Canigó incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
+A la versió 3.8 de Canigó incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
 
 
-L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitzar les funcionalitats de reactiu en una base de dades Mongodb. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.6.0 de Canigó.
+L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitzar les funcionalitats de reactiu en una base de dades Mongodb. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.8.0 de Canigó.
 
 
 ### Introducció programació reactiu
 
 En termes simples, la programació reactiva tracta d'aplicacions no bloquejadores que són asíncrones i orientades a esdeveniments i requereixen un nombre reduït de fils per escalar. Un aspecte clau d'aquesta definició és el concepte de contrapressió, que és un mecanisme per garantir que els productors no aclaparen els consumidors. Per exemple, en una pipeline de components reactius que s'estén des de la base de dades fins al socket HTTP, quan el client HTTP és lent, el repositori de dades es ralentitza o s’atura fins que la capacitat s’alliberi
 
-Canigó 3.6 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
+Canigó 3.8 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
 
 Per a més informació:
 
@@ -83,7 +83,7 @@ Començarem per afegir les dependències a Canigó Mongodb, Spring Mongodb, reac
 		</dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Afegirem la propietat per la connexió a Mongodb, utilitzarem el estàndard de connexió per String de connexió a Mongodb, recomanem utilitzar aquesta forma de connexió, per més informació podeu consultar: https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
 ```properties

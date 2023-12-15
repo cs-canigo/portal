@@ -1,9 +1,9 @@
 +++
-date        = "2015-06-02T17:11:42+01:00"
+date        = "2024-01-15T17:11:42+01:00"
 title       = "Mòdul d'Integració"
 description = "Mòduls integrats a Canigó (PICA, GECAT, SGDE, etc.)"
-sections    = "Documentació Versió 3.6"
-enllac		= "/canigo-documentacio-versions-36/integracio"
+sections    = "Documentació Versió 3.8"
+enllac		= "/canigo-documentacio-versions-38/integracio"
 no_index 	= true
 weight 		= 2
 +++

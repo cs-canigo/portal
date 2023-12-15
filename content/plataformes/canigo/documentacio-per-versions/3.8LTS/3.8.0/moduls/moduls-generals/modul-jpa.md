@@ -1,8 +1,8 @@
 +++
-date        = "2022-06-22"
+date        = "2024-01-15"
 title       = "Mòdul JPA"
 description = "Mòdul de persistència de Base de Dades."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 2
 +++
 
@@ -19,7 +19,7 @@ Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sob
 
 ### Instal·lació
 
-El mòdul de persistència i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.6.
+El mòdul de persistència i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.8.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml.
 En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
 
@@ -61,7 +61,7 @@ Si es requereix configurar un origen de dades JDBC, es requeriran les següents 
 <dependencies>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i
 el que executa el test unitari del mòdul de persistència:

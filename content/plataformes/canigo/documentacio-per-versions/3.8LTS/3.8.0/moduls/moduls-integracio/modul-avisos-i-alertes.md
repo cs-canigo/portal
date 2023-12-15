@@ -1,8 +1,8 @@
 +++
-date        = "2022-12-07"
+date        = "2024-01-15"
 title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 2
 +++
 
@@ -48,13 +48,13 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 #### Requeriments
 
-Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/moduls-integracio/modul-pica/) .
+Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-integracio/modul-pica/) .
 
 ### Configuració
 
 Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar els següents arxius:
 
-1.- Importar el mòdul PICA-AVISALERT amb el plugin de Canigó 3.6 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
+1.- Importar el mòdul PICA-AVISALERT amb el plugin de Canigó 3.8 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
 
 En el pom.xml:
 
@@ -67,7 +67,7 @@ En el pom.xml:
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/avisalert.properties amb el següent contingut:
 
@@ -151,7 +151,7 @@ Per consultar la totalitat de possibles codis de retorn i el detall exacte dels 
 
 #### Exemple d'utilització d'un Servei Asíncron
 
-1.- La modalitat d'enviament de SMS, AVISALERT_SMS, suporta l'enviament síncron i asíncron, l'exemple que segueix utilitzarà la seva variant asíncrona. Per poder utilitzar aquesta modalitat de consum el connector de Canigó 3.6 preveu tres mètodes diferents:
+1.- La modalitat d'enviament de SMS, AVISALERT_SMS, suporta l'enviament síncron i asíncron, l'exemple que segueix utilitzarà la seva variant asíncrona. Per poder utilitzar aquesta modalitat de consum el connector de Canigó 3.8 preveu tres mètodes diferents:
 
 ```java
 public DataResponse avisAlertSMSsimpleASincron(String serviceNumber, String mobile, String message) throws AvisosAlertesException;

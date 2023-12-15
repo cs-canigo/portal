@@ -1,8 +1,8 @@
 +++
-date        = "2022-07-21"
+date        = "2024-01-15"
 title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 9
 +++
 
@@ -53,7 +53,7 @@ Per tal d'instal-lar el mòdul de Sarcat Pica es pot incloure automàticament a 
   </dependencies>
 ```
 
-A la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

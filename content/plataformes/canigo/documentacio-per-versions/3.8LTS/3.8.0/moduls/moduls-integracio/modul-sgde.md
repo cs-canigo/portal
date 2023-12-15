@@ -1,8 +1,8 @@
 +++
-date        = "2023-03-02"
+date        = "2024-01-15"
 title       = "SGDE"
 description = "Servei de Gestió del Document Electrònic."
-sections    = "Canigó. Documentació Versió 3.6"
+sections    = "Canigó. Documentació Versió 3.8"
 weight      = 11
 +++
 
@@ -100,7 +100,7 @@ Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 IMPORTANT
 

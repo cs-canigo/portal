@@ -101,7 +101,7 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 <dependency>
 	<groupId>org.apache.xbean</groupId>
 	<artifactId>com.springsource.org.apache.xbean.spring</artifactId>
-	<version>3.6.0</version>
+	<version>3.8.0</version>
 </dependency>
 <dependency>
 	<groupId>org.apache.geronimo.specs</groupId>
