@@ -1,5 +1,5 @@
 +++
-date        = "2024-01-15"
+date        = "2023-01-15"
 title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació Versió 3.8"

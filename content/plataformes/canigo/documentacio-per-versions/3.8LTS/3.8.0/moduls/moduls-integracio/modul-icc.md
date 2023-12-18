@@ -1,5 +1,5 @@
 +++
-date        = "2024-01-15"
+date        = "2023-01-15"
 title       = "ICC"
 description = "Serveis de normalització d'adreces de l'Institut Cartogràfic de Catalunya."
 sections    = "Canigó. Documentació Versió 3.8"

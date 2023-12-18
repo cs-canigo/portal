@@ -1,5 +1,5 @@
 +++
-date        = "2024-01-15"
+date        = "2023-01-15"
 title       = "Plugin eclipse 1.8.0"
 description = "Plugin eclipse 1.8.0 Canigó 3.8.0"
 sections    = "canigo-fwk-docs"
