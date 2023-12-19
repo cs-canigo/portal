@@ -1,7 +1,7 @@
 +++
-date        = "2022-05-23"
+date        = "2023-01-15"
 title       = "Documentació"
-description = "Documentació arquetip maven 1.7.5"
+description = "Documentació arquetip maven (MS)nou- 1.0.0"
 sections    = "canigo-fwk-docs"
 weight		= 2
 +++
@@ -95,3 +95,5 @@ On:
 - version: Verció de l'aplicació que volem crear
 
 - -B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
+
+#REVISAR_DOCU

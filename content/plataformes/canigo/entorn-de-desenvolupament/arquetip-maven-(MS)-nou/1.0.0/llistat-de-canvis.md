@@ -1,43 +1,30 @@
 +++
-date        = "2022-06-27"
+date        = "2023-01-15"
 title       = "Llistat de canvis"
-description = "Llistat de canvis arquetip maven 1.7.5"
+description = "Llistat de canvis arquetip maven (MS)nou- 1.0.0"
 sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Arquetip maven 1.7.5
+## arquetip maven (MS) nou- 1.0.0
 
-**27/06/2022**:
+**15/01/2023**:
 
-- Incorporació dependències addicionals per a configurar un origen de dades JDBC: `org.apache.commons.commons-dbcp2` i `org.apache.commons.commons-pool2`.
+- S'ha canviat els fitxers de configuració que han quedat obsolets els properties i ara s'usen yml ,ja que, actualment 
+  són l'estàndard
+- S'ha afegit dues noves variables a l'hora de generar l'arquetip que són :
 
-**23/05/2022**:
-
-- [Actualització de l’_archetype_ 1.7.5 i del _plugin_ Eclipse 1.8.5](/noticies/2022-05-23-CAN-Actualitzacio_archetype_1_7_5_plugin_eclipse_1_8_5/)
-   - Actualització de l’_archetype_ versió 1.7.5 i del _plugin_ de l'Eclipse de Canigó versió 1.8.5 per a generar projectes amb Canigó 3.6.5.
-
-## Arquetip maven 1.7.4
-
-- [Actualització de l’_archetype_ 1.7.4 i del _plugin_ Eclipse 1.8.4](/noticies/2022-04-13-CAN-Actualitzacio_archetype_1_7_4_plugin_eclipse_1_8_4)
-   - Actualització de l’_archetype_ versió 1.7.4 i del _plugin_ de l'Eclipse de Canigó versió 1.8.4 per a generar projectes amb Canigó 3.6.4.
-
-## Arquetip maven 1.7.3
-
-- [Actualització de l’_archetype_ 1.7.3 i del _plugin_ Eclipse 1.8.3](/noticies/2021-12-27-CAN-Actualitzacio_archetype_1_7_3_plugin_eclipse_1_8_3)
-   - Actualització de l’_archetype_ versió 1.7.3 i del _plugin_ de l'Eclipse de Canigó versió 1.8.3 per a generar projectes amb Canigó 3.6.3.
-
-## Arquetip maven 1.7.2
-
-- [Actualització de l’_archetype_ 1.7.2 i del _plugin_ Eclipse 1.8.2](/noticies/2021-12-17-CAN-Actualitzacio_archetype_1_7_2_plugin_eclipse_1_8_2)
-   - Actualització de l’_archetype_ versió 1.7.2 i del _plugin_ de l'Eclipse de Canigó versió 1.8.2 per a generar projectes amb Canigó 3.6.2.
-
-## Arquetip maven 1.7.1
-
-- [Resolució de vulnerabilitat Log4Shell](/noticies/2021-12-13-CAN-actualitzacio-canigo-3_4_7_3_6_1/)
-   - Actualització de tots els mòduls de Canigó per a utilitzar la versió 2.15.0 de log4j
-
-## Arquetip maven 1.7.0
-
-- [Actualització de l’_archetype_ 1.7.0 i del _plugin_ Eclipse 1.8.0](/noticies/2021-10-25-CAN-Actualitzacio_archetype_1_7_0_plugin_eclipse_1_8_0)
-   - Actualització de l’_archetype_ versió 1.7.0 i del _plugin_ de l'Eclipse de Canigó versió 1.8.0 per a generar projectes amb Canigó 3.6.0.
+  - **appName** :    Nom del projecte.
+                     Serveix per a personalitzar la creació de l'arquetip, si no s'informa ,per defecte és el **artifactId**
+  - **dockerName** : Nom del contenidor docker.
+                     Serveix per a personalitzar la creació de l'arquetip en un contenidor, si no s'informa ,per defecte 
+                     és el **artifactId**
+- S'ha actualitzat el Swagger a **OpenApi**.
+- És important saber que actualment l'arquetip és **agnòstic i no dependrà de cap plugin** .
+- Es realitza una configuració per yml més clara per a les diferents les base de dades :
+  - [Mysql](/howtos/2023-01-15-Guia-per-a-utilitzar-MYSQL-en-un-projecte/)
+  - [PostgreSQL](/howtos/2023-01-15-Guia-per-a-utilitzar-POSTGRESQL-en-un-projecte/)
+  - [MONGODB)](/howtos/2023-01-15-Guia-per-a-utilitzar-MONGODB-en-un-projecte/)
+  - [Oracle](/howtos/2023-01-15-Guia-per-a-utilitzar-ORACLE-en-un-projecte/)
+- **Nota important** : s'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven (MS) 
+  nou versió 1.0.0 aquesta creada en **H2** .
