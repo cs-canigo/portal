@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## arquetip maven (MS) nou- 1.0.0
+## Arquetip Maven (MS) nou- 1.0.0
 
 **15/01/2023**:
 
@@ -24,7 +24,7 @@ weight		= 1
 - Es realitza una configuració per yml més clara per a les diferents les base de dades :
   - [Mysql](/howtos/2023-01-15-Guia-per-a-utilitzar-MYSQL-en-un-projecte/)
   - [PostgreSQL](/howtos/2023-01-15-Guia-per-a-utilitzar-POSTGRESQL-en-un-projecte/)
-  - [MONGODB)](/howtos/2023-01-15-Guia-per-a-utilitzar-MONGODB-en-un-projecte/)
+  - [MONGODB](/howtos/2023-01-15-Guia-per-a-utilitzar-MONGODB-en-un-projecte/)
   - [Oracle](/howtos/2023-01-15-Guia-per-a-utilitzar-ORACLE-en-un-projecte/)
 - **Nota important** : s'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven (MS) 
   nou versió 1.0.0 aquesta creada en **H2** .
