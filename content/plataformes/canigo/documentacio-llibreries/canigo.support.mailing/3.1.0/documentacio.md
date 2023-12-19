@@ -8,16 +8,16 @@ weight      = 3
 
 ## Propòsit
 
-Aquest mòdul té com a objectiu permetre l’enviament de correus electrònics a una o diverses adreces especificades a qualsevol dels següents recipients:
-
-* Destinataris principals
-* Destinataris secundaris
-* Destinataris ocults
-
-Permet diferents modes d’enviament, tant en text pla, com en mode HTML, i en tots 2 casos oferint la possibilitat d’adjuntar un o més fitxers en mode adjunt o inline.
+El propòsit de l'actualització del mòdul canigó support mailing a la versió 3.1.0 per a JDK 17,
+és aportar major seguretat, major funcionalitat de actualizació 
+per a adaptar-lo al stack tecnològic de manera més ràpida i efectiva, 
+que millorarà la seva conservació i ús.
 
 ## Funcionalitats
 
+- Tots els paquets que anteriorment usaven la dependències associades a la libreria Javax, a causa de la seva obsolescència 
+  amb el JDK 17 ,són modificades a la libreria Jakarta.
+- També s'actualitza les dependències corresponents a JUnit4 a Junit Jupiter perquè siguin compatibles amb el citat , JDK 17.
 ### Propietats
 
 Les propietats configurables es troben en l'arxiu: *mail.properties* o *application.yml*
@@ -37,40 +37,6 @@ Les propietats configurables es troben en l'arxiu: *mail.properties* o *applicat
 |mail.password          | No        |               |Password de l'usuari de connexió               |
 |mail.encoded.password  | No        |               |Encoded password de l'usuari de connexió       |
 |mail.extraProperties   | No        |{}             |Array extra de propietats. Valor d'exemple: {'mail.smtp.ssl.protocols':'TLSv1.2'} |
-
-### Beans
-
-El mòdul conté els següents beans injectats automàticament en el context d'aplicacions (Spring):
-
-  - mailSender: client que encapsula tota la configuració de la connexió del servidor de correu
-
-  - fluentMailService: bean que referència al servei
-
-  - encodedPasswordJavaMailSender: client que encapsula la configuració de la connexió del servidor de correu amb el password encriptat en base64
-
-  - encodedPasswordFluentMailService: bean que referència al servei amb el password encriptat en base64
-
-### Entitats
-
-Conté l'entitat que representa la informació de l'emissor del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentFrom*
-
-Conté l'entitat que representa la informació del receptor del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentTo*
-
-Conté l'entitat que representa la informació dels destinataris del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentRecipients*
-
-Conté l'entitat que representa la informació del títol del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentSubject*
-
-Conté l'entitat que representa la informació del missatge del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentMessage*
-
-Conté l'entitat que representa la informació dels adjunts al mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentAttachment*
-
-### Service
-
-Per a l'enviament l'enviament de mails s'ofereix *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService*
-
-### Excepción
-
-Per identificar els errors produïts al mòdul s'ofereix *cat.gencat.ctti.canigo.arch.support.mailing.exception.MailModuleException*
 
 
 

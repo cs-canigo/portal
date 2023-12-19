@@ -9,8 +9,6 @@ weight		= 2
 
 - [Actualització de canigo.test](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_1_0/)
   - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `canigó.root` de 3.1.0 a 3.2.0
-  - És necessari, canviar la versió 3.0.4 del propi mòdul canigó per la versió del mòdul canigó a 3.1.0. És a dir , 
-    canigó test 3.0.4 a versió 3.1.0.
   - A més, pel fet que s'ha eliminat **javax** , a causa de la incompatibilitat amb JDK 17,
     s'ha de reemplaçar totes les dependències associades a aquesta libreria,javax, per les corresponents de **jakarta**.
     Per tant, haurem d'afegir la dependència `jakarta.servlet-api` versió **`6.0.0`** que substitueix la dependència de

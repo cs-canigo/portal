@@ -1,6 +1,6 @@
 +++
-date        = "2022-04-13"
-title       = "3.0.4"
-description = "Versió 3.0.4 canigo.web.core"
+date        = "2023-01-15"
+title       = "3.1.0"
+description = "Versió 3.1.0 canigo.web.core"
 sections    = "canigo-fwk-docs"
 +++

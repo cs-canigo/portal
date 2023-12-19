@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="test-integracio-soapui-project">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/static/related/sgde/test-integracio-soapui-project.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

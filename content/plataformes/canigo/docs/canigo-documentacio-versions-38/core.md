@@ -1,5 +1,5 @@
 +++
-date        = "2024-01-15T17:11:42+01:00"
+date        = "2023-01-15T17:11:42+01:00"
 title       = "Mòduls Generals"
 description = "Mòduls principals de Canigó (Core, seguretat, persistència, etc.)"
 sections    = "Mòduls Generals"
