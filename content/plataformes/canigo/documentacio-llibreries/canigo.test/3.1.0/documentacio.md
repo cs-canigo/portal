@@ -5,20 +5,18 @@ description = "Documentació canigo.test 3.1.0"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
-
 ## Propòsit
 
-El propòsit de l'actualització del mòdul canigó test a la versió 3.1.0 per a JDK 17,
-és aportar major seguretat, major funcionalitat de actualizació
-per a adaptar-lo al stack tecnològic de manera més ràpida i efectiva,
-que millorarà la seva conservació i ús.
+El propòsit del mòdul de Canigo Test és aportar funcionalitats per a la generació i execució de test de proves a les aplicacions
 
 ## Funcionalitats
 
-- Tots els paquets que anteriorment usaven la dependències associades a la libreria Javax, a causa de la seva obsolescència
-  amb el JDK 17 ,són modificades a la libreria Jakarta.
-- També s'actualitza les dependències corresponents a JUnit4 a Junit Jupiter perquè siguin compatibles amb el citat , JDK 17.
+### Base
 
+S'ofereix la classe *cat.gencat.ctti.canigo.arch.test.BaseTest* com a base pels test de les aplicacions
 
+### Exception
+
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.exceptions.BaseStatementException* per a identificar errors al executar els tests de les proves a les aplicacions
 
 #REVISAR_DOCU

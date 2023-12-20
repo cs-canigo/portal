@@ -6,12 +6,11 @@ sections    = "canigo-fwk-docs"
 weight      = 1
 +++
 
-#### Canigó 3.8.0 (01/11/2021)
-- [Actualització de tecnologies base](/noticies/2021-10-25-CAN-actualitzacio-canigo-3_6_0/)
-   - Actualització a Java 11, Spring 5.3, Spring Boot 2.5
-   - Actualització dels clients dels mòduls d'integració amb Serveis Web Soap
-   - Actualització versió Swagger
+#### Canigó 3.8.0 (15/01/2023)
+- [Actualització de tecnologies base](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_8_0/)
+   - Actualització a Java **17**, Spring **6.1.1**, Spring Boot **3.1.4**
+   - Actualització versió Swagger  **OpenApi**(Swagger 3), en lloc de Swagger 2.
    - Actualització versió dependències
    - Actualització versió plugins
-- [Actualització de l’_archetype_ 1.7.0 i del _plugin_ Eclipse 1.8.0](/noticies/2021-10-25-CAN-Actualitzacio_archetype_1_7_0_plugin_eclipse_1_8_0)
-   - Actualització de l’_archetype_ versió 1.7.0 i del _plugin_ de l'Eclipse de Canigó versió 1.8.0 per a generar projectes amb Canigó 3.8.0.
+- [Creació_nou_arquetip_versio_1.0.0_per_a_no_dependre_de_cap_plugin](/noticies/2023-01-15-CAN-Creacio_nou_arquetip_versio_1.0.0_per_a_no_dependre_de_cap_plugin/)
+- Es crea un nou arquetip Maven més agnostico perquè no hagi de dependre de cap plugin

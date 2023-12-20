@@ -8,18 +8,17 @@ weight      = 3
 
 ## Propòsit
 
-El propòsit de l'actualització del mòdul canigó web core a la versió 3.1.0 per a JDK 17,
-és aportar major seguretat, major funcionalitat de actualizació
-per a adaptar-lo al stack tecnològic de manera més ràpida i efectiva,
-que millorarà la seva conservació i ús.
+El propòsit de la llibreria canigo.web.core és oferir funcionalitats genèriques per a la capa web de Canigó
 
 ## Funcionalitats
 
-- Tots els paquets que anteriorment usaven la dependències associades a la libreria Javax, a causa de la seva obsolescència
-  amb el JDK 17 ,són modificades a la libreria Jakarta.
-- També s'actualitza les dependències corresponents a JUnit4 a Junit Jupiter perquè siguin compatibles amb el citat , JDK 17.
+### Filters
 
+Per a l'escriptura de dades genèriques de les request als logs de l'aplciació s'ofereix el filtre *cat.gencat.ctti.canigo.arch.web.core.filters.LoggingFilter*
 
+### Listeners
+
+Per a utilitzar la gestió de propietats aportada per Canigó s'ofereix el listener *cat.gencat.ctti.canigo.arch.web.core.filters.ConfigPropertiesExposerListener*
 
 
 #REVISAR_DOCU

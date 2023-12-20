@@ -1,7 +1,7 @@
 +++
 date        = "2023-01-15"
-title       = "Guies d'ús (HowTOs)"
-description = "Guies d'ús (HowTOs)"
+title       = "Guies d'ús "
+description = "Guies d'ús "
 sections    = "canigo-fwk-docs"
-enllac      = "/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/how-tos/"
+enllac      = "/plataformes/canigo/content/guies/"
 +++

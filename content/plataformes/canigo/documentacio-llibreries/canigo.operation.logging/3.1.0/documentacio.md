@@ -6,19 +6,42 @@ sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 
+
 ## Propòsit
 
-El propòsit de l'actualització del mòdul canigó operation logging a la versió 3.1.0 per a JDK 17,
-és aportar major seguretat, major funcionalitat de actualizació
-per a adaptar-lo al stack tecnològic de manera més ràpida i efectiva,
-que millorarà la seva conservació i ús.
+Aquest mòdul permet administrar els logs de l’aplicació proporcionant les següents funcionalitats:
+
+* Canviar en calent el nivell de log dels diferents paquets de l’aplicació
+* Visualització de fitxers de logs en temps real mitjançant streaming amb WebSockets
+* Descarregar els fitxers de logs
 
 ## Funcionalitats
 
-- Tots els paquets que anteriorment usaven la dependències associades a la libreria Javax, a causa de la seva obsolescència
-  amb el JDK 17 ,són modificades a la libreria Jakarta.
-- També s'actualitza les dependències corresponents a JUnit4 a Junit Jupiter perquè siguin compatibles amb el citat , JDK 17.
+### Beans
 
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació de control de la resposta dels serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerControl*
+
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació i contingut dels logs en els serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerReader*
+
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació del logger de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.LoggerDTO*
+
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació del appender de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.AppenderDTO*
+
+### Service
+
+S'ofereix el service *cat.gencat.ctti.canigo.arch.operation.logging.service.FileTailService* per a gestionar la monitorització dels logs de l'aplicació.
+
+### Controller
+
+S’ofereix el controller *cat.gencat.ctti.canigo.arch.operation.logging.endpoints.LogsResource* per exposar serveis rest per a consultar i gestionar la monitorització dels logs de l'aplicació.
+
+### Runnable
+
+S'ofereix el runnable *cat.gencat.ctti.canigo.arch.operation.logging.util.Tailer* per executar un thread que realitzi la monitorització dels logs de l'aplicació.
+
+### Listener
+
+S'ofereix el listener *cat.gencat.ctti.canigo.arch.operation.logging.util.TailerListener* per a escotlar events que es produeixin a la monitorització dels logs de l'aplicació.
 
 
 #REVISAR_DOCU

@@ -7,17 +7,18 @@ weight      = 3
 +++
 
 ## Propòsit
-El propòsit de l'actualització del mòdul canigó support sftp a la versió 3.1.0 per a JDK 17,
-és aportar major seguretat, major funcionalitat de actualizació
-per a adaptar-lo al stack tecnològic de manera més ràpida i efectiva,
-que millorarà la seva conservació i ús.
 
+El servei de SFTP de Canigó permet enviar i rebre arxius entre el servidor on s’executa l’aplicació a altres servidors de forma segura mitjançant l’intercanvi de claus. El servei està basat en les llibreries JSCH i Commons-VFS, la primera es tracta d’un projecte open source que permet la connexió via SSH a qualsevol màquina. La segona llibrería és un projecte també open_source de la Apache Foundation que permet treballar amb més facilitat amb la JSCH, donant eines per crear connexions SFTP (entre d’altres) contra un servidor.
 
 ## Funcionalitats
-- Tots els paquets que anteriorment usaven la dependències associades a la libreria Javax, a causa de la seva obsolescència
-  amb el JDK 17 ,són modificades a la libreria Jakarta.
-- També s'actualitza les dependències corresponents a JUnit4 a Junit Jupiter perquè siguin compatibles amb el citat , JDK 17.
 
+### Service
+
+S’ofereix el servei *cat.gencat.ctti.canigo.arch.support.sftp.SftpService* per a realitzar l'enviament de fitxers a través de SFTP.
+
+### Exception
+
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.support.sftp.exceptions.SftpModuleException* per a identificar els errors produïts al mòdul.
 
 
 #REVISAR_DOCU 
