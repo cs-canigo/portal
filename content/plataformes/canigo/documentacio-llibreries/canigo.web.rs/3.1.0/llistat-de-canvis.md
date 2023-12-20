@@ -16,7 +16,7 @@ weight		= 2
   -  Actualització de tots els mòduls de Canigó per a actualitzar `org.springframework` de 5.3.18 a 6.1.1,
      `spring-web` de 5.3.18 a 6.1.1 , `spring-webmvc` de 5.3.18 a 6.1.1 , `spring-security-core` de 5.6.2 a 6.1.3,
      `spring-expression` de 5.3.18 a 6.1.1.
-  -  S'ha d'actualizar la dependència`mockito-core` a la versió 4.3.1 a 5.7.0.
+  -  S'actualiza la dependència`mockito-core` a la versió 4.3.1 a 5.7.0.
   -  Es manté la versió de les següents dependències: `spring-data-jpa` versió **2.6.3**,
     `hibernate.core`de la versió  **5.6.7 Final**,`h2`versió **2.1.210**,`commons.dbcp.version`versió **2.9.0**,
     `querydsl` versió **5.0.0**, `spring-expression`    spring-boot-autoconfigure

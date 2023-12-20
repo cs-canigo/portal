@@ -1,13 +1,13 @@
 +++
 date = "2023-01-15"
-title = "Guia: Utilitzar MongoDB en un Projecte"
+title = "Guia: Actualització del projecte per a implantar MONGODB"
 description = "En aquest HowTo s'explica pas a pas com utilitzar MongoDB en un Projecte seguint les millors pràctiques definides pel CS Canigó"
 section = "howtos"
 categories = ["canigo"]
 key = "GENER2023"
 +++
 
-# Com Utilitzar MongoDB en un Projecte
+# Actualització del projecte per a implantar MONGODB
 
 ## Introducció
 

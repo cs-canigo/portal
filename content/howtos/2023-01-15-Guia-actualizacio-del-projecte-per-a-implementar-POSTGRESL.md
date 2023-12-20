@@ -1,6 +1,6 @@
 +++
 date = "2023-01-15"
-title = "Guia: Utilitzar PostgreSQL en un Projecte"
+title = "Guia: Actualització del projecte per a implantar PostgreSQL"
 description = "En aquest HowTo s'explica pas a pas com utilitzar PostgreSQL en un Projecte seguint les millors pràctiques definides pel CS Canigó"
 section = "howtos"
 categories = ["canigo"]
@@ -8,7 +8,7 @@ key = "GENER2023"
 +++
 
 
-# Com Utilitzar PostgreSQL en un Projecte
+# Actualització del projecte per a implantar PostgreSQL
 
 ## Introducció
 

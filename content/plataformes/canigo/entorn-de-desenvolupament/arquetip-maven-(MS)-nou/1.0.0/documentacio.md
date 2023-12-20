@@ -38,29 +38,30 @@ Un cop importat el certificat els processos Maven executats que utilitzin la JDK
 Al fitxer `settings.xml` del Maven caldrà configurar el repositori al profile per defecte:
 
 ```
-   <profile>
-      <id>defaultProfile</id>
-      <activation>
-         <activeByDefault>true</activeByDefault>
-      </activation>
-      <repositories>
-         <repository>
-            <id>canigo</id>
-            <url>https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/</url>
-            <snapshots>
-               <enabled>true</enabled>
-               <updatePolicy>always</updatePolicy>
-            </snapshots>
-            <releases>
-               <enabled>true</enabled>
-            </releases>
-         </repository>
-      </repositories>
-      <properties>
-         <downloadSources>true</downloadSources>
-         <downloadJavadocs>false</downloadJavadocs>
-      </properties>
-   </profile>
+      <profile>
+   <id>defaultProfile</id>
+   <activation>
+      <activeByDefault>true</activeByDefault>
+   </activation>
+   <repositories>
+      <repository>
+         <id>canigo</id>
+         <url>https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/</url>
+         <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+         </snapshots>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+      </repository>
+   </repositories>
+   <properties>
+      <downloadSources>true</downloadSources>
+      <downloadJavadocs>false</downloadJavadocs>
+   </properties>
+</profile>
+
 
 ```
 
@@ -71,11 +72,12 @@ Per a generar aplicacions Canigó amb l'arquetipus maven utilitzarem el goal *ar
 ```bash
 mvn archetype:generate \
    -DarchetypeGroupId=cat.gencat.ctti \
-   -DarchetypeArtifactId=plugin-canigo-archetype-rest \
-   -DarchetypeVersion=1.7.5 \
+   -DarchetypeArtifactId=canigo-archetype-rest-ms \
+   -DarchetypeVersion=1.0.0 \
    -DartifactId=Prova \
    -DgroupId=cat.gencat \
    -Dversion=1.0.0 -B
+
 ```
 
 On:
@@ -94,6 +96,6 @@ On:
 
 - version: Verció de l'aplicació que volem crear
 
-- -B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
+- B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
 
 #REVISAR_DOCU

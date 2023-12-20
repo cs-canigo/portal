@@ -1,6 +1,6 @@
 +++
 date = "2023-01-15"
-title = "Guia: Utilitzar MongoDB en un Projecte"
+title = "Guia: Actualització del projecte per a implantar MYSQL"
 description = "En aquest HowTo s'explica pas a pas com utilitzar MySQL en un Projecte seguint les millors pràctiques definides pel CS Canigó"
 section = "howtos"
 categories = ["canigo"]
@@ -8,7 +8,7 @@ key = "GENER2023"
 +++
 
 
-# Com Utilitzar MySQL en un Projecte
+# Actualització del projecte per a implantar MYSQL
 
 ## Introducció
 
