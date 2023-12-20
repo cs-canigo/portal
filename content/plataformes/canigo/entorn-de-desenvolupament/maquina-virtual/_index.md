@@ -1,6 +1,6 @@
 +++
 date        = "2020-12-12"
-title       = "Màquina virtual (Obsolet) "
+title       = "Màquina virtual (Deprecado) "
 description = "Màquina virtual"
 sections    = "canigo-fwk-docs"
 +++

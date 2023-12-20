@@ -28,7 +28,6 @@ weight		= 1
 - És important saber que actualment l'arquetip és **agnòstic i no dependrà de cap plugin** .
 - Es realitza una configuració per yml més clara per a les diferents les base de dades :
   - [Mysql](/howtos/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-MYSQL/)
-  - [PostgreSQL](/howtos/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-POSTGRESQL/)
   - [MONGODB](/howtos/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-MONGODB/)
   - [Oracle](/howtos/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-ORACLE/)
 - **Nota important** : s'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven (MS) 

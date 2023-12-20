@@ -8,7 +8,7 @@ weight		= 2
 
 ## canigo.web.core 3.1.0
 
-- [Resolució de vulnerabilitat Spring4Shell](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_1_0/)
+- [Actualització de canigo.web.core](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_1_0/)
   - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `canigó.root` de 3.1.0 a 3.2.0
   - Actualització del mòdul [Canigó-test](
     /plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0
@@ -16,7 +16,7 @@ weight		= 2
     s'ha de reemplaçar totes les dependències associades a aquesta libreria,javax, per les corresponents de Jakarta.
     Per tant, haurem d'afegir la dependència `jakarta servelet api` versió 6.0.0 que substitueix la 
     dependència de `javax.servelet api`.
-  - 
+  
 
 ## canigo.web.core 3.0.4
 
