@@ -27,9 +27,9 @@ weight		= 1
 - S'ha actualitzat el Swagger a **OpenApi**(Swagger 3), en lloc de Swagger 2.
 - És important saber que actualment l'arquetip és **agnòstic i no dependrà de cap plugin** .
 - Es realitza una configuració per yml més clara per a les diferents les base de dades :
-  - [Mysql](/guies/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-MYSQL/)
-  - [MongoDb](/guies/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-MONGODB/)
-  - [PostgreSql](/guies/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-POSTGRESQL/)
+  - [Mysql](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL/)
+  - [MongoDb](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB/)
+  - [PostgreSql](/guies/2023-01-15-Guia-actualitzacio-del-projecte-per-a-implantar-POSTGRESQL/)
   - [Oracle](/guies/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-ORACLE/)
 - **Nota important** : s'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven (MS) 
   nou versió 1.0.0 aquesta creada en **H2** .
