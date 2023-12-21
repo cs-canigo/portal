@@ -1,12 +1,12 @@
 +++
 date        = "2023-01-15"
 title       = "Llistat de canvis"
-description = "Llistat de canvis arquetip maven nou- 1.0.0"
+description = "Llistat de canvis arquetip maven - 1.0.0"
 sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Arquetip Maven (MS) nou- 1.0.0
+## Arquetip Maven - 1.0.0
 
 **15/01/2023**:
 - S'ha concebut un nou arquetip amb el propòsit de ser **agnòstic perquè no depengui  de cap plugin** .
@@ -31,5 +31,12 @@ weight		= 1
   - [MongoDb](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB/)
   - [PostgreSql](/guies/2023-01-15-Guia-actualitzacio-del-projecte-per-a-implantar-POSTGRESQL/)
   - [Oracle](/guies/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-ORACLE/)
-- **Nota important** : s'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven (MS) 
-  nou versió 1.0.0 aquesta creada en **H2** .
+
+<div class="message information">
+IMPORTANT: <br>
+S'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven
+nova versió 1.0.0 aquesta creada en <b>H2 </b>
+</div>
+
+- Pot visualitzar-se la informació rellevant sobre la creació de l'arquetip en el següent enllaç:
+[README](https://git.intranet.gencat.cat/0187/canigo-archetype-rest/-/blob/master/README.md)
