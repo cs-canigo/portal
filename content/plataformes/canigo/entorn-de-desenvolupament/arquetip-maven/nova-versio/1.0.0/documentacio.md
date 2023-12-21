@@ -38,7 +38,7 @@ Un cop importat el certificat els processos Maven executats que utilitzin la JDK
 Al fitxer `settings.xml` del Maven caldrà configurar el repositori al profile per defecte:
 
 ```
-      <profile>
+<profile>
    <id>defaultProfile</id>
    <activation>
       <activeByDefault>true</activeByDefault>

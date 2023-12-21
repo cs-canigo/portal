@@ -4,7 +4,7 @@ title = "Canigó.Creació nou arquetip versió 1.0.0 per a no dependre de cap pl
 description = "S'ha publicat una nou archetype i per a no dependre de cap plugin  per a generar projectes amb Canigó 3.8"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
-key = "GENER2023"
+key = "GENER2024"
 +++
 
 ## Introducció

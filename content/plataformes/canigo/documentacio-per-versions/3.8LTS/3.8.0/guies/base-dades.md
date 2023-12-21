@@ -6,9 +6,6 @@ sections    = "canigo-fwk-docs"
 weight        = 1
 +++
 
-| Guies d'ús (Guies) d' actualizació de un projecte per implementar-los en les diferents bases de dades | Etiquetes |
-|-------------------------------------------------------------------------------------------------------|-----------|
-
 | Guies d'ús (Guies) d'actualizació de un projecte per implementar-los en les diferents bases de dades                                                                                                        | Etiquetes  |
 |-------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | [Com actualitzar el projecte per a implementar MySQL](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL/)          | MySQL      |

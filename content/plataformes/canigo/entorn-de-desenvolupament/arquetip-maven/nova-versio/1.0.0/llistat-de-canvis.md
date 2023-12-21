@@ -38,5 +38,5 @@ S'ha de tenir en compte que la configuració per defecte de la base de dades de 
 nova versió 1.0.0 aquesta creada en <b>H2 </b>
 </div>
 
-- Pot visualitzar-se la informació rellevant sobre la creació de l'arquetip en el següent enllaç:
+- Es pot visualitzar la informació rellevant sobre la creació de l' arquetip en el següent enllaç:
 [README](https://git.intranet.gencat.cat/0187/canigo-archetype-rest/-/blob/master/README.md)
