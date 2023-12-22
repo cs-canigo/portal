@@ -14,13 +14,13 @@ versions suportades de Java i Spring, a més de permetre nous paradigmes de prog
 
 ## Actualització de tecnologies base
 
-### Jdk 17
+### JDK 17
 
 Al setembre de 2021 Oracle va publicar la versió 17 de Java, la primera versió LTS amb la nova política de sis
 mesos de cicle de suport. Podeu consultar la documentació d'aquesta versió, així com les Release Notes, mitjançant el següent enllaç:
 https://www.oracle.com/java/technologies/javase/17-relnotes.html
 
-Des de CS Canigó, **s'ha evolucionat el Framework Canigó perquè passi a treballar amb Jdk 17 nativament**.
+Des de CS Canigó, **s'ha evolucionat el Framework Canigó perquè passi a treballar amb JDK 17 nativament**.
 
 ### Spring 6.1.1
 
@@ -44,7 +44,7 @@ de OpenApi eliminant la pàgina personalitzada de Canigó i usant tots els seus 
 
 ### Dependències i plugins
 Es crea un nou arquetip Maven més agnòstic perquè no calgui dependre de cap plugin extern.
-[Creació d' un nou arquetip per evitar usar plugins](/noticies/2023-01-15-CAN-Creacio-nou-arquetip-versio-1.0.0-per-a-no-dependre-de-cap-plugin)
+[Creació d' un nou arquetip per evitar usar plugins](/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1.0.0-per-a-no-dependre-de-cap-plugin)
 Es poden veure totes les dependències i canvis en el següent enllaç:[CANIGÓ 3.8.0](/canigo/download/canigo-38/).
 
 ## Com crear aplicacions amb Canigó 3.8
@@ -57,8 +57,8 @@ creació d'aplicacions Canigó atès que , ja conté les bases necessàries.
 
 ## Com migrar a Canigó 3.8
 
-Per a poder passar una aplicació de Canigó 3.4 a Canigó 3.6 podeu seguir els passos descrits a
-[Actualització Canigó 3.6 a Canigó 3.8](/howtos/2021-10-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
+Per a poder passar una aplicació de Canigó 3.6 a Canigó 3.8 podeu seguir els passos descrits a
+[Actualització Canigó 3.6 a Canigó 3.8](/howtos/2024-01-15-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
 
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el
