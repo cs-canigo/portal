@@ -9,7 +9,7 @@ weight		= 3
 
 ## Migració de versió 3.6 a Canigó 3.8
 
-Per a la migració de la versió 3.6 a Canigó 3.8 hi ha disponible el how to:
+En les guies es troba informació per a la migració de la versió 3.6 a Canigó 3.8.
 
-[Actualització Canigó 3.6 a Canigó 3.8](/howtos/2023-01-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
+[Actualització Canigó 3.6 a Canigó 3.8](/guies/2023-01-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
 

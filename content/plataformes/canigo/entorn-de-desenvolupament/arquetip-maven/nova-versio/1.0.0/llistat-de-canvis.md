@@ -8,7 +8,7 @@ weight		= 1
 
 ## Arquetip Maven - 1.0.0
 
-**15/01/2023**:
+**15/01/2024**:
 - S'ha concebut un nou arquetip amb el propòsit de ser **agnòstic perquè no depengui  de cap plugin** .
   A més fer-ho compatible compatible amb l'últim stack tecnològic disponible.
   Aquest innovador arquetip incorpora Spring Boot 3.1.4, Spring Framework 6, Spring Security 6 amb JDK 17, 

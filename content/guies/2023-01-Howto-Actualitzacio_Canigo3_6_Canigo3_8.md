@@ -9,7 +9,7 @@ key = "GENER2023"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells usuaris que vulguin **actualitzar a Canigó 3.6 la seva aplicació Canigó 3.6**.
+Aquesta guia va dirigit a tots aquells usuaris que vulguin **actualitzar a Canigó 3.8 la seva aplicació Canigó 3.6**.
 
 ### Versió de Canigó
 
@@ -17,12 +17,12 @@ Els passos descrits en aquest document apliquen a la versió 3.8 del Framework C
 
 ### Introducció
 
-El mes de **novembre del 2021 s'ha publicat la versió 3.6 del Framework Canigó**. Aquesta versió és una
+El mes de **gener del 2024 s'ha publicat la versió 3.8 del Framework Canigó**. Aquesta versió és una
 [versió LTS](/canigo/roadmap) i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de
 tenir un suport continuat, així com la màxima estabilitat que proporciona una versió LTS.
 
-L'objectiu d'aquest Howto és mostrar els procediments necessaris per a actualitzar una aplicació realitzada
-amb Canigó 3.6 i el punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per l'Eclipse.
+L'objectiu d'aquesta guia  és mostrar els procediments necessaris per a actualitzar una aplicació realitzada
+amb Canigó 3.8 i el punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per l'Eclipse.
 
 ### Configuració prèvia
 
@@ -30,14 +30,14 @@ A la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitat
 dels mòduls i components de Canigó de les versions 3.6.x i 3.8.x. Per tant, caldrà **actualitzar els intervals de
 versions dels mòduls utilitzats per l'aplicació** per a migrar a Canigó 3.8.
 
-La versió parent de Spring Boot és la 2.5.4, per tant, per una aplicació amb Spring Boot, la secció parent seria
+La versió parent de Spring Boot és la 3.1.4, per tant, per una aplicació amb Spring Boot, la secció parent seria
 com el que es mostra a continuació:
 
 ```
    <parent>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-parent</artifactId>
-      <version>2.5.4</version>
+      <version>3.1.4</version>
    </parent>
 ```
 
@@ -191,4 +191,4 @@ amb el nom de la funció de SARCAT
 Serà necessari utilitzar la pàgina pròpia de Swagger a '/api/swagger-ui.html'
 
 ---
-**15.** Eliminar la dependència i el plugin de 'dependency-check' perquè no és compatible amb Java 11
+**15.** Eliminar la dependència i el plugin de 'dependency-check' perquè no és compatible amb Java 17

@@ -1,7 +1,7 @@
 +++
 date = "2023-01-15"
-title = "Canigó.Creació nou arquetip versió 1.0.0 per a no dependre de cap plugin. "
-description = "S'ha publicat una nou archetype i per a no dependre de cap plugin  per a generar projectes amb Canigó 3.8"
+title = "Nou arquetip Canigó v1.0.0 sense dependència de plugins."
+description = "S'ha publicat un nou arquetip per generar projectes amb Canigó 3.8 sense dependència de cap plugin."
 sections = ["Notícies", "home"]
 categories = ["canigo"]
 key = "GENER2024"
@@ -19,10 +19,10 @@ executant un _goal_ de Maven, s'obté un projecte Canigó amb una base preconfig
 
 La versió 1.0.0 de l'arquetipus de Canigó incorpora les següents novetats:
 
-- Creació de projectes amb Canigó 3.8.0 i Jdk 17.
+- Creació de projectes amb Canigó 3.8.0 i JDK 17.
 - Actualització de dependències javax obsoletes a jakarta.
 - Actualització de la versió d'Spring, Spring Boot, dependències i plugins.
-- Actualització del Swagger Open Api 3 a Swagger 2
+- Actualització d' OpenApi (Swagger 3)  a Swagger 2
 
 
 

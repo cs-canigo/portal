@@ -97,5 +97,3 @@ On:
 - version: Verció de l'aplicació que volem crear
 
 - B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
-
-#REVISAR_DOCU
