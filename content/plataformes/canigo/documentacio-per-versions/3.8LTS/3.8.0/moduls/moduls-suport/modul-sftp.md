@@ -330,11 +330,70 @@ Ordre | Requerit | Tipus  | Descripció
 2     | Si       | String | Directori remot on es troba el fitxer.
 
 El mètode retorna un boolean TRUE o FALSE segons s'ha realitzat correcta o incorrectament el procés.
+## Acttualitzacions realitzades per adaptar el mòdul Canigó Support SFTP per a Java 17.
 
-## Exemples
+A continuació indicarem les modificacions realitzades, a causa dels diferents canvis de dependències,com ara: 
+Junit 4 a Junit Jupiter, Javax a Jakarta i altres modificacions rellevants perquè continuï sent compatible 
+amb la corresponent versió de Spring i JAVA 17.
+
+- Els principals canvis de l'actualització realitzada , ha estat per part de Junit 4 a JUnit Jupiter. 
+A continuació vam procedir a indicar aquests canvis perquè fossin compatibles amb Java 17 i Spring 3.1.4:
+  - **Anotació @RunWith**
+    Hem de reemplaçar l'anotació @RunWith(SpringJUnit4ClassRunner.class) amb 
+    l'anotació **@ExtendWith(SpringExtension.class)**.
+    Per a aquest canvi es reemplacen les dependències actuals 
+     ```java
+    import org.junit.runner.RunWith;
+    import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+    ```
+    per aquestes:
+    ```java
+    import org.junit.jupiter.api.extension.ExtendWith;
+    import org.springframework.test.context.junit.jupiter.SpringExtension;
+    ```
+    
+  La classe SpringExtension és proporcionada per Spring 5 i integra l'Spring TestContext Framework amb JUnit 5.
+  Aquesta anotació és reiterativa en la majoria de les classes i interfícies on s'utilitzin al llarg del mòdul 
+  de Canigó Support SFTP
+  - **Exemple**
+
+  ```java
+    import org.junit.jupiter.api.extension.ExtendWith;
+    import org.springframework.test.context.junit.jupiter.SpringExtension;
+    @ExtendWith(SpringExtension.class)
+    @ContextConfiguration(locations = { "/cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml" })
+    public class SftpServiceMockTest {}
+    ```
+- **Anotació @Before**
+  Hem de reemplaçar l'anotació @Before amb
+  l'anotació **BeforeEach**.
+  Per a aquest canvi es reemplacen les dependències actuals
+     ```java
+    import org.junit.Before;
+    ```
+  per aquestes:
+    ```java
+  import org.junit.jupiter.api.BeforeEach;
+    ```
+ Aquesta anotació és reiterativa en la majoria de les classes i interfícies on s'utilitzin al llarg del mòdul
+  de Canigó Support SFTP .
+ Cal tenir en compte que el mètode ha de ser públic perquè pugui ser usada.
+- **Exemple**
+
+  ```java
+    import org.junit.jupiter.api.BeforeEach;
+    @BeforeEach
+    public void setUp() {
+    localPath = new File(this.getClass().getResource("/config/props/" + FILENAME).getFile()).getParentFile().getAbsolutePath();
+    ReflectionTestUtils.setField(sftpServiceMock, "manager", manager);
+    sftpServiceImplSets(YES_STRICT_HOST_KEY_CHECKING, KNOWN_HOSTS, IDENTITY_PATH, HTTP_PROXY_TYPE,
+    LOCALHOST_PROXY_HOST, PORT_PROXY_HOST);
+    }
+    ```
+
 
 ### Tests Unitaris
-
+        
 Un exemple d'utilització del mòdul de SFTP són els tests unitaris.
 
 S'ha de tenir en compte que s'ha de disposar d'accés a un servidor remot mitjançant el protocol SFTP per poder realitzar els tests.
