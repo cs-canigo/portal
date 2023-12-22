@@ -1,0 +1,8 @@
++++
+date        = "2020-03-26"
+title       = "Codi font"
+description = "Codi font canigo.integration.icc.datatypes 2.2.0"
+sections    = "canigo-fwk-docs"
+enllac		= "https://hudson.intranet.gencat.cat/nexus/repository/canigo-maven2/cat/gencat/ctti/canigo.integration.icc.datatypes/2.2.0/canigo.integration.icc.datatypes-2.2.0-sources.jar"
+weight		= 1
++++
