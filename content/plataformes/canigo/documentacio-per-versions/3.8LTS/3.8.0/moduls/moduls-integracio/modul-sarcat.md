@@ -1,5 +1,5 @@
 +++
-date        = "2023-01-15"
+date        = "2022-05-23"
 title       = "Sarcat"
 description = "Serveis que ofereix la plataforma de Sarcat directament."
 sections    = "Canigó. Documentació Versió 3.8"
