@@ -284,14 +284,14 @@ On s'està redefinint el socket timeout de la connexió a 2000 ms i s'està regi
 
 Per tal de definir les entitats de MongoDB serà necessari utilitzar les _annotations_ de _JSR 380_, _Spring Data_ i _Spring Data MongoDB_. Per a més informació, podeu consultar:
 
-* Package javax.validation: https://docs.oracle.com/javaee/7/api/javax/validation/package-summary.html
+* Package jakarta.validation: https://docs.oracle.com/javaee%2F7%2Fapi%2F%2F/javax/validation/package-summary.html
 * Package org.springframework.data.annotation: https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
 * Spring Data MongoDB: https://docs.spring.io/spring-data/mongodb/docs/3.2.4/reference/html/#reference
 
 Un exemple d'entitat seria la següent:
 
 ```java
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -469,12 +469,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import javax.inject.Inject;
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
+import jakarta.inject.Inject;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.runners.MethodSorters;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -499,7 +500,7 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.EquipamentMong
  *
  * @author cscanigo
  */
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public abstract class EquipamentMongoRepositoryCoreTest {
 
   /** Constant MUNICIPI_DESC_SORT. */
@@ -512,7 +513,7 @@ public abstract class EquipamentMongoRepositoryCoreTest {
   /**
    * Estableix up.
    */
-  @Before
+  @BeforeEasch
   public void setUp() {
     assertNotNull(repository);
     repository.deleteAll();
@@ -766,7 +767,8 @@ Per a poder verificar el codi a la base de dades MongoDB de l'aplicació només 
 configuració de MongoDB en el nostre test:
 
 ```java
-import org.junit.runner.RunWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import cat.gencat.ctti.config.AppConfig;
@@ -776,7 +778,7 @@ import cat.gencat.ctti.mongodb.model.repository.EquipamentMongoRepository;
 /**
  * Test cases for the {@link EquipamentMongoRepository}.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { AppConfig.class, EquipamentMongoConfig.class })
 public class EquipamentMongoRepositoryTest extends EquipamentMongoRepositoryCoreTest{
 }
@@ -968,8 +970,10 @@ public abstract class EmbeddedBaseMongoFactoryBean<E> implements FactoryBean<E>,
 Per a utilitzar la configuració amb _Embeded MongoBD_ en un test si no hem importat el _EquipamentMongoConfig_ en el _AppConfig_:
 
 ```java
-import org.junit.FixMethodOrder;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -981,9 +985,9 @@ import cat.gencat.provamongo.mongodb.config.EquipamentEmbeddedMongoConfig;
  *
  * @author cscanigo
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { AppConfig.class, EquipamentEmbeddedMongoConfig.class })
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class EquipamentEmbeddedMongoRepositoryTest extends EquipamentMongoRepositoryCoreTest {
 }
 ```
@@ -1009,7 +1013,8 @@ public class EmbeddedMongoAppConfig {
 ```
 
 ```java
-import org.junit.runner.RunWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import cat.gencat.ctti.config.EmbeddedMongoAppConfig;
@@ -1018,7 +1023,7 @@ import cat.gencat.ctti.mongodb.model.repository.EquipamentMongoRepository;
 /**
  * Test cases for the {@link EquipamentMongoRepository}.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { EmbeddedMongoAppConfig.class})
 public class EquipamentEmbeddedMongoRepositoryTest extends EquipamentMongoRepositoryCoreTest{
 }
@@ -1039,7 +1044,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -1123,7 +1128,8 @@ Per a poder verificar el codi a la base de dades MongoDB de l'aplicació només 
 configuració de MongoDB en el nostre test:
 
 ```java
-import org.junit.runner.RunWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.AppConfig;
@@ -1133,7 +1139,7 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.EquipamentReactive
  * Class EquipamentReactiveMongoRepositoryTest.
  * @author cscanigo
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { AppConfig.class, EquipamentReactiveMongoConfig.class })
 public class EquipamentReactiveMongoRepositoryTest extends EquipamentReactiveMongoRepositoryCoreTest {
 }
@@ -1319,7 +1325,8 @@ public abstract class EmbeddedBaseMongoFactoryBean<E> implements FactoryBean<E>,
 Per a utilitzar la configuració amb _Embeded MongoBD_ en un test si no hem importat el _EquipamentReactiveMongoConfig_ en el _AppConfig_:
 
 ```java
-import org.junit.runner.RunWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.AppConfig;
@@ -1330,7 +1337,7 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.EquipamentEmbedded
  *
  * @author cscanigo
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { AppConfig.class, EquipamentEmbeddedReactiveMongoConfig.class })
 public class EquipamentEmbeddedReactiveMongoRepositoryTest extends EquipamentReactiveMongoRepositoryCoreTest {
 }
@@ -1357,9 +1364,8 @@ public class EmbeddedReactiveMongoAppConfig {
 
 ```java
 import java.io.IOException;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import de.flapdoodle.embed.mongo.Command;
@@ -1378,7 +1384,7 @@ import cat.gencat.ctti.mongodb.model.repository.EquipamentMongoRepository;
 /**
  * Test cases for the {@link EquipamentMongoRepository}.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { EmbeddedReactiveMongoAppConfig.class})
 public class EquipamentEmbeddedReactiveMongoRepositoryTest extends EquipamentReactiveMongoRepositoryCoreTest {
 }

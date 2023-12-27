@@ -237,38 +237,39 @@ Definir un test per a certificar el seu funcionament
 
 **WebServiceClientTest .java**
 
-	import org.junit.Assert;
-	import org.junit.Before;
-	import org.junit.Test;
-	import org.junit.runner.RunWith;
+	import static org.junit.jupiter.api.Assertions.assertNotNull;
+	import static org.junit.jupiter.api.Assertions.assertEquals;
+	import org.junit.jupiter.api.BeforeEach;
+	import org.junit.jupiter.api.Test;
 	import org.springframework.beans.factory.annotation.Autowired;
 	import org.springframework.test.context.ContextConfiguration;
-	import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+	import org.junit.jupiter.api.extension.ExtendWith;
+	import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 	import com.cdyne.ws.ResolveIPResponse;
 
 	import cat.gencat.wsprova.ws.WebServiceClient;
 
 
-	@RunWith(SpringJUnit4ClassRunner.class)
+	@ExtendWith(SpringExtension.class)
 	@ContextConfiguration(locations = {"classpath:cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml"})
 	public class WebServiceClientTest {
 		
 		@Autowired
 		public WebServiceClient client;
 		
-		@Before
+		@BeforeEach
 		public void init(){
-			Assert.assertNotNull(client);
+			assertNotNull(client);
 		}
 		
 		@Test
 		public void testCall(){
 			ResolveIPResponse response = client.simpleSendAndReceive("91.126.217.34", "?");
 			
-			Assert.assertNotNull(response);
-			Assert.assertEquals("Fornells De La Selva", response.getResolveIPResult().getCity());
-			Assert.assertEquals("Spain", response.getResolveIPResult().getCountry());
+			assertNotNull(response);
+			assertEquals("Fornells De La Selva", response.getResolveIPResult().getCity());
+			assertEquals("Spain", response.getResolveIPResult().getCountry());
 			
 		}
 		

@@ -10,11 +10,8 @@ S'ha certificat la compatibilitat de Canigó 3.8.0 amb els següents servidors e
 
 |      Servidor incrustat             |                   Versió                    |
 |---------------------------------     |---------------------------------     |
-|  Tomcat                               |         9.0.52                        |
-|  Undertow                              |         2.2.10.Final                   |
-|  Jetty                                |         9.4.43.v20210629          |
-|  Netty (webflux)                         |        4.1.67.Final               |
-|  Reactor Netty (reactor webflux)  |        1.0.10             |
+|  Tomcat                               |         10.0.0                        |
+
 
 S'ha certificat la versió de Canigó 3.8.0 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
@@ -22,6 +19,6 @@ S'ha certificat la versió de Canigó 3.8.0 amb els servidors suportats al [Full
 |--------------------------------- 	|--------------------------------- 	|
 |  Tomcat					          	  	 	|         9.0   	             			|
 |  Weblogic				          	  	 	|         14.1.x               			|
-|  JBoss EAP       									|         7.x        			          |
+|  Jboss                               |         7.x                        |
 
-La versió de Java mínima per utilitzar Canigó 3.8.0 és 11
+La versió de Java mínima per utilitzar Canigó 3.8.0 és 17

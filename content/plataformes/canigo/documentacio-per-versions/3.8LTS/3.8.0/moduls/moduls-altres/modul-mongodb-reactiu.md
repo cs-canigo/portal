@@ -26,7 +26,7 @@ L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitza
 
 En termes simples, la programació reactiva tracta d'aplicacions no bloquejadores que són asíncrones i orientades a esdeveniments i requereixen un nombre reduït de fils per escalar. Un aspecte clau d'aquesta definició és el concepte de contrapressió, que és un mecanisme per garantir que els productors no aclaparen els consumidors. Per exemple, en una pipeline de components reactius que s'estén des de la base de dades fins al socket HTTP, quan el client HTTP és lent, el repositori de dades es ralentitza o s’atura fins que la capacitat s’alliberi
 
-Canigó 3.8 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
+Canigó 3.8 té com a base Spring Framework 6 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
 
 Per a més informació:
 
@@ -34,7 +34,7 @@ Per a més informació:
 
 [Reactor](https://projectreactor.io/)
 
-[Spring Framework reactive](https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web-reactive.html)
+[Spring Framework reactive](https://docs.spring.io/spring-framework/docs/6.0.0/reference/html/web-reactive.html)
 
 [Notes on Reactive Programming](https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape)
 
@@ -110,9 +110,9 @@ Partim de l'entitat Tweet amb la definició:
 ```java
 import java.util.Date;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -190,7 +190,7 @@ Per a utilitzar aquest mètode la collection de Mongo ha de ser de tipus capped.
 Per simplificar l'exemple utilitzarem directament el repositori al controller, recomanem, però, utilitzar la capa service entre els controllers i els repositoris
 
 ```java
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

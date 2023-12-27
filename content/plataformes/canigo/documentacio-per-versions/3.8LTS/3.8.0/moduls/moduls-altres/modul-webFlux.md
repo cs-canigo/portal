@@ -55,7 +55,7 @@ Els següents punts són un resum dels punts que s'han de tenir en compte a l'ho
 
 - Si necessites un web stack amb non-blocking, Spring WebFlux et proporcionarà el màxim de funcionalitats reactives
 
-- Si necessites una aplicació el més lleugera possible, amb programació web funcional i utilització de lambdas de Java 8, Spring WebFlux et proporcionarà endpoint web funcionals
+- Si necessites una aplicació el més lleugera possible, amb programació web funcional i utilització de lambdas de Java 17, Spring WebFlux et proporcionarà endpoint web funcionals
 
 - Si l'aplicació utilitza apis de persistència bloquejants (JPA, JDBC) o apis externes bloquejants, Spring MVC és la millor solució
 
@@ -178,7 +178,7 @@ Per a utilitzar aquest mètode la collection de Mongo ha de ser de tipus capped.
 Per simplificar l'exemple utilitzarem directament el repositori al controller, recomanem, però, utilitzar la capa service entre els controllers i els repositoris
 
 ```java
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

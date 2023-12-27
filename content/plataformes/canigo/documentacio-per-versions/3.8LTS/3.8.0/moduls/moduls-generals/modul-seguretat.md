@@ -202,7 +202,7 @@ A continuació es mostra la classe `WebSecurityConfig` per a una configuració b
 ```
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 import org.springframework.http.HttpStatus;
-import javax.sql.DataSource;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -294,8 +294,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en l’autenticació i l’autorització per base de dades amb JWT:
 
 ```
-import javax.inject.Named;
-import javax.sql.DataSource;
+import jakarta.inject.Named;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -524,7 +524,7 @@ per arxiu de propietats sense utilitzar JWT:
 ```
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 import org.springframework.http.HttpStatus;
-import javax.sql.DataSource;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -619,8 +619,8 @@ A continuació es mostra la classe `WebSecurityConfig` per a una configuració b
 per arxiu de propietats amb JWT:
 
 ```
-import javax.inject.Named;
-import javax.sql.DataSource;
+import jakarta.inject.Named;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -771,7 +771,7 @@ Des de la versió 1.2.7 el servei de seguretat de Canigó suporta de manera auto
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en GICAR com a sistema d'autenticació sense utilitzar JWT:
 
 ```
-import javax.sql.DataSource;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -911,8 +911,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en GICAR com a sistema d'autenticació amb JWT:
 
 ```
-import javax.inject.Named;
-import javax.sql.DataSource;
+import jakarta.inject.Named;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -1138,7 +1138,7 @@ A continuació es mostra la classe `WebSecurityConfig` per a una configuració b
 d'autenticació i autorització sense utilitzar JWT:
 
 ```
-import javax.sql.DataSource;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -1268,8 +1268,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en GICAR com a sistema d'autenticació i autorització amb JWT:
 
 ```
-import javax.inject.Named;
-import javax.sql.DataSource;
+import jakarta.inject.Named;
+import jakarta.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

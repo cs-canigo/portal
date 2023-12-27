@@ -12,7 +12,7 @@ Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, per
 
 Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:
 
-* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/2.5.4/reference/html/#reference)
+* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/3.1.4/reference/html/#reference)
 * [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
 ## Instal·lació i Configuració
@@ -26,7 +26,7 @@ En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'
 ```xml
 <properties>
   ...
-  <canigo.persistence.jpa.version>[3.0.0,3.1.0)</canigo.persistence.jpa.version>
+  <canigo.persistence.jpa.version>[3.1.0,3.2.0)</canigo.persistence.jpa.version>
 </properties>
 <dependencies>
   ...
@@ -226,7 +226,7 @@ dades JNDI com es mostra a continuació:
     <property name="jndiName" value="${jndi.name}"/>
     <property name="lookupOnStartup" value="${jndi.lookupOnStartup:true}"/>
     <property name="cache" value="${jndi.cache:true}"/>
-    <property name="proxyInterface" value="javax.sql.DataSource"/>
+    <property name="proxyInterface" value="jakarta.sql.DataSource"/>
   </bean>
 ```
 
@@ -275,7 +275,7 @@ List<Equipament> findByNomIgnoreCase(String nom);
 List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
 ```
 
-Més informació a la documentació oficial de [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/2.5.4/reference/html/#reference).
+Més informació a la documentació oficial de [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/3.1.4/reference/html/#reference).
 
 #### Utilització de QueryDSL
 
@@ -353,10 +353,10 @@ Per exemple a l'aplicació inicial que genera el plugin de Canigó es generen el
 Ubicació: `<PROJECT_ROOT>/src/main/java/cat/gencat/test/model/Equipament.java`
 
 ```java
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity(name = "Equipament")
 @Table(name = "equipaments")
@@ -462,7 +462,7 @@ import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -585,9 +585,9 @@ import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonStrin
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @TypeDefs({ @TypeDef(name = "json", typeClass = JsonStringType.class),
   @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class),

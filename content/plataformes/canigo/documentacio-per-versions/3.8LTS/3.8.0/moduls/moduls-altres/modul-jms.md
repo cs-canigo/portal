@@ -21,7 +21,7 @@ Canigó no incorpora cap llibreria addicional a les ja aportades per Spring per 
 
 Referència | URL
 ---------- | ---
-Spring JMS | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#jms
+Spring JMS | https://docs.spring.io/spring-framework/docs/6.0.0/reference/html/integration.html#jms
 
 ## Glossari
 
@@ -88,8 +88,8 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 	<version>$org.springframework.version}</version>
 </dependency>
 <dependency>
-	<groupId>javax.jms</groupId>
-	<artifactId>com.springsource.javax.jms</artifactId>
+	<groupId>jakarta.jms</groupId>
+	<artifactId>com.springsource.jakarta.jms</artifactId>
 	<version>1.1.0</version>
 </dependency>
 <!-- Active MQ -->
@@ -105,7 +105,7 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 </dependency>
 <dependency>
 	<groupId>org.apache.geronimo.specs</groupId>
-	<artifactId>com.springsource.javax.management.j2ee</artifactId>
+	<artifactId>com.springsource.jakarta.management.j2ee</artifactId>
 	<version>1.0.1</version>
 </dependency>
 ```
@@ -299,7 +299,7 @@ Consumim asincronament els missatges que el productor ha anat enviat a la cua.
 **JmsMessageListenerTest.java**
 
 ```java
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"jms-config.xml"})
 public class JmsMessageListenerTest {
 

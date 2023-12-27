@@ -228,7 +228,7 @@ Com a exemple d'utilització es mostra com podem fer una prova unitària:
 2.  Creem els diferents fitxers de literals
 
 ~~~~ {.code-java}
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"../canigo-core.xml"})
 public class I18nTest{
     
