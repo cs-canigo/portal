@@ -77,7 +77,19 @@ mvn archetype:generate \
    -DartifactId=Prova \
    -DgroupId=cat.gencat \
    -Dversion=1.0.0 -B
+```
+En cas d'utilitzar el comando anterior i generar el següent error:
+```shell
+[ERROR] The goal you specified requires a project to execute but there is no POM in this directory 
+```
 
+Quant a cada paràmetre, assegura't de col·locar cometes dobles al principi i al final de cadascun de la següent manera:
+
+```shell
+mvn archetype:generate / 
+		"-DarchetypeGroupId=cat.gencat.ctti"/ 
+		"-DarchetypeArtifactId=canigo-archetype-rest" / 
+		"-DarchetypeVersion=0.0.1" ......
 ```
 
 On:
