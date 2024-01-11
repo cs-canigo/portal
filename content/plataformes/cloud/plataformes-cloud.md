@@ -1,5 +1,5 @@
 +++
-date        = "2022-11-23"
+date        = "2024-1-11"
 title       = "Plataformes Cloud"
 description = "Plataformes cloud disponibles a la Generalitat de catalunya"
 sections    = "Cloud"
