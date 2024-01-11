@@ -5,7 +5,7 @@ description = "Informació respecte a la integració d'aplicacions basades en co
 sections    = "Container Cloud"
 weight      = 12
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm","sic"]
-aliases     = ["/cloud/cloud-caas/integracio-contenidors-sic/"]
+aliases     = ["/cloud/cloud-caas/integracio-contenidors-sic/","/cloud-caas/integracio-contenidors-sic/"]
 +++
 
 ## Informació necessària per la integració amb SIC

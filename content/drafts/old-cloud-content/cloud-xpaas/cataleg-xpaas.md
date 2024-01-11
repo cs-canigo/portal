@@ -4,7 +4,6 @@ title       = "Elements del catàleg xPaaS"
 description = "Descripció dels elements xPaaS disponibles a la Generalitat de Catalunya."
 sections    = "Cloud"
 weight      = 1
-toc = true
 categories  = ["cloud","xpaas","ibmcloud","azure","cloudfoundry"]
 aliases     = ["/cloud/cloud-xpaas/cataleg-xpaas/"]
 +++

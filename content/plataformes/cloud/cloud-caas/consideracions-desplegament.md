@@ -1,11 +1,11 @@
 +++
-date        = "2020-06-1"
+date        = "2024-1-11"
 title       = "Consideracions en desplegaments de contenidors"
 description = "Consideracions generals a tenir present en desplegaments de contenidors"
 sections    = "Container Cloud"
 weight      = 9
 categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
-aliases     = ["/cloud/cloud-caas/consideracions-desplegament/"]
+aliases     = ["/cloud/cloud-caas/consideracions-desplegament/","/cloud-caas/consideracions-desplegament/"]
 +++
 
 Al desplegar una aplicació a les diferents plataformes de contenidors cal tenir present una sèrie de consideracions.
@@ -80,10 +80,9 @@ Cada entorn i component d'aplicació estarà separat en carpetes. Ex:
 En cadascuna d'aquestes carpetes s'inclouran tots els descriptors necessaris.
 Els Secrets s'inclouran sense les dades sensibles, que seran gestionades per l'equip de Suport Cloud.
 
-Podeu trobar més informació respecte als descriptors yaml de cadascuna de les plataformes a:
+Podeu trobar més informació a:
 
 - [Contenidors Openshift](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
-- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/)
 
 El desplegament a la plataforma SwarmMe no requereix descriptors específics, però si requereix disposar de la següent informació:
 

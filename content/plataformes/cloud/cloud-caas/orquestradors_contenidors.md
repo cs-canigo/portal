@@ -1,5 +1,5 @@
 +++
-date          = "2020-06-12"
+date          = "2024-01-11"
 title         = "Orquestradors de contenidors"
 description   = "Consideracions respecte als orquestradors de contenidors"
 sections      = "Container Cloud"
@@ -12,11 +12,9 @@ aliases       = ["/cloud/cloud-caas/orquestradors_contenidors/"]
 En un entorn productiu, el desplegament utilitzant contenidors, moltes vegades no és suficient, és necessari disposar d'un conjunt de recursos addicionals que siguin capaços d'oferir un nivell de servei prou bo.
 Aquests recursos són oferts pels orquestradors.
 Al mercar existeixen diferents eines per orquestrar els contenidors docker.
-La Generalitat de Catalunya dóna suport als següents orquestradors:
+La Generalitat de Catalunya dóna suport als següents orquestradors, i només a cloud privat:
 
 * Openshift
-* Kubernetes
-* SwarmMe (basat en Swarm)
 
 Tot i que conceptualment tenen molts punts en comú, cadascun d'aquests orquestradors presenta components i maneres de treballar particulars.
 En aquest article es defineix la manera de treballar i els components a utilitzar en cada orquestrador amb l'objectiu de minimitzar l'esforç necessari.
@@ -64,41 +62,12 @@ Actualment els cicles de vida de desenvolupament d'aplicacions van cap a models 
 La Generalitat de Catalunya disposa de l'eina SIC per realitzar els desplegaments.
 Són necessàries eines que facilitin la integració d'un model de basat en contenidors amb eines de CI/CD com el SIC.
 
-## Comparativa entre orquestradors
-
-### Característiques
-
-Al següent diagrama es descriu:
-
-* Principals components de cada orquestrador
-* Correspondències entre els components de cada orquestrador
-* Components permesos a la Generalitat de Catalunya
-
-![comparativa entre Orquestradors docker](/related/cloud/comparativaOrquestradors.png)
-
-## Descripció dels orquestradors
-### SwarmMe
-Està basat en Swarm.
-Swarm és l'orquestrador oficial de docker. Actualment és el menys evolucionat dels tres.
-SwarmMe complementa alguna de les mancances que Swarm presenta (Registre, Sistema centralitzat de logs, eines de desplegament, ...)
-
-Per més informació podeu consultar https://docs.docker.com/engine/swarm/
-
-### Kubernetes
-Va ser creat per Google.
-Actualment està evolucionant molt.
-Recentment ha rebut el suport oficial de docker.
-
-Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/
-
-Per més informació podeu consultar la web https://kubernetes.io/
-
-### Openshift
+## Descripció d'Openshift
 Desenvolupat per Red Hat, basat en Kubernetes.
 Afegeix funcionalitat addicional a Kubernetes (gestió d'usuaris, segmentació de xarxa, sistema centralitzat de logs).
 Acostuma a portar un endarreriment respecte a l'última versió de kubernetes d'uns tres o quatre mesos.
 
-Per detalls i exemples podeu visitar la plana [Contenidors Openshift](http://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
+Per detalls i exemples podeu visitar la plana [Contenidors Openshift](/plataformes/cloud-caas/contenidors_openshift/)
 
 Per més informació podeu consultar les webs:
 
@@ -107,4 +76,4 @@ Per més informació podeu consultar les webs:
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que cada orquestrador, tot i que totes les plataformes es basen en docker, té les seves particularitats.
 
-A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte.
+A la plana [Criteris creació contenidors docker](/plataformes/cloud-caas/dockerImages/) podeu trobar més informació al respecte.

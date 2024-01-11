@@ -8,7 +8,7 @@ weight      = 2
 
 ## Propòsit
 
-Aquest mòdul proporciona eines per a l'exposició de serveis REST. Està basat en les millors pràctiques descrites a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/)
+Aquest mòdul proporciona eines per a l'exposició de serveis REST. Està basat en les millors pràctiques descrites a [Canigó APIs RESTful](/blog/2016/01/api/)
 
 Entre altres característiques, destaquem les següents:
 
@@ -144,7 +144,7 @@ Amb la finalitat d'estandaritzar i facilitar la feina als desenvolupadors, es po
 
 #### Request
 
-S'han definit els següents objectes de petició, tenint en compte les bones pràctiques definides a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
+S'han definit els següents objectes de petició, tenint en compte les bones pràctiques definides a [Canigó APIs RESTful](/blog/2016/01/api/):
 
 ```
 	- BatchRequest --> Per a peticions batch
@@ -153,7 +153,7 @@ S'han definit els següents objectes de petició, tenint en compte les bones pr�
 
 #### Response
 
-S'han definit els següents objectes de resposta, tenint en compte les bones pràctiques definides a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
+S'han definit els següents objectes de resposta, tenint en compte les bones pràctiques definides a [Canigó APIs RESTful](/blog/2016/01/api/):
 
 ```
 	- ResponseBatch --> Per a peticions batch

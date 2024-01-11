@@ -158,14 +158,6 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|
 
 </br>
-#### Per al desplegament al CloudFoundry IBMCloud:
-
-|Variable|Valor|
-|-------|-------|
-|CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
-|CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
-
-</br>
 #### Per al desplegament d'imatges de productes en contenidors en general:
 
 |Variable|Valor|
@@ -371,7 +363,7 @@ components:
 
 On:
 
-- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a [plataformes cloud](/cloud/plataformes-cloud/) i 1 hyperthread
+- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a [plataformes cloud](/plataformes/cloud/plataformes-cloud/) i 1 hyperthread
 a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1 CPU. L'expressió 0.1 equival a l'expressió 100m, que es pot llegir com "cent milicpus" o com a “cent milicores”. Es recomana utilitzar la unitat "milicore" tenint en compte que no es permet una precisió major que 1m.
 
 - `memory`: recursos de memòria mesurats en bytes. Podeu expressar la memòria amb un nombre sencer o com un nombre decimal

@@ -23,7 +23,7 @@ de Canigó per Eclipse a la versió 1.2.0.
 - [Guia d'inici](/canigo-download-related/guia-inici) per a la configuració d'un entorn de desenvolupament
 -->
 
-Veure: [Entorn desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)
+Veure: [Entorn desenvolupament Canigó](/canigo/entorn-desenvolupament/)
 
 Altra informació d'interès:
 
