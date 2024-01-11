@@ -53,6 +53,10 @@ function runIndex(){
 
 		function(_newIdx){
 
+			//comment next two lines for "delta" indexing
+			refreshIndex(_newIdx);
+			return;	
+
 			var old = readFile(_indexDir+"index.json");
 
 			if(!old){
@@ -65,7 +69,14 @@ function runIndex(){
 				}catch(e){
 					//...
 				}
-				_readedIndex = {}; //comment when you need only "delta"
+
+				//---------------------------
+				// comment when you need only "delta"
+				
+				_readedIndex = {}; 
+				
+				//---------------------------
+
 				var compare = compareIndexs(_readedIndex, _newIdx);
 				console.log("INSERT: " + compare.index.length)
 				console.log("DELETE: " + compare.del.length)
