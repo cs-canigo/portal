@@ -1,5 +1,5 @@
 +++
-date        = "2015-01-27"
+date        = ""
 title       = "Cercador"
 description = ""
 no_index 	= true
