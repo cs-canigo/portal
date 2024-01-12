@@ -2,7 +2,7 @@
 title: Tipologies Cloud
 description: Descripció dels diferents tipus de cloud i les seves
   característiques més importants
-date: 2019-02-25
+date: 2024-01-12
 sections: Cloud
 categories:
   - cloud
