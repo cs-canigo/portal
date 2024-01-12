@@ -20,23 +20,6 @@ aliases     = ["/cloud/cloud-caas/integracio-contenidors-sic/","/cloud-caas/inte
 - Nom del descriptor de desplegament de Kubernetes/Openshift.
 - Llista de correus electrònics en cas de notificacions de Jenkins.
 
-### Swarm
-
-- Nom del repositori git del codi font.
-- En cas de necessitats de compilació, requeriments i instruccions al respecte.
-- Nom de la imatge docker (la versió s'agafa del fitxer sic.yml)
-- Path del fitxer Dockerfile.
-- Llista de correus electrònics en cas de notificacions de Jenkins.
-- Com que swarm no disposa de descriptors, cal proporcionar addicionalment la següent informació:
-  - namespace
-  - xarxa
-  - mida del contenidor
-  - domini
-  - port
-  - rèpliques
-  - paràmetres d'entorn
-  - ...
-
 ## Tasques disponibles al SIC per projectes basats en contenidors
 
 ### Kubernetes i Openshift
