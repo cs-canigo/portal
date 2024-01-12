@@ -10,13 +10,6 @@ aliases     = ["/cloud/cloud-caas/configuracio-gicar/"]
 
 La configuració de Gicar a les plataformes de contenidors dependrà de la plataforma en concret.
 
-## SwarmMe
-
-La integració amb Gicar no es fa a la plataforma de contenidors, es realitza al Servidor Web on-premise que fa de proxy pass contra SwarmMe.
-
-La integració es fa via agent de Siteminder a l'Apache.
-Al tractar-se d'Apaches departamentals on-premise, CPD per defecte ja els configura amb aquesta integració i no cal fer cap configuració addicional.
-
 ## Kubernetes i Openshift
 
 La integració amb Gicar es realitza a la plataforma de contenidors.
