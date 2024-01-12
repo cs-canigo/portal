@@ -4,7 +4,7 @@ title       = "Consideracions en desplegaments de contenidors"
 description = "Consideracions generals a tenir present en desplegaments de contenidors"
 sections    = "Container Cloud"
 weight      = 9
-categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","openshift"]
 aliases     = ["/cloud/cloud-caas/consideracions-desplegament/","/cloud-caas/consideracions-desplegament/"]
 +++
 
@@ -84,16 +84,3 @@ Podeu trobar més informació a:
 
 - [Contenidors Openshift](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
 
-El desplegament a la plataforma SwarmMe no requereix descriptors específics, però si requereix disposar de la següent informació:
-
-- namespace
-- imatge docker
-- xarxa
-- mida del contenidor
-- domini
-- port
-- repliques
-- paràmetres d'entorn
-- ...
-
-Bàsicament són les mateixes dades que s'informen als descriptors yaml.

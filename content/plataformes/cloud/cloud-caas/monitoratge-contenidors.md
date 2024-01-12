@@ -5,7 +5,7 @@ description = "Informació per accedir  al monitoratge i traces a les diferents 
 sections    = "Container Cloud"
 weight      = 13
 toc         = false
-categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","openshift"]
 aliases     = ["/cloud/cloud-caas/monitoratge-contenidors/"]
 +++
 

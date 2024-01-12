@@ -128,14 +128,6 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a WebApp Azure|
 
 </br>
-#### Per al desplegament a SwarmMe:
-
-|Variable|Valor|
-|-------|-------|
-|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a SwarmMe|
-|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
-
-</br>
 #### Per al desplegament d'scripts en BBDD en contenidors:
 
 |Variable|Valor|
@@ -580,17 +572,6 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |-------|-------|
 |WEBAPP_NAME|Nom de l'aplicació al WebApp Azure|
 
-###### Per al **desplegament a SwarmMe**:
-
-|Variable|Valor|
-|-------|-------|
-|SWARMME_SERVICE_NAME|Nom del servei al SwarmMe|
-|SWARMME_SERVICE_DOMAIN|Domini del servei al SwarmMe|
-|SWARMME_SERVICE_PATH|Ruta del servei al SwarmMe|
-|SWARMME_SERVICE_PORT|Port del servei al SwarmMe|
-|SWARMME_REPLICAS|Nombre d’instàncies del servei al SwarmMe|
-|EXTRA_PARAMS|Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud|
-
 ###### Per al **desplegament a l’Api Manager (API Connect v.5.2)**:
 
 |Variable|Valor|
@@ -715,8 +696,6 @@ com [**YAML Validator**](http://www.yamllint.com/).
 A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_maven_kubernetes_caas.yml)
-
-- [Construcció aplicació Maven i desplegament al SwarmMe](/related/sic/3.0/aca_const_despl_maven_swarmme.yml)
 
 - [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
 

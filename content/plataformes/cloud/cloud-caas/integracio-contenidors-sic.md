@@ -52,17 +52,4 @@ Per plataformes basades en Kubernetes (Kubernetes/Openshift), al SIC estan dispo
 - Desplegament de Deployment/DeploymentConfig/StatefulSet/CronJob
 - Eliminació de components desplegats
 
-### Swarm
-
-Per plataformes basades en Swarm (SwarmMe), al SIC estan disponibles les següents tasques:
-
-- Desplegament
-
-Està previst en un futur crear les tasques:
-
-- Desplegament de tags
-- Reinici
-- Parada
-- Arrancada
-
 Podeu trobar més informació del SIC a [Servei d'Integració Contínua.](https://canigo.ctti.gencat.cat/sic/)
