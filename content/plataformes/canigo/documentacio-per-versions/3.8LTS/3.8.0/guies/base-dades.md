@@ -10,8 +10,8 @@ weight        = 1
 | Guies d'ús (Guies) d'actualizació de un projecte per implementar-los en les diferents bases de dades                                                                                                        | Etiquetes  |
 |-------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | [Com actualitzar el projecte per a implementar MySQL](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL.md)          | MySQL      |
-| [Com actualitzar el projecte per a implementar MongoDB](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB.d)      | MongoDB    |
-| [Com actualitzar el projecte per a implementar Oracle](content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-ORACLE.md)        | Oracle     |
-| [Com actualitzar el projecte per a implementar PostgreSQL](content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-POSTGRESQL.md) | PostgreSQL |
+| [Com actualitzar el projecte per a implementar MongoDB](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB.md)      | MongoDB    |
+| [Com actualitzar el projecte per a implementar Oracle](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-ORACLE.md)        | Oracle     |
+| [Com actualitzar el projecte per a implementar PostgreSQL](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-POSTGRESQL.md) | PostgreSQL |
 
 
