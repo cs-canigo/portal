@@ -77,7 +77,9 @@ mvn archetype:generate \
    -DarchetypeVersion=1.0.0 \
    -DartifactId=Prova \
    -DgroupId=cat.gencat \
-   -Dversion=1.0.0 -B
+   -Dpackage=cat.gencat \
+   -DdockerName=provaDocker
+   -Dversion=1.0.0
 ```
 En cas d'utilitzar el comando anterior i generar el següent error:
 ```shell
@@ -108,5 +110,11 @@ On:
 - groupId: Grup maven de l'aplicació que volem crear
 
 - version: Verció de l'aplicació que volem crear
+
+- appName: Nom descriptiu de l'aplicació o el projecte, aquest nomeni sàrria el nom que tindrà les classes base
+
+- package: Nom del paquet de projecte
+
+- dockerName: Nom de la imatge del docker, informar aquesta valor és opciona, si no s'informa per defecte s'assigna el valor del artifactId
 
 - B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
