@@ -1,5 +1,6 @@
 +++
-date        = "2023-01-15"
+date        = "2024-01-15"
+draft        = true
 title       = "Recomanacions generals"
 description = "Recomanacions de bones pràctiques i convencions generals Canigó 3.8.0"
 sections    = "canigo-fwk-docs"

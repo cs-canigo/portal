@@ -1,5 +1,6 @@
 +++
-date        = "2023-01-15"
+date        = "2024-01-15"
+draft        = true
 title       = "Migració versió anterior"
 description = "Migració de versió 3.6 a Canigó 3.8"
 sections    = "canigo-fwk-docs"

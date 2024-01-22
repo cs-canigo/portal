@@ -1,5 +1,6 @@
 +++
-date        = "2023-01-15"
+date        = "2024-01-15"
+draft        = true
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació Versió 3.8"

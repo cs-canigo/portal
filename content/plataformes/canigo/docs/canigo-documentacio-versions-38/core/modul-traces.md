@@ -1,5 +1,6 @@
 +++
-date        = "2023-01-15"
+date        = "2024-01-15"
+draft        = true
 title       = "Mòdul de traces"
 description = "Mòdul de detecció d'errades i registre de les operacions realitzades a l'aplicació."
 sections    = "Canigó. Documentació Versió 3.8"

@@ -1,5 +1,6 @@
 +++
-date        = "2023-01-15"
+date        = "2024-01-15"
+draft        = true
 title       = "Canigó 3.8"
 description = "Descàrrega de versió Canigó 3.8 i entorn de treball"
 sections    = "Canigó"

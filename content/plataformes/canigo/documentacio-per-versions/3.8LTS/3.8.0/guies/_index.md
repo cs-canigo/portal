@@ -1,5 +1,6 @@
 +++
-date        = "2023-01-15"
+date        = "2024-01-15"
+draft        = true
 title       = "Guies d'ús (Guies)"
 description = "Guies d'ús (Guies)"
 sections    = "canigo-fwk-docs"
