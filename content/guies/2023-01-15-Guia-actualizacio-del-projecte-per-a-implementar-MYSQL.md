@@ -78,7 +78,7 @@ public class LaTevaEntitat {
 ```
 
 ## Pas 4: Crear un Repositori
-Crea un repositori per interactuar amb la base de dades de MySQL. Ha d'extensar la interfície JpaRepository i especificar el tipus d'entitat i el tipus d'ID (en aquest cas, Long).
+Crea un repositori per interactuar amb la base de dades de MySQL. Ha d'extendre la interfície JpaRepository i especificar el tipus d'entitat i el tipus d'ID (en aquest cas, Long).
 
 ```java
 import org.springframework.data.jpa.repository.JpaRepository;
