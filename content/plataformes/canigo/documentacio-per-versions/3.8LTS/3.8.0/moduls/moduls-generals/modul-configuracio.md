@@ -94,7 +94,7 @@ Aquesta configuració de l'entorn es utilitzada pel servei de configuració per 
 
 A la versió Canigó 3.8 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
 
-Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
+Yaml és un estàndard de format fàcilment llegible que significa "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
 
 Es recomana passar les propietats definides en format properties a format yaml
 
@@ -114,7 +114,7 @@ application*.yml
 
 ### Configuració segons l'entorn
 
-Es necessari definir un fitxer yaml per cada entorn, aixi pels entorns de loc, dev, pre i pro necessitem definir els fitxers:
+Es necessari definir un fitxer yaml per cada entorn, així pels entorns de loc, dev, pre i pro necessitem definir els fitxers:
 
 ```
 application-loc.yml
@@ -136,7 +136,7 @@ En futures versions de Canigó s'utilitzarà la configuració de propietats de S
 
 ### Propietats de format properties a format yaml
 
-Es necessari passar les claus de les propietats de l'aplicació de formar properties a format yaml
+Es necessari passar les claus de les propietats de l'aplicació de format properties a format yaml
 
 El resum del format yaml seria:
 - Estructurat per indentació
@@ -195,14 +195,14 @@ Tots els arxius d'aquest directori han de complir el format de multi-entorn
 
 A partir de la versió 3.0 de Canigó i per tal de reduir el número
 d'arxius de configuració per entorn, s'introdueixen els arxius de
-propietats multientorn. Cadascuna de les claus d'aquests arxius de
+propietats multi-entorn. Cadascuna de les claus d'aquests arxius de
 configuració disposa de dues parts:
 
 -   **Entorn:** identifica l'entorn en el que aquesta propietat serà
     vàlida. El entorn amb asterisc indica valor per defecte. En el cas
     de que existeixi una propietat específica per a l'entorn, aquesta es
     seleccionarà per defecte.
--   **Clau:** propietat de identifica un determinat valor de
+-   **Clau:** propietat que identifica un determinat valor de
     configuració.
 
 Un exemple d'un arxiu de propietats de configuració *exemple.properties*
@@ -244,7 +244,7 @@ arxius de configuració de la carpeta
 
 Degut a la pròpia naturalesa del mòdul, l'obtenció de les propietats des
 de classes "clients" no requereix cap injecció de dependències o
-configuració addiccional. La resolució de les propietats per entorn es
+configuració adicional. La resolució de les propietats per entorn es
 realitzarà de manera automàtica i transparent per al desenvolupador.
 
 -   Exemple d'inserció de propietats en configuració de Beans de Spring
@@ -260,7 +260,7 @@ realitzarà de manera automàtica i transparent per al desenvolupador.
 
     
 
--   Exemple d'inserció de propietats en configuració de Beans de Spring bassat en anotacions:
+-   Exemple d'inserció de propietats en configuració de Beans de Spring basat en anotacions:
 
     ```java
     @Repository
@@ -277,7 +277,7 @@ realitzarà de manera automàtica i transparent per al desenvolupador.
 A partir de la versió 3.0.3 del mòdul canigo.core s'inclou la
 possibilitat de poder fer servir propietats definides fora de
 l'aplicació. Aquestes propietats es configuren a nivell del servidor JEE
-mitjançant un fitxer de propietats la ruta del qual és especificada
+mitjançant un fitxer de propietats, la ruta del qual és especificada
 durant l'arrencada de la JVM. Les propietats d'aquest fitxer afecten a
 totes les aplicacions desplegades al servidor que incorporin aquesta
 versió (o posterior) del mòdul canigo.core. També es dona flexibilitat
@@ -295,7 +295,7 @@ Cal definir a l'aplicació la següent propietat al fitxer:
 
 Propietat|Requerit|Descripció
 ---------|--------|----------
-codi_aplicacio|NO|Típicament serà el codi de diàleg de l'aplicació. Cal informar-ho nomes si es vol emprar un fitxer de propietats específiques per a l'aplicació en comptes del global de servidor.
+codi_aplicacio|NO|Típicament serà el codi de diàleg de l'aplicació. Cal informar-ho només si es vol emprar un fitxer de propietats específiques per a l'aplicació en comptes del global de servidor.
 
 #### Administrador del servidor JEE al CPD
 
@@ -386,7 +386,7 @@ aplicacions. Per a aquest propòsit:
 
 Es vol definir el nom dels dataSources de les conexions per JNDI de les
 aplicacions mitjançant els fitxers de propietats específics d'aplicació
-dins servidor. Per a aquest propòsit:
+dins del servidor. Per a aquest propòsit:
 
 -   Els proveïdors de l'aplicació hauran d'informar la propietat
     **codi_aplicacio** al fitxer de propietats de la seva aplicació:
@@ -588,7 +588,7 @@ public class ApplicationProperties {
 }
 ```
 
-On la podriem utilitzar utilitzant la injecció de Spring:
+On la podríem utilitzar amb la injecció de Spring:
 ```java
 	@Autowired
 	ApplicationProperties applicationProperties;
@@ -641,7 +641,7 @@ SpringBoot per defecte cerca les propietats en un fitxer que es digui applicatio
 
 Si es vol utilitzar profiles de Spring, s'hauria de crear un fitxer application-{profile}.properties.
 
-Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
+Una altre forma de carregar un fitxer de propietats és afegir l'anotació @PropertySource al nostre fitxer de configuració:
 
 ```java
 	@Configuration
@@ -702,7 +702,7 @@ Injecció del mòdul de configuració dins del bean "myBean". Spring
 s'encarregarà d'injectar la configuració del mòdul de propietats
 executant el mètode setConfiguration.
 
--   Injecció de dependències mitjançant annotacions:
+-   Injecció de dependències mitjançant anotacions:
 
 ```java
 import cat.gencat.ctti.canigo.arch.core.config.PropertiesConfiguration;
@@ -722,6 +722,6 @@ public class Injection {
 
 
 
-L'anotació @Autowired injecta en aquest cas, un bean de tipus
-cat.gencat.ctti.canigo.arch.core.config.PropertiesConfiguration
+L'anotació @Autowired injecta en aquest cas un bean de tipus
+cat.gencat.ctti.canigo.arch.core.config.PropertiesConfiguration,
 que Spring trobarà en el context de l'aplicació.
