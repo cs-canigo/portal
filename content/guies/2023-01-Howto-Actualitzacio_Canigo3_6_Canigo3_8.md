@@ -9,7 +9,7 @@ key = "GENER2023"
 
 ### A qui va dirigit
 
-Aquesta guia va dirigit a tots aquells usuaris que vulguin **actualitzar a Canigó 3.8 la seva aplicació Canigó 3.6**.
+Aquesta guia va dirigida a tots aquells usuaris que vulguin **actualitzar a Canigó 3.8 la seva aplicació Canigó 3.6**.
 
 ### Versió de Canigó
 
@@ -17,7 +17,7 @@ Els passos descrits en aquest document apliquen a la versió 3.8 del Framework C
 
 ### Introducció
 
-El mes de **gener del 2024 s'ha publicat la versió 3.8 del Framework Canigó**. Aquesta versió és una
+Al mes de **gener del 2024 s'ha publicat la versió 3.8 del Framework Canigó**. Aquesta versió és una
 [versió LTS](/canigo/roadmap) i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de
 tenir un suport continuat, així com la màxima estabilitat que proporciona una versió LTS.
 
@@ -43,7 +43,7 @@ com el que es mostra a continuació:
 
 ### Passes a realitzar
 
-Un cop actualitzades les versions dels mòduls, segons indicat a la secció anterior, serà necessari realitzar
+Un cop actualitzades les versions dels mòduls, segons s' indica a la secció anterior, serà necessari realitzar
 els següents passos:
 
 ---
@@ -174,7 +174,7 @@ configurat a Spring Security. Per definir-ne un per defecte, caldrà incorporar:
 ```
 
 ---
-**11.** És necessari utilitzar l'última versió de l’schema del XSD de Spring Security. Per exemple de:
+**11.** És necessari utilitzar l'última versió del schema del XSD de Spring Security. Per exemple de:
 `http://www.springframework.org/schema/security/spring-security-4.2.xsd`
 a: `http://www.springframework.org/schema/security/spring-security-5.4.xsd`
 
