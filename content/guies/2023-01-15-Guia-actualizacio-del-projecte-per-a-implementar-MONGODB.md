@@ -49,7 +49,7 @@ spring:
 
 ```
 
-Assegura't de reemplaçar la_teva_base_de_dades amb el nom de la teva base de dades a MongoDB.
+Assegura't de reemplaçar "la_teva_base_de_dades" amb el nom de la teva base de dades a MongoDB.
 
 ## Pas 3: Crear un Model
 Crea una classe de model que representi les dades que vols emmagatzemar a MongoDB. Anota la classe amb @Document per indicar que s'emmagatzemarà a MongoDB.
@@ -67,7 +67,7 @@ Crea una classe de model que representi les dades que vols emmagatzemar a MongoD
 
 ## Pas 4: Crear un Repositori
 
-Crea un repositori per interactuar amb la base de dades de MongoDB. Ha d'extens la interfície MongoRepository i especificar el tipus de model i el tipus d'ID (en aquest cas, String).
+Crea un repositori per interactuar amb la base de dades de MongoDB. Ha d' extendre la interfície MongoRepository i especificar el tipus de model i el tipus d'ID (en aquest cas, String).
 
 ```java
     import org.springframework.data.mongodb.repository.MongoRepository;
