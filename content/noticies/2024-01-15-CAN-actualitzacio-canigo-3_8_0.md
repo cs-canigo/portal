@@ -39,29 +39,28 @@ el següent enllaç: https://github.com/spring-projects/spring-boot/wiki/Spring-
 ### Swagger
 
 Swagger és utilitzat per a exposar i documentar les API RESTful expressades en format JSON i el Framework
-Canigó proporciona una preconfiguració per a exposar aquests serveis fent ús d'aquesta eina.
+Canigó proporciona una pre-configuració per a exposar aquests serveis fent ús d'aquesta eina.
 S'ha actualitzat la versió de Swagger a l'última versió compatible amb Canigó 3.8.0 (la versió 3.0.0)
 de OpenApi eliminant la pàgina personalitzada de Canigó i usant tots els seus components de forma nativa.
 
 ### Dependències i plugins
 Es crea un nou arquetip Maven més agnòstic perquè no calgui dependre de cap plugin extern.
-[Creació d' un nou arquetip per evitar usar plugins](/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1.0.0-per-a-no-dependre-de-cap-plugin)
-Es poden veure totes les dependències i canvis en el següent enllaç:[CANIGÓ 3.8.0](/canigo/download/canigo-38/).
+[Creació d' un nou arquetip per evitar usar plugins](/content/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1.0.0-per-a-no-dependre-de-cap-plugin.md)
+Es poden veure totes les dependències i canvis en el següent enllaç:[CANIGÓ 3.8.0](/content/canigo/download/canigo-38/).
 
 ## Com crear aplicacions amb Canigó 3.8
 
-Per a crear aplicacions amb Canigó 3.8, CS Canigó no cal, fer servir cap plugin extern,ja que,
-l'arquetip està creat d'una manera agnòstica,és a dir, no depèn de cap plugin per a la seva
-creació d'aplicacions Canigó atès que , ja conté les bases necessàries.
-
+Per a crear aplicacions amb Canigó 3.8 (CS Canigó) no cal fer servir cap plugin extern,ja que,
+l'arquetip està creat d'una manera agnòstica, és a dir, no depèn de cap plugin per a la seva
+creació d'aplicacions Canigó atès que ja conté les bases necessàries.
 
 
 ## Com migrar a Canigó 3.8
 
 Per a poder passar una aplicació de Canigó 3.6 a Canigó 3.8 podeu seguir els passos descrits a
-[Actualització Canigó 3.6 a Canigó 3.8](/howtos/2024-01-15-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
+[Actualització Canigó 3.6 a Canigó 3.8](/content/howtos/2024-01-15-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
 
 <br/><br/>
-Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el
-CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant-nos un
+Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu adressar a
+CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant un
 correu electrònic a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
