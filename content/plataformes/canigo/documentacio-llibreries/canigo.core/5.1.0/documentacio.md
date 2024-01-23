@@ -20,9 +20,9 @@ A la interficie *cat.gencat.ctti.canigo.arch.core.config.ICustomPropertyPlaceHol
 A la utilitat *cat.gencat.ctti.canigo.arch.core.config.YamlPropertiesUtils* ofereix utilitats per la càrrega de propietats en format yml.
 
 
-### Excepcions core
+### Exceptions core
 
-S'ofereixes les següents exceptions per a poder extendre:
+S'ofereixen les següents "exceptions" per a poder extendre:
 
 - *cat.gencat.ctti.canigo.arch.core.exceptions.BaseException*: Exception base de tipus checked. Conté el missatge de l'exception i objecte de tipus *cat.gencat.ctti.canigo.arch.core.exceptions.ExceptionDetails*  amb el detall de l'exception.
 
@@ -43,13 +43,13 @@ S'ofereix la interficie *cat.gencat.ctti.canigo.arch.core.i18n.I18nResourceBundl
 
 ### Informació dels mòduls
 
-S'ofereix la interficie *cat.gencat.ctti.canigo.arch.core.services.info.InfoModulesLoadedService* i la implementacio *cat.gencat.ctti.canigo.arch.core.services.info.impl.InfoModulesLoadedServiceImpl* per a obtenir informació dels mòduls carregats a l'aplicació.
+S'ofereix la interficie *cat.gencat.ctti.canigo.arch.core.services.info.InfoModulesLoadedService* i la implementació *cat.gencat.ctti.canigo.arch.core.services.info.impl.InfoModulesLoadedServiceImpl* per a obtenir informació dels mòduls carregats a l'aplicació.
 
 ### Utils
 
 S'ofereixen les següents utilitats:
 
-- *cat.gencat.ctti.canigo.arch.core.utils.CoreUtils*: Amb utilitats globals, transversals o core, com per exemple, obtenir el nom de la màquina, obtenir el locale o obtenir el nom de la instancia.
+- *cat.gencat.ctti.canigo.arch.core.utils.CoreUtils*: Amb utilitats globals, transversals o core, com per exemple, obtenir el nom de la màquina, obtenir el locale o obtenir el nom de la instància.
 
 - *cat.gencat.ctti.canigo.arch.core.utils.JacksonUtil*: Amb utilitats pel tractament amb JSONs.
 
