@@ -14,10 +14,10 @@ weight      = 1
 L'objectiu principal d'aquesta actualització és fer compatible Canigó amb el **Java 17**. 
 Això comporta actualitzar **Spring** i eliminar certes llibreries com **Javax**, que queda obsoleta per **Jakarta**. 
 Tot això permetrà crear una versió de Canigó més sostenible, 
-a més d'aconseguir un arquetip més agnòstic, és a dir, obtenir un mòdel de referència que no depengui de l'execució externa de cap plugin.
+a més d'aconseguir un arquetip més agnòstic, és a dir, obtenir un model de referència que no depengui de l'execució externa de cap plugin.
 
 ## Llistat d' actualitzacions
-Les principals actualitzacions realitzades s'han centrat a adaptar la versió de Java a l'actual i a modificar el framework de Spring per aconseguir la compatibilització. 
+Les principals actualitzacions realitzades s'han centrat a adaptar la versió de Java a l'actual i a modificar el framework de Spring per a aconseguir la compatibilització. 
 A continuació, es detallen les actualitzacions principals realitzades:
 
 **15/01/2024:**
