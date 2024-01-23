@@ -21,11 +21,11 @@ Les principals actualitzacions realitzades s'han centrat a adaptar la versió de
 A continuació, es detallen les actualitzacions principals realitzades:
 
 **15/01/2024:**
-- [Actualització de tecnologies base](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_8_0/)
+- [Actualització de tecnologies base](/content/noticies/2024-01-15-CAN-actualitzacio-canigo-3_8_0.md)
     - Actualització a **Java 17**, **Spring 6.1.1**, **Spring Boot 3.1.4**
     - Actualització versió Swagger  OpenApi (**Swagger 3**), en lloc de **Swagger 2**.
     - Actualització versió dependències (**Javax** a **Jakarta**, **JUnit4** a **JUnit Jupiter**)
     
-- [Creació de projecte amb el nou arquetip](/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1_0/)
+- [Creació de projecte amb el nou arquetip](/content/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1_0.md)
     - Es crea un nou arquetip Maven més agnòstic, de manera que no cal dependre de cap plugin extern.
 
