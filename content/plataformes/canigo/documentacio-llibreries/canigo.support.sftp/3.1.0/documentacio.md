@@ -22,4 +22,4 @@ S’ofereix el servei *cat.gencat.ctti.canigo.arch.support.sftp.SftpService* per
 S’ofereix la exception *cat.gencat.ctti.canigo.arch.support.sftp.exceptions.SftpModuleException* per a identificar els errors produïts al mòdul.
 
 
-#REVISAR_DOCU 
+ 

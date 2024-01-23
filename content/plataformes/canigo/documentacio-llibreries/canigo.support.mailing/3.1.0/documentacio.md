@@ -42,4 +42,3 @@ Les propietats configurables es troben en l'arxiu: *mail.properties* o *applicat
 
 
 
-#REVISAR_DOCU

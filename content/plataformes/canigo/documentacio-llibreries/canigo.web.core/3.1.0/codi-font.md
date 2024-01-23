@@ -7,4 +7,3 @@ sections    = "canigo-fwk-docs"
 enllac		= "https://hudson.intranet.gencat.cat/nexus/repository/canigo-maven2/cat/gencat/ctti/canigo.web.core/3.1.0/canigo.web.core-3.1.0-sources.jar"
 weight		= 1
 +++
-#NEXUS_REPLACE

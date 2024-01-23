@@ -33,4 +33,3 @@ i eliminació.
 
 Conté la classe *CanigoDBObjectMongodbQuery* que implementa QueryDSL sobre MongoDB.
 
-#REVISAR_DOCU

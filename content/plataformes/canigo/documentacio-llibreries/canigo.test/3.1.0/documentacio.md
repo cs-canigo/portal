@@ -20,4 +20,4 @@ S'ofereix la classe *cat.gencat.ctti.canigo.arch.test.BaseTest* com a base pels 
 
 S'ofereix la exception *cat.gencat.ctti.canigo.arch.exceptions.BaseStatementException* per a identificar errors al executar els tests de les proves a les aplicacions
 
-#REVISAR_DOCU
+

@@ -20,4 +20,3 @@ S'ofereix la classe *cat.gencat.ctti.canigo.arch.persistence.core.querydsl.Gener
 S'ofereix la classe *cat.gencat.ctti.canigo.arch.persistence.core.querydsl.GenericPredicateBuilder* que utilitza el patró builder per a generar [Predicate](http://www.querydsl.com/static/querydsl/4.2.1/apidocs/com/querydsl/core/types/Predicate.html)
 
 
-#REVISAR_DOCU

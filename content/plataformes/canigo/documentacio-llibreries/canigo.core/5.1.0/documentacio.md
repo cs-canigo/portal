@@ -58,4 +58,3 @@ S'ofereixen les següents utilitats:
 S'ofereix la interficie *cat.gencat.ctti.canigo.arch.core.uuid.UUIDService* i la implementació *cat.gencat.ctti.canigo.arch.core.uuid.impl.UUIDServiceImpl* per a la generació de identificadors únics.
 
 
-#REVISAR_DOCU

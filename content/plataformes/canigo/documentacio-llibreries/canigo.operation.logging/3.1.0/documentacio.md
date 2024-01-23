@@ -45,4 +45,3 @@ S'ofereix el runnable *cat.gencat.ctti.canigo.arch.operation.logging.util.Tailer
 S'ofereix el listener *cat.gencat.ctti.canigo.arch.operation.logging.util.TailerListener* per a escotlar events que es produeixin a la monitorització dels logs de l'aplicació.
 
 
-#REVISAR_DOCU

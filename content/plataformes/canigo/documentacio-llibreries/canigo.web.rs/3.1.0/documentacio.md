@@ -34,4 +34,3 @@ S'ofereix el handler genèric *cat.gencat.ctti.canigo.arch.web.rs.controller.exc
 
 S'ofereix la exception *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.ResourceNotFoundException*, per a identificar errors de recursos no trobats en aplicacions amb serveis rest
 
-#REVISAR_DOCU

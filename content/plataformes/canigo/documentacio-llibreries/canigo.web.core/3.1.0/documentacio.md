@@ -22,4 +22,3 @@ Per a l'escriptura de dades genèriques de les request als logs de l'aplciació 
 Per a utilitzar la gestió de propietats aportada per Canigó s'ofereix el listener *cat.gencat.ctti.canigo.arch.web.core.filters.ConfigPropertiesExposerListener*
 
 
-#REVISAR_DOCU

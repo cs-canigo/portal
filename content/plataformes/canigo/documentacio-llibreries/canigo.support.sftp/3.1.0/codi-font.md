@@ -8,4 +8,4 @@ enllac		= "https://hudson.intranet.gencat.cat/nexus/repository/canigo-maven2/cat
 weight		= 1
 +++
 
-#NEXUS_REPLACE
+

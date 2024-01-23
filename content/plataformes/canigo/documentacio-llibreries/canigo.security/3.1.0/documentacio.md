@@ -54,4 +54,3 @@ Per a la gestió de l'autenticació amb siteminder s'ofereix *cat.gencat.ctti.ca
 
 
 
-#REVISAR_DOCU
