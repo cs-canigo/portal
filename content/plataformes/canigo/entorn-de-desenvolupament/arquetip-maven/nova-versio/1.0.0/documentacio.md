@@ -11,7 +11,7 @@ weight		= 2
 
 ### Propòsit
 
-L’arquetipus és una eina Maven que facilita la creació de projectes seguint una plantilla. Utilitzant l’arquetipus i executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
+L’arquetipus és una eina Maven que facilita la creació de projectes seguint una plantilla. Utilitzant l’arquetipus i executant un goal de maven obtenim un projecte Canigó amb una base pre-configurada preparada per a incorporar-li noves funcionalitats.
 
 ### Configuració de Maven (manual)
 
@@ -35,7 +35,7 @@ Les passes a seguir serien les següents:
     $ keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
 ```
 
-Un cop importat el certificat els processos Maven executats que utilitzin la JDK on s'ha importat el certificat seran capaços de descarregar dependències del grup de repositoris.
+Un cop importat el certificat, els processos Maven executats que utilitzin la JDK on s'ha importat el certificat seran capaços de descarregar dependències del grup de repositoris.
 Al fitxer `settings.xml` del Maven caldrà configurar el repositori al profile per defecte:
 
 ```
@@ -81,12 +81,12 @@ mvn archetype:generate \
    -DdockerName=provaDocker
    -Dversion=1.0.0
 ```
-En cas d'utilitzar el comando anterior i generar el següent error:
+Si al posar el comandament anterior ens genera el següent error:
+
 ```shell
 [ERROR] The goal you specified requires a project to execute but there is no POM in this directory 
 ```
-
-Quant a cada paràmetre, assegura't de col·locar cometes dobles al principi i al final de cadascun de la següent manera:
+Assegura't de col·locar cometes dobles al principi i al final de cada paràmetre de la següent manera:
 
 ```shell
 mvn archetype:generate / 
@@ -109,12 +109,12 @@ On:
 
 - groupId: Grup maven de l'aplicació que volem crear
 
-- version: Verció de l'aplicació que volem crear
+- version: Versió de l'aplicació que volem crear
 
-- appName: Nom descriptiu de l'aplicació o el projecte, aquest nomeni sàrria el nom que tindrà les classes base
+- appName: Nom descriptiu de l'aplicació o el projecte, el nom que tindrà les classes base
 
 - package: Nom del paquet de projecte
 
-- dockerName: Nom de la imatge del docker, informar aquesta valor és opciona, si no s'informa per defecte s'assigna el valor del artifactId
+- dockerName: Nom de la imatge del docker, informar aquest valor és opcional, si no s'informa per defecte s'assigna el valor del artifactId
 
-- B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
+- B: En mode batch perquè no ens realitzi les preguntes i cre-hi l'aplicació directament
