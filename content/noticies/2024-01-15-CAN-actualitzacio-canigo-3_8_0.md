@@ -45,8 +45,8 @@ de OpenApi eliminant la pàgina personalitzada de Canigó i usant tots els seus 
 
 ### Dependències i plugins
 Es crea un nou arquetip Maven més agnòstic perquè no calgui dependre de cap plugin extern.
-[Creació d' un nou arquetip per evitar usar plugins](/content/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1.0.0-per-a-no-dependre-de-cap-plugin.md)
-Es poden veure totes les dependències i canvis en el següent enllaç:[CANIGÓ 3.8.0](/content/canigo/download/canigo-38/).
+
+Es poden veure totes les dependències i canvis en el següent enllaç: [CANIGÓ 3.8.0](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/llistat-de-canvis.md).
 
 ## Com crear aplicacions amb Canigó 3.8
 
@@ -58,8 +58,7 @@ creació d'aplicacions Canigó atès que ja conté les bases necessàries.
 ## Com migrar a Canigó 3.8
 
 Per a poder passar una aplicació de Canigó 3.6 a Canigó 3.8 podeu seguir els passos descrits a
-[Actualització Canigó 3.6 a Canigó 3.8](/content/howtos/2024-01-15-Howto-Actualitzacio_Canigo3_6_Canigo3_8/).
-
+[Actualització Canigó 3.6 a Canigó 3.8](/content/howtos/2024-01-Howto-Actualitzacio_Canigo3_6_Canigo3_8.md).
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu adreçar a
 CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant un

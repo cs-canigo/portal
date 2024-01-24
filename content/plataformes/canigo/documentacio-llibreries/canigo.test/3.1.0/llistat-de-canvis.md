@@ -8,7 +8,7 @@ weight		= 2
 +++
 ## canigo.test 3.1.0
 
-- [Actualització de canigo.test](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_1_0/)
+- Actualització de canigo.test
    - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `canigó.root` de 3.1.0 a 3.2.0
    - A més, pel fet que s'ha eliminat **javax** , a causa de la incompatibilitat amb JDK 17,
       s'ha de reemplaçar totes les dependències associades a aquesta libreria,javax, per les corresponents de **jakarta**.

@@ -9,11 +9,11 @@ weight		= 2
 
 ## canigo.web.rs 3.1.0
 
-- [Actualització compatibilitat canigo.web.rs](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_1_0/)
+- Actualització compatibilitat canigo.web.rs
   - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `canigó.root` de 3.1.0 a 3.2.0
   - Actualització dels mòduls [Canigó-test](
-       /plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0 i [Canigó-core](
-       /plataformes/canigo/documentacio-llibreries/canigo.core/5.1.0/) de la versió 5.0.6 a 5.1.0
+/content/plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0 i [Canigó-core](
+/content/plataformes/canigo/documentacio-llibreries/canigo.core/5.1.0/) de la versió 5.0.6 a 5.1.0
   -  Actualització de les següents llibreries: 
 
      - `org.springframework` de 5.3.18 a 6.1.1,

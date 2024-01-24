@@ -9,12 +9,10 @@ weight		= 2
 
 ## canigo.operation.logging 3.1.0
 
-  - [Actualització de canigo.operation.logging](/noticies/2023-01-15-CAN-actualitzacio-canigo-3_1_0/)
+  - Actualització de canigo.operation.logging
     - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `canigó.root` de 3.1.0 a 3.2.0
-    - Actualització del mòdul [Canigó-test](
-      /plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0
-    - S'ha d'afegir la dependència [Canigó-web-core](
-      /plataformes/canigo/documentacio-llibreries/canigo.web.core/3.1.0/) de la versió 3.1.0.
+    - Actualització del mòdul [Canigó-test](/content/plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0
+    - S'ha d'afegir la dependència [Canigó-web-core](/content/plataformes/canigo/documentacio-llibreries/canigo.web.core/3.1.0/) de la versió 3.1.0.
     - És necessari, canviar la versió 3.0.4 del propi mòdul canigó per la versió del mòdul canigó a 3.1.0. És a dir ,
       canigó operation logging 3.0.4 a versió 3.1.0.
     - A més, pel fet que s'ha eliminat **javax** , a causa de la incompatibilitat amb JDK 17,
