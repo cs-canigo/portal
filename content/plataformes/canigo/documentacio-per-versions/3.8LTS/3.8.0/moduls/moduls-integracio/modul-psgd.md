@@ -29,7 +29,7 @@ Aquest document va dirigit als següents perfils:
 
 | Nom Document
 | ----------
-| [PSGD Manual Integració](/content/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v6.0.pdf).
+| [PSGD Manual Integració](related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v6.0.pdf).
 
 ## Descripció Detallada
 
