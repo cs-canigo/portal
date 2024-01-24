@@ -7,10 +7,9 @@ sections    = "Canigó"
 weight     = 1
 +++
 
-## Canigó 3.6
+## Canigó 3.8
 
-- [Release notes Canigó 3.8](/canigo-download-related/release-notes-canigo-38)
-- [Matriu de Compatibilitats Canigó 3.8](/canigo-download-related/matrius-compatibilitats/canigo-38)
+- [Matriu de Compatibilitats](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md)
 
 | Versió Canigó LTS Actual | Última versió disponible |
 |--------------------------|--------------------------|
