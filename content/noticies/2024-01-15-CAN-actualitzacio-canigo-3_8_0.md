@@ -59,7 +59,6 @@ creació d'aplicacions Canigó atès que ja conté les bases necessàries.
 
 Per a poder passar una aplicació de Canigó 3.6 a Canigó 3.8 podeu seguir els passos descrits a
 [Actualització Canigó 3.6 a Canigó 3.8](/content/howtos/2024-01-Howto-Actualitzacio_Canigo3_6_Canigo3_8.md).
-
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu adreçar a
 CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant un
