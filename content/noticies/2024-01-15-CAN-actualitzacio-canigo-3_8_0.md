@@ -45,7 +45,6 @@ de OpenApi eliminant la pàgina personalitzada de Canigó i usant tots els seus 
 
 ### Dependències i plugins
 Es crea un nou arquetip Maven més agnòstic perquè no calgui dependre de cap plugin extern.
-[Creació d' un nou arquetip per evitar usar plugins](/content/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1.0.0-per-a-no-dependre-de-cap-plugin.md)
 Es poden veure totes les dependències i canvis en el següent enllaç:[CANIGÓ 3.8.0](/content/canigo/download/canigo-38/).
 
 ## Com crear aplicacions amb Canigó 3.8
