@@ -100,7 +100,7 @@ Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 IMPORTANT
 

@@ -84,7 +84,7 @@ Començarem per afegir les dependències a Canigó Mongodb, Spring Mongodb, reac
 		</dependency>
 ```
 
-A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Afegirem la propietat per la connexió a Mongodb, utilitzarem el estàndard de connexió per String de connexió a Mongodb, recomanem utilitzar aquesta forma de connexió, per més informació podeu consultar: https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
 ```properties
