@@ -24,10 +24,3 @@ La versió 1.0.0 de l'arquetipus de Canigó incorpora les següents novetats:
 - Actualització de la versió d'Spring, Spring Boot, dependències i plugins.
 - Actualització d' OpenApi (Swagger 3)  a Swagger 2
 
-
-
-## Documentació addicional
-
-Podeu consultar la documentació dels [Binaris de Canigó 3.8](/canigo/download/canigo-38/).
-
-
