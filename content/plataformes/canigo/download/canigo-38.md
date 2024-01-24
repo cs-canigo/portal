@@ -75,7 +75,7 @@ No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals de
 
 Podeu consultar la següent documentació:
 
-- [Entorn desenvolupament Canigó](/canigo/entorn-desenvolupament/)
+- [Entorn desenvolupament Canigó](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/entorn-de-desenvolupament/)
 
 
 #### Configuració de Maven (manual)
