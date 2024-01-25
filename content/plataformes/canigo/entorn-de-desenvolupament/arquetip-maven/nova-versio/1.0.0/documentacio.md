@@ -117,4 +117,28 @@ On:
 
 - dockerName: Nom de la imatge del docker, informar aquest valor és opcional, si no s'informa per defecte s'assigna el valor del artifactId
 
-- B: En mode batch perquè no ens realitzi les preguntes i cre-hi l'aplicació directament
+Després d'executar el comandament, en finalitzar, veuràs un missatge indicant que tot ha anat correctament i que s'ha generat l'artefacte.
+
+```shell
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: canigo-archetype-rest:0.0.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: cambios
+[INFO] Parameter: artifactId, Value: cambios
+[INFO] Parameter: version, Value: 1.0.0
+[INFO] Parameter: package, Value: cambios
+[INFO] Parameter: packageInPathFormat, Value: cambios
+[INFO] Parameter: package, Value: cambios
+[INFO] Parameter: appName, Value: Cambios
+[INFO] Parameter: groupId, Value: cambios
+[INFO] Parameter: artifactId, Value: cambios
+[INFO] Parameter: dockerName, Value: cambios
+[INFO] Parameter: version, Value: 1.0.0
+[INFO] Project created from Archetype in dir: C:\proyectos\DEMO ALBERT\cambios
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.362 s
+[INFO] Finished at: 2024-01-09T18:20:11+01:00
+[INFO] ------------------------------------------------------------------------
+```
