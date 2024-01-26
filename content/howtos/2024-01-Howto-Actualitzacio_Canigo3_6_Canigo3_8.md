@@ -26,7 +26,7 @@ amb Canigó 3.8 i el punt de partida d'aquesta guia és una aplicació creada am
 
 ### Configuració prèvia
 
-A la [matriu de compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.9/moduls/compatibilitat-per-modul/) podeu consultar les versions
+A la [matriu de compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/) podeu consultar les versions
 dels mòduls i components de Canigó de les versions 3.6.x i 3.8.x. Per tant, caldrà **actualitzar els intervals de
 versions dels mòduls utilitzats per l'aplicació** per a migrar a Canigó 3.8.
 
