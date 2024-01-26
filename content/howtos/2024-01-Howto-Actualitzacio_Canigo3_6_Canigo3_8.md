@@ -18,7 +18,7 @@ Els passos descrits en aquest document apliquen a la versió 3.8 del Framework C
 ### Introducció
 
 Al mes de **gener del 2024 s'ha publicat la versió 3.8 del Framework Canigó**. Aquesta versió és una
-[versió LTS](/canigo/roadmap) i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de
+[versió LTS](/plataformes/canigo/roadmap/) i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de
 tenir un suport continuat, així com la màxima estabilitat que proporciona una versió LTS.
 
 L'objectiu d'aquesta guia  és mostrar els procediments necessaris per a actualitzar una aplicació realitzada
@@ -26,7 +26,7 @@ amb Canigó 3.8 i el punt de partida d'aquesta guia és una aplicació creada am
 
 ### Configuració prèvia
 
-A la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats/canigo-38/) podeu consultar les versions
+A la [matriu de compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.9/moduls/compatibilitat-per-modul/) podeu consultar les versions
 dels mòduls i components de Canigó de les versions 3.6.x i 3.8.x. Per tant, caldrà **actualitzar els intervals de
 versions dels mòduls utilitzats per l'aplicació** per a migrar a Canigó 3.8.
 
