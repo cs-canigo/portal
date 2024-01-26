@@ -2,7 +2,7 @@
 title: Tipologies Cloud
 description: Descripció dels diferents tipus de cloud i les seves
   característiques més importants
-date: 2019-02-25
+date: 2024-01-12
 sections: Cloud
 categories:
   - cloud
@@ -32,7 +32,7 @@ La connexió als clouds públics es realitza a traves d'internet o alguna VPN.
 
 Característiques:
 
-- Integració amb la operativa de l'empresa complexa
+- Multitud de serveis gestionats
 - Millores de costos altes
 - Escalabilitat i flexibilitat molt altes
 - Resposta bona davant de pics de demanda
@@ -68,13 +68,17 @@ Es una barreja del entre els dos models anteriors, part dels recursos estan en c
 
 Dins del món cloud existeixen diferents tipus de cloud en funció del nivell de servei que ofereixen.
 
-Bàsicament es poden distingir 5 tipus de cloud:
+Es poden distingir diferents tipologies de serveis cloud:
 
-- SaaS
-- xPaaS
-- DBaaS
-- CaaS
-- IaaS
+- SaaS: Software com a servei
+- Computació:
+  - FaaS: Funcions com a servei
+  - PaaS: Plataforma com a servei
+  - CaaS: Contenidors com a servei
+- DBaaS: Base de dades com a servei
+- IaaS: Infraestructura com a servei
+
+A banda, existeixen moltíssims altres serveis empaquetats i gestionats pel proveïdor de cloud: sistemes de notificacions, cues, workflows, events, ....
 
 ![Tipus de cloud](/related/cloud/tipusCloud.png) 
 
@@ -86,7 +90,16 @@ Anomenarem així als serveis, que:
 - El servei és compartit entre tots els usuaris.
 - Els usuaris només consumeixen el servei. No tenen capacitat de control o administració del mateix, més enllà de configuració a nivell d’usuari.
 
-### xPaaS
+### FaaS
+
+Anomenarem així als entorns d’execució, que:
+
+- Són l'expressió mínima d'un microservei: rep una entrada i executa una sortida.
+- Estan orientades a events. 
+- No ens preocupem per l'escalabilitat
+- Com a molt, indiquem la mida de la funció (en RAM consumida).
+
+### PaaS
 
 Anomenarem així als entorns d’execució, que:
 
@@ -94,7 +107,16 @@ Anomenarem així als entorns d’execució, que:
 - Contenen un motor d’execució (p.e. un servidor d’aplicacions) on posarem la nostra aplicació o funcionalitat
 - Configurarem:
   - la potència: cpu/ram
-  - el nombre d’instàncies que correran en paral·lel per a aconseguir més concurrència
+  - la política d'escalat
+
+### CaaS
+
+Anomenarem així als entorns d’execució, que:
+
+- L'element d'empaquetat és el contenidor i el proporciona el desenvolupador.
+- Configurarem:
+  - la potència: cpu/ram
+  - la política d'escalat
 
 ### DBaaS
 

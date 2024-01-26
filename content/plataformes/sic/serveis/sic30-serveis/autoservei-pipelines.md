@@ -95,7 +95,7 @@ Per a més informació: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 #### Desplegament d'aplicacions
 
 L'equip de SIC, mitjançant aquest servei, s'encarregarà de generar automàticament totes les pipelines necessàries, tant per al **desplegament del component o aplicació com
-altres pipelines per a dur a terme les operacions necessàries sobre [plataformes cloud](/cloud/plataformes-cloud/)**. Aquestes pipelines operatives s'aprovisionaran dins d'un directori diferenciat
+altres pipelines per a dur a terme les operacions necessàries sobre [plataformes cloud](/plataformes/cloud/plataformes-cloud/)**. Aquestes pipelines operatives s'aprovisionaran dins d'un directori diferenciat
 `/Advanced` dins del directori de tasques Jenkins associat al projecte i seran les següents:
 
 - **DEPLOY-START**: permet iniciar el servei.

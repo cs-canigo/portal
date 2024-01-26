@@ -470,16 +470,31 @@
             },
             {
                 "inom": "V09",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Es modifica el nom de les delegacions territorials del govern per eliminar la partícula \"de la Generalitat\" (id: 669, 674, 15432, 15433, 11898, 680, 685 i 20432), s’incorpora la \"Direcció General d'Afers de la Unió Europea\" (id: 22950) i s'elimina \"Direcció General de la Representació del Govern a l'Exterior i de la Unió Europea\" (id: 21706).",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_V09.xlsx",
                 "idatacreacio": "24/10/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "20/12/2023",
                 "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V10",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Es modifica el nom de sis direccions generals d'identificador (id: 20885, 3421, 1116, 21691, 21688 i 21650), s'incorpora la direcció general \"Oficina d'Igualtat de Tracte i No-discriminació\" i s'elimina la direcció general d'identificador 21665.",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "20/12/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/12/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -487,7 +502,7 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "25/10/2023"
+        "Data_actualitzacio": "20/12/2023"
     },
     {
         "Id": "dtarq192",
@@ -644,16 +659,31 @@
             },
             {
                 "inom": "V07",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                 "idescripcio": "S'actualitza la denominació de la “Secretaria de Transformació Educativa” (id: 15417) per “Secretaria de Polítiques Educatives”.",
                 "ifitxer_doc": "Secretaries_ATR.docx",
-                "ifitxer_xls": "Secretaries.xlsx",
+                "ifitxer_xls": "deprecated/Secretaries_V07.xlsx",
                 "idatacreacio": "29/11/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "20/12/2023",
                 "idatapublicacio": "29/11/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V08",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                "idescripcio": "S'han actualitzat els noms de les Secretaries Generals dels departaments.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "19/12/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/12/2023",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -661,7 +691,35 @@
         "nom_dinsBD": "SECRETARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "29/11/2023"
+        "Data_actualitzacio": "20/12/2023"
+    },
+    {
+        "Id": "dtarq194",
+        "Nom": "Subdireccions generals",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de subdireccions generals de la Generalitat de Catalunya, especificant la secretaria o la direcció General de la qual depenen.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                "idatacreacio": "20/12/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/12/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "20/12/2023",
+        "Data_actualitzacio": "20/12/2023"
     },
     {
         "Id": "dtarq90",

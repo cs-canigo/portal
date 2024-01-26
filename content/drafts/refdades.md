@@ -1,7 +1,7 @@
 +++
-date        = "2023-11-29"
+date        = "2023-12-20"
 title       = "Dades de Referència"
-description = "Arquitectura de Dades de CTTI, versió 29/11/2023 (Publicacio)"
+description = "Arquitectura de Dades de CTTI, versió 20/12/2023 (Previ-Publicacio)"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
@@ -24,9 +24,8 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l’Oficina de 
 
 
 
-<br/>
 ## Catàleg Tècnic de Dades
-<br/>
+
 
 Posem a disposició de les aplicacions el catàleg tècnic d’entitats de referència organitzades en els dos grups mencionats anteriorment:
 

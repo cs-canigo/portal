@@ -10,20 +10,13 @@ aliases     = ["/cloud/cloud-caas/configuracio-gicar/"]
 
 La configuració de Gicar a les plataformes de contenidors dependrà de la plataforma en concret.
 
-## SwarmMe
-
-La integració amb Gicar no es fa a la plataforma de contenidors, es realitza al Servidor Web on-premise que fa de proxy pass contra SwarmMe.
-
-La integració es fa via agent de Siteminder a l'Apache.
-Al tractar-se d'Apaches departamentals on-premise, CPD per defecte ja els configura amb aquesta integració i no cal fer cap configuració addicional.
-
 ## Kubernetes i Openshift
 
 La integració amb Gicar es realitza a la plataforma de contenidors.
 
 La integració de les aplicacions amb Gicar es realitza amb el protocol SAMLv2 a través de Shibboleth.
 
-Cal utilitzar la imatge docker **gicar-shibboleth-openshift** disponible al [Registre d'imatges](http://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/registre-imatges/) i [Gitlab.](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
+Cal utilitzar la imatge docker **gicar-shibboleth-openshift** disponible al [Registre d'imatges](/plataformes/sic/serveis/sic30-serveis/registre-imatges/) i [Gitlab.](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
 
 
 ### Fitxers de configuració

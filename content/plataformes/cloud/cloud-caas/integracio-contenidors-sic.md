@@ -5,7 +5,7 @@ description = "Informació respecte a la integració d'aplicacions basades en co
 sections    = "Container Cloud"
 weight      = 12
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm","sic"]
-aliases     = ["/cloud/cloud-caas/integracio-contenidors-sic/"]
+aliases     = ["/cloud/cloud-caas/integracio-contenidors-sic/","/cloud-caas/integracio-contenidors-sic/"]
 +++
 
 ## Informació necessària per la integració amb SIC
@@ -19,23 +19,6 @@ aliases     = ["/cloud/cloud-caas/integracio-contenidors-sic/"]
 - Nom del repositori git dels descriptors.
 - Nom del descriptor de desplegament de Kubernetes/Openshift.
 - Llista de correus electrònics en cas de notificacions de Jenkins.
-
-### Swarm
-
-- Nom del repositori git del codi font.
-- En cas de necessitats de compilació, requeriments i instruccions al respecte.
-- Nom de la imatge docker (la versió s'agafa del fitxer sic.yml)
-- Path del fitxer Dockerfile.
-- Llista de correus electrònics en cas de notificacions de Jenkins.
-- Com que swarm no disposa de descriptors, cal proporcionar addicionalment la següent informació:
-  - namespace
-  - xarxa
-  - mida del contenidor
-  - domini
-  - port
-  - rèpliques
-  - paràmetres d'entorn
-  - ...
 
 ## Tasques disponibles al SIC per projectes basats en contenidors
 
@@ -51,18 +34,5 @@ Per plataformes basades en Kubernetes (Kubernetes/Openshift), al SIC estan dispo
 - Desplegament de ConfigMaps
 - Desplegament de Deployment/DeploymentConfig/StatefulSet/CronJob
 - Eliminació de components desplegats
-
-### Swarm
-
-Per plataformes basades en Swarm (SwarmMe), al SIC estan disponibles les següents tasques:
-
-- Desplegament
-
-Està previst en un futur crear les tasques:
-
-- Desplegament de tags
-- Reinici
-- Parada
-- Arrancada
 
 Podeu trobar més informació del SIC a [Servei d'Integració Contínua.](https://canigo.ctti.gencat.cat/sic/)

@@ -4,7 +4,7 @@ title       = "Gestió de configuracions a Contenidors"
 description = "Model de gestió de configuracions en orquestradors basats en Kubernetes: Kubernetes, Openshift i Swarm"
 sections    = "Container Cloud"
 weight      = 10
-categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
+categories  = ["cloud","docker","container","kubernetes","openshift"]
 aliases     = ["/cloud/cloud-caas/configuracio-contenidors/"]
 +++
 
@@ -179,41 +179,3 @@ volumes:
 Podeu trobar més informació dels Secrets a [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 
 
-## Gestió de configuracions a Swarm
-
-Per la gestió de configuració, kubeSwarmrnetes ens ofereix els següents components:
-
-- Variables d'entorn
-- Secret
-- Configs
-
-### Variables d'entorn
-
-Són variables del tipus clau/valor.
-
-Les variables d'entorn es defineixen en el moment de desplegar el contenidor.
-Cal proporcionar-les a l'equip de Suport Cloud a l'hora de configurar el desplegament al SIC.
-
-### Secrets
-
-Els secrets es cofiguren a la consola de SwarmMe i posteriorment es defineixen al contenidor al moment de desplegar. Aquests secrets es creen a la carpeta del contenidor /run/secrets i el nom del fitxer aplica a la clau i el contingut al valor.
-
-L'aplicació s'encarregarà de carregar aquest valor, per al seu ús.
-
-### Configs
-
-Està orientat a configuracions més complexes. Suporta tant variables del tipus clau valor com fitxers de configuració.
-
-La seva configuració es realitza a la consola de SwarmMe i posteriorment s'associa al desplegament, de tal manera que caldrà indicar-se la ruta destí de la configuració.
-
-Un exemple:
-
-```
-# Application properties from config-map
-server.connection-timeout=60000
-server.tomcat.accesslog.enabled=true
-spring.profiles.active=pre
-mongo.host=my-mongo-host:27017
-mongo.databaseName=example
-api.url=http://external-url:8080/api
-```

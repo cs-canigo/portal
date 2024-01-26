@@ -4,7 +4,7 @@ title       = "Consideracions generals en contenidors"
 description = "Consideracions generals a tenir present en els contenidors"
 sections    = "Container Cloud"
 weight      = 8
-categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","openshift"]
 aliases     = ["/cloud/cloud-caas/consideracions-contenidors/"]
 +++
 

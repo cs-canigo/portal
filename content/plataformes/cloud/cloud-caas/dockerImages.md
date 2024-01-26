@@ -17,7 +17,7 @@ L'equip de Suport Cloud del CTTI manté un conjunt d'imatges docker de les tecno
 
 Aquestes imatges docker es poden trobar al **registre docker privat**, al projecte **gencatcloud**.
 
-Podeu trobar més informació respecte al registre privat a [Registre d'imatges](http://canigo.ctti.gencat.cat/plataformes/sic/serveis/sic30-serveis/registre-imatges/).
+Podeu trobar més informació respecte al registre privat a [Registre d'imatges](/plataformes/sic/serveis/sic30-serveis/registre-imatges/).
 
 
 ## Criteris per escollir la imatge base
@@ -95,7 +95,7 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [registre docker privat](https://registreimatges.sic.intranet.gencat.cat) projecte **gencatcloud**. Podeu trobar els Dockerfiles de les imatges a [git imatges docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker/).
 
 Quan trobeu que per una tecnologia existeix la versió normal i la versió amb
-amb sufix **-openshift**, les imatges amb versió normal son compatibles amb docker(local) i Swarme i les imatges amb amb sufix **-openshift** són compatibles amb Kubernetes i Openshift.
+amb sufix **-openshift**, les imatges amb versió normal son compatibles amb docker(local) i les imatges amb amb sufix **-openshift** són compatibles amb Kubernetes i Openshift.
 
 ## Annexos
 _wait-for-it.sh_

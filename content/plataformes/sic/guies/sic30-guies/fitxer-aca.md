@@ -128,14 +128,6 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a WebApp Azure|
 
 </br>
-#### Per al desplegament a SwarmMe:
-
-|Variable|Valor|
-|-------|-------|
-|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a SwarmMe|
-|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
-
-</br>
 #### Per al desplegament d'scripts en BBDD en contenidors:
 
 |Variable|Valor|
@@ -156,14 +148,6 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |Variable|Requerit|Descripció|Valor per defecte|
 |--------|--------|----------|-----------------|
 |APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|
-
-</br>
-#### Per al desplegament al CloudFoundry IBMCloud:
-
-|Variable|Valor|
-|-------|-------|
-|CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
-|CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
 
 </br>
 #### Per al desplegament d'imatges de productes en contenidors en general:
@@ -371,7 +355,7 @@ components:
 
 On:
 
-- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a [plataformes cloud](/cloud/plataformes-cloud/) i 1 hyperthread
+- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a [plataformes cloud](/plataformes/cloud/plataformes-cloud/) i 1 hyperthread
 a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1 CPU. L'expressió 0.1 equival a l'expressió 100m, que es pot llegir com "cent milicpus" o com a “cent milicores”. Es recomana utilitzar la unitat "milicore" tenint en compte que no es permet una precisió major que 1m.
 
 - `memory`: recursos de memòria mesurats en bytes. Podeu expressar la memòria amb un nombre sencer o com un nombre decimal
@@ -588,17 +572,6 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |-------|-------|
 |WEBAPP_NAME|Nom de l'aplicació al WebApp Azure|
 
-###### Per al **desplegament a SwarmMe**:
-
-|Variable|Valor|
-|-------|-------|
-|SWARMME_SERVICE_NAME|Nom del servei al SwarmMe|
-|SWARMME_SERVICE_DOMAIN|Domini del servei al SwarmMe|
-|SWARMME_SERVICE_PATH|Ruta del servei al SwarmMe|
-|SWARMME_SERVICE_PORT|Port del servei al SwarmMe|
-|SWARMME_REPLICAS|Nombre d’instàncies del servei al SwarmMe|
-|EXTRA_PARAMS|Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud|
-
 ###### Per al **desplegament a l’Api Manager (API Connect v.5.2)**:
 
 |Variable|Valor|
@@ -723,8 +696,6 @@ com [**YAML Validator**](http://www.yamllint.com/).
 A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_maven_kubernetes_caas.yml)
-
-- [Construcció aplicació Maven i desplegament al SwarmMe](/related/sic/3.0/aca_const_despl_maven_swarmme.yml)
 
 - [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
 
