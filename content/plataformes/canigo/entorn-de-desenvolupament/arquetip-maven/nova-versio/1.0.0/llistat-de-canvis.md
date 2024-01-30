@@ -21,9 +21,7 @@ weight		= 1
 
   - **appName** :    Nom del projecte.
                      Serveix per a personalitzar la creació de l'arquetip, si no s'informa ,per defecte és el **artifactId**
-  - **dockerName** : Nom del contenidor docker.
-                     Serveix per a personalitzar la creació de l'arquetip en un contenidor, si no s'informa ,per defecte 
-                     és el **artifactId**
+
 - S'ha actualitzat el Swagger a **OpenApi**(Swagger 3), en lloc de Swagger 2.
 - És important saber que actualment l'arquetip és **agnòstic i no dependrà de cap plugin** .
 - Es realitza una configuració per yml més clara per a les diferents bases de dades :
@@ -39,4 +37,4 @@ S'ha de tenir en compte que la configuració per defecte de la base de dades de 
 </div>
 
 - Es pot visualitzar la informació rellevant sobre la creació de l' arquetip en el següent enllaç:
-[README](https://git.intranet.gencat.cat/0187/canigo-archetype-rest/-/blob/master/README.md)
+[README](/content/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.0/documentacio.md)
