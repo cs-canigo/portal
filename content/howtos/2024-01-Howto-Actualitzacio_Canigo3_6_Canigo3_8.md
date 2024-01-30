@@ -58,7 +58,7 @@ Spring Framework 6.1.1
 OpenJDK 17
 ```
    <maven.compiler.source>17</maven.compiler.source>
-	<maven.compiler.target>17</maven.compiler.target>
+   <maven.compiler.target>17</maven.compiler.target>
 ```
 
 
