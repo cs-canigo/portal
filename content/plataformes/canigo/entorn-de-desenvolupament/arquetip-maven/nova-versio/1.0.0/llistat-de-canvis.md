@@ -27,10 +27,10 @@ weight		= 1
 - S'ha actualitzat el Swagger a **OpenApi**(Swagger 3), en lloc de Swagger 2.
 - És important saber que actualment l'arquetip és **agnòstic i no dependrà de cap plugin** .
 - Es realitza una configuració per yml més clara per a les diferents bases de dades :
-  - [Mysql](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL.md)
-  - [MongoDb](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB.md)
-  - [PostgreSql](/content/guies/2023-01-15-Guia-actualitzacio-del-projecte-per-a-implantar-POSTGRESQL.md)
-  - [Oracle](/content/guies/2023-01-15-Guia-Actualitzacio-del-projecte-per-a-implantar-ORACLE.md)
+  - [MySQL](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL.md)
+  - [MongoDB](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB.md)
+  - [PostgreSQL](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-POSTGRESQL.md)
+  - [Oracle](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-ORACLE.md)
 
 <div class="message information">
 IMPORTANT: <br>
