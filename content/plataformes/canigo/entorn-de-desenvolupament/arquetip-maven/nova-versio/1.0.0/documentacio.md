@@ -73,12 +73,12 @@ Per a generar aplicacions Canigó amb l'arquetipus maven utilitzarem el goal *ar
 ```bash
 mvn archetype:generate \
    -DarchetypeGroupId=cat.gencat.ctti \
-   -DarchetypeArtifactId=canigo-archetype-rest-ms \
-   -DarchetypeVersion=1.0.0 \
+   -DarchetypeArtifactId=canigo-archetype-rest \
+   -DarchetypeVersion=0.0.1 \
    -DartifactId=Prova \
    -DgroupId=cat.gencat \
    -Dpackage=cat.gencat \
-   -DdockerName=provaDocker
+   -DappName=prova
    -Dversion=1.0.0
 ```
 Si al posar el comandament anterior ens genera el següent error:
@@ -89,10 +89,14 @@ Si al posar el comandament anterior ens genera el següent error:
 Assegura't de col·locar cometes dobles al principi i al final de cada paràmetre de la següent manera:
 
 ```shell
-mvn archetype:generate / 
-		"-DarchetypeGroupId=cat.gencat.ctti"/ 
+mvn archetype:generate /  
+		"-DarchetypeGroupId=cat.gencat.ctti" 
 		"-DarchetypeArtifactId=canigo-archetype-rest" / 
-		"-DarchetypeVersion=0.0.1" ......
+		"-DarchetypeVersion=0.0.1" "-DartifactId=Prova" / 
+		"-DgroupId=cat.gencat" / 
+		"-Dpackage=cat.gencat" / 
+		"-DappName=prova" / 
+		"-Dversion=1.0.0"
 ```
 
 On:
@@ -115,30 +119,27 @@ On:
 
 - package: Nom del paquet de projecte
 
-- dockerName: Nom de la imatge del docker, informar aquest valor és opcional, si no s'informa per defecte s'assigna el valor del artifactId
-
 Després d'executar el comandament, en finalitzar, veuràs un missatge indicant que tot ha anat correctament i que s'ha generat l'artefacte.
 
 ```shell
 [INFO] ----------------------------------------------------------------------------
 [INFO] Using following parameters for creating project from Archetype: canigo-archetype-rest:0.0.1
 [INFO] ----------------------------------------------------------------------------
-[INFO] Parameter: groupId, Value: cambios
-[INFO] Parameter: artifactId, Value: cambios
+[INFO] Parameter: groupId, Value: cat.gencat
+[INFO] Parameter: artifactId, Value: Prova
 [INFO] Parameter: version, Value: 1.0.0
-[INFO] Parameter: package, Value: cambios
-[INFO] Parameter: packageInPathFormat, Value: cambios
-[INFO] Parameter: package, Value: cambios
-[INFO] Parameter: appName, Value: Cambios
-[INFO] Parameter: groupId, Value: cambios
-[INFO] Parameter: artifactId, Value: cambios
-[INFO] Parameter: dockerName, Value: cambios
+[INFO] Parameter: package, Value: cat.gencat
+[INFO] Parameter: packageInPathFormat, Value: cat/gencat
+[INFO] Parameter: package, Value: cat.gencat
+[INFO] Parameter: appName, Value: prova
+[INFO] Parameter: groupId, Value: cat.gencat
+[INFO] Parameter: artifactId, Value: Prova
 [INFO] Parameter: version, Value: 1.0.0
-[INFO] Project created from Archetype in dir: C:\proyectos\DEMO ALBERT\cambios
+[INFO] Project created from Archetype in dir: C:\proyectos\Prova
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.362 s
-[INFO] Finished at: 2024-01-09T18:20:11+01:00
+[INFO] Total time:  6.052 s
+[INFO] Finished at: 2024-01-30T18:49:43+01:00
 [INFO] ------------------------------------------------------------------------
 ```
