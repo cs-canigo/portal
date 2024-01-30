@@ -21,18 +21,6 @@ aportada per Spring, és la possibilitat de disposar de propietats
 dependents d'entorn sense necessitat de cap configuració extra a nivell
 de beans - propietats.
 
-## Limitacions
-
-Per aplicacions Canigó 3.8 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
-
-* no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
-
-* condicionar la configuració de Spring Boot (Veure secció "Condicionar la configuració de Spring Boot" d'aquesta plana)
-
-<div class="message warning">
-A la propera versió de Canigó, es preveu deprecar aquest mòdul de configuració en favor dels profiles de Spring Boot
-</div>
-
 ## Instal.lació
 
 El mòdul de configuració i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.8.
