@@ -513,24 +513,39 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General del Patrimoni de la Generalitat de Catalunya - Departament d'Economia i Hisenda",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Entitats_sector_public_ATR.docx",
-                "ifitxer_xls": "Entitats_sector_public.xlsx",
+                "ifitxer_xls": "deprecated/Entitats_sector_public_V01.xlsx",
                 "idatacreacio": "25/10/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "31/01/2024",
                 "idatapublicacio": "29/11/2023",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Entitats-sector-public/knbx-8dhe",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General del Patrimoni de la Generalitat de Catalunya - Departament d'Economia i Hisenda",
+                "idescripcio": "Actualització per eliminar 3 registres i modificar els valors d'onze registres.",
+                "ifitxer_doc": "Entitats_sector_public_ATR.docx",
+                "ifitxer_xls": "Entitats_sector_public.xlsx",
+                "idatacreacio": "31/01/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/01/2024",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "ENTITATS_SECTOR_PUBLIC",
         "Classificacio": "Consolidat",
         "Data_publicacio": "29/11/2023",
-        "Data_actualitzacio": "29/11/2023"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq177",
@@ -788,6 +803,21 @@
         "instancies": [
             {
                 "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Consells_Comarcals_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Consells_Comarcals_v01.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "31/01/2024",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+			{
+                "inom": "V02",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General d'Administració Local (DGAL)",
@@ -805,7 +835,7 @@
         "nom_dinsBD": "CONSELLS_COMARCALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "20/04/2020"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq92",
@@ -1906,12 +1936,27 @@
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Es modifica el nom de l'ABS de codi 385: \"BARCELONA 8J\" (nom anterior) per \"BARCELONA 8-J\" (nom actualitzat).",
-                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
-                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "ifitxer_doc": "deprecated/Arees_basiques_salut_V04.docx",
+                "ifitxer_xls": "deprecated/Arees_basiques_salut_V04.xlsx",
                 "idatacreacio": "26/09/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "31/01/2024",
                 "idatapublicacio": "27/09/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "S'afegeix la geometria de cada ABS i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries i els sectors sanitaris.",
+                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                "ifitxer_xls": "Arees_basiques_salut.csv",
+                "idatacreacio": "31/01/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/01/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1919,7 +1964,7 @@
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
         "Classificacio": "Consolidat",
         "Data_publicacio": "27/04/2022",
-        "Data_actualitzacio": "27/09/2023"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq158",
@@ -1964,12 +2009,27 @@
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Actualització per posar els noms de les regions sanitàries en majúscules.",
-                "ifitxer_doc": "Regions_sanitaries_ATR.docx",
-                "ifitxer_xls": "Regions_sanitaries.xlsx",
+                "ifitxer_doc": "deprecated/Regions_sanitaries_ATR_v03.docx",
+                "ifitxer_xls": "deprecated/Regions_sanitaries_v03.xlsx",
                 "idatacreacio": "26/04/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "31/01/2024",
                 "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "S'afegeix la geometria de cada regió sanitària i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries.",
+                "ifitxer_doc": "Regions_sanitaries_ATR.docx",
+                "ifitxer_xls": "Regions_sanitaries.csv",
+                "idatacreacio": "31/01/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/01/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1977,7 +2037,7 @@
         "nom_dinsBD": "REGIONS_SANITARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/12/2021",
-        "Data_actualitzacio": "27/04/2022"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq159",
@@ -1992,12 +2052,27 @@
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
-                "ifitxer_xls": "Sectors_sanitaris.xlsx",
+                "ifitxer_doc": "deprecated/Sectors_sanitaris_ATR_V01.docx",
+                "ifitxer_xls": "deprecated/Sectors_sanitaris_V01.xlsx",
                 "idatacreacio": "24/01/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "31/01/2024",
                 "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "S'afegeix la geometria de cada sector sanitari i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries i els sectors sanitaris.",
+                "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
+                "ifitxer_xls": "Sectors_sanitaris.csv",
+                "idatacreacio": "31/01/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/01/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2005,7 +2080,7 @@
         "nom_dinsBD": "SECTORS_SANITARIS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "27/04/2022",
-        "Data_actualitzacio": "27/04/2022"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq172",
@@ -3181,16 +3256,31 @@
             },
             {
                 "inom": "V17",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi de nom d'un municipi: Codi 170486 Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat).",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_v17.xlsx",
                 "idatacreacio": "29/11/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "31/01/2024",
                 "idatapublicacio": "29/11/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+			{
+                "inom": "V18",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Afegir un nou municipi",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "31/01/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/01/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3198,7 +3288,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "29/11/2023"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq127",
@@ -3241,13 +3331,13 @@
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_doc": "deprecated/Nom_carrers_Catalunya_ATR_v01.docx",
                 "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V01.xlsx",
                 "idatacreacio": "21/04/2021",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "26/05/2021",
                 "idatapublicacio": "21/04/2021",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
@@ -3256,7 +3346,7 @@
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Eliminació de registres duplicats.",
-                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_doc": "deprecated/Nom_carrers_Catalunya_ATR_v01.docx",
                 "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_v02.xlsx",
                 "idatacreacio": "26/05/2021",
                 "itipusvisual": "Ús no restringit",
@@ -3271,7 +3361,7 @@
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
-                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_doc": "deprecated/Nom_carrers_Catalunya_ATR_v01.docx",
                 "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V03.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
@@ -3286,7 +3376,7 @@
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "S'incorpora l'identificador de la unitat poblacional a on pertany el nom de carrer, s'elimina la relació amb el municipi i s'actualitza el conjunt de valors segons la darrera versió facilitada pel promotor.",
-                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_doc": "deprecated/Nom_carrers_Catalunya_ATR_v01.docx",
                 "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V04.xlsx",
                 "idatacreacio": "24/10/2023",
                 "itipusvisual": "Ús no restringit",
@@ -3297,16 +3387,31 @@
             },
             {
                 "inom": "V05",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Actualització per modificar el nom del municipi \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
+                "ifitxer_doc": "deprecated/Nom_carrers_Catalunya_ATR_v051.docx",
+                "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_v05.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "31/01/2024",
+                "idatapublicacio": "29/11/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+			{
+                "inom": "V06",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Canvi en l'estructura de la dada.",
                 "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
                 "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
                 "idatacreacio": "29/11/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "29/11/2023",
+                "idatapublicacio": "31/01/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3314,7 +3419,7 @@
         "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "21/04/2021",
-        "Data_actualitzacio": "29/11/2023"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq125",
@@ -3410,25 +3515,25 @@
         "Descripcio": "Llista de sòls destinats a l'ús industrial que responen a una localització específica de les indústries, assenyalats en el pla urbanístic.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Direcció General d’Administració Digital",
-                "idescripcio": "Versió inicial",
+                "ipromotor": "Departament d'Empresa i Treball - Subdirecció General d’Organització i Administració Digital",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
                 "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
                 "idatacreacio": "10/12/2020",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "25/10/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "31/01/2024",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pol%C3%ADgons-industrials-de-Catalunya/5asc-f6cw",
                 "itipusactualitzacio": "Sota demanda"
             }
-        ],
+		],
         "nom_dinsBD": "POLIGONS_INDUSTRIALS_CATALUNYA",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "25/10/2023",
-        "Data_actualitzacio": "25/10/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "31/01/2024",
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq85",
@@ -3548,7 +3653,7 @@
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "21/04/2021",
                 "idatapublicacio": "23/09/2020",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw",
+                "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             },
             {
@@ -3568,16 +3673,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "S'incorporen nous valors, s'afegeix l’atribut Idioma i la traducció de tots els valors a l'occità – aranès.",
+                "ifitxer_doc": "Tipus_Via_ATR.docx",
+                "ifitxer_xls": "deprecated/Tipus_Via_V03.xlsx",
+                "idatacreacio": "24/10/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "31/01/2024",
+                "idatapublicacio": "25/10/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+			{
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "S'incorporen 4 nous valors.",
                 "ifitxer_doc": "Tipus_Via_ATR.docx",
                 "ifitxer_xls": "Tipus_Via.xlsx",
                 "idatacreacio": "24/10/2023",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "25/10/2023",
+                "idatapublicacio": "31/01/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3585,7 +3705,7 @@
         "nom_dinsBD": "TIPUS_VIA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "23/09/2020",
-        "Data_actualitzacio": "25/10/2023"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq139",
@@ -3909,10 +4029,25 @@
             },
             {
                 "inom": "V16",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització per canvi de nom d'una municipi: Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat). Codi de la unitat poblacional afectada: 17048000000.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_v16.xlsx",
+                "idatacreacio": "29/11/2023",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "31/01/2024",
+                "idatapublicacio": "29/11/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+			{
+                "inom": "V17",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Suprimir 2 valors i afegir un nou municpi)",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
                 "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
                 "idatacreacio": "29/11/2023",
@@ -3926,7 +4061,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "29/11/2023"
+        "Data_actualitzacio": "31/01/2024"
     },
     {
         "Id": "dtarq175",
@@ -4168,5 +4303,33 @@
         "Classificacio": "Pendent",
         "Data_publicacio": "26/01/2022",
         "Data_actualitzacio": "26/01/2022"
+    },
+	{
+        "Id": "dtarq195",
+        "Nom": "Jutjats de pau",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Administració de justícia",
+        "Descripcio": "Els jutjats de pau són òrgans unipersonals amb competències en el terme municipal respectiu que atén qüestions molt concretes dels àmbits civil, penal i del registre civil. Hi ha jutjat de pau a tots els municipis on no hi ha jutjat de primera instància i instrucció.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Justícia, Drets i Memòria - Subdirecció General de Suport Judicial i Coordinació Tècnica",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": Jutjats_Pau_ATR.docx",
+                "ifitxer_xls": "Jutjats_Pau.xlsx",
+                "idatacreacio": "31/01/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/01/2024",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "JUTJATS_DE_PAU",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "31/01/2024",
+        "Data_actualitzacio": "31/01/2024"
     }
 ]}
