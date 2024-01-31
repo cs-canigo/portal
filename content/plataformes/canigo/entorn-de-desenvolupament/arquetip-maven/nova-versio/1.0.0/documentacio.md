@@ -116,11 +116,11 @@ On:
 
 - archetypeVersion: Versió del arquetipus Canigó
 
-- artifactId: Artifact maven de l'aplicació que volem crear
+- artifactId: Artifact maven de l'aplicació que es crear
 
-- groupId: Grup maven de l'aplicació que volem crear
+- groupId: Grup maven de l'aplicació que es crear
 
-- version: Versió de l'aplicació que volem crear
+- version: Versió de l'aplicació que es crear
 
 - appName: Nom descriptiu de l'aplicació o el projecte, el nom que tindrà les classes base
 
