@@ -99,13 +99,8 @@ mvn archetype:generate /
 		"-Dversion=1.0.0"
 ```
 
-_NOTA:S'adverteix que els següents caràcters/noms no són permesos en el camp **artifactId** pel fet que podrien provocar errors durant la seva generació::_
-- final
-- "-"
-- "@"
-- "ñ"
-  
-**Addicionalment, es permet únicament l'ús de caràcters alfanumèrics.**
+
+_NOTA: En el camp **artifactId** es permeten únicament caràcters alfanumèrics, no sent vàlids els caràcters especials (**"-", "@", "ñ", etc**) o les paraules reservades com a **"final"**, **"public"**._
   
 On:
 
