@@ -1,5 +1,6 @@
 +++
 date = "2023-01-15"
+draft = true
 title = "Guia: Actualització del projecte per a implantar MySQL"
 description = "S'explica pas a pas com utilitzar MySQL en un Projecte seguint les millors pràctiques definides pel CS Canigó"
 section = "guies"

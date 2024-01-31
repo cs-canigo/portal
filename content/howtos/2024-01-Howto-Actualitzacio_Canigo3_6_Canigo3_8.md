@@ -1,5 +1,6 @@
 +++
 date = "2024-01-15"
+draft = true
 title = "Actualització Canigó 3.6 a Canigó 3.8"
 description = "Com actualitzar una aplicació Canigó 3.6 a Canigó 3.8"
 section = "guies"
