@@ -156,14 +156,14 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 	private static final Map<Class<?>, String[]> cache = new ConcurrentHashMap<Class<?>, String[]>();
 
 	/**
-	 * Documentaci�.
+	 * Documentació.
 	 *
 	 * @param context
-	 *            Documentaci�
+	 *            Documentació
 	 * @param clazz
-	 *            Documentaci�
+	 *            Documentació
 	 *
-	 * @return Documentaci�
+	 * @return Documentació
 	 */
 	public static Object getBeanOfType(ServletContext context, Class clazz) {
 		WebApplicationContext webAppContext = WebApplicationContextUtils.getWebApplicationContext(context);

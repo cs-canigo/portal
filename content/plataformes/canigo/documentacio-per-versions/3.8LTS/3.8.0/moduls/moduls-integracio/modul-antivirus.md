@@ -1,20 +1,21 @@
 +++
 date        = "2022-05-23"
+draft = true
 title       = "Antivirus"
-description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
-sections    = "Canigó. Documentació Versió 3.8"
+description = "AccÃ©s a l'escaneig d'arxius mitjanÃ§ant el servei d'antivirus Centrals del CTTI."
+sections    = "CanigÃ³. DocumentaciÃ³ VersiÃ³ 3.8"
 weight      = 1
 +++
 
-## Propòsit
+## PropÃ²sit
 
-Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI.
+Aquest mÃ²dul permet l'escaneig d'arxius mitjanÃ§ant el servei d'antivirus Centrals del CTTI.
 
-## Instal.lació i Configuració
+## Instal.laciÃ³ i ConfiguraciÃ³
 
-### Instal.lació
+### Instal.laciÃ³
 
-Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instalÂ·lar el mÃ²dul d'Antivirus es pot incloure automÃ ticament a travÃ©s de l'eina de suport al desenvolupament o bÃ© afegir manualment en el pom.xml de l'aplicaciÃ³ la segÃ¼ent dependÃ¨ncia:
 
 ```
 <dependency>
@@ -24,19 +25,19 @@ Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a travé
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versiÃ³ del mÃ²dul compatible amb la versiÃ³ de CanigÃ³ utilitzada.
 
 <div class="message warning">
 
-L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
+L'Ãºltima versiÃ³ del connector de l'antivirus de CanigÃ³ utilitza l'Ãºltima versiÃ³ del connector de l'antivirus.
 
 <br>
 
-El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
+El servei de l'antivirus nomÃ©s dona suport si s'utilitza l'Ãºltima versiÃ³ del connector de l'antivirus, per tant, assegureu-vos que la versiÃ³ de CanigÃ³ que s'utilitza a l'aplicaciÃ³ sigui compatible amb l'Ãºltima versiÃ³ del connector de l'antivirus de CanigÃ³ i que esteu utilitzant l'Ãºltima versiÃ³ del connector de l'antivirus de CanigÃ³.
 
 <br>
 
-Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
+Podeu consultar quina Ã©s l'Ãºltima versiÃ³ de CanigÃ³ i quina Ã©s l'Ãºltima versiÃ³ del connector de l'antivirus de CanigÃ³ a:
 
 <br>
 
@@ -44,26 +45,26 @@ Podeu consultar quina és l'última versió de Canigó i quina és l'última versió de
 
 </div>
 
-### Configuració
+### ConfiguraciÃ³
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
+La configuraciÃ³ es realitza automÃ ticament a partir de la eina de suport al desenvolupament.
 
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/antivirus.properties
+UbicaciÃ³ proposada: <PROJECT_ROOT>/src/main/resources/config/props/antivirus.properties
 
-Propietat                              | Requerit | Descripció
+Propietat                              | Requerit | DescripciÃ³
 -------------------------------------- | -------- | ----------
-*.antivirus.remote                     | Sí       | Paràmetre que indica si l'escaneig dels arxius es realitza de forma remota o no. Si fos de forma remota l'arxiu a escanejar s'ha de pujar abans al servidor d'antivirus centrals, procés que fa automàticament el mòdul. En cas de remote a fals s'enten que l'arxiu ja es troba pujat al servidor d'antivirus centrals. <br>Valor per defecte: true
-*.antivirus.serverIp                   | Sí       | IP del Host on es troba el Servidor d'antivirus Centrals.<br>  antivirus.intranet.gencat.cat per entorns productius <br> preproduccio.antivirus.intranet.gencat.cat per entorns preproductius i d'altres
-*.antivirus.serverPort                 | Sí       | Port del Host on es troba el Servidor d'antivirus Centrals.<br> Valor per defecte: 1344
-*.antivirus.numDayDBExpirationWarning  | Sí       | Número de dies que han de passar per que una definició de virus de la base de dades d'antivirus centrals es consideri caducada. <br>Valor per defecte: 15
-*.antivirus.failRetryTime              | No       | Mil·lisegons d'espera màxima per obrir la connexió al servidor d'antivirus. <br>Valor per defecte: 30000
-*.antivirus.readWriteTime              | No       | Mil·lisegons d'espera màxima per obtenir resposta d'una consulta al servidor d'antivirus. <br>Valor per defecte: 3600000
+*.antivirus.remote                     | SÃ­       | ParÃ metre que indica si l'escaneig dels arxius es realitza de forma remota o no. Si fos de forma remota l'arxiu a escanejar s'ha de pujar abans al servidor d'antivirus centrals, procÃ©s que fa automÃ ticament el mÃ²dul. En cas de remote a fals s'enten que l'arxiu ja es troba pujat al servidor d'antivirus centrals. <br>Valor per defecte: true
+*.antivirus.serverIp                   | SÃ­       | IP del Host on es troba el Servidor d'antivirus Centrals.<br>  antivirus.intranet.gencat.cat per entorns productius <br> preproduccio.antivirus.intranet.gencat.cat per entorns preproductius i d'altres
+*.antivirus.serverPort                 | SÃ­       | Port del Host on es troba el Servidor d'antivirus Centrals.<br> Valor per defecte: 1344
+*.antivirus.numDayDBExpirationWarning  | SÃ­       | NÃºmero de dies que han de passar per que una definiciÃ³ de virus de la base de dades d'antivirus centrals es consideri caducada. <br>Valor per defecte: 15
+*.antivirus.failRetryTime              | No       | MilÂ·lisegons d'espera mÃ xima per obrir la connexiÃ³ al servidor d'antivirus. <br>Valor per defecte: 30000
+*.antivirus.readWriteTime              | No       | MilÂ·lisegons d'espera mÃ xima per obtenir resposta d'una consulta al servidor d'antivirus. <br>Valor per defecte: 3600000
 
-## Utilització del Mòdul
+## UtilitzaciÃ³ del MÃ²dul
 
-Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat> al no estar disponible a cap repositori públic Maven:
+Per a utilizar aquest mÃ²dul s'ha de demanar la segÃ¼ent llibreria enviant un correu a la bÃºstia canigÃ³ <oficina-tecnica.canigo.ctti@gencat.cat> al no estar disponible a cap repositori pÃºblic Maven:
 
-* Versió mòdul antivirus < 1.3.2: llibreria "sym-7.5.jar" configurant el pom.xml amb:
+* VersiÃ³ mÃ²dul antivirus < 1.3.2: llibreria "sym-7.5.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>sym</groupId>
@@ -72,7 +73,7 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un corr
 </dependency>
 ```
 
-* Versió mòdul antivirus >= 1.3.2 i < 2.2.0: llibreria "scanengine-api-7.0.0.8.jar" configurant el pom.xml amb:
+* VersiÃ³ mÃ²dul antivirus >= 1.3.2 i < 2.2.0: llibreria "scanengine-api-7.0.0.8.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>com.symantec.scanengine.api</groupId>
@@ -80,7 +81,7 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un corr
 	<version>7.0.0.8</version>
 </dependency>
 ```
-* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-8.2.0.jar" configurant el pom.xml amb:
+* VersiÃ³ mÃ²dul antivirus >= 2.2.0: llibreria "scanengine-api-8.2.0.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>com.symantec.scanengine.api</groupId>
@@ -89,13 +90,13 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un corr
 </dependency>
 ```
 
-Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions
+Aquestes llibreries ja estan incorporades internament al SIC (Servei dâ€™IntegraciÃ³ ContÃ­nua) per a compilacions de releases dâ€™aplicacions
 
-### Exemple d'ús
+### Exemple d'Ãºs
 
 **AntivirusServiceController.java**
 
-Endpoint de l'aplicació que publica el servei de l'antivirus
+Endpoint de l'aplicaciÃ³ que publica el servei de l'antivirus
 
 ```java
 	import java.io.InputStream;
@@ -130,7 +131,7 @@ Endpoint de l'aplicació que publica el servei de l'antivirus
 
 **AntivirusService.java**
 
-Classe java on es realitza la lògica de la operació i es crida al mòdul de l'antivirus
+Classe java on es realitza la lÃ²gica de la operaciÃ³ i es crida al mÃ²dul de l'antivirus
 
 ```java
 	import java.io.ByteArrayOutputStream;
@@ -198,7 +199,7 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'ant
 							resultat = res.getMissatge();
 							break;
 						default:
-							log.info("AntivirusAction [scan] - Error en el procés d'escaneig");
+							log.info("AntivirusAction [scan] - Error en el procÃ©s d'escaneig");
 							resultat = "S'ha produit un error";
 						}
 					}
@@ -222,9 +223,9 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'ant
 ```
 ## Respostes servei antivirus
 
-L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` és l'encarregat d'interpretar la informació de la resposta del servei de l'antivirus. Aquest objecte conté els mètodes:
+L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` Ã©s l'encarregat d'interpretar la informaciÃ³ de la resposta del servei de l'antivirus. Aquest objecte contÃ© els mÃ¨todes:
 
-- `int getEstat()`: Número enter que representa l’estat de finalització del procés d’escaneig.
+- `int getEstat()`: NÃºmero enter que representa lâ€™estat de finalitzaciÃ³ del procÃ©s dâ€™escaneig.
  
 	o STATUS_OK = 0
 	
@@ -232,9 +233,9 @@ L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` é
 	
 	o STATUS_WARN = 1
 
-- `String getMissatge()`: String que emmagatzemarà la informació de les amenaces trobades en el procés d’escaneig. Si no hi hagués cap el seu valor serà null
+- `String getMissatge()`: String que emmagatzemarÃ  la informaciÃ³ de les amenaces trobades en el procÃ©s dâ€™escaneig. Si no hi haguÃ©s cap el seu valor serÃ  null
 
-- `List<InfectionInfo> getArrayVirus()`: Llistat d’objectes InfectionInfo. Aquests objectes representen cada amenaça detectada en l’escaneig. Cada objecte InfectionInfo disposa dels següents camps:
+- `List<InfectionInfo> getArrayVirus()`: Llistat dâ€™objectes InfectionInfo. Aquests objectes representen cada amenaÃ§a detectada en lâ€™escaneig. Cada objecte InfectionInfo disposa dels segÃ¼ents camps:
 
 	o String violationId
 	
@@ -246,13 +247,13 @@ L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` é
 	
 	o String disposition
 
-El conjunt de dades que retornarà es pot resumir amb el següent quadre:
+El conjunt de dades que retornarÃ  es pot resumir amb el segÃ¼ent quadre:
 
 Cas | Estat | Missatge | ArrayVirus
 --- | ----- | -------- | ----------
-KO | -1 | [string amb la informació del virus] | [LLista d’objetes de tipus InfectionInfo amb informació de les amenaces detectades]
+KO | -1 | [string amb la informaciÃ³ del virus] | [LLista dâ€™objetes de tipus InfectionInfo amb informaciÃ³ de les amenaces detectades]
 OK | 0 | null | null
-WARN (No s’ha pogut accedir al fitxer) | 1 | FILE_ACCESS_FAILED | null
+WARN (No sâ€™ha pogut accedir al fitxer) | 1 | FILE_ACCESS_FAILED | null
 WARN(Error intern al servidor) | 1 | INTERNAL_SERVER_ERROR | null
-WARN(no hi ha llicència disponible) | 1 | NO_AV_LICENSE | null
-WARN(base de dades antivirus caducada) | 1 | Base de dades de la definició de l'antivirus caducada | null
+WARN(no hi ha llicÃ¨ncia disponible) | 1 | NO_AV_LICENSE | null
+WARN(base de dades antivirus caducada) | 1 | Base de dades de la definiciÃ³ de l'antivirus caducada | null

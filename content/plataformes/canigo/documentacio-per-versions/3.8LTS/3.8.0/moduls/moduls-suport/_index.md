@@ -1,7 +1,7 @@
 +++
 date        = "2024-01-15"
 draft        = true
-title       = "Mòduls suport"
-description = "Mòduls suport Canigó 3.8.0"
+title       = "MÃ²duls suport"
+description = "MÃ²duls suport CanigÃ³ 3.8.0"
 sections    = "canigo-fwk-docs"
 +++
