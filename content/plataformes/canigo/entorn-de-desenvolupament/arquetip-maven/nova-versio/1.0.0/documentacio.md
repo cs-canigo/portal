@@ -99,13 +99,14 @@ mvn archetype:generate /
 		"-Dversion=1.0.0"
 ```
 
-_NOTA: No és possible incloure els següents caràcters/noms en el **artifactId**, ja que causarien un error en generar-lo:_
-
+_NOTA:S'adverteix que els següents caràcters/noms no són permesos en el camp **artifactId** pel fet que podrien provocar errors durant la seva generació::_
 - final
 - "-"
 - "@"
 - "ñ"
-   
+  
+**Addicionalment, es permet únicament l'ús de caràcters alfanumèrics.**
+  
 On:
 
 - archetype:generate: Goal de maven per generar el projecte amb l'arquetipus Canigó
