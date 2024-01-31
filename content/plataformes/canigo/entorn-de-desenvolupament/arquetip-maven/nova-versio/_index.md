@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft       = true
+draft       = true 
 title       = "Nova versió"
 description = "Nova versió"
 sections    = "canigo-fwk-docs"
