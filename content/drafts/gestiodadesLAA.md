@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-04"
-title       = "Gestió Tècnica de Dades LAA"
+title       = "Gestió Tècnica de Dades LAA 2"
 description = "Gestió Tècnica de Dades"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
