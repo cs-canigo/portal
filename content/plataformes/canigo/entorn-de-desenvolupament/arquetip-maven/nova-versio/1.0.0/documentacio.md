@@ -77,7 +77,6 @@ mvn archetype:generate \
    -DarchetypeVersion=0.0.1 \
    -DartifactId=Prova \
    -DgroupId=cat.gencat \
-   -Dpackage=cat.gencat \
    -DappName=prova
    -Dversion=1.0.0
 ```
@@ -94,7 +93,6 @@ mvn archetype:generate /
 		"-DarchetypeArtifactId=canigo-archetype-rest" / 
 		"-DarchetypeVersion=0.0.1" "-DartifactId=Prova" / 
 		"-DgroupId=cat.gencat" / 
-		"-Dpackage=cat.gencat" / 
 		"-DappName=prova" / 
 		"-Dversion=1.0.0"
 ```
@@ -120,7 +118,6 @@ On:
 
 - appName: Nom descriptiu de l'aplicació o el projecte, el nom que tindrà les classes base
 
-- package: Nom del paquet de projecte
 
 Després d'executar el comandament, en finalitzar, veuràs un missatge indicant que tot ha anat correctament i que s'ha generat l'artefacte.
 
@@ -133,7 +130,6 @@ Després d'executar el comandament, en finalitzar, veuràs un missatge indicant 
 [INFO] Parameter: version, Value: 1.0.0
 [INFO] Parameter: package, Value: cat.gencat
 [INFO] Parameter: packageInPathFormat, Value: cat/gencat
-[INFO] Parameter: package, Value: cat.gencat
 [INFO] Parameter: appName, Value: prova
 [INFO] Parameter: groupId, Value: cat.gencat
 [INFO] Parameter: artifactId, Value: Prova
