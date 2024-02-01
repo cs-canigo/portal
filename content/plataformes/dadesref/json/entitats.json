@@ -1932,7 +1932,7 @@
             },
             {
                 "inom": "V04",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Es modifica el nom de l'ABS de codi 385: \"BARCELONA 8J\" (nom anterior) per \"BARCELONA 8-J\" (nom actualitzat).",
@@ -2005,7 +2005,7 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Actualització per posar els noms de les regions sanitàries en majúscules.",
@@ -2048,7 +2048,7 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Versió inicial.",
