@@ -6,7 +6,7 @@ sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 1
 +++
-
+  
 ### Gestió Tècnica de Dades
 
 En els darrers anys la tendència empresarial, ja sigui en l’àmbit públic o privat, s’està orientant cap a satisfer la necessitat d’una correcta gestió de les dades. Aquest fet inclou millorar la qualitat i la seguretat de les mateixes, entendre el seu significat i emprar-les com un actiu clau que permeti generar avantatges competitius en l’àmbit empresarial. Les organitzacions, doncs, depenem cada cop més de les dades per prendre decisions més efectives. 
