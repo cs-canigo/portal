@@ -4313,7 +4313,7 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Justícia, Drets i Memòria - Subdirecció General de Suport Judicial i Coordinació Tècnica",
                 "idescripcio": "Versió inicial.",
@@ -4328,7 +4328,7 @@
             }
         ],
         "nom_dinsBD": "JUTJATS_DE_PAU",
-        "Classificacio": "Consolidat",
+        "Classificacio": "Pendent",
         "Data_publicacio": "31/01/2024",
         "Data_actualitzacio": "31/01/2024"
     }
