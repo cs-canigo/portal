@@ -1,7 +1,7 @@
 +++
 date        = "2024-01-15"
 title       = "Documentació"
-description = "Documentació arquetip maven nou- 1.0.0"
+description = "Documentació arquetip maven nou- 0.0.1"
 sections    = "canigo-fwk-docs"
 weight		= 2
 +++

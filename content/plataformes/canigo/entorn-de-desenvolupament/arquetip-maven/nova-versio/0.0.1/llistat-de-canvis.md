@@ -2,12 +2,12 @@
 date        = "2024-01-15"
 
 title       = "Llistat de canvis"
-description = "Llistat de canvis arquetip maven - 1.0.0"
+description = "Llistat de canvis arquetip maven - 0.0.1"
 sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Arquetip Maven - 1.0.0
+## Arquetip Maven - 0.0.1
 
 **15/01/2024**:
 - S'ha concebut un nou arquetip amb el propòsit de ser **agnòstic perquè no depengui  de cap plugin** .
@@ -33,8 +33,8 @@ weight		= 1
 <div class="message information">
 IMPORTANT: <br>
 S'ha de tenir en compte que la configuració per defecte de la base de dades de l'arquetip maven
-"nova versió 1.0.0" està creada en <b>H2 </b>
+"nova versió 0.0.1" està creada en <b>H2 </b>
 </div>
 
 - Es pot visualitzar la informació rellevant sobre la creació de l' arquetip en el següent enllaç:
-[README](/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.0/documentacio)
+[README](/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/0.0.1/documentacio)
