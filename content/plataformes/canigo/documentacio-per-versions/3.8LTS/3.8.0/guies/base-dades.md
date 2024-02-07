@@ -1,7 +1,7 @@
 +++
 date        = "2024-01-15"
 
-title       = "Guies d'ús per a actualització dels projectes per a implementar-los en les diferents bases de dades "
+title       = "Guies d'ús per a la implantació de les diferents bases de dades."
 description = "Guies d'ús (Guies) "
 sections    = "canigo-fwk-docs"
 weight        = 1
