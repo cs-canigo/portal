@@ -16,7 +16,7 @@ weight		= 2
          Per tant, haurem d'afegir la dependència `jakarta.annotation-api` versió **1.3.5** que substitueix la dependència de
          `javax.annotation-api` versió **1.3.2**. També s'ha de canviar la dependència `javax.annotation-api` versió
          **1.3.2** per la dependència `jakarta.annotation-api`versiò **1.3.5**.
-      -  Es manté la versió de les següents dependències: `spring.data.mongodb` versió **3.3.4**,
+      -  Es manté la versió de les següents dependències: `spring.data.mongodb` versió **4.2.2**,
          `commons.dbcp`de la versió  **2.9.0**,`h2`versió **2.1.210**,`mongodb.driver`versió **4.6.0**,
          `mongodb-driver-reactivestreams` versió **4.6.0**,`querydsl` versió **5.0.0**,`validation-api` versió **2.0.1**,
          `commons-lang3` versió **3.12.0**, `reactor-core` versió **3.4.17**, `de.flapdoodle.embed.mongo` versió **3.4.5**,
