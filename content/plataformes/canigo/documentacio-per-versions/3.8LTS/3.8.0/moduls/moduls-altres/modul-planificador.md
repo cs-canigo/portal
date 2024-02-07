@@ -1,53 +1,53 @@
 +++
-date = "2023-01-15"
+date = "2024-01-15"
 title       = "Planificador de tasques"
 description = "Planificador de tasques"
-sections    = "CanigÛ. DocumentaciÛ VersiÛ 3.8"
+sections    = "Canig√≥. Documentaci√≥ Versi√≥ 3.8"
 weight      = 1
 +++
 
-## PropÚsit
+## Prop√≤sit
 
-El propÚsit d'aquest apartat es introduir al desenvolupador a la planificaciÛ de tasques mitjanÁant Quartz.
+El prop√≤sit d'aquest apartat es introduir al desenvolupador a la planificaci√≥ de tasques mitjan√ßant Quartz.
 
-Quartz permet l'execuciÛ de tasques de forma diferida:
+Quartz permet l'execuci√≥ de tasques de forma diferida:
 
-* en qualsevol moment del dia (precisiÛ de milisegons)
+* en qualsevol moment del dia (precisi√≥ de milisegons)
 * en alguns dies de la setmana
 * en alguns dies del mes
 * en alguns dies de l'any
-* un n˙mero especÌfic de repeticions
+* un n√∫mero espec√≠fic de repeticions
 * repetidament fins a una data/instant determinat
 * repetida e indefinidament
 * repetidament en un determinat interval de temps
 
-Documents i Fonts de ReferËncia
+Documents i Fonts de Refer√®ncia
 
-ReferËncia                       | URL
+Refer√®ncia                       | URL
 -------------------------------- | ----
 Quartz                           | http://www.quartz-scheduler.org/
 Spring 5 + Quartz                | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#scheduling
-Guia migraciÛ Quartz 1.8.x a 2.0 | http://www.quartz-scheduler.org/documentation/quartz-2.x/migration-guide
+Guia migraci√≥ Quartz 1.8.x a 2.0 | http://www.quartz-scheduler.org/documentation/quartz-2.x/migration-guide
 
 ## Glossari
 
 **Job**
 
-Un Job o tasca Ès simplement la referËncia a la classe que contÈ el mËtode que volem executar de forma diferida.
+Un Job o tasca √©s simplement la refer√®ncia a la classe que cont√© el m√®tode que volem executar de forma diferida.
 
 **Trigger**
 
-Un objecte de tipus Trigger s'utilitza per llenÁar l'execuciÛ dels Jobs o tasques. Quan es vol programar una tasca, s'intancia un Trigger i configures les seves propietats per tal de proporcionar la programaciÛ d'execuciÛ (interval d'execuciÛ, n˙mero de repeticions, timeout, etc..).
+Un objecte de tipus Trigger s'utilitza per llen√ßar l'execuci√≥ dels Jobs o tasques. Quan es vol programar una tasca, s'intancia un Trigger i configures les seves propietats per tal de proporcionar la programaci√≥ d'execuci√≥ (interval d'execuci√≥, n√∫mero de repeticions, timeout, etc..).
 
 **SchedulerFactory**
 
-Objecte que s'encarrega d'instanciar el programador o scheduler que s'encarregar‡ de gestionar l'execuciÛ de les tasques.
+Objecte que s'encarrega d'instanciar el programador o scheduler que s'encarregar√† de gestionar l'execuci√≥ de les tasques.
 
-## Instal.laciÛ i ConfiguraciÛ
+## Instal.laci√≥ i Configuraci√≥
 
-### Instal.laciÛ
+### Instal.laci√≥
 
-Per tal d'instal-lar Quartz es necessari afegir manualment en el pom.xml de l'aplicaciÛ la seg¸ent dependËncia:
+Per tal d'instal-lar Quartz es necessari afegir manualment en el pom.xml de l'aplicaci√≥ la seg√ºent depend√®ncia:
 
 ```
 <org.opensymphony.quartz.version>2.2.1</org.opensymphony.quartz.version>
@@ -63,13 +63,13 @@ Per tal d'instal-lar Quartz es necessari afegir manualment en el pom.xml de l'ap
     <groupId>org.springframework</groupId>
     <artifactId>spring-context-support</artifactId>
     <version>${org.springframework.version}</version>
-</dependency><!-- NomÈs per clustering Oracle -->
+</dependency><!-- Nom√©s per clustering Oracle -->
 <dependency>
     <groupId>org.quartz-scheduler</groupId>
     <artifactId>quartz-oracle</artifactId>
     <version>${org.opensymphony.quartz.version}</version>
 </dependency>
-<!-- NomÈs per a Weblogic -->
+<!-- Nom√©s per a Weblogic -->
 <dependency>
     <groupId>org.quartz-scheduler</groupId>
     <artifactId>quartz-weblogic</artifactId>
@@ -87,31 +87,31 @@ Per tal d'instal-lar Quartz es necessari afegir manualment en el pom.xml de l'ap
 </dependency>
 ```
 
-### ConfiguraciÛ
+### Configuraci√≥
 
-La configuraciÛ del servei de planificaciÛ de tasques es pot dividir en dos punts:
+La configuraci√≥ del servei de planificaci√≥ de tasques es pot dividir en dos punts:
 
-* DefiniciÛ dels xmls (o anotacions) de Spring que s'encarregen de la inicialitzaciÛ dels beans de Quartz.
-* ExternalitzaciÛ de les propietats d'aquest beans.
+* Definici√≥ dels xmls (o anotacions) de Spring que s'encarregen de la inicialitzaci√≥ dels beans de Quartz.
+* Externalitzaci√≥ de les propietats d'aquest beans.
     	
 <div class="message information">
 IMPORTANT: <br>
-Per a entorns clusteritzats revisar l'apartat de Preguntes freq¸ents.
+Per a entorns clusteritzats revisar l'apartat de Preguntes freq√ºents.
 </div>
 
-#### DefiniciÛ dels xmls de Spring
+#### Definici√≥ dels xmls de Spring
 
-UbicaciÛ: <PROJECT_ROOT>/src/main/resources/spring/quartz-config.xml
+Ubicaci√≥: <PROJECT_ROOT>/src/main/resources/spring/quartz-config.xml
 
-La configuraciÛ del planificador de tasques Quartz implica 3 pasos:
+La configuraci√≥ del planificador de tasques Quartz implica 3 pasos:
 
 * Definir les tasques que volem executar de forma diferida
 * Definir els triggers que defineixen en quin moment s'executaran les tasques
 * Definir la factoria per executar les tasques amb els triggers
 
-#### ConfiguraciÛ dels arxius de propietats
+#### Configuraci√≥ dels arxius de propietats
 
-UbicaciÛ: <PROJECT_ROOT>/src/main/resources/config/props/planificador.properties
+Ubicaci√≥: <PROJECT_ROOT>/src/main/resources/config/props/planificador.properties
 
 Dins d'aquest arxiu romandrien les propietats dels Jobs, Triggers, Scheduler, etc.
 
@@ -123,7 +123,7 @@ Exemple d'arxiu de propietats:
 *.quartz.concurrent=true
 ```
 
-## UtilitzaciÛ del MÚdul
+## Utilitzaci√≥ del M√≤dul
 
 
 En aquest exemple es configura una tasca que es repeteix cada dos segons amb el work manager per defecte de Quartz.
@@ -166,27 +166,27 @@ En aquest exemple es configura una tasca que es repeteix cada dos segons amb el 
 <div class="message warning">
 Workmanager per defecte
 
-Per defecte de Quartz gestiona l'execuciÛ de les tasques amb el seu prÚpi workmanager. Aquest motor per defecte s'encarrega de gestionar els diferents "threads" o fils d'execuciÛ de les tasques planificades de manera autÚnoma sense que el servidor d'aplicacions tingui const‡ncia d'aquests "threads" oberts.
-En entorns productius s'ha pogut observar com en algunes situacions el motor no allibera correctament aquests "threads" de la VM, lo que pot provocar la degradaciÛ del sistema o en el pitjor dels casos, la seva indisponibilitat.
+Per defecte de Quartz gestiona l'execuci√≥ de les tasques amb el seu pr√≤pi workmanager. Aquest motor per defecte s'encarrega de gestionar els diferents "threads" o fils d'execuci√≥ de les tasques planificades de manera aut√≤noma sense que el servidor d'aplicacions tingui const√†ncia d'aquests "threads" oberts.
+En entorns productius s'ha pogut observar com en algunes situacions el motor no allibera correctament aquests "threads" de la VM, lo que pot provocar la degradaci√≥ del sistema o en el pitjor dels casos, la seva indisponibilitat.
 
 Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Recomanacions.
 </div>
 
 ## Recomanacions
 
-Com a alternativa al workmanager per defecte de "Quartz", i amb la idea de que sigui el servidor d'aplicacions qui gestioni els threads de Quartz, a continuaciÛ es descriu un exemple de configuraciÛ per a utilitzar la implementaciÛ de "Commonj".
+Com a alternativa al workmanager per defecte de "Quartz", i amb la idea de que sigui el servidor d'aplicacions qui gestioni els threads de Quartz, a continuaci√≥ es descriu un exemple de configuraci√≥ per a utilitzar la implementaci√≥ de "Commonj".
 
-### ConfiguraciÛ per a servidors d'aplicacions Weblogic
+### Configuraci√≥ per a servidors d'aplicacions Weblogic
 
-Per canviar el WorkManager per defecte per el de "Commonj" a servidors d'aplicacions Weblogic, es necessari realitzar les seg¸ents accions:
+Per canviar el WorkManager per defecte per el de "Commonj" a servidors d'aplicacions Weblogic, es necessari realitzar les seg√ºents accions:
 
 * Modificar el taskexecutor del SchedulerFactoryBean.
-* Modificar web.xml per afegir una referËncia local al "WorkManager".
+* Modificar web.xml per afegir una refer√®ncia local al "WorkManager".
 * Modificar weblogic.xml per crear un "WorkManager".
 
 ### Modificar el taskexecutor del SchedulerFactoryBean
 
-Per sobrescriure el "taskexecutor" per defecte de "Quartz", s'ha de modificar el SchedulerFactoryBean per instanciar el nou "TaskExecutor", aquest informar‡ les seg¸ents propietats:
+Per sobrescriure el "taskexecutor" per defecte de "Quartz", s'ha de modificar el SchedulerFactoryBean per instanciar el nou "TaskExecutor", aquest informar√† les seg√ºents propietats:
 
 * workManagerName: Nom JNDI del WorkManager JCA.
 * resourceRef: Indica si la cerca del nom JNDI es realitza en un contenidor J2EE.
@@ -210,9 +210,9 @@ Per sobrescriure el "taskexecutor" per defecte de "Quartz", s'ha de modificar el
 </bean>
 ```
 
-### Modificar web.xml per afegir una referËncia local al "WorkManager"
+### Modificar web.xml per afegir una refer√®ncia local al "WorkManager"
 
-Modificar l'arxiu "web.xml" per afegir una referËncia local al "WorkManager" que posteriorment es definir‡ al "weblogic.xml":
+Modificar l'arxiu "web.xml" per afegir una refer√®ncia local al "WorkManager" que posteriorment es definir√† al "weblogic.xml":
 
 ```
 ...
@@ -227,7 +227,7 @@ Modificar l'arxiu "web.xml" per afegir una referËncia local al "WorkManager" que
 
 ### Modificar weblogic.xml per crear un "WorkManager"
 
-Finalment cal registrar un "WorkManager" aplicatiu al servidor d'aplicacions mitjanÁant l'arxiu "weblogic.xml". En l'exemple es registra un "WorkManager" que com a m‡xim pot executar 3 "threads" concurrents.
+Finalment cal registrar un "WorkManager" aplicatiu al servidor d'aplicacions mitjan√ßant l'arxiu "weblogic.xml". En l'exemple es registra un "WorkManager" que com a m√†xim pot executar 3 "threads" concurrents.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -247,21 +247,21 @@ Finalment cal registrar un "WorkManager" aplicatiu al servidor d'aplicacions mit
 </weblogic-web-app>
 ```
 
-### ConfiguraciÛ per a servidors d'aplicacions Tomcat
+### Configuraci√≥ per a servidors d'aplicacions Tomcat
 
-Per canviar el WorkManager per defecte per el de "Commonj" per a servidors d'aplicacions Tomcat es necessari realitzar les seg¸ents accions:
+Per canviar el WorkManager per defecte per el de "Commonj" per a servidors d'aplicacions Tomcat es necessari realitzar les seg√ºents accions:
 
 * Afegir les llibreries de Commonj.
 * Modificar el taskexecutor del SchedulerFactoryBean.
-* Modificar web.xml per afegir una referËncia local al "WorkManager".
+* Modificar web.xml per afegir una refer√®ncia local al "WorkManager".
 * Crear el "WorkManager" al context.xml de Tomcat.
 
 ### Afegir les llibreries de Commonj
 
-Cal verificar que les llibreries de Commonj estiguin incloses dins la carpeta de llibreries compartides de Tomcat o bÈ dins l'aplicaciÛ que les far‡ servir:
+Cal verificar que les llibreries de Commonj estiguin incloses dins la carpeta de llibreries compartides de Tomcat o b√© dins l'aplicaci√≥ que les far√† servir:
 
 * Si es volen afegir directament com a llibreries compartides de Tomcat, cal afegir a $TOMCAT_HOME/lib les llibreries commonj-twm.jar i foo-commonj-1.1.0.jar . Aquestes es poden trobar dins la carpeta \foo-commonj-1.1.0\lib del zip que es pot descarregar de la web oficial
-* Si es volen afegir al projecte CanigÛ3, cal afegir les seg¸ents dependËncies Maven al pom.xml:
+* Si es volen afegir al projecte Canig√≥3, cal afegir les seg√ºents depend√®ncies Maven al pom.xml:
 
 ```
 <dependency>
@@ -278,7 +278,7 @@ Cal verificar que les llibreries de Commonj estiguin incloses dins la carpeta de
 
 ### Modificar el taskexecutor del SchedulerFactoryBean
 
-Per sobrescriure el "taskexecutor" per defecte de "Quartz", s'ha de modificar el SchedulerFactoryBean per instanciar el nou "TaskExecutor", aquest informar‡ les seg¸ents propietats:
+Per sobrescriure el "taskexecutor" per defecte de "Quartz", s'ha de modificar el SchedulerFactoryBean per instanciar el nou "TaskExecutor", aquest informar√† les seg√ºents propietats:
 
 * workManagerName: Nom JNDI del WorkManager JCA.
 * resourceRef: Indica si la cerca del nom JNDI es realitza en un contenidor J2EE.
@@ -302,9 +302,9 @@ Per sobrescriure el "taskexecutor" per defecte de "Quartz", s'ha de modificar el
 </bean>
 ```
 
-### Modificar web.xml per afegir una referËncia local al "WorkManager"
+### Modificar web.xml per afegir una refer√®ncia local al "WorkManager"
 
-Modificar l'arxiu "web.xml" per afegir una referËncia local al "WorkManager" que posteriorment es definir‡ al "weblogic.xml":
+Modificar l'arxiu "web.xml" per afegir una refer√®ncia local al "WorkManager" que posteriorment es definir√† al "weblogic.xml":
 
 ```
 ...
@@ -319,7 +319,7 @@ Modificar l'arxiu "web.xml" per afegir una referËncia local al "WorkManager" que
 
 ### Crear el "WorkManager" al context.xml de Tomcat
 
-Finalment cal registrar un "WorkManager" aplicatiu al servidor d'aplicacions. En aquest cas caldrÌa afegir-ho al fitxer $TOMCAT_HOME/conf/context.xml. En l'exemple es registra un "WorkManager" que com a m‡xim pot executar 3 "threads" concurrents.
+Finalment cal registrar un "WorkManager" aplicatiu al servidor d'aplicacions. En aquest cas caldr√≠a afegir-ho al fitxer $TOMCAT_HOME/conf/context.xml. En l'exemple es registra un "WorkManager" que com a m√†xim pot executar 3 "threads" concurrents.
 
 ```
 ...
@@ -331,23 +331,23 @@ Finalment cal registrar un "WorkManager" aplicatiu al servidor d'aplicacions. En
 ...
 ```
 
-Alguns dels par‡metres de configuraciÛ i tunning del "WorkManager" es poden trobar a la seg¸ent adreÁa:
+Alguns dels par√†metres de configuraci√≥ i tunning del "WorkManager" es poden trobar a la seg√ºent adre√ßa:
 http://download.oracle.com/docs/cd/E11035_01/wls100/config_wls/self_tuned.html
 
-## Preguntes freq¸ents
+## Preguntes freq√ºents
 
-### UtilitzaciÛ de Quartz en un cluster
+### Utilitzaci√≥ de Quartz en un cluster
 
-La principal problem‡tica del planificador de tasques en un cluster Ès l'execuciÛ del planificador en cadascuna de les m‡quines de forma independent. Si l'aplicaciÛ es troba en un cluster i no es gestiona aquesta problem‡tica, la tasca s'executar‡ tants cops com nodes al cluster tinguessim.
+La principal problem√†tica del planificador de tasques en un cluster √©s l'execuci√≥ del planificador en cadascuna de les m√†quines de forma independent. Si l'aplicaci√≥ es troba en un cluster i no es gestiona aquesta problem√†tica, la tasca s'executar√† tants cops com nodes al cluster tinguessim.
 
-Per solventar aquest problema, Quartz proporciona una soluciÛ basada en una base de dades centralitzada que funciona com a sem‡for d'execuciÛ dels diferents Jobs.
+Per solventar aquest problema, Quartz proporciona una soluci√≥ basada en una base de dades centralitzada que funciona com a sem√†for d'execuci√≥ dels diferents Jobs.
 
-### ConfiguraciÛ
+### Configuraci√≥
 
-La configuraciÛ consta de dos passos:
+La configuraci√≥ consta de dos passos:
 
 1. Crear les taules a partir dels scripts proporcionats per Quartz. Els pots trobar al directori: quartz\docs\dbTables directory.
-2. Crear el arxiu de propietats quartz.properties a l'arrel de l'aplicaciÛ. src/main/resources/quartz.properties
+2. Crear el arxiu de propietats quartz.properties a l'arrel de l'aplicaci√≥. src/main/resources/quartz.properties
 
 ```
 #============================================================================
@@ -392,6 +392,6 @@ org.quartz.dataSource.myDS.java.naming.security.principal=admin
 org.quartz.dataSource.myDS.java.naming.security.credentials=123
 ```
 
-MÈs informaciÛ a:
+M√©s informaci√≥ a:
 
 http://www.quartz-scheduler.org/documentation/quartz-2.x/configuration/ConfigJDBCJobStoreClustering
