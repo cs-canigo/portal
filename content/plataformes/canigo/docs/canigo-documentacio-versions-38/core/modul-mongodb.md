@@ -42,7 +42,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
     </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.8](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <br/>
 Caldrà també afegir el _plugin_ que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i

@@ -25,10 +25,10 @@ weight		= 1
 - S'ha actualitzat el Swagger a **OpenApi**(Swagger 3), en lloc de Swagger 2.
 - És important saber que actualment l'arquetip és **agnòstic i no dependrà de cap plugin** .
 - Es realitza una configuració per yml més clara per a les diferents bases de dades :
-  - [MySQL](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL.md)
-  - [MongoDB](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB.md)
-  - [PostgreSQL](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-POSTGRESQL.md)
-  - [Oracle](/content/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-ORACLE.md)
+  - [MySQL](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MYSQL)
+  - [MongoDB](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-MONGODB)
+  - [PostgreSQL](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-POSTGRESQL)
+  - [Oracle](/guies/2023-01-15-Guia-actualizacio-del-projecte-per-a-implementar-ORACLE)
 
 <div class="message information">
 IMPORTANT: <br>
@@ -37,4 +37,4 @@ S'ha de tenir en compte que la configuració per defecte de la base de dades de 
 </div>
 
 - Es pot visualitzar la informació rellevant sobre la creació de l' arquetip en el següent enllaç:
-[README](/content/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.0/documentacio.md)
+[README](/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.0/documentacio)

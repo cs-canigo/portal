@@ -11,8 +11,8 @@ weight		= 2
 
   - Actualització de canigo.support.mailing
       - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `Canigó-root` de 3.1.0 a 3.2.0
-      - S'actualitzen els mòduls  [Canigó-test](/content/plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0 
-         i [Canigó-core](/content/plataformes/canigo/documentacio-llibreries/canigo.core/5.1.0/) 
+      - S'actualitzen els mòduls  [Canigó-test](/plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0 
+         i [Canigó-core](/plataformes/canigo/documentacio-llibreries/canigo.core/5.1.0/) 
          de la versió 5.0.6 a 5.1.0.
       - Així mateix , a causa de la incompatibilitat i obsolescència amb el JDK 17 , s'esborren les dependències 
       associades a la llibreria **JAVAX** ,sent reemplaçades per les dependències de **JAKARTA**.

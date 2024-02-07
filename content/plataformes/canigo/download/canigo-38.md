@@ -9,7 +9,7 @@ weight     = 1
 
 ## Canigó 3.8
 
-- [Matriu de Compatibilitats](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md)
+- [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul)
 
 | Versió Canigó LTS Actual | Última versió disponible |
 |--------------------------|--------------------------|
@@ -75,7 +75,7 @@ No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals de
 
 Podeu consultar la següent documentació:
 
-- [Entorn desenvolupament Canigó](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/entorn-de-desenvolupament/)
+- [Entorn desenvolupament Canigó](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/entorn-de-desenvolupament/)
 
 
 #### Configuració de Maven (manual)

@@ -10,7 +10,7 @@ weight		= 2
 
   - Actualització de canigo.persistence.jpa
       - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `Canigó-root` de 3.1.0 a 3.2.0
-      - Actualització dels mòduls [Canigó-test](/content/plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0 i [Canigó-core](/content/plataformes/canigo/documentacio-llibreries/canigo.core/5.1.0/) de la versió 5.0.6 a 5.1.0
+      - Actualització dels mòduls [Canigó-test](/plataformes/canigo/documentacio-llibreries/canigo.test/3.1.0/) de la versió 3.0.4 a 3.1.0 i [Canigó-core](/plataformes/canigo/documentacio-llibreries/canigo.core/5.1.0/) de la versió 5.0.6 a 5.1.0
       - A més, pel fet que s'ha eliminat **javax** , a causa de la incompatibilitat amb JDK 17,
          s'ha de reemplaçar totes les dependències associades a aquesta libreria,javax, per les corresponents de **jakarta**.
          Per tant, haurem d'afegir la dependència `jakarta.annotation-api` versió **`1.3.5`** que substitueix la dependència de

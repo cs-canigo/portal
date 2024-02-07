@@ -8,7 +8,7 @@ key = "GENER2024"
 +++
 
 ## Introducció
-S'ha creat un nou arquetip Maven més agnòstic perquè no hagi de dependre de cap plugin. La versió actual és la [3.8.0](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/).
+S'ha creat un nou arquetip Maven més agnòstic perquè no hagi de dependre de cap plugin. La versió actual és la [3.8.0](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/).
 
 L'**arquetipus** és una eina Maven que facilita la creació de projectes seguint una plantilla. Utilitzant l'arquetipus i 
 executant un _goal_ de Maven, s'obté un projecte Canigó amb una base pre-configurada preparada per a incorporar-hi noves funcionalitats.
