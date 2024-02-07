@@ -7,6 +7,8 @@ categories = ["canigo"]
 key = "FEBRER2024"
 +++
 
+# Publicació nova versió Canigó 3.8
+
 ## Novetats de la nova versió
 
 ### Suport per JDK 17
