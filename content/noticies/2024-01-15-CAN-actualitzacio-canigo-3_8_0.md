@@ -55,7 +55,7 @@ l'arquetip està creat d'una manera agnòstica, és a dir, no depèn de cap plug
 creació d'aplicacions Canigó atès que ja conté les bases necessàries.
 
 
-## Com migrar a Canigó 3.8
+## Com migrar a Canigó 3.8 des de Canigó 3.6
 
 Per a poder passar una aplicació de Canigó 3.6 a Canigó 3.8 podeu seguir els passos descrits a
 [Actualització Canigó 3.6 a Canigó 3.8](/howtos/2024-01-Howto-Actualitzacio_Canigo3_6_Canigo3_8).

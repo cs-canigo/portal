@@ -22,5 +22,6 @@ La versió 1.0.0 de l'arquetipus de Canigó incorpora les següents novetats:
 - Creació de projectes amb Canigó 3.8.0 i JDK 17.
 - Actualització de dependències javax obsoletes a jakarta.
 - Actualització de la versió d'Spring, Spring Boot, dependències i plugins.
-- Actualització d' OpenApi (Swagger 3)  a Swagger 2
+- Actualització d' OpenApi (Swagger 3)  a Swagger 2.
+- La nova versió de Canigó 3.8 també permet la generació d'artefactes.
 

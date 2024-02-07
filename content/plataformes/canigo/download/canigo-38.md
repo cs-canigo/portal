@@ -58,10 +58,9 @@ S'ha certificat la **compatibilitat de Canigó 3.8.0 amb els servidors suportats
 | 	Servidor d'aplicacions		 | 		Versió suportada     	  |
 |--------------------|---------------------------|
 | Tomcat					     | 10.1.15   	             	 |
-| Weblogic				        | 14.1.x               		   |
 | JBoss EAP       				| 7.x        			            |
 
-No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals del full de ruta no suporten Java 17.
+No s'ha certificat la compatibilitat amb Weblogic donat les versions actuals del full de ruta no suporten Java 17.
 
 <br/>
 **Lliurables** associats a Canigó 3.8:

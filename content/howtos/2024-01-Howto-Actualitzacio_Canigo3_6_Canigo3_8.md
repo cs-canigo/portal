@@ -27,14 +27,17 @@ amb Canigó 3.8 i el punt de partida d'aquesta guia és una aplicació creada am
 ### Configuració prèvia
 
 A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul) podeu consultar les versions
-dels mòduls i components de Canigó de les versions 3.6.x i 3.8.x. Per tant, caldrà **actualitzar els intervals de
-versions dels mòduls utilitzats per l'aplicació** per a migrar a Canigó 3.8.
+dels mòduls i components de Canigó de les versions 3.6.x i 3.8.x. 
 
-Per a actualitzar de la versió 3.6 a la 3.8, es necessari realitzar l'actualització de les dependències del nostre projecte. 
+Per tant, caldrà fer:
+
+**1.** **Actualitzar els intervals de versions dels mòduls utilitzats per l'aplicació** per a migrar a Canigó 3.8.0
+
+**2.** Per a actualitzar de la versió 3.6 a la 3.8, es necessari realitzar l'actualització de les dependències del nostre projecte. 
 
 Les dependències específiques que han d'actualitzar-se la seva les següents: 
 
-Spring Boot 3.1.4 
+**2.1** Spring Boot 3.1.4 
 
 ```
    <parent>
@@ -44,7 +47,7 @@ Spring Boot 3.1.4
    </parent>
 ```
 
-Spring Framework 6.1.1 
+**2.2** Spring Framework 6.1.1 
 ```
    <dependency>
       <groupId>org.springframework</groupId>
@@ -55,7 +58,7 @@ Spring Framework 6.1.1
 ```
 
 
-OpenJDK 17
+**2.3** OpenJDK 17
 ```
    <maven.compiler.source>17</maven.compiler.source>
    <maven.compiler.target>17</maven.compiler.target>
@@ -63,7 +66,7 @@ OpenJDK 17
 
 
 
-Spring Security 6.1.3 
+**2.4** Spring Security 6.1.3 
 
 ```
    <dependency>
@@ -72,7 +75,7 @@ Spring Security 6.1.3
       <version>6.1.3</version>
    </dependency>
 ```
-Junit 4 a Junit 5 (Jupiter) 5.10.1.
+**2.5** Junit 4 a Junit 5 (Jupiter) 5.10.1.
 
 ```
    <dependency>

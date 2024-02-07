@@ -28,4 +28,4 @@ A continuació, es detallen les actualitzacions principals realitzades:
     
 - [Creació de projecte amb el nou arquetip](/noticies/2024-01-15-CAN-Creacio-nou-arquetip-versio-1_0/)
     - Es crea un nou arquetip Maven més agnòstic, de manera que no cal dependre de cap plugin extern.
-
+    - La nova versió de Canigó 3.8 també permet la generació d'artefactes
