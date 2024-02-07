@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació Versió 3.8"

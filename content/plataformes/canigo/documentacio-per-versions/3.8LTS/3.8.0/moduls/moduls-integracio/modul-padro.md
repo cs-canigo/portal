@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Padró"
 description = "Serveis d'empadronament publicats de la plataforma PICA."
 sections    = "Canigó. Documentació Versió 3.8"

@@ -1,55 +1,55 @@
 +++
 date        = "2024-01-15"
-draft        = true
-title       = "Monitorització"
-description = "Monitorització de l'aplicació."
-sections    = "Canigó. Documentació Versió 3.8"
+
+title       = "Monitoritzaciï¿½"
+description = "Monitoritzaciï¿½ de l'aplicaciï¿½."
+sections    = "Canigï¿½. Documentaciï¿½ Versiï¿½ 3.8"
 weight      = 8
 +++
 
-## Introducció
+## Introducciï¿½
 
-A la versió 3.8 del Framework Canigó disposa d'un component de monitorització de l'aplicació sense haver de fer cap desenvolupament addicional per part dels desenvolupadors de les aplicacions. Aquest component permet:
+A la versiï¿½ 3.8 del Framework Canigï¿½ disposa d'un component de monitoritzaciï¿½ de l'aplicaciï¿½ sense haver de fer cap desenvolupament addicional per part dels desenvolupadors de les aplicacions. Aquest component permet:
 
-* Fer un seguiment de les peticions que rep l'aplicació.
+* Fer un seguiment de les peticions que rep l'aplicaciï¿½.
 * Comprovar l'estat del sistema.
-* Administració dels paràmetres de configuració d'aquesta monitorització.
+* Administraciï¿½ dels parï¿½metres de configuraciï¿½ d'aquesta monitoritzaciï¿½.
 
 ### SEGUIMENT DE LES PETICIONS
 
 Respecte al tipus de peticions, l'eina visualitza:
 
-* Número de peticions.
-* Temps mitjà de les peticions.
-* Peticions errònies.
+* Nï¿½mero de peticions.
+* Temps mitjï¿½ de les peticions.
+* Peticions errï¿½nies.
 
-Les peticions que es mostren són les efectuades contra el servidor d'aplicació des de que l'aplicació rep una petició fins que aquesta finalitza i la retorna al client.
+Les peticions que es mostren sï¿½n les efectuades contra el servidor d'aplicaciï¿½ des de que l'aplicaciï¿½ rep una peticiï¿½ fins que aquesta finalitza i la retorna al client.
 
 ![Peticions per minut](/related/canigo/documentacio/modul-monitoritzacio/Peticions.jpg "Peticions rebudes per minut")  
 Figura 1 Nombre de peticions rebudes per minut
 
-![Temps de procés](/related/canigo/documentacio/modul-monitoritzacio/Temps.jpg "Temps promig de procés")  
+![Temps de procï¿½s](/related/canigo/documentacio/modul-monitoritzacio/Temps.jpg "Temps promig de procï¿½s")  
 Figura 2 Temps promig en processar les peticions
 
-![Peticions errònies](/related/canigo/documentacio/modul-monitoritzacio/Error.jpg "Nombre de peticions errònies")  
+![Peticions errï¿½nies](/related/canigo/documentacio/modul-monitoritzacio/Error.jpg "Nombre de peticions errï¿½nies")  
 Figura 3 Nombre de peticions que han finalitzat amb error (no controlat)
 
-### COMPROVACIÓ DE L'ESTAT DEL SISTEMA
+### COMPROVACIï¿½ DE L'ESTAT DEL SISTEMA
 
-En aquesta part de la monitorització es podrà visualitzar l'estat de les diferents parts del sistema configurades (per configurar aquesta part de la monitorització mirar el mòdul d'instrumentació), com podria ser la comprovació de la connectivitat contra base de dades o contra un servei web.
+En aquesta part de la monitoritzaciï¿½ es podrï¿½ visualitzar l'estat de les diferents parts del sistema configurades (per configurar aquesta part de la monitoritzaciï¿½ mirar el mï¿½dul d'instrumentaciï¿½), com podria ser la comprovaciï¿½ de la connectivitat contra base de dades o contra un servei web.
 
-La informació d'aquesta funcionalitat es mostrarà en una taula amb la següent informació:
+La informaciï¿½ d'aquesta funcionalitat es mostrarï¿½ en una taula amb la segï¿½ent informaciï¿½:
 
-* Mètode
+* Mï¿½tode
 * Temps transcorregut (ms)
 * Estat
 
 ![Estat del sistema](/related/canigo/documentacio/modul-monitoritzacio/Estat.jpg "Estat del sistema")  
-Figura 4 Taula d'informació de l'estat del sistema
+Figura 4 Taula d'informaciï¿½ de l'estat del sistema
 
-### ADMINISTRACIÓ DELS PARÀMETRES DE CONFIGURACIÓ
+### ADMINISTRACIï¿½ DELS PARï¿½METRES DE CONFIGURACIï¿½
 
-Per últim l'eina també ofereix la possibilitat de configurar la longitud de les mostres que apareixen en les gràfiques i l'interval de mostreig entre mostres. Per defecte ofereix una visualització de l'evolució de les peticions de 8 hores amb intervals de 1 minut.
+Per ï¿½ltim l'eina tambï¿½ ofereix la possibilitat de configurar la longitud de les mostres que apareixen en les grï¿½fiques i l'interval de mostreig entre mostres. Per defecte ofereix una visualitzaciï¿½ de l'evoluciï¿½ de les peticions de 8 hores amb intervals de 1 minut.
 
-![Configuració gràfiques](/related/canigo/documentacio/modul-monitoritzacio/Config.jpg "Configuració gràfiques")  
-Figura 5 Pantalla de configuració per a les gràfiques de monitorització
+![Configuraciï¿½ grï¿½fiques](/related/canigo/documentacio/modul-monitoritzacio/Config.jpg "Configuraciï¿½ grï¿½fiques")  
+Figura 5 Pantalla de configuraciï¿½ per a les grï¿½fiques de monitoritzaciï¿½

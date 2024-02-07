@@ -1,51 +1,51 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Proves"
-description = "Proves unitàries"
-sections    = "Canigó. Documentació Versió 3.8"
+description = "Proves unitï¿½ries"
+sections    = "Canigï¿½. Documentaciï¿½ Versiï¿½ 3.8"
 weight      = 4
 +++
 
-## Propòsit
+## Propï¿½sit
 
-Les proves son una part fonamental en el desenvolupament d'aplicacions, en aquest apartat es focalitza en com realitzar proves unitàries dels diferents mòduls de l'aplicació mitjançant Spring Test.
+Les proves son una part fonamental en el desenvolupament d'aplicacions, en aquest apartat es focalitza en com realitzar proves unitï¿½ries dels diferents mï¿½duls de l'aplicaciï¿½ mitjanï¿½ant Spring Test.
 
-A l'utilitzar injecció de dependència, això fa que el codi sigui menys dependent del que ho seria en un desenvolupament java tradicional i per tant realitzar proves unitàries de diferents parts de mòduls sense tenir el conjunt complert hauria de ser més senzill.
+A l'utilitzar injecciï¿½ de dependï¿½ncia, aixï¿½ fa que el codi sigui menys dependent del que ho seria en un desenvolupament java tradicional i per tant realitzar proves unitï¿½ries de diferents parts de mï¿½duls sense tenir el conjunt complert hauria de ser mï¿½s senzill.
 
-## Documents i Fonts de Referència
+## Documents i Fonts de Referï¿½ncia
 
-Referència | URL
+Referï¿½ncia | URL
 ---------- | ---
 Spring Test | https://docs.spring.io/spring-framework/docs/6.0.0/reference/html/testing.html#testing
 
 ## Glossari
 
-**@ExtendWith** - Anotació a nivell de classe per indicar amb que s'executarà la classe de test.
+**@ExtendWith** - Anotaciï¿½ a nivell de classe per indicar amb que s'executarï¿½ la classe de test.
 
-**@ContextConfiguration** - Anotació a nivell de classe per a carregar el context d'Spring.
+**@ContextConfiguration** - Anotaciï¿½ a nivell de classe per a carregar el context d'Spring.
 
-**@BeforeEach** - Anotació a nivell de mètode per indicar quin és el mètode d'inicialització de la classe de test.
+**@BeforeEach** - Anotaciï¿½ a nivell de mï¿½tode per indicar quin ï¿½s el mï¿½tode d'inicialitzaciï¿½ de la classe de test.
 
-**@Test** - Anotació a nivell de mètode per indicar que el mètode és de test.
+**@Test** - Anotaciï¿½ a nivell de mï¿½tode per indicar que el mï¿½tode ï¿½s de test.
 
-**@Autowired** - Anotació a nivell de propietat o mètode per a indicar que la propietat de la classe es carregui automàticament amb el bean del context d'spring.
+**@Autowired** - Anotaciï¿½ a nivell de propietat o mï¿½tode per a indicar que la propietat de la classe es carregui automï¿½ticament amb el bean del context d'spring.
 
-**@Qualifier** - Anotació a nivell de propietat o mètode que s'utilitza quan s'ha indicat un **@Autowired** i al context d'spring existeixen més d'un bean del mateix tipus del que s'ha de realitzar l'autowired, aleshores d'indica el **@Qualifier** per indicar a Spring el nom del bean que ha de setejar.
+**@Qualifier** - Anotaciï¿½ a nivell de propietat o mï¿½tode que s'utilitza quan s'ha indicat un **@Autowired** i al context d'spring existeixen mï¿½s d'un bean del mateix tipus del que s'ha de realitzar l'autowired, aleshores d'indica el **@Qualifier** per indicar a Spring el nom del bean que ha de setejar.
 
-## Instal.lació
+## Instal.laciï¿½
 
-Utilitzant Canigó3 on cal realitzar cap pas addicional per a tenir instal·lat el mòdul de testing d'Spring. Ja que el framework ja incorpora la dependència.
+Utilitzant Canigï¿½3 on cal realitzar cap pas addicional per a tenir instalï¿½lat el mï¿½dul de testing d'Spring. Ja que el framework ja incorpora la dependï¿½ncia.
 
-**Dependència pom.xml**
+**Dependï¿½ncia pom.xml**
 
-A **Canigó 3.8** incorpora la dependència d'Spring Test en scope test, aquesta dependència la incorpora canigo-test. A Canigó 3.8 la versió utilitzada de Junit és la 5 **(Jupiter)**.
+A **Canigï¿½ 3.8** incorpora la dependï¿½ncia d'Spring Test en scope test, aquesta dependï¿½ncia la incorpora canigo-test. A Canigï¿½ 3.8 la versiï¿½ utilitzada de Junit ï¿½s la 5 **(Jupiter)**.
 
-## Utilització
+## Utilitzaciï¿½
 
-### Definició classe de test
+### Definiciï¿½ classe de test
 
-Per a crear una classe de test simplement s'ha de crear una classe de Java tradicional i afegir la següent anotació @ExtendWith **(org.junit.jupiter.api.extension.ExtendWith)** per a que spring detecti que és una classe de test.
+Per a crear una classe de test simplement s'ha de crear una classe de Java tradicional i afegir la segï¿½ent anotaciï¿½ @ExtendWith **(org.junit.jupiter.api.extension.ExtendWith)** per a que spring detecti que ï¿½s una classe de test.
 
 ```
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -55,30 +55,30 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 ```
 
-### Càrrega del context de l'aplicació
+### Cï¿½rrega del context de l'aplicaciï¿½
 
-Per a carregar el context de l'aplicació s'utilitzarà l'anotació @ContextConfiguration (org.springframework.test.context.ContextConfiguration) a nivell de classe.
+Per a carregar el context de l'aplicaciï¿½ s'utilitzarï¿½ l'anotaciï¿½ @ContextConfiguration (org.springframework.test.context.ContextConfiguration) a nivell de classe.
 
-Es pot carregar el context de canigo-core que carregarà tot el framework:
+Es pot carregar el context de canigo-core que carregarï¿½ tot el framework:
 
 ```
 @ContextConfiguration(locations = {"../../../core/config/canigo-core.xml"})
 ```
 
 
-al carregar el context de canigó serà necessari indicar els fitxers xml app-custom-***.xml dintre del directori spring i els fitxers de propietats d'aquest fitxer xml dintre del directori config, tal i com es te a l'aplicació.
+al carregar el context de canigï¿½ serï¿½ necessari indicar els fitxers xml app-custom-***.xml dintre del directori spring i els fitxers de propietats d'aquest fitxer xml dintre del directori config, tal i com es te a l'aplicaciï¿½.
 
-o be només carregar els beans que es troben en certs fitxers xml:
+o be nomï¿½s carregar els beans que es troben en certs fitxers xml:
 
 ```
 @ContextConfiguration(locations = {"config/canigo-support-mailing.xml", "config/app-support-mailing.xml"})
 ```
 
-### Mètodes de setUp
+### Mï¿½todes de setUp
 
-Per indicar el mètode de setUp del test cal fer-ho mitjançant l'anotació @Before (org.junit.Before) a nivell de mètode.
+Per indicar el mï¿½tode de setUp del test cal fer-ho mitjanï¿½ant l'anotaciï¿½ @Before (org.junit.Before) a nivell de mï¿½tode.
 
-En aquest mètode es realitzaran les inicialitzacions necessàries per a poder executar els mètodes de test de la classe.
+En aquest mï¿½tode es realitzaran les inicialitzacions necessï¿½ries per a poder executar els mï¿½todes de test de la classe.
 
 ```java
 @Autowired
@@ -95,9 +95,9 @@ public void settingUp(){
 }
 ```
 
-### Mètodes de test
+### Mï¿½todes de test
 
-Per indicar que un mètode és de test cal fer-ho mitjançant l'anotació @Test (org.junit.Test) a nivell de mètode.
+Per indicar que un mï¿½tode ï¿½s de test cal fer-ho mitjanï¿½ant l'anotaciï¿½ @Test (org.junit.Test) a nivell de mï¿½tode.
 
 ```java
 import static org.junit.jupiter.api.Assertions.assertNull;

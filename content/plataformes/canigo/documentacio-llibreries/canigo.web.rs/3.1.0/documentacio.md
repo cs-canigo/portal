@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Documentació"
 description = "Documentació canigo.web.rs 3.1.0"
 sections    = "canigo-fwk-docs"

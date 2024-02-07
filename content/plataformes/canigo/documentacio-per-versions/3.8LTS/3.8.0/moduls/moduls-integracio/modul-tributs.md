@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
 sections    = "Canigó. Documentació Versió 3.8"

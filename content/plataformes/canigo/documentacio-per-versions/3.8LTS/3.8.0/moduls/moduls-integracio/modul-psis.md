@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "PSIS"
 description = "Validació de Signatures electròniques mitjançant els serveis de PSIS oferts per CatCert."
 sections    = "Canigó. Documentació Versió 3.8"

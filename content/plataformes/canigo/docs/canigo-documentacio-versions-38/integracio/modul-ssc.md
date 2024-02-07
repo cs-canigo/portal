@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació Versió 3.8"
@@ -86,7 +86,7 @@ La instal·lació del connector requereix la utilització de la llibreria 'canig
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md)  es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 #### Configuració
 

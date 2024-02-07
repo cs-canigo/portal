@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Error llibreria javassist amb Canigó 3.x i Weblogic"
 description = "Conflicte de versions de la llibreria javassist amb Canigó 3.x i Weblogic"
 sections    = "Canigó. Documentació Versió 3.8"

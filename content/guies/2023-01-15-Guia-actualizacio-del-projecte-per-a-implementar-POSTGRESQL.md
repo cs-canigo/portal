@@ -1,6 +1,5 @@
 +++
-date = "2023-01-15"
-draft = true
+date = "2024-01-15"
 title = "Guia: Actualització del projecte per a implantar PostgreSQL"
 description = "S'explica pas a pas com utilitzar PostgreSQL en un Projecte seguint les millors pràctiques definides pel CS Canigó"
 section = "guies"

@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Correu"
 description = "Enviament de correu electrònic."
 sections    = "Canigó. Documentació Versió 3.8"

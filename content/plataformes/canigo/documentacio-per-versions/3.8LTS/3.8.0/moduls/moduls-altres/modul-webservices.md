@@ -1,30 +1,30 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Webservices"
 description = "Webservices"
-sections    = "Canigó. Documentació Versió 3.8"
+sections    = "Canigï¿½. Documentaciï¿½ Versiï¿½ 3.8"
 weight      = 3
 +++
 
-## Propòsit
+## Propï¿½sit
 
-El propòsit d'aquest apartat es introduir al desenvolupador en la configuració i ús d'una infraestructura de Webservices en dues modalitats:
+El propï¿½sit d'aquest apartat es introduir al desenvolupador en la configuraciï¿½ i ï¿½s d'una infraestructura de Webservices en dues modalitats:
 
-* Exportació de serveis Java mitjançant Web Services.
-* Importació de Web Services externs, generació si cal de classes Java d'invocació.
+* Exportaciï¿½ de serveis Java mitjanï¿½ant Web Services.
+* Importaciï¿½ de Web Services externs, generaciï¿½ si cal de classes Java d'invocaciï¿½.
 
-Ja que Canigó 3 no disposa d'un servei addicional de Webservices, l'enfocament d'aquest apartat es el de simplificar tant la definició de Web Services a partir de serveis Java simples (que no tindran dependències amb la implementació particular de Web Services) així com la de facilitar la invocació a Web Services externs.
+Ja que Canigï¿½ 3 no disposa d'un servei addicional de Webservices, l'enfocament d'aquest apartat es el de simplificar tant la definiciï¿½ de Web Services a partir de serveis Java simples (que no tindran dependï¿½ncies amb la implementaciï¿½ particular de Web Services) aixï¿½ com la de facilitar la invocaciï¿½ a Web Services externs.
 
-Per aquesta aproximació s'ha fet servir Spring WS i JAXB i OXM.
+Per aquesta aproximaciï¿½ s'ha fet servir Spring WS i JAXB i OXM.
 
-## Context i Escenaris d'Ús
+## Context i Escenaris d'ï¿½s
 
-La integració de WebServices no es troba ubicat dins del framework de Canigó com a un servei addicional. Ens recolzarem en les classes de Spring WS per a realitzar els exemples d'integració.
+La integraciï¿½ de WebServices no es troba ubicat dins del framework de Canigï¿½ com a un servei addicional. Ens recolzarem en les classes de Spring WS per a realitzar els exemples d'integraciï¿½.
 
-## Documents i Fonts de Referència
+## Documents i Fonts de Referï¿½ncia
 
-Referència | URL
+Referï¿½ncia | URL
 ---------- | ---
 Spring Web Services | https://docs.spring.io/spring-ws/docs/current/reference/html/
 
@@ -33,64 +33,64 @@ Spring Web Services | https://docs.spring.io/spring-ws/docs/current/reference/ht
 
 **EndPoint**
 
-Una interfície endpoint, també coneguda com a interfície de servei endpoint (SEI), és un terme utilitzat en la plataforma J2EE quan s'exposa un Enterprise Java Bean com a servei web. Un client accedeix a partir d'aquesta interfície, que com a totes les interfícies, defineix el mètodes de negoci del bean.
+Una interfï¿½cie endpoint, tambï¿½ coneguda com a interfï¿½cie de servei endpoint (SEI), ï¿½s un terme utilitzat en la plataforma J2EE quan s'exposa un Enterprise Java Bean com a servei web. Un client accedeix a partir d'aquesta interfï¿½cie, que com a totes les interfï¿½cies, defineix el mï¿½todes de negoci del bean.
 
 **OXM**
 
-La API OXM (spring-oxm.jar) proporciona integració entre les APIs més populars de marshalling de XML (JAXB1, JAXB2, Castor, Jibx).
+La API OXM (spring-oxm.jar) proporciona integraciï¿½ entre les APIs mï¿½s populars de marshalling de XML (JAXB1, JAXB2, Castor, Jibx).
 
 **JAXB**
 
-Java Architecture for XML Binding (JAXB) és una API que proporcionar als desenvolupadors una eina de mapping de classes Java a la seva representació XML.
+Java Architecture for XML Binding (JAXB) ï¿½s una API que proporcionar als desenvolupadors una eina de mapping de classes Java a la seva representaciï¿½ XML.
 
 **Marshalling**
 
-És el procés que s'encarrega de transformar la representació d'un objecte en memoria (Java Object) en un format que encaixi amb el canal de comunicació amb el que es treballa (XML).
+ï¿½s el procï¿½s que s'encarrega de transformar la representaciï¿½ d'un objecte en memoria (Java Object) en un format que encaixi amb el canal de comunicaciï¿½ amb el que es treballa (XML).
 
 **UnMarshalling**
 
-És el procés invers al Marshalling, la representació en format XML passa a convertir-se en una Java Object.
+ï¿½s el procï¿½s invers al Marshalling, la representaciï¿½ en format XML passa a convertir-se en una Java Object.
 
 **XSDL**
 
-Un arxiu WSDL és un arxiu XML que descriu la forma de comunicació, es a dir, els requsisits de protocol i els formats dels missatges necessaris per interactuar amb els serveis llistats en el seu catàleg. Així un arxiu WSDL funciona com a interficie pública del web service.
+Un arxiu WSDL ï¿½s un arxiu XML que descriu la forma de comunicaciï¿½, es a dir, els requsisits de protocol i els formats dels missatges necessaris per interactuar amb els serveis llistats en el seu catï¿½leg. Aixï¿½ un arxiu WSDL funciona com a interficie pï¿½blica del web service.
 
-## Instal.lació i Configuració
+## Instal.laciï¿½ i Configuraciï¿½
 
-### Instal.lació
+### Instal.laciï¿½
 
-La instal.lació del servei requereix de la utilització de la llibreria 'spring-ws-core'.
+La instal.laciï¿½ del servei requereix de la utilitzaciï¿½ de la llibreria 'spring-ws-core'.
 
 	 <dependency>
       <groupId>org.springframework.ws</groupId>
       <artifactId>spring-ws-core</artifactId>
     </dependency>
 
-## Configuració
+## Configuraciï¿½
 
-Aquest punt el dividirem en dues parts segons si volem exposar un servei o bé som consumidor(clients) de ell:
+Aquest punt el dividirem en dues parts segons si volem exposar un servei o bï¿½ som consumidor(clients) de ell:
 
-### Configuració com a client
+### Configuraciï¿½ com a client
 
-La configuració del web implica els següents passos:
+La configuraciï¿½ del web implica els segï¿½ents passos:
 
 * Generar les classes Java i els seus bindings a partir del WSDL del Webservice.
 * Definir l'arxiu de propietats amb les dades del webservice.
-* Definir l'arxiu de configuració de Spring: client, marshallers, WebserviceTemplate.
-* Definir el client que realitzarà la crida.
+* Definir l'arxiu de configuraciï¿½ de Spring: client, marshallers, WebserviceTemplate.
+* Definir el client que realitzarï¿½ la crida.
 * Test d'exemple
 
 #### Generar les classes Java i els seus bindings a partir del WSDL del Webservice
 
-Per aquest procés s'utilitza el plugin [cxf-codegen-plugin](http://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html) de maven. Aquest és l'encarregat de generar el codi Java i les anotacions de binding de manera automàtica a partir del WSDL.
+Per aquest procï¿½s s'utilitza el plugin [cxf-codegen-plugin](http://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html) de maven. Aquest ï¿½s l'encarregat de generar el codi Java i les anotacions de binding de manera automï¿½tica a partir del WSDL.
 
-En aquest exemple utilitzem el WSDL públic: http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl
+En aquest exemple utilitzem el WSDL pï¿½blic: http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl
 	
-    És recomanable generar aquestes classes en un projecte extern, i posteriorment afegir aquest projecte com a dependència del projecte
+    ï¿½s recomanable generar aquestes classes en un projecte extern, i posteriorment afegir aquest projecte com a dependï¿½ncia del projecte
 	
 En un projecte tipus maven configurem el pom.xml.
 
-A data de creació d'aquest exemple la última versió de CXF disponible és la 3.4.5, recomanem utilitzar la última versió.
+A data de creaciï¿½ d'aquest exemple la ï¿½ltima versiï¿½ de CXF disponible ï¿½s la 3.4.5, recomanem utilitzar la ï¿½ltima versiï¿½.
 
 **pom.xml**
 
@@ -127,26 +127,26 @@ A data de creació d'aquest exemple la última versió de CXF disponible és la 3.4.
 	......
 
 
-Aquest plugin generarà automàticament el codi Java del WSDL informat:
+Aquest plugin generarï¿½ automï¿½ticament el codi Java del WSDL informat:
 
 ![classes_generades](/related/canigo/documentacio/modul-webservices/classes_generades.png)
 
-Copiem les classes generades al nostre projecte Canigó.
+Copiem les classes generades al nostre projecte Canigï¿½.
 
-#### Definició de l'arxiu de propietats
+#### Definiciï¿½ de l'arxiu de propietats
 
-Fitxer de configuració: webservices.properties
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props
+Fitxer de configuraciï¿½: webservices.properties
+Ubicaciï¿½ proposada: <PROJECT_ROOT>/src/main/resources/config/props
 
     *.ws.uri=http://ws.cdyne.com/ip2geo/ip2geo.asmx
 
-Contindrà les URLs del webservices segons l'entorn al que es vulgui atacar.
+Contindrï¿½ les URLs del webservices segons l'entorn al que es vulgui atacar.
 
-#### Definir l'arxiu de configuració de Spring
+#### Definir l'arxiu de configuraciï¿½ de Spring
 
-Fitxer de configuració: canigo-webservices-config.xml
+Fitxer de configuraciï¿½: canigo-webservices-config.xml
 
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
+Ubicaciï¿½ proposada: <PROJECT_ROOT>/src/main/resources/spring
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<beans xmlns="http://www.springframework.org/schema/beans"
@@ -188,9 +188,9 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
 
 	</beans>
 
-En aquesta configuració destacar el bean `marshaller`, on a la propietat `contextPath` posem el package de les classes generades, en aquest exemple.
+En aquesta configuraciï¿½ destacar el bean `marshaller`, on a la propietat `contextPath` posem el package de les classes generades, en aquest exemple.
 
-#### Definir el client que realitzarà la crida
+#### Definir el client que realitzarï¿½ la crida
 
 Codi d'exemple per a la crida al webservice.
 

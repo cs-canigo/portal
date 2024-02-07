@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "WebFlux"
 description = "Com configurar aplicació Canigó 3.8 per utilitzar WebFlux"
 sections    = "Canigó. Documentació Versió 3.8"
@@ -128,7 +128,7 @@ Afegirem les dependències de Mongodb
 			</exclusions>
 ```
 
-A la [Matriu de Compatibilitats 3.8](/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.8](/content/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul.md) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 

@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Guies d'ús per a actualització dels projectes per a implementar-los en les diferents bases de dades "
 description = "Guies d'ús (Guies) "
 sections    = "canigo-fwk-docs"

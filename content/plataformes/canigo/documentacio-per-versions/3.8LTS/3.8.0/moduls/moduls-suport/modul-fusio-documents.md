@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Fusió de documents"
 description = "Mòdul de fusió de documents."
 sections    = "Canigó. Documentació Versió 3.8"

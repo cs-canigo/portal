@@ -1,6 +1,6 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Instrumentació"
 description = "Mòdul per generar dades d’instrumentació (nombre de peticions, nombre d’errors, …) de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.8"

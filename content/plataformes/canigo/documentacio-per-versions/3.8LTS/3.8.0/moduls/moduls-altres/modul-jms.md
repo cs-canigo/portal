@@ -1,26 +1,26 @@
 +++
 date        = "2024-01-15"
-draft        = true
+
 title       = "Cues JMS"
-description = "Missatgeria estándard JMS"
-sections    = "Canigó. Documentació Versió 3.8"
+description = "Missatgeria estï¿½ndard JMS"
+sections    = "Canigï¿½. Documentaciï¿½ Versiï¿½ 3.8"
 weight      = 2
 +++
 
-## Propòsit
+## Propï¿½sit
 
-En aquest apartat s'explica de forma senzilla la infraestructura de missatgeria estándard JMS (Java Messaging Service) de J2EE. Aquest estàndar defineix dues modalitats:
+En aquest apartat s'explica de forma senzilla la infraestructura de missatgeria estï¿½ndard JMS (Java Messaging Service) de J2EE. Aquest estï¿½ndar defineix dues modalitats:
 
-1. Producció de missatges
-2. Consum de missatges, que pot ser asíncron.
+1. Producciï¿½ de missatges
+2. Consum de missatges, que pot ser asï¿½ncron.
 
-El consum de missatges assíncrons a l'estàndar J2EE es realitza mitjançant "Message-Driven Beans".
+El consum de missatges assï¿½ncrons a l'estï¿½ndar J2EE es realitza mitjanï¿½ant "Message-Driven Beans".
 
-Canigó no incorpora cap llibreria addicional a les ja aportades per Spring per lo que aquest apartat estará enfocat com a guia per a simplificar la publicació i consum de missatge.
+Canigï¿½ no incorpora cap llibreria addicional a les ja aportades per Spring per lo que aquest apartat estarï¿½ enfocat com a guia per a simplificar la publicaciï¿½ i consum de missatge.
 
-## Documents i Fonts de Referència
+## Documents i Fonts de Referï¿½ncia
 
-Referència | URL
+Referï¿½ncia | URL
 ---------- | ---
 Spring JMS | https://docs.spring.io/spring-framework/docs/6.0.0/reference/html/integration.html#jms
 
@@ -28,55 +28,55 @@ Spring JMS | https://docs.spring.io/spring-framework/docs/6.0.0/reference/html/i
 
 **JMS**
 
-JMS o Java Message Service és un estàndard de missatgeria que permet als components de les aplicacions basades en la plataforma J2EE, crear, enviar, rebre i llegir missatges de manera sincrona i asincrona.
+JMS o Java Message Service ï¿½s un estï¿½ndard de missatgeria que permet als components de les aplicacions basades en la plataforma J2EE, crear, enviar, rebre i llegir missatges de manera sincrona i asincrona.
 
 **ConnectionFactory**
 
-Factoria encarregada de crear una connexió al proveidor del sistema de missatges.
+Factoria encarregada de crear una connexiï¿½ al proveidor del sistema de missatges.
 
 **Destination**
 
-Punts de destí dels missatges que s'envien.
+Punts de destï¿½ dels missatges que s'envien.
 
-## Descripció detallada
+## Descripciï¿½ detallada
 
-### Missatgeria Publicació/Subscripció
+### Missatgeria Publicaciï¿½/Subscripciï¿½
 
-La missatgeria de publicació/subscripció permet a una aplicació enviar missatges a una o múltiples aplicacions. Aquestes aplicacions envien i reben missatges subscrivint-se a un servidor de missatges a una cua o tòpic determinat.
+La missatgeria de publicaciï¿½/subscripciï¿½ permet a una aplicaciï¿½ enviar missatges a una o mï¿½ltiples aplicacions. Aquestes aplicacions envien i reben missatges subscrivint-se a un servidor de missatges a una cua o tï¿½pic determinat.
 
 Hi ha dos tipus de missatge depenent de com es consumeixen:
 
-* Queue: en el cas d'un missatge enviat a una cua, encara que hi hagi varis subscriptors a aquests missatges, únicament es processarà una única vegada pel primer subscriptor que estigui lliure.
-* Topic: en el cas d'un missatge enviat a un tòpic, tots els subscriptors a aquests missatges els processaran.
+* Queue: en el cas d'un missatge enviat a una cua, encara que hi hagi varis subscriptors a aquests missatges, ï¿½nicament es processarï¿½ una ï¿½nica vegada pel primer subscriptor que estigui lliure.
+* Topic: en el cas d'un missatge enviat a un tï¿½pic, tots els subscriptors a aquests missatges els processaran.
 
-Els consumidors d'un missatge poden ser síncrons o asíncrons. En general, els consumidors asíncrons escalen millor i tenen un rendiment superior.
+Els consumidors d'un missatge poden ser sï¿½ncrons o asï¿½ncrons. En general, els consumidors asï¿½ncrons escalen millor i tenen un rendiment superior.
 
-Per aplicacions que s'executen al costat servidor, gairebé sempre sempre s'utilitzaran consumidors asíncrons. Concretament per aplicacions J2ee es fa mitjançant Message-Driven Beans (MDB's) que són EJB's configurats per escoltar i subscriures a cues o tòpics del servidor d'aplicacions.
+Per aplicacions que s'executen al costat servidor, gairebï¿½ sempre sempre s'utilitzaran consumidors asï¿½ncrons. Concretament per aplicacions J2ee es fa mitjanï¿½ant Message-Driven Beans (MDB's) que sï¿½n EJB's configurats per escoltar i subscriures a cues o tï¿½pics del servidor d'aplicacions.
 
-A continuació es destaquen alguns paràmetres de configuració dels missatges JMS que cal tenir en compte en el desenvolupament d'aplicacions que publiquin o consumeixin aquests tipus de missatges.
+A continuaciï¿½ es destaquen alguns parï¿½metres de configuraciï¿½ dels missatges JMS que cal tenir en compte en el desenvolupament d'aplicacions que publiquin o consumeixin aquests tipus de missatges.
 
-### Persistència del missatge
+### Persistï¿½ncia del missatge
 
 Els missatges JMS poden ser especificats com a persistents o no-persistents.
 
-* Un missatge persistent garanteix la seva entrega un i només un cop. El missatge no pot ser perdut degut a una fallida del proveïdor JMS, i no pot ser entregat dos cops. No es considerat enviat el missatge fins que no ha estat persistit (a un fitxer ó a una base de dades).
-* Un missatge no-persistent no és emmagatzemat. Està garantit que sigui entregat com a molt un cop, però si hi ha una fallida del proveïdor JMS el missatge pot ser perdut.
+* Un missatge persistent garanteix la seva entrega un i nomï¿½s un cop. El missatge no pot ser perdut degut a una fallida del proveï¿½dor JMS, i no pot ser entregat dos cops. No es considerat enviat el missatge fins que no ha estat persistit (a un fitxer ï¿½ a una base de dades).
+* Un missatge no-persistent no ï¿½s emmagatzemat. Estï¿½ garantit que sigui entregat com a molt un cop, perï¿½ si hi ha una fallida del proveï¿½dor JMS el missatge pot ser perdut.
 
-Els missatges persistents tenen pitjor rendiment degut al pas addicional d'haver-se d'escriure en disc o a base de dades. Només es recomana utilitzar missatges persistents pels casos d'ús crítics, on no es pot permetre la pèrdua del missatge (p.ex. una trasacció bancària, ...).
+Els missatges persistents tenen pitjor rendiment degut al pas addicional d'haver-se d'escriure en disc o a base de dades. Nomï¿½s es recomana utilitzar missatges persistents pels casos d'ï¿½s crï¿½tics, on no es pot permetre la pï¿½rdua del missatge (p.ex. una trasacciï¿½ bancï¿½ria, ...).
 
-### Destinacions distribuïdes
+### Destinacions distribuï¿½des
 
-Una destinació distribuïda és un conjunt de destinacions que són accessibles com a una única destinació lògica al client. Disposen d'una sola adreça JNDI, i els membres d'aquest conjunt normalment són distribuïts pels membres d'un cluster, on cada destinació pertany a un servidor JMS separat.
+Una destinaciï¿½ distribuï¿½da ï¿½s un conjunt de destinacions que sï¿½n accessibles com a una ï¿½nica destinaciï¿½ lï¿½gica al client. Disposen d'una sola adreï¿½a JNDI, i els membres d'aquest conjunt normalment sï¿½n distribuï¿½ts pels membres d'un cluster, on cada destinaciï¿½ pertany a un servidor JMS separat.
 
-Les aplicacions que usen destinacions distribuïdes tenen més disponibilitat respecte a les tradicionals, ja que els servidor (Weblogic) proporciona balanceig de càrrega i tolerància a fallades pels membres d'una destinació distribuïda en un cluster.
+Les aplicacions que usen destinacions distribuï¿½des tenen mï¿½s disponibilitat respecte a les tradicionals, ja que els servidor (Weblogic) proporciona balanceig de cï¿½rrega i tolerï¿½ncia a fallades pels membres d'una destinaciï¿½ distribuï¿½da en un cluster.
 
-Per tant, es recomana l'ús de destinacions distribuïdes sempre que les aplicacions publicadores/consumidores es desplegin en un cluster de Weblogic.
+Per tant, es recomana l'ï¿½s de destinacions distribuï¿½des sempre que les aplicacions publicadores/consumidores es desplegin en un cluster de Weblogic.
 
-## Instal.lació i Configuració
+## Instal.laciï¿½ i Configuraciï¿½
 
-### Instal.lació
+### Instal.laciï¿½
 
-Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'aplicaciï¿½ la segï¿½ent dependï¿½ncia:
 
 ```
 <org.opensymphony.quartz.version>2.2.1</org.opensymphony.quartz.version>
@@ -111,22 +111,22 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 </dependency>
 ```
 
-### Configuració
+### Configuraciï¿½
 
-La configuració del servei de cues el podriem dividir en els següents punts:
+La configuraciï¿½ del servei de cues el podriem dividir en els segï¿½ents punts:
 
-* Configuració de la infraestructura
-* Configuració del productor
-* Configuració del consumidor
-* Externalització de les propietats d'aquests beans
+* Configuraciï¿½ de la infraestructura
+* Configuraciï¿½ del productor
+* Configuraciï¿½ del consumidor
+* Externalitzaciï¿½ de les propietats d'aquests beans
 
-Ubicació: <PROJECT_ROOT>/src/main/resources/spring/jms-config.xml
+Ubicaciï¿½: <PROJECT_ROOT>/src/main/resources/spring/jms-config.xml
 
-Configuració dels arxius de propietats
+Configuraciï¿½ dels arxius de propietats
 
-Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/jms.properties
+Ubicaciï¿½: <PROJECT_ROOT>/src/main/resources/config/props/jms.properties
 
-Dins d'aquest arxiu romandrien les propietats per a la gestió de la invocació:
+Dins d'aquest arxiu romandrien les propietats per a la gestiï¿½ de la invocaciï¿½:
 
 Exemple d'arxiu de propietats:
 
@@ -137,12 +137,12 @@ Exemple d'arxiu de propietats:
 ``
 
 
-## Utilització del Mòdul
+## Utilitzaciï¿½ del Mï¿½dul
 
-En aquest exemple es configurarà:
+En aquest exemple es configurarï¿½:
 
-* Arxiu de configuració de Spring per a la càrrega de beans implicats en l'enviament i consum de missatges JMS.
-* Arxiu de propietats de configuració.
+* Arxiu de configuraciï¿½ de Spring per a la cï¿½rrega de beans implicats en l'enviament i consum de missatges JMS.
+* Arxiu de propietats de configuraciï¿½.
 * Productor de missatges.
 * Listener/consumidor de missatges.
 * Classe de Test per certificar el se funcionament.
@@ -181,7 +181,7 @@ En aquest exemple es configurarà:
     <!-- JMS ConnectionFactory al broker embegut -->
     <amq:connectionFactory id="jmsFactory" brokerURL="${jms.brokerURL}" />
 
-    <!-- Configuració del productor -->
+    <!-- Configuraciï¿½ del productor -->
     <bean id="jmsProducerConnectionFactory"
           class="org.springframework.jms.connection.SingleConnectionFactory"
           depends-on="broker"
@@ -191,7 +191,7 @@ En aquest exemple es configurarà:
           p:connectionFactory-ref="jmsProducerConnectionFactory"
           p:defaultDestination-ref="destination" />
 
-    <!-- Configuració del consumidor -->
+    <!-- Configuraciï¿½ del consumidor -->
     <bean id="jmsConsumerConnectionFactory"
           class="org.springframework.jms.connection.SingleConnectionFactory"
           depends-on="broker"
@@ -203,18 +203,18 @@ En aquest exemple es configurarà:
         <jms:listener destination="org.springbyexample.jms.test" ref="jmsMessageListener" />
     </jms:listener-container>
 
-    <!-- Contador per al consumidor i la clase de test per verificar el número de missatges enviats -->
+    <!-- Contador per al consumidor i la clase de test per verificar el nï¿½mero de missatges enviats -->
     <bean id="counter" class="java.util.concurrent.atomic.AtomicInteger" />
 
 </beans>
 ```
 
 <div class="message information">
-En aquest cas s'ha fet servir un servidor ActiveMQ embegut que Spring s'encarrega de aixecar. En el cas d'apuntar a un servidor remot, s'hauria d'eliminar les referències a aquest i apuntar al nou broker.
+En aquest cas s'ha fet servir un servidor ActiveMQ embegut que Spring s'encarrega de aixecar. En el cas d'apuntar a un servidor remot, s'hauria d'eliminar les referï¿½ncies a aquest i apuntar al nou broker.
 </div>
 
 
-Destacar que els beans del consumidor i productor han de'estar al package "cat.gencat.ctti.testing.jms" perque component-scan aixequi de manera automàtica els beans de Spring.
+Destacar que els beans del consumidor i productor han de'estar al package "cat.gencat.ctti.testing.jms" perque component-scan aixequi de manera automï¿½tica els beans de Spring.
 
 **jms.properties**
 
@@ -240,7 +240,7 @@ public class JmsMessageProducer {
     private int messageCount = 100;
 
     /**
-     * Generació dels missatges
+     * Generaciï¿½ dels missatges
      */
     @PostConstruct
     public void generateMessages() throws JMSException {
@@ -261,7 +261,7 @@ public class JmsMessageProducer {
 }
 ```
 
-L'annotació PostConstruct fa que el métode generateMessage s'executi un cop Spring instanciï/creï el bean **JmsMessageProducer**.
+L'annotaciï¿½ PostConstruct fa que el mï¿½tode generateMessage s'executi un cop Spring instanciï¿½/creï¿½ el bean **JmsMessageProducer**.
 
 **JmsMessageListener.java**
 
@@ -275,7 +275,7 @@ public class JmsMessageListener implements MessageListener {
     private AtomicInteger counter = null;
 
     /**
-     * Implementació de <code>MessageListener</code>.
+     * Implementaciï¿½ de <code>MessageListener</code>.
      */
     public void onMessage(Message message) {
         try {
