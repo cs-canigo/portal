@@ -4,7 +4,7 @@ title = "Canigó 3.8"
 description = "Publicació nova versió Canigó 3.8"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
-key = "FEBRER2023"
+key = "FEBRER2024"
 +++
 
 ## Novetats de la nova versió
