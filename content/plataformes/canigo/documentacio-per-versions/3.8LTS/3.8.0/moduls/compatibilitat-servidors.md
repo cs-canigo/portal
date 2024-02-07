@@ -18,7 +18,7 @@ S'ha certificat la versió de Canigó 3.8.0 amb els servidors suportats al [Full
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
-|  Tomcat					          	  	 	|         9.0   	             			|
+|  Tomcat					          	  	 	|         10.0.0    	             			|
 |  Jboss                               |         7.x                        |
 
 La versió de Java mínima per utilitzar Canigó 3.8.0 és 17
