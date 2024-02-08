@@ -2,7 +2,7 @@
 date = "2024-01-15"
 title = "Nou arquetip Canigó v1.0.0 sense dependència de plugins."
 description = "S'ha publicat un nou arquetip per generar projectes amb Canigó 3.8 sense dependència de cap plugin."
-sections = ["Notícies", "home"]
+sections = ["Notícies"]
 categories = ["canigo"]
 key = "GENER2024"
 +++

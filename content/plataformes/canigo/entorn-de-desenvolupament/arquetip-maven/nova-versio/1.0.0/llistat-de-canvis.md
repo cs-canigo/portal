@@ -7,7 +7,7 @@ sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Arquetip Maven - 0.0.1
+## Arquetip Maven - 1.0.0
 
 **15/01/2024**:
 - S'ha concebut un nou arquetip amb el propòsit de ser **agnòstic perquè no depengui  de cap plugin** .

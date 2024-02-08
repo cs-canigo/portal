@@ -3,7 +3,7 @@ date        = "2024-01-15"
 
 title       = "Canigó. Publicació nova versió 3.8.0"
 description = "S'ha publicat una nova versió de Canigó donant suport a Jdk 17"
-sections    = ["Notícies", "home"]
+sections    = ["Notícies"]
 categories  = ["canigo"]
 key         = "GENER2023"
 +++
