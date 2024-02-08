@@ -118,7 +118,7 @@ S'ha certificat la **compatibilitat de Canigó 3.8.0 amb les següents base de d
 
 A partir d'ara, l'arquetip Maven de Canigó es converteix en un arquetip agnòstic, eliminant la dependència amb el plugin d'Eclipse pel seu funcionament i permetent importar l'artefacte generat en el IDE desitjat. Això facilita la flexibilitat i l'adaptabilitat del framework als diferents entorns i necessitats dels desenvolupadors.
 
-_Documentació del nou arquetip_: [Arquetip maven 0.0.1](https://canigo.ctti.gencat.cat/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/0.0.1/documentacio/)
+_Documentació del nou arquetip_: [Arquetip maven 1.0.0](https://canigo.ctti.gencat.cat/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.0/documentacio/)
 
 _AVÍS: En aquesta versió, el plugin de Canigó i la màquina virtual amb Vagrant queden obsolets_
 

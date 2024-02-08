@@ -73,7 +73,7 @@ Per a generar aplicacions Canigó amb l'arquetipus maven utilitzarem el goal *ar
 mvn archetype:generate \
    -DarchetypeGroupId=cat.gencat.ctti \
    -DarchetypeArtifactId=canigo-archetype-rest \
-   -DarchetypeVersion=0.0.1 \
+   -DarchetypeVersion=1.0.0 \
    -DartifactId=Prova \
    -DgroupId=cat.gencat \
    -DappName=prova
@@ -90,7 +90,8 @@ Assegura't de col·locar cometes dobles al principi i al final de cada paràmetr
 mvn archetype:generate /  
 		"-DarchetypeGroupId=cat.gencat.ctti" 
 		"-DarchetypeArtifactId=canigo-archetype-rest" / 
-		"-DarchetypeVersion=0.0.1" "-DartifactId=Prova" / 
+		"-DarchetypeVersion=1.0.0" 
+      "-DartifactId=Prova" / 
 		"-DgroupId=cat.gencat" / 
 		"-DappName=prova" / 
 		"-Dversion=1.0.0"
