@@ -35,12 +35,18 @@ Cal tenir pressent:
 * **Adjuntar qualsevol document que pugui ser útil** per a la resolució de la petició (formularis, captures de pantalla, exemples... etcètera).
 
 <br/>
+
 ##### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://pautic.gencat.cat. <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir-se al portal d'autoservei. <br/>
 **OBSERVACIÓ**: El perfil de l'usuari pot condicionar les opcions habilitades en cada cas.
-<CENTER>![Pàgina principal](/related/lowcode/Remedy1.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/lowcode/Remedy1.png)
+
+</center>
 <br/>
 
 <br/>
