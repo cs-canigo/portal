@@ -22,7 +22,6 @@ Jenkins proporciona un entorn de treball i desplegament automatitzat estalviant 
 
 <br/>
 
-
 **Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient
 entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes,
 ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i
@@ -118,7 +117,6 @@ de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·lic
 
 <br/>
 
-
 Podrà accedir a **Nexus** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/
 
 ![Nexus](/related/sic/serveis/nexus-sic.png)
@@ -146,8 +144,7 @@ Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjan�
 Els jobs multi-etapa realitzen multitud d'accions organitzades en STAGES. En cas de produir-se incidències a qualsevol de les
 seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 
-<CENTER>!\[Nou projecte](/related/sic/3.0/pipeline-stages.png)</CENTER>
-
+<CENTER>!\\[Nou projecte](/related/sic/3.0/pipeline-stages.png)</CENTER>
 
 <br/>
 A continuació s'explica breument cadascuna de les etapes previstes per al desplegament de components i aplicacions:
@@ -157,7 +154,7 @@ A continuació s'explica breument cadascuna de les etapes previstes per al despl
 * **Prepare Builder**: construcció de la possible imatge Docker pròpia de Build que serà utilitzada, en la següent etapa, per a la compilació i construcció d'artefactes.
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 * **Build Tag**: generació del tag de Build al repositori de codi. Aquest tag marca que es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
-* **Static Code Analysis**: etapa prevista per a l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
+* **Static Code Analysis**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 * **Security Test**: etapa prevista per a l'execució de tests de seguretat.
 * **Unit Test**: etapa prevista per a l'execució de tests unitaris.
 * **Release Tag**: generació del tag de Release Candidate al repositori de codi. Aquest tag marca que es tracta d'una versió desplegable. Per exemple: 1.0.0.
@@ -268,9 +265,9 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |2.2|7|
 |3.2|6<br/>7<br/>8|
 |3.5|7<br/>8|
-|3.6 \\*|7<br/>8<br/>11-openjdk|
+|3.6 \\\*|7<br/>8<br/>11-openjdk|
 
-(\\*) Versió amb suport i manteniment.
+(\\\*) Versió amb suport i manteniment.
 -->
 
 ### Maven/JDK
