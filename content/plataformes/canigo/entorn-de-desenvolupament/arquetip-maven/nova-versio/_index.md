@@ -1,7 +1,7 @@
 +++
 date        = "2024-01-15"
-title       = "Nova versió"
-description = "Nova versió"
+title       = "1.0.0"
+description = ""
 sections    = "canigo-fwk-docs"
 weight		= 1
 +++
