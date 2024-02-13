@@ -173,6 +173,7 @@ Contingut:
    - Descripció de la consulta
 
 <br/>
+
 [**Per a reportar una incidència:**](mailto:sau.tic@gencat.cat?subject=Incid%C3%A8ncia%20sobre%20aplicaci%C3%B3%20FRAMEWORK%20LOWCODE&body=-%20Codi%20de%20la%20etiqueta%20o%20el%20nom%20del%20seu%20ordinador%3A%20LOWCODE-Incid%C3%A8ncia%0A-%20Tel%C3%A8fon%20de%20contacte%0A-%20Problema%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20LOWCODE%0A%0A-%20Descripci%C3%B3%20de%20l%27error%20o%20problema%20que%20es%20mostra%20a%20la%20pantalla)
 
 Assumpte: "Incidència sobre aplicació Framework Desenvolupament LowCode"  <br/>
@@ -185,6 +186,7 @@ Contingut:
    - Descripció de l'error o problema que es mostra a la pantalla
 
 <br/>
+
 [**Petició de suport:**](mailto:sau.tic@gencat.cat?subject=Petici%C3%B3%20de%20suport%20funcional%20per%20a%20l%27aplicaci%C3%B3%20FRAMEWORK%20LOWCODE&body=-%20Urg%C3%A8ncia%3A%20Alta%2C%20Mitjana%20o%20Baixa%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20LOWCODE%0A-%20Descripci%C3%B3%20breu%20del%20suport%0A%0A-%20Descripci%C3%B3%20detallada%20del%20suport%0A)
 
 Assumpte: "Petició de suport funcional per a l'aplicació Framework Desenvolupament LowCode" <br/>
