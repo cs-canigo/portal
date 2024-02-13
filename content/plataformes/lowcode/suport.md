@@ -50,6 +50,7 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir
 <br/>
 
 <br/>
+
 ##### Procediment
 
 A Remedy no hi ha tipus de peticions específiques per als serveis LowCode, totes les peticions s’han de demanar a partir de tres categories generals:
@@ -59,13 +60,18 @@ A Remedy no hi ha tipus de peticions específiques per als serveis LowCode, tote
 * **Necessito demanar**: per a realitzar sol·licituds.
 
 <br/>
+
 ###### Avaria o mal funcionament (incidències)
 
 Tipus de petició per reportar qualsevol tipus d'incidència relacionada amb els serveis de LowCode: problemes d'accés als serveis, errors d'execució de les aplicacions... etcètera.
 
 Caldrà seleccionar la categoria: `Avaria o mal funcionament → Incidència en aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/lowcode/Remedy2.png)</center>
+<CENTER>
+
+![Pàgina principal](/related/lowcode/Remedy2.png)
+
+</center>
 <br/>
 
 Informació a emplenar:
@@ -90,13 +96,19 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la incidència.
 
 <br/>
+
 ###### Necessito saber (consultes)
 
 Tipus de petició per a demanar qualsevol tipus d'informació relacionada amb els serveis de LowCode.
 
 Caldrà seleccionar la categoria: `Necessito saber → Consulta sobre aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/lowcode/Remedy3.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/lowcode/Remedy3.png)
+
+</center>
 <br/>
 
 Informació a emplenar:
@@ -114,11 +126,17 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la consulta.
 
 <br/>
+
 ###### Necessito demanar (sol·licituds)
 
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/lowcode/Remedy4.png)</center>
+
+<CENTER>
+
+![Pàgina principal](/related/lowcode/Remedy4.png)
+
+</center>
 <br/>
 
 Informació a emplenar:
@@ -136,6 +154,7 @@ Informació a emplenar:
 aproximació sobre la tasca, la llibreria a publicar... etcètera.
 
 <br/>
+
 #### Contactar amb bústia SAU
 
 En cas que el **servei Remedy no es trobi disponible**, podrà optar per obrir una petició via bústia SAU: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat). <br/>
