@@ -32,7 +32,7 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
    2. [Rendiment i escalabilitat](#RendimentEscalabilitat)
    3. [Disponibilitat](#Disponibilitat)
    4. [Internacionalització](#Internacionalitzacio)
-4. [Imformació Específica pel projecte d'aprovisionament](#InformacioEspecificaProjecteAprovisionament)
+4. [Informació Específica pel projecte d'aprovisionament](#InformacioEspecificaProjecteAprovisionament)
    1. [Informació relativa al context](#InformacióRelativaContext)
    2. [Informació relativa al SIC](#InformacioRelativaSIC)
    3. [Informació relativa a xarxes i dominis DNS](#InformacioRelativaXarxesDominis)
