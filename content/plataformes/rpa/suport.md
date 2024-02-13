@@ -16,6 +16,7 @@ Per peticions, dubtes o incidències en el desenvolupament, proves i execució d
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de Plataforma Corporativa RPA a Remedy**. <br/>
 
 <br/>
+
 ### Obrir nova petició a SAU-Remedy
 
 Aquesta guia s’ha elaborat a partir de la "Guia d’usuari del Portal d’Autoservei" oficial de Remedy per a que serveixi de guia per a aquells usuaris que no estiguin
@@ -28,15 +29,22 @@ Cal tenir pressent:
 * **Adjuntar qualsevol document que pugui ser útil** per a la resolució de la petició (formularis, captures de pantalla, exemples... etcètera).
 
 <br/>
+
 #### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://pautic.gencat.cat. <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir-se al portal d'autoservei. <br/>
 **OBSERVACIÓ**: El perfil de l'usuari pot condicionar les opcions habilitades en cada cas.
-<CENTER>![Pàgina principal](/related/rpa/Remedy1.png)</center>
+
+<CENTER>
+   
+![Pàgina principal](/related/rpa/Remedy1.png)
+
+</center>
 <br/>
 
 <br/>
+
 ### Procediment
 
 A Remedy no hi ha tipus de peticions específiques per la Plataforma Corporativa de RPA, totes les peticions s’han de demanar a partir de tres categories generals:
@@ -46,13 +54,19 @@ A Remedy no hi ha tipus de peticions específiques per la Plataforma Corporativa
 * **Necessito demanar**: per a realitzar sol·licituds.
 
 <br/>
+
 #### Avaria o mal funcionament (incidències)
 
 Tipus de petició per reportar qualsevol tipus d'incidència relacionada amb la Plataforma Corporativa de RPA: problemes d'accés a les eines de desenvolupament, errors d'execució de processos... etcètera.
 
 Caldrà seleccionar la categoria: `Avaria o mal funcionament → Incidència en aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/rpa/Remedy2.png)</center>
+
+<CENTER>
+   
+![Pàgina principal](/related/rpa/Remedy2.png)
+
+</center>
 <br/>
 
 Informació a emplenar:
@@ -77,13 +91,19 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la incidència.
 
 <br/>
+
 #### Necessito saber (consultes)
 
 Tipus de petició per a demanar qualsevol tipus d'informació relacionada amb els serveis de la Plataforma Corporativa de RPA.
 
 Caldrà seleccionar la categoria: `Necessito saber → Consulta sobre aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/rpa/Remedy3.png)</center>
+
+<CENTER>
+   
+![Pàgina principal](/related/rpa/Remedy3.png)
+
+</center>
 <br/>
 
 Informació a emplenar:
@@ -103,6 +123,7 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la consulta.
 
 <br/>
+
 #### Necessito demanar (sol·licituds)
 
 Tipus de petició per a demanar:
@@ -114,7 +135,12 @@ Tipus de petició per a demanar:
 
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/rpa/Remedy4.png)</center>
+
+<CENTER>
+   
+![Pàgina principal](/related/rpa/Remedy4.png)
+
+</center>
 <br/>
 
 Informació a emplenar:
@@ -133,6 +159,7 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil o, fins i tot, obligatori (com pot ser, en el cas d'una petició d'alta de procés, adjuntar el document de Sol·licitud d'automatització)
 
 <br/>
+
 #### Contactar amb bústia SAU
 
 En cas que el **servei Remedy no es trobi disponible**, podrà optar per obrir una petició via bústia SAU: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat). <br/>
@@ -151,6 +178,7 @@ Contingut:
    - Descripció de la consulta
 
 <br/>
+
 [**Per a reportar una incidència:**](mailto:sau.tic@gencat.cat?subject=Incid%C3%A8ncia%20sobre%20aplicaci%C3%B3%20Plataforma%20Corporativa%20RPA&body=-%20Codi%20de%20la%20etiqueta%20o%20el%20nom%20del%20seu%20ordinador%3A%20RPA-Incid%C3%A8ncia%0A-%20Tel%C3%A8fon%20de%20contacte%0A-%20Problema%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20Plataforma%20Corporativa%20RPA%0A%0A-%20Descripci%C3%B3%20de%20l%27error%20o%20problema%20que%20es%20mostra%20a%20la%20pantalla)
 
 Assumpte: "Incidència sobre aplicació Plataforma Corporativa RPA"  <br/>
@@ -163,6 +191,7 @@ Contingut:
    - Descripció de l'error o problema que es mostra a la pantalla
 
 <br/>
+
 [**Petició de suport:**](mailto:sau.tic@gencat.cat?subject=Petici%C3%B3%20de%20suport%20funcional%20per%20a%20l%27aplicaci%C3%B3%20Plataforma%20Corporativa%20RPA&body=-%20Urg%C3%A8ncia%3A%20Alta%2C%20Mitjana%20o%20Baixa%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20Plataforma%20Corporativa%20RPA%0A-%20Descripci%C3%B3%20breu%20del%20suport%0A%0A-%20Descripci%C3%B3%20detallada%20del%20suport%0A)
 
 Assumpte: "Petició de suport funcional per a l'aplicació Plataforma Corporativa RPA" <br/>
