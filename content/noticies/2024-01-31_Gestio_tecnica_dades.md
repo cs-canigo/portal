@@ -26,10 +26,10 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
   - Entitats del sector públic: S'ha actualitzat per l'eliminació de 3 registres i la modificació de 11 registres.<br><br>
 <br><br><br>
 
-- S'ha incorporat dos noves entitats dins del grup obligades:<br>
+- S'ha incorporat una entitat entitats dins del grup obligades:<br>
    - Polígons industustrials de Catalunya<br>
  
-- S'han incorporat una entitat dins del grup Pendents d'aprovació:<br>
+- S'ha incorporat una entitat dins del grup Pendents d'aprovació:<br>
   - Jutjats de Pau.<br><br><br>
 
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
