@@ -1,6 +1,6 @@
 +++
 date        = "2020-12-12"
-title       = "Arquetip maven"
-description = "Arquetip maven"
+title       = "Arquetip Maven"
+description = "Arquetip Maven"
 sections    = "canigo-fwk-docs"
 +++
