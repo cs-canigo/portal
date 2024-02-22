@@ -241,7 +241,7 @@ Detallar quines tecnologies s'utilitzen per cada una de les capes.
 
 * _En cas d'aplicacio JEE s'ha de fer ús del Framework Canigó_
 * _En el cas de desenvolupament en .Net, i en cas de ser una app nova, s'ha de dur a terme amb .NetCore_
-* _S'ha de respectar el principi d'Arquitectura 2.2 ([Estabilitat de les versions de programari](https://canigo.ctti.gencat.cat/principis/arq-si/))_
+* _S'ha de respectar el principi d'Arquitectura 2.2 ([Estabilitat de les versions de programari](https://canigo.ctti.gencat.cat/arquitectura/principis_arq/))_
   
 ### **Identificar software/llibreries de tercers utilitzat** {#IdentificarSoftwareLlibreriesTercersUtilitzades}
 Identificar aquelles llibreries que no estan en un repositori confiable.
@@ -354,14 +354,14 @@ Verificar si el servei necessita realitzar enviaments de correus electrònics
 
 **Directrius**
 
-_Principi d'Arquitectura 1.6.2 (Servidors SMTP transversals - https://canigo.ctti.gencat.cat/principis/arq-si/)_
+_Principi d'Arquitectura 1.6.2 (Servidors SMTP transversals - https://canigo.ctti.gencat.cat/arquitectura/principis_arq/)_
 
 #### **ProxyPass (Sortida a Internet)**
 Informar si el servei necessita sortida a internet. Fent crides altres serveis per executar processos o obtenir informació.
 
 **Directrius**
 
-_Principi d'Arquitectura 1.6.3 (Accés a internet des de xCAT - https://canigo.ctti.gencat.cat/principis/arq-si/)_
+_Principi d'Arquitectura 1.6.3 (Accés a internet des de xCAT - https://canigo.ctti.gencat.cat/arquitectura/principis_arq/)_
 
 #### **Altres serveis tècnics utilitzats**
 Informar si es fan servir d'altres serveis tecnics com els protocols IMAP o POP3
@@ -395,7 +395,7 @@ Indicar a on s'ubicarán els logs.
 
 **Directrius**
 
-_Principi d'Arquitectura 2.4.4 ([Nomenclatura de les infraestructures](https://canigo.ctti.gencat.cat/principis/arq-si/))_
+_Principi d'Arquitectura 2.4.4 ([Nomenclatura de les infraestructures](https://canigo.ctti.gencat.cat/arquitectura/principis_arq/))_
 
 _Cal respectar l'estandart CTTI de nomenclatura ([Estandard CTTI per a la nomenclatura de les infraestructures](https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/))_
 
@@ -433,7 +433,7 @@ Indicar el sistema d'autenticació que el servei fa servir per permetre l'accés
 
 **Directrius**
 
-_Principi d'Arquitectura 1.6.4 ([Gestió d'identitats](https://canigo.ctti.gencat.cat/principis/arq-si/))_
+_Principi d'Arquitectura 1.6.4 ([Gestió d'identitats](https://canigo.ctti.gencat.cat/arquitectura/principis_arq/))_
 
 _En els nous serveis es obligatori la integració amb GICAR. En cas contrari caldrà excepció d'Arquitectura._
 
