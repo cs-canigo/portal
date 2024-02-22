@@ -354,14 +354,14 @@ Verificar si el servei necessita realitzar enviaments de correus electrònics
 
 **Directrius**
 
-_Principi d'Arquitectura 1.6.2 (Servidors SMTP transversals - https://canigo.ctti.gencat.cat/arquitectura/principis_arq/)_
+_Principi d'Arquitectura 1.6.2 ([Servidors SMTP transversals](https://canigo.ctti.gencat.cat/arquitectura/principis_arq/))_
 
 #### **ProxyPass (Sortida a Internet)**
 Informar si el servei necessita sortida a internet. Fent crides altres serveis per executar processos o obtenir informació.
 
 **Directrius**
 
-_Principi d'Arquitectura 1.6.3 (Accés a internet des de xCAT - https://canigo.ctti.gencat.cat/arquitectura/principis_arq/)_
+_Principi d'Arquitectura 1.6.3 ([Accés a internet des de xCAT](https://canigo.ctti.gencat.cat/arquitectura/principis_arq/))_
 
 #### **Altres serveis tècnics utilitzats**
 Informar si es fan servir d'altres serveis tecnics com els protocols IMAP o POP3
