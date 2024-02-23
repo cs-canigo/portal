@@ -27,7 +27,7 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 <br><br><br>
 
 - S'ha incorporat una entitat dins del grup obligades:<br>
-   - Polígons industustrials de Catalunya<br>
+   - Polígons industrials de Catalunya<br>
  
 - S'ha incorporat una entitat dins del grup Pendents d'aprovació:<br>
   - Jutjats de Pau.<br><br><br>
