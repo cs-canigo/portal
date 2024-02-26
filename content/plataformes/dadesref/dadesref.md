@@ -1,5 +1,5 @@
 +++
-date        = "2024-01-31"
+date        = "2024-02-26"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]

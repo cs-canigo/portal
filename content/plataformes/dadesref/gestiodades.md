@@ -1,5 +1,5 @@
 +++
-date        = "2024-01-31"
+date        = "2024-02-26"
 title       = "Gestió Tècnica de Dades"
 description = "Gestió Tècnica de Dades"
 sections    = ["Data Architecture"]
