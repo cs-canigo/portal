@@ -4332,4 +4332,32 @@
         "Data_publicacio": "26/02/2024",
         "Data_actualitzacio": "26/02/2024"
     }
+		{
+        "Id": "dtarq194",
+        "Nom": "Agrupacions de secretaries de jutjats de pau",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Administració de justícia",
+        "Descripcio": "Els municipis de menys de 7.000 habitants es poden organitzar en agrupacions de secretaries de jutjats de pau. Aquestes agrupacions es creen quan diversos municipis d’un mateix partit judicial, i generalment de la mateixa comarca, aconsegueixen sumar una població mínima de 7.000 habitants i ho sol·liciten, de conformitat amb els requisits que estableix el Decret 75/1997, de 18 de març, pel qual es regula el procediment de creació i modificació de les agrupacions de secretaries de jutjats de pau.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Justícia, Drets i Memòria - Subdirecció General de Suport Judicial i Coordinació Tècnica",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Agrupacions_secretaries_pau_ATR",
+                "ifitxer_xls": "Agrupacions_secretaries_pau.xlsx",
+                "idatacreacio": "26/02/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/02/2024",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Agrupacions-de-Secretaries-de-Jutjats-de-Pau/urq4-zhsn",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AGRUPACIONS_DE_SECRETARIAS_JUTJATS_DE_PAU",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/02/2024",
+        "Data_actualitzacio": "26/02/2024"
+    }
 ]}
