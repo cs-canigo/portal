@@ -19,7 +19,7 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
   - Municipis Espanya: S'ha actualitzat per afegir un nou municipi.<br><br>
   - Unitats poblacionals Espanya: S'ha actualitzat per convertir el valor d'entitat singular "Usansolo" en un municpi. I eliminar dos valors.<br><br>
   - Nom carrers Catalunya: S'ha actualitzat per una reordenació dels atributs de noms de carrer.<br><br>
-  - Tipus de via: S'ha actualitzat per agegir 4 valors nous.<br><br>
+  - Tipus de via: S'ha actualitzat per afegir 4 valors nous.<br><br>
   - Sectors sanitaris:  S'ha actualitzat per una restructuració general dels valors i la incorporació d'un nou atribut, anomentat Geometry.<br><br>
   - Regions sanitàries: S'ha actualitzat per incorporar  les regions sanitàries de 70 Penedès, 75 Barcelona metropolitana sud, 76 Barcelona metropolitana nord i 79 Barcelona ciutat. Eliminar la regió sanitària 78 Barcelona. I  la incorporació d'un nou atribut, anomentat Geometry.<br><br> 
   - Àrees bàsiques salut: S'ha actualitzat per una restructuració general dels valors i la incorporació d'un nou atribut, anomentat Geometry.<br><br>
