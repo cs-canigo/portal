@@ -53,7 +53,20 @@ Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD
    - Codi Servei
    - Codi Aplicació
 
-El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada:
+ El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada:
+   - Openshift
+      - [Openshift] – INT- Crear Pipelines
+      - [Openshift] – INT- Configurar Secrets
+      - [Openshift] – INT- Instal·lar Certificats
+      - [Openshift] – PRE – Crear Pipelines
+      - [Openshift] – PRE – Configurar Secrets
+      - [Openshift] – PRE – Instal·lar Certificats
+      - [Openshift] – PRO – Crear Pipelines
+      - [Openshift] – PRO – Configurar Secrets
+      - [Openshift] – PRO – Instal·lar Certificats
+      - [Openshift] – N/A – Creació CMDB
+
+
 
 <br/>
 
