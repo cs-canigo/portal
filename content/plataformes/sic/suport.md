@@ -26,6 +26,44 @@ Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **c
 aquest coordini l’acompliment de requisits per a poder iniciar el projecte d’integració al SIC. En endavant, tota la comunicació es farà per aquest canal recordant
 assignar el tiquet a la persona que ha de donar resposta en cada cas.
 
+<br/>
+
+S’ha creat un nou projecte per l’acompanyament Cloud i SIC que pròximament es posarà en servei.
+
+Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC). El procediment que ha de seguir el lot d'aplicació per a sol·licitar un acompanyament per part de SIC en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
+
+* El lot d' aplicació obrirà un nou tiquet ACOCLDSIC a l' inici de la fase d' acompanyament de SIC. En la creació del tiquet s' hauran d' informar com a servei SIC, així com altres camps obligatoris. El tiquet ACOCLDSIC s' assignarà automàticament al responsable del servei d' acompanyament de SIC. En el tiquet ha d' informar els camps següents:
+   - Tipus d' Incidència: Acompanyament SIC
+   - Organisme
+   - Projecte
+   - Resum
+   - Codi ISOL
+   - Descripció
+   - CPD
+   - Plataforma
+   - Codi Servei
+   - Codi Aplicació
+
+* En els tiquets d' acompanyament SIC, el tècnic de SIC crearà una o diverses subtasques per als treballs requerits.
+
+* El lot d' aplicació podrà crear noves subtasques de suport que seran assignades al responsable del servei d' acompanyament de SIC i executades per SIC. A la subtasca ha d' informar els camps següents:
+   - Tasca: tipus de tasca demanada a SIC
+   - Entorn
+   - Resum
+   - Descripció
+
+  En cas que les subtasques creades pel lot no entrin en l' abast del servei, SIC les tancarà informant del motiu No Aplica.
+
+* Quan els tècnics de SIC comencin a treballar amb una de les subtasques, passaran la mateixa a l'estat In Progress.
+
+* Si l' equip de SIC requereix informació addicional del lot d' aplicació posarà la subtasca en estat Pendent i l' assignarà a l' informador del tiquet ACOCLDSIC.
+
+* Quan l' informador proporcioni la informació requerida pel tècnic de SIC assassinarà de nou la subtasca al tècnic i aquest la passarà a l' estat In Progress. L'informador assignarà la subtasca de nou al tècnic i detallarà en el camp Comentari la informació requerida o acció realitzada mitjançant l'opció Assignar, i la posarà en estat En Progrés mitjançant l'opció Usuari Afegeix.
+  
+* Un cop finalitzats els treballs requerits a la subtasca, el tècnic de SIC la passarà a l' estat Tancada pel motiu Finalitzada.
+
+* Un cop es finalitzin la fase d' acompanyament i entri en servei el projecte, no es podran crear subtasques addicionals i es tancarà el tiquet ACOCLDSIC amb el motiu Finalitzada.
+
 
 ## Integració al SIC del desplegament d’aplicacions en servei
 
