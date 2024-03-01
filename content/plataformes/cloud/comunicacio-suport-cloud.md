@@ -37,6 +37,10 @@ Per les aplicacions en fase de projecte la comunicació s'ha de fer via **CSTD**
 
 <br/>
 
+Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC).
+
+<br/>
+
 #### Aplicacions que no han iniciat el procés d'alta dins CTTI
 
 _Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/CLD).
