@@ -41,7 +41,19 @@ S’ha creat un nou projecte per l’acompanyament Cloud i SIC que pròximament 
 
 Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC). El procediment que ha de seguir el lot d'aplicació per a sol·licitar un acompanyament per part de Suport Cloud en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
 
-* El lot d' aplicació obrirà un nou tiquet ACOCLDSIC a l' inici de la fase d' acompanyament de Suport Cloud. En la creació del tiquet s' hauran d' informar com a servei Suport Cloud, així com altres camps obligatoris que determinaran, entre altres coses, les subtasques que es crearan automàticament per al tiquet d' acompanyament. El tiquet ACOCLDSIC s' assignarà automàticament al responsable del servei d' acompanyament de Suport Cloud.
+* El lot d' aplicació obrirà un nou tiquet ACOCLDSIC a l' inici de la fase d' acompanyament de Suport Cloud. En la creació del tiquet s' hauran d' informar com a servei Suport Cloud, així com altres camps obligatoris que determinaran, entre altres coses, les subtasques que es crearan automàticament per al tiquet d' acompanyament. El tiquet ACOCLDSIC s' assignarà automàticament al responsable del servei d' acompanyament de Suport Cloud. En el tiquet ha d' informar els camps següents:
+   - Tipus d' Incidència: Acompanyament Cloud
+   - Organisme
+   - Projecte
+   - Resum
+   - Codi ISOL
+   - Descripció
+   - CPD
+   - Plataforma
+   - Codi Servei
+   - Codi Aplicació
+
+El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada:
 
 <br/>
 
