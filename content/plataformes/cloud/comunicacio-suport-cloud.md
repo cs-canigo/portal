@@ -53,7 +53,7 @@ Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD
    - Codi Servei
    - Codi Aplicació
 
- El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada:
+  El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada:
    - Openshift
       - [Openshift] – INT- Crear Pipelines
       - [Openshift] – INT- Configurar Secrets
@@ -66,7 +66,66 @@ Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD
       - [Openshift] – PRO – Instal·lar Certificats
       - [Openshift] – N/A – Creació CMDB
 
+   - Azure
+      - [Azure] – Aprovisionar xarxa i labels
+      - [Azure] – Connexió NET0
+      - [Azure] – Crear Pipelines
+      - [Azure] – Creació CMDB
 
+   - AWS
+      - [AWS] – Aprovisionar xarxa i labels
+      - [AWS] – Connexió NET0
+      - [AWS] – Crear Pipelines
+      - [AWS] – Creació CMDB
+  
+   - PowerPlatform
+      - [PowerPlatform] – Instal·lar Llicències
+      - [PowerPlatform] – PRE – Crear Entorn
+      - [PowerPlatform] – PRO – Crear Entorn 
+      - [PowerPlatform] – Creació CMDB
+    
+   - IBMCloud
+      - [IBMCloud] – INT- Crear Pipelines
+      - [IBMCloud] – INT- Configurar Secrets
+      - [IBMCloud] – INT- Instal·lar Certificats
+      - [IBMCloud] – PRE – Crear Pipelines
+      - [IBMCloud] – PRE – Configurar Secrets
+      - [IBMCloud] – PRE – Instal·lar Certificats
+      - [IBMCloud] – PRO – Crear Pipelines
+      - [IBMCloud] – PRO – Configurar Secrets
+      - [IBMCloud] – PRO – Instal·lar Certificats
+      - [IBMCloud] – N/A – Creació CMDB
+    
+   - GoogleCloud
+      - [GoogleCloud] – Aprovisionar xarxa i labels
+      - [GoogleCloud] – Connexió NET0
+      - [GoogleCloud] – Crear Pipelines
+      - [GoogleCloud] – Creació CMDB
+
+   - OCI
+      - [OCI] – Aprovisionar xarxa i labels
+      - [OCI] – Connexió NET0
+      - [OCI] – Crear Pipelines
+      - [OCI] – Creació CMDB
+
+* Quan els tècnics de Suport Cloud comencin a treballar amb una de les subtasques, passaran la mateixa a l'estat In Progress.
+
+* Si l' equip de Suport Cloud requereix informació addicional del lot d' aplicació posarà la subtasca en estat Pendent i l' assignarà a l' informador del tiquet ACOCLDSIC.
+  
+* Quan l' informador proporcioni la informació requerida pel tècnic de Suport Cloud, assignarà de nou la subtasca al tècnic i aquest la passarà a l' estat In Progress. L' informador assignarà la subtasca de nou al tècnic i detallarà en el camp Comentari la informació requerida o acció realitzada mitjançant l' opció Assignar, i la posarà en estat En Progrés mitjançant l' opció Usuari Afegeix.
+
+* Un cop finalitzats els treballs requerits a la subtasca, el tècnic de Suport Cloud la passarà a l'estat Tancada pel motiu Finalitzada.
+
+* Durant el temps de vida del projecte d' acompanyament, el lot d' aplicació podrà crear noves subtasques del tipus requerit que seran assignades al responsable del servei d' acompanyament de Suport Cloud i executades per Suport Cloud. El lot d' aplicació podrà demanar tasques addicionals en el projecte, incloses en l' abast del servei d' acompanyament Cloud, mitjançant la creació de noves subtasques. A la subtasca ha d' informar els camps següents:
+   - Tasca: tipus de tasca demanada a Suport Cloud
+   - Entorn
+   - Resum
+   - Descripció
+
+  En cas que les subtasques creades pel lot no entrin en l' abast del servei, Suport Cloud les tancarà informant del motiu 
+  Fora d' Àmbit.
+  
+* Un cop es finalitzin totes les tasques incloses en l' acompanyament de Suport Cloud per a un projecte, es tancarà el tiquet ACOCLDSIC amb el motiu Finalitzada.
 
 <br/>
 
