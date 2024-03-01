@@ -52,7 +52,7 @@ Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD
    - Plataforma
    - Codi Servei
    - Codi Aplicació
-
+<br/>
   El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada:
    - Openshift
       - [Openshift] – INT- Crear Pipelines
@@ -107,7 +107,7 @@ Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD
       - [OCI] – Connexió NET0
       - [OCI] – Crear Pipelines
       - [OCI] – Creació CMDB
-
+<br/>
 * Quan els tècnics de Suport Cloud comencin a treballar amb una de les subtasques, passaran la mateixa a l'estat In Progress.
 
 * Si l' equip de Suport Cloud requereix informació addicional del lot d' aplicació posarà la subtasca en estat Pendent i l' assignarà a l' informador del tiquet ACOCLDSIC.
