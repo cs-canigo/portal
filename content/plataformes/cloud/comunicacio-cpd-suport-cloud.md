@@ -26,10 +26,6 @@ _Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip 
 
 #### Aplicacions en fase de projecte
 
-Per les aplicacions en fase de projecte la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD). El proveïdor d'aplicacions ha de crear una petició en aquest servei informant el camp Sumari "Suport projecte NOM_PROJECTE". Mentre l'aplicació estigui en fase de projecte tot el suport (Ex. definició d'imatges Docker, definició de descriptors de desplegament,...) es canalitzarà en aquesta petició.
-
-<br/>
-
 S’ha creat un nou projecte per l’acompanyament Cloud i SIC que pròximament es posarà en servei.
 
 Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC). El procediment que ha de seguir el CPD en els acompanyaments per part de Suport Cloud en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
