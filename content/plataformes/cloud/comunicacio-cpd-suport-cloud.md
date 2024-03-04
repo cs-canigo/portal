@@ -1,10 +1,10 @@
 +++
 date        = "2022-07-27"
-title       = "Comunicació proveïdors d'aplicacions amb Suport Cloud"
-description = "Canals de comunicació disponibles pels proveïdors d'aplicacions amb Suport Cloud"
+title       = "Comunicació CPDs amb Suport Cloud"
+description = "Canals de comunicació disponibles pels CPDs amb Suport Cloud"
 sections    = "Cloud"
 categories  = ["cloud"]
-aliases     = ["/cloud/comunicacio-suport-cloud/"]
+aliases     = ["/cloud/comunicacio-cpd-suport-cloud/"]
 weight      = 6
 +++
 
