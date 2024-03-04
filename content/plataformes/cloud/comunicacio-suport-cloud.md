@@ -18,7 +18,7 @@ Per les aplicacions que estiguin en servei:
 
 - **Remedy**
 
-_Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "AM10_19-N3-CLOUD" com a "Assigned Group".
+_Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "AM22_23-N2-CSCLOUD" com a "Assigned Group".
 
 (*) per les consultes cal informar el camp “INCIDENT TYPE” el valor “USER SERVICE REQUEST”.
 
@@ -27,7 +27,7 @@ _Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip 
 Donat que a les plataformes Cloud gestionades des de Suport Cloud es dóna accés a <b>logs</b> i <b>monitoratge</b> de l'aplicació, per l'agilitat en la resolució de les incidències és vital que el proveïdor d'aplicacions hagi revisat abans tota la informació de la qual disposa. També gràcies als <b>jobs de desplegament</b> del <a href="http://canigo.ctti.gencat.cat/sic/">SIC</a> és autònom per redesplegar el servei afectat. Per tant, només haurien d'arribar incidències a Suport Cloud relacionades amb la plataforma (Ex. indisponibilitat global de la plataforma), que ni tan sols redesplegant el servei puguin resoldre's.
 </div>
 
-**Per tractar sol.licituds d'assignació de llicències de tipus Power Platform**, un cop Bústia de Llicències confirma que es pot assignar una llicència, hauríeu de sol·licitar al SAU que obri un tiquet de Remedy tipus "Consulta sense Service" i que l’assigni al grup "AM10_19-N3-CLOUD", adjuntant el correu de Bústia i el formulari de Power Platform degudament emplenat.
+**Per tractar sol.licituds d'assignació de llicències de tipus Power Platform**, un cop Bústia de Llicències confirma que es pot assignar una llicència, hauríeu de sol·licitar al SAU que obri un tiquet de Remedy tipus "Consulta sense Service" i que l’assigni al grup "AM22_23-N2-CSCLOUD", adjuntant el correu de Bústia i el formulari de Power Platform degudament emplenat.
 
 <br/>
 
