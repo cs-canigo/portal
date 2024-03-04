@@ -64,6 +64,15 @@ Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD
 
 * Un cop es finalitzin la fase d' acompanyament i entri en servei el projecte, no es podran crear subtasques addicionals i es tancarà el tiquet ACOCLDSIC amb el motiu Finalitzada.
 
+## Comunicació CPDs amb Suport SIC
+
+El procediment que ha de seguir el CPD en els acompanyaments per part de SIC en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
+
+* Si l' equip de SIC requereix informació addicional o treballs per part de CPD posarà la subtasca en estat Pendent i l' assignarà al tècnic de CPD.
+  
+* Quan el tècnic de CPD proporcioni la informació o realitzi les tasques requerides pel tècnic de SIC assignarà de nou la subtasca al tècnic i aquest la passarà a l' estat In Progress. Una vegada completat el treball, el tècnic de CPD l'assignarà de nou al tècnic de Suport Cloud i detallarà en el camp Comentari la informació requerida o el treball realitzat mitjançant l'opció Assignar, i la posarà en estat En Progrés mitjançant l'opció Usuari Afegeix.
+
+
 
 ## Integració al SIC del desplegament d’aplicacions en servei
 
