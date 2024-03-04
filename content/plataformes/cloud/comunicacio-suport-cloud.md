@@ -1,5 +1,5 @@
 +++
-date        = "2022-07-27"
+date        = "2024-03-04"
 title       = "Comunicació proveïdors d'aplicacions amb Suport Cloud"
 description = "Canals de comunicació disponibles pels proveïdors d'aplicacions amb Suport Cloud"
 sections    = "Cloud"
