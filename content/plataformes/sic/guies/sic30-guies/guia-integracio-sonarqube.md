@@ -5,7 +5,9 @@ description = "Guia per a la integració amb eina d’anàlisi de codi de l'Ofic
 sections = "SIC"
 toc = true
 aliases = [
-    "/sic20-guies/guia-integracio-sonarqube/"
+    "/sic30-guies/guia-integracio-sonarqube/",
+    "/sic-welcome-pack/guia-integracio-sonarqube/",
+    "/sic-guies/guia-integracio-sonarqube/"
 ]
 taxonomies = []
 weight = 4
@@ -23,11 +25,11 @@ Per a més informació: [Portal de Qualitat](https://qualitat.solucions.gencat.c
 
 ## Integració contínua
 
-El SIC incorpora un **nou *Stage* a totes les pipelines de construcció i desplegament d’aplicacions** de forma que
+El SIC incorpora un ***Stage* a totes les pipelines de construcció i desplegament d’aplicacions** de forma que
 aquest s’encarrega de, un cop finalitzada amb èxit la construcció del/s artefacte/s,
 fer l’anàlisi i comprovació de les quality gates de codi, i realitzar l’enviament de l’informe a SonarQube.
 
-![Stage AEC](/related/sic/2.0/aec_stage.png)
+![Stage AEC](/related/sic/3.0/aec_stage.png)
 <br/>
 
 Per tant, **cada pujada de codi font al sistema de custòdia del SIC implica la revisió automàtica de la qualitat del codi del
@@ -35,13 +37,15 @@ projecte** i, si no passa les Quality Gates, l'Oficina de Qualitat pot bloquejar
 desplegament de l’aplicació. A la pantalla principal de la pipeline es mostrarà el resultat de la comprovació, habilitant un
 enllaç on podreu accedir al detall:
 
-![Stage AEC](/related/sic/2.0/link_qualitygate.png)
+![Stage AEC](/related/sic/3.0/link_qualitygate.png)
 <br/>
 
 ### Prerequisits
 
 Cal assegurar-se de tenir el codi font actualitzat, amb el versionat adient, i tenir la construcció i desplegament de l'aplicació
 automatitzada al SIC.
+
+Solament es realitzarà l'anàlisi estàtica de codi quan es realitzin desplegaments sobre la branca **MÀSTER**. En els desplegaments de la branca **EVOLUTIUS** no s'analitzarà el codi.
 
 ### Client utilitzat segons tecnologia
 
@@ -52,7 +56,7 @@ El sistema s'encarrega de fer l’enviament amb el client SonarScanner més adeq
 - `GENERIC`: per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres
 
 Per defecte, l’enviament es farà utilitzant el client de SonarScanner adient i s'aplicaran paràmetres per defecte d'acord amb la
-classificació del pas de construcció (*step*) configurat al [fitxer ACA](/sic-welcome-pack/fitxer-aca/) repositat al codi
+classificació del pas de construcció (*step*) configurat al [fitxer ACA](/sic30-guies/fitxer-aca/) repositat al codi
 font dels projectes i que origina la generació de les pipelines al SIC.
 Podeu veure que, com a novetat, es permet incloure una secció `analysis` on es pot redefinir el sistema d’enviament
 per a escollir una modalitat més adequada, per exemple, per a salvar limitacions conegudes com les següents:
@@ -72,8 +76,7 @@ En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](
 Tal com s'indica a la documentació de referència, cada tipus de client permet configurar els paràmetres aplicables a cada cas:
 https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-jenkins/.
 
-En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions]
-(/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/).
+En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/).
 
 ## Canals de contacte
 El canal de contacte dependrà de l'àmbit del dubte o problema:
