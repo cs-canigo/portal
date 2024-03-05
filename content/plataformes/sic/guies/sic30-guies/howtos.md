@@ -8,7 +8,7 @@ aliases = [
     "/sic30-guies/howtos/"
 ]
 taxonomies = []
-weight = 5
+weight = 6
 +++
 
 Un HOWTO és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.
