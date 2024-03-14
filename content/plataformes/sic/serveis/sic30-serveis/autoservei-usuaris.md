@@ -144,14 +144,14 @@ En crear projectes dins els grups d'aplicació, la resta d'usuaris del lot que n
 
 
 
-[Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)
+![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)
 
 
 Els mateixos usuaris Release Manager podran consultar, editar, afegir i eliminar membres del projecte, però ho hauran de fer \*\*a nivell de projecte\*\*, no de grup de projectes.
 
 
 
-[Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)
+![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)
 
 
 
@@ -169,7 +169,7 @@ Per a concedir accés sobre un projecte caldrà:
 
 
 
-[Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)
+![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)
 
 
 
@@ -178,7 +178,7 @@ En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'e
 
 
 
-[Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)
+![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)
 
 
 
