@@ -99,6 +99,38 @@ mvn archetype:generate /
 
 
 _NOTA: En el camp **artifactId** es permeten únicament caràcters alfanumèrics, no sent vàlids els caràcters especials (**"-", "@", "ñ", etc**) o les paraules reservades com a **"final"**, **"public"**._
+
+
+Quan executem aquest comandament, se'ns demanarà confirmar que totes les dades són correctes. 
+En aquest cas, seleccionarem l'opció **'Y'** per a indicar afirmativament, i aquí et deixo un exemple.
+
+```shell
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:3.2.1:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:3.2.1:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-archetype-plugin:3.2.1:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Archetype repository not defined. Using the one from [cat.gencat.ctti:canigo-archetype-rest:1.0.0] found in catalog remote
+[INFO] Using property: groupId = cat.gencat
+[INFO] Using property: artifactId = Prova
+[INFO] Using property: version = 1.0.0
+[INFO] Using property: package = cat.gencat
+[INFO] Using property: appName = prova
+Confirm properties configuration:
+groupId: cat.gencat
+artifactId: Prova
+version: 1.0.0
+package: cat.gencat
+appName: prova
+ Y: :  
+```
+En cas que no es desitgi confirmar cap acció, haurem d'agregar **"-B"** al final del comando perquè s'executi correctament.
   
 On:
 
