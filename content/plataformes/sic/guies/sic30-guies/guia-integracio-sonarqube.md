@@ -1,5 +1,5 @@
 +++
-date = "2022-02-15"
+date = "2024-03-15"
 title = "Guia integració eina d’anàlisi de codi de Qualitat"
 description = "Guia per a la integració amb eina d’anàlisi de codi de l'Oficina de Qualitat"
 sections = "SIC"
@@ -55,28 +55,20 @@ El sistema s'encarrega de fer l’enviament amb el client SonarScanner més adeq
 - `MSBUILD`: per a projectes que utilitzen MSBuild
 - `GENERIC`: per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres
 
-Per defecte, l’enviament es farà utilitzant el client de SonarScanner adient i s'aplicaran paràmetres per defecte d'acord amb la
-classificació del pas de construcció (*step*) configurat al [fitxer ACA](/sic30-guies/fitxer-aca/) repositat al codi
-font dels projectes i que origina la generació de les pipelines al SIC.
-Podeu veure que, com a novetat, es permet incloure una secció `analysis` on es pot redefinir el sistema d’enviament
-per a escollir una modalitat més adequada, per exemple, per a salvar limitacions conegudes com les següents:
-
-- Els projectes mavenitzats han d'empaquetar-se amb una versió mínima de Maven.
-- Els projectes java han de poder-se compilar amb una versió mínima de Jdk.
-- Els projectes .Net han de compilar-se amb una versió mínima de MSBuild i .NET Framework.
+Per defecte, l'enviament es farà utilitzant el client de SonarScanner adequat i s'aplicaran paràmetres per defecte d'acord amb la configuració establerta en el [fitxer ACA](/sic30-guies/fitxer-aca/)
 
 Per a més informació:
-https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-jenkins/
+https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/jenkins-extension-sonarqube/
 
-En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/9.2/analysis/languages/overview/)
+En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/languages/overview/)
 (veure Community Edition) per l’eina.
 
 ### Configuració a nivell de projecte
 
 Tal com s'indica a la documentació de referència, cada tipus de client permet configurar els paràmetres aplicables a cada cas:
-https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-jenkins/.
+https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/jenkins-extension-sonarqube/
 
-En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/).
+En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions](/howtos/2024-03-15-SIC-Howto-definir_exclusions_SonarQube).
 
 ## Canals de contacte
 El canal de contacte dependrà de l'àmbit del dubte o problema:
