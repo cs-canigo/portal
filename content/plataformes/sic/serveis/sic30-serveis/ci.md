@@ -153,6 +153,7 @@ A continuació s'explica breument cadascuna de les etapes previstes per al despl
 * **Checkout**: descàrrega del codi font del projecte a l'espai de treball.
 * **Prepare Builder**: construcció de la possible imatge Docker pròpia de Build que serà utilitzada, en la següent etapa, per a la compilació i construcció d'artefactes.
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
+* **MultiStepBuild**: compilació i construcció d'artefactes que usen múltiples tecnologies.
 * **Build Tag**: generació del tag de Build al repositori de codi. Aquest tag marca que es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
 * **Static Code Analysis**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 * **Security Test**: etapa prevista per a l'execució de tests de seguretat.
