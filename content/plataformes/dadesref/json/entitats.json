@@ -485,7 +485,7 @@
             },
             {
                 "inom": "V10",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Es modifica el nom de sis direccions generals d'identificador (id: 20885, 3421, 1116, 21691, 21688 i 21650), s'incorpora la direcció general \"Oficina d'Igualtat de Tracte i No-discriminació\" i s'elimina la direcció general d'identificador 21665.",
@@ -493,16 +493,32 @@
                 "ifitxer_xls": "Direccions_Generals.xlsx",
                 "idatacreacio": "20/12/2023",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/03/2024",
                 "idatapublicacio": "20/12/2023",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+            {
+                "inom": "V11",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                "idescripcio": "la Direcció General d’Ecosistemes Forestals i Gestió del Medi passa a denominar-se Direcció General de Boscos i Gestió del Medi i La Direcció General de Qualitat Ambiental i Canvi Climàtic passa a denominar-se Direcció General de Canvi Climàtic i Qualitat Ambiental.",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "27/03/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/03/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
+
         ],
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "20/12/2023"
+        "Data_actualitzacio": "27/03/2024"
     },
     {
         "Id": "dtarq192",
@@ -716,25 +732,25 @@
         "Descripcio": "Llistat de subdireccions generals de la Generalitat de Catalunya, especificant la secretaria o la direcció General de la qual depenen.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
                 "ifitxer_xls": "Subdireccions_Generals.xlsx",
-                "idatacreacio": "20/12/2023",
+                "idatacreacio": "27/03/2024",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "20/12/2023",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "27/03/2024",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "20/12/2023",
-        "Data_actualitzacio": "20/12/2023"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "27/03/2024",
+        "Data_actualitzacio": "27/03/2024"
     },
     {
         "Id": "dtarq90",
@@ -1947,7 +1963,7 @@
             },
             {
                 "inom": "V05",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "S'afegeix la geometria de cada ABS i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries i els sectors sanitaris.",
@@ -1955,16 +1971,31 @@
                 "ifitxer_xls": "Arees_basiques_salut.csv",
                 "idatacreacio": "31/01/2024",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/03/2024",
                 "idatapublicacio": "31/01/2024",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+            {
+                "inom": "V06",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "Els canvis respecte de la versió anterior són només en el nom de tres ABS.106    CERVERA - LA SEGARRA,230    SANTA PERPÈTUA DE MOGODA,325    PINEDA DE MAR",
+                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                "ifitxer_xls": "Arees_basiques_salut.csv",
+                "idatacreacio": "27/03/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/03/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                 "itipusactualitzacio": "Sota demanda"
             }
-        ],
+			],
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
         "Classificacio": "Consolidat",
         "Data_publicacio": "27/04/2022",
-        "Data_actualitzacio": "31/01/2024"
+        "Data_actualitzacio": "27/03/2024"
     },
     {
         "Id": "dtarq158",
@@ -3516,7 +3547,7 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
                 "idescripcio": "Versió inicial.",
@@ -3526,6 +3557,21 @@
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
                 "idatapublicacio": "31/01/2024",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
+                "idescripcio": "Des de la Direcció General d’Indústria ens fa arribar l’actualització trimestral de les dades dels Polígons industrials.- Eliminar els registres amb aquests codis:416004,425960,Perquè no apareixen en la nova llista i  afegir els següents:415917,426402,526806",
+                "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
+                "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
+                "idatacreacio": "27/02/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/03/2024",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pol%C3%ADgons-industrials-de-Catalunya/5asc-f6cw",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -3533,7 +3579,7 @@
         "nom_dinsBD": "POLIGONS_INDUSTRIALS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/01/2024",
-        "Data_actualitzacio": "31/01/2024"
+        "Data_actualitzacio": "27/03/2024"
     },
     {
         "Id": "dtarq85",
@@ -4359,5 +4405,33 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "26/02/2024",
         "Data_actualitzacio": "26/02/2024"
+    }
+	{
+        "Id": "dtarq196",
+        "Nom": "Àrees Territorials de l’àmbit educatiu",
+        "Ambit": "Educació, formació i universitats",
+        "Subambit": "Centres i serveis educatius (no universitaris)",
+        "Descripcio": "Delimitació de les dotze àrees territorials en els quals s'organitza territorialment el Departament d’Educació vigents des del curs 2022-2023.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament d'Educació",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Àrees_Territorials_ambit_educatiu_ATR.docx",
+                "ifitxer_xls": "Àrees_Territorials_ambit_educatiu.xlsx",
+                "idatacreacio": "27/03/2024",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/03/2024",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci-/Delimitaci-dels-serveis-territorials-del-Departame/ne55-4fc5",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "ÀREES_TERRITORIALS_AMBIT_EDUCATIU",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "27/03/2024",
+        "Data_actualitzacio": "27/03/2024"
     }
 ]}
