@@ -1,34 +1,6 @@
 {
     "data": [
         {
-            "Id": "dtarq163",
-            "Nom": "Categoria NTI",
-            "Ambit": "Administració pública, govern i relacions institucionals",
-            "Subambit": "Funcionament de l'administració",
-            "Descripcio": "Llistat de categories de documents en què s'agrupen el diferents tipus NTI (Norma Tècnica d’Interoperabilitat de Document Electrònic).",
-            "instancies": [
-                {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
-                    "itipus": "Tabular",
-                    "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                    "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Categoria_NTI_ATR.docx",
-                    "ifitxer_xls": "Categoria_NTI.xlsx",
-                    "idatacreacio": "14/12/2020",
-                    "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
-                    "idatapublicacio": "22/12/2021",
-                    "iurl_dades_obertes": "",
-                    "itipusactualitzacio": "Sota demanda"
-                }
-            ],
-            "nom_dinsBD": "CATEGORIA_NTI",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "22/12/2021",
-            "Data_actualitzacio": "22/12/2021"
-        },
-        {
             "Id": "dtarq167",
             "Nom": "Diaris i butlletins oficials",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -98,62 +70,6 @@
             "Classificacio": "Pendent",
             "Data_publicacio": "26/07/2023",
             "Data_actualitzacio": "26/07/2023"
-        },
-        {
-            "Id": "dtarq165",
-            "Nom": "Tipus Documentals",
-            "Ambit": "Administració pública, govern i relacions institucionals",
-            "Subambit": "Funcionament de l'administració",
-            "Descripcio": "Llistat de tipus de documents definits per adaptar la Norma Tècnica d’Interoperabilitat de Document Electrònic (NTI) a l'administració de la Generalitat de Catalumya.",
-            "instancies": [
-                {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
-                    "itipus": "Tabular",
-                    "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                    "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Tipus_Documentals_ATR.docx",
-                    "ifitxer_xls": "Tipus_Documentals.xlsx",
-                    "idatacreacio": "14/12/2020",
-                    "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
-                    "idatapublicacio": "22/12/2021",
-                    "iurl_dades_obertes": "",
-                    "itipusactualitzacio": "Sota demanda"
-                }
-            ],
-            "nom_dinsBD": "TIPUS_DOCUMENTALS",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "22/12/2021",
-            "Data_actualitzacio": "22/12/2021"
-        },
-        {
-            "Id": "dtarq164",
-            "Nom": "Tipus NTI",
-            "Ambit": "Administració pública, govern i relacions institucionals",
-            "Subambit": "Funcionament de l'administració",
-            "Descripcio": "Llistat de tipus NTI amb la seva corresponent categoria NTI (Norma Tècnica d’Interoperabilitat de Document Electrònic) que s'utilitizen per determinar els diferents tipus documentals.",
-            "instancies": [
-                {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
-                    "itipus": "Tabular",
-                    "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                    "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Tipus_NTI_ATR.docx",
-                    "ifitxer_xls": "Tipus_NTI.xlsx",
-                    "idatacreacio": "14/12/2020",
-                    "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
-                    "idatapublicacio": "22/12/2021",
-                    "iurl_dades_obertes": "",
-                    "itipusactualitzacio": "Sota demanda"
-                }
-            ],
-            "nom_dinsBD": "TIPUS_NTI",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "22/12/2021",
-            "Data_actualitzacio": "22/12/2021"
         },
         {
             "Id": "dtarq161",
