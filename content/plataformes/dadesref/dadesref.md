@@ -377,13 +377,13 @@ tr.shown td.details-control {
         <thead>
             <tr>
                 <th></th>
-                <th>Nivell Validació<br><img style="padding: 5px;width= 15px;height: 15px;"  src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:15%">Domini<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:15%">Subdomini<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th>Entitat<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:35%">Descripció<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:8%">Data publicació<img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:8%">Darrera actualització<img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th>Nivell Validació<br><img style="width: 15px;height: 15px;"  src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:15%">Domini<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:15%">Subdomini<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th>Entitat<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:35%">Descripció<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:8%">Data publicació<img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:8%">Darrera actualització<img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
             </tr>
         </thead>
     </table>
@@ -407,13 +407,13 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 <table id="tabpendents" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
-                <th>Nivell Validació<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:15%">Domini<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:15%">Subdomini<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th>Entitat<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:35%">Descripció<br><img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:8%">Data publicació<img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
-                <th style="width:8%">Darrera actualització<img style="padding: 5px;width= 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th>Nivell Validació<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:15%">Domini<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:15%">Subdomini<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th>Entitat<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:35%">Descripció<br><img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:8%">Data publicació<img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
+                <th style="width:8%">Darrera actualització<img style="width: 15px;height: 15px;" src="./../entitats/order.png" alt="Relacions entre entitats" title="Ordenar"></img></th>
                 <th>Detall</th>
             </tr>
         </thead>
