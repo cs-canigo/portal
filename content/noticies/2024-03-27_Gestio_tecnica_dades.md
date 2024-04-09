@@ -33,4 +33,4 @@ En la darrera actualització del Catàleg Tècnic de Dades s’han fet els segü
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:<br><br>
 
 * [Gestió Tècnica de Dades](https://canigo.ctti.gencat.cat/plataformes/dadesref/gestiodades/)<br>
-* [Dades de Referència](https://canigo.ctti.gencat.cat/plataformes/dadesref/dadesref/)<
+* [Dades de Referència](https://canigo.ctti.gencat.cat/plataformes/dadesref/dadesref/)
