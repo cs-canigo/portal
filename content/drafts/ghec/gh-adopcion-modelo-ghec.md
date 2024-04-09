@@ -38,7 +38,8 @@ Com s'ha comentat en el punt anterior, aquest és el primer pas cap a un model s
 
 El procés d'integració actualment és el següent :
 
-  ![Procés de creació de Model GHEC](/images/GHEC/gh_proceso_automatico_pub.png) 
+  ![Procés de creació de Model GHEC](
+    gh_proceso_automatico_pub.png) 
 
 1. **Onboarding del projecte**
 Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició JIRA al següent projecte : [ACOCLDSIC - Servei Acompanyament Suport Cloud i SIC](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC) on s'indicarà la següent informació :
@@ -112,9 +113,9 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
           4. Una vegada sincronitzat Azure Entra ID amb GitHub EC, els usuaris inserits/eliminats es veuran reflectits en GHEC en els Teams vinculats als grups d'Entra ID i automàticament se li assignaran permisos depenent del Team.
       
-          Per a més informació, es pot consultar [Jerarquia i nomenclatura de Teams i nomenclatura de Repositoris ](.... /ca/gh-model-govern.md) amb informació addicional de la creació de teams.
+          Per a més informació, es pot consultar [Jerarquia i nomenclatura de Teams i nomenclatura de Repositoris ](./gh-model-govern.md) amb informació addicional de la creació de teams.
 
-          Addicionalment, en el següent Link, es podran consultar els permisos de cada rol [Roles y permisos de Repositoris ](../ca/gh-rols-repositori.md).
+          Addicionalment, en el següent Link, es podran consultar els permisos de cada rol [Roles y permisos de Repositoris ](./gh-rols-repositori.md).
 
       + **Configuració dels diferents WorkFlows de Continuous Deployment (CI + CD)**
 
@@ -206,7 +207,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         Per a tots els repositoris és necessari modificar també el fitxer CODEOWNERS on es descomentarà l'última línia i se substituirà el label <TEAM_NAME> pel nom del grup **</departament/>-</entitat/>-</lote_mantenimiento/>-maintain**, on estaran els membres que podran executar aprovacions de Pull Request.
 
-        En el següent enllaç, està disponible tota la informació de Workflows definits en el projecte [Definició de Workflows d' aplicatiu i d' Infraestructura](../ca/gh-definicion-workflows.md). 
+        En el següent enllaç, està disponible tota la informació de Workflows definits en el projecte [Definició de Workflows d' aplicatiu i d' Infraestructura](./gh-definicion-workflows.md). 
 
         Sempre seguint la filosofia GitOps on es desacoblen els workflows de CI amb els de CD. 
 
@@ -219,7 +220,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         ![Model gitflow simplificat](/images/GHEC/gitflow-recommended-model.png)  
 
-        En el següent link [Modelo Gitflow](../ca/model-gitflow-gitops.md), es mostra l'article amb els models a seguir, juntament amb les branques que entren en joc.
+        En el següent link [Modelo Gitflow](./model-gitflow-gitops.md), es mostra l'article amb els models a seguir, juntament amb les branques que entren en joc.
 
         En cas que el projecte no pugui adaptar-se a aquest model, caldrà realitzar una petició a perquè sigui estudiada la nova variant i veure' n la viabilitat.
 
@@ -246,17 +247,17 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         ![Pull Request demanant més informació ](/images/GHEC/pullrequestKO.png)
 
-        En el següent enllaç [Modelo de Pull Request](../ca/gh-model-pull-requests.md) es pot observar en detall les característiques i operativa del model, així com els seus principals avantatges.
+        En el següent enllaç [Modelo de Pull Request](./gh-model-pull-requests.md) es pot observar en detall les característiques i operativa del model, així com els seus principals avantatges.
 
         Aquest model de treball té caràcter obligatori, i prova d'això és que les branques principals Develop, Release i Master estaran bloquejades per realitzar integracions directes sense l'ús de Pull Request.
 
       + **Tags i versionat de components**. Dins d' aquest model de desenvolupament, el versionat i tags de llibreries i artefactes, estarà bloquejat al desenvolupador, de tal manera que seran els workflows automàtics de CI els que s' encarreguin d' aquesta tasca, permetent al desenvolupador, ** només el versionat del seu codi font**.
 
-        S'ha instaurat el model Semantic Version 2.0. Tota la documentació relacionada es pot consultar en el següent link [Model de Tag i versionat](../ca/gh-definicion-versionado.md).
+        S'ha instaurat el model Semantic Version 2.0. Tota la documentació relacionada es pot consultar en el següent link [Model de Tag i versionat](./gh-definicion-versionado.md).
 
       + **Configuració de notificacions**. Dins d'aquest model de desenvolupament, les notificacions de les execucions de workflows es mostraran a la safata de notificacions de GitHub, així com també rebre mitjançant correu electrònic. Per al seu correcte funcionament els usuaris hauran de configurar-les.  
 
-        Tota la documentació relacionada es pot consultar en el següent link [Configuració de notificacions](../ca/configuracio-notificacions.md).
+        Tota la documentació relacionada es pot consultar en el següent link [Configuració de notificacions](./configuracio-notificacions.md).
 
       + **Exemple de model de treball per a CI/CD d'una aplicació**
 
@@ -517,7 +518,7 @@ Més informació rellevant :
 
 GHEC Actions, permet l'execució de Workflows amb els runners propis de GHEC o Runners AD-HOC coneguts com a Self-Hosted Runners que s'executen des d'altres proveïdors Cloud. En l'actual model, s'han generat sota el proveïdor públic de Cloud AZURE.
 
- Més informació [Self Hosted Runners](../ca/gh-self-hosted-runners.md)
+ Més informació [Self Hosted Runners](./gh-self-hosted-runners.md)
 
 
 
