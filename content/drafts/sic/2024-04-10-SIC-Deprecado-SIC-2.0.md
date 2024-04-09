@@ -4,6 +4,7 @@ title       = "SIC. Deprecado SIC 2.0"
 description = "Migració de pipelines a SIC 3.0 i deprecado de SIC 2.0"
 weight      = "1"
 sections    = ["drafts"]
+aliases     = ["/sic/deprecado-2/"]
 +++
 
 ## Introducció
