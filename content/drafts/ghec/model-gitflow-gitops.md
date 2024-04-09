@@ -3,8 +3,8 @@
 date         = "2024-04-09"
 title        = "Model GitFlow i model GitOps"
 description  = "Model GitFlow i model GitOps"
-weight      = "1"
-sections    = ["drafts"]
+weight      = "9"
+sections    = ["GHEC"]
 +++
 
 

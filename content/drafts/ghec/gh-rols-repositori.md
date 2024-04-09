@@ -3,8 +3,8 @@
 date         = "2024-04-09"
 title        = "Rols de repositori per a una organització"
 description  = "Rols de repositori per a una organització"
-weight      = "1"
-sections    = ["drafts"]
+weight      = "7"
+sections    = ["GHEC"]
 +++
 
 

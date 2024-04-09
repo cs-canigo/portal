@@ -2,8 +2,8 @@
 date         = "2024-04-09"
 title        = "Definició del model de versionat"
 description  = "Definició del model de versionat."
-weight      = "1"
-sections    = ["drafts"]
+weight      = "4"
+sections    = ["GHEC"]
 +++
 
 <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">

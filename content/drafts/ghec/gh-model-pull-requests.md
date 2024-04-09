@@ -3,8 +3,8 @@
 date         = "2024-04-09"
 title        = "Model d'Integració de Branques amb Pull Request"
 description  = "El present document descriu el resultat de l' anàlisi realitzada en la gestió d' integració entre branques a GitHub a través de Pull Request."
-weight      = "1"
-sections    = ["drafts"]
+weight      = "6"
+sections    = ["GHEC"]
 +++
 
 

@@ -2,8 +2,8 @@
 date         = "2024-04-09"
 title        = "Configuració de notificacions"
 description  = "Configuració de notificacions"
-weight      = "1"
-sections    = ["drafts"]
+weight      = "3"
+sections    = ["GHEC"]
 +++
 
 <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">

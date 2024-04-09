@@ -2,8 +2,8 @@
 date         = "2024-04-09"
 title        = "Definició de Workflows a alt nivell"
 description  = "Definició de Workflows a alt nivell"
-weight      = "1"
-sections    = ["drafts"]
+weight      = "2"
+sections    = ["GHEC"]
 +++
 
 

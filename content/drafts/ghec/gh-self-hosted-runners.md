@@ -3,8 +3,8 @@
 date         = "2024-04-09"
 title        = "Execusiò de Actions con Self-Hosted Runners"
 description  = "Execusiò de Actions con Self-Hosted Runners"
-weight      = "1"
-sections    = ["drafts"]
+weight      = "8"
+sections    = ["GHEC"]
 +++
 
 <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
