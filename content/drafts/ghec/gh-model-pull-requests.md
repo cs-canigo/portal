@@ -15,7 +15,7 @@ sections    = ["GHEC"]
 ## Objectiu 🚀
 El present document descriu el resultat de l' anàlisi realitzada en la gestió d' integració entre branques a GitHub a través de Pull Request.
 
-## PREREQUISIT
+## Prerequisit
 Cal que el lector tingui coneixements previs bàsics d'operativitat amb repositoris de codi Git.
 
 ## Al detall 📋

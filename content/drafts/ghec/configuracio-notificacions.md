@@ -8,7 +8,9 @@ sections    = ["GHEC"]
 
 <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
 
+
 # Configuració de notificacions
+
 
 GitHub ofereix la possibilitat de rebre notificacions tant per correu electrònic com per mitjà d'una safata d'entrada que conté el portal web.
 
