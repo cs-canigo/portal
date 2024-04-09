@@ -209,3 +209,4 @@ Per a realitzar les modificacions correctament, hem de tenir en compte els segü
       ```
 **4.** És recomanable utilitzar l’última versió de l’schema del XSD de Spring Security. Per exemple de:  http://www.springframework.org/schema/security/spring-security-5.4.xsd a:  http://www.springframework.org/schema/security/spring-security.xsd
 
+**5.** S'ha modificat la URL d'accés a swagger passant de: http://localhost:8080/swagger-ui/index.html a: http://localhost:8080/api/swagger-ui/index.html
