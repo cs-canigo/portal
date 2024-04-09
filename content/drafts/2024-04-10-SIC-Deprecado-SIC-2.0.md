@@ -4,8 +4,6 @@ title       = "SIC. Deprecado SIC 2.0"
 description = "Migració de pipelines a SIC 3.0 i deprecado de SIC 2.0"
 weight      = "1"
 sections    = ["drafts"]
-categories  = ["SIC"]
-key         = "ABRIL2024"
 +++
 
 ## Introducció
