@@ -9,7 +9,7 @@ key         = "ABRIL2024"
 
 ## Introducció
 
-En els pròxims dies començaran els treballs de migració dels Job de Jenkins de SIC 2.0 a SIC 3.0 Els treballs implicaran la creació de nous pipelines en SIC 3.0, per al que es precisarà la col·laboració de tots els proveïdors amb la finalitat de modificar els fitxers de configuració ACA.yml. 
+En els pròxims dies començaran els treballs de **migració dels Job de Jenkins de SIC 2.0 a SIC 3.0.** Els treballs implicaran la creació de nous pipelines en SIC 3.0, per al que es precisarà la col·laboració de tots els proveïdors amb la finalitat de modificar els fitxers de configuració ACA.yml. 
 Des de l'equip SIC s'anirà contactant amb els proveïdors de les aplicacions de manera gradual per a fer els canvis necessaris en cadascuna de les aplicacions.
 
 ## Descripció dels treballs
