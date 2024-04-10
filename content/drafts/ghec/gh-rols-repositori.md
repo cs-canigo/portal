@@ -9,7 +9,14 @@ sections    = ["GHEC"]
 
 # Rols de repositori per a una organització
 
-## ROLS SOBRE REPOSITORIS
+## Objectiu 🚀
+
+L'objectiu de la següent documentació és mostrar els diferents rols de repositori que GitHub Enterprise Cloud posseeix a nivell d'organització.
+
+## Al detall 📋
+
+
+Aquests són els diferents rols disponibles
 
 - **READ**: Recomanat per als qui no contribueixen amb el codi i desitgen veure o discutir el seu projecte.
 - **TRIAGE**: Recomanat per a col·laboradors que necessiten gestionar proactivament problemes, discussions i pull requests sense accés d'escriptura.
@@ -17,18 +24,16 @@ sections    = ["GHEC"]
 - **MAINTAIN**: Recomanat per a gestors de projectes que necessiten gestionar el repositori sense accés a accions sensibles o destructives.
 - **ADMIN**: Recomanat per a persones que necessiten accés complet al projecte, incloent accions sensibles i destructives com gestionar la seguretat o esborrar un repositori.
 
----
 
-### EL ROL DE READ
+### Rol de READ
 
 En principi no ens serviria perquè no pot crear branques feature per desenvolupar, encara que si pugui fer pull request, però no aprovar-les:
 
 - No pot crear noves branques ni pot fer commits.
 - Pot crear pull requests però no acceptar-les ni mergear-les.
 
----
 
-### EL ROL DE TRIAGE
+### Rol de TRIAGE
 
 En principi no ens serviria perquè no pot crear branques feature per desenvolupar, encara que si pugui fer pull request, però no aprovar-les:
 
@@ -48,9 +53,8 @@ Però si podrà...
 - Conversió individual d' incidències en discussions.
 - Eliminar un debat.
 
----
 
-### EL ROL DE WRITER
+### Rol de WRITER
 
 És el rol que, seguint la premissa de "least privilege", es podrà assignar als desenvolupadors els qui podran:
 
@@ -60,15 +64,15 @@ Però si podrà...
 
 ![Branques protegides](/images/GHEC/protected-branches.png)
 
----
 
-### EL ROL DE MAINTAIN
+
+### Rol de MAINTAIN
 
 - Pot a més gestionar alguna configuració del repositori, a excepció de la configuració destructiva.
 
----
 
-### EL ROL D'ADMIN
+
+### Rol de ADMIN
 
 - Tens accés complet als "settings", i a:
 
