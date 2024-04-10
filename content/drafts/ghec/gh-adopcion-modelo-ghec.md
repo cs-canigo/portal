@@ -2,31 +2,31 @@
 +++
 date         = "2024-04-09"
 title        = "Integració al nou model Cloud gestionat per a DevOps amb GitHub Enterprise Cloud"
-description  = "El present document descriu les guies necessàries per a l' adopció, per part dels projectes, al nou model gestionat Cloud per a DevOps amb GitHub Enterprise Cloud."
+description  = "El present document descriu les guies necessàries per a l'adopció, per part dels projectes, al nou model gestionat Cloud per a DevOps amb GitHub Enterprise Cloud."
 weight      = "1"
 sections    = ["GHEC"]
 +++
 
 ## Objectiu 🚀
-El present document descriu les guies necessàries per a l' adopció, per part dels projectes, al nou model gestionat Cloud per a DevOps amb GitHub Enterprise Cloud.
+El present document descriu les guies necessàries per a l'adopció, per part dels projectes, al nou model gestionat Cloud per a DevOps amb GitHub Enterprise Cloud.
 
 A continuació, es descriuen els principals objectius que es busquen en implantar aquest model i que impacta en la gestió i automatització del cicle de vida de les 
 aplicacions, construcció, qualitat i desplegaments.
 
-+ **Eficiència i millora de l' operació** : L'adopció a escala d'una plataforma gestionada implica grans avantatges pel que fa a l'operació davant una plataforma 'custom', ja que l'evolució i operació dels components de la plataforma, així com de la infraestructura que la suporta, són responsabilitat del proveïdor Cloud (GitHub en aquest cas), incloent seguretat física i d'accessos,  disponibilitat, escalabilitat i rendiment, dimensionament de la infraestructura en base a demanda, actualitzacions requerides derivades de possibles vulnerabilitats o millores, etc.
++ **Eficiència i millora de l'operació** : L'adopció a escala d'una plataforma gestionada implica grans avantatges pel que fa a l'operació davant una plataforma 'custom', ja que l'evolució i operació dels components de la plataforma, així com, de la infraestructura que la suporta, són responsabilitat del proveïdor Cloud (GitHub en aquest cas), incloent seguretat física i d'accessos,  disponibilitat, escalabilitat i rendiment, dimensionament de la infraestructura en base a demanda, actualitzacions requerides derivades de possibles vulnerabilitats o millores, etc.
 
-+ **Foment de la Innovació** : El proveïdor de la plataforma facilita l'accés a la innovació, ja que les últimes novetats estaran disponibles per a CTTI sense requerir una inversió específica per a això. A més, sent una plataforma nativa per al núvol, facilita l'adopció d'aquestes pràctiques d'enginyeria, en particular l'adopció d'arquitectures **'Serverless' o basades en contenidors** sense que això impliqui gestionar recursos d'infraestructura o plataforma (p.ex. ús de Lambda o Fargate enfront de la gestió de clúster Kubernetes a escala).
++ **Foment de la Innovació** : El proveïdor de la plataforma facilita l'accés a la innovació, ja que les últimes novetats estaran disponibles per a CTTI sense requerir una inversió específica per a això. A més, sent una plataforma nativa per al núvol, facilita l'adopció d'aquestes pràctiques d'enginyeria, en particular l'adopció d'arquitectures **'Serverless'o basades en contenidors** sense que això impliqui gestionar recursos d'infraestructura o plataforma (p.ex. ús de Lambda o Fargate enfront de la gestió de clúster Kubernetes a escala).
 
-+ **Balancejar la capacitat de control i prescripció d'estàndards enfront de la flexibilitat en els projectes** : El model d'operació sobre una plataforma Cloud gestionada i centralitzada proveeix facilitats per tenir alts nivells d'estandardització i control de les càrregues de treball mitjançant la prescripció d'estàndards i bones pràctiques la qual cosa deriva en millores de productivitat. Simultàniament, aporta flexibilitat, la qual cosa permet als equips que tenen necessitats especials ser independents i que l' equip central d' arquitectura i operació no sigui coll d' ampolla en el funcionament dels projectes.
++ **Balancejar la capacitat de control i prescripció d'estàndards enfront de la flexibilitat en els projectes** : El model d'operació sobre una plataforma Cloud gestionada i centralitzada proveeix facilitats per tenir alts nivells d'estandardització i control de les càrregues de treball mitjançant la prescripció d'estàndards i bones pràctiques la qual cosa deriva en millores de productivitat. Simultàniament, aporta flexibilitat, la qual cosa permet als equips que tenen necessitats especials de ser independents i que l'equip central d'arquitectura i operació no sigui coll d'ampolla en el funcionament dels projectes.
 
 + **Primer pas cap a un model self-service i el paradigma DevEx** , el qual introdueix grans millores en l'experiència dels desenvolupadors.
 
 És important recalcar com a prerequisit que aquest model de GHEC es recolzarà en el proveïdor Cloud AZURE per:
-  + Autorització i gestió d' usuaris i rols amb Azure Entra ID.
+  + Autorització i gestió d'usuaris i rols amb Azure Entra ID.
   + Infraestructura per a emmagatzematge d'informació (Storage Accounts) i secrets (KeyVaults)
   + Uso de Self-hosted Runners en AZURE.
   
-## Integració d' aplicacions al nou Model GHEC
+## Integració d'aplicacions al nou Model GHEC
 
 -Bé, interessant, m'agrada el que he llegit- Què he de fer per migrar o arrencar el meu nou projecte en aquest nou model?.
 
@@ -60,7 +60,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
   
   2. **Configuració del model GHEC**
-  Un cop ha finalitzat el procés automàtic que crea tota la infraestructura i recursos necessaris per donar suport al model, s' han de realitzar les següents configuracions bàsiques : 
+  Un cop ha finalitzat el procés automàtic que crea tota la infraestructura i recursos necessaris per donar suport al model, s'han de realitzar les següents configuracions bàsiques : 
 
          
       + **Alta d'usuaris en grups depenent del Rol** 
@@ -79,22 +79,23 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         Una vegada creats els grups, cal que l'owner o owners identificats donin d'alta els diferents usuaris en els diferents grups depenent dels rols que van a realitzar (Maintain o Write).
         
-        Només cal actualitzar els grups de Maintain i Write, sent la resta informats automàticament pel procés automatitzat.
+      
+        Només cal actualitzar els grups de Maintain i Write, donat que la resta seran informats automàticament pel procés automatitzat.
                 
-        Per executar aquesta tasca, l' owner disposarà de l' aplicació myAccounts de Microsoft on haurà d' haver de : 
+        Per executar aquesta tasca, l'owner disposarà de l'aplicació myAccounts de Microsoft on haurà d'haver de : 
 
-          1. Accedir a MyGroups per a l' organització de la Generalitat de Catalunya.
+          1. Accedir a MyGroups per a l'organització de la Generalitat de Catalunya.
             [https://myaccount.microsoft.com/groups](https://myaccount.microsoft.com/groups)
             
               Les credencials d'accés són les de Generalitat de Catalunya, introduint l'usuari @gencat.cat.
           
               ![Grups credencials ](/images/GHEC/gh-mygroups-credenciales.png)
             
-          2. Un cop llogat, l'owner disposarà d'una opció de menú per veure tots els grups dels quals té el rol d'Owner i que podrà gestionar afegint o eliminant usuaris des de l'opció "Groups I Own".
+          2. Un cop ha iniciat sessió, l'owner disposarà d'una opció de menú per veure tots els grups dels quals té el rol d'Owner i que podrà gestionar afegint o eliminant usuaris des de l'opció "Groups I Own".
 
               ![Grups](/images/GHEC/gh-mygroups.png)
 
-          3. Seleccionant el grup que vulgui modificar, tindrà la possibilitat d'afegir/eliminar usuaris.  Per a això existeixen dues opcions de menú "Members" i "Owner" on, pitjant en el botó "Add" podrà buscar els usuaris i afegir-los amb diferents permisos "Members" i "Owners" :
+          3. Seleccionant el grup que vulgui modificar, tindrà la possibilitat d'afegir/eliminar usuaris.  Per a això existeixen dues opcions de menú "Members" i "Owner" on, clicant en el botó "Add" podrà buscar els usuaris i afegir-los amb diferents permisos "Members" i "Owners" :
 
                 ![Grups](/images/GHEC/gh-mygroups-add.png)
 
@@ -122,7 +123,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         ![Accés a Workflows](/images/GHEC/gh-imagen-acceso-action.png)
     
-        L' execució dels workflows, dependran de la seva tipologia i del model definit, essent :
+        L'execució dels workflows, dependran de la seva tipologia i del model definit, essent :
           - Workflows de CI (app i infra) : Executats **automàticament** en la sol·licitud d'un Pull Request o en l'execució d'un Merge de dita Pull Request.
           - Workflows de CD (app i infra) : Executats sota demanda a través de la consola de GHEC.
 
@@ -151,8 +152,8 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * No necessita configuració inicial.
 
           + Maven APP CD (maven-app-cd.yaml).
-            * Comentar l' entorn retorn si no hi ha entorn de desenvolupament.
-            * cluster_name: Nom del Clúster on es desplegarà l' aplicació.
+            * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
+            * cluster_name: Nom del Clúster on es desplegarà l'aplicació.
             * cluster_service : Servei del Clúster on es desplegarà l'aplicació.
             * ecr_name : Nom de l'Elastic Container Registry d'AWS.
 
@@ -166,7 +167,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
         **Workflows CI/CD para tecnologías node**  
           + Node APP CI on PR (node-app-ci-on-pr.yaml): 
             * node_version:  Versió de Node.
-            * sonar_exclusions : llistat de directoris a excloure a l' scanner de SonarQube, separats per "," (no afegir espais).
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
             
           + Node APP CI on Commit to develop (node-app-ci-on-commit-develop.yaml): 
             * node_version:  Versió de Node.
@@ -189,20 +190,20 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         **Workflows CI/CD per a Infraestructura**  
           + Infra CI on PR  (infra-ci-on-pr.yaml): 
-            * terraform_version: Versió de Terraform que s' utilitzarà per gestionar el cicle de vida.
+            * terraform_version: Versió de Terraform que s'utilitzarà per gestionar el cicle de vida.
             * Branques disponibles (branches), si no hi ha entorn de desenvolupament cal comentar la branca develop.
             
           +  Infra CI on Commit  (infra-ci-on-commit.yaml): 
-              * terraform_version: Versió de Terraform que s' utilitzarà per gestionar el cicle de vida.
+              * terraform_version: Versió de Terraform que s'utilitzarà per gestionar el cicle de vida.
               * Branques disponibles (branches), si no hi ha entorn de desenvolupament cal comentar la branca develop.
                                    
           + Infra CD Apply (infra-cd-apply.yaml):
-            * Comentar l' entorn retorn si no hi ha entorn de desenvolupament.
-            * terraform_version: Versió de Terraform que s' utilitzarà per gestionar el cicle de vida.
+            * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
+            * terraform_version: Versió de Terraform que s'utilitzarà per gestionar el cicle de vida.
 
         Per a tots els repositoris és necessari modificar també el fitxer CODEOWNERS on es descomentarà l'última línia i se substituirà el label <TEAM_NAME> pel nom del grup **</departament/>-</entitat/>-</lote_mantenimiento/>-maintain**, on estaran els membres que podran executar aprovacions de Pull Request.
 
-        En el següent enllaç, està disponible tota la informació de Workflows definits en el projecte [Definició de Workflows d' aplicatiu i d' Infraestructura](../gh-definicion-workflows). 
+        En el següent enllaç, està disponible tota la informació de Workflows definits en el projecte [Definició de Workflows d'aplicatiu i d'Infraestructura](../gh-definicion-workflows). 
 
         Sempre seguint la filosofia GitOps on es desacoblen els workflows de CI amb els de CD. 
 
@@ -211,13 +212,13 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
       Creada i configurada tota la plataforma per al nostre model de treball, cal recalcar que també **existirà una nova metodologia de treball**, la qual es detallarà en els següents punts i enllaços:
 
-      + **Gestió i ús de branques**: El model de gestió i ús de branques que s' ha implantat és el basat en el model estàndard de GitFlow. 
+      + **Gestió i ús de branques**: El model de gestió i ús de branques que s'ha implantat és el basat en el model estàndard de GitFlow. 
 
         ![Model gitflow simplificat](/images/GHEC/gitflow-recommended-model.png)  
 
         En el següent link [Modelo Gitflow](../model-gitflow-gitops), es mostra l'article amb els models a seguir, juntament amb les branques que entren en joc.
 
-        En cas que el projecte no pugui adaptar-se a aquest model, caldrà realitzar una petició a perquè sigui estudiada la nova variant i veure' n la viabilitat.
+        En cas que el projecte no pugui adaptar-se a aquest model, caldrà realitzar una petició a perquè sigui estudiada la nova variant i veure'n la viabilitat.
 
         Addicionalment, i encara que s'han desvinculat les branques proposades amb els entorns disponibles per al desplegament, els pipelins de desplegament disposen d'un Step anomenat **"Env Matrix"** que realitza validacions per discernir si una imatge pot ser desplegada en un entorn en base als tags d'aquesta imatge.  
 
@@ -230,9 +231,9 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
       + **Implantació de model de Merge amb Pull Request**.  El model de desenvolupament amb Pull Request a GitHub descriu un mètode de treball que afecta les integracions entre dues branques, normalment una branca de features cap a una branca principal, per exemple, development, rellegir-se o màster.
   
-        Aquest procés permet la revisió del contingut d' una branca Feature a integrar en una principal abans de realitzar el Merge. Si el contingut d' aquesta branca no és apte als criteris de la persona que tingui el rol de revisor, aquesta branca no s' integrarà i se li demanarà al desenvolupador que solucioni els problemes trobats.
+        Aquest procés permet la revisió del contingut d'una branca Feature a integrar en una principal abans de realitzar el Merge. Si el contingut d'aquesta branca no és apte pels criteris de la persona que tingui el rol de revisor, aquesta branca no s'integrarà i se li demanarà al desenvolupador que solucioni els problemes trobats.
 
-        Aquest model aposta per la qualitat i la detecció primerenca d' errors.
+        Aquest model aposta per la qualitat i la detecció primerenca d'errors.
 
         1. Sol·licitud de Pull Request i aprovació directa pel reviewer als canvis, després de la seva revisió.
 
@@ -246,7 +247,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         Aquest model de treball té caràcter obligatori, i prova d'això és que les branques principals Develop, Release i Master estaran bloquejades per realitzar integracions directes sense l'ús de Pull Request.
 
-      + **Tags i versionat de components**. Dins d' aquest model de desenvolupament, el versionat i tags de llibreries i artefactes, estarà bloquejat al desenvolupador, de tal manera que seran els workflows automàtics de CI els que s' encarreguin d' aquesta tasca, permetent al desenvolupador, ** només el versionat del seu codi font**.
+      + **Tags i versionat de components**. Dins d'aquest model de desenvolupament, el versionat i tags de llibreries i artefactes, estarà bloquejat al desenvolupador, de tal manera que seran els workflows automàtics de CI els que s'encarreguin d'aquesta tasca, permetent al desenvolupador, ** només el versionat del seu codi font**.
 
         S'ha instaurat el model Semantic Version 2.0. Tota la documentació relacionada es pot consultar en el següent link [Model de Tag i versionat](../gh-definicion-versionado).
 
@@ -259,9 +260,9 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
         Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
           + Gestió de branques amb un model Gitflow.
           + Integracions de branques basades en Pull Request.
-          + Tagging d' artefactes i repositoris amb el model Semantic Version 2.0.
+          + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
-          En el següent exemple es mostra l' execució e2e d' un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  La infraestructura està desplegada prèviament.
+          En el següent exemple es mostra l'execució e2e d'un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  La infraestructura està desplegada prèviament.
 
           L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
@@ -278,7 +279,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Usuari amb Rol Maintain que aprova la Pull Request.
             
             Execució de Workflows : Automàtic
-            * APP CI on PR en realitzar la PR.  Genera l' artefacte, havent realitzat prèviament scans de qualitat.
+            * APP CI on PR en realitzar la PR.  Genera l'artefacte, havent realitzat prèviament scans de qualitat.
             * APP CI on Commit to develop, en realitzar el Commit, empaquetant el codi en una imatge Docker i pujant-la al registre d'imatges GHEC Packages.
             
             Resultat de l'operació :
@@ -287,10 +288,10 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Generació i pujada de la imatge Docker a Github Packages.
             * Tag tant del repo com de la imatge a app.0.0.1-SNAPSHOT.
 
-        2. **Validació funcional d' artefacte en desenvolupament.**
-            L' usuari es disposa a realitzar el desplegament de l' artefacte generat en el pas 1 i desplegar-lo en l' entorn de desenvolupament per a la seva validació funcional.
+        2. **Validació funcional d'artefacte en desenvolupament.**
+            L'usuari es disposa a realitzar el desplegament de l'artefacte generat en el pas 1 i desplegar-lo en l'entorn de desenvolupament per a la seva validació funcional.
 
-            ![Validació funcional d' artefacte en desenvolupament](/images/GHEC/gh_ejemplo_e2e_step2.png)
+            ![Validació funcional d'artefacte en desenvolupament](/images/GHEC/gh_ejemplo_e2e_step2.png)
 
             Objectiu : Desplegament en desenvolupament de l'artefacte generat anteriorment per a la seva validació.
 
@@ -300,7 +301,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             Execució de Workflows : Baix Demanda per part de l'usuari.
               * APP CD que, que existeixi la imatge, comprova que es pugui desplegar i desplegar la imatge en l'entorn i informa del desplegament en ITSM.
 
-                En aquest cas l' execució és manual i per a això l'usuari (independentment del seu rol, però s'aconsella un rol amb experiència, maintain) tindrà :
+                En aquest cas l'execució és manual i per a això l'usuari (independentment del seu rol, però s'aconsella un rol amb experiència, maintain) tindrà :
 
                 1. Accedir als WorkFlows del repositori mitjançant l'opció "Actions", indicada en l'apartat **Configuració dels diferents WorkFlows de Continuous Deployment (CI + CD)**
 
@@ -314,7 +315,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
                   * Environment : dev, per al desplegament a desenvolupament. 
                               
             Resultat de l'operació :
-              * Codi desplegat a l' entorn de Desenvolupament per a la seva validació.
+              * Codi desplegat a l'entorn de Desenvolupament per a la seva validació.
 
         3. **Integració en branca release des de development**
            Un cop validat el codi en desenvolupament, el desenvolupador es disposa a promocionar-lo a la branca PRE per generar un artefacte Release i així poder desplegar-lo posteriorment al pas 4.
@@ -335,10 +336,10 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Re-Tag de la imatge Docker en GitHub Packages a app.0.0.1-RC (Release Candidate).
             
 
-        4. **Validació funcional d' artefacte en Preproducció**
+        4. **Validació funcional d'artefacte en Preproducció**
             Estant disponible la imatge amb un tag valgut, es realitza el desplegament per realitzar les validacions necessàries.
 
-            ![Validació funcional d' artefacte en Preproducció](/images/GHEC/gh_ejemplo_e2e_step4.png)
+            ![Validació funcional d'artefacte en Preproducció](/images/GHEC/gh_ejemplo_e2e_step4.png)
                 
             Objectiu : Desplegament en Preproducció de l'artefacte per a la seva validació funcional.
 
@@ -352,12 +353,12 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
                 * Branca o branch on es troba el workflow actualitzat: release.
                 * Artifact Version : Versió de l'artefacte, en aquest cas 0.0.1-RC.
                 * Environment : pre, per al desplegament a Preproducció. 
-                * ITSM ID Change Coordinator: ID de l' usuari per crear la CRQ en ITSM amb l' objectiu d' informar sobre el desplegament.
+                * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
                 * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
                 * Prioritat ITSM: Prioritat del Ticket a crear.
 
               Resultat de l'operació :
-              * Codi desplegat a l' entorn de Preproducció per a la seva validació.  En aquest cas, i a futur, s' hauran de realitzar validacions amb proves automatitzades realitzant invocacions al Framework de Testing MAT.  
+              * Codi desplegat a l'entorn de Preproducció per a la seva validació.  En aquest cas, i a futur, s'hauran de realitzar validacions amb proves automatitzades realitzant invocacions al Framework de Testing MAT.  
 
               
         5. **Integració en branca master des de release**
@@ -378,10 +379,10 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Branca rellegeixi integrada en màster.
             * Imatge Docker, a GH Packages, amb nou Tag per desplegament en Producció app.0.0.1 (Final).
           
-        6. **Desplegament d' aplicació a Producciò**
+        6. **Desplegament d'aplicació a Producciò**
             Una vegada hi ha l'artefacte disponible a GH Packages amb un tag que habilita la seva promoció a pro i totes les validacions realitzades i executades correctament en entorns Preproductius, l'artefacte de pot desplegar en Producció
 
-            ![Desplegament d' aplicació a Producciò](/images/GHEC/gh_ejemplo_e2e_step6.png)
+            ![Desplegament d'aplicació a Producciò](/images/GHEC/gh_ejemplo_e2e_step6.png)
                 
             Objectiu : Desplegament en Producció de l'aplicació.
 
@@ -396,23 +397,23 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
               * Branca o branch on es troba el workflow actualitzat: màster.
               * Artifact Version : Versió de l'artefacte, en aquest cas 0.0.1.
               * Environment : pro, per al desplegament a Producció. 
-              * ITSM ID Change Coordinator: ID de l' usuari per crear la CRQ en ITSM amb l' objectiu d' informar sobre el desplegament.
+              * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
               * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
               * Prioritat ITSM: Prioritat del Ticket a crear.
 
               
             Resultat de l'operació :
-              * Codi desplegat a l' entorn de Producció.
+              * Codi desplegat a l'entorn de Producció.
 
       
       + **Exemple de model de treball per a CI/CD per a Infraestructura**
 
-        En el següent exemple es mostra l' execució e2e d' un flux de treball d' implementació i desplegament d' Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  En aquest cas i atès que, actualment, no existeix l' entorn de Desenvolupament, s' integrarà directament a Release. 
+        En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  En aquest cas i atès que, actualment, no existeix l'entorn de Desenvolupament, s'integrarà directament a Release. 
 
-        L' accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
+        L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
         1. **Integració en branca release des de features.**
-          L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a rellegir-se.  En aquests casos, es passa de feature a release ja que en els projectes d' infra no sol existir branca ni entorn de desenvolupament.
+          L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a rellegir-se.  En aquests casos, es passa de feature a release ja que en els projectes d'infra no sol existir branca ni entorn de desenvolupament.
           
             ![Integració en branca release des de features](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
 
@@ -429,14 +430,14 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             
             Resultat de l'operació :
             * Funció Rama integrada en llançament.
-            * Generació del Terraform Pla i emmagatzematge d' aquest a Storage Account d' Azure per al seu posterior desplegament.
+            * Generació del Terraform Pla i emmagatzematge d'aquest a Storage Account d'Azure per al seu posterior desplegament.
             * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
             * Creació del tag 1.0.1-RC per al REPO i 1.0.1-RC.tfplan per al terraform pla
 
-        2. **Desplegament de la infra en l' entorn de Preproducció.**
+        2. **Desplegament de la infra en l'entorn de Preproducció.**
           L'usuari ja té disponible el Terraform Pla, validat, i es disposa a desplegar-lo en l'entorn de pre per a la seva validació.
 
-            ![Desplegament de la infra en l' entorn de Preproducció](/images/GHEC/gh_ejemplo_infra_e2e_step2.png)
+            ![Desplegament de la infra en l'entorn de Preproducció](/images/GHEC/gh_ejemplo_infra_e2e_step2.png)
 
            Objectiu: Desplegament en desenvolupament de la infraestructura generada anteriorment. 
 
@@ -444,19 +445,19 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
               * Usuari amb Rol Write o Maintain.
               
             Execució de Workflows : Baix Demanda per part de l'usuari.
-              * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l' estat del desplegament.
+              * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l'estat del desplegament.
 
                 En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
                 
                 * Branca o branch on es troba el workflow actualitzat: release
                 * Infra Version in semver format, i.e 1.0.1-RC : Versió del pla que es vol desplegar.
                 * Env to apply the terraform Pla : Entorn on desplegar el Terraform Pla, en aquest cas Preproducció.
-                * ITSM ID Change Coordinator: ID de l' usuari per crear la CRQ en ITSM amb l' objectiu d' informar sobre el desplegament.
+                * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
                 * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
                 * Prioritat ITSM: Prioritat del Ticket a crear.
                               
               Resultat de l'operació :
-              * Infraestructura desplegada a l' entorn de Preproducció.  
+              * Infraestructura desplegada a l'entorn de Preproducció.  
               
         3. **Integració en branca master des de release**
           L'usuari, un cop validat que els canvis han funcionat a l'entorn de Release, es disposa a promocionar els canvis a la branca màster .
@@ -476,14 +477,14 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             
             Resultat de l'operació :
             * Branca rellegeixi integrada en màster.
-            * Generació del Terraform Pla i emmagatzematge d' aquest a Storage Account d' Azure per al seu posterior desplegament.
+            * Generació del Terraform Pla i emmagatzematge d'aquest a Storage Account d'Azure per al seu posterior desplegament.
             * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
             * Creació del tag 1.0.1 per al REPO i 1.0.1.tfplan per al terraform plan
 
-        4. **Desplegament de la infra en l' entorn de Producció.**
+        4. **Desplegament de la infra en l'entorn de Producció.**
           L'usuari ja té disponible el Terraform Pla, validat, i es disposa a desplegar-lo en l'entorn de producció per a la seva validació.
 
-            ![Desplegament de la infra en l' entorn de Producció](/images/GHEC/gh_ejemplo_infra_e2e_step4.png)
+            ![Desplegament de la infra en l'entorn de Producció](/images/GHEC/gh_ejemplo_infra_e2e_step4.png)
 
             Objectiu : Desplegament en producció de la infraestructura generada anteriorment. 
 
@@ -491,25 +492,25 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
               * Usuari amb Rol Write o Maintain.
               
             Execució de Workflows : Baix Demanda per part de l'usuari.
-              * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l' estat del desplegament.
+              * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l'estat del desplegament.
 
                 En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
                 
                 * Branca o branch on es troba el workflow actualitzat: màster
                 * Infra Version in semver format, i.e 1.0.1 : Versió del pla que es vol desplegar.
                 * Env to apply the terraform Pla : Entorn on desplegar el Terraform Pla, en aquest cas Producció.
-                * ITSM ID Change Coordinator: ID de l' usuari per crear la CRQ en ITSM amb l' objectiu d' informar sobre el desplegament.
+                * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
                 * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
                 * Prioritat ITSM: Prioritat del Ticket a crear.
                               
             Resultat de l'operació :
-              * Infraestructura desplegada a l' entorn de Producció.  
+              * Infraestructura desplegada a l'entorn de Producció.  
 
 ## Wiki 📖
 
 Més informació rellevant :
 
-### Execució d' Actions amb Self-Hosted Runners
+### Execució d'Actions amb Self-Hosted Runners
 
 GHEC Actions, permet l'execució de Workflows amb els runners propis de GHEC o Runners AD-HOC coneguts com a Self-Hosted Runners que s'executen des d'altres proveïdors Cloud. En l'actual model, s'han generat sota el proveïdor públic de Cloud AZURE.
 

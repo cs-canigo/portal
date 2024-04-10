@@ -2,13 +2,13 @@
 +++
 date         = "2024-04-09"
 title        = "Model d'Integració de Branques amb Pull Request"
-description  = "El present document descriu el resultat de l' anàlisi realitzada en la gestió d' integració entre branques a GitHub a través de Pull Request."
+description  = "El present document descriu el resultat de l'anàlisi realitzada en la gestió d'integració entre branques a GitHub a través de Pull Request."
 weight      = "6"
 sections    = ["GHEC"]
 +++
 
 ## Objectiu 🚀
-El present document descriu el resultat de l' anàlisi realitzada en la gestió d' integració entre branques a GitHub a través de Pull Request.
+El present document descriu el resultat de l'anàlisi realitzada en la gestió d'integració entre branques a GitHub a través de Pull Request.
 
 ## Prerequisit
 Cal que el lector tingui coneixements previs bàsics d'operativitat amb repositoris de codi Git.
@@ -17,7 +17,7 @@ Cal que el lector tingui coneixements previs bàsics d'operativitat amb reposito
 
 El model de treball amb Pull Request a Github descriu una mètode de treball a l'hora de realitzar integracions entre branques a Github, normalment una branca de features a una branca principal, per exemple, rellegir-se o màster.
 
-Aquest procés permet la revisió del contingut de la branca a integrar en una principal abans de realitzar la integració.  Si el contingut d' aquesta branca no és apte als criteris del la persona que tingui el rol de revisor, aquesta branca no s' integrarà. 
+Aquest procés permet la revisió del contingut de la branca a integrar en una principal abans de realitzar la integració.  Si el contingut d'aquesta branca no és apte als criteris del la persona que tingui el rol de revisor, aquesta branca no s'integrarà. 
 
 El treball amb Pull Request té una sèrie d'avantatges :
 
@@ -80,7 +80,7 @@ Es descriuen exemples per a ambdós fluxos de Pull Request identificats anterior
 
 **Sol·licitud de Pull Request, sol·licitud de més informació per part del Reviewer i re-sol·licitud de Pull Request després d'afegir canvis sol·licitats**
 
-El desenvolupador realitza els passos 1 al 5 de l' apartat anterior.   En aquest cas realitza la modificació d' un dels documents.
+El desenvolupador realitza els passos 1 al 5 de l'apartat anterior.   En aquest cas realitza la modificació d'un dels documents.
 
 6. El reviewer revisa els canvis realitzats polsant a "File Changed", i detecta un problema a l'enllaç Wiki pel que crea un comentari requerint més canvis i no accepta el merge.
 

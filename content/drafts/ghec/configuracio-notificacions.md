@@ -14,7 +14,7 @@ En el següent article es mostra la configuració adequada per a aconseguir l'ob
 
 ## Al detall 📋
 
-Per configurar les notificacions, el primer que s' ha de fer és situar-nos a la zona de configuració a nivell personal. Per això, cal fer clic a la icona.
+Per configurar les notificacions, el primer que s'ha de fer és situar-nos a la zona de configuració a nivell personal. Per això, cal fer clic a la icona.
 
 
 ![Profile](/images/GHEC/configurar_notificaciones/0.png)
@@ -32,7 +32,7 @@ En el menú de navegació de la configuració, s'ha de seleccionar la secció "N
 ![Notifications](/images/GHEC/configurar_notificaciones/2.png)
 
 
-El primer a revisar si es volen rebre notificacions per correu electrònic, és tenir-lo configurat per defecte a "Default notifications email". En cas de no tenir-lo, es procedeix a intentar canviar-lo, en cas de posseir un compte ofert per la teva empresa i no tenir habilitat l' opció, s' haurà d' informar els responsables.
+El primer a revisar si es volen rebre notificacions per correu electrònic, és tenir-lo configurat per defecte a "Default notifications email". En cas de no tenir-lo, es procedeix a intentar canviar-lo, en cas de posseir un compte ofert per la teva empresa i no tenir habilitat l'opció, s'haurà d'informar els responsables.
 
 
 ![Default notifications email](/images/GHEC/configurar_notificaciones/3.png)
@@ -78,7 +78,7 @@ Es poden designar seleccionar de quins repositoris no es vol rebre notificacions
 
 GitHub també ofereix la possibilitat de rebre notificacions sobre l'execució d'accions, Dependabot i "Deploy Keys" en cas de ser administrador.
 
-En Accions es configuren les notificacions per a les execucions fetes per l' usuari. Es pot triar si rebre-les per GitHub, correu o ambdues opcions. També és possible triar si rebre notificacions de totes les execucions que realitzi o solament en cas de resultar fallides. Cal tenir la casella "Only notify for failed workflows" per rebre notificacions de totes les execucions.
+En Accions es configuren les notificacions per a les execucions fetes per l'usuari. Es pot triar si rebre-les per GitHub, correu o ambdues opcions. També és possible triar si rebre notificacions de totes les execucions que realitzi o solament en cas de resultar fallides. Cal tenir la casella "Only notify for failed workflows" per rebre notificacions de totes les execucions.
 
 
 ![Actions](/images/GHEC/configurar_notificaciones/5.png)
@@ -99,4 +99,4 @@ També és possible rebre un resum setmanal o diari de fins a 10 repositoris.
 Per acabar la configuració, s'ha de triar si rebre alertes per correu de la creació de deploy keys en cas de tenir permisos d'administrador en alguna organització.
 
 
-!['Deploy key' alert email](/images/GHEC/configurar_notificaciones/5c.png)
+!['Deploy key'alert email](/images/GHEC/configurar_notificaciones/5c.png)

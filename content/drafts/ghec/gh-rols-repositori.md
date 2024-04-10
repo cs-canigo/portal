@@ -48,7 +48,7 @@ Però si podrà...
 - Ocultar els comentaris de qualsevol persona.
 - Moure un debat a una altra categoria.
 - Bloquejar i desbloquejar discussions.
-- Conversió individual d' incidències en discussions.
+- Conversió individual d'incidències en discussions.
 - Eliminar un debat.
 
 

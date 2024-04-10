@@ -128,15 +128,15 @@ Alguns conceptes clau associats amb GitOps inclouen:
 
 1. Infraestructura com a Codi (IaC):
     
-- GitOps promou l' ús de la infraestructura com a codi, on la infraestructura i les configuracions es defineixen i gestionen utilitzant descripcions de codi emmagatzemades en repositoris de Git.
+- GitOps promou l'ús de la infraestructura com a codi, on la infraestructura i les configuracions es defineixen i gestionen utilitzant descripcions de codi emmagatzemades en repositoris de Git.
 
 2. Repositoris de Git:
 
-- Totes les configuracions, definicions d' infraestructura i codi d' aplicació estan emmagatzemats en repositoris de Git. Això inclou tant la infraestructura del sistema com les aplicacions que s'executen sobre aquesta infraestructura.
+- Totes les configuracions, definicions d'infraestructura i codi d'aplicació estan emmagatzemats en repositoris de Git. Això inclou tant la infraestructura del sistema com les aplicacions que s'executen sobre aquesta infraestructura.
 
 3. Declarativitat:
 
-- GitOps segueix un enfocament declaratiu, on l' estat desitjat del sistema es descriu en arxius de configuració emmagatzemats a Git. Els canvis en el sistema s'aconsegueixen fent canvis en aquests arxius i aplicant aquests canvis a través de processos automatitzats.
+- GitOps segueix un enfocament declaratiu, on l'estat desitjat del sistema es descriu en arxius de configuració emmagatzemats a Git. Els canvis en el sistema s'aconsegueixen fent canvis en aquests arxius i aplicant aquests canvis a través de processos automatitzats.
 
 4. Automatització Contínua:
 
@@ -150,5 +150,5 @@ Per al projecte en curs s'ha decidit separar o desacoblar en diferents workflows
 
 ![Model GitOps](/images/GHEC/gitops-model.png)
 
-GitOps és particularment útil en entorns d' infraestructura i aplicacions distribuïdes, ja que proporciona una forma eficaç de gestionar la complexitat i l' escala mitjançant l' aplicació de pràctiques de desenvolupament de programari a l' operació d' infraestructura.
+GitOps és particularment útil en entorns d'infraestructura i aplicacions distribuïdes, ja que proporciona una forma eficaç de gestionar la complexitat i l'escala mitjançant l'aplicació de pràctiques de desenvolupament de programari a l'operació d'infraestructura.
 

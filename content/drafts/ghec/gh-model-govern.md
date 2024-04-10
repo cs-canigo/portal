@@ -9,7 +9,7 @@ sections    = ["GHEC"]
 
 ## Objectiu  🚀
 
-El present document descriurà el resultat de l' anàlisi i definició realitzat per modelar Git Hub Enterprise Cloud en base al model de Govern de la Generalitat de Catalunya. 
+El present document descriurà el resultat de l'anàlisi i definició realitzat per modelar Git Hub Enterprise Cloud en base al model de Govern de la Generalitat de Catalunya. 
 
 ## Al detall  📋
 
@@ -29,7 +29,7 @@ realitzant-se anàlisi de les següents distribucions:
 Després d'analitzar els diferents models, amb les seves fortaleses, debilitats i similituds amb el model de Govern de GenCat, en les diferents sessions de treball realitzades amb CTTI on s'ha revisat el model de govern de la Generalitat de Catalunya, es proposa el següent: 
 
 * 1 Enterprise Account global que representarà Generalitat Catalunya.
-* 3 Organitzacions per als diferents tipus de repositoris, públics o d' administració, de laboratori i de desenvolupament.
+* 3 Organitzacions per als diferents tipus de repositoris, públics o d'administració, de laboratori i de desenvolupament.
 * N Repositoris on s'albergarà els desenvolupaments, documentació, entregables, etc.
 * Model de Teams per cada organització per gestionar rols i visibilitat dels diferents repositoris en base al model de la Generalitat.
 
@@ -61,7 +61,7 @@ Atès que cal mantenir una jerarquia de rols i visibilitat per departaments, ent
 
 * Nomenclatura Teams: **<CDGO_DPTO>-<CDGO_ENT>-<LOTE_MANT>-<_ROL_>** on:
     + <CDGO_DPTO>: Codi de departament.
-    + <CDGO_ENT>: Codi d' entitat.
+    + <CDGO_ENT>: Codi d'entitat.
     + <LOTE_MANT>: Lot de Manteniment.
     + <_ROL_>: Role de Github.
 

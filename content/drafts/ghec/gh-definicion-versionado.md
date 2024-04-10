@@ -9,7 +9,7 @@ sections    = ["GHEC"]
 
 ## Objectiu 🚀
 
-El present document descriu el model de versionat que s' implantarà dins de l' organització de CTTI sobre el codi dels diferents artefactes que es generaran, la qual cosa permetrà mantenir una traçabilitat exhaustiva d' aquests, gestió de dependències entre artefactes, així com implantar mesures de validació a l' hora de realitzar desplegaments en els diferents entorns.
+El present document descriu el model de versionat que s'implantarà dins de l'organització de CTTI sobre el codi dels diferents artefactes que es generaran, la qual cosa permetrà mantenir una traçabilitat exhaustiva d'aquests, gestió de dependències entre artefactes, així com implantar mesures de validació a l'hora de realitzar desplegaments en els diferents entorns.
 
 **És important recalcar, que la informació que s'indica en el següent document està pendent de confirmar amb l'equip de Qualitat de CTTI.**
 
@@ -35,7 +35,7 @@ Es proposa la següent Nomenclatura :
 
 - RC* - Release Candidate, versió X, per a desplegaments a entorns pre-productius o commit de Development a Release.
 
-- En cas de no introduir cap sufix, indicarà que l' artefacte, llibreria o script està preparat per promocionar Màster o ser desplegat en producció.  De Release a Main/Master.
+- En cas de no introduir cap sufix, indicarà que l'artefacte, llibreria o script està preparat per promocionar Màster o ser desplegat en producció.  De Release a Main/Master.
 
 Exemple :
 
