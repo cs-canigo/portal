@@ -7,12 +7,7 @@ weight      = "7"
 sections    = ["GHEC"]
 +++
 
-
-<img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
-
 # Rols de repositori per a una organització
-
-Github documentació --> [Funcions del repositori per a una organització](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)
 
 ## ROLS SOBRE REPOSITORIS
 
@@ -78,3 +73,9 @@ Però si podrà...
 - Tens accés complet als "settings", i a:
 
 ![Admin Settings](/images/GHEC/admin-danger-zone-settings.png)
+
+
+## Wiki 📖
+
+Més informació : 
+ [Funcions del repositori per a una organització](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)

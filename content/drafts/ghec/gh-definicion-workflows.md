@@ -7,8 +7,6 @@ sections    = ["GHEC"]
 +++
 
 
-<img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
-
 # Definició de Workflows a alt nivell
 
 ## Objectiu 🚀
@@ -22,7 +20,7 @@ Es proposen diferents definicions de workflows a alt nivell. S' ha considerat se
 Es detallarà tant per a fluxos d' aplicació com fluxos per a infraestructura.
 
 ## Workflow de Continuous Integration (CI) per a aplicacions
-Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests com s'ha definit en el model de GitFlow en [Models de GitFlow i GitOps.](./model-gitflow-gitops.md)
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests com s'ha definit en el model de GitFlow en [Models de GitFlow i GitOps.](../model-gitflow-gitops)
 
 S'ha diferenciat en el workflow entre:
 + Canvis en temps de Pull Request, que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.

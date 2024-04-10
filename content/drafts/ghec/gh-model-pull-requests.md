@@ -8,14 +8,12 @@ sections    = ["GHEC"]
 +++
 
 
-<img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
-
 # Model d'Integració de Branques amb Pull Request.
 
 ## Objectiu 🚀
 El present document descriu el resultat de l' anàlisi realitzada en la gestió d' integració entre branques a GitHub a través de Pull Request.
 
-## PREREQUISIT
+## Prerequisit
 Cal que el lector tingui coneixements previs bàsics d'operativitat amb repositoris de codi Git.
 
 ## Al detall 📋
