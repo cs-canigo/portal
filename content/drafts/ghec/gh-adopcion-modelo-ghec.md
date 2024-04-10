@@ -208,7 +208,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
         Sempre seguint la filosofia GitOps on es desacoblen els workflows de CI amb els de CD. 
 
   
-  3. **Plataforma llesta, comencem a treballar**
+  ## Plataforma llesta, comencem a treballar
 
       Creada i configurada tota la plataforma per al nostre model de treball, cal recalcar que també **existirà una nova metodologia de treball**, la qual es detallarà en els següents punts i enllaços:
 
@@ -229,7 +229,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
         Aquesta matriu pot ser modificada en base a les decisions que es prenguin segons les experiències o necessitats que vagin sorgint.
 
-      + **Implantació de model de Merge amb Pull Request**.  El model de desenvolupament amb Pull Request a GitHub descriu un mètode de treball que afecta les integracions entre dues branques, normalment una branca de features cap a una branca principal, per exemple, development, rellegir-se o màster.
+      + **Implantació de model de Merge amb Pull Request**.  El model de treball amb Pull Request en Github descriu una metodologia en la integració de branques en GHEC en la qual intervenen dos actors.
   
         Aquest procés permet la revisió del contingut d'una branca Feature a integrar en una principal abans de realitzar el Merge. Si el contingut d'aquesta branca no és apte pels criteris de la persona que tingui el rol de revisor, aquesta branca no s'integrarà i se li demanarà al desenvolupador que solucioni els problemes trobats.
 

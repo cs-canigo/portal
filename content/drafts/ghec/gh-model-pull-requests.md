@@ -15,7 +15,7 @@ Cal que el lector tingui coneixements previs bàsics d'operativitat amb reposito
 
 ## Al detall 📋
 
-El model de treball amb Pull Request a Github descriu una mètode de treball a l'hora de realitzar integracions entre branques a Github, normalment una branca de features a una branca principal, per exemple, rellegir-se o màster.
+El model de treball amb Pull Request en Github descriu una metodologia en la integració de branques en GHEC en la qual intervenen dos actors.
 
 Aquest procés permet la revisió del contingut de la branca a integrar en una principal abans de realitzar la integració.  Si el contingut d'aquesta branca no és apte als criteris del la persona que tingui el rol de revisor, aquesta branca no s'integrarà. 
 
@@ -77,6 +77,9 @@ Es descriuen exemples per a ambdós fluxos de Pull Request identificats anterior
 7. GitHub retorna Ok al Merge i la branca "Documentacio_Feature" s'ha integrat a Main/Master
 .
 ![Sollicitud de Pull Request ](/images/GHEC/8PullRequestRealizado.png)
+
+Aquells usuaris amb rol MAINTAIN, se'ls oferirà, com es pot veure a la imatge, la possibilitat d'esborrar la branca que ha estat integrada.  
+ÉS MOLT IMPORTANT QUE NO HAN D'ESBORRAR LES BRANQUES RELEASE O DEVELOPMENT, PODENT NOMÉS ESBORRAR LES BRANQUES FEATURE
 
 **Sol·licitud de Pull Request, sol·licitud de més informació per part del Reviewer i re-sol·licitud de Pull Request després d'afegir canvis sol·licitats**
 
