@@ -16,7 +16,7 @@ Des de l'equip SIC s'anirà contactant amb els proveïdors de les aplicacions de
 
 Depenent del tipus de pipeline i desplegament utilitzat, la migració a SIC 3.0 impactarà de diferent forma, que es podria resumir de la manera següent:
 
-- **Jobs de publicació de llibreries en Nexus** Aquest tipus de jobs tambien existeixen en SIC 3.0 i es migraran amb molt pocs canvis. Bastarà que el proveïdor de l'aplicació generi un nou ACA seguint els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/)
+- **Jobs de publicació de llibreries en Nexus** Aquest tipus de jobs també existeixen en SIC 3.0 i es migraran amb molt pocs canvis. Bastarà que el proveïdor de l'aplicació generi un nou ACA seguint els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/)
 
 - **Jobs d'execució de scritps de base de dades** En SIC 3.0 els job d'execució de script de base de dades compten amb el seu propi projecte en Gitblab i els seus propis Jobs, independentment d'altres artefactes que puguin formar part de l'aplicació. Es precisarà la realització de diverses accions per part del proveïdor de l'aplicació:
 
@@ -28,7 +28,7 @@ Depenent del tipus de pipeline i desplegament utilitzat, la migració a SIC 3.0 
 
 Amb aquests nous fitxers ACA es crearan les noves pipelines en SIC 3.0 que substituiran a les actuals utilitzades en SIC 2.0.
 
-- **Jobs de desplegament en modalitat SEMIAUTOMATIC** En SIC 3.0 tambien existeixen jobs amb aquesta modalitat de desplegament, per tant, aquests jobs poden migrar-se a SIC 3.0 amb molt poques modificacions:
+- **Jobs de desplegament en modalitat SEMIAUTOMATIC** En SIC 3.0 també existeixen jobs amb aquesta modalitat de desplegament, per tant, aquests jobs poden migrar-se a SIC 3.0 amb molt poques modificacions:
 
     1.- Si inclou artefactes de base de dades, tal com es va comentar en el punt anterior, caldrà separar els artefactes de script de base de dades de la resta d'artefactes.
 
@@ -43,7 +43,7 @@ Amb aquests nous fitxers ACA es crearan les noves pipelines en SIC 3.0 que subst
 
 ## Pla d'acció
 
-L'equip SIC contactarà amb els proveïdors de les diferents aplicacions per a iniciar els treballs de migració d'un determinat conjunt de jobs de SIC 2.0
+L'equip SIC contactarà amb els proveïdors de les diferents aplicacions per a iniciar els treballs de migració d'un determinat conjunt de jobs de SIC 2.0:
 
     1.- En primer lloc s'enviarà un comunicat des de SIC indicant el conjunt de jobs afectats i els treballs a realitzar.
 
@@ -51,10 +51,8 @@ L'equip SIC contactarà amb els proveïdors de les diferents aplicacions per a i
     
     3.- Opcionalment es pot celebrar una sala tècnica per a aclarir dubtes.
     
-    .- Es proposarà un termini raonable per a realitzar les adaptacions i proves pertinents, transcorregut el qual, es desactivaran els job de SIC 2.0 no permetent-se més desplegaments des d'aquesta plataforma.
+    4.- Es proposarà un termini raonable per a realitzar les adaptacions i proves pertinents, transcorregut el qual, es desactivaran els job de SIC 2.0 no permetent-se més desplegaments des d'aquesta plataforma.
 
-
-<br/><br/>
 
 Si teniu qualsevol dubte o problema sobre els serveis del SIC, podeu revisar les [**Preguntes Freqüents**](/sic/faq)
 o utilitzar els canals de [**Suport**](/sic/suport).
