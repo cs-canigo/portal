@@ -8,8 +8,6 @@ sections    = ["GHEC"]
 +++
 
 
-<img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
-
 # Model d'Integració de Branques amb Pull Request.
 
 ## Objectiu 🚀

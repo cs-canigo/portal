@@ -7,8 +7,6 @@ weight      = "8"
 sections    = ["GHEC"]
 +++
 
-<img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Presidencia/ctti_h2.jpg">
-
 # Execusiò de Actions con Self-Hosted Runners
 
 ## Objectiu 🚀
