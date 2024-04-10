@@ -1,3 +1,4 @@
+
 +++
 date         = "2024-04-09"
 title        = "Definició del model de versionat"
@@ -5,8 +6,6 @@ description  = "Definició del model de versionat."
 weight      = "4"
 sections    = ["GHEC"]
 +++
-
-# Definició del model de versionat.
 
 ## Objectiu 🚀
 

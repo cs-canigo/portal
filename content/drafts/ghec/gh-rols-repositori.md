@@ -7,8 +7,6 @@ weight      = "7"
 sections    = ["GHEC"]
 +++
 
-# Rols de repositori per a una organització
-
 ## Objectiu 🚀
 
 L'objectiu de la següent documentació és mostrar els diferents rols de repositori que GitHub Enterprise Cloud posseeix a nivell d'organització.

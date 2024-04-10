@@ -1,3 +1,4 @@
+
 +++
 date         = "2024-04-09"
 title        = "Integració al nou model Cloud gestionat per a DevOps amb GitHub Enterprise Cloud"
@@ -5,9 +6,6 @@ description  = "El present document descriu les guies necessàries per a l' adop
 weight      = "1"
 sections    = ["GHEC"]
 +++
-
-
-# Integració al nou model Cloud gestionat per a DevOps amb GitHub Enterprise Cloud
 
 ## Objectiu 🚀
 El present document descriu les guies necessàries per a l' adopció, per part dels projectes, al nou model gestionat Cloud per a DevOps amb GitHub Enterprise Cloud.

@@ -1,3 +1,4 @@
+
 +++
 date         = "2024-04-09"
 title        = "Definició de Workflows a alt nivell"
@@ -5,9 +6,6 @@ description  = "Definició de Workflows a alt nivell"
 weight      = "2"
 sections    = ["GHEC"]
 +++
-
-
-# Definició de Workflows a alt nivell
 
 ## Objectiu 🚀
 El present document descriurà el resultat de la definició a alt nivell dels Workflows de CI/CD per a GitHub Enterprise Cloud en el projecte en curs per al Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya.
