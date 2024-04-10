@@ -16,15 +16,15 @@ Des de l'equip SIC s'anirà contactant amb els proveïdors de les aplicacions de
 
 Depenent del tipus de pipeline i desplegament utilitzat, la migració a SIC 3.0 impactarà de diferent forma, que es podria resumir de la manera següent:
 
-- **Jobs de publicació de llibreries en Nexus** Aquest tipus de jobs tambien existeixen en SIC 3.0 i es migraran amb molt pocs canvis. Bastarà que el proveïdor de l'aplicació generi un nou ACA seguint els [exemples que existeixen en el portal d'arquitectura] (/plataformes/sic/guies/sic30-guies/fitxer-aca/)
+- **Jobs de publicació de llibreries en Nexus** Aquest tipus de jobs tambien existeixen en SIC 3.0 i es migraran amb molt pocs canvis. Bastarà que el proveïdor de l'aplicació generi un nou ACA seguint els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/)
 
 - **Jobs d'execució de scritps de base de dades** En SIC 3.0 els job d'execució de script de base de dades compten amb el seu propi projecte en Gitblab i els seus propis Jobs, independentment d'altres artefactes que puguin formar part de l'aplicació. Es precisarà la realització de diverses accions per part del proveïdor de l'aplicació:
 
     1.- Dividir el codi en dos projectes en Gitlab, deixant d'una banda els script de base de dades, i per l'altre la resta d'artefactes estàtics i dinàmics de l'aplicació.
 
-    2.- Creació d'un nou fitxer ACA de desplegament de base de dades segons els [exemples que existeixen en el portal d'arquitectura] (/plataformes/sic/guies/sic30-guies/fitxer-aca/)
+    2.- Creació d'un nou fitxer ACA de desplegament de base de dades segons els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/)
 
-    3.- Creació d'un nou fitxer ACA per a la resta d'artefactes seguint els [exemples que existeixen en el portal d'arquitectura] (/plataformes/sic/guies/sic30-guies/fitxer-aca/).
+    3.- Creació d'un nou fitxer ACA per a la resta d'artefactes seguint els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/).
 
 Amb aquests nous fitxers ACA es crearan les noves pipelines en SIC 3.0 que substituiran a les actuals utilitzades en SIC 2.0.
 
@@ -32,13 +32,13 @@ Amb aquests nous fitxers ACA es crearan les noves pipelines en SIC 3.0 que subst
 
     1.- Si inclou artefactes de base de dades, tal com es va comentar en el punt anterior, caldrà separar els artefactes de script de base de dades de la resta d'artefactes.
 
-    2.- S'haurà de crear un nou fitxer ACA  seguint els [exemples que existeixen en el portal d'arquitectura] (/plataformes/sic/guies/sic30-guies/fitxer-aca/).
+    2.- S'haurà de crear un nou fitxer ACA  seguint els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/).
 
 - **Jobs de desplegament en modalitat AUTOMATIC o DELEGATED** Aquests Jobs es migraran a SIC 3.0 com jobs en modalitat DELEGATED. En aquest cas, a més del proveïdor de l'aplicació, també es precisarà la col·laboració del CPD:
 
     1.- El CPD realitzarà la implementació oportuna del desplegament delegat i proporcionarà l'identificador d'infraestructura.
 
-    2.- El proveïdor de l'aplicació modificarà el fitxer ACA utilitzant aquest identificador d'infraestructura i seguint els[exemples que existeixen en el portal d'arquitectura] (/plataformes/sic/guies/sic30-guies/fitxer-aca/).
+    2.- El proveïdor de l'aplicació modificarà el fitxer ACA utilitzant aquest identificador d'infraestructura i seguint els [exemples que existeixen en el portal d'arquitectura](/plataformes/sic/guies/sic30-guies/fitxer-aca/).
 
 
 ## Pla d'acció
