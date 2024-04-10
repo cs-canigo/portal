@@ -6,6 +6,8 @@ weight      = "4"
 sections    = ["GHEC"]
 +++
 
+# Definició del model de versionat.
+
 ## Objectiu 🚀
 
 El present document descriu el model de versionat que s' implantarà dins de l' organització de CTTI sobre el codi dels diferents artefactes que es generaran, la qual cosa permetrà mantenir una traçabilitat exhaustiva d' aquests, gestió de dependències entre artefactes, així com implantar mesures de validació a l' hora de realitzar desplegaments en els diferents entorns.
