@@ -7,8 +7,6 @@ weight      = "8"
 sections    = ["GHEC"]
 +++
 
-# Execusiò de Actions con Self-Hosted Runners
-
 ## Objectiu 🚀
 
 GHEC Actions, permet l'execució de Workflows amb els runners propis de GHEC o Runners AD-HOC coneguts com a Self Hosted Runners que s'executen des d'altres proveïdors Cloud. En l'actual model, s'han generat sota el proveïdor públic de Cloud AZURE.

@@ -6,7 +6,6 @@ weight      = "3"
 sections    = ["GHEC"]
 +++
 
-
 ## Objectiu 🚀
 
 GitHub ofereix la possibilitat de rebre notificacions tant per correu electrònic com per mitjà d'una safata d'entrada que conté el portal web.

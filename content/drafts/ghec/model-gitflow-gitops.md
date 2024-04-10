@@ -7,9 +7,6 @@ weight      = "9"
 sections    = ["GHEC"]
 +++
 
-
-# Model GitFlow i model GitOps
-
 ## Objectiu 🚀
 
 El present document descriurà el resultat de l'anàlisi i definició realitzat per modelar el GitFlow i el GitOps que s'implantarà per a GitHub Enterprise Cloud en el projecte en curs per al Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya.

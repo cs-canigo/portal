@@ -8,8 +8,6 @@ sections    = ["GHEC"]
 +++
 
 
-# Model d'Integració de Branques amb Pull Request.
-
 ## Objectiu 🚀
 El present document descriu el resultat de l' anàlisi realitzada en la gestió d' integració entre branques a GitHub a través de Pull Request.
 

@@ -7,8 +7,6 @@ weight      = "5"
 sections    = ["GHEC"]
 +++
 
-# Model de Govern 
-
 ## Objectiu  🚀
 
 El present document descriurà el resultat de l' anàlisi i definició realitzat per modelar Git Hub Enterprise Cloud en base al model de Govern de la Generalitat de Catalunya. 
