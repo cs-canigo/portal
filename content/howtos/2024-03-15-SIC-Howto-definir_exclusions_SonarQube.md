@@ -67,7 +67,7 @@ Per a més informació:
 En els casos que no es tracti d'un projecte de tipus Maven, Gradle o .Net (on es poden utilitzar els fitxers propis de definició del projecte)
 s'hauria d'optar per definir les propietats pel client de SonarScanner mitjançant el fitxer `sonar-project.properties`.
 Per tant, si per exemple tenim un projecte amb una carpeta *lib* que conté llibreries externes, es podria obtenir
-un resultat no satisfactori a la comprovació de regles del SonarQube com es pot veure a la següent imatge:
+un resultat no satisfactori a la comprovació de regles del SonarQube com es pot veure a la següent imatge :
 
 ![Informe projecte](/images/howtos/SonarProperties_inicial.png)
 
