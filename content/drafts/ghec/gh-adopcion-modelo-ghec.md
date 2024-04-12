@@ -208,7 +208,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
         Sempre seguint la filosofia GitOps on es desacoblen els workflows de CI amb els de CD. 
 
   
-  ## Plataforma llesta, comencem a treballar
+## Plataforma llesta, comencem a treballar
 
       Creada i configurada tota la plataforma per al nostre model de treball, cal recalcar que també **existirà una nova metodologia de treball**, la qual es detallarà en els següents punts i enllaços:
 
