@@ -412,98 +412,98 @@ Creada i configurada tota la plataforma per al nostre model de treball, cal reca
   L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
   1. **Integració en branca release des de features.**
-          L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a rellegir-se.  En aquests casos, es passa de feature a release ja que en els projectes d'infra no sol existir branca ni entorn de desenvolupament.
+    L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a rellegir-se.  En aquests casos, es passa de feature a release ja que en els projectes d'infra no sol existir branca ni entorn de desenvolupament.
           
-            ![Integració en branca release des de features](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
+      ![Integració en branca release des de features](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
 
             
-            Objectiu : Integració de feature a release i generació del Terraform Pla per a desplegament en Preproducció.
+      Objectiu : Integració de feature a release i generació del Terraform Pla per a desplegament en Preproducció.
 
-            Actors:
-            * Usuari amb Rol Write que realitza el desenvolupament.
-            * Usuari amb Rol Maintain que aprova la Pull Request.
+      Actors:
+      * Usuari amb Rol Write que realitza el desenvolupament.
+      * Usuari amb Rol Maintain que aprova la Pull Request.
             
-            Execució de Workflows : Automàtic.
-            * Infra CI on PR, en realitzar la PR.  Aquest workflow genera el terraform pla i l'emmagatzema, havent prèviament executat scans de format, seguretat i cost sobre aquest.
-            * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
+      Execució de Workflows : Automàtic.
+      * Infra CI on PR, en realitzar la PR.  Aquest workflow genera el terraform pla i l'emmagatzema, havent prèviament executat scans de format, seguretat i cost sobre aquest.
+      * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
             
-            Resultat de l'operació :
-            * Funció Rama integrada en llançament.
-            * Generació del Terraform Pla i emmagatzematge d'aquest a Storage Account d'Azure per al seu posterior desplegament.
-            * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
-            * Creació del tag 1.0.1-RC per al REPO i 1.0.1-RC.tfplan per al terraform pla
+      Resultat de l'operació :
+      * Funció Rama integrada en llançament.
+      * Generació del Terraform Pla i emmagatzematge d'aquest a Storage Account d'Azure per al seu posterior desplegament.
+      * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
+      * Creació del tag 1.0.1-RC per al REPO i 1.0.1-RC.tfplan per al terraform pla
 
-        2. **Desplegament de la infra en l'entorn de Preproducció.**
-          L'usuari ja té disponible el Terraform Pla, validat, i es disposa a desplegar-lo en l'entorn de pre per a la seva validació.
+  2. **Desplegament de la infra en l'entorn de Preproducció.**
+    L'usuari ja té disponible el Terraform Pla, validat, i es disposa a desplegar-lo en l'entorn de pre per a la seva validació.
 
-            ![Desplegament de la infra en l'entorn de Preproducció](/images/GHEC/gh_ejemplo_infra_e2e_step2.png)
+      ![Desplegament de la infra en l'entorn de Preproducció](/images/GHEC/gh_ejemplo_infra_e2e_step2.png)
 
-           Objectiu: Desplegament en desenvolupament de la infraestructura generada anteriorment. 
+     Objectiu: Desplegament en desenvolupament de la infraestructura generada anteriorment. 
 
-            Actors:
-              * Usuari amb Rol Write o Maintain.
+      Actors:
+      * Usuari amb Rol Write o Maintain.
               
-            Execució de Workflows : Baix Demanda per part de l'usuari.
-              * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l'estat del desplegament.
+      Execució de Workflows : Baix Demanda per part de l'usuari.
+      * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l'estat del desplegament.
 
-                En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
+          En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
                 
-                * Branca o branch on es troba el workflow actualitzat: release
-                * Infra Version in semver format, i.e 1.0.1-RC : Versió del pla que es vol desplegar.
-                * Env to apply the terraform Pla : Entorn on desplegar el Terraform Pla, en aquest cas Preproducció.
-                * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
-                * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
-                * Prioritat ITSM: Prioritat del Ticket a crear.
+          * Branca o branch on es troba el workflow actualitzat: release
+          * Infra Version in semver format, i.e 1.0.1-RC : Versió del pla que es vol desplegar.
+          * Env to apply the terraform Pla : Entorn on desplegar el Terraform Pla, en aquest cas Preproducció.
+          * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
+          * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
+          * Prioritat ITSM: Prioritat del Ticket a crear.
                               
-              Resultat de l'operació :
-              * Infraestructura desplegada a l'entorn de Preproducció.  
+        Resultat de l'operació :
+        * Infraestructura desplegada a l'entorn de Preproducció.  
               
-        3. **Integració en branca master des de release**
-          L'usuari, un cop validat que els canvis han funcionat a l'entorn de Release, es disposa a promocionar els canvis a la branca màster .
+  3. **Integració en branca master des de release**
+    L'usuari, un cop validat que els canvis han funcionat a l'entorn de Release, es disposa a promocionar els canvis a la branca màster .
           
-            ![Integració en branca master des de release](/images/GHEC/gh_ejemplo_infra_e2e_step3.png)
+      ![Integració en branca master des de release](/images/GHEC/gh_ejemplo_infra_e2e_step3.png)
 
             
-            Objectiu : Integració de la branca rellegi en màster i generació del Terraform Pla per a desplegament en Producció
+      Objectiu : Integració de la branca rellegi en màster i generació del Terraform Pla per a desplegament en Producció
 
-            Actors:
-            * Usuari amb Rol Write que realitza el desenvolupament i sol·licita PR.
-            * Usuari amb Rol Maintain que aprova la Pull Request.
+      Actors:
+      * Usuari amb Rol Write que realitza el desenvolupament i sol·licita PR.
+      * Usuari amb Rol Maintain que aprova la Pull Request.
             
-            Execució de Workflows : Automàtic.
-            * Infra CI on PR, en realitzar la PR.  Aquest workflow genera el terraform pla i l'emmagatzema, havent prèviament executat scans de format, seguretat i cost sobre aquest.
-            * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
+      Execució de Workflows : Automàtic.
+      * Infra CI on PR, en realitzar la PR.  Aquest workflow genera el terraform pla i l'emmagatzema, havent prèviament executat scans de format, seguretat i cost sobre aquest.
+      * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
             
-            Resultat de l'operació :
-            * Branca rellegeixi integrada en màster.
-            * Generació del Terraform Pla i emmagatzematge d'aquest a Storage Account d'Azure per al seu posterior desplegament.
-            * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
-            * Creació del tag 1.0.1 per al REPO i 1.0.1.tfplan per al terraform plan
+      Resultat de l'operació :
+      * Branca rellegeixi integrada en màster.
+      * Generació del Terraform Pla i emmagatzematge d'aquest a Storage Account d'Azure per al seu posterior desplegament.
+      * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
+      * Creació del tag 1.0.1 per al REPO i 1.0.1.tfplan per al terraform plan
 
-        4. **Desplegament de la infra en l'entorn de Producció.**
-          L'usuari ja té disponible el Terraform Pla, validat, i es disposa a desplegar-lo en l'entorn de producció per a la seva validació.
+  4. **Desplegament de la infra en l'entorn de Producció.**
+    L'usuari ja té disponible el Terraform Pla, validat, i es disposa a desplegar-lo en l'entorn de producció per a la seva validació.
 
-            ![Desplegament de la infra en l'entorn de Producció](/images/GHEC/gh_ejemplo_infra_e2e_step4.png)
+      ![Desplegament de la infra en l'entorn de Producció](/images/GHEC/gh_ejemplo_infra_e2e_step4.png)
 
-            Objectiu : Desplegament en producció de la infraestructura generada anteriorment. 
+      Objectiu : Desplegament en producció de la infraestructura generada anteriorment. 
 
-            Actors:
-              * Usuari amb Rol Write o Maintain.
+      Actors:
+      * Usuari amb Rol Write o Maintain.
               
-            Execució de Workflows : Baix Demanda per part de l'usuari.
-              * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l'estat del desplegament.
+      Execució de Workflows : Baix Demanda per part de l'usuari.
+      * Infra CD Apply que, descarrega el pla de l'Storage Account amb el tag específic i executa el pla.  Addicionalment i com ocorria amb les aplicacions, es crea CRQ en ITSM per conèixer l'estat del desplegament.
 
-                En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
-                
-                * Branca o branch on es troba el workflow actualitzat: màster
-                * Infra Version in semver format, i.e 1.0.1 : Versió del pla que es vol desplegar.
-                * Env to apply the terraform Pla : Entorn on desplegar el Terraform Pla, en aquest cas Producció.
-                * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
-                * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
-                * Prioritat ITSM: Prioritat del Ticket a crear.
+          En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
+              
+          * Branca o branch on es troba el workflow actualitzat: màster
+          * Infra Version in semver format, i.e 1.0.1 : Versió del pla que es vol desplegar.
+          * Env to apply the terraform Pla : Entorn on desplegar el Terraform Pla, en aquest cas Producció.
+          * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
+          * ITSM Service : Servei associat al desplegament per emmagatzemar en ITSM.
+          * Prioritat ITSM: Prioritat del Ticket a crear.
                               
-            Resultat de l'operació :
-              * Infraestructura desplegada a l'entorn de Producció.  
+      Resultat de l'operació :
+        * Infraestructura desplegada a l'entorn de Producció.  
 
 ## Wiki 📖
 
