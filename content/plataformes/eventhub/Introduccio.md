@@ -39,5 +39,10 @@ L'Oficina Tècnica ha elaborat un document (Welcome Pack) per facilitar-vos la v
 
 Podeu consultar la darrera versió disponible el [Welcome Pack aquí.](/related/eventhub/WelcomePackKafka_latest.pdf)
 
+## Procediment de contacte amb l'Oficina Tècnica
+EEn aquest apartat es descriu com s'ha de cursar la sol·licitud en cas de necessitat de realitzar una petició a l'Oficina Tècnica, ja sigui aprovisionament de recursos o dubtes d'integració.
+- Accedir al *JIRA *CSTD: https://cstd.ctti.gencat.cat/jiracstd/
+- Demanar a la bústia **cstd.ctti@gencat.cat** els permisos corresponents per a obrir peticions al servei Servei d'acompanyament de la plataforma EventHub (ACOEVENT).
+- Per a més detall consulteu l'apartat de  [Suport](/plataformes/eventhub/Suport/).
 ---
-Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). 
