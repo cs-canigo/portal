@@ -1,27 +1,27 @@
 
 +++
 date         = "2024-04-09"
-title        = "Execusiò de Actions con Self-Hosted Runners"
-description  = "Execusiò de Actions con Self-Hosted Runners"
+title        = "Self-hosted runners"
+description  = "Execució de workflows amb self-hosted runners"
 weight      = "8"
 sections    = ["GHEC"]
 +++
 
 ## Objectiu 🚀
 
-GHEC Actions, permet l'execució de Workflows amb els runners propis de GHEC o Runners AD-HOC coneguts com a Self Hosted Runners que s'executen des d'altres proveïdors Cloud. En l'actual model, s'han generat sota el proveïdor públic de Cloud AZURE.
+GitHub Actions permet l'execució de workflows amb els runners propis de GHEC o runners AD-HOC coneguts com a self-hosted runners, els quals es poden executar des d'altres proveïdors Cloud o inclús On-prem. En l'actual model, s'han generat sota el proveïdor públic de cloud Azure.
 
 
 ![Diagrama Runners](/images/GHEC/gh_self_hosted_runner.png)
 
-Per fer ús d'aquest tipus de Runners cal indicar-ho en els workflows de la manera següent:
+Per fer ús d'aquest tipus de runners cal indicar-ho en els workflows de la manera següent:
 
-1. Invocant un Job previ que comprova si hi ha runners disponibles i garanteix que almenys un runner està sempre disponible.
+1. Invocant un job previ que comprova si hi ha runners disponibles i garanteix que almenys sempre un runner està aixecat.
 
 
       ![](/images/GHEC/gh-containers-running.png)
 
-2. Indicar que s'utilitza un runner Self-hosted mitjançant:
+2. Indicar que s'utilitza un runner self-hosted mitjançant:
   
         + Comandament: runs-on:
         + Group: java
@@ -29,8 +29,8 @@ Per fer ús d'aquest tipus de Runners cal indicar-ho en els workflows de la mane
 
       ![](/images/GHEC/ghp-run-selfhostedrunners.png)
 
-D'altra banda, actualment el model només disposa de Self-Hosted runners amb les característiques següents:
+D'altra banda, actualment el model només disposa de self-hosted runners amb les característiques següents:
 
-+ JAVA i "tallatge" medium
++ Java i "tallatge" medium
 
-Segons necessitats, s'ampliarà el ventall de Self-Hosted Runners a la disposició dels desenvolupadors.
+Segons necessitats, s'ampliarà el catàleg de self-hosted runners que es posen a disposició dels desenvolupadors.
