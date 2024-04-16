@@ -94,9 +94,7 @@ el que executa el test unitari del mòdul de persistència:
 
 ### Configuració
 
-La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament (plugin de Canigó per a Eclipse)
-
-En cas que no es generi automàticament el codi, s'ha de realitzar manualment la següent configuració:
+La configuració es realitza de la manera següent:
 
 **jpa.properties**
 
