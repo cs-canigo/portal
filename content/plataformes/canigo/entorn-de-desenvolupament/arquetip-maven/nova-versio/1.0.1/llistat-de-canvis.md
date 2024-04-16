@@ -45,4 +45,4 @@ S'ha de tenir en compte que la configuració per defecte de la base de dades de 
 </div>
 
 - Es pot visualitzar la informació rellevant sobre la creació de l' arquetip en el següent enllaç:
-[README](/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.0/documentacio)
+[README](/plataformes/canigo/entorn-de-desenvolupament/arquetip-maven/nova-versio/1.0.1/documentacio)
