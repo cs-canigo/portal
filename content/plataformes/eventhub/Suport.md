@@ -35,10 +35,10 @@ L’oficina tècnica està pensada per ajudar en tot el procés d’integració,
 - Donar accés per obrir tiquets a Confluent directament.
 
 ## Procediment de contacte amb l'Oficina Tècnica
-EEn aquest apartat es descriu com s'ha de cursar la sol·licitud en cas de necessitat de realitzar una petició a l'Oficina Tècnica, ja sigui aprovisionament de recursos o dubtes d'integració.
-- Accedir al *JIRA *CSTD: https://cstd.ctti.gencat.cat/jiracstd/
+En aquest apartat es descriu com s'ha de cursar la sol·licitud en cas de necessitat de realitzar una petició a l'Oficina Tècnica, ja sigui aprovisionament de recursos o dubtes d'integració.
+- Accedir al JIRA CSTD: https://cstd.ctti.gencat.cat/jiracstd/
 - Demanar a la bústia **cstd.ctti@gencat.cat** els permisos corresponents per a obrir peticions al servei Servei d'acompanyament de la plataforma EventHub (ACOEVENT).
-- Per a més detall consulteu l'apartat de  [Suport](/plataformes/eventhub/Suport/).
+- S'ha de crear una petició d'acompanyament amb les dades del vostre requeriment.
 ---
 Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). 
 
