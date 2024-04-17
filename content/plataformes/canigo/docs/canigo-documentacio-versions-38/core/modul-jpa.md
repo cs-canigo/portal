@@ -345,7 +345,7 @@ public <S extends T> List<S> bulkSave(Iterable<S> entities);
 
 ### Exemple
 
-Per exemple a l'aplicació inicial que genera el plugin de Canigó es generen els següents fitxers:
+Per exemple a l'aplicació inicial que genera l’arquetipus maven de Canigó es generen els següents fitxers:
 
 **Equipament.java**
 
