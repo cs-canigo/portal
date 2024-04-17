@@ -19,7 +19,7 @@ Els passos descrits en aquest document apliquen a la versió 3.8 del Framework C
 
 A la versió 3.8 de Canigó conté la possibilitat d'utilitzar les funcionalitats de WebFlux
 
-L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.8.0 de Canigó.
+L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb l’arquetipus maven de Canigó i actualitzada a la versió 3.8.0 de Canigó.
 
 ### Introducció WebFlux
 
