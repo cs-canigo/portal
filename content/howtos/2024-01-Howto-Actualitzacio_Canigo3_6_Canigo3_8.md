@@ -22,7 +22,7 @@ Al mes de **gener del 2024 s'ha publicat la versió 3.8 del Framework Canigó**.
 tenir un suport continuat, així com la màxima estabilitat que proporciona una versió LTS.
 
 L'objectiu d'aquesta guia  és mostrar els procediments necessaris per a actualitzar una aplicació realitzada
-amb Canigó 3.8 i el punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per l'Eclipse.
+amb Canigó 3.8 i el punt de partida d'aquesta guia és una aplicació creada amb l’arquetipus maven de Canigó.
 
 ### Configuració prèvia
 
