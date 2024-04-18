@@ -30,6 +30,7 @@ Java		 | 8  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8-alpine-
 Java		 | 11-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:11.0.20-alpine-3.18   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/11.0.20-alpine-3.18)
 Java		 | 17-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:17.0.8-openjdk  | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/17.0.8-openjdk)
 .Net Core    | 6.0.19   | registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-6.0.19   | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/1.0-6.0.19)
+.Net Core    | 8.0   | registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-8    | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/8.0)
 NodeJS 		 | 18.16.1   | registreimatges.sic.intranet.gencat.cat/gencatcloud/node:18.16.1   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/-/tree/18.16.1)
 PHP 		 | 8.1   | registreimatges.sic.intranet.gencat.cat/gencatcloud/apache-php:8.1   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/8.1)
 Tomcat  	 | 9.0-java8   | registreimatges.sic.intranet.gencat.cat/gencatcloud/tomcat:9-java8-alpine-3.18   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/-/tree/9-alpine-3.18-java8)
