@@ -55,7 +55,7 @@ Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació q
 
 Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar els següents arxius:
 
-1.- Importar el mòdul PICA-AVISALERT amb el plugin de Canigó 3.8 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
+1.- Incorporar manualment les seves dependències en el pom.xml de l'aplicació.
 
 En el pom.xml:
 

@@ -37,13 +37,7 @@ El servei LOPD ofereix suport a les aplicacions basades en Canigó per facilitar
 
 #### Instal-lació
 
-Disposar del mòdul LOPD és pot fer mitjançant dos camins:
-
-1.- Utilitzar l'eina de l'entorn de treball de Canigó (plugin per l'eclipse). On es podrà seleccionar el servei dintre del grup "suport".
-
-NOTA: L'eina afegeix automàticament un arxiu anomenat lopd.properties situat en src\main\resources\config\props\ que conté la llavor utilitzada per fer el xifrat/desxifrat de les dades. En la versió 1.0.0 del servei aquest paràmetre no s'està utilitzant així que no es necessari configurar-lo.
-
-2.- Afegir de forma manual les dependències del servei.
+Afegir de forma manual les dependències del servei.
 
 Modificar el pom.xml afegint:
 

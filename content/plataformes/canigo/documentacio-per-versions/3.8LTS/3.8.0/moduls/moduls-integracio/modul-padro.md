@@ -64,7 +64,7 @@ Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l
 
 Per configurar el mòdul d'integració PICA-PADRO és necessari configurar els següents arxius:
 
-1.- Importar el mòdul PICA-PADRO amb el plugin de Canigó 3 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
+1.- Incorporar manualment les seves dependències en el pom.xml de l'aplicació.
 
 En el pom.xml:
 

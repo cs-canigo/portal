@@ -114,7 +114,7 @@ Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que
 
 Per configurar el mòdul d'integració PICA-DNI és necessari configurar els següents arxius:
 
-1.- Importar el mòdul PICA-DNI amb el plugin de Canigó 3.8 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
+1.- Incorporar manualment les seves dependències en el pom.xml de l'aplicació.
 
 En el pom.xml:
 

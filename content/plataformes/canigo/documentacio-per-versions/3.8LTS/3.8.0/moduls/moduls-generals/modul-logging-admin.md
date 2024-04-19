@@ -37,7 +37,7 @@ A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3
 
 #### Client
 
-Si s'utilitza el Plugin de Canigó per a Eclipse s'instal·la automàticament una plana "loggingAdministration.html" dins l'aplicació.  En cas de realitzar la instal·lació de forma manual s'ha de descarregar la [part estàtica](/related/canigo/documentacio/modul-logging/canigo.operation.logging_static.zip).
+S'ha de descarregar la [part estàtica](/related/canigo/documentacio/modul-logging/canigo.operation.logging_static.zip).
 
 <div class="message warning">
 Des del CS Canigó no es realitzen adaptacions al <a href="http://www.gencat.cat/web/guies/estil/">PIV de la Generalitat de Catalunya</a>. És responsabilitat del proveïdor d'aplicacions fer les adaptacions necessàries segons els requeriments que tingui l'aplicació.
