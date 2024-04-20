@@ -1,3 +1,3 @@
 +++
-title = "GHEC"
+title = "GitHub Enterprise Cloud (GHEC)"
 +++
