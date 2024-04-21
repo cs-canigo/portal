@@ -1,50 +1,50 @@
 
 +++
 date         = "2024-04-09"
-title        = "Definició de Workflows a alt nivell"
-description  = "Definició de Workflows a alt nivell"
+title        = "Workflows"
+description  = "Definició de Workflows de CI/CD"
 weight      = "2"
 sections    = ["GHEC"]
 +++
 
 ## Objectiu 🚀
-El present document descriurà el resultat de la definició a alt nivell dels Workflows de CI/CD per a GitHub Enterprise Cloud en el projecte en curs per al Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya.
+El present document descriu la definició a alt nivell dels Workflows de CI/CD per a GitHub Enterprise Cloud (GHEC) .
 
-## Al detall 📋
+## Introducció 📋
 
-Es proposen diferents definicions de workflows a alt nivell. S'ha considerat separar o aïllar els workflows en uns més específics i evitar així la creació d'un workflow amb massa lògica que integri tant el CI com el CD. Aquests workflows llançaran triggers o faran trucades a d'altres per fer una cadena i que cada procés es trobi ben definit.
+S'ha considerat separar o aïllar els workflows en uns més específics i evitar així la creació d'un únic workflow amb massa lògica que integri tant el CI com el CD. Aquests workflows llançaran triggers o faran invocacions a d'altres per fer una cadena i que cada procés es trobi ben definit.
 
 
-Es detallarà tant per a fluxos d'aplicació com fluxos per a infraestructura.
+S'han definit tant workflows per components tècnics d'aplicació com worfklows per a infraestructura (IaC).
 
-## Workflow de Continuous Integration (CI) per a aplicacions
-Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests com s'ha definit en el model de GitFlow en [Models de GitFlow i GitOps.](../model-gitflow-gitops)
+## Workflow de Continuous Integration (CI) per a components tècnics d'aplicació
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../model-gitflow-gitops)
 
 S'ha diferenciat en el workflow entre:
-+ Canvis en temps de Pull Request, que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
-+ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la Pull Request, i integrar ambdues branques involucrades. 
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
 
-Depenent d'aquestes branques que es vulguin "mergear", provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama.
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
 
-![Definició a alt nivell de les workflows de CI](/images/GHEC/ci-workflow-definition.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition.png)
 
-Si es crea una Pull Request d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
 
 Nom del Workflow en GitHub : **APP CI on PR**.
 
-En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, ja que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
 
 
 
 
-![Definició a alt nivell de les workflows de CI](/images/GHEC/ci-workflow-definition_PR.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition_PR.png)
 
 
-D'altra banda, si estem en temps de commit, existiran dos tipus de fluxos depenent del tipus de si es vol treballar amb una Aplicació o amb una Llibreria.  
+D'altra banda, si estem en temps de commit, existiran dos tipus de workflows depenent de la tipologia del component: Aplicació o Llibreria.  
 
-+ En el cas d'una **aplicació** i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, dockerització, push, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request),  assignació de tags d'imatges i assignació de tag de repositori.   
-Els diferents steps es llançaran en funció de les branques involucrades en el procés com s'observa en el diagrama.  
-**En cap moment es permetrà modificar la imatge registrada en branca Development en treballar a Release o Master.**
++ En el cas d'una **aplicació**, i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, dockerització, push al registre, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request), assignació de tag a l'imatge i al repositori.   
+Els diferents steps es llançaran en funció de les branques involucrades en el procés tal i com s'observa en el diagrama.  
+**En cap moment es permetrà modificar la imatge generada en branca Development en treballar a Release o Master.**
 
     El nom del workflow en el repositori dependrà de la branca a la qual es faci la integració : 
 
@@ -53,9 +53,9 @@ Els diferents steps es llançaran en funció de les branques involucrades en el 
     * Nom del Workflow si el Commit és a release o master :  **APP CI on Commit to release o master**.
 
 
-![Definició a alt nivell de les workflows de CI](/images/GHEC/ci-workflow-definition_CM_app.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition_CM_app.png)
 
-+ En el cas que l'artefacte sigui una Llibreria, el flux de commit serà diferent, ja que l'objectiu del pipeline de llibreries és ser desplegada en un repositori de llibreries, tipus Artifactory, Nexus o Git Hub Packages i no el desplegament en cap infraestructura amb servidors d'aplicacions. 
++ En el cas que l'artefacte sigui una Llibreria, el flux de commit serà diferent, ja que l'objectiu del workflow de llibreries és desplegar en un repositori de llibreries, tipus Artifactory, Nexus o GitHub Packages, i no el desplegament en cap infraestructura per a que sigui executat (runtime). 
 En aquest cas, a diferència del workflow d'aplicacions, la llibreria que es genera en els diferents entorns no ha de ser immutable pel que:
     + En fase **Commit Development** , només cal realitzar el compilat, empaquetat, pujada de l'artefacte al repositori de llibreries i l'etiquetatge en aquest repositori.
 
@@ -63,28 +63,28 @@ En aquest cas, a diferència del workflow d'aplicacions, la llibreria que es gen
     
     Diagrama per a CI de llibreries.
 
-![Definició a alt nivell de les workflows de CI](/images/GHEC/ci-workflow-definition_CM_lib.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition_CM_lib.png)
 
-Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  
+Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori d'artefactes o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  
 
-A més, hi haurà diferents steps miscel·lanis com el de creació d'una branca, l'esborrat d'una branca, el "next major/minor version", el "bolets", "pre commit" i "post commit".
+### Orquestració de workflows
 
-Conforme s'avanci en el projecte, es proposa la creació de workflows "llançadors" que serveixin d'orquestradors dels diferents workflows de CI/CD, podent triar a través de manifestos en format .yaml la configuració a executar i el flux a seguir, podent controlar-se la paral·lelització o seqüencialitat dels processos.
+A futur, es preveu la creació de workflows "llançadors" que serveixin d'orquestradors dels diferents workflows de CI/CD, podent triar a través de manifestos en format .yaml la configuració a executar i el flux a seguir. Mitjançant aquest pla de desplegament es vol controlar la paral·lelització i/o seqüencialitat dels processos involucrats en el desplegament d'una aplicació.
 
 ## Worfklows de Continuous Deployment (CD) per a aplicacions
 
-El workflow de Desplegament Continu (CD) s'ha aïllat del workflow de CI per desvincular els entorns de desplegament de les diferents branques d'un repositori. Això és, es proposa la creació d'un workflow de CD que pugui rebre qualsevol artefacte generat prèviament en el workflow de CI i desplegar-lo en l'entorn que es desitgi, ja sigui en producció o en un entorn efímer de proves.
+El workflow de Desplegament Continu (CD) s'ha aïllat del workflow de CI per desvincular els entorns de desplegament de les diferents branques d'un repositori, així com desacoblar la generació d'un artefacte "deliverable" del propi workflow de desplegament. D'aquesta manera, es defineix un workflow de CD que pot rebre qualsevol artefacte generat prèviament en el workflow de CI i desplegar-lo en l'entorn que es desitgi, ja sigui en producció o en un entorn previ.
 
 Els diferents steps que es defineixen a alt nivell són els que es mostren en el diagrama següent:
 
-![Definició a alt nivell de les workflows de CD](/images/GHEC/cd-workflow-definition.png)
-* **Flux de Deploy CD**: Realitzarà desplegament d'un artefacte en l'entorn indicat.  Tindrà com a Steps:
+![Definició a alt nivell dels workflows de CD](/images/GHEC/cd-workflow-definition.png)
+* **Flux de Deploy CD**: Realitzarà el desplegament d'un artefacte en l'entorn indicat.  Tindrà com a Steps:
     1. Check Artifacts, realitzarà revisions sobre l'artefacte abans del desplegament.
     2. Env. Matrix, validarà si l'artefacte pot ser desplegat en l'entorn indicat.
-    3. PRE-AUDIT : Crea un CRQ en ITSM amb la indicant inici de desplegament.
+    3. PRE-AUDIT : Crea un CRQ en ITSM indicant l'inici de desplegament.
     4. Deploy: desplegament de l'artefacte en l'entorn indicat.
-    5. POST-AUDIT: Completa CRQ amb el resultat del desplegament.
-    6. EMAIL COMM : Enviament del resultat del desplegament per correu al owner de l'execució del workflow.
+    5. POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
+    6. EMAIL COMM : Enviament del resultat del desplegament als afectats.
     
     Nom del Workflow en GitHub : **APP CD**
 
@@ -101,11 +101,11 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
 
     Nom del Workflow en GitHub : **Validation Workflow**
 
-    Per a aquestes 4 fases de validació del producte, el workflow s'integrarà amb la nova eina de Qualitat de CTTI anomenada **MAT** la qual disposarà de les eines necessàries **as a Service** per a realitzar les proves indicades.
+    Per a aquestes 4 fases de validació del producte, el workflow s'integrarà amb la nova eina de Qualitat de CTTI anomenada **Marc d'Automatització de Testing (MAT)** la qual disposarà de les eines necessàries **as a Service** per a realitzar les proves indicades.
 
-    Aquesta integració es realitzarà mitjançant invocacions a l'API de Jenkins que orquestra els diferents pipelins de proves que proveeix MAT amb les següents eines:
+    Aquesta integració es realitzarà mitjançant invocacions a l'API que expossa el MAT:
 
-    * Interfície proposat d'integració:
+    * Interfície d'integració:
         * IN
             + URL MAT
             + NOM DEL COMPONENT
@@ -120,53 +120,47 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
             + EXIT CODE : 0 - SUCCESS; 1 - FAILURE
             + LOG
 
-Aquesta interfície ha sigut realitzada després de 
-diverses reunions amb l'equip Qualitat encarregat d'implementar l'eina **MAT**.  A futur, la coordinació d'aquest equip i el de GitHub acabarà de definir eines, interfícies que aportin la màxima qualitat al producte a desplegar.
+## Worfklows de Continuous Integration (CI) per a infraestructura (IaC).
 
-
-## Worfklows de Continuous Integration (CI) per a infraestructura.
-
-Es torna a apostar (depenent de la branca) per l'ús de Pull Request per realitzar un commit a branques (develop, release, màster/main).
+Es torna a apostar (depenent de la branca) per l'ús de Pull Request per realitzar un commit a branques (develop, release, master/main).
 
 Per això, es diferenciaran els workflows depenent de l'acció que es realitzi, pull request o commit.
 
 En el següent diagrama s'observa el flux definit:
 
-![Definició a alt nivell de les workflows de CD per a Infraestructura](/images/GHEC/ci-workflow-infra-definition.png)
+![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/ci-workflow-infra-definition.png)
 
 on:
-* Checkout: Descarregarà el codi del repositori.
-* Format Check: Realitzarà validacions de format als scripts.
-* Scan Check: Realitzarà validacions estàtiques dels scripts con CHECKOV.
-* Cost Check: Validació del cost d'infraestructura 
-* Terraform Plan & Store : Generació del terraform Pla i emmagatzematge en el Storage Account de l'aplicació.
-
-* Github Tag: Etiquetat de l'scripts a Github.
-* Archive (opcional): Registre en repositoris d'artefactes.
+* Checkout: Descarrega el codi del repositori.
+* Format Check: Realitza validacions de format al codi.
+* Scan Check: Realitza validacions estàtiques (SCA) al codi.
+* Cost Check: Validació del cost de la infraestructura. 
+* Terraform Plan & Store : Generació del Terraform Plan i emmagatzematge en el Storage Account de l'aplicació.
+* Tag: Etiquetat del codi al repositori.
 
 
-Per a PR, el nom Workflow en GHEC és **Infra CI on PR** 
+Per a PR, el nom del workflow en GHEC és **Infra CI on PR** 
 
-Per a PR, el nom Workflow en GHEC és **Infra CI on Commit**
+Per a Commit, el nom del workflow en GHEC és **Infra CI on Commit**
 
-Una vegada realitzat Terraform Pla, tota la informació s'adjunta en la Pull Request perquè el approver d'aquesta pugui disposar de tota la informació suficient per a realitzar l'aprovació.
+Una vegada realitzat el Terraform Plan, s'adjunta tota la informació en la Pull Request perquè el approver (rol maintainer) pugui disposar de tota la informació necessària per a realitzar l'aprovació.
 
 ## Worfklows de Continuous Integration (CD) per a infraestructura.
 
-Es detalla a continuació el flux de treball en el cas dels desplegaments d'Infraestructura.
+Es detalla a continuació el flux de treball dels desplegaments d'Infraestructura.
 
-![Definició a alt nivell de les workflows de CI per a Infraestructura](/images/GHEC/cd-workflow-infra-definition.png)
+![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/cd-workflow-infra-definition.png)
 
 
 
 on:
-* Download Plan : Selecció de l'script a desplegar per a l'entorn (env).
+* Download Plan : Selecció del codi a desplegar a l'entorn (env).
 * PRE Audit ITSM : Crea un tiquet a ITSM indicant el començament del desplegament
 
 * Deploy (env): Desplegament o Apply de la infraestructura.
-* POST Audit ITSM : Actualitza el tiquet ITSM indicant el final del desplegament i el seu estatus.
+* POST Audit ITSM : Actualitza el tiquet ITSM indicant el final del desplegament i el seu estat.
 
 * Deploy Validation (env): Validació del desplegament a l'entorn env.
-* Email Comm : Enviament del resultat del desplegament per correu al owner de l'execució del workflow.
+* Email Comm : Enviament del resultat del desplegament per correu als afectats.
     
 El nom Workflow en GHEC és **Infra CD Apply**
