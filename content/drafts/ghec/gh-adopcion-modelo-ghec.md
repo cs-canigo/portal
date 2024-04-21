@@ -499,12 +499,10 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       Resultat de l'operació :
         * Infraestructura desplegada a l'entorn de Producció.  
 
-## Wiki 📖
 
-Més informació rellevant :
 
 ### Execució d'Actions amb Self-Hosted Runners
 
 GitHub Actions permet l'execució de workflows amb els runners propis de GHEC o Runners AD-HOC coneguts com a Self-Hosted Runners. Aquests es poden executar a qualsevol cloud i també on-prem. En l'actual model, s'ha implementat una arquitectura que permet desplegar Self-Hosted Runners sota el proveïdor públic de Cloud AZURE.
 
-Més informació [Self Hosted Runners](../gh-self-hosted-runners)
+Més informació a [Self Hosted Runners](../gh-self-hosted-runners).
