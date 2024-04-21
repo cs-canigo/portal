@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Gestió de versions"
 description  = "Definició del model de versionat"
-weight      = "4"
+weight      = "7"
 sections    = ["GHEC"]
 +++
 

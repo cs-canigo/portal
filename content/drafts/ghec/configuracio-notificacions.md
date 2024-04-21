@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Notificacions"
 description  = "Configuració de notificacions"
-weight      = "3"
+weight      = "9"
 sections    = ["GHEC"]
 +++
 

@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Workflows"
 description  = "Definició de Workflows de CI/CD"
-weight      = "2"
+weight      = "6"
 sections    = ["GHEC"]
 +++
 

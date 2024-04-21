@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Gitflow i GitOps"
 description  = "Model de treball Gitflow i GitOps"
-weight      = "9"
+weight      = "4"
 sections    = ["GHEC"]
 +++
 

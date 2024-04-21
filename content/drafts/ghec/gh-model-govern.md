@@ -1,15 +1,15 @@
 
 +++
 date         = "2024-04-09"
-title        = "Model de Govern"
-description  = "Model de Govern"
-weight      = "5"
+title        = "Model organitzatiu"
+description  = "Descripció del model organitzatiu definit per GHEC"
+weight      = "2"
 sections    = ["GHEC"]
 +++
 
 ## Objectiu  🚀
 
-El present document descriu el resultat de l'anàlisi i definició del model organitzatiu per GitHub Enterprise Cloud (GHEC). 
+El present document descriu el model organitzatiu definit per GitHub Enterprise Cloud (GHEC). 
 
 ## Model definit  📋
 
