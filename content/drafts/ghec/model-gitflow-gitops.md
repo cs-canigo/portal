@@ -1,8 +1,8 @@
 
 +++
 date         = "2024-04-09"
-title        = "Model Gitflow i model GitOps"
-description  = "Model Gitflow i model GitOps"
+title        = "Gitflow i GitOps"
+description  = "Model de treball Gitflow i GitOps"
 weight      = "9"
 sections    = ["GHEC"]
 +++

@@ -242,7 +242,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
 
 + **Tags i versionat de components**. Dins d'aquest model de desenvolupament, el versionat i tags d'rtefactes estarà bloquejat al desenvolupador, de tal manera que seran els workflows automàtics de CI els que s'encarreguin d'aquesta tasca, permetent al desenvolupador **només el versionat del seu codi font**.
 
-  S'ha instaurat el model Semantic Version 2.0. Tota la documentació relacionada es pot consultar en el següent link [Model de Tag i versionat](../gh-definicion-versionado).
+  S'ha instaurat el model Semantic Version 2.0. Tota la documentació relacionada es pot consultar en el següent link [Model de Tag i versionat](../gh-definicio-versionat).
 
 + **Configuració de notificacions**. Dins d'aquest model de desenvolupament, les notificacions de les execucions de workflows es mostraran a la safata de notificacions de GitHub, així com també es rebran via correu electrònic. Per al seu correcte funcionament els usuaris hauran de configurar-les.  
 
