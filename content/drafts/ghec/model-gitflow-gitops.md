@@ -115,7 +115,7 @@ Per a aquest model, la nomenclatura que es farà servir per als noms dels artefa
 
         Exemple: 1.2.0-RC3
 
-- Per a la branca **develop** --> major.minor.fix-SNAPSHOT
+- Per a la branca **develop** --> maor.minor.fix-SNAPSHOT
 
         Exemple: 1.2.0-SNAPSHOT
 
