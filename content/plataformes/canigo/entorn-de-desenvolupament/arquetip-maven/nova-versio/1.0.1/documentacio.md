@@ -174,3 +174,5 @@ Després d'executar el comandament, en finalitzar, veuràs un missatge indicant 
 [INFO] Finished at: 2024-01-30T18:49:43+01:00
 [INFO] ------------------------------------------------------------------------
 ```
+
+En aquest punt es pot realitzar la importació del projecte generat amb algun IDE de desenvolupament amb l'opció d'importar projecte Maven seleccionant el directori recentment creat després de les execució de l'arquetip.
