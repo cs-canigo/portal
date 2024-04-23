@@ -1,10 +1,10 @@
 +++
-date        = "2024-04-10"
+date        = "2024-04-25"
 title       = "SIC. Deprecado SIC 2.0"
 description = "Migració de pipelines a SIC 3.0 i deprecado de SIC 2.0"
 weight      = "1"
 sections    = ["drafts"]
-aliases     = ["/sic/deprecado-2/"]
+aliases     = ["/sic/deprecat-2/"]
 +++
 
 ## Introducció
@@ -53,6 +53,7 @@ L'equip SIC contactarà amb els proveïdors de les diferents aplicacions per a i
     
     4.- Es proposarà un termini raonable per a realitzar les adaptacions i proves pertinents, transcorregut el qual, es desactivaran els job de SIC 2.0 no permetent-se més desplegaments des d'aquesta plataforma.
 
+A partir d'aquesta comunicació, es deshabilita la generació i modificació automàtica de pipelines en SIC 2.0. Qualsevol modificació de la configuració de les pipelines existents haurà de ser remesa a l'equip de SIC via tiquet [ACOCLDSIC](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC).
 
 Si teniu qualsevol dubte o problema sobre els serveis del SIC, podeu revisar les [**Preguntes Freqüents**](/sic/faq)
 o utilitzar els canals de [**Suport**](/sic/suport).
