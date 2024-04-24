@@ -152,10 +152,10 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
             * cluster_name: Nom del Clúster on es desplegarà l'aplicació.
             * cluster_service : Servei del Clúster on es desplegarà l'aplicació.
-            * ecr_name : Nom de l'Elastic Container Registry d'AWS.
+            * image_registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
 
             
-              Si els paràmetres "cluster_name", "cluster_service" i "ecr_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
+              Si els paràmetres "cluster_name", "cluster_service" i "image_registry_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
 
 
               ![Exemple de variables canviades si segueixen la nomenclatura especificada](/images/GHEC/vars-to-change-example.png)
@@ -177,9 +177,9 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Comentar el entorn dev si no existeix entorn de desenvolupament.
             * cluster_name: Nom del Clúster on es desplegarà l'aplicació.
             * cluster_service : Servei del Clúster on es desplegarà l'aplicació.
-            * ecr_name : Nom del Elastic Container Registry de AWS.
+            * image_registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
 
-              Si els paràmetres "cluster_name", "cluster_service" i "ecr_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
+              Si els paràmetres "cluster_name", "cluster_service" i "image_registry_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
 
 
               ![Exemple de variables canviades si segueixen la nomenclatura especificada](/images/GHEC/vars-to-change-example.png)
@@ -198,8 +198,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * Comentar l'entorn dev si no hi ha entorn de desenvolupament.
             * terraform_version: Versió de Terraform.
 
-        Per a tots els repositoris és necessari modificar també el fitxer CODEOWNERS on es descomentarà l'última línia i es substituirà el label <TEAM_NAME> pel nom del grup **</departament/>-</entitat/>-</lote_mantenimiento/>-maintain**, on estaran els membres que podran executar aprovacions de Pull Request.
-
+        
         En el següent enllaç està disponible tota la informació de Workflows definits en el projecte [Definició de Workflows d'aplicatiu i d'Infraestructura](../gh-definicion-workflows).
 
   
@@ -273,12 +272,12 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
             
       Execució de Workflows : Automàtic
       * APP CI on PR en realitzar la PR.  Genera l'artefacte, havent realitzat prèviament anàlisi de qualitat i seguretat.
-      * APP CI on Commit to develop, en realitzar el Commit, empaquetant el codi en una imatge Docker i pujant-la al registre d'imatges GitHub Packages.
+      * APP CI on Commit to develop, en realitzar el Commit, empaquetant el codi en una imatge de contenidor i pujant-la al registre d'imatges GitHub Packages.
             
       Resultat de l'operació :
       * Branca feature integrada en develop.
       * Codi validat per un Reviewer i per eines de qualitat i seguretat.
-      * Generació i pujada de la imatge Docker a GitHub Packages.
+      * Generació i pujada de la imatge de contenidor a GitHub Packages.
       * Tag tant del repo com de la imatge a app.0.0.1-SNAPSHOT.
 
   2. **Validació funcional d'artefacte en desenvolupament.**
@@ -326,7 +325,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
             
       Resultat de l'operació :
       * Branca develop integrada en release.
-      * Re-Tag de la imatge Docker en GitHub Packages a app.0.0.1-RC (Release Candidate).
+      * Re-Tag de la imatge de contenidor en GitHub Packages a app.0.0.1-RC (Release Candidate).
             
 
   4. **Validació funcional d'artefacte en Preproducció**
@@ -370,7 +369,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
             
       Resultat de l'operació :
       * Branca release integrada en master.
-      * Imatge Docker, a GitHub Packages, amb nou Tag per desplegament en Producció app.0.0.1 (Final).
+      * Imatge de contenidor, a GitHub Packages, amb nou Tag per desplegament en Producció app.0.0.1 (Final).
           
   6. **Desplegament d'aplicació a Producció**
       Una vegada hi ha l'artefacte disponible a GitHub Packages amb un tag que habilita la seva promoció a pro, i totes les validacions realitzades en entorns Preproductius, l'artefacte es pot desplegar en Producció
@@ -401,7 +400,8 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       
 + **Exemple de model de treball per a CI/CD per a Infraestructura**
 
-  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció.  En aquest cas i atès que, actualment, no es proporcionen entorns de Desenvolupament, s'integrarà directament a Release. 
+  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció.  En aquest cas i atès que, actualment, no es proporcionen entorns de Desenvolupament per a infraestructura per polítiques de CTTI (només pre-producció i producció), s'integrarà directament a Release.
+  
 
   L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
