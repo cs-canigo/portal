@@ -1,10 +1,10 @@
+
 +++
 date = "2024-04-25"
 title = "Autoservei de pipelines"
 description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
-weight      = 2
-sections    = ["sic"]
-aliases     = ["/sic/autoservei-pipelines/"]
+weight      = "2"
+sections    = ["SIC"]
 +++
 
 

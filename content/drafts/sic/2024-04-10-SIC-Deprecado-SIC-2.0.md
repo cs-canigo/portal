@@ -1,10 +1,10 @@
+
 +++
 date        = "2024-04-25"
 title       = "SIC. Deprecado SIC 2.0"
 description = "Migració de pipelines a SIC 3.0 i deprecado de SIC 2.0"
-weight      = 1
-sections    = ["sic"]
-aliases     = ["/sic/deprecat-2/"]
+weight      = "1"
+sections    = ["SIC"]
 +++
 
 ## Introducció
