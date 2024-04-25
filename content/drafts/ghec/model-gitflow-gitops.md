@@ -51,7 +51,7 @@ Aquest diagrama explica l'estratègia de control de versions recomanada (basada 
 
 - **main** -->  conté tot el codi que ha estat desplegat a producció - recull totes les versions "disponibles en live" i mai es treballa directament sobre elles.
 - **release** --> es fusiona des de develop, quan el codi està llest per a ser posat en producció - normalment es crea una versió candidata (RC) en aquest punt.
-  - Es desaconsella treballar directament en la branca release, ja que els errors detectats durant la validació dels canvis requeriran correccions en la branca feature corresponent i es fusionaran de nou a través de desenvolupament o suport per evitar la pèrdua de canvis posteriors.
+  - Es desaconsella treballar directament en la branca release, ja que els errors detectats durant la validació dels canvis requeriran correccions en la branca feature corresponent i es fusionaran de nou a través de desenvolupament per evitar la pèrdua de canvis posteriors.
   - Un cop la versió està llesta, es fusiona amb la branca master i s'etiqueta amb el nom de la versió.
 - **develop** --> és on es duu a terme la major part de l'activitat, tot i que no es treballa directament, sinó que es fusionen els canvis de les branques feature
 - **feature** --> tenen una durada curta, per permetre als desenvolupadors treballar en una característica específica de forma aïllada de la branca de desenvolupament, on poden fer commits directes i push - es fusionen amb la branca de desenvolupament.
@@ -83,25 +83,24 @@ Per a aquest model, la nomenclatura que es farà servir per als noms dels artefa
 
 ### Estratègia **estesa** de branques i merges
 
-Aquest diagrama explica l'estratègia de control de versions recomanada (basada en Git Flow):
+Aquest diagrama explica l'estratègia de control de versions estesa (basada en Git Flow):
 
 ![Model Gitflow extés](/images/GHEC/gitflow-extended-model.png)
 
 - **main** -->  conté tot el codi que ha estat desplegat a producció - recull totes les versions "disponibles en live" i mai es treballa directament sobre elles.
 - **release** --> es fusiona des de develop, quan el codi està llest per a ser desplegat en producció - normalment es crea una versió candidata (RC) en aquest punt.
-  - Es desaconsella treballar directament en la branca release, ja que els errors detectats durant la validació dels canvis requeriran correccions en la branca feature corresponent i es fusionaran de nou a través de desenvolupament o suport per evitar la pèrdua de canvis posteriors.
+  - Es desaconsella treballar directament en la branca release, ja que els errors detectats durant la validació dels canvis requeriran correccions en la branca feature corresponent i es fusionaran de nou a través de desenvolupament per evitar la pèrdua de canvis posteriors.
   - Un cop la versió està llesta, es fusiona amb la branca master i s'etiqueta amb el nom de la versió.
 - **develop** --> és on es duu a terme la major part de l'activitat, tot i que no es treballa directament, sinó que es fusionen els canvis de les branques feature.
 - **feature** --> tenen una durada curta, per permetre als desenvolupadors treballar en una característica específica de forma aïllada de la branca de desenvolupament, on poden fer commits directes i push - es fusionen amb la branca de desenvolupament.
 - **hotfix** --> es crea a partir de màster quan s'identifica en producció un error que requereix una correcció urgent. La branca hotfix té un cicle de publicació "accelerat" i s'ha de fusionar amb la branca de desenvolupament per no perdre cap canvi.
 
-Amb aquest model proposat, les úniques branques en què es treballa directament són les de feature i hotfix; la resta de branques evolucionen a través de fusions.
 
-Es recomanen les merge request en lloc de les fusions directes per a desenvolupaments complexos, ja que fomenten les revisions per parells al llarg del procés.
+La principal diferència amb el model **recomanat** és la presència de branques rellegides de mitjana o llarga durada.
 
-La "regla d'or" per a les fusions descendents és que cada canvi introduït en producció es fusioni també en desenvolupament.
-
-Per a aquest model, la nomenclatura que es farà servir per als noms dels artefactes serà la següent:
+Les branques de rellegiment són necessàries quan l'equip està treballant en un d'aquests escenaris:
+* L'equip ha de proporcionar suport tècnic a diverses versions anteriors durant algun temps (per exemple, períodes de garantia) És a dir, l'equip conserva l'estat de la rellegida en una branca independent, per la qual cosa pot proporcionar correccions d'errors a aquesta versió anterior. 
+* L'equip està treballant en diversos relleasos simultàniament. Si bé generalment això **no es recomana**, hi ha casos de grans projectes de transformació que poden requerir mantenir dues línies de desenvolupament alhora.
 
 - Per a la branca **master** --> major.minor.fix
 

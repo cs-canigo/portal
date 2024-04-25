@@ -174,3 +174,22 @@ Després d'executar el comandament, en finalitzar, veuràs un missatge indicant 
 [INFO] Finished at: 2024-01-30T18:49:43+01:00
 [INFO] ------------------------------------------------------------------------
 ```
+
+En aquest punt es pot realitzar la importació del projecte generat amb algun IDE de desenvolupament amb l'opció d'importar projecte Maven seleccionant el directori recentment creat després de les execució de l'arquetip.
+
+La manera d'afegir mòduls és afegint dependències en el fitxer pom.xml. Exemple:
+
+```xml
+<properties>
+  ...
+  <canigo.persistence.jpa.version>[3.1.0,3.2.0)</canigo.persistence.jpa.version>
+</properties>
+<dependencies>
+  ...
+  <dependency>
+    <groupId>cat.gencat.ctti</groupId>
+    <artifactId>canigo.persistence.jpa</artifactId>
+    <version>${canigo.persistence.jpa.version}</version>
+  </dependency>
+<dependencies>
+```
