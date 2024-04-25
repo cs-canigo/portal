@@ -400,7 +400,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       
 + **Exemple de model de treball per a CI/CD per a Infraestructura**
 
-  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció.  En aquest cas i atès que, actualment, no es proporcionen entorns de Desenvolupament per a infraestructura per polítiques de CTTI (només pre-producció i producció), s'integrarà directament a Release.
+  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció. 
   
 
   L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
