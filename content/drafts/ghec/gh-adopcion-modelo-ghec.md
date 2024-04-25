@@ -405,13 +405,13 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
 
   L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
-  1. **Integració en branca release des de feature.**
-    L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a release. En aquests casos, es passa de feature a release ja que en els projectes d'infra no sol existir branca ni entorn de desenvolupament.
-          
-      ![Integració en branca release des de feature](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
+  1. **Integració en branca development des de feature.**
+    L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a development. 
+
+      ![Integració en branca development des de feature](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
 
             
-      Objectiu : Integració de feature a release i generació del Terraform Plan per a desplegament en Preproducció.
+      Objectiu : Integració de feature a development i generació del Terraform Plan per a desplegament en Preproducció.
 
       Actors:
       * Usuari amb Rol Write realitza el desenvolupament.
@@ -422,15 +422,61 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
             
       Resultat de l'operació :
-      * Branca feature integrada en release.
+      * Branca feature integrada en development.
+      * Generació del Terraform Plan i emmagatzematge d'aquest (internament a Storage Account d'Azure) per al seu posterior desplegament.
+      * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
+      * Creació del tag 1.0.1-SNAPSHOT per al repositori i 1.0.1-SNAPSHOT.tfplan per al terraform plan.
+
+  2. **Desplegament de la infra en l'entorn de Desenvolupament.**
+    L'usuari ja té disponible el Terraform Plan, validat, i es disposa a desplegar-lo en l'entorn de Desenvolupament per a la seva validació.
+
+      ![Desplegament de la infra en l'entorn de Desenvolupament](/images/GHEC/gh_ejemplo_infra_e2e_step2.png)
+
+     Objectiu: Desplegament en desenvolupament de la infraestructura generada anteriorment. 
+
+      Actors:
+      * Usuari amb Rol Write o Maintain.
+              
+      Execució de Workflows : Sota Demanda per part de l'usuari.
+      * Infra CD Apply, descarrega el pla de l'Storage Account amb el tag específic i executa el pla. 
+
+          En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
+                
+          * Branca o branch on es troba el workflow actualitzat: development
+          * Infra Version in semver format, i.e 1.0.1-SNAPSHOT : Versió del pla que es vol desplegar.
+          * Env to apply the terraform plan : Entorn on desplegar el Terraform Plan, en aquest cas desenvolupament.
+          * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
+          * ITSM Service : Servei associat al desplegament a registrar en ITSM.
+          * Prioritat ITSM: Prioritat del Ticket a crear.
+                              
+        Resultat de l'operació :
+        * Infraestructura desplegada a l'entorn de desenvolupament.  
+
+  3. **Integració en branca release des de development.**
+    L' usuari, un cop validada la infraestructura en l' entorn de desenvolupament, es disposa a Integrar els seus canvis en rellegir-se.
+          
+      ![Integració en branca release des de development](/images/GHEC/gh_ejemplo_infra_e2e_step3.png)
+            
+      Objectiu : Integració de development a release i generació del Terraform Plan per a desplegament en Preproducció.
+
+      Actors:
+      * Usuari amb Rol Write realitza el desenvolupament i sol·licita PR.
+      * Usuari amb Rol Maintain aprova la Pull Request.
+            
+      Execució de Workflows : Automàtic.
+      * Infra CI on PR, en realitzar la PR.  Aquest workflow genera el terraform plan i l'emmagatzema, havent prèviament executat scans de format, seguretat i cost.
+      * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
+            
+      Resultat de l'operació :
+      * Branca development integrada en release.
       * Generació del Terraform Plan i emmagatzematge d'aquest (internament a Storage Account d'Azure) per al seu posterior desplegament.
       * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
       * Creació del tag 1.0.1-RC per al repositori i 1.0.1-RC.tfplan per al terraform plan.
 
-  2. **Desplegament de la infra en l'entorn de Preproducció.**
+  4. **Desplegament de la infra en l'entorn de Preproducció.**
     L'usuari ja té disponible el Terraform Plan, validat, i es disposa a desplegar-lo en l'entorn de pre per a la seva validació.
 
-      ![Desplegament de la infra en l'entorn de Preproducció](/images/GHEC/gh_ejemplo_infra_e2e_step2.png)
+      ![Desplegament de la infra en l'entorn de Preproducció](/images/GHEC/gh_ejemplo_infra_e2e_step4.png)
 
      Objectiu: Desplegament en preproducció de la infraestructura generada anteriorment. 
 
@@ -451,11 +497,11 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
         Resultat de l'operació :
         * Infraestructura desplegada a l'entorn de Preproducció.  
-              
-  3. **Integració en branca master des de release**
+
+  5. **Integració en branca master des de release**
     L'usuari, un cop validat que els canvis han funcionat a l'entorn de Release, es disposa a promocionar els canvis a la branca master.
           
-      ![Integració en branca master des de release](/images/GHEC/gh_ejemplo_infra_e2e_step3.png)
+      ![Integració en branca master des de release](/images/GHEC/gh_ejemplo_infra_e2e_step5.png)
 
             
       Objectiu : Integració de la branca release en master i generació del Terraform Plan per a desplegament en Producció
@@ -474,10 +520,10 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, vulnerabilitats i cost. 
       * Creació del tag 1.0.1 per al REPO i 1.0.1.tfplan per al terraform plan
 
-  4. **Desplegament de la infra en l'entorn de Producció.**
+  6. **Desplegament de la infra en l'entorn de Producció.**
     L'usuari ja té disponible el Terraform Plan, validat, i es disposa a desplegar-lo en l'entorn de producció.
 
-      ![Desplegament de la infra en l'entorn de Producció](/images/GHEC/gh_ejemplo_infra_e2e_step4.png)
+      ![Desplegament de la infra en l'entorn de Producció](/images/GHEC/gh_ejemplo_infra_e2e_step6.png)
 
       Objectiu : Desplegament en producció de la infraestructura generada anteriorment. 
 
