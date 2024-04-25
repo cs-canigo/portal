@@ -254,15 +254,16 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
     + Integracions de branques basades en Pull Request.
     + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
-    En el següent exemple es mostra l'execució e2e d'un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  La infraestructura ha estat desplegada prèviament.  En el cas en el qual l'aplicació no dispose d'entorn de desenvolupament, **l'estratègia a seguir serà la d'integrar-se directament en release**.
+    En el següent exemple es mostra l'execució e2e d'un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  La infraestructura ha estat desplegada prèviament.  En el cas que l' aplicació no disposi d' entorn de desenvolupament, **l' estratègia seria la integració de feature en develop i d' aquesta a rellegeixi sense desplegar en l' entorn de development.**
+    
     
 
     L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
-  1. **Integració en branca development des de feature**
+  1. **Integració en branca develop des de feature**
       L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a develop.
          
-      ![Integració en branca development des de feature](/images/GHEC/gh_ejemplo_e2e_step1.png)
+      ![Integració en branca develop des de feature](/images/GHEC/gh_ejemplo_e2e_step1.png)
 
             
       Objectiu : Integració de feature a develop i generació d'artefacte per a desplegament en Desenvolupament.
@@ -310,10 +311,10 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       Resultat de l'operació :
         * Codi desplegat a l'entorn de Desenvolupament per a la seva validació.
 
-  3. **Integració en branca release des de development**
+  3. **Integració en branca release des de develop**
      Un cop validat el codi en l'entorn de desenvolupament, el desenvolupador pot promocionar-lo a la branca Release i així poder desplegar-lo posteriorment al pas 4.
 
-      ![Integració en branca release des de development](/images/GHEC/gh_ejemplo_e2e_step3.png)
+      ![Integració en branca release des de develop](/images/GHEC/gh_ejemplo_e2e_step3.png)
 
       Objectiu : Integrar el codi a Release per posteriorment desplegar en entorns Preproductius un artefacte Release Candidate.
 
@@ -401,17 +402,17 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       
 + **Exemple de model de treball per a CI/CD per a Infraestructura**
 
-  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció.  En el cas en el qual l'aplicació no dispose d'entorn de desenvolupament, **l'estratègia a seguir serà la d'integrar-se directament en release**.  
+  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció.  En el cas en el qual l’aplicació no dispose d’entorn de desenvolupament, **l’estratègia a seguir serà la d’integrar-se directament en release**.
 
   L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
-  1. **Integració en branca development des de feature.**
-    L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a development. 
+  1. **Integració en branca develop des de feature.**
+    L'usuari ja ha realitzat el seu desenvolupament en la branca feature i es disposa a Integrar els seus canvis a develop. 
 
-      ![Integració en branca development des de feature](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
+      ![Integració en branca develop des de feature](/images/GHEC/gh_ejemplo_infra_e2e_step1.png)
 
             
-      Objectiu : Integració de feature a development i generació del Terraform Plan per a desplegament en Preproducció.
+      Objectiu : Integració de feature a develop i generació del Terraform Plan per a desplegament en Preproducció.
 
       Actors:
       * Usuari amb Rol Write realitza el desenvolupament.
@@ -422,7 +423,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       * Infra CI on Commit, en realitzar el Commit, afegint nou tag al repositori.
             
       Resultat de l'operació :
-      * Branca feature integrada en development.
+      * Branca feature integrada en develop.
       * Generació del Terraform Plan i emmagatzematge d'aquest (internament a Storage Account d'Azure) per al seu posterior desplegament.
       * Codi validat per un Reviewer on podrà disposar de la informació de les revisions de format, de vulnerabilitats i de cost. 
       * Creació del tag 1.0.1-SNAPSHOT per al repositori i 1.0.1-SNAPSHOT.tfplan per al terraform plan.
@@ -452,8 +453,8 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
         Resultat de l'operació :
         * Infraestructura desplegada a l'entorn de desenvolupament.  
 
-  3. **Integració en branca release des de development.**
-    L' usuari, un cop validada la infraestructura en l' entorn de desenvolupament, es disposa a Integrar els seus canvis en rellegir-se.
+  3. **Integració en branca release des de develop.**
+    L' usuari, un cop validada la infraestructura en l' entorn de desenvolupament, es disposa a Integrar els seus canvis en release.
           
       ![Integració en branca release des de development](/images/GHEC/gh_ejemplo_infra_e2e_step3.png)
             
