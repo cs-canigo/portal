@@ -4,7 +4,7 @@ title       = "Plantilles IaC"
 description = "Plantilles d'infraestructura com a codi (IaC) pels diferents proveïdors de cloud: AWS, Azure, GCP, etc"
 sections    = "[GHEC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
-weight      = 10
+weight      = 1
 +++
 
 
