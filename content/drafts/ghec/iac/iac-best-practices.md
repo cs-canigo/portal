@@ -29,6 +29,25 @@ root
 
 Els workflows de CI/CD d'infraestructura requereixen d'aquesta estructura pel seu correcte funcionament. Els diferents stages dels workflows treballen amb el directori adient corresponent a l'**entorn segons la branca** (dev/test/int=develop, release=pre, master=pro) en la que s'estigui actuant.
 
+## Requeriments CI/CD
+
+El backend de l'estat de Terraform s'ha de declarar de la següent manera per a poder fer ús dels workflows de CI/CD d'infraestructura:
+
+backend.tf
+```hcl
+terraform {
+
+  backend "azurerm" {
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+```
+
+Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Storage Account** amb un **Container** per a cada aplicació-entorn (dev/tst/int, pre, pro) i un **Blob** per a cada workspace de Terraform.
+
 ## Nomenclatura
 
 ### Objectiu
@@ -37,84 +56,73 @@ Establir un **estàndard de nomenclatura** per als serveis desplegats en diverse
 
 ### Nomenclatura global
 
-El nom d'un objecte associat a un servei d'infraestructura constarà de 10 dígits distribuïts segons una codificació específica, incloent elements com el codi únic del servei, tipus de servei, producte associat, entorn i un índex seqüencial controlat pel proveïdor d'infraestructura.
+La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents proveïdors de núvol públic és la següent:
 
-#### Codificació Detallada 
+* **acr-env-typ-iii**
+  - **acr**: acrònim de l'aplicació (3 dígits).
+  - **env**: entorn (3 dígits). Pot pendre els valors "dev/tst/int", "pre", "pro".
+  - **typ**: tipus de recurs (3 dígits).
+  - **iii**: índex seqüencial (3 dígits).
 
-* **aa-zzz-eee-iii**
-  - **ser**: Codi únic del servei/aplicació.
-  - **yyy**: Tipus de servei (transversal, xarxa, seguretat, emmagatzematge, etc.).
-  - **zzz**: Producte associat al tipus de servei.
-  - **eee**: Entorn (producció, preproducció, test, etc.).
-  - **iii**: Índex seqüencial controlat pel proveïdor d' infraestructura.
+El **tipus de recurs** pot pendre els valors següents depenent del proveïdor de núvol públic:
 
-Revisar **Annexos** per a més informació més detallada.
+- **AWS**: 
+  - **s3**: Amazon S3
+  - **ecs**: Amazon ECS
+  - **app**: AWS App Runner
+  - **ecr**: Amazon ECR
+  - **lam**: AWS Lambda 
+  - **evn**: Amazon EventBridge
+  - **sfn**: AWS Step Functions
+  - **api**: Amazon API Gateway
+  - **cdn**: Amazon CloudFront
+  - **vpc**: Amazon VPC
+  - **lbg**: Elastic Load Balancing
+  - **aur**: Amazon Aurora
+  - **rds**: Amazon RDS
+  - **ddb**: Amazon DynamoDB
+  - **cwa**: Amazon CloudWatch
+  - **scr**: AWS Secrets Manager
+  - **pms**: AWS Parameter Store
+  - **efs**: Amazon EFS
 
-#### Components
+- **Azure**:
+  - **str**: Azure Storage Account
+  - **cap**: Azure Container Apps
+  - **aci**: Azure Container Instances
+  - **acr**: Azure Container Registry
+  - **fun**: Azure Functions
+  - **egr**: Azure Event Grid
+  - **api**: Azure API Management
+  - **fdw**: Azure Front Door
+  - **vne**: Azure Virtual Network
+  - **lbr**: Azure Load Balancer
+  - **cos**: Azure Cosmos DB
+  - **sql**: Azure SQL Database
+  - **key**: Azure Key Vault
+  - **mon**: Azure Monitor
+  - **log**: Azure Logic Apps
+  - **fsb**: Azure File Storage
 
-- Servei: Identificació única designada per la Unitat de Gestió de Catàleg de Serveis.
-- Entorn: Classificació de l' entorn del qual pertany l' objecte.
-  - **pro**: Producció / Explotació
-  - **pre**: Preproducció / Test
-  - **int**: Integració
-  - **des**: Desenvolupament
-  - **prs**: Proves de sistemes
-  - **prp**: Proves de proveïdor
-  - **for**: Formació
-  - **con**: Consolidació
-  - **Laboratori**: Laboratoris
-
-- Índex: Nombre seqüencial controlat pel proveïdor d' infraestructura.
-  - Aquest codi serà de 3 dígits en tots els casos.
-    - Exemples d’indexos: 000 ... 007 ... 016 .... 109 ... 243 ... 978 ... 999
-    - Exemples de nomenclatura:  agc-aaaa-zzz-pro-001,  bcm-aaaa-zzz-pre-057 
-
-- Tipus: 
-  - **emm**: Emmagatzemament
-  - **seg**: Seguretat
-  - **xar**: Xarxa
-  - **entre**: Transversal
-
-- Emmagatzematge / Seguretat / Xarxa / Transversal:
-
-  - Emmagatzemament: 
-    - **blo**: Bloquejat
-    - **fit**: Fitxers
-    - **obj**: Objectes
-    - **arx**: Arxivat
-
-  - Seguretat (seg): Tipus de serveis de seguretat inclouen:
-    - **nat**: Accés extern a l’entorn
-    - **fba**: Filtrat de ports a un balancejador de frontend
-    - **fro**: Accés a les instàncies de frontend
-    - **bba**: Filtrat de ports a un balancejador de backend
-    - **bac**: Accés a les instàncies de backend
-    - **bdd**: Accés a les bases de dades
-    - **tal**: Tallafocs
-    - **wta**: Tallafocs d’aplicacions web
-    - **cls**: Azure Security Center / AWS Security Hub
-
-  -	Xarxa (xar): Tipus de serveis de xarxa inclouen:
-      - **vpu**: Xarxa virtual (vpc, vnet)
-      - **vpr**: Xarxa privada virtual (vpn)
-      - **spr**: Subxarxa privada
-      - **spu**: Subxarxa pública
-      - **rpr**: Taules d’enrutament privada
-      - **rpu**: Taules d’enrutament públic
-      - **dhc**: Opció DHCP
-      - **pas**: Passarel·la internet (passarel·la d'internet)
-      - **bal**: Balancejador de càrrega
-      - **per**: Permutador
-      - **wan**: Azure WAN / AWS Transit Gateway
-      - **alp**: Azure Express Route / AWS Direct Connect
-
-  -	Transversal (tra): Tipus de serveis transversals inclouen:
-      - **sub**: Subscripció
-      - **gre**: Grup de recursos
-      - **org**: Organització/Tenant
-      - **oru**: Unitat Organitzativa / Grup de Direcció
-      - **com**: Subscripció / Compte
-      - **esp**: Espai de noms
+- **GCP**:
+  - **cos**: Google Cloud Storage
+  - **gke**: Google Kubernetes Engine
+  - **run**: Google Cloud Run
+  - **arc**: Google Artifact Registry
+  - **fun**: Google Cloud Functions
+  - **pub**: Google Cloud Pub/Sub
+  - **api**: Google Cloud API Gateway
+  - **cdn**: Google Cloud CDN
+  - **vpc**: Google Cloud VPC
+  - **lbr**: Google Cloud Load Balancer
+  - **sql**: Google Cloud SQL
+  - **dta**: Google Cloud Datastore
+  - **fbs**: Google Cloud Firestore
+  - **sec**: Google Cloud Secret Manager
+  - **key**: Google Cloud KMS
+  - **log**: Google Cloud Logging
+  - **mon**: Google Cloud Monitoring
+  - **fsb**: Google Cloud File Storage
 
 ### Etiquetatge de Recursos
 
@@ -144,20 +152,22 @@ Per garantir el **compliment de les polítiques** establertes per Suport Cloud p
 - Revisar i auditar regularment el compliment de les polítiques establertes de la infraestructura de l'aplicació.
 - Integrar la gestió de les polítiques en els fluxos de treball d'infraestructura com a codi per garantir la seva aplicació coherent.
 
+En el workflow de CI d'infraestructura es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD.
+
 ### Bones Pràctiques en Infraestructura com a Codi (IaC):
 
 Per a una implementació efectiva de la infraestructura com a codi, a més de la nomenclatura, etiquetatge i compliment de SCPs, és important seguir una sèrie de **bones pràctiques**:
 
 * Ús de blocs **"data"**: Aquesta característica permet consultar informació sobre recursos ja existents en la infraestructura desplegada en qualsevol dels proveïdors de núvol utilitzats, d'aquesta manera, s'evita incloure en el codi, o en variables, valors com identificadors, o atributs d'altres recursos. En el seu lloc, des del codi es faria referència a l' atribut desitjat de la sortida del bloc data.
 
-  Per exemple, per desplegar recursos vinculats a subxarxes d' AWS, enlloc d'incloure els identificadors d'aquesta manera:
+  Per exemple, per desplegar recursos vinculats a subxarxes d'AWS, enlloc d'incloure els identificadors d'aquesta manera:
   ```
   …
   subnet_ids = [“subnet-xxxx”,”subnet-yyyy”,”subnet-zzzz”]
   …
   ```
 
-  S' hauria d' incloure el codi següent:
+  S'hauria d' incloure el codi següent:
   ```
   data "aws_vpc" "vpc" {
     tags = {
@@ -302,147 +312,19 @@ resource " aws_wafv2_web_acl " "web_acl" {
     Opcionalment, es podria afegir el bloc "depends_on" dins dels recursos amb múltiples referències, encara que aquestes ja estiguin definides implícitament, per indicar en un mateix punt tots els recursos dels quals depèn aquest. Això pot ser una gran millora en la llegibilitat del codi.
 
  
-## ANNEX I
-
+## ANNEX
 Enllaços d’interés:
 
-* https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
-* https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
-
-
-## ANNEX II
-
-### ANNEX II - Tipus 
-	
-Els 3 dígits associats al tipus indica la tecnologia associada a l’objecte.
-
-- **mav** màquina virtual.
-- **maf** màquina física
-- **ivi** infraestructura de virtualització
-- **cop** sistemes de còpies de seguretat
-- **mon** sistema de monitoratge
-- **web** sistema web
-- **mwa** sistema middleware
-- **bdd** base de dades
-- **app** aplicació
-- **dir** servei de directori
-- **sap** sistema sap
-- **gdo** gestor documental
-- **con** sistema de contenidors
-
-
-### ANNEX II - Productes – màquines físiques, virtuals, infraestructures de virtualització 
-
-Màquines físiques
-
-- **win** Windows 
-- **rhl** Redhat Linux
-- **sul** Suse Linux
-- **orl** Oracle Linux
-- **aix** IBM AIX
-- **hpu** HP UX
-- **sol** Oracle Solaris
-
-
-Màquines virtuals
-- **win** Windows 
-- **rhl** Redhat Linux
-- **sul** Suse Linux
-- **orl** Oracle Linux
-
-
-Infraestructures de virtualització
-- **vmw** VMWare 
-- **xen** XenApp & XenDesktop
-- **hip** Hiper-V
-
-
-### ANNEX II - Productes - còpies de seguretat i monitoratge 
-	
-Backup 
-- **net** Veritas Netbackup
-- **com** Commvault
-- **vee** Veeam
-- **aba** AWS Backup / Azure Backup
-- **asg** AWS Storage Gateway Azure Data Box Gateway
-	
-Monitoratge 
-- **mic** Microfocus
-- **dyn** Dynatrace
-- **dat** Datadog
-- **spl** Splunk
-- **sol** Solarwinds
-- **nag** Nagios
-- **amo** AWS Cloudwatch / Azure Monitor
-
-### ANNEX II - Productes – sistemes web, sistemes middleware
-
-Servidors web
-- **apa** Apache
-- **iis** IIS
-- **ngi** ngnix
-- **ihs** IBM HTTP Server
-- **ohs** Oracle HTTP Server
-- **asw** AWS Simplify / Azure Static WebApps
-	
-
-Servidors d’aplicacions
-- **wlg** Weblogic
-- **tom** Tomcat
-- **jbo** JBoss
-- **net** .NET
-- **php** PHP
-- **node** Node.js
-- **jd** JDK
-- **pyt** Python
-- **rub** Ruby
-- **go0** Go
-- **aap** Azure App Service / AWS Elastic Beanstalk
-- **afu** Azure Functions / AWS Lambda
-
-### ANNEX II - Productes – bases de dades 
-
-Bases de dades
-- **ora** Oracle / Amazon RDS for Oracle
-- **sql** SQL Server / Amazon RDS for SQL Server / Azure SQL Database
-- **mys** MySQL / Amazon RDS for MySQL / Azure Database for MySQL
-- **mar** MariaDB / Amazon RDS for MariaDB / Azure Database for MariaDB
-- **pos** PostgreSQL / Amazon RDS for PostgreSQL / Azure Database for PostgreSQL
-- **red** Redis / Azure ElasticCache
-- **ela** Elasticsearch / Amazon Opensearch
-- **mon** MongoDB / AWS DynamoDB / Azure Cosmos
-- **dwh** Amazon Redshift / Azure Synapse Analytics
-
-### ANNEX II - Productes - SAP, gestió documental 
-	
-SAP
-- **bdd** Base de dades 
-- **scs** ASCS/SCS
-- **web** Web Dispatcher
-- **ers** Enqueue Replication Server
-- **gfs** Global FileSystem
-- **cei** Central Instance
-- **dii** Dialog Instace
-	
-
-Gestió documental
-- **doc** Documentum 
-- **fil** Filenet
-- **alf** Alfresco
-- **ocm** OpenCMS
-- **lif** Liferay
-- **sha** Sharepoint
-
-### ANNEX II - Productes – directori, contenidos
-
-Directori
-- **mad** Active Directory
-- **opl** OpenLDAP
-- **iam** Azure Active Directory / AWS Identity and Access Management
-
-Contenidors
-- **ope** Redhat Openshift / Redhat Openshift Service on AWS / Azure Redhat Openshift
-- **tan** VMWare Tanzu
-- **ran** Suse Rancher
-- **kub** Kubernetes / AWS Elastic Kubernetes Service / Azure Kubernetes Service
-- **kse** AWS Fargate / Azure Container Apps
+* Terraform
+  * https://learn.hashicorp.com/tutorials/terraform/data-sources
+  * https://learn.hashicorp.com/tutorials/terraform/variables
+  * https://learn.hashicorp.com/tutorials/terraform/locals
+  * https://learn.hashicorp.com/tutorials/terraform/for-each
+  * https://learn.hashicorp.com/tutorials/terraform/dependencies
+* GCP naming conventions: https://cloud.google.com/blog/products/gcp/introducing-gcp-resource-naming-conventions
+* AWS naming conventions
+  * https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
+  * https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/naming-conventions.html
+* Azure naming conventions:
+  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
+  * https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
