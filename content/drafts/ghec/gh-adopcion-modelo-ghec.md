@@ -254,7 +254,8 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
     + Integracions de branques basades en Pull Request.
     + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
-    En el següent exemple es mostra l'execució e2e d'un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  La infraestructura ha estat desplegada prèviament.
+    En el següent exemple es mostra l'execució e2e d'un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció.  La infraestructura ha estat desplegada prèviament.  En el cas en el qual l'aplicació no dispose d'entorn de desenvolupament, **l'estratègia a seguir serà la d'integrar-se directament en release**.
+    
 
     L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
@@ -400,8 +401,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       
 + **Exemple de model de treball per a CI/CD per a Infraestructura**
 
-  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció. 
-  
+  En el següent exemple es mostra l'execució e2e d'un flux de treball d'implementació i desplegament d'Infraestructura, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament a Producció.  En el cas en el qual l'aplicació no dispose d'entorn de desenvolupament, **l'estratègia a seguir serà la d'integrar-se directament en release**.  
 
   L'accés a GHEC es realitzarà des de la URL:  [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/).
 
