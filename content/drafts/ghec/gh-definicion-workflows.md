@@ -42,7 +42,7 @@ En canvi, si la PR es fes entre les branques develop-release, release-master, ho
 
 D'altra banda, si estem en temps de commit, existiran dos tipus de workflows depenent de la tipologia del component: Aplicació o Llibreria.  
 
-+ En el cas d'una **aplicació**, i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, dockerització, push al registre, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request), assignació de tag a l'imatge i al repositori.   
++ En el cas d'una **aplicació**, i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, creació de imatge de contenidor, push al registre, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request), assignació de tag a l'imatge i al repositori.   
 Els diferents steps es llançaran en funció de les branques involucrades en el procés tal i com s'observa en el diagrama.  
 **En cap moment es permetrà modificar la imatge generada en branca Development en treballar a Release o Master.**
 
