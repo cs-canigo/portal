@@ -62,6 +62,7 @@ La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents pro
   - **acr**: acrònim de l'aplicació (3 dígits).
   - **env**: entorn (3 dígits). Pot pendre els valors "dev/tst/int", "pre", "pro".
   - **typ**: tipus de recurs (3 dígits).
+  - **lll**: localització/regió (3 dígits).
   - **iii**: índex seqüencial (3 dígits).
 
 El **tipus de recurs** pot pendre els valors següents depenent del proveïdor de núvol públic:
@@ -316,15 +317,16 @@ resource " aws_wafv2_web_acl " "web_acl" {
 Enllaços d’interés:
 
 * Terraform
-  * https://learn.hashicorp.com/tutorials/terraform/data-sources
-  * https://learn.hashicorp.com/tutorials/terraform/variables
-  * https://learn.hashicorp.com/tutorials/terraform/locals
-  * https://learn.hashicorp.com/tutorials/terraform/for-each
-  * https://learn.hashicorp.com/tutorials/terraform/dependencies
-* GCP naming conventions: https://cloud.google.com/blog/products/gcp/introducing-gcp-resource-naming-conventions
-* AWS naming conventions
-  * https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
-  * https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/naming-conventions.html
-* Azure naming conventions:
-  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
-  * https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
+  * Language: https://www.terraform.io/docs/language/index.html
+  * AWS Provider: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+  * Azure Provider: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+  * GCP Provider: https://registry.terraform.io/providers/hashicorp/google/latest/docs
+  * Backends: https://www.terraform.io/docs/language/settings/backends/index.html
+  * Data sources: https://learn.hashicorp.com/tutorials/terraform/data-sources
+  * Variables: https://learn.hashicorp.com/tutorials/terraform/variables
+  * Locals: https://learn.hashicorp.com/tutorials/terraform/locals
+  * For each: https://learn.hashicorp.com/tutorials/terraform/for-each
+  * Dependencies: https://learn.hashicorp.com/tutorials/terraform/dependencies
+* AWS naming conventions: https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/naming-conventions.html
+* Azure naming conventions: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
+* GCP Best practices for using Terraform: https://cloud.google.com/docs/terraform/best-practices-for-terraform
