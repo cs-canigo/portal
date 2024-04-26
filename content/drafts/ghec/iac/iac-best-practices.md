@@ -46,7 +46,7 @@ provider "azurerm" {
 }
 ```
 
-Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Storage Account** amb un **Container** per a cada aplicació-entorn (dev/tst/int, pre, pro) i un **Blob** per a cada workspace de Terraform.
+Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Resource group** amb un **Storage Account** per aplicació, i dins un **Container** per a cada entorn (dev/tst/int, pre, pro).
 
 ## Nomenclatura
 
@@ -67,24 +67,24 @@ La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents pro
 El **tipus de recurs** pot pendre els valors següents depenent del proveïdor de núvol públic:
 
 - **AWS**: 
-  - **s3**: Amazon S3
-  - **ecs**: Amazon ECS
+  - **s3**: Amazon Simple Storage Service (S3)
+  - **ecs**: Amazon Elastic Container Service (Amazon ECS)
   - **app**: AWS App Runner
-  - **ecr**: Amazon ECR
+  - **ecr**: Amazon Elastic Container Registry (ECR)
   - **lam**: AWS Lambda 
   - **evn**: Amazon EventBridge
   - **sfn**: AWS Step Functions
   - **api**: Amazon API Gateway
   - **cdn**: Amazon CloudFront
-  - **vpc**: Amazon VPC
-  - **lbg**: Elastic Load Balancing
+  - **vpc**: Amazon Virtual Private Cloud (VPC)
+  - **lbg**: Elastic Load Balancing (ELB)
   - **aur**: Amazon Aurora
-  - **rds**: Amazon RDS
+  - **rds**: Amazon Relational Database Service (RDS)
   - **ddb**: Amazon DynamoDB
   - **cwa**: Amazon CloudWatch
   - **scr**: AWS Secrets Manager
   - **pms**: AWS Parameter Store
-  - **efs**: Amazon EFS
+  - **efs**: Amazon Elastic File System (EFS)
 
 - **Azure**:
   - **str**: Azure Storage Account
