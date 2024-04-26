@@ -4,7 +4,16 @@
     }
   </style>
 
-  {{ $chars := split .File.Dir "" }}
+  {{ $chars := slice }}
+
+  {{ if .File }}
+    {{ with .File }}
+      {{ $chars = split .Dir ""}}
+    {{ end }} 
+  {{ end }} 
+
+{{$chars}}
+
   {{ $pathIndex := -1 }}
 
   {{ range $index, $val := $chars }}
@@ -21,8 +30,15 @@
 
     {{ $collection := .Section }}
 
-    {{ $filename := replace (print .File.Dir .File.BaseFileName) "\\" "/" }}
-    {{ $filename = replace $filename $collection "" }}
+    {{ $filename := "" }}
+
+    {{ if .File }}
+      {{ with .File }}
+        {{ $filename := replace (print .Dir .BaseFileName) "\\" "/" }}
+        {{ $filename = replace $filename $collection "" }}
+      {{ end }}
+    {{ end }}
+
 
     <div>
       <!--span id="login" style="margin-right: .5em; display: none;"> Login </span-->
