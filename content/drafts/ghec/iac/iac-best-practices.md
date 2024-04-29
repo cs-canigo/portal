@@ -1,7 +1,7 @@
 +++
 date        = "2024-04-02"
 title       = "Requeriments i bones pràctiques IaC"
-description = "Bones pràctiques en infraestructura com a codi (IaC) amb Terraform"
+description = "Requeriments i bones pràctiques en infraestructura com a codi (IaC) amb Terraform"
 sections    = "[IAC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
 weight      = 1
