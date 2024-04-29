@@ -3415,7 +3415,7 @@
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "22/12/2021",
                     "idatapublicacio": "23/09/2020",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pa%C3%AFsos/u6te-2guv",
+                    "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 },
                 {
@@ -3435,7 +3435,7 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització per incorporar el nom en anglès i en castellà.",
@@ -3443,8 +3443,23 @@
                     "ifitxer_xls": "Paisos_ISOA2.xlsx",
                     "idatacreacio": "23/05/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "29/04/2024",
                     "idatapublicacio": "24/05/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Actualització per incorporar el codi de Regions del món UN M49 i els codis de les divises.",
+                    "ifitxer_doc": "Paisos_ATR.docx",
+                    "ifitxer_xls": "Paisos.xlsx",
+                    "idatacreacio": "23/05/2023",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/04/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pa%C3%AFsos/u6te-2guv",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3452,7 +3467,7 @@
             "nom_dinsBD": "PAISOS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "26/05/2021",
-            "Data_actualitzacio": "24/05/2023"
+            "Data_actualitzacio": "29/04/2024"
         },
         {
             "Id": "dtarq189",
@@ -3539,34 +3554,6 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
             "Data_actualitzacio": "22/12/2021"
-        },
-        {
-            "Id": "dtarq902",
-            "Nom": "Regions del món",
-            "Ambit": "Territori, infraestructures i urbanisme",
-            "Subambit": "Ordenació del territori, paisatge i urbanisme",
-            "Descripcio": "Llista de regions del món relacionades amb el continent a on pertanyen.",
-            "instancies": [
-                {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
-                    "itipus": "Tabular",
-                    "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                    "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Codis_Territori_Regions_mon_ATR.docx",
-                    "ifitxer_xls": "Codis_Territori_Regions_mon.xlsx",
-                    "idatacreacio": "07/06/2019",
-                    "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
-                    "idatapublicacio": "21/06/2019",
-                    "iurl_dades_obertes": "",
-                    "itipusactualitzacio": "Sota demanda"
-                }
-            ],
-            "nom_dinsBD": "REGIONS_MON",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "21/06/2019",
-            "Data_actualitzacio": "21/06/2019"
         },
         {
             "Id": "dtarq130",
@@ -4349,6 +4336,90 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/03/2024",
             "Data_actualitzacio": "27/03/2024"
+        },
+		{
+            "Id": "dtarq198",
+            "Nom": "Divises",
+            "Ambit": "Economia",
+            "Subambit": "Caixes estalvis, banca, assegurances i mutualitats",
+            "Descripcio": "Entitat que conté les diferents divises utilitzades arreu del món, seguint la ISO 4217.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "DGAD - GTD Gestió tècnica de la dada",
+                    "idescripcio": "Versió inicial.",
+                    "ifitxer_doc": "Divises_ATR.docx",
+                    "ifitxer_xls": "Divises.xlsx",
+                    "idatacreacio": "29/04/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/04/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/Divises/q7v6-9kay",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "DIVISES",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/04/2024",
+            "Data_actualitzacio": "29/04/2024"
+        },
+		{
+            "Id": "dtarq199",
+            "Nom": "Entitats bancàries",
+            "Ambit": "Economia",
+            "Subambit": "Caixes estalvis, banca, assegurances i mutualitats",
+            "Descripcio": "Llista d'entitats bancàries que operen en l'estat espanyol.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Caixes estalvis, banca, assegurances i mutualitats",
+                    "idescripcio": "Versió inicial.",
+                    "ifitxer_doc": "ENTITATS_BANCARIES_ATR.docx",
+                    "ifitxer_xls": "ENTITATS_BANCARIES.xlsx",
+                    "idatacreacio": "29/04/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/04/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/Entitats-banc-ries/8wem-rrki",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "ENTITATS_BANCARIES",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/04/2024",
+            "Data_actualitzacio": "29/04/2024"
+        },
+        {
+            "Id": "dtarq197",
+            "Nom": "Regions del món",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Ordenació del territori, paisatge i urbanisme",
+            "Descripcio": "Llistat de les regions del món, seguint els Codis Estàndard de País o d'Àrea per a Ús Estadístic de les Nacions Unides, Sèrie M, núm. 49. (UN-M49).",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                    "idescripcio": "Versió inicial.",
+                    "ifitxer_doc": "Regions_mon_ATR.docx",
+                    "ifitxer_xls": "Regions_mon.xlsx",
+                    "idatacreacio": "07/06/2019",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/04/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Regions-del-m-n/693j-aqiw",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "REGIONS_MON",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/04/2024",
+            "Data_actualitzacio": "29/04/2024"
         }
     ]
 }
