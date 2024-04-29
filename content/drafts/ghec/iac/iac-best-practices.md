@@ -1,11 +1,13 @@
 +++
 date        = "2024-04-02"
-title       = "Bones pràctiques IaC"
+title       = "Requeriments i bones pràctiques IaC"
 description = "Bones pràctiques en infraestructura com a codi (IaC) amb Terraform"
 sections    = "[IAC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
 weight      = 1
 +++
+
+# Requeriments
 
 ## Estructura de projecte
 
@@ -58,12 +60,35 @@ Establir un **estàndard de nomenclatura** per als serveis desplegats en diverse
 
 La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents proveïdors de núvol públic és la següent:
 
-* **acr-env-typ-iii**
+* **acr-env-typ-lll-iii**
   - **acr**: acrònim de l'aplicació (3 dígits).
   - **env**: entorn (3 dígits). Pot pendre els valors "dev/tst/int", "pre", "pro".
   - **typ**: tipus de recurs (3 dígits).
+  - **hhh**: hiperescalar (3 dígits). Pot pendre els valors "aws", "azr", "gcp", "ibm".
   - **lll**: localització/regió (3 dígits).
   - **iii**: índex seqüencial (3 dígits).
+
+  Taula localització/regió:
+
+  * AWS
+
+  | Codi | Regió | Nom   |  
+  |------|-------|-------|
+  | ew1  | eu-west-1 | Europe (Ireland) *Default*
+  | ec1  | eu-central-1 | Europe (Frankfurt)
+  | uw1  | us-east-1 | US East (N. Virginia) *Only for some services* 
+
+  * Azure
+
+  | Codi | Regió | Nom   |  
+  |------|-------|-------|
+  | ew1  | West Europe | Europe (Netherlands)
+  | ec1  | Germany West Central | Europe (Frankfurt) *Default*
+  
+  * GCP
+  
+  TO BE DEFINED
+
 
 El **tipus de recurs** pot pendre els valors següents depenent del proveïdor de núvol públic:
 
@@ -155,7 +180,9 @@ Per garantir el **compliment de les polítiques** establertes per Suport Cloud p
 
 En el workflow de CI d'infraestructura es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD.
 
-### Bones Pràctiques en Infraestructura com a Codi (IaC):
+[PENDENT] Enllaç a intranet amb detall de polítiques.
+
+# Bones Pràctiques en Infraestructura com a Codi (IaC)
 
 Per a una implementació efectiva de la infraestructura com a codi, a més de la nomenclatura, etiquetatge i compliment de SCPs, és important seguir una sèrie de **bones pràctiques**:
 
