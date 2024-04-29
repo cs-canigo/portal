@@ -1,0 +1,39 @@
+
++++
+date         = "2024-04-09"
+title        = "Roadmap"
+description  = "Roadmap de GitHub Enterprise Cloud (GHEC) a.k.a SIC+"
+weight      = "10"
+sections    = ["GHEC"]
++++
+
+## [Q1 2024] Beta 1.0.0​
+
+- :heavy_check_mark: Model organitzatiu (enterprise, organitzacions, repositoris, ...)​
+- :heavy_check_mark: Integració amb GICAR Cisco Duo i gestió d'accesos (teams, rols, ...)​
+- :heavy_check_mark: Implementació workflows de CI i CD tant d'infraestructura (Terraform) com d'aplicació (Java, Node.js)​
+- :heavy_check_mark: Implementació arquitectura self-hosted runners amb Azure Container Instances (ACI)​
+- :heavy_check_mark: Certificació desplegaments contenidors a AWS ECS Fargate​
+- :heavy_check_mark: Pilot EMIX​
+
+## [Q2 2024] 1.0.0​
+
+- :heavy_check_mark: Certificació desplegament de llibreries Maven/Npm​
+- (En progrés) Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
+- (En progrés) Certificació desplegaments contenidors a Azure Container Apps​
+- (En progrés) Certificació desplegaments funcions a AWS Lambda i Azure Functions​
+- (To do) Certificació desplegaments continguts estàtics a AWS S3 i Azure Blob Storage​
+- (To do) Definició model desplegaments delegats (en màquines virtuals) i PoC​
+- (To do) Definició model desplegament bases de dades i PoC​
+- (To do) Pilot integració Marc d'Automatització de Testing (MAT) i Marc d'Automatització d'Observabilitat (MAO)​
+
+## [Q3/Q4 2024] 1.1.0​
+
+- Desplegaments avançats (Canary, Blue/Green, ...)*​
+- Certificació desplegaments a GCP​
+- Suport a .NET​
+- Suport Python (llenguatge a incorporar al Full de Ruta)​
+- CI/CD MLOps
+
+
+*_Roadmap subjecte a canvis_
