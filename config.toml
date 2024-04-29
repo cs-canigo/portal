@@ -11,6 +11,7 @@ disqusShortname = "arquitectura-ctti"
 pluralizelisttitles = false
 disablePathToLower = true
 preserveTaxonomyNames = false
+enableEmoji = true
 
 Paginate = 10
 

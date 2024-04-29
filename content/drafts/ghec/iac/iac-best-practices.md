@@ -4,7 +4,7 @@ title       = "Bones pràctiques IaC"
 description = "Bones pràctiques en infraestructura com a codi (IaC) amb Terraform"
 sections    = "[IAC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
-weight      = 1
+weight      = 2
 +++
 
 # Bones Pràctiques en Infraestructura com a Codi (IaC)

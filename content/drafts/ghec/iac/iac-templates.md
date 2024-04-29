@@ -4,7 +4,7 @@ title       = "Plantilles IaC"
 description = "Plantilles d'infraestructura com a codi (IaC) pels diferents proveïdors de cloud: AWS, Azure, GCP, etc"
 sections    = "[GHEC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
-weight      = 1
+weight      = 3
 +++
 
 
@@ -43,13 +43,13 @@ A continuació s'especifiquen les plantilles d'infraestructura disponibles pels 
 
     _Serveis_: Azure ContainerApps, Azure CosmosDB (PostgreSQL)
 
-    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/
+    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-container
 
 * Arquitectura tipus per funcions (FaaS)
 
     _Serveis_: Azure Functions, Azure CosmosDB (MongoDB)
 
-    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/
+    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-functions
 
 ### Plantilles d'IaC per a GCP
 
