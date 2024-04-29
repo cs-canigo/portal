@@ -118,9 +118,7 @@ el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
 
 ## Eliminació de binaris
 
-Periòdicament s’executa un procés d'esborrat de binaris de manera que **únicament es respectaran les últimes 5 versions**
-repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat
-pujades durant els últims 6 mesos (180 dies).
+**Periòdicament s'executa un procés d'esborrament de binaris;** els artefactes més antics de 180 dies s'esborraran mantenint solament les últimes 5 versions. A partir d'1 any d'antiguitat solament es mantindrà l'última versió.
 El Servei de Binaris no està concebut, per tant, com un servei de custòdia permanent sinó com un sistema d'intercanvi
 d'artefactes per al desplegament d'aplicacions.
 
