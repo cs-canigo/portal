@@ -1,12 +1,10 @@
 ---
-langs:
-  - ca
-  - es
+valid_to: Versió actual
 title_breadcrumbs: Versió vigent
 title: Principis d'arquitectura de sistemes d'informació
 description: Normes i directrius generals destinades a informar i recolzar la
   forma en què CTTI vol que s'implementin els Sistemes d'Informació.
-date: 2024-04-30T13:02:00.000Z
+date: 2024-04-29T13:02:00.000Z
 sections:
   - principis
 imatge: /images/bloc/principis.png
@@ -22,7 +20,6 @@ aliases:
   - /arquitectura/principis
   - /arquitectura/2015/11/principis
 weight: "1"
-valid_to: Versió actual
 ---
 
 ## Introducció
