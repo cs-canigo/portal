@@ -26,6 +26,9 @@
 	    	{{ if not .Lastmod.IsZero }}
 	    	   <i><b>Darrera actualització:</b></i> {{ .Lastmod.Format "02-01-2006" }}
 	        {{ end }}
+			{{ if and (strings.Contains .File.Dir "principis") (isset .Params "valid_to") }}
+				<b>Validesa fins</b>: {{ .Params.valid_to }}
+			{{ end}}			
            </div>
            
 			<article class="padding-xs padding-sm padding-md contingut">				

@@ -15,5 +15,9 @@
 {{end}}
 
 <li>
-	{{ .LinkTitle }}
+	{{ if isset .Params "title_breadcrumbs" }}
+		{{ .Params.title_breadcrumbs }}
+	{{ else }}
+		{{ .LinkTitle }}
+	{{ end }}
 </li>
