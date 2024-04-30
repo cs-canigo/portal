@@ -2,13 +2,14 @@
 langs:
   - ca
   - es
+title_breadcrumbs: Versió vigent
 title: Principis d'arquitectura de sistemes d'informació
-title_breadcrumbs: "Versió vigent"
-description: Normes i directrius generals destinades a informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
+description: Normes i directrius generals destinades a informar i recolzar la
+  forma en què CTTI vol que s'implementin els Sistemes d'Informació.
+date: 2024-04-30T13:02:00.000Z
 sections:
   - principis
 imatge: /images/bloc/principis.png
-valid_to: Versió actual
 blog_tags:
   - directrius
 aliases:
@@ -21,6 +22,7 @@ aliases:
   - /arquitectura/principis
   - /arquitectura/2015/11/principis
 weight: "1"
+valid_to: Versió actual
 ---
 ## Introducció
 
@@ -81,7 +83,7 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 * **1.6.1 Ús del framework Canigo**. Per aplicacions JEE s'ha de fer ús del [Framework Canigó](/plataformes/canigo/framework/).
 * **1.6.2 Servidors SMTP transversals**, utilitzar els servidors SMTP transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions. [Manual per a la integració SMTP](https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view)
 * **1.6.3 Accés a internet des de xCAT**, per accedir a recursos internet des de servidors ubicats a la xarxa XCAT, és necessari utilitzar el ProxyPass, mai accedir directament a internet.
-* **1.6.4 Gestió d'identitats**, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: 	
+* **1.6.4 Gestió d'identitats**, indepentdentment de si la solució és SaaS, LowCode, Cloud Native o tradicional, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: 	
 
   * 1.6.4.1 Col·lectiu Gencat: autentificació mitjançant ["GICAR"](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/).
   * 1.6.4.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant ["GICAR"](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/).
