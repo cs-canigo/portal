@@ -92,7 +92,7 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 * **1.6.8 Tramitador d'ajuts i subvencions** (**[TAIS](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/tramitacio-i-gestio-de-serveis/tais/)**). Sistema d'informació per a la gestió electrònica d'expedients de gestió de subvencions.
 
 **1.7 Historificació de dades i fitxers**: des del punt de vista de FinOps i sobretot quan parlem de núvol públic, és obligatori plantejar mecanismes d’historificació de les dades (registres de base de dades, fitxers, objectes). Només s’ha de mantenir en emmagatzemaments “calents” allò que sigui necessari pel funcionament del procés de negoci o per aspectes normatius, la resta s’ha de passar a emmagatzematges “freds”.
-asdadsa
+
 ## 2. Principis sobre la Tecnologia
 
 **2.1 Continuïtat tecnològica**. Per a facilitar la segregació de responsabilitats i mantenibilitat de les aplicacions es proposa desacoblar frontend i backend, així com exposar la lògica necessària mitjançant serveis (REST principalment) <span class="collapseMD" data-collapse-next="ul"></span>
