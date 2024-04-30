@@ -30,7 +30,6 @@
 
     {{ $filename := "" }}
 
-    {{.File}}
     {{ if .File }}
       {{ with .File }}
         {{ $filename = replace (print .Dir .BaseFileName) "\\" "/" }}
