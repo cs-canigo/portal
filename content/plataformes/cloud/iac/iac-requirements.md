@@ -78,13 +78,14 @@ La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents pro
   |------|-------|-------|
   | ew1  | eu-west-1 | Europe (Ireland) *Default*
   | ec1  | eu-central-1 | Europe (Frankfurt)
-  | uw1  | us-east-1 | US East (N. Virginia) *Only for some services* 
+  | ue1  | us-east-1 | US East (N. Virginia) *Only for some services* 
 
   * **Azure**
 
   | Codi | Regió | Nom   |  
   |------|-------|-------|
   | ew1  | West Europe | Europe (Netherlands)
+  | en1  | Sweden Central | Europe (Sweden)
   | ec1  | Germany West Central | Europe (Frankfurt) *Default*
   
   * **GCP**

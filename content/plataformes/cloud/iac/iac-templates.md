@@ -1,12 +1,14 @@
 +++
 date        = "2024-04-02"
-title       = "Plantilles IaC"
+title       = "Plantilles IaC (Work in progress)"
 description = "Plantilles d'infraestructura com a codi (IaC) pels diferents proveïdors de cloud: AWS, Azure, GCP, etc"
 sections    = "[GHEC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
 weight      = 3
 +++
 
+
+ :warning: **Les plantilles que es poden trobar en aquesta plana estan en fase de validació pel que encara no es recomana el seu ús per part de les aplicacions**
 
 ## Plantilles d'infraestructura com a codi (IaC)
 
@@ -21,6 +23,9 @@ Les plantilles d'IaC són una eina fonamental en el desenvolupament de solucions
 ## Plantilles Terraform disponibles
 
 A continuació s'especifiquen les plantilles d'infraestructura disponibles pels diferents hiperescalars. Aquestes estan basades en serveis Cloud-Native per tal de facilitar als proveïdors d'aplicacions la seva gestió. Per cadascuna d'elles s'enumeren els serveis més rellevants que incorporen, així com l'enllaç al seu codi font.
+
+Les plantilles es poden trobar a GitHub Enterprise Cloud (GHEC). Abans d'accedir-hi, cal que l'usuari estigui autenticat a la plataforma: 
+https://github.com/enterprises/gencat
 
 ### Plantilles d'IaC per a AWS
 
