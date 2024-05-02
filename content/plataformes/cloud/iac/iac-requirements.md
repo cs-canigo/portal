@@ -84,9 +84,9 @@ La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents pro
 
   | Codi | Regió | Nom   |  
   |------|-------|-------|
-  | ew1  | West Europe | Europe (Netherlands)
-  | en1  | Sweden Central | Europe (Sweden)
-  | ec1  | Germany West Central | Europe (Frankfurt) *Default*
+  | we1  | West Europe | Europe (Netherlands)
+  | sc1  | Sweden Central | Europe (Sweden)
+  | gw1  | Germany West Central | Europe (Frankfurt) *Default*
   
   * **GCP**
   
@@ -160,19 +160,19 @@ El **tipus de recurs** pot pendre els valors següents depenent del proveïdor d
 
 L'**etiquetatge** de recursos és essencial per organitzar, identificar i gestionar recursos al núvol de manera eficient i efectiva. S'han d'utilitzar aquestes etiquetes:
 ```
-CodiAplicacio: Codi d'Aplicació
-Codientitat: Codi d'Entitat
-Codilnap:
-CodiJira: Codi de Jira
-CodiServei: Codi de Servei
-Entorn: Entorn
+CodiAplicacio: codi d'aplicació
+CodiEntitat: codi d'entitat
+CodiInap: acrònim
+CodiJira: codi de facturació 
+CodiServei: codi d'infraestructura
+Entorn: entorn de desplegament
 ```
 Exemple:
 ```
 CodiAplicacio: 3049
 CodiEntitat: JUS
-Codilnap: BMD
-Codijira: CPDut-xx
+CodiInap: BMD
+CodiJira: CPDut-xx
 CodiServei: 7_713
 Entorn: PRE
 ```
