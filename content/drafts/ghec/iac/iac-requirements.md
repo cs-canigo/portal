@@ -31,22 +31,17 @@ Els workflows de CI/CD d'infraestructura requereixen d'aquesta estructura pel se
 
 ## Requeriments CI/CD
 
-El backend de l'estat de Terraform s'ha de declarar de la següent manera per a poder fer ús dels workflows de CI/CD d'infraestructura:
+El backend de l'estat de Terraform s'ha de declarar de la següent manera:
 
-backend.tf
+
+_backend.tf_
 ```hcl
 terraform {
-
-  backend "azurerm" {
-  }
-}
-
-provider "azurerm" {
-  features {}
+    backend "remote" {}
 }
 ```
 
-Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Resource group** amb un **Storage Account** per aplicació, i dins un **Container** per a cada entorn (dev/tst/int, pre, pro).
+Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Resource group** amb un **Storage Account** per aplicació, i dins un **Container** per a cada entorn (dev/tst/int, pre, pro). Aquest backend s'establirà dinàmicament al workflow de CD d'infraestructura.
 
 ## Nomenclatura
 
@@ -62,13 +57,22 @@ La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents pro
   - **acr**: acrònim de l'aplicació (3 dígits).
   - **env**: entorn (3 dígits). Pot pendre els valors "dev/tst/int", "pre", "pro".
   - **typ**: tipus de recurs (3 dígits).
-  - **hhh**: hiperescalar (3 dígits). Pot pendre els valors "aws", "azr", "gcp", "ibm".
+  - **hhh**: hiperescalar (3 dígits).
   - **lll**: localització/regió (3 dígits).
   - **iii**: índex seqüencial (3 dígits).
 
-  Taula localització/regió:
+* Taula **hiperescalars**:
 
-  * AWS
+    | Codi | Nom |  
+    |------|-------|
+    | aws  | Amazon Web Services
+    | azr  | Microsoft Azure
+    | gcp  | Google Cloud Platform
+    | ibm  | IBM Cloud
+
+* Taula **localització/regions**:
+
+  * **AWS**
 
   | Codi | Regió | Nom   |  
   |------|-------|-------|
@@ -76,17 +80,20 @@ La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents pro
   | ec1  | eu-central-1 | Europe (Frankfurt)
   | uw1  | us-east-1 | US East (N. Virginia) *Only for some services* 
 
-  * Azure
+  * **Azure**
 
   | Codi | Regió | Nom   |  
   |------|-------|-------|
   | ew1  | West Europe | Europe (Netherlands)
   | ec1  | Germany West Central | Europe (Frankfurt) *Default*
   
-  * GCP
+  * **GCP**
   
-  TO BE DEFINED
+  | Codi | Regió | Nom   |  
+  |------|-------|-------|
+  | ew3  | europe-west3 | Europe (Frankfurt) *Default*
 
+    Regió secundària per definir
 
 El **tipus de recurs** pot pendre els valors següents depenent del proveïdor de núvol públic:
 
