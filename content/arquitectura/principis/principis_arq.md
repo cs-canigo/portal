@@ -1,11 +1,10 @@
 ---
-langs:
-  - ca
-  - es
+valid_to: Versió actual
+title_breadcrumbs: Versió vigent
 title: Principis d'arquitectura de sistemes d'informació
-description: Normas i directrius generals destinades a informar i recolzar la
+description: Normes i directrius generals destinades a informar i recolzar la
   forma en què CTTI vol que s'implementin els Sistemes d'Informació.
-date: 2023-09-19T11:31:32.976Z
+date: 2024-04-29T13:02:00.000Z
 sections:
   - principis
 imatge: /images/bloc/principis.png
@@ -22,6 +21,7 @@ aliases:
   - /arquitectura/2015/11/principis
 weight: "1"
 ---
+
 ## Introducció
 
 Els principis d'arquitectura CTTI són les normes i directrius generals que guien l'estratègia tecnològica i estan destinades a ser perdurables i rarament modificables i tenen com a objectiu informar i recolzar la forma en què CTTI vol que es realitzi la selecció tecnològica així com la implementació de Sistemes d'Informació.
@@ -81,7 +81,7 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 * **1.6.1 Ús del framework Canigo**. Per aplicacions JEE s'ha de fer ús del [Framework Canigó](/plataformes/canigo/framework/).
 * **1.6.2 Servidors SMTP transversals**, utilitzar els servidors SMTP transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions. [Manual per a la integració SMTP](https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view)
 * **1.6.3 Accés a internet des de xCAT**, per accedir a recursos internet des de servidors ubicats a la xarxa XCAT, és necessari utilitzar el ProxyPass, mai accedir directament a internet.
-* **1.6.4 Gestió d'identitats**, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: 	
+* **1.6.4 Gestió d'identitats**, indepentdentment de si la solució és SaaS, LowCode, Cloud Native o tradicional, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: 	
 
   * 1.6.4.1 Col·lectiu Gencat: autentificació mitjançant ["GICAR"](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/).
   * 1.6.4.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant ["GICAR"](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/).
@@ -90,6 +90,8 @@ A continuació es detallen algunes de les solucions transversals més esteses:
 * **1.6.6 Gestor de continguts web** (**[GECO+](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/comunicacio-i-relacio/webs/geco/)**), permet crear i mantenir continguts i portals d'internet mitjançant un conjunt de peces i serveis comuns (framework).	
 * **1.6.7 PICA - Plataforma d'interoperabilitat** (**[PICA](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/administracio-electronica/serveis-dintegracio-i-interoperabilitat/)**). Plataforma que permet l'accés a informació dels organismes de la Generalitat i altres administracions públiques i institucions, el consum de serveis comuns de tramitació, la integració entre els Sistemes d'Informació departamentals i la plataforma de tramitació corporativa. Tot sota criteris d'estandardització, rapidesa, senzillesa, seguretat i legalitat.
 * **1.6.8 Tramitador d'ajuts i subvencions** (**[TAIS](http://ctti.gencat.cat/ca/ctti/solucions-corporatives/tramitacio-i-gestio-de-serveis/tais/)**). Sistema d'informació per a la gestió electrònica d'expedients de gestió de subvencions.
+
+**1.7 Historificació de dades i fitxers**: des del punt de vista de FinOps i sobretot quan parlem de núvol públic, és obligatori plantejar mecanismes d’historificació de les dades (registres de base de dades, fitxers, objectes). Només s’ha de mantenir en emmagatzemaments “calents” allò que sigui necessari pel funcionament del procés de negoci o per aspectes normatius, la resta s’ha de passar a emmagatzematges “freds”.
 
 ## 2. Principis sobre la Tecnologia
 

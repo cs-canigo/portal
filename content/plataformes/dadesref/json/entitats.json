@@ -4376,7 +4376,7 @@
                     "inom": "V01",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "Caixes estalvis, banca, assegurances i mutualitats",
+                    "ipromotor": "DGAD - GTD Gestió tècnica de la dada",
                     "idescripcio": "Versió inicial.",
                     "ifitxer_doc": "ENTITATS_BANCARIES_ATR.docx",
                     "ifitxer_xls": "ENTITATS_BANCARIES.xlsx",
@@ -4404,7 +4404,7 @@
                     "inom": "V01",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                    "ipromotor": "DGAD - GTD Gestió tècnica de la dada",
                     "idescripcio": "Versió inicial.",
                     "ifitxer_doc": "Regions_mon_ATR.docx",
                     "ifitxer_xls": "Regions_mon.xlsx",
@@ -4418,6 +4418,34 @@
             ],
             "nom_dinsBD": "REGIONS_MON",
             "Classificacio": "Consolidat",
+            "Data_publicacio": "29/04/2024",
+            "Data_actualitzacio": "29/04/2024"
+        },
+        {
+            "Id": "dtarq104",
+            "Nom": "Àmbits territorials de planificació",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Ordenació del territori , paisatge i urbanisme",
+            "Descripcio": "Àmbits territorials de planificació, 7 arees",
+            "instancies": [
+                {
+                    "inom": "V00.01",
+                    "iestat": "Pendent",
+                    "itipus": "Tabular",
+                    "ipromotor": "DGAD",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Ambits_territorials_planificacio_ATR.docx",
+                    "ifitxer_xls": "",
+                    "idatacreacio": "29/04/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/04/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "AMBIT_TERRITORIALS_PLANIFICACIO",
+            "Classificacio": "Pendent",
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
         }
