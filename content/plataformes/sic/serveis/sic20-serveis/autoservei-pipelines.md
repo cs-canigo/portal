@@ -1,5 +1,5 @@
 +++
-date = "2020-07-14"
+date = "2024-05-03"
 title = "Autoservei de pipelines"
 description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
 sections = "SIC"
@@ -13,6 +13,12 @@ taxonomies = []
 weight = 5
 +++
 
+<div style="background-color: #f2dddd; color: #aa4546; padding: 16px 24px;">
+ <div style="font-size: 16px; font-weight: bold;">¡¡¡ Atenció !!!</div>
+ <div style="font-size: 12px">
+ A causa dels treballs de deprecat de SIC 2.0, s'ha deshabilitat la generació automàtica de pipelines en SIC 2.0. A partir d'ara, qualsevol canvi en la configuració de pipelines en SIC 2.0, haurà de sol·licitar-se a través de tiquet <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC">ACOCLDSIC</a> de la mateixa forma que es fa per a SIC 3.0.
+ </div>
+</div>
 
 ## Introducció
 
