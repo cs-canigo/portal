@@ -259,24 +259,14 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 | 3.1              | 16.7           |
 | 6.0              | 17.1           |
 
-<!---
-### Maven/JDK
-|Versió Maven|Versió JDK|
-|-------|-------|
-|2.2|7|
-|3.2|6<br/>7<br/>8|
-|3.5|7<br/>8|
-|3.6 \\\*|7<br/>8<br/>11-openjdk|
-
-(\\\*) Versió amb suport i manteniment.
--->
 
 ### Maven/JDK
 
 | Versió Maven | Versió JDK               |
 | ------------ | ------------------------ |
-| 2.2          | 7<br />8                 |
-| 3.6          | 7<br />8<br />11-openjdk |
+| 3.6          | 7<br />8<br />11-openjdk<br />17-openjdk |
+| 3.9          | 17-openjdk<br />21-openjdk |
+
 
 ### Ant/JDK
 
@@ -297,11 +287,20 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 | 14          | 6.14       |
 | 16          | 8.19       |
 | 18          | 8.19       |
+| 20          | 10.1       |
 
 L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida,
 tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
 **bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (fitxer `package.json`) i instal·lar-los
 a la construcció de l'aplicació via **npm install**.
+
+### Node/pnpm
+
+| Versió Node | Versió pnpm |
+| ----------- | ---------- |
+| 20           | 8.15       |
+
+Com a alternativa a Npm, per a Node 20 s'ofereix també la possibilitat d'utilitzar pnpm, [informació aquí](https://pnpm.io/), un gestor de paquets més lleuger.
 
 ### Hugo (Webs estàtiques)
 
