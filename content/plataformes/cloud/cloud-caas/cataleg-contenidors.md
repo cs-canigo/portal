@@ -29,6 +29,7 @@ GICAR Nginx Kubernetes/Openshift	 | 2.1  |registreimatges.sic.intranet.gencat.ca
 Java		 | 8  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:8-alpine-3.18   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/8-alpine-3.18)
 Java		 | 11-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:11.0.20-alpine-3.18   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/11.0.20-alpine-3.18)
 Java		 | 17-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:17.0.8-openjdk  | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/17.0.8-openjdk)
+Java		 | 21-openjdk  | registreimatges.sic.intranet.gencat.cat/gencatcloud/java:21.0.3-alpine3.19  | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/-/tree/4396e39941fbc78b12d7b119c0bc285f343d7273)
 .Net Core    | 6.0.19   | registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-6.0.19   | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/1.0-6.0.19)
 .Net Core    | 8.0   | registreimatges.sic.intranet.gencat.cat/gencatcloud/dotnet:1.0-8    | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/8.0)
 NodeJS 		 | 18.16.1   | registreimatges.sic.intranet.gencat.cat/gencatcloud/node:18.16.1   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/-/tree/18.16.1)

@@ -177,7 +177,7 @@ CodiServei: 7_713
 Entorn: PRE
 ```
  
-### Compliment de Polítiques:
+### Compliment de Polítiques
 
 Per garantir el **compliment de les polítiques** establertes per Suport Cloud per al desplegament d'infraestructura en els diferents proveïdors Cloud, s'han de seguir aquestes pràctiques:
 - Configurar i aplicar les polítiques definides en el codi IaC de la infraestructura de l'aplicació.
