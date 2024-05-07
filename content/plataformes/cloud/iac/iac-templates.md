@@ -20,14 +20,14 @@ Les plantilles d'IaC són una eina fonamental en el desenvolupament de solucions
 
 **[Terraform](https://www.terraform.io/)** és una eina d'infraestructura com a codi (IaC) de codi obert que permet als desenvolupadors i als equips d'operacions gestionar la infraestructura com a codi. Terraform permet als usuaris definir i configurar la infraestructura en un llenguatge de programació de propòsit general, i després desplegar aquesta infraestructura de forma automatitzada.
 
-## Plantilles Terraform disponibles
+### Plantilles Terraform disponibles
 
 A continuació s'especifiquen les plantilles d'infraestructura disponibles pels diferents hiperescalars. Aquestes estan basades en serveis Cloud-Native per tal de facilitar als proveïdors d'aplicacions la seva gestió. Per cadascuna d'elles s'enumeren els serveis més rellevants que incorporen, així com l'enllaç al seu codi font.
 
 Les plantilles es poden trobar a GitHub Enterprise Cloud (GHEC). Abans d'accedir-hi, cal que l'usuari estigui autenticat a la plataforma: 
 https://github.com/enterprises/gencat
 
-### Plantilles d'IaC per a AWS
+#### AWS
 
 * Arquitectura tipus per contenidors (CaaS)
 
@@ -42,7 +42,7 @@ https://github.com/enterprises/gencat
     _Codi font_: https://github.com/ctti-arq/iac-aws-templates/tree/master/template-apigateway
 
 
-### Plantilles d'IaC per a Azure
+#### Azure
 
 * Arquitectura tipus per contenidors (CaaS)
 
@@ -56,7 +56,7 @@ https://github.com/enterprises/gencat
 
     _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-functions
 
-### Plantilles d'IaC per a GCP
+#### GCP
 
 * Arquitectura tipus per contenidors (CaaS)
 
