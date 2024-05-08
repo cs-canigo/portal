@@ -43,18 +43,29 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
       + Codi de Component, per exemple "00", "01".
       + Acrònim de Component, per exemple "GEFACT".
       + Email dels owners dels grups (separats per ,) d'Azure o Gestor de solucions.
-      + Array de components tècnics, tipus de repositori on el tipus de repositori pot ser backend, frontend o infra, (separats per "||") per exemple :
-        [component,backend||component,frontend||component, infra].
+      + Array de components tècnics a crear, on cada item estarà format per :
+        + Nom Repositori
+        + Tipus de Repositori amb els següents valors disponibles :
+          + backend
+          + frontend 
+          + infra
+        + Tipus de Funció del Repositori : On s'identificarà si el component tècnic a crear és una Llibreria, una Funció (lambda, azure functions, etc), Infraestructura o una imatge de contenidor.  Els possibles valors són :
+          + function : Per crear una repositori que desplegui una funció Lambda, Azure Funcions, etc.
+          + library : Per demanar la creació d'un repositori que desplegui una llibreria.
+          + infra : Per demanar la creació d'un repositori que desplegui infraestructura..
+          + containerapp : Per sol·licitar la creació d'un repositori que desplegarà una imatge de contenidors.
 
-        Addicionalment als repositoris que es demanen, se'n crearà un automàticament per a propòsits de Testing. 
+        i tot això separats per "||" per exemple :
+          + [nombreRepo1,backend,function||nombreRepo2,frontend,containerapp]
+          + [nombreRepo2,infra,infra||nombreRepo2,backend,library]
+      
+      Addicionalment als repositoris que es demanen, se'n crearà un automàticament per a propòsits de **Testing**. 
 
       + Array d'entorns a crear per a l'aplicació, separats per "||".  Exemple :
         + [dev||pre||pro]
-        + [int||pre||pro]
         + [pre||pro]
-    
-    Un cop rebuda la petició, es processarà per part dels equips pertinents, i mitjançant un procés **automàtic**, es crearan els components i/o recursos necessaris a GitHub Enterprise Cloud i a Azure.
-
+  
+    Un cop rebuda la petició, es processarà per part dels equips pertinents, i mitjançant un procés **automàtic**, es crearan els components i/o recursos necessaris a GitHub Enterprise Cloud i a Azure. 
   
   2. **Configuració del model GHEC**
   Un cop ha finalitzat el procés automàtic que crea tots els recursos necessaris per donar suport al model, s'han de realitzar les següents configuracions bàsiques : 
@@ -112,14 +123,24 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
       + **Configuració dels diferents WorkFlows de Continuous Deployment (CI + CD)**
 
-        Per cadascun dels repositoris creats (exceptuant *-test), es creen un conjunt de workflows que seran els que executin les tasques de descàrrega de codi, compilació, empaquetat, testing, qualitat de codi i desplegament.
+        Per a cadascun dels repositoris creats (exceptuant *-test), es creen un conjunt de workflows que seran els que executin les tasques de CI / CD de l'aplicació (descàrrega de codi, compilació, empaquetat, testing, qualitat de codi i desplegament).
         
-        L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
-        
-        Accés a GHEC : [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/)
+        Aquests workflows, tindran diferents tipologies depenent del tipus de funció que tindrà el repositori sol·licitat : 
+          + function: Workflows per desplegar Functions.
+          + library : Workflows per desplegar Llibreries.
+          + infra : WorkFlows per desplegar Infraestructura.
+          + containerapp : Repositoris per desplegar Imatges de Contenidors.
 
-        ![Accés a Workflows](/images/GHEC/gh-imagen-acceso-action.png)
-    
+
+        L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
+                
+        Accés a GHEC : [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/)
+        
+        En aquest cas, es mostra un exemple de creació de Workflows per a repositoris el tipus de funció dels quals és una imatge de contenidors.
+
+        ![Accés a Workflows Imatge Contenidors](/images/GHEC/gh-imagen-acceso-action.png)
+
+
         L'execució dels workflows, dependran de la seva tipologia i del model definit, essent :
           - Workflows de CI (app i infra) : Executats **automàticament** en la sol·licitud d'un Pull Request o en l'execució d'un Merge de dita Pull Request.
           - Workflows de CD (app i infra) : Executats sota demanda a través de la interfície web de GHEC.
@@ -134,71 +155,178 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
 
           ![Ruta de Workflows](/images/GHEC/gh-ruta-workflows.png)
 
-        **Workflows CI/CD per a JAVA**
-          + Maven APP CI on PR (maven-app-ci-on-pr.yaml): 
+        **Workflows CI/CD per a Container App**
+          + **APP CI on PR (app-ci-on-pr.yaml):** 
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+            Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+            En cas de **java** :
             * java_version:  Versió de JDK, exemple: 17.
             * java_distribution : Distribució JAVA, exemple : temurin.
             * maven_version: Versió de Maven utilitzada.
 
-          + Maven APP CI on Commit to develop (maven-app-ci-on-commit-develop.yaml): 
+            En cas de  **nodejs**: 
+            * node_version:  Versió de Node.
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
+            
+          + **APP CI on Commit to develop (app-ci-on-commit-develop.yaml):**
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+            Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+            En cas de **java** :
             * java_version:  Versió de JDK, exemple: 17.
             * java_distribution : Distribució JAVA, exemple : temurin.
             * maven_version: Versió de Maven utilitzada.
 
-          + Maven APP CI on Commit to release or màster (maven-app-ci-on-commit.yaml).
-            * No necessita configuració inicial.
+            En cas de **nodejs**: 
+            * node_version:  Versió de Node.
+            * install_build_command : Si existeix, comandament custom que realitza les operatives d' install i de build
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
 
-          + Maven APP CD (maven-app-cd.yaml).
+          + **APP CI on Commit to release or màster (app-ci-on-commit.yaml):**
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+          + **APP CD (app-cd.yaml):**
             * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            * cloud : Seleccionar en quin Proveïdor Cloud es desplegarà l' artefacte que es generi.  Actualment els valors disponibles són :
+              * aws 
+              * azure
+              * gcp
+            * engine : Seleccionar quin servei de contenirització s' utilitzarà per realitzar el desplegament de l' aplicació.  Actualment els valors són :
+              * ecs : Elastic Container Service
+              * aca : Azure Container App
+
+            Depenent dels valors seleccionats anteriorment, s'informaran les següents variables :
+            En cas de **aws** y **ecs**  
+
             * cluster_name: Nom del Clúster on es desplegarà l'aplicació.
             * cluster_service : Servei del Clúster on es desplegarà l'aplicació.
-            * image_registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
+            * registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
 
-            
-              Si els paràmetres "cluster_name", "cluster_service" i "image_registry_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
+            En cas de **azure** y **aca**
+            * registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
 
-
-              ![Exemple de variables canviades si segueixen la nomenclatura especificada](/images/GHEC/vars-to-change-example.png)
-
-
-        **Workflows CI/CD per a Node.js**  
-          + Node APP CI on PR (node-app-ci-on-pr.yaml): 
-            * node_version:  Versió de Node.
-            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
-            
-          + Node APP CI on Commit to develop (node-app-ci-on-commit-develop.yaml): 
-            * node_version:  Versió de Node.
-            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
-            
-          + Node APP CI on Commit to release or master (node-app-ci-on-commit.yaml)
-            * No necessita configuració inicial.
-
-          + Node APP CD (node-app-cd.yaml)
-            * Comentar el entorn dev si no existeix entorn de desenvolupament.
-            * cluster_name: Nom del Clúster on es desplegarà l'aplicació.
-            * cluster_service : Servei del Clúster on es desplegarà l'aplicació.
-            * image_registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
-
-              Si els paràmetres "cluster_name", "cluster_service" i "image_registry_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
+          TODO : esto sigue teniendo sentido??? no lo veo en el action.
+          
+          Si els paràmetres "cluster_name", "cluster_service" i "registry_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
 
 
-              ![Exemple de variables canviades si segueixen la nomenclatura especificada](/images/GHEC/vars-to-change-example.png)
+          ![Exemple de variables canviades si segueixen la nomenclatura especificada](/images/GHEC/vars-to-change-example.png)
 
 
         **Workflows CI/CD per a Infraestructura**  
-          + Infra CI on PR  (infra-ci-on-pr.yaml): 
-            * terraform_version: Versió de Terraform.
+          + **Infra CI on PR  (infra-ci-on-pr.yaml):**
             * Branques disponibles (branches), si no hi ha entorn de desenvolupament cal comentar la branca develop.
+            * terraform_version: Versió de Terraform.            
+            * cloud : Proveïdor Cloud on es desplegarà la infra.  Actualment, es disposa dels següents valors :
+              * aws : Para AWS.
+              * azure : Para Azure.
+              * gcp : Para Google Cloud.
             
-          +  Infra CI on Commit  (infra-ci-on-commit.yaml): 
-              * terraform_version: Versió de Terraform.
+          +  **Infra CI on Commit  (infra-ci-on-commit.yaml):**
               * Branques disponibles (branches), si no hi ha entorn de desenvolupament cal comentar la branca develop.
+              * terraform_version: Versió de Terraform.              
                                    
-          + Infra CD Apply (infra-cd-apply.yaml):
+          + **Infra CD Apply (infra-cd-apply.yaml):**
             * Comentar l'entorn dev si no hi ha entorn de desenvolupament.
             * terraform_version: Versió de Terraform.
+            * cloud : Proveïdor Cloud on es desplegarà la infra.  Actualment, es disposa dels següents valors :
+              * aws : Para AWS.
+              * azure : Para Azure.
+              * gcp : Para Google Cloud.
+            
+        **Workflows CI/CD per a Libraries**
+          + **Library CI on PR (lib-ci-on-pr.yaml):** 
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+            Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+            En cas de **java** :
+            * java_version:  Versió de JDK, exemple: 17.
+            * java_distribution : Distribució JAVA, exemple : temurin.
+            * maven_version: Versió de Maven utilitzada.
 
+            En cas de **nodejs**: 
+            * node_version:  Versió de Node.
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
+            
+          + **Library CI on Commit (lib-ci-on-commit.yaml):**
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+            Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+            En cas de **java** :
+            * java_version:  Versió de JDK, exemple: 17.
+            * java_distribution : Distribució JAVA, exemple : temurin.
+            * maven_version: Versió de Maven utilitzada.
+
+            En cas de **nodejs**: 
+            * node_version:  Versió de Node.
+            * install_build_command : Si existeix, comandament custom que realitza les operatives d' install i de build
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
         
+        **Workflows CI/CD per a Functions**
+          + **Function CI on PR (function-ci-on-pr.yaml):** 
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+            Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+            En cas de **java** :
+            * java_version:  Versió de JDK, exemple: 17.
+            * java_distribution : Distribució JAVA, exemple : temurin.
+            * maven_version: Versió de Maven utilitzada.
+
+            En cas de **nodejs**: 
+            * node_version:  Versió de Node.
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
+            
+          + **Function CI on Commit (function-ci-on-commit.yaml):**
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            
+            Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+            En cas de **java** :
+            * java_version:  Versió de JDK, exemple: 17.
+            * java_distribution : Distribució JAVA, exemple : temurin.
+            * maven_version: Versió de Maven utilitzada.
+
+            En cas de **nodejs**: 
+            * node_version:  Versió de Node.
+            * install_build_command : Si existeix, comandament custom que realitza les operatives d' install i de build.
+            * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).      
+        
+          + **Function CD (function-cd.yaml):**
+            * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
+            * technology : Es triarà entre les dues tecnologies disponibles actualment :
+              * java
+              * nodejs
+            * cloud : Seleccionar en quin Proveïdor Cloud es desplegarà la function que es generi.  Actualment els valors disponibles són :
+              * aws              
+            * engine : Seleccionar que tipus de funció es desplegarà. Actualment els valors són :
+              * lambda : Functions de AWS.
+              * afunc : Functions de Azure.
+
+            Depenent dels valors seleccionats anteriorment, s'informaran les següents variables :
+            En cas de **technology = java**  
+
+            * group_id : Descomentar i afegir el group_id que es troba al fitxer pom.xml
+            
+
+
+          
         En el següent enllaç està disponible tota la informació de Workflows definits en el projecte [Definició de Workflows d'aplicatiu i d'Infraestructura](../gh-definicion-workflows).
 
   
