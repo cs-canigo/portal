@@ -2,6 +2,7 @@
 valid_to        = "15-11-2018"
 title       = "Principis d'Arquitectura de Sistemes d'Informació"
 description = "Recomanacions a seguir en la construcció de sistemes d'informació a la Generalitat de Catalunya"
+weight = "3"
 +++
 
 ## **Principis sobre el disseny d'aplicacions**
