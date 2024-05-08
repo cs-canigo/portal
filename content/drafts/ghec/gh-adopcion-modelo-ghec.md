@@ -215,8 +215,7 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             En cas de **azure** y **aca**
             * registry_name : Nom del registre d'imatges (ECR per a AWS,  ACR per a Azure, etc)
 
-          TODO : esto sigue teniendo sentido??? no lo veo en el action.
-          
+                    
           Si els paràmetres "cluster_name", "cluster_service" i "registry_name" segueixen la nomenclatura indicada en els comentaris del workflow, s'hauran de comentar els inputs corresponents a aquests paràmetres ja que no seran necessaris. En aquest cas es definiran tal qual s'indica en els comentaris especificats en el propi workflow, de manera que es construeixi i es passi el nom com a variable depenent de l'entorn. Es mostra un exemple avall:
 
 
