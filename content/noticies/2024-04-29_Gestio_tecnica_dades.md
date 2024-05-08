@@ -4,7 +4,7 @@ title       = "Publicació Catàleg Tècnic de Dades - Abril'24"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per evolucionar entitats publicades d'obligat compliment i donar d'alta noves entitats d'obligat compliment."
 categories  = ["Data Architecture"]
 sections    = ["Notícies", "home"]
-key = "ABRIL2024"
+key = "MAIG2024"
 +++
 
 ## Introducció
