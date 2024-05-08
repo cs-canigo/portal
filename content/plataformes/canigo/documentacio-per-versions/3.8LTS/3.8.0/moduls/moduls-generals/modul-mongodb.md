@@ -17,8 +17,7 @@ A la versió 3.8 de Canigó, es proporcionen les funcionalitats de reactiu per M
 
 ## Instal·lació
 
-Per tal d'instal·lar el mòdul de MongoDB es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
-manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
+Per tal d'instal·lar el mòdul de MongoDB s'ha d'afegir manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```xml
     <dependency>
@@ -159,26 +158,37 @@ Finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la s
 
 ## Configuració
 
-La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament.
-Només en cas de no utilitzar-la, caldrà realitzar manualment configuració que es descriu a continuació.
+Caldrà realitzar manualment configuració que es descriu a continuació.
 
 ### No reactiu
 
-Fitxer: **mongodb.properties**
-<br/>
-Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.properties`.
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.properties`.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/*database*
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
-*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://mongodb.github.io/mongo-java-driver/3.12/javadoc/com/mongodb/MongoClientURI.html
-*.mongodb.host | No | Requerit si no està definida la propietat mongodb.uri. Host de la connexió amb la BD MongoDB
-*.mongodb.port | No | Requerit si no està definida la propietat mongodb.uri. Port de la connexió amb la BD MongoDB
-*.mongodb.database | No | Requerit si no està definida la propietat mongodb.uri. Nom de la BD de la connexió amb la BD MongoDB
-*.mongodb.authenticationDatabase | No | Requerit si no està definida la propietat mongodb.uri. Nom de la BD MongoDB si esta autenticada
-*.mongodb.username | No | Requerit si no està definida la propietat mongodb.uri. Usuari de la connexió amb la BD MongoDB
-*.mongodb.password | No | Requerit si no està definida la propietat mongodb.uri. Secret de la connexió amb la BD MongoDB
+uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://mongodb.github.io/mongo-java-driver/3.12/javadoc/com/mongodb/MongoClientURI.html
+host | No | Requerit si no està definida la propietat mongodb.uri. Host de la connexió amb la BD MongoDB
+port | No | Requerit si no està definida la propietat mongodb.uri. Port de la connexió amb la BD MongoDB
+database | No | Requerit si no està definida la propietat mongodb.uri. Nom de la BD de la connexió amb la BD MongoDB
+authenticationDatabase | No | Requerit si no està definida la propietat mongodb.uri. Nom de la BD MongoDB si esta autenticada
+username | No | Requerit si no està definida la propietat mongodb.uri. Usuari de la connexió amb la BD MongoDB
+password | No | Requerit si no està definida la propietat mongodb.uri. Secret de la connexió amb la BD MongoDB
 
-<br/>
 Fitxer: **MongoConfig.java**
 <br/>
 Ubicació recomanada: `<PROJECT_ROOT>/src/main/java/ *package de l’aplicació* /mongodb/config`.
@@ -232,15 +242,23 @@ Per a més informació sobre les configuracions podeu consultar: https://mongodb
 
 ### Reactiu
 
-Fitxer: **mongodb.properties**
-<br/>
-Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.properties`.
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer mongodb.properties.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/*database*
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
-*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
+uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
 
-<br/>
 Fitxer: **ReactiveMongoConfig.java**
 <br/>
 Ubicació recomanada: `<PROJECT_ROOT>/src/main/java/ *package de l’aplicació* /mongodb/config`.
