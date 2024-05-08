@@ -21,24 +21,20 @@ que millorarà la seva conservació i ús.
 - També s'actualitza les dependències corresponents a JUnit4 a Junit Jupiter perquè siguin compatibles amb el citat , JDK 17.
 ### Propietats
 
-Les propietats configurables es troben en l'arxiu: *mail.properties* o *application.yml*
+Les propietats configurables es troben en l'arxiu *application.yml*
 
 |Propietat              |Requerit   | Valor Defecte |Descripció                                     |
 |-----------------------|-----------|---------------|-----------------------------------------------|
-|mail.host              | No        |localhost      |Nom del servidor de correu sortint (smtp)      |
-|mail.port              | No        |25             |Port del servidor de correu sortint (smtp)     |
-|mail.protocol          | No        |smtp           |Protocol del servidor de correu sortint (smtp) |
-|mail.maxAttachmentSize | No        |1048576        |Mida màxima permesa dels fitxers adjunts       |
-|mail.defaultEncoding   | No        |UTF-8          |Default encoding                               |
-|mail.smtpTimeout       | No        |10000          |Timeout (smtp) mili segons                     |
-|mail.smtpAuth          | No        |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH |
-|mail.isSmtpSSLEnabled  | No        |false          |Habilita l'ús de l'ordre STARTTLS per a canviar la connexió a una connexió protegida TLS |
-|mail.debug             | No        |false          |Debug mode                                     |
-|mail.username          | No        |               |Usuari de connexió al servidor de correu sorting (smtp) |
-|mail.password          | No        |               |Password de l'usuari de connexió               |
-|mail.encoded.password  | No        |               |Encoded password de l'usuari de connexió       |
-|mail.extraProperties   | No        |{}             |Array extra de propietats. Valor d'exemple: {'mail.smtp.ssl.protocols':'TLSv1.2'} |
-
+|host              | No        |localhost      |Nom del servidor de correu sortint (smtp)      |
+|port              | No        |25             |Port del servidor de correu sortint (smtp)     |
+|protocol          | No        |smtp           |Protocol del servidor de correu sortint (smtp) |
+|defaultEncoding   | No        |UTF-8          |Default encoding                               |
+|smtp - timeout    | No        |10000          |Timeout (smtp) mili segons                     |
+|smtp - Auth       | No        |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH |
+|debug             | No        |false          |Debug mode                                     |
+|username          | No        |               |Usuari de connexió al servidor de correu sorting (smtp) |
+|password          | No        |               |Password de l'usuari de connexió               |
+|timeout           | No        |     8500      | Timeout pel servidor de correu(ms).           |
 
 
 
