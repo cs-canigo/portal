@@ -1,5 +1,5 @@
 +++
-date        = "2015-12-01"
+valid_to        = "2018-11-15"
 title       = "Principis d'Arquitectura de Sistemes d'Informació"
 description = "Recomanacions a seguir en la construcció de sistemes d'informació a la Generalitat de Catalunya"
 +++
