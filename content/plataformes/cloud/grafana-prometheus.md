@@ -178,7 +178,12 @@ S' han de desplegar els següents components: ruta, role, servei, statefulset, c
 * [Prometheus Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/prometheus-service.yaml)
 * [Prometheus Secret 1](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/secret-prometheus-basic-salut.yaml)
 * [Prometheus Secret 2](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/secret-prometheus-comun.yaml)
+* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/statefulset-prometheus-basic.yaml)
+
+En cas d'haver consensuat amb Arquitectura del Departament de Salut l'ús de l'autorització delegada per l'Identity Provider de Salut, s'han d'utilitzar les plantilles següents per a l'Stateful Set:
 * [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/statefulset-prometheus-basic-salut.yaml)
+
+En aquest cas, al fitxer statefulset-prometheus-basic-salut.yaml s'ha de substituir l'expressió "${IDENTITY_PROVIDER_URL}" per l'OIDC Issuer URL de l'Identity Provider a utilitzar.
 
 En tots els fitxers han de ser parametritzats substituint en l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
@@ -191,3 +196,4 @@ En el fitxer prometheus-pvc-cpd4.yaml es substituirà l'etiqueta "${PVC_SIZE}" p
 En el fitxer secret-prometheus.yaml s'ha de substituir l'expressió "${SESSION_SECRET}" per qualsevol combinació de 43 caràcters de longitud compresos en el següent interval [a-zA-Z0-9] i codificat en base64. 
 
 En el fitxer statefulset-prometheus-basic-salut.yaml s'han de parametrar els valors tant de cpu com de memòria que volem que rebin tant el contenidor prom-proxy com el contenidor prometheus. Per a això cal substituir les expressions ${CPU_PROXY} i ${MEM_PROXY} per al contenidor prom-proxy i ${CPU_PROMETHEUS} i ${MEM_PROMETHEUS} per al contenidor prometheus amb els valors de CPU i memòria desitjats.
+
