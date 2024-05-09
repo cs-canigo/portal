@@ -24,7 +24,7 @@ Les plantilles d'IaC són una eina fonamental en el desenvolupament de solucions
 
 A continuació s'especifiquen les plantilles d'infraestructura disponibles pels diferents hiperescalars. Aquestes estan basades en serveis Cloud-Native per tal de facilitar als proveïdors d'aplicacions la seva gestió. Per cadascuna d'elles s'enumeren els serveis més rellevants que incorporen, així com l'enllaç al seu codi font.
 
-Les plantilles es poden trobar a GitHub Enterprise Cloud (GHEC). Abans d'accedir-hi, cal que l'usuari estigui autenticat a la plataforma: 
+ :warning: Les plantilles es poden trobar a GitHub Enterprise Cloud (GHEC). Abans d'accedir-hi, cal que l'usuari hagi estat donat d'alta a la plataforma i s'hagi autenticat:
 https://github.com/enterprises/gencat
 
 #### AWS
