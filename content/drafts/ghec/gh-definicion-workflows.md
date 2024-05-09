@@ -145,12 +145,13 @@ Per a Commit, el nom del workflow en GHEC és **Infra CI on Commit**
 
 Una vegada realitzat el Terraform Plan, s'adjunta tota la informació en la Pull Request perquè el approver (rol maintainer) pugui disposar de tota la informació necessària per a realitzar l'aprovació.
 
-## Worfklows de Continuous Integration (CD) per a infraestructura.
+
+
+## Worfklows de Continuous Deployment (CD) per a infraestructura.
 
 Es detalla a continuació el flux de treball dels desplegaments d'Infraestructura.
 
 ![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/cd-workflow-infra-definition.png)
-
 
 
 on:
@@ -164,3 +165,47 @@ on:
 * Email Comm : Enviament del resultat del desplegament per correu als afectats.
     
 El nom Workflow en GHEC és **Infra CD Apply**
+
+
+## Workflow de Continuous Integration (CI) per a Function
+
+Igual que passa amb el workflow d'aplicacions, s'ha diferenciat en el workflow entre:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI per a Function](/images/GHEC/ci-workflow-definition-function.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
+
+Nom del Workflow en GitHub : **FUNC CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+
+![Definició a alt nivell dels workflows de CI per a Function](/images/GHEC/ci-workflow-definition-function-PR.png)
+
+
+D'altra banda, si estem en temps de commit, i partint de la base que el paquet no ha de ser immutable entre els diferents entorns, en totes les fases es realitzaran els steps de Promoció (que actualitza la versió de l'artefacte en el còidg font) compilat, empaquetat, publicació de la funció a GitHub Packages, versionat de l'artefacte i versionat del repositori.
+
+Nom del Workflow en GitHub : **FUNC CI on Commit**.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-function-CM.png)
+
+
+## Worfklows de Continuous Deployment (CD) per a Function.
+
+Es detalla a continuació el flux de treball dels desplegaments de Funciones.
+
+![Definició a alt nivell dels Worfklows de CD per a Function](/images/GHEC/cd-workflow-function-definition.png)
+
+on:
+* Check Artifacts, realitzarà revisions sobre l’artefacte abans del desplegament.
+* Env. Matrix, validarà si l’artefacte pot ser desplegat en l’entorn indicat.
+* PRE-AUDIT : Crea un CRQ en ITSM indicant l’inici de desplegament.
+* Deploy: desplegament de l’artefacte en l’entorn indicat.
+* POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
+* EMAIL COMM : Enviament del resultat del desplegament als afectats.
+    
+El nom Workflow en GHEC és **FUNC CD**
