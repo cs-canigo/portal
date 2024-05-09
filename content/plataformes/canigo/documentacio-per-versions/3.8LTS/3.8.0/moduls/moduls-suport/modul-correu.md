@@ -23,7 +23,7 @@ Versions i Dependències
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul d'enviament de correu es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal-lar el mòdul d'enviament de correu s'ha d'afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```xml
 <dependency>
@@ -37,25 +37,37 @@ A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3
 
 ### Configuració
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
+La configuració ha passat a realitzar-se amb fitxer application.yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/mail.properties`.
 
-L'eina de desenvolupament genera automàticament el fitxer de propietats necessari per a la configuració del servei.
+Un exemple del contingut del fitxer application.yml podria ser el següent:
 
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mail.properties
+```yml
+spring:
+  mail:
+    host: smtp.host.com
+    port: 25
+    protocol: smtp
+    username: <username>
+    password: <password>
+    default-encoding: UTF-8
+    debug: false
+    timeout: 8500
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat                | Requerit | Valor Defecte | Descripció
 ------------------------ | -------- | ------------- | -----------
-*.mail.host              | Sí       |               | Nom del servidor de correu sortint (smtp).
-*.mail.port              | No       |      25       | Port del servidor de correu sortint (smtp). 
-*.mail.protocol          | No       |     smtp      | Protocol del servidor de correu sortint (smtp).
-*.mail.username          | No       |               | Usuari de connexió al servidor de correu sorting (smtp).
-*.mail.password          | No       |               | Password de l'usuari de connexió.
-*.mail.defaultEncoding   | No       |     UTF-8     | Encoding per defecte del correu.  
-*.mail.maxAttachmentSize | No       |0(sense límits)| Tamany màxim permés dels fitxers adjunts. 
-*.mail.isSmtpSSLEnabled  | No       |     false     | Habilitar o deshabilitar SSL.
-*.mail.debug             | No       |     false     | Activar les traces de debug.
-*.mail.timeout           | No       |     8500      | Timeout pel servidor de correu(ms).
-
+host              | Sí       |               | Nom del servidor de correu sortint (smtp).
+port              | No       |      25       | Port del servidor de correu sortint (smtp). 
+protocol          | No       |     smtp      | Protocol del servidor de correu sortint (smtp).
+username          | No       |               | Usuari de connexió al servidor de correu sorting (smtp).
+password          | No       |               | Password de l'usuari de connexió.
+default-encoding  | No       |     UTF-8     | Encoding per defecte del correu.  
+debug             | No       |     false     | Activar les traces de debug.
+timeout           | No       |     8500      | Timeout pel servidor de correu(ms).
+smtp - timeout    | No       |10000          |Timeout (smtp) mili segons.
+smtp - auth       | No       |false          |Intent d'autenticar l'usuari utilitzant l'ordre AUTH.
 
 ## Utilització del Mòdul
 

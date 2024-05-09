@@ -1,7 +1,8 @@
 +++
-valid_to        = "2018-11-15"
+valid_to        = "01-03-2016"
 title       = "Principis d'Arquitectura de Sistemes d'Informació"
 description = "Recomanacions a seguir en la construcció de sistemes d'informació a la Generalitat de Catalunya"
+weight = "4"
 +++
 
 1. **Evita els monòlits**: divideix les aplicacions en blocs per funcionalitats (això és, en processos o serveis independents). Aquest principi s'ha d'aplicar a totes les capes. Una aplicació tipus hauria d'estar dividida en els següents mòduls:

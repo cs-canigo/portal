@@ -19,9 +19,7 @@ Aquest mòdul permet administrar els logs de l'aplicació proporcionant les seg�
 
 ### Instal·lació
 
-Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
-En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
-
+Per tal d'instal·lar aquest mòdul s'ha d'afegir manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```
 <dependency>

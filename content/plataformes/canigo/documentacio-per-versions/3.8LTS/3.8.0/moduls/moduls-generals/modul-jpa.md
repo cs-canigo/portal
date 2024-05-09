@@ -21,8 +21,8 @@ Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sob
 ### Instal·lació
 
 El mòdul de persistència i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.8.
-Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml.
-En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
+Durant el procés de creació de l'aplicació amb l'arquetipus, s'inclourà la referència dins del `pom.xml`.
+La manera d'afegir manualment les dependències seria la següent:
 
 ```xml
 <properties>
@@ -94,22 +94,32 @@ el que executa el test unitari del mòdul de persistència:
 
 ### Configuració
 
-La configuració es realitza de la manera següent:
 
-**jpa.properties**
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/jpa.properties`.
 
-Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/jpa.properties`
+Un exemple del contingut del fitxer application.yml podria ser el següent:
 
-Propietat | Requerit | Descripció
---------- | -------- | ----------
-*.persistence.database | Si | Sistema de base de dades al que es conectarà.
-*.persistence.dialect | Si | El nom de classe que permet a JPA generar SQL per a una base de dades relacional en particular. Aquests són els dialectes certificats: org.hibernate.dialect.Oracle12cDialect<br> org.hibernate.dialect.Oracle10gDialect<br> org.hibernate.dialect.Oracle9iDialect<br> org.hibernate.dialect.Oracle8iDialect<br> org.hibernate.dialect.MySQL5Dialect<br> org.hibernate.dialect.MySQLDialect <-- Versions < 5<br> org.hibernate.dialect.HSQLDialect<br> org.hibernate.dialect.PostgreSQLDialect
-*.persistence.showSQL | No | Escriu totes les sentències SQL al log aplicatiu.<br> Per defecte: true
-*.persistence.generateDdl |No | Exporta el DDL (Data Definition Language) a la BD després que l'EntityManagerFactory s'inicialitzi, creant/actualitzant les taules.<br> Valor per defecte: false
-*.persistence.hibernate.connection.release_mode | No | Serveix per especificar quan Hibernate ha d'alliberar les connexions JDBC. Una connexió JDBC es manté fins que la sessió és tancada explícitament o desconnectat per defecte. Per a un datasource JTA s'hauria de seleccionar after_statement, i per non-JTA after_transaction. En mode auto, se seleccionarà after_statement per a JTA i CMT, i afte_transaction per JDBC.<br> Per defecte: auto
-*.persistence.hibernate.connection.autocommit | No | Habilita l'autocommit per a connexions pooled JDBC
-*.persistence.hibernate.generate_statistics | No | Hibernate recopila informació útil per a tunning.<br> Per defecte: false
-*.persistence.hibernate.jdbc.use_scrollable_resultset | No | Habilita l'ús de JDBC2 scrollable resultsets a Hibernate.<br> Per defecte: true
+```yml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/*databaseName*
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: *username*
+    password: *password*
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      generate_statistics: false
+      use_scrollable_resultset: true
+    connection:
+      release_mode: auto
+      autocommit: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+```
 
 **persistence.xml**
 
@@ -231,28 +241,32 @@ dades JNDI com es mostra a continuació:
 
 **jdbc.properties**
 
-Propietat si l'aplicació va per jdbc
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d’amb el fitxer jdbc.properties.
 
-Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/jdbc.properties`
+Un exemple del contingut del fitxer application.yml podria ser el següent:
 
-Propietat | Requerit | Descripció
---------- | -------- | ----------
-*.jdbc.driverClassName | Si | Nom de classe del driver per a la connexió a la base de dades.
-*.jdbc.url | Si | URL de connexió a la base de dades.
-*.jdbc.username | Si | Usuari de connexió a la base de dades.
-*.jdbc.password | Si | Password de connexió a la base de dades
+```yml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/*databaseName*
+    username: *username*
+    password: *password*
+```
 
 **jndi.properties**
 
-Propietat si l'aplicació va per jndi
+Configuració si l'aplicació va per jndi. La configuració ha passat a realitzar-se amb fitxer yml en lloc d’amb el fitxer jndi.properties.
 
-Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/jndi.properties`
+Un exemple del contingut del fitxer application.yml podria ser el següent:
 
-Propietat | Requerit | Descripció
---------- | -------- | ----------
-*.jndi.name | Si | Especifica el nom JNDI a cercar.
-*.jndi.lookupOnStartup | No | Cerca l'objecte JNDI durant l'arranc. Per defecte: true.
-*.jndi.cache | No | Permet cachejar l'objecte JNDI. Per defecte: true.
+```yml
+spring:
+  datasource:
+    jndi-name: java:jboss/datasources/nomjndi
+    jndi-lookupOnStartup: false
+    jndi-cache: java: false
+```
 
 ### Ús dels repositoris
 
@@ -297,12 +311,12 @@ Primer de tot el filtre ha de ser un String amb el següent patró:
 
 Operador | Descripció
 -------- | --------
-> | major que
->: | major o igual que
-< | menor que
-<: | menor o igual que
-<> | diferent de
-: | igual que
+`>`  | major que
+`>:` | major o igual que
+`<`  | menor que
+`<:` | menor o igual que
+`<>` | diferent de
+`:`  | igual que
 
 * on valor és el valor amb el qual es vol comparar.
 

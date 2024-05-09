@@ -16,8 +16,7 @@ que Canigó proporciona.
 
 ## Instal·lació
 
-Per tal d'instal·lar el Mòdul de Seguretat es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
-manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
+Per tal d'instal·lar el mòdul de MongoDB s'ha d'afegir manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```
 <dependency>
@@ -31,7 +30,7 @@ A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3
 
 ## Configuració
 
-La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament
+La configuració es realitza manualmente de la manera següent:
 
 ### Configuració de JWT (JSON Web Token)
 
@@ -39,16 +38,26 @@ La nova versió de Canigó permet treballar amb [JWT](https://jwt.io/), per aque
 llibreria [Java JWT](https://java.jsonwebtoken.io/) que permet autenticar l'usuari amb qualsevol dels mètodes descrits a l’apartat
 "Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un _token_ que serà enviat pel client dins la capçalera HTTP a cada petició.
 
-Per a poder configurar JWT és necessari afegir al fitxer `security.properties` la següent configuració:
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/security.properties`.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+jwt:
+  header:
+    startToken: Bearer
+  secret: canigo
+  expiration: 3600
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat                     | Requerit | Descripció                                 | Valor per Defecte
 ----------------------------- | -------- | -------------------------------------------|------------------
-*.jwt.header                  | No       | Nom del header del _token_ JWT           | Authentication
-*.jwt.header.startToken       | No       | Inici del _token_ JWT                    | Bearer
-*.jwt.tokenResponseHeaderName | No       | Nom del header del _token_ JWT                | jwtToken
-*.jwt.secret                  | No       | Password per generar el _token_ JWT          | canigo
-*.jwt.expiration              | No       | Temps de vida del _token_ JWT                 | 3600
-*.jwt.siteminderAuthentication| No       | Gicar authentication                      | false
+header                  | No       | Nom del header del _token_ JWT           | Authentication
+header - startToken     | No       | Inici del _token_ JWT                    | Bearer
+secret                  | No       | Password per generar el _token_ JWT      | canigo
+expiration              | No       | Temps de vida del _token_ JWT            | 3600
 
 Es recomana utilitzar un secret de longitud superior a 100 caracters per evitar atacs de força bruta per substreure'l
 
@@ -70,6 +79,7 @@ Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkb
 En aquest mateix article es mostra un exemple de configuració a Canigó de JWT + GICAR.
 
 <br/>
+
 ##### Compressió token JWT
 
 A partir de la versió 2.4.0 del mòdul, es proporciona la funcionalitat de compressió del _token JWT_. Per defecte,
@@ -79,14 +89,12 @@ funcionalitat de compressió** s'ha afegit el següent mètode a *cat.gencat.ctt
 public void setTokenWithCompress(boolean tokenWithCompress)
 ```
 
-<br/>
 En cas d’activar la compressió, per defecte s'utilitzarà la compressió _DEFLATE_ i, si volem utilitzar un altre algoritme de
 compressió, disposem del següent mètode:
 ```
 public void setTokenCompressionCodec(CompressionCodec tokenCompressionCodec)
 ```
 
-<br/>
 Tenim disponibles els següents algoritmes de compressió a *io.jsonwebtoken.CompressionCodecs*:
 
 - [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): algoritme per defecte que acompleix l'estàndard [JWA](https://tools.ietf.org/html/rfc7518).
@@ -95,9 +103,10 @@ sistema de compressió comproveu que tots els sistemes ho suportin.
 
 Per tant, si volem comprimir el _token JWT_ amb _DEFLATE_ serà necessari:
 
-1. Definir al fitxer `security.properties` la següent propietat:
-```
-*.jwt.tokenWithCompress = true
+1. Definir al fitxer `application.yml` la següent propietat:
+```yml
+jwt:
+  tokenWithCompress: true
 ```
 
 2. Carregar la nova propietat a `WebSecurityConfig.java`:
@@ -147,7 +156,7 @@ Dins d'aquest mòdul trobem els següents proveïdors de seguretat:
 Els diferents proveïdors comparteixen els següents arxius de configuració:
 
 * `security.properties`: propietats del servei de seguretat
-* `app-custom-security.xml`: arxiu XML amb la configuració de seguretat
+* `app-custom-security.xml`: arxiu XML amb la configuració de seguretat (ubicació `/src/main/resources/spring/`)
 * `WebSecurityConfig.java`: classe Java amb la configuració de seguretat Web
 * `security.users.properties`: llistat en format pla dels usuaris/passwords/rols de l'aplicació per al proveïdor "InMemory"
 
@@ -158,23 +167,36 @@ La disposició dels arxius és la següent:
 * <PROJECT_ROOT>/src/main/java/cat/gencat/nomapp/config/WebSecurityConfig.java
 * <PROJECT_ROOT>/src/main/resources/config/props/security.properties
 
-<br/>
 #### Configuració per base de dades
 
 Per a configurar la font d'autorització mitjançant base de dades serà necessari configurar:
 
-* L'arxiu de propietats `security.properties`
+* Propietats de seguretat
 * El **proveïdor de seguretat** dins de la configuració de seguretat de _Spring_
 
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Les propietats de
-l'arxiu `security.properties` són les següents:
+Els dos arxius es generen i configuren de manera manual.
+
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/security.properties`.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+security:
+  database:
+    jndiName: nomJNDI
+    url: urlJNDI
+    username: USERNAME
+    password: PASSWORD
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat                    | Requerit | Descripció
 ---------------------------- | -------- | ----------------------------------------------------------
-*.security.database.jndiName | Si       | Nom JNDI d'accés a la BD. Obligatori per a connexions JNDI
-*.security.database.url      | Si       | URL de connexió a la base de dades
-*.security.database.username | Si       | Usuari de connexió a la base de dades
-*.security.database.password | Si       | Password de connexió a la base de dades
+jndiName | Si       | Nom JNDI d'accés a la BD. Obligatori per a connexions JNDI
+url      | Si       | URL de connexió a la base de dades
+username | Si       | Usuari de connexió a la base de dades
+password | Si       | Password de connexió a la base de dades
 
 La configuració del _provider_ en `app-custom-security.xml` per a aquest proveïdor es realitza com es descriu a continuació:
 
@@ -428,30 +450,35 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-<div class="message information">
-L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de persistència si aquest no ha estat instal·lat prèviament pel desenvolupador.
-</div>
-
-<br/>
 #### Configuració per LDAP
 
 Per a configurar l'accés per LDAP (funcionalitat ja desfasada) serà necessari configurar:
 
-* L'arxiu de propietats `security.properties`
+* Propietats de seguretat
 * El **proveïdor de seguretat** dins de la configuració de seguretat de Spring
 
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Les propietats de
-l'arxiu `security.properties` són les següents:
+Els dos arxius es generen i configuren de manera manual.
+
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/security.properties`.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+security:
+  ldap:
+    url: urlLDAP
+    manager:
+      dn: managerDN
+      password: PASSWORD
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat                           | Requerit | Descripció
 ----------------------------------- | -------- | -----------------------------------------------------------------------
-*.security.ldap.url                 | Si       | Direcció del servidor ldap separat amb dos punts ":" del port
-*.security.ldap.manager.dn          | Sí       | Identificador de l'usuari administrador del LDAP
-*.security.ldap.manager.password    | Si       | Password de l'usuari administrador del LDAP
-*.security.ldap.user.search.filter  | No       | Filtre de cerca dels usuaris dins de l'estructura del LDAP. Per defecte: (uid={0})
-*.security.ldap.user.search.base    | Si       | String base de la ubicació dels usuaris dins de l'estructura del LDAP
-*.security.ldap.group.search.base   | Si       | String base de la ubicació dels grups dins de l'estructura del LDAP
-*.security.ldap.group.search.filter | No       | Filtre de cerca dels grups dins de l'estructura del LDAP. Per defecte: (cn={0})
+url                 | Si       | Direcció del servidor ldap separat amb dos punts ":" del port
+manager - dn          | Sí       | Identificador de l'usuari administrador del LDAP
+manager - password    | Si       | Password de l'usuari administrador del LDAP
 
 Per a realitzar les proves en l’entorn de desenvolupament podem instal·lar un servidor LDAP senzill (veure l'apartat
 "Eines de Suport" per a més informació). La configuració del _provider_ en `app-custom-security.xml` es realitza
@@ -477,7 +504,7 @@ com es descriu a continuació:
 manager-password="${security.ldap.manager.password}"/>
 ```
 
-<br/>
+
 #### Configuració per arxiu de propietats
 
 Aquest proveïdor de seguretat es basa en un arxiu de propietats per a carregar en memòria els usuaris/passwords/rols de
@@ -753,19 +780,28 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-<br/>
 #### Configuració de la font d'autenticació per GICAR
 
 Per a configurar l'accés a GICAR serà necessari configurar:
 
-* L'arxiu de propietats `security.properties`
+* Propietats de seguretat
 * El **proveïdor de seguretat** dins de la configuració de seguretat de _Spring_
 
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. L'arxiu **security.properties** té el següent format:
+Els dos arxius es generen i configuren de manera manual.
+
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/security.properties`.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+security:
+  gicar:
+    httpGicarHeaderUsernameKey: NIF
+```
 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
-*.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
+httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
 Des de la versió 1.2.7 el servei de seguretat de Canigó suporta de manera automàtica la capçalera `HTTP_GICAR_PSIS` per a l’autenticació amb certificats per usuaris que no estan en el DC (Autenticació Anònima), utilitzant-se com a font de dades alternativa per a tasques d'autenticació. A la pàgina del [Servei d'autenticació anònima amb GICAR](/gicar-integracio/auth-anonima/) es pot trobar informació detallada d'aquesta capçalera.
 
@@ -1120,20 +1156,31 @@ dins el bean `proxyUsernamePasswordAuthenticationFilter`:
 <b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
 </div>
 
-<br/>
-### Configuració de la font d'autenticació i autorització per GICAR
+
+#### Configuració de la font d'autenticació i autorització per GICAR
 
 Per a configurar l'autenticació i l'autorització a GICAR serà necessari configurar:
 
-* L'arxiu de propietats `security.properties`
+* Propietats de seguretat
 * El **proveïdor de seguretat** dins de la configuració de seguretat de Spring
 
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Per a configurar
-l'accés a GICAR serà necessari configurar l'arxiu de propietats `security.properties` que té el següent format:
+Els dos arxius es generen i configuren de manera manual.
+
+La configuració ha passat a realitzar-se amb fitxer yml en lloc d'amb el fitxer `<PROJECT_ROOT>/src/main/resources/config/props/security.properties`.
+
+Un exemple del contingut del fitxer application.yml podria ser el següent:
+
+```yml
+security:
+  gicar:
+    httpGicarHeaderUsernameKey: NIF
+```
+
+Indiquem taula amb explicació de les propietats disponibles:
 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
-*.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
+httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en GICAR com a sistema
 d'autenticació i autorització sense utilitzar JWT:
