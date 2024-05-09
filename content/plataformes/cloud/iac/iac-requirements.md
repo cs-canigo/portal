@@ -117,6 +117,12 @@ El **tipus de recurs** pot pendre els valors següents depenent del proveïdor d
   - **scr**: AWS Secrets Manager
   - **pms**: AWS Parameter Store
   - **efs**: Amazon Elastic File System (EFS)
+  - **sbg**: Subnet Group
+  - **scg**: Security Group
+  - **vcn**: VPC Connector (App Runner)
+  - **sdc**: Service Discovery (ECS)
+  - **vpl**: VPC link
+
 
 - **Azure**:
   - **str**: Azure Storage Account
