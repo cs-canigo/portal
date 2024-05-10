@@ -1,5 +1,5 @@
 +++
-title = "Versions antigues"
-description = "Versions antigues dels principis d'arquitectura de sistemes d'informació"
+title = "Versions anterios"
+description = "Versions anteriors dels principis i la data fins la que van ser vigents"
 weight = 2
 +++
