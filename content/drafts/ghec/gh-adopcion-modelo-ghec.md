@@ -310,10 +310,8 @@ Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició 
             * engine : Seleccionar que tipus de funció es desplegarà. Actualment els valors són :
               * lambda : Functions de AWS.
               * afunc : Functions de Azure.
-            * function_name_list : Requerit. llistat, separat per comes i sense espais, dels noms de les funcions a desplegar en el cloud.
-            * folder_name_list :  Opcional. listado, separado por comas y sin espacios, de los nombres de las carpetas de cada función en el repositorio. Si solo existe una función y está en la raiz del repositorio, dejar el valor en blanco.
-
-            En el cas d'AWS, addicionalment descomentar el paràmetre **bucket_name** si s'espera que la funció en format zip superi els 50mb.  AWS requereix que es puja inicialment a un S3.
+            
+            * bucket_name : Si el peso de la función supera los 50 mg, y es una función lambda,  AWS requiere que se despliegue desde un S3 de AWS por lo que es necesario introducir el nombre del bucket y descomentar la propiedad.  En otro caso, se deja la propiedad comentada.
 
             Depenent dels valors seleccionats anteriorment, s'informaran les següents variables :
             En cas de **technology = java**  
@@ -715,7 +713,8 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
         * FUNCTION CD, comprova que existeixi la function, que es pugui desplegar en l'entorn, i executa el desplegament.
             * Branca o branch on es troba el workflow actualitzat: develop.
             * Artifact Version : Versió de l'artefacte, en aquest cas 0.0.1-SNAPSHOT.
-            * Function Name : Nom de la Function.
+            * Function Name List : Requerit. llistat, separat per comes i sense espais, dels noms de les funcions a desplegar en el cloud.
+            * Folder Name List :  Opcional. listado, separado por comas y sin espacios, de los nombres de las carpetas de cada función en el repositorio. Si solo existe una función y está en la raiz del repositorio, dejar el valor en blanco.
             * Environment : dev, per al desplegament a desenvolupament. 
                               
       Resultat de l'operació :
@@ -760,8 +759,9 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
           En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):  
           * Branca o branch on es troba el workflow actualitzat: release.
           * Artifact Version : Versió de l'artefacte, en aquest cas 0.0.1-RC.
-          * Function Name : Nom de la Function.
-          * Environment : pre, per al desplegament a Preproducció. 
+          * Function Name List : Requerit. llistat, separat per comes i sense espais, dels noms de les funcions a desplegar en el cloud.
+          * Folder Name List :  Opcional. listado, separado por comas y sin espacios, de los nombres de las carpetas de cada función en el repositorio. Si solo existe una función y está en la raiz del repositorio, dejar el valor en blanco.
+          * Environment : Pre, per al desplegament a preproducció. 
           * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
           * ITSM Service : Servei associat al desplegament a registrar en ITSM.
           * Prioritat ITSM: Prioritat del Ticket a crear.
@@ -808,8 +808,9 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
 
         * Branca o branch on es troba el workflow actualitzat: master.
         * Artifact Version : Versió de l'artefacte, en aquest cas 0.0.1.
-        * Function Name : Nom de la Function.
-        * Environment : pro, per al desplegament a Producció. 
+        * Function Name List : Requerit. llistat, separat per comes i sense espais, dels noms de les funcions a desplegar en el cloud.
+        * Folder Name List :  Opcional. listado, separado por comas y sin espacios, de los nombres de las carpetas de cada función en el repositorio. Si solo existe una función y está en la raiz del repositorio, dejar el valor en blanco.
+        * Environment : Pre, per al desplegament a producció.
         * ITSM ID Change Coordinator: ID de l'usuari per crear la CRQ en ITSM amb l'objectiu d'informar sobre el desplegament.
         * ITSM Service : Servei associat al desplegament a registrar en ITSM.
         * Prioritat ITSM: Prioritat del Ticket a crear.
