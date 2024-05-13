@@ -156,26 +156,19 @@ El **tipus de recurs** pot pendre els valors següents depenent del proveïdor d
   - **mon**: Azure Monitor
   - **log**: Azure Logic Apps
   - **fsb**: Azure File Storage
-
-
-
-
-
-
-azurerm_resource_group -> rsg
-azurerm_subnet -> sne
-azurerm_storage_container -> sct
-azurerm_storage_blob -> sbl
-azurerm_log_analytics_workspace -> lgw
-azurerm_container_app_environment -> cae
-azurerm_private_dns_zone_virtual_network_link -> dns
-azurerm_cosmosdb_postgresql_cluster -> cps
-azurerm_private_endpoint -> ape
-azurerm_cosmosdb_mongo_database -> cmd
-azurerm_service_plan -> svp
-azurerm_linux_function_app -> lfa
-azurerm_windows_function_app -> wfa
-
+  - **rsg**: Azure Resource Group
+  - **sne**: Azure Subnet
+  - **sct**: Azure Storage Container
+  - **sbl**: Azure Storage Blob
+  - **lgw**: Azure Log Analytics Workspace
+  - **cae**: Azure Container App Environment
+  - **dns**: Azure Private DNS Zone Virtual Network Link
+  - **cps**: Azure Cosmos DB PostgreSQL Cluster
+  - **ape**: Azure Private Endpoint
+  - **cmd**: Azure Cosmos DB MongoDB Database
+  - **svp**: Azure Service Plan
+  - **lfa**: Azure Linux Function App
+  - **wfa**: Azure Windows Function App
 
 - **GCP**:
   - **cos**: Google Cloud Storage
