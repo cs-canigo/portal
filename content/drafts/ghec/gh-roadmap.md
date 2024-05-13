@@ -22,7 +22,7 @@ sections    = ["GHEC"]
 - :heavy_check_mark: Certificació desplegaments contenidors a Azure Container Apps​
 - :heavy_check_mark: Certificació desplegaments funcions a AWS Lambda
 - (En progrés) Certificació desplegaments funcions a Azure Functions
-- (To do) Certificació desplegaments continguts estàtics a AWS S3 i Azure Blob Storage​
+- (En progrés) Certificació desplegaments continguts estàtics a AWS S3 i Azure Blob Storage​
 - (To do) Definició model desplegaments delegats (en màquines virtuals) i PoC​
 - (To do) Definició model desplegament bases de dades i PoC​
 - (To do) Pilot integració Marc d'Automatització de Testing (MAT) i Marc d'Automatització d'Observabilitat (MAO)​
