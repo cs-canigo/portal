@@ -31,8 +31,10 @@ Els workflows de CI/CD d'infraestructura requereixen d'aquesta estructura pel se
 
 ## Requeriments CI/CD
 
-El backend de l'estat de Terraform s'ha de declarar de la següent manera:
 
+### Backend de Terraform
+
+El backend de l'estat de Terraform s'ha de declarar de la següent manera:
 
 _backend.tf_
 ```hcl
@@ -42,6 +44,19 @@ terraform {
 ```
 
 Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Resource group** amb un **Storage Account** per aplicació, i dins un **Container** per a cada entorn (dev/tst/int, pre, pro). Aquest backend s'establirà dinàmicament al workflow de CD d'infraestructura.
+
+### Plataformes de contenidors
+
+Cal especificar en la definició del Terraform que s'ignorin els canvis en la imatge del contenidor per evitar la recreació del recurs en cada desplegament de la infraestructura. Les noves versions dels contenidors es desplegaran mitjançant el workflow de CD d'aplicació, no del CD d'infraestructura:
+
+TO DO
+
+### Funcions
+
+#### AWS
+
+En cas que les funcions Lambda a desplegar superin els 50MB de tamany, pel desplegament cal recolzar-se en un **bucket S3** per a l'emmagatzematge dels fitxers de la funció. Serà responsabilitat de l'aplicació aprovisionar aquest bucket, el qual haurà d'especificar-se en la invocació del workflow de CD de funcions Lambda. Més informació a . El nom del bucket ha de seguir la nomenclatura "" per tal que el workflow de CD tingui permissos per a desplegar-ne continguts. 
+
 
 ## Nomenclatura
 
@@ -141,6 +156,26 @@ El **tipus de recurs** pot pendre els valors següents depenent del proveïdor d
   - **mon**: Azure Monitor
   - **log**: Azure Logic Apps
   - **fsb**: Azure File Storage
+
+
+
+
+
+
+azurerm_resource_group -> rsg
+azurerm_subnet -> sne
+azurerm_storage_container -> sct
+azurerm_storage_blob -> sbl
+azurerm_log_analytics_workspace -> lgw
+azurerm_container_app_environment -> cae
+azurerm_private_dns_zone_virtual_network_link -> dns
+azurerm_cosmosdb_postgresql_cluster -> cps
+azurerm_private_endpoint -> ape
+azurerm_cosmosdb_mongo_database -> cmd
+azurerm_service_plan -> svp
+azurerm_linux_function_app -> lfa
+azurerm_windows_function_app -> wfa
+
 
 - **GCP**:
   - **cos**: Google Cloud Storage
