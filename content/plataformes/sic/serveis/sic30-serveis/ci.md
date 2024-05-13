@@ -144,7 +144,7 @@ Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjan�
 Els jobs multi-etapa realitzen multitud d'accions organitzades en STAGES. En cas de produir-se incidències a qualsevol de les
 seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 
-<CENTER>!\\[Nou projecte](/related/sic/3.0/pipeline-stages.png)</CENTER>
+![Nou projecte](/related/sic/3.0/pipeline-stages.png)
 
 <br/>
 A continuació s'explica breument cadascuna de les etapes previstes per al desplegament de components i aplicacions:
@@ -258,6 +258,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 | ---------------- | -------------- |
 | 3.1              | 16.7           |
 | 6.0              | 17.1           |
+| 8.0              | 17.8           |
 
 
 ### Maven/JDK
