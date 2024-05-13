@@ -377,7 +377,7 @@ En cas de **nodejs**:
     * lambda : Functions de AWS.
     * afunc : Functions de Azure.
 
-* bucket_name : Si el peso de la función supera los 50 mg, y es una función lambda,  AWS requiere que se despliegue desde un S3 de AWS por lo que es necesario introducir el nombre del bucket y descomentar la propiedad.  En otro caso, se deja la propiedad comentada.
+* bucket_name : Si el pes de la funció supera els 50MB, i es una función Lambda,  AWS requereix que es desplegui des d'un bucket S3 pel que és necessari introduïr el nom del bucket i descomentar la propietat. Altrament, es deixa la propietat comentada.
 
 Depenent dels valors seleccionats anteriorment, s'informaran les següents variables :
 En cas de **technology = java**  
