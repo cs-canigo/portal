@@ -34,38 +34,48 @@ El procés d'integració actualment és el següent :
   ![Procés de creació de Model GHEC](/images/GHEC/gh_proceso_automatico_pub.png) 
 
 1. **Onboarding del projecte**
-Per sol·licitar l'alta del projecte en el nou model cal realitzar una petició JIRA al següent projecte : [ACOCLDSIC - Servei Acompanyament Suport Cloud i SIC](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC) on s'indicarà la següent informació :
 
-      + Codi de Departament, exemple "PRE".
-      + Codi d'Entitat, exemple "CCT".
-      + Lot de Manteniment, exemple "AM22_23".
-      + Codi de Diàleg, exemple "0189".
-      + Codi de Component, per exemple "00", "01".
-      + Acrònim de Component, per exemple "GEFACT".
-      + Email dels owners dels grups (separats per ,) d'Azure o Gestor de solucions.
-      + Array de components tècnics a crear, on cada item estarà format per :
-        + Nom Repositori
-        + Tipus de Repositori amb els següents valors disponibles :
-          + backend
-          + frontend 
-          + infra
-        + Tipus de Funció del Repositori : On s'identificarà si el component tècnic a crear és una Llibreria, una Funció (lambda, azure functions, etc), Infraestructura o una imatge de contenidor.  Els possibles valors són :
-          + function : Per crear una repositori que desplegui una funció Lambda, Azure Funcions, etc.
-          + library : Per demanar la creació d'un repositori que desplegui una llibreria.
-          + infra : Per demanar la creació d'un repositori que desplegui infraestructura..
-          + containerapp : Per sol·licitar la creació d'un repositori que desplegarà una imatge de contenidors.
+Per tal d'integrar una nova aplicació al nou model de CI/CD a cloud públic, hi hauran dues modalitats:
 
-        i tot això separats per "||" per exemple :
-          + [nombreRepo1,backend,function||nombreRepo2,frontend,containerapp]
-          + [nombreRepo2,infra,infra||nombreRepo2,backend,library]
-      
-      Addicionalment als repositoris que es demanen, se'n crearà un automàticament per a propòsits de **Testing**. 
+**Migració del CI/CD nadiu d'AWS o Azure a GHEC**
 
-      + Array d'entorns a crear per a l'aplicació, separats per "||".  Exemple :
-        + [dev||pre||pro]
-        + [pre||pro]
-  
-    Un cop rebuda la petició, es processarà per part dels equips pertinents, i mitjançant un procés **automàtic**, es crearan els components i/o recursos necessaris a GitHub Enterprise Cloud i a Azure. 
+Per sol·licitar la migració del CI/CD nadiu d'AWS o Azure a GHEC cal realitzar una petició JIRA al següent projecte [ACOCLDSIC - Servei Acompanyament Suport Cloud i SIC](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC) amb l'assumpte "Migració CI/CD aplicació XXX d'Azure DevOps / AWS Codepipeline a GitHub Enterprise Cloud (GHEC)" especificant la següent informació:
+
+  + Codi de Diàleg, exemple "0189".
+  + Codi de Component, per exemple "00", "01".
+  + Taula de components tècnics a crear amb el següent detall:
+
+      | Nom        | Funció           | Tipus  |
+      | ------------- |:-------------:| -----:|
+      | nombreRepo1  | backend | containerapp |
+      | nombreRepo2  | frontend | containerapp |
+      | nombreRepo3  | library | library |
+      | nombreRepo4  | infra | infra |
+
+    + Nom component
+    + Funció del component tècnic amb els següents valors disponibles :
+      + infra
+      + backend
+      + frontend
+      + library
+    + Tipus de component tècnic: On s'identificarà si el component tècnic d'aplicació a crear és una Llibreria, una Funció (lambda, azure functions, etc), Infraestructura o una imatge de contenidor.  Els possibles valors són :
+      + function : Per crear una repositori que desplegui una funció Lambda, Azure Funcions, etc.
+      + library : Per demanar la creació d'un repositori que desplegui una llibreria.
+      + infra : Per demanar la creació d'un repositori que desplegui infraestructura..
+      + containerapp : Per sol·licitar la creació d'un repositori que desplegarà una imatge de contenidors.
+
+  Addicionalment als repositoris pels components que es demanen, se'n crearà un automàticament per a propòsits de **Testing**. 
+
+  + Entorns a crear:
+    + dev,pre,pro
+    + pre,pro
+
+
+**Integració de nova aplicació**
+
+L'alta d'una nova aplicació seguirà el flux normal d'Integració de Solucions (ISOL), a partir de la qual arribarà el tiquet pertinent a l'equip de Suport Cloud/SIC. Més detall a https://canigo.ctti.gencat.cat/plataformes/cloud/comunicacio-suport-cloud#aplicacions-en-fase-de-projecte. És important que la taula de components vingui especificada en el Document d'Arquitectura (DA) de la solució a integrar.
+
+Un cop rebuda la petició, es processarà per part dels equips pertinents, i mitjançant un procés **automàtic**, es crearan els components i/o recursos necessaris a GitHub Enterprise Cloud i a Azure. 
   
   2. **Configuració del model GHEC**
   Un cop ha finalitzat el procés automàtic que crea tots els recursos necessaris per donar suport al model, s'han de realitzar les següents configuracions bàsiques : 
