@@ -1,0 +1,28 @@
+{
+    "Id": "",
+    "Nom": "",
+    "Ambit": "",
+    "Subambit": "",
+    "Descripcio": "",
+    "instancies": [
+        {
+            "inom": "",
+            "iestat": "",
+            "itipus": "",
+            "ipromotor": "",
+            "idescripcio": "",
+            "ifitxer_doc": "",
+            "ifitxer_xls": "",
+            "idatacreacio": "",
+            "itipusvisual": "",
+            "idataobsoleta": "",
+            "idatapublicacio": "",
+            "iurl_dades_obertes": "",
+            "itipusactualitzacio": ""
+        }
+    ],
+    "nom_dinsBD": "",
+    "Classificacio": "",
+    "Data_publicacio": "",
+    "Data_actualitzacio": ""
+}

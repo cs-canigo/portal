@@ -1,0 +1,46 @@
++++ 
+date        = "13/05/2024" 
+title       = "Publicació Catàleg Tècnic de Dades - Maig24" 
+description = "S'ha actualitzat el Catàleg Tècnic de Dades per evolucionar entitats publicades d'obligat compliment i donar d'alta noves enityats d'obligat compliment." 
+categories  = ["Data Architecture"] 
+sections    = ["Notícies", "home"] 
+key = "*****" 
++++ 
+
+  
+
+## Introducció 
+
+El dia 13/05/2024 s'ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar 2 entitats publicades d'obligat compliment i afegir 3 entitats dins de la llista d'entitats obligades. 
+
+## Novetats 
+
+En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següents canvis:<br><br> 
+
+- S'han evolucionat 2 entitats del grup d'Obligat compliment:<br> 
+
+  - prueba noticias : aaaaaa<br><br>
+
+
+
+
+  - tipos datos : a<br><br>
+
+
+
+
+
+- S'ha incorporat 3 entitats dins del grup d'Obligat compliment:<br> 
+
+  - prueba noticias<br><br>
+  - tipos datos<br><br>
+  - Casa<br><br>
+
+
+
+
+Per a més informació sobre la Gestió Tècnica de Dades podeu consultar: 
+
+
+* [Gestió Tècnica de Dades](https://canigo.ctti.gencat.cat/plataformes/dadesref/gestiodades/) 
+* [Dades de Referència](https://canigo.ctti.gencat.cat/plataformes/dadesref/dadesref/) 
