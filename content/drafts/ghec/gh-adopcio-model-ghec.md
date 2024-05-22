@@ -47,22 +47,22 @@ Per sol·licitar la migració del CI/CD nadiu d'AWS o Azure a GHEC cal realitzar
 
       | Nom        | Funció           | Tipus  |
       | ------------- |:-------------:| -----:|
-      | nombreRepo1  | backend | containerapp |
-      | nombreRepo2  | frontend | containerapp |
+      | nombreRepo1  | backend | container |
+      | nombreRepo2  | frontend | container |
       | nombreRepo3  | library | library |
       | nombreRepo4  | infra | infra |
 
-    + Nom component
-    + Funció del component tècnic amb els següents valors disponibles :
-      + infra
-      + backend
-      + frontend
-      + library
-    + Tipus de component tècnic: On s'identificarà si el component tècnic d'aplicació a crear és una Llibreria, una Funció (lambda, azure functions, etc), Infraestructura o una imatge de contenidor.  Els possibles valors són :
-      + function : Per crear una repositori que desplegui una funció Lambda, Azure Funcions, etc.
-      + library : Per demanar la creació d'un repositori que desplegui una llibreria.
-      + infra : Per demanar la creació d'un repositori que desplegui infraestructura..
-      + containerapp : Per sol·licitar la creació d'un repositori que desplegarà una imatge de contenidors.
+      + Nom component
+      + Funció del component tècnic amb els següents valors disponibles :
+        + infra
+        + backend
+        + frontend
+        + library
+      + Tipus de component tècnic: On s'identificarà si el component tècnic d'aplicació a crear és una Llibreria, una Funció (lambda, azure functions, etc), Infraestructura o una imatge de contenidor.  Els possibles valors són :
+        + function : Per crear una repositori que desplegui una funció Lambda, Azure Funcions, etc.
+        + library : Per demanar la creació d'un repositori que desplegui una llibreria.
+        + infra : Per demanar la creació d'un repositori que desplegui infraestructura..
+        + container : Per sol·licitar la creació d'un repositori que desplegarà una imatge de contenidors.
 
   Addicionalment als repositoris pels components que es demanen, se'n crearà un automàticament per a propòsits de **Testing**. 
 
@@ -139,7 +139,7 @@ Un cop rebuda la petició, es processarà per part dels equips pertinents, i mit
           + function: Workflows per desplegar Functions.
           + library: Workflows per desplegar Llibreries.
           + static: WorkFlows per desplegar Contingut Estàtic.
-          + containerapp: Repositoris per desplegar Contenidors.
+          + container: Repositoris per desplegar Contenidors.
 
 
         L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
@@ -239,8 +239,8 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       * Usuari amb Rol Maintain que aprova la Pull Request(PR).
             
       Execució de Workflows : Automàtic
-      * APP CI on PR en realitzar la PR.  Genera l'artefacte, havent realitzat prèviament anàlisi de qualitat i seguretat.
-      * APP CI on Commit to develop, en realitzar el Commit, empaquetant el codi en una imatge de contenidor i pujant-la al registre d'imatges GitHub Packages.
+      * Container CI on PR en realitzar la PR.  Genera l'artefacte, havent realitzat prèviament anàlisi de qualitat i seguretat.
+      * Container CI on Commit to develop, en realitzar el Commit, empaquetant el codi en una imatge de contenidor i pujant-la al registre d'imatges GitHub Packages.
             
       Resultat de l'operació :
       * Branca feature integrada en develop.
@@ -259,13 +259,13 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
         * Usuari amb Rol Write o Maintain.
             
       Execució de Workflows : Sota Demanda per part de l'usuari.
-        * APP CD, comprova que existeixi la imatge, que es pugui desplegar en l'entorn, i executa el desplegament.
+        * Container CD, comprova que existeixi la imatge, que es pugui desplegar en l'entorn, i executa el desplegament.
 
           En aquest cas l'execució és manual i per a això l'usuari (independentment del seu rol, però s'aconsella que sigui el de maintain) tindrà que :
 
           1. Accedir als WorkFlows del repositori mitjançant l'opció "Actions", indicada en l'apartat **Configuració dels diferents WorkFlows de CI/CD**
 
-          2. Seleccionar el workflow a executar, en aquest cas APP CD, i prèmer "Run Workflow", apareixent el formulari per introduir la informació necessària per l'execució: 
+          2. Seleccionar el workflow a executar, en aquest cas Container CD, i prèmer "Run Workflow", apareixent el formulari per introduir la informació necessària per l'execució: 
 
               ![Execució Manual Workflow CD](/images/GHEC/gh-ejecucion-manual-wf.png)
                 
@@ -289,7 +289,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       * Usuari amb Rol Maintain aprova la Pull Request.
 
       Execució de Workflows : Automàtic.
-      * APP CI on Commit en aprovar la Pull Request. L'artefacte ha estat creat a la fase anterior i només es realitza un "Re-Tag" amb el tag de release.
+      * Container CI on Commit en aprovar la Pull Request. L'artefacte ha estat creat a la fase anterior i només es realitza un "Re-Tag" amb el tag de release.
             
       Resultat de l'operació :
       * Branca develop integrada en release.
@@ -307,7 +307,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
         * Usuari amb Rol Write o Maintain.
               
       Execució de Workflows : Sota Demanda per part de l'usuari.
-        * APP CD, comprova que existeixi la imatge, que es pugui desplegar en l'entorn de Preproducció, i executa el desplegament informant en ITSM.
+        * Container CD, comprova que existeixi la imatge, que es pugui desplegar en l'entorn de Preproducció, i executa el desplegament informant en ITSM.
 
           En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):  
           * Branca o branch on es troba el workflow actualitzat: release.
@@ -333,7 +333,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
       * Usuari amb Rol Maintain aprova la Pull Request.
 
       Execució de Workflows : Automàtic
-      * APP CI on Commit en aprovar la Pull Request. L'artefacte ha estat creat a la fase anterior i només es realitza un "Re-Tag" amb el tag de master.
+      * Container CI on Commit en aprovar la Pull Request. L'artefacte ha estat creat a la fase anterior i només es realitza un "Re-Tag" amb el tag de master.
             
       Resultat de l'operació :
       * Branca release integrada en master.
@@ -350,7 +350,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
         * Usuari amb Rol Write o Maintain.
               
       Execució de Workflows : Sota Demanda per part de l'usuari.
-        * APP CD, comprova que existeixi la imatge, que es pugui desplegar en l'entorn de Producció, i executa el desplegament informant en ITSM.
+        * Container CD, comprova que existeixi la imatge, que es pugui desplegar en l'entorn de Producció, i executa el desplegament informant en ITSM.
 
         En aquest cas l'execució és manual i l'usuari haurà d'omplir un formulari amb la informació del desplegament (revisar com executar workflow manualment descrit en l'apartat **Validació funcional d'artefacte en desenvolupament**):
 

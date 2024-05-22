@@ -32,7 +32,7 @@ Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'execu
 
 Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
 
-Nom del Workflow en GitHub : **APP CI on PR**.
+Nom del Workflow en GitHub : **Container CI on PR**.
 
 En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
 
@@ -50,9 +50,9 @@ Els diferents steps es llançaran en funció de les branques involucrades en el 
 
     El nom del workflow en el repositori dependrà de la branca a la qual es faci la integració : 
 
-    * Nom del WorkFlow si el Commit és a development : **APP CI on Commit to develop**.
+    * Nom del WorkFlow si el Commit és a development : **Container CI on Commit to develop**.
 
-    * Nom del Workflow si el Commit és a release o master :  **APP CI on Commit to release o master**.
+    * Nom del Workflow si el Commit és a release o master :  **Container CI on Commit to release o master**.
 
 
 ![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition_CM_app.png)
@@ -88,11 +88,11 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
     5. POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
     6. EMAIL COMM : Enviament del resultat del desplegament als afectats.
     
-    Nom del Workflow en GitHub : **APP CD**
+    Nom del Workflow en GitHub : **Container CD**
 
 * **Flux Rollback**: Realitzarà un rollback d'un artefacte en l'entorn indicat.  Aquest artefacte ja va ser analitzat quan va ser desplegat per primera vegada, per la qual cosa no és necessari realitzar una anàlisi de qualitat sobre aquest i el seu desplegament serà directe.
  
-    Nom del Workflow en GitHub : **APP CD**
+    Nom del Workflow en GitHub : **Container CD**
 
 * **Flux Validate**: Flux que, una vegada desplegat l'artefacte en l'entorn demanat, realitza totes les proves necessàries que verifiquin que aquest lliurament és apte per pujar a producció.  Aquestes proves s'executaran en els següents steps: 
     
@@ -219,7 +219,7 @@ Dins del repositori, els workflows estaran disponibles dins la ruta "repositori/
 
 ### Workflows CI/CD per a Container App
 
-#### APP CI on PR (app-ci-on-pr.yaml) 
+#### Container CI on PR (Container-ci-on-pr.yaml) 
 * technology : Es triarà entre les dues tecnologies disponibles actualment :
     * java
     * nodejs
@@ -234,7 +234,7 @@ En cas de  **nodejs**:
 * node_version:  Versió de Node.
 * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
 
-#### APP CI on Commit to develop (app-ci-on-commit-develop.yaml)
+#### Container CI on Commit to develop (Container-ci-on-commit-develop.yaml)
 * technology : Es triarà entre les dues tecnologies disponibles actualment :
     * java
     * nodejs
@@ -250,12 +250,12 @@ En cas de **nodejs**:
 * install_build_command : Si existeix, comandament custom que realitza les operatives d' install i de build
 * sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
 
-#### APP CI on Commit to release or master (app-ci-on-commit.yaml)
+#### Container CI on Commit to release or master (Container-ci-on-commit.yaml)
 * technology : Es triarà entre les dues tecnologies disponibles actualment :
     * java
     * nodejs
 
-#### APP CD (app-cd.yaml)
+#### Container CD (Container-cd.yaml)
 * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
 * technology : Es triarà entre les dues tecnologies disponibles actualment :
     * java
@@ -289,8 +289,8 @@ En cas de **azure** y **aca**
     * gcp : Para Google Cloud.
 
 #### Infra CI on Commit  (infra-ci-on-commit.yaml)
-    * Branques disponibles (branches), si no hi ha entorn de desenvolupament cal comentar la branca develop.
-    * terraform_version: Versió de Terraform.              
+* Branques disponibles (branches), si no hi ha entorn de desenvolupament cal comentar la branca develop.
+* terraform_version: Versió de Terraform.              
                         
 #### Infra CD Apply (infra-cd-apply.yaml)
 * Comentar l'entorn dev si no hi ha entorn de desenvolupament.
