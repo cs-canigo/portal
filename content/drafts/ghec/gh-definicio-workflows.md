@@ -44,15 +44,32 @@ En canvi, si la PR es fes entre les branques develop-release, release-master, ho
 
 D'altra banda, si estem en temps de commit, existiran dos tipus de workflows depenent de la tipologia del component: Aplicació o Llibreria.  
 
-+ En el cas d'una **aplicació**, i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, creació de imatge de contenidor, push al registre, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request), assignació de tag a l'imatge i al repositori.   
++ En el cas d'una **aplicació**, i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, creació de imatge de contenidor, push al registre, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request), assignació de tag a l'imatge i al repositori.
+ 
+ **IMPORTANT** : En el cas d'imatges de contenidors amb Docker, en la definició del fitxer Dockerfile per a la creació d'una imatge Docker, és estrictament necessari realitzar aquesta operativa **copiant** l'artefacte generat en els steps anteriors del workflow de CI i **mai** tornant a compilar i generar l'artefacte en la creació de la imatge Docker. 
+
+Per exemple : 
+* En el cas d'aplicacions JAVA Maven, aquest artefacte estarà identifcat en la carpeta **./target/.**
+
+ Cas correcte de DockerFile, on es genera la imatge Docker amb l'artefacte generat en els passos previs del Workflow.
+
+![Dockerfile amb definició correcta](/images/GHEC/dockerfile_OK.png)
+
+Cas incorrecte de DockerFile on es copia tot el repositori i es torna a realitzar el compilat i la instal·lació abans de generar la imatge.
+ 
+ ![Dockerfile amb definició incorrecta](/images/GHEC/dockerfile_KO.png)
+
+
+
+
 Els diferents steps es llançaran en funció de les branques involucrades en el procés tal i com s'observa en el diagrama.  
 **En cap moment es permetrà modificar la imatge generada en branca Development en treballar a Release o Master.**
 
-    El nom del workflow en el repositori dependrà de la branca a la qual es faci la integració : 
+El nom del workflow en el repositori dependrà de la branca a la qual es faci la integració : 
 
-    * Nom del WorkFlow si el Commit és a development : **Container CI on Commit to develop**.
+* Nom del WorkFlow si el Commit és a development : **Container CI on Commit to develop**.
 
-    * Nom del Workflow si el Commit és a release o master :  **Container CI on Commit to release o master**.
+* Nom del Workflow si el Commit és a release o master :  **Container CI on Commit to release o master**.
 
 
 ![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition_CM_app.png)

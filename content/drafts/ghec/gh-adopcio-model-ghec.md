@@ -45,7 +45,7 @@ Per sol·licitar la migració del CI/CD nadiu d'AWS o Azure a GHEC cal realitzar
   + Codi de Component, per exemple "00", "01".
   + Taula de components tècnics a crear amb el següent detall:
 
-      | Nom        | Funció           | Tipus  |
+      | Nom tècnic component      | Funció           | Tipus  |
       | ------------- |:-------------:| -----:|
       | nombreRepo1  | backend | container |
       | nombreRepo2  | frontend | container |
