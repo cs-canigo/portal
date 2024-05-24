@@ -213,6 +213,50 @@ on:
 El nom Workflow en GHEC és **FUNC CD**
 
 
+### Workflow de Continuous Integration (CI) per a Contingut Estátic
+
+Igual que passa amb el workflow d'aplicacions, s'ha diferenciat en el workflow entre:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI per a contingut estàtic](/images/GHEC/ci-workflow-definition-static.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
+
+Nom del Workflow en GitHub : **Static CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+
+![Definició a alt nivell dels workflows de CI per a Function](/images/GHEC/ci-workflow-definition-static-PR.png)
+
+
+D'altra banda, si estem en temps de commit, i partint de la base que el paquet no ha de ser immutable entre els diferents entorns, en totes les fases es realitzaran els steps de Promoció (que actualitza la versió de l'artefacte en el còidg font) compilat, empaquetat, publicació del contingut estàtic a GitHub Packages, versionat de l'artefacte i versionat del repositori.
+
+Nom del Workflow en GitHub : **Static CI on Commit**.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-static-CM.png)
+
+
+### Worfklows de Continuous Deployment (CD) per a contingut estàtic.
+
+Es detalla a continuació el flux de treball dels desplegaments de contingut estàtic.
+
+![Definició a alt nivell dels Worfklows de CD per a Function](/images/GHEC/cd-workflow-static-definition.png)
+
+on:
+* Check Artifacts, realitzarà revisions sobre l’artefacte abans del desplegament.
+* Env. Matrix, validarà si l’artefacte pot ser desplegat en l’entorn indicat.
+* PRE-AUDIT : Crea un CRQ en ITSM indicant l’inici de desplegament.
+* Deploy: desplegament de l’artefacte en l’entorn indicat.
+* POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
+* EMAIL COMM : Enviament del resultat del desplegament als afectats.
+    
+El nom Workflow en GHEC és **Static CD**
+
+
 ## Implementació de workflows 📌
 
 Dins del repositori, els workflows estaran disponibles dins la ruta "repositori/.github/workflows". A continuació, es detallen els fitxers de configuració de cada tipologia de workflow:
@@ -383,3 +427,42 @@ Depenent dels valors seleccionats anteriorment, s'informaran les següents varia
 En cas de **technology = java**  
 
 * group_id : Descomentar i afegir el group_id que es troba al fitxer pom.xml
+
+
+
+### Workflows CI/CD per a Contingut estàtic
+
+#### Static CI on PR (static-ci-on-pr.yaml) 
+* technology : Es triarà entre les dues tecnologies disponibles actualment :
+    * nodejs
+    
+
+Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+En cas de **nodejs**: 
+* node_version:  Versió de Node.
+* sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
+
+#### Static CI on Commit (static-ci-on-commit.yaml)
+* technology : Es triarà entre les dues tecnologies disponibles actualment :
+    * nodejs
+
+Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
+En cas de **nodejs**: 
+* node_version:  Versió de Node.
+* install_build_command : Si existeix, comandament custom que realitza les operatives d' install i de build.
+* sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).      
+
+#### Static CD (static-cd.yaml)
+* Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
+* technology : Es triarà entre les dues tecnologies disponibles actualment :
+    * nodejs
+* cloud : Seleccionar en quin Proveïdor Cloud es desplegarà el contingut estàtic que es generi.  Actualment els valors disponibles són :
+    * aws              
+* engine : Seleccionar que tipus de contingut estàtic es desplegarà. Actualment els valors són :
+    * s3 : Contingut estàtic de AWS.
+
+* storage_name : Nom tècnic del Bucket o Azure Blob Storage.
+* source : Path origen on es desplega el contingut estàtic.
+* destination_prefix : carpeta de destí a Bucket o Blob Storage.
+* exclude : Contingut estàtic a excloure a l'hora de desplegar
+* delete : True or False per indicar si es fa un esborrat del contingut previ al bucket o Blog Storage.
