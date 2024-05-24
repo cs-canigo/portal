@@ -39,11 +39,17 @@ El backend de l'estat de Terraform s'ha de declarar de la següent manera:
 _backend.tf_
 ```hcl
 terraform {
-    backend "remote" {}
+
+  backend "azurerm" {
+  }
+}
+
+provider "azurerm" {
+  features {}
 }
 ```
 
-Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Resource group** amb un **Storage Account** per aplicació, i dins un **Container** per a cada entorn (dev/tst/int, pre, pro). Aquest backend s'establirà dinàmicament al workflow de CD d'infraestructura.
+Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de la connexió amb Azure per a l'emmagatzematge de l'estat de Terraform. En concret, s'utilitza un **Resource group** amb un **Storage Account** per aplicació, i dins un **Container** per a cada entorn. Aquest backend es configurarà dinàmicament al workflow de CD d'infraestructura.
 
 ### Plataformes de contenidors
 
