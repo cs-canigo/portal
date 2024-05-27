@@ -46,10 +46,10 @@ D'altra banda, si estem en temps de commit, existiran dos tipus de workflows dep
 
 + En el cas d'una **aplicació**, i partint de la base que **la imatge que es genera i es puja al registre d'imatges ha de ser immutable** en les següents fases, s'executaran els steps de compilació, empaquetat, creació de imatge de contenidor, push al registre, CI/SAST/SCA (si no s'ha executat prèviament en temps de pull request), assignació de tag a l'imatge i al repositori.
  
- **IMPORTANT** : En el cas d'imatges de contenidors amb Docker, en la definició del fitxer Dockerfile per a la creació d'una imatge Docker, és estrictament necessari realitzar aquesta operativa **copiant** l'artefacte generat en els steps anteriors del workflow de CI i **mai** tornant a compilar i generar l'artefacte en la creació de la imatge Docker. 
+ **IMPORTANT** : En el cas d'imatges de contenidors Docker, en la definició del fitxer Dockerfile, és estrictament necessari realitzar aquesta operativa **copiant** l'artefacte generat en els steps anteriors del workflow de CI i **mai** tornant a compilar i generar l'artefacte de nou en la creació de la imatge Docker. 
 
 Per exemple : 
-* En el cas d'aplicacions JAVA Maven, aquest artefacte estarà identifcat en la carpeta **./target/.**
+* En el cas d'aplicacions JAVA Maven, aquest artefacte estarà en la carpeta **./target/**
 
  Cas correcte de DockerFile, on es genera la imatge Docker amb l'artefacte generat en els passos previs del Workflow.
 
