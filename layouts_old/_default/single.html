@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>{{.Title}}</title>
+	{{ partial "head.html" . }}
+	<script>
+		document.write("<meta name=\"titol\" content=\"{{.Title}}\" />");
+		document.write("<meta name=\"description\" content=\"{{.Description}}\" />");
+	</script>
+
+</head>
+<body class="single">
+	
+	<div class="contenidor unfixed">
+
+		{{ partial "menu.html" . }}
+
+	</div>
+
+	<section class="border-start">
+
+			{{ partial "header_block.html" .}}
+
+		   <div class="padding-xs container">
+	    	{{ if and (not .Lastmod.IsZero) (eq (strings.Contains .File.Dir "principis") false) }}
+	    	   <i><b>Darrera actualització:</b></i> {{ .Lastmod.Format "02-01-2006" }}
+	        {{ end }}
+			{{ if and (strings.Contains .File.Dir "principis") (isset .Params "valid_to") }}
+				<b>Validesa fins</b>: {{ .Params.valid_to }}
+			{{ end}}			
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					{{ partial "table-of-contents.html" . }}
+
+					{{ .Content }}
+
+					{{ if eq .Section .Site.Params.blog_section }}
+						<a name="comments"></a>
+						<hr />		
+						{{ template "_internal/disqus.html" . }}
+					{{ end }}
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+	{{ partial "footer.html" . }}
+
+</body>
+</html>

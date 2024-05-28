@@ -88,17 +88,12 @@ function app(opts) {
       autoHideContainer: true,
       scrollTo: '#query',
       showFirstLast : false,
-      maxpages : 10,
+      maxpages : 5,
       labels: {
-        previous : "anterior",
-        next : "següent",
-        first: "primera",
-        last : "última"
-      },
-      cssClasses : {
-        first : "hidden-xs",
-        last : "hidden-xs",
-        page : "hidden-xs"
+        previous : "<",
+        next : ">",
+        first: "<<",
+        last : ">>"
       }
     })
   );

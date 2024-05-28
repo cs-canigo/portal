@@ -1,84 +1,94 @@
-var
-	fil_cercador = [["noticies","Notícies"],["bloc","Bloc d'Arquitectura"]],
-	url = "canigo.ctti.gencat.cat"
-;
+var fil_cercador = [["noticies","Notícies"],["bloc","Bloc d'Arquitectura"]];
+var url = "canigo.ctti.gencat.cat";
 
-$(function(){
-	$(".breadcrumbs2 a").each(function(i,it){
-		if($(it).html().replace(/\s/g,"").length===0){
-			$(it).addClass("hidden");
+document.addEventListener("DOMContentLoaded", function() {
+	var breadcrumbs2 = document.querySelectorAll(".breadcrumbs2 a");
+	breadcrumbs2.forEach(function(it) {
+		if (it.innerHTML.replace(/\s/g,"").length === 0) {
+			it.classList.add("hidden");
 		}
 	});
 
-	var toc_parent = $('#TOC ul').first().parent();
-	var toc = $('#TOC ul ul').first();
-	$(toc_parent).prepend($(toc));
-	$('#TOC ul').last().remove();
-
-	var heads2 = $("article.contingut h2").size();
-	var cols = 3;
-	var last = Math.ceil(heads2/cols);
-	$('#TOC ul li:nth-child('+last+'n)').addClass("no-border");
-
-	if($(toc).find("li").size()<=2){
-		$(toc).remove();
+	if(!document.querySelector('#TOC ul')){
+		return;
 	}
 
-	//gestió del fil d'ariadna en el cercador
-	for(var i=0;i<fil_cercador.length;i++){
-		if(window.location.hash.indexOf("&type="+fil_cercador[i][0])>-1){
-			var breadcrumbs2 = $(".breadcrumbs2");
-			$(breadcrumbs2).html("<a href='/"+fil_cercador[i][0]+"/'>"+fil_cercador[i][1]+"</a>");
-			$(breadcrumbs2).parent().append("<li>Cercador</li>");
-			$(".capcalera_flotant").html(fil_cercador[i][1]);
-			if($("#cercadorIndex #sitesearch").size()===0){
-				$("<input type='hidden' name='sitesearch' value='"+url+"/"+fil_cercador[i][0]+"' />").appendTo("#cercadorIndex");
+	var toc_parent = document.querySelector('#TOC ul').parentNode;
+	var toc = document.querySelector('#TOC ul ul');
+	toc_parent.insertBefore(toc, toc_parent.firstChild);
+	toc.parentNode.removeChild(toc.parentNode.lastChild);
+
+	var heads2 = document.querySelectorAll("article.contingut h2").length;
+	var cols = 3;
+	var last = Math.ceil(heads2 / cols);
+	var tocLi = document.querySelectorAll('#TOC ul li:nth-child(' + last + 'n)');
+	tocLi.forEach(function(li) {
+		li.classList.add("no-border");
+	});
+
+	if (toc.querySelectorAll("li").length <= 2) {
+		toc.parentNode.removeChild(toc);
+	}
+
+	for (var i = 0; i < fil_cercador.length; i++) {
+		if (window.location.hash.indexOf("&type=" + fil_cercador[i][0]) > -1) {
+			var breadcrumbs2 = document.querySelector(".breadcrumbs2");
+			breadcrumbs2.innerHTML = "<a href='/" + fil_cercador[i][0] + "/'>" + fil_cercador[i][1] + "</a>";
+			var parent = breadcrumbs2.parentNode;
+			var li = document.createElement("li");
+			li.innerHTML = "Cercador";
+			parent.appendChild(li);
+			var capcalera_flotant = document.querySelector(".capcalera_flotant");
+			capcalera_flotant.innerHTML = fil_cercador[i][1];
+			if (document.querySelector("#cercadorIndex #sitesearch") === null) {
+				var input = document.createElement("input");
+				input.type = "hidden";
+				input.name = "sitesearch";
+				input.value = url + "/" + fil_cercador[i][0];
+				document.querySelector("#cercadorIndex").appendChild(input);
 			}
 		}
 	}
 
-	//Fil ariadna QUI SOM
-	if(window.location.pathname.indexOf("/quisom")>-1){
-		$(".breadcrumbs2").remove();
+	if (window.location.pathname.indexOf("/quisom") > -1) {
+		var breadcrumbs2 = document.querySelector(".breadcrumbs2");
+		breadcrumbs2.parentNode.removeChild(breadcrumbs2);
 	}
-
 });
 
-var client = algoliasearch('SQZ0PDH35B', '36b9c3ee8bb800e0212913189cd5cdea')
+var client = algoliasearch('SQZ0PDH35B', '36b9c3ee8bb800e0212913189cd5cdea');
 var index = client.initIndex('prod_ARQUITECTURA');
 autocomplete('#cerca2', {hint: false}, [
-{
-  source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-  displayKey: 'title',
-  templates: {
-    suggestion: function(suggestion) {
-      return suggestion._highlightResult.title.value;
-    },
-    footer: function(){
-    	return "<p>&nbsp;</p>";
-    }
-  }
-}
+	{
+		source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+		displayKey: 'title',
+		templates: {
+			suggestion: function(suggestion) {
+				return suggestion._highlightResult.title.value;
+			},
+			footer: function() {
+				return "<p>&nbsp;</p>";
+			}
+		}
+	}
 ]).on('autocomplete:selected', function(event, suggestion, dataset) {
-    console.log(suggestion, dataset);
+	console.log(suggestion, dataset);
 	window.location.replace(suggestion.path);
 });
 
-//Expand and collapse markdown sections
-
-const getMdNextEl = function(item, collapseNext){
+const getMdNextEl = function(item, collapseNext) {
 	let el = [];
-	let next = $(item).parent();
+	let next = item.parentNode;
 	let found;
 	let count;
 	for(let i=0,z=collapseNext.length;i<z;i++){
-		next = $(next).next();
+		next = next.nextElementSibling;
 		found=false;
 		cont = 0;
 		while(!found && cont<10){
-			if($(next).prop('nodeName').toLowerCase()===collapseNext[i]){
-				found=true;
-				el.push($(next));
+			if (next.nodeName.toLowerCase() === collapseNext[i]) {
+				found = true;
+				el.push(next);
 			}
 			cont++;
 		}
@@ -86,36 +96,35 @@ const getMdNextEl = function(item, collapseNext){
 	return el;
 }
 
-$(function(){
+document.addEventListener("DOMContentLoaded", function() {
 
-	$(".collapseMD").each(function(i, item){
-
-		let collapseNext = $(item).data("collapse-next");
+	var collapseMDs = document.querySelectorAll(".collapseMD");
+	collapseMDs.forEach(function(item) {
+		var collapseNext = item.dataset.collapseNext;
 		collapseNext = collapseNext ? collapseNext.split(" ") : [];
-		const el = getMdNextEl(item, collapseNext);
-		
-		$(item).text("[+]");
-		$(item).css("cursor", "pointer");
-		$(item).css("color", "#BF0000");
+		var el = getMdNextEl(item, collapseNext);
 
-		$(item).on( "click", function() {
-			if($(item).text()==="[+]"){
-				$(item).text("[-]");
-				for(let i=0,z=el.length;i<z;i++){
-					el[i].removeClass("hidden");
-				}
-			}else{
-				$(item).text("[+]");
-				for(let i=0,z=el.length;i<z;i++){
-					el[i].addClass("hidden");
-				}
-			};
+		item.textContent = "[+]";
+		item.style.cursor = "pointer";
+		item.style.color = "#BF0000";
+
+		item.addEventListener("click", function() {
+			if (item.textContent === "[+]") {
+				item.textContent = "[-]";
+				el.forEach(function(element) {
+					element.classList.remove("hidden");
+				});
+			} else {
+				item.textContent = "[+]";
+				el.forEach(function(element) {
+					element.classList.add("hidden");
+				});
+			}
 		});
 
-		for(let i=0,z=el.length;i<z;i++){
-			el[i].addClass("hidden");
-		}
-
+		el.forEach(function(element) {
+			element.classList.add("hidden");
+		});
 	});
 
 });

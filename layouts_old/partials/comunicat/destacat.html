@@ -1,0 +1,32 @@
+<tr>
+  <td class="destacat_box">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
+      <tr>
+        <td>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="padding: 20px;">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
+            					{{ if isset .Params "enllac" }}
+            						<a style="color: #333" href="{{ .Params.enllac }}">{{ .Title }} </a>
+            					{{ else }}
+            						{{ .Title }}
+            					{{ end}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 0;line-height:17px">
+                      {{ .Description }}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+		  </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

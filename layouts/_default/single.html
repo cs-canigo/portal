@@ -3,52 +3,103 @@
 <head>
 
 	<title>{{.Title}}</title>
+
 	{{ partial "head.html" . }}
+	
 	<script>
 		document.write("<meta name=\"titol\" content=\"{{.Title}}\" />");
 		document.write("<meta name=\"description\" content=\"{{.Description}}\" />");
 	</script>
 
 </head>
-<body class="single">
-	
+<body>
+
+	<a class="hidden-xs skip-main" href="#main" tabindex="1" role="region">
+		Saltar al contingut principal
+	</a>
+
 	<div class="contenidor unfixed">
-
-		{{ partial "menu.html" . }}
-
+		{{ partial "header_block.html" . }}
 	</div>
 
-	<section class="border-start">
+	<div class="border-start bgGrey">
+		<div id="impacteContainer">
+			<div class="fpca-subcapcalera ">
+				<div class="NG-menu ">
+					<div class="NG-container">
+						<ul class="NG__breadcrumb">
+							{{ partial "breadcrumbs.html" . }}
+						</ul>
 
-			{{ partial "header_block.html" .}}
+						
+						<div class="NG-menu__wrapper">
+							<div class="NG-menu__wrapper_title" role="main">
+								<h1 class="NG-menu__title">
+									{{ .Title }}
+								</h1>
+							</div>
+							<div class="NG-menu__wrapper_title2">					
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-		   <div class="padding-xs container">
-	    	{{ if and (not .Lastmod.IsZero) (eq (strings.Contains .File.Dir "principis") false) }}
-	    	   <i><b>Darrera actualització:</b></i> {{ .Lastmod.Format "02-01-2006" }}
-	        {{ end }}
-			{{ if and (strings.Contains .File.Dir "principis") (isset .Params "valid_to") }}
-				<b>Validesa fins</b>: {{ .Params.valid_to }}
-			{{ end}}			
-           </div>
-           
-			<article class="padding-xs padding-sm padding-md contingut">				
-				<div class="container">
- 		
-					{{ partial "table-of-contents.html" . }}
+	<main id="main">
+		<section class="padding-xs padding-sm padding-md colorSectionOdd">
+			<article class="container fullcontainer-xs">
+				<div class="row">
+					<div>
+						<div id="center_1R">
+							<div class="fpca_article pd-15" id="b3db868d-63a9-11e6-8087-005056924a59" data-crawling-fpca="article">
+								<div>
+									<div class="entradeta__wrapper">
+										<div class="row">
+	
+											<div class="basic_text_peq col-xs-12">
+	
+												<div>
+													{{ if and (not .Lastmod.IsZero) (eq (strings.Contains .File.Dir "principis") false) }}
+													   <!--i><b>Darrera actualització:</b></i> {{ .Lastmod.Format "02-01-2006" }} -->
+													{{ end }}
+													{{ if and (strings.Contains .File.Dir "principis") (isset .Params "valid_to") }}
+														<b>Validesa fins</b>: {{ .Params.valid_to }}
+													{{ end}}			
+												</div>
 
-					{{ .Content }}
+												{{ partial "table-of-contents.html" . }}
 
-					{{ if eq .Section .Site.Params.blog_section }}
-						<a name="comments"></a>
-						<hr />		
-						{{ template "_internal/disqus.html" . }}
-					{{ end }}
-				</div>	
+												{{ .Content }}
+							
+												{{ if eq .Section .Site.Params.blog_section }}
+													<a name="comments"></a>
+													<hr />		
+													{{ template "_internal/disqus.html" . }}
+												{{ end }}		
+											</div>
 
-			</article>	
+										</div>
 
-
-	</section>	
+										<div class="fpca_article padding-xs padding-sm padding-md" data-id="b3db868d-63a9-11e6-8087-005056924a59">
+											<div class="padding-xs padding-sm padding-md">
+												<div class="data_article col-xs-12" data-crawling="principal-date">
+													Data d'actualització:
+													&nbsp; {{ .Lastmod.Format "02-01-2006" }}
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
 
 	{{ partial "footer.html" . }}
 

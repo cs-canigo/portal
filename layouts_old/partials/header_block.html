@@ -1,0 +1,88 @@
+			{{ $title := .Title | html | lower}}
+			{{ $section := .Section | html | lower}}
+			
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									{{ if and (ne $title "cercador") (ne $section "") }}
+										{{ partial "breadcrumbs.html" . }}
+									{{ else }}
+										{{ if ne $title "cercador"}}
+											{{ partial "breadcrumbs.html" . }}
+										{{ else }}
+											{{ .Title }}
+										{{ end }}
+									{{ end }}
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left">
+									{{ if and (eq $section "") (ne $title "cercador") }}
+										{{ if (eq (in .Permalink "blog_tags") false) }}
+											{{ partial "breadcrumbs.html" . }}
+										{{ end }}
+										{{ partial "titles_subsection.html" . }}
+									{{ else }}
+
+										{{ partial "titles_subsection.html" . }}
+
+									{{ end }}
+								</h1>
+
+								{{ if or (eq .Section "noticies") (eq .Section "destacats") (eq .Section "destacats-related") }}
+									<br />
+									{{ .Date.Format "02-01-2006" }}
+								{{ end }}
+
+								{{ $title := .Title | html | lower}}
+								{{ if eq $title "noticies"}}
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Notícies&amp;q='+this.cerca.value; return false;">
+									<div class="form-group">
+										<label class="hidden" for="cerca">Cerca</label>
+										<input type="search" name="q" id="cerca"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control" placeholder="Cerca a notícies" />
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>
+								</form>
+								{{end}}
+
+								{{ if or (eq $title (.Site.Params.blog_section)) (in .Permalink "blog_tags") }}
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Blog&amp;q='+this.cerca.value; return false;">
+									<div class="form-group">
+										<label class="hidden" for="cerca">Cerca</label>
+										<input type="search" name="q" id="cerca"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control" placeholder="Cerca al blog" />
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>
+								</form>
+								{{end}}
+
+								{{ if or (eq $title "cercador") (eq $title "mòduls i versions canigó") }}
+								<!--CERCADOR-->
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
+									<div class="form-group">
+										<input type="search" name="q" id="query"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control"  placeholder="Cerca..." />
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>
+								</form>
+								{{end}}
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>

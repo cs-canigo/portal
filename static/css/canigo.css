@@ -269,6 +269,8 @@ tr.head_row td + td {
 /* AUTOCOMPLETE ALGOLIA */
 .algolia-autocomplete {
   width: 100%;
+  border:1px solid red;
+
 }
 .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
   width: 100%;
@@ -278,6 +280,7 @@ tr.head_row td + td {
 }
 .algolia-autocomplete .aa-dropdown-menu {
   width: 100%;
+  border:1px solid red;
   background-color: #fff;
   border: 1px solid #999;
   border-top: none;

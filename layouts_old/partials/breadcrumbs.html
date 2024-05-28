@@ -1,0 +1,23 @@
+{{ $.Scratch.Set "level" 0 }}
+
+{{ range .Ancestors.Reverse }}
+	{{if gt ($.Scratch.Get "level") 0}}
+		<li>
+			{{ if ne .LinkTitle "Blog_tags"}}
+				<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+			{{ end }}
+			{{ if eq .LinkTitle "Blog_tags"}}
+				<a href="/blog">Blog</a>			
+			{{ end }}
+		</li>
+	{{end}}
+	{{ $.Scratch.Add "level" 1 }}
+{{end}}
+
+<li>
+	{{ if isset .Params "title_breadcrumbs" }}
+		{{ .Params.title_breadcrumbs }}
+	{{ else }}
+		{{ .LinkTitle }}
+	{{ end }}
+</li>

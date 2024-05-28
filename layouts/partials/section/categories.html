@@ -14,10 +14,13 @@
 					</div>
 					
 					<div class="panel-body fons_blanc">
-						<ul class="llistat_enllacos_filet_cont list-group">
+						<ul class="">
 						  {{ range  .Site.Taxonomies.blog_tags.Alphabetical  }}
-						  	<li><a href="/blog_tags/{{ .Term }}">{{ lower .Term }} ({{ .Count}}) 
-							</a></li>
+						  	<li>
+								<a href="/blog_tags/{{ .Term }}">
+									{{ lower .Term }} ({{ .Count}}) 
+								</a>
+							</li>
 						  {{ end }}
 						</ul>
 					</div>
@@ -25,8 +28,6 @@
 			</div>
 		</div>
 
-
 	</div>
-
 
 {{ end }}

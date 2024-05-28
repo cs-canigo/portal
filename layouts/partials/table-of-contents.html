@@ -10,9 +10,106 @@
 
 	{{ if and (isset .Params "toc") (eq (index .Params "toc") true) }}
 
-	<div class="row">
-		<div class="col-md-12 col-xs-12"> 
-			{{ .TableOfContents }}
-    	</div>
-	</div>
+	<style>
+					
+		.llista-blocs-contingut{
+			margin-bottom: 1em;
+		}
+					
+		nav#TableOfContents{
+			border-top: none;
+		}
+		
+		nav#TableOfContents ul{
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			color: #333;
+			font-size: 1em;
+			font-family: 'OpenSansRegular', Helvetica, Arial, sans-serif;
+			box-sizing: border-box;
+			list-style: none;
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			border: none;
+			border-bottom: none;
+			margin-bottom: 0;
+			background: none;
+			margin-top: 0;
+			column-count: 2;
+			column-gap: 15px;
+			padding: 0 !important;
+			background-color: #f8f8f8;
+		}
+		nav#TableOfContents ul li{
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			font-size: 1em;
+			font-family: 'OpenSansRegular', Helvetica, Arial, sans-serif;
+			list-style: none;
+			box-sizing: border-box;
+			min-height: 1px;
+			float: left;
+			list-style-position: inside;
+			color: #333;
+			border: 0;
+			border-radius: 0;
+			align-items: flex-start;
+			display: flex;
+			flex-direction: row;
+			page-break-inside: avoid;
+			position: relative;
+			background: none;
+			border-top: none !important;
+			border-bottom: none !important;
+			width: 100%;
+			border-left: 6px solid #c00;
+			padding: 0.5em 0.3em 0.5em 1.7em;
+			margin: 0 !important;									
+		}
+		nav#TableOfContents ul li::before{
+			content: "";
+			background: url("/img/new-theme/icona-24-dark-chevron-right-thin-b.svg") no-repeat center center;
+			background-size: cover;
+			width: 18px;
+			height: 18px;
+			left: .5em;
+		}
+
+		nav#TableOfContents ul li a{
+			-webkit-text-size-adjust: 100%;
+			list-style: none;
+			list-style-position: inside;
+			box-sizing: border-box;
+			background: transparent;
+			outline: none;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+			text-decoration: none;
+			display: table;
+			font-family: "OpenSansSemiBold", Helvetica, Arial, sans-serif;
+			color: #333;
+			font-size: 14px;
+			position: initial;
+		}
+	</style>
+
+	<div class="llista-blocs-contingut">
+		<div class="llista-blocs-enllacos">
+			<div class="llista-blocs-enllacos__wrapper">
+				<div class="row">
+					 
+					<div class="tri_combo_destacat_llistat pag-final ancores2">
+						<div class="llistat_enllacos_filet especial col-md-12 col-xs-12 column">
+							
+
+
+							{{ .TableOfContents }}
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
 	{{ end }}

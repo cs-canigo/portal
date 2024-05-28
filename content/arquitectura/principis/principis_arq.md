@@ -22,6 +22,7 @@ aliases:
 weight: "1"
 ---
 
+
 ## Introducció
 
 Els principis d'arquitectura CTTI són les normes i directrius generals que guien l'estratègia tecnològica i estan destinades a ser perdurables i rarament modificables i tenen com a objectiu informar i recolzar la forma en què CTTI vol que es realitzi la selecció tecnològica així com la implementació de Sistemes d'Informació.
@@ -33,7 +34,7 @@ A continuació detallem quins són aquests principis:
 Des d'un punt de vista d'arquitectura empresarial, l'arbre de decisió que guiarà la selecció de tecnologia per a noves solucions es basarà en el següent:
 <br /><br />
 
-### <center>SaaS > LowCode > Cloud Native</center>
+## <center>SaaS > LowCode > Cloud Native</center>
 
 <br />
 

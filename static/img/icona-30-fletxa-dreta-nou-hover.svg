@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81" height="81" viewBox="0 0 81 81">
+    <defs>
+        <filter id="7jezju8uga" width="200.7%" height="202.7%" x="-50.4%" y="-44.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="7"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".5" result="shadowSpreadOuter2"/>
+            <feOffset dy="8" in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
+            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0"/>
+            <feMorphology in="SourceAlpha" radius="1.5" result="shadowSpreadOuter3"/>
+            <feOffset dy="5" in="shadowSpreadOuter3" result="shadowOffsetOuter3"/>
+            <feGaussianBlur in="shadowOffsetOuter3" result="shadowBlurOuter3" stdDeviation="2.5"/>
+            <feColorMatrix in="shadowBlurOuter3" result="shadowMatrixOuter3" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="shadowMatrixOuter2"/>
+                <feMergeNode in="shadowMatrixOuter3"/>
+            </feMerge>
+        </filter>
+        <circle id="tobr82jk7b" cx="25.313" cy="25.313" r="25.313"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-1107.000000, -218.000000) translate(1125.000000, 233.000000) translate(-2.812500, -2.812500)">
+                    <g>
+                        <use fill="#000" filter="url(#7jezju8uga)" xlink:href="#tobr82jk7b"/>
+                        <use fill="#FFF" xlink:href="#tobr82jk7b"/>
+                    </g>
+                    <circle cx="25.313" cy="25.313" r="25.313" fill="#C00000"/>
+                    <path fill="#FFF" d="M16.284 19.457c.611-.624 1.599-.63 2.218-.019l.019.02 8.374 8.547 8.373-8.548c.612-.624 1.599-.63 2.218-.019l.02.02c.61.624.617 1.632.018 2.264l-.019.02-9.492 9.69c-.611.623-1.599.63-2.218.019l-.02-.02-9.491-9.69c-.618-.63-.618-1.653 0-2.284z" transform="translate(26.894531, 25.444336) rotate(-90.000000) translate(-26.894531, -25.444336)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

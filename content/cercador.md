@@ -6,43 +6,81 @@ no_index 	= true
 +++
 <link href="/css/cercador.css" rel="stylesheet" type="text/css" />
 
-<section class="rslt" id="cercador_text">
-
-<div class="column hidden-xs ">
-	<p id="stats" class="txt_result count_resultats"></p>	
+<br />
+<div class="col-md-12 col-xs-12 column vista-mobil pd-30 pd-15">
+	<div class="capcelera_basica_cont">
+		<div class="cercador-gencat">
+			<div class="cercador-tramits-detall no-space-left detall-cerc">
+				<form class="navbar-form cercador_vermell alineat-cercador-tramits" action="/cercador">
+					<div class="form-group">
+						<div class="hidden-xs">
+							<p class="sr-only">Cercador</p>
+							<label for="cercadorOcultGoogle" class="sr-only">
+								Introdueixi terme que voleu cercar
+							</label>
+							<input type="search" name="q" id="query" title="Cercador" class="form-control" value="" placeholder="Cerca...">
+							<input aria-label="Cercar" class="btn btn-default hidden-xs" type="submit" value="&nbsp;">
+							<button type="reset" title="Esborra" class="btn btn-default visible-xs"></button>
+						</div>
+					</div>
+				</form>
+				<div class="column hidden-xs ">
+					<p id="stats" class="txt_result count_resultats"></p>	
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+<!--form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
+	<div class="form-group">
+		<input type="search" name="q" id="query"
+			title="Introdu&iuml;u les paraules a cercar"
+			class="form-control"  placeholder="Cerca..." />
+		<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+		<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+	</div>
+</form-->
+<br />
+
+<section class="rslt col-md-12 col-xs-12 column vista-mobil pd-30 pd-15" id="cercador_text">
+
 
 <div class="row">
 
-<div id="left-column" class="col-xs-12 col-md-4">
+<div id="left-column" class="col-xs-12 col-md-3">
 	<div id="tags" class="facet"></div>
 </div>
 
-<div id="hits" class="list-group col-xs-12 col-md-8">
-	
+<div class="list-group col-xs-12 col-md-8">
+	<ul id="hits" class="llistat_destacat_text_cont list-group pd-15">
+	</ul>
 </div>
 
-<div class="column paginacio">
-	<div id="pagination"></div>
-</div>	
+<div class="column paginacio pd-15" id="pagination">
 </div>
 
 </section>
 
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
-	<div class="destacat_text list-group-item">
-        <h2><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h2>
-        <div class="block-with-text">
-        	{{#description}}
-        		{{{_highlightResult.description.value}}}
-        	{{/description}}
+	<li class="destacat_text list-group-item filet_inf col-sm-4 col-md-3" style="border-bottom:1px solid #ddd">
 
-        	{{^description}}
-        		{{{_highlightResult.content.value}}}
-        	{{/description}}
-        </div>
-	</div>
+		<div class="destacat_text_cont">
+			<p></p>
+			<a role="button" class=" resultItem" href="{{path}}"><h3>{{{_highlightResult.title.value}}}</h3></a>
+			<p>
+				{{#description}}
+					{{{_highlightResult.description.value}}}
+				{{/description}}
+
+				{{^description}}
+					{{{_highlightResult.content.value}}}
+				{{/description}}
+			</p>
+			<a class="link_resultats pull_left" title="{{{_highlightResult.title.value}}}" href="{{path}}">{{path}}</a>
+		</div>
+	</li>
 </script>
 
 <script type="text/html" id="no-results-template">

@@ -1,13 +1,26 @@
-<div class="col-sm-12">
-	<ul class="list-group llistat_enllacos_filet_cont">
-		{{ range .Paginator.Pages }}
-		<li>
-			<a class="a-vermell" href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Date.Format "02-01-2006" }})
-			<p>{{ .Description }}<br /><br /></p>
-		</li>
-	    {{ end }}
-	</ul>
+<ul class="col-sm-12 llistat_enllacos_filet_cont list-group one-column separador  llista-redimensionada" id="noticies">
 
-	{{ template "_internal/pagination.html" . }}
-</div>
+	{{ range .Paginator.Pages }}
 
+	<li class="destacat_noticies list-group-item  clearfix fila_8" style="min-height: 95px;">												
+		<div class="destacat_noticies_cont " style="padding-bottom: 10px; min-height: 118px;">
+			<a class="avoidEscapeU0023" href="{{.Permalink}}" target="_self">
+				<span class="list-group-item-wrapper-content">{{.Title}}</span>
+				
+			</a>
+			<div class="bloc-mobil">						
+					<p>
+						{{.Description}}
+					</p>
+					<ul class="categories">
+						<li><span class="dataLista">{{ .Date.Format "02-01-2006" }}</span></li>
+					</ul>								
+			</div>
+		</div>
+	</li>
+	{{ end }}
+
+	
+</ul>
+
+{{ template "_internal/pagination.html" . }}

@@ -18,6 +18,12 @@ Paginate = 10
 [markup.goldmark.renderer]
     unsafe= true
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2
+
 [params]
 	noticieshome = 10
 	destacatshome = 5

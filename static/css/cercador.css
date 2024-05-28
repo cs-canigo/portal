@@ -118,19 +118,29 @@
 #pagination {
   /*margin-top: 60px;*/
 }
-#pagination ul {
-  list-style-type: none;
+
+body div#pagination div ul.ais-pagination {
+  list-style: none!important;
+  list-style-type:none!important ;
+  margin-left: 0!important;  
+  padding-left: 0!important;  
   text-align: center;
 }
-#pagination li {
-  font-size: 1.1em;
+
+#pagination ul li {
+  padding: 0;
+  font-size: 1.3em;
   display: inline;
-  padding: .5em;
 }
 #pagination a {
   padding: 8px 12px;
   text-decoration: none;
   color: #BF0000;
+}
+
+#pagination a.ais-pagination--link.page-item::after{
+  content: "";
+  background: none !important;
 }
 
 #pagination a:hover {
@@ -160,4 +170,13 @@
 }
 #pagination li.ais-pagination--item__disabled a:hover {
   background: none;
+}
+
+.fpca_article div.basic_text_peq ul.ais-pagination>li{
+    background: none!important;
+}
+
+.list-group-item{
+ border: none;
+ width: 100%;
 }

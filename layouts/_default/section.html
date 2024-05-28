@@ -10,47 +10,84 @@
 
 {{ $title := .Title | html | lower}}
 
-<body class="section {{$title}}">
+<body>
+
+	<a class="hidden-xs skip-main" href="#main" tabindex="1" role="region">
+		Saltar al contingut principal
+	</a>
+
 	<div class="contenidor unfixed">
-
-		{{ partial "menu.html" . }}
-
+		{{ partial "header_block.html" . }}
 	</div>
 
-	<section class="border-start">
+	<div class="border-start bgGrey">
+		<div id="impacteContainer">
+			<div class="fpca-subcapcalera ">
+				<div class="NG-menu ">
+					<div class="NG-container">
+						<ul class="NG__breadcrumb">
+							{{ partial "breadcrumbs.html" . }}
+						</ul>
 
-			{{ partial "header_block.html" .}}
+						
+						<div class="NG-menu__wrapper">
+							<div class="NG-menu__wrapper_title" role="main">
+								<h1 class="NG-menu__title">
+									{{ .Title }}
+								</h1>
+							</div>
+							<div class="NG-menu__wrapper_title2">					
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-			<article class="padding-xs padding-sm padding-md contingut">
-				<div class="container">
-				<div class="row">
 
+	<section class="padding-xs padding-sm padding-md colorSectionOdd">
+		<article class="container fullcontainer-xs">
+			<div class="row">
+				<div>
+					<div id="center_1R">
+														
 						{{ $section := .Title | html | lower }}
 
 						{{ if and (ne $section "noticies") (ne $section (.Site.Params.blog_section)) }}
 
-							{{ partial "section/colors.html" . }}
+						<div class="fpca_distribuidora_2">
+							<div class="fpca_distribuidora_2_estil1">
+								<div class="pd-15">
+									<div class="NG-container">
 
-			            {{ else if (eq $section (.Site.Params.blog_section)) }}
+										{{ partial "section/colors.html" . }}
+
+						{{ else if (eq $section (.Site.Params.blog_section)) }}
 
 							{{ partial "section/posts.html" . }}
 
-			            {{ else }}
+						{{ else }}
+										<div class="fpca_llista formatter_body" id="llista_1e424f7a-e6b1-11e5-989e-005056924a59_1e424f7b-e6b1-11e5-989e-005056924a59">
+											<div class="llistat_destacat_noticies mes_actualitat pd-15 pd-30 llista-tipus-7">
+												<div class="pd-15">
+													<div class="NG-container">
+											{{ partial "section/noticies.html" . }}
 
-							{{ partial "section/noticies.html" . }}
+										{{ end }}
+									
 
-			            {{ end }}
-
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				</div>
-			</article>
-
+			</div>
+		</article>
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if (eq $section (.Site.Params.blog_section)) }}
-		<script src="/js/bloc.js"></script>
-	{{ end }}
 
 </body>
 </html>

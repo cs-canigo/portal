@@ -1,88 +1,155 @@
-			{{ $title := .Title | html | lower}}
-			{{ $section := .Section | html | lower}}
-			
-			<article class="bgGrey">
-				<div class="container">
-					<div class="row">
-						<div class="capcelera_basica col-sm-12">
-							<div class="capcelera_basica_cont">
-								<ol class="breadcrumb filariana hidden-xs">
-									<li>
-										<a href="/">Inici</a>
-									</li>
-									{{ if and (ne $title "cercador") (ne $section "") }}
-										{{ partial "breadcrumbs.html" . }}
-									{{ else }}
-										{{ if ne $title "cercador"}}
-											{{ partial "breadcrumbs.html" . }}
-										{{ else }}
-											{{ .Title }}
-										{{ end }}
-									{{ end }}
+<header class="NG-header">
 
-								</ol>
+	<!-- <div class="container">  -->
+	<div id="hTContainer">
+		<div class="fpca_capcalera_new">
 
-								<h1 class="capcelera_flotant pull-left">
-									{{ if and (eq $section "") (ne $title "cercador") }}
-										{{ if (eq (in .Permalink "blog_tags") false) }}
-											{{ partial "breadcrumbs.html" . }}
-										{{ end }}
-										{{ partial "titles_subsection.html" . }}
-									{{ else }}
-
-										{{ partial "titles_subsection.html" . }}
-
-									{{ end }}
-								</h1>
-
-								{{ if or (eq .Section "noticies") (eq .Section "destacats") (eq .Section "destacats-related") }}
-									<br />
-									{{ .Date.Format "02-01-2006" }}
-								{{ end }}
-
-								{{ $title := .Title | html | lower}}
-								{{ if eq $title "noticies"}}
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Notícies&amp;q='+this.cerca.value; return false;">
-									<div class="form-group">
-										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="q" id="cerca"
-											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control" placeholder="Cerca a notícies" />
-										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
-										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
-									</div>
-								</form>
-								{{end}}
-
-								{{ if or (eq $title (.Site.Params.blog_section)) (in .Permalink "blog_tags") }}
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Blog&amp;q='+this.cerca.value; return false;">
-									<div class="form-group">
-										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="q" id="cerca"
-											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control" placeholder="Cerca al blog" />
-										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
-										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
-									</div>
-								</form>
-								{{end}}
-
-								{{ if or (eq $title "cercador") (eq $title "mòduls i versions canigó") }}
-								<!--CERCADOR-->
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
-									<div class="form-group">
-										<input type="search" name="q" id="query"
-											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control"  placeholder="Cerca..." />
-										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
-										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
-									</div>
-								</form>
-								{{end}}
-
+			<div class="NG-header__container NG-header__container--relative">
+				<div class="NG-main">
+					<div class="NG-container">
+						<div class="NG-row-flex NG-row-flex--space-between">
+							<div class="NG-col NG--pd15 NG-row-flex--vertical-lg NG-row-flex-row-reverse">
+								<div class="NG-header__logo">
+									<a href="https://web.gencat.cat/" target="_blank">
+										<span class="sr-only">. Obre en una nova finestra.</span><img
+											class="NG-header__image"
+											src="/img/gencat-nou.svg"
+											alt="Logotip de la Generalitat" />
+									</a>
+								</div>
+								<a class="NG-header__icon js-burguer-menu" role="button" tabindex="0">
+									<span class="sr-only" title="Menú">Menú</span>
+								</a>
+							</div>
+							<div class="NG-col NG--pd15">
+								<div class="NG-navbar__menu-desktop--wrapper hide-mobile">
+									<ul class="NG-navbar__menu NG-navbar__menu--invert js-NG-navbar__menu show-lg">
+										<li class="NG-navbar__list">
+											<a class="NG-navbar__link NG-navbar__link"
+												href="/centres-suport/"
+												target="_self">
+												<img class="NG-navbar__image"
+													src="/img/contacte-b.svg"
+													alt="" />
+												Contacte</a>
+										</li>
+									</ul>
+								</div>
+								<span class="js-NG-idioma-text"></span>
+								<a class="NG-header__icon2 js-search-menu" aria-controls="NG-search" role="button" aria-expanded="false" tabindex="0">
+									<span class="sr-only">Cercador</span>
+								</a>								
 							</div>
 						</div>
-
 					</div>
 				</div>
-			</article>
+
+				<div class="NG-header__wrapper">
+					<div class="NG-search" id="NG-search">
+						<div class="NG-search__wrapper">
+							<h2 class="NG-search__title">Cercador</h2>
+							<form id="fpca_capcalera_cercador" action="/cercador" method="get">
+								<div class="NG-inputSearch NG-inputSearch--wrapper">
+									<input class="NG-inputSearch__input" id="autoCompleteCapcalera" type="text" name="q"
+										title="Cercar" autocomplete="off"
+										/>
+									<input type="hidden" name="lr" value="lang_ca" />
+									<button class="NG-inputSearch__button" type="submit">
+										<img class="NG-inputSearch__button-image"
+											src="/img/search-w.svg"
+											alt="Cercar" width="24px" height="24px" />
+									</button>
+								</div>
+							</form>
+
+							<div class="NG-buttons--wrapper">
+							</div>
+						</div>
+					</div>
+					<div class="display:none;">
+					</div>
+
+					<div class="NG-departament">
+						<div class="NG-departament__background-wrapper NG-departament__background-wrapper--top">
+							<div class="NG-container">
+								<div class="NG-row-flex NG-row-flex--align-center-md">
+									<div class="NG-col NG--pd15">
+										<h2 class="NG-departament__title">
+											<a href="https://ctti.gencat.cat/"
+												title="Centre de Telecomunicacions i Tecnologies de la Informació">
+												Centre de Telecomunicacions i Tecnologies de la Informació</a>
+										</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="NG-navbar">
+						<div class="NG-container">
+							<div class="NG-row-flex NG-row-flex--vertical-md">
+								<ul class="NG-navbar__menu js-navbar__menu">
+		
+									{{ $section := .Section }}
+									
+									{{ $active := "" }}
+									{{ if eq $section "" }}
+										{{ $active = "NG-navbar__list--active NG-navbar__list--selected" }}
+									{{ end }}
+
+
+									{{ range .Site.Menus.main }}
+
+										{{ if and (hasPrefix .URL (print "/" $section)) (ne $section "")}}
+											{{ $active = "NG-navbar__list--active NG-navbar__list--selected" }}
+										{{ end }}
+
+										<li class="NG-navbar__list NG-navbar__list--white {{ $active }}">
+
+											<a class="NG-navbar__link NG-navbar__link--noborder " target="_self" title="Menú&nbsp;Inici" href="{{.URL}}"> 
+												{{.Name}}
+											</a>
+										</li>
+										
+										{{ $active = "" }}
+
+									{{ end }}
+
+								</ul>
+								<div class="NG-navbar__menu-mobile--wrapper"></div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+
+			<div class="secondary-header">
+				<div class="NG-submain">
+					<div class="NG-container">
+						<div class="NG-row-flex">
+							<div class="NG-col NG--pd15 NG-row-flex--vertical-lg NG-row-flex-row-reverse">
+								<div class="NG-header__logo">
+									<a href="https://web.gencat.cat/" target="_blank">
+										<span class="sr-only">. Obre en una nova finestra.</span><img
+											class="NG-header__image"
+											src="/img/gencat-nou.svg"
+											alt="Logotip de la Generalitat" />
+									</a>
+								</div>
+							</div>
+							<div class="NG-col">
+								<p class="NG-header__section_title">
+									<span class="NG-header__section_title_separator">|</span>
+									<a title="Centre de Telecomunicacions i Tecnologies de la Informació"
+										href="https://ctti.gencat.cat/">
+										Centre de Telecomunicacions i Tecnologies de la Informació</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div><!-- </div> -->
+
+</header>

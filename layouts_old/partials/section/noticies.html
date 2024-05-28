@@ -1,0 +1,13 @@
+<div class="col-sm-12">
+	<ul class="list-group llistat_enllacos_filet_cont">
+		{{ range .Paginator.Pages }}
+		<li>
+			<a class="a-vermell" href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Date.Format "02-01-2006" }})
+			<p>{{ .Description }}<br /><br /></p>
+		</li>
+	    {{ end }}
+	</ul>
+
+	{{ template "_internal/pagination.html" . }}
+</div>
+
