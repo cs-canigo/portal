@@ -43,17 +43,17 @@
 
       {{ if .IsPage }}
         <a href="/admin/#/collections/{{ $collection }}/entries{{ safeURL $filename }}" class="cmsAction" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">
-          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editPageText" }}
+          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editPageText" }} Edita
         </a>
       {{ end }}
 
       {{ if .IsSection }}
         <a href="/admin/#/collections/{{ $collection }}/new" id="cms-editor-link-add" class="cmsAction" style="color: #fff; margin-right: .5em;">
-          <span class="glyphicon glyphicon-plus text-small" aria-hidden="true"></span>{{ $.Scratch.Get "addPageText" }}
+          <span class="glyphicon glyphicon-plus text-small" aria-hidden="true"></span>{{ $.Scratch.Get "addPageText" }} Afegeix
         </a>
 
         <a href="/admin/#/collections/{{ $collection }}/entries/_index" class="cmsAction" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">
-          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editPageText" }}
+          <span class="glyphicon glyphicon-edit text-small" aria-hidden="true"></span>{{ $.Scratch.Get "editPageText" }} Edita
         </a>
 
         <!--a href="/admin/#/collections/{{ $collection }}/entries{{ safeURL $filename }}" id="cms-editor-link-edit" style="color: #fff; margin-right: .5em;">

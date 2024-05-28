@@ -8,9 +8,11 @@ var getConfigKey = function(data, key){
     return matches[1];
 }
 
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function() {
     //Gets config type to adapt cms in frontend
-    $.get("/admin/config.yml?" + (+new Date()), function(configyml){
+    fetch("/admin/config.yml?" + (+new Date()))
+        .then(response => response.text())
+        .then(configyml => {
         if(!window.cms){
             window.cms = {};
         }
@@ -38,7 +40,10 @@ $(document).ready(function(){
             window.cms.base_url = getConfigKey(configyml, "base_url");
             window.cms.client_id = getConfigKey(configyml, "client_id");
 
-            $("*[data-netlify-identity-button]").css("display","none"); //hides netlify identity login button
+            var netlifyIdentityButtons = document.querySelectorAll("*[data-netlify-identity-button]");
+            netlifyIdentityButtons.forEach(function(button) {
+                button.style.display = "none"; // hides netlify identity login button
+            });
         }
 
         console.log("loading cms objects...");
@@ -56,26 +61,30 @@ $(document).ready(function(){
         }
 
         //attach cms=true param to internal links
-        $("a").each(function() {
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
             if(this.hostname===currentHost && this.href.indexOf("/admin/#/")===-1 && this.href.indexOf("?cms=true")===-1){
                 this.href = this.href + "?cms=true";
             }
         })
 
         //Bind events to button and input text to create section
-        $("#sectionNameButton").click(function(){
+        document.getElementById("sectionNameButton").addEventListener("click", function(){
             createSection(window.cms.currentlang, window.cms.langs);
         })
 
-        $("#sectionName").keyup(function(event) {
+        document.getElementById("sectionName").addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
                 createSection(window.cms.currentlang, window.cms.langs);
             }
         });
 
         //show cms on footer and sections hidden when cms param not true
-        $("#cms-editor").css("display","block");
-        $(".cmsPreview").css("display","block");
+        document.getElementById("cms-editor").style.display = "block";
+        var cmsPreviewElements = document.getElementsByClassName("cmsPreview");
+        for (var i = 0; i < cmsPreviewElements.length; i++) {
+            cmsPreviewElements[i].style.display = "block";
+        }
 
         //MODAL INFO WINDOW
         window.cms.modal = new tingle.modal({
@@ -98,64 +107,61 @@ $(document).ready(function(){
 })
 
 //Git management for new sections
-function gitPut(files, token){
-
-    if(window.cms.type==="github"){
-        var gitEndpoint ="https://api.github.com/repos/"+window.cms.repo+"/contents/content/";
+function gitPut(files, token) {
+    if (window.cms.type === "github") {
+        var gitEndpoint = "https://api.github.com/repos/" + window.cms.repo + "/contents/content/";
     }
 
     var file;
-    if(files.length){
+    if (files.length) {
         file = files.shift();
     }
 
-    if(!file){
+    if (!file) {
         return;
     }
     var url = gitEndpoint + file[0];
 
-    $.ajax({
-        'type': 'PUT',
-        'url': url,
-        'headers' : {
-        'Authorization' : 'Bearer ' + token,
+    fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
         },
-        'dataType': 'json',
-        'data': JSON.stringify({
-          'message': 'new section',
-          'content': window.btoa(file[1])
-        }),
-        statusCode: {
-            422: function(xhr) {
+        body: JSON.stringify({
+            'message': 'new section',
+            'content': window.btoa(file[1])
+        })
+    })
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            } else if (response.status === 422) {
                 window.cms.modal.setContent('<h1>Section exists</h1>');
                 window.cms.modal.open();
-            },
-            404: function(xhr) {
+            } else if (response.status === 404) {
                 window.cms.modal.setContent('<h1>Path not found</h1>');
                 window.cms.modal.open();
-            },
-            401: function(xhr) {
+            } else if (response.status === 401) {
                 window.localStorage.removeItem("netlify-cms-user");
                 window.localStorage.removeItem("token");
-                githubAuth(function(){
+                githubAuth(function () {
                     gitPut(files, window.localStorage.getItem("token"));
                 });
-                
             }
-        },
-        success: function (data, status) {
-            if(files.length===0){
+        })
+        .then(function (data) {
+            if (files.length === 0) {
                 window.cms.modal.setContent('<h1>Section has been created... Wait until site is rebuilt...</h1>');
                 window.cms.modal.open();
-            }else{
+            } else {
                 gitPut(files, token);
             }
-        },
-        error: function (xhr, desc, err) {
-            console.log("error: " + xhr.status + " " + desc);
+        })
+        .catch(function (error) {
+            console.log("error: " + error);
             gitPut(files, token);
-        } 
-    })
+        });
 }
 
 function createSection(lang, langs){
@@ -169,7 +175,7 @@ function createSection(lang, langs){
         langs = [lang]
     }
 
-    if(window.cms.type==="gitgateway" && $(".netlify-identity-button").first().text().toLowerCase()==="log in"){
+    if (window.cms.type === "gitgateway" && document.querySelector(".netlify-identity-button").textContent.toLowerCase() === "log in") {
         window.cms.modal.setContent('<h1>You are not logged</h1>');
         window.cms.modal.open();
         return;
@@ -180,28 +186,32 @@ function createSection(lang, langs){
     if(lang && path){
         path = path.replace("/"+lang+"/", "");
     }
-    var newSection = $("#sectionName").val();
+    var newSection = document.getElementById("sectionName").value;
     if(!newSection){
         window.cms.modal.setContent('<h1>Inform section name</h1>');
         window.cms.modal.open();
         return;
     }
 
-    var fnPush = function(token){
-        $.get("/admin/_index.md", function(data){
-            if(langs.length){
-                var files = [];
-                langs.map(function(v){
-                    data = data.replace("{{title}}",newSection).replace("{{lang}}",v);
-                    files.push([
-                        path + newSection + "/_index-" + v + ".md",
-                        data
-                    ]);
-                })
-                //gitPut(path + newSection + "/_index-" + v + ".md", data, token);
-                gitPut(files, token);
-            }
-        });
+    var fnPush = function(token) {
+        fetch("/admin/_index.md")
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(data) {
+                if (langs.length) {
+                    var files = [];
+                    langs.map(function(v) {
+                        data = data.replace("{{title}}", newSection).replace("{{lang}}", v);
+                        files.push([
+                            path + newSection + "/_index-" + v + ".md",
+                            data
+                        ]);
+                    });
+                    //gitPut(path + newSection + "/_index-" + v + ".md", data, token);
+                    gitPut(files, token);
+                }
+            });
     }
 
     var token = "";
