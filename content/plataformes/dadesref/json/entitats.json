@@ -187,10 +187,10 @@
         },
         {
             "Id": "dtarq101",
-            "Nom": "Departaments",
+            "Nom": "Departaments de l’Administració de la Generalitat de Catalunya",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de departaments en què s'organitza la Generalitat de Catalunya",
+            "Descripcio": "Llistat de departaments en què s’organitza l’Administració de la Generalitat de Catalunya.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -256,14 +256,14 @@
             "nom_dinsBD": "DEPARTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "26/10/2022"
+            "Data_actualitzacio": "29/05/2024"
         },
         {
             "Id": "dtarq102",
             "Nom": "Direccions generals",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de direccions generals en què s'organitzen els departaments de la Generalitat de Catalunya",
+            "Descripcio": "Llistat de direccions generals i assimilades orgànicament (per ex. direcció de serveis) en què s’organitzen els departaments de l’Administració de la Generalitat de Catalunya.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -417,16 +417,31 @@
                 },
                 {
                     "inom": "V11",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "La Direcció General d’Ecosistemes Forestals i Gestió del Medi passa a denominar-se Direcció General de Boscos i Gestió del Medi i La Direcció General de Qualitat Ambiental i Canvi Climàtic passa a denominar-se Direcció General de Canvi Climàtic i Qualitat Ambiental.",
+                    "ifitxer_doc": "deprecated/Direccions_Generals_V11_ATR.docx",
+                    "ifitxer_xls": "deprecated/Direccions_Generals_V11.xlsx",
+                    "idatacreacio": "27/03/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "29/05/2024",
+                    "idatapublicacio": "27/03/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V12",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "La Direcció General d’Ecosistemes Forestals i Gestió del Medi passa a denominar-se Direcció General de Boscos i Gestió del Medi i La Direcció General de Qualitat Ambiental i Canvi Climàtic passa a denominar-se Direcció General de Canvi Climàtic i Qualitat Ambiental.",
                     "ifitxer_doc": "Direccions_Generals_ATR.docx",
                     "ifitxer_xls": "Direccions_Generals.xlsx",
-                    "idatacreacio": "27/03/2024",
+                    "idatacreacio": "29/05/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "27/03/2024",
+                    "idatapublicacio": "29/05/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -434,7 +449,7 @@
             "nom_dinsBD": "DIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "27/03/2024"
+            "Data_actualitzacio": "29/05/2024"
         },
         {
             "Id": "dtarq192",
@@ -509,10 +524,10 @@
         },
         {
             "Id": "dtarq103",
-            "Nom": "Secretaries",
+            "Nom": "Secretaries Generals i sectorials",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de secretaries incloses dins de l'organigrama de la Generalitat de Catalunya",
+            "Descripcio": "Llistat de secretaries generals i sectorials en què s’organitzen els departaments de l’Administració de la Generalitat de Catalunya.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -645,20 +660,35 @@
             "Nom": "Subdireccions generals",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de subdireccions generals de la Generalitat de Catalunya, especificant la secretaria o la direcció General de la qual depenen.",
+            "Descripcio": "Llistat de subdireccions generals en què s’organitzen els departaments de l’Administració de la Generalitat de Catalunya.",
             "instancies": [
                 {
                     "inom": "V01",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "deprecated/Subdireccions_Generals_V01.xlsx",
+                    "idatacreacio": "27/03/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "29/05/2024",
+                    "idatapublicacio": "27/03/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
                     "ifitxer_xls": "Subdireccions_Generals.xlsx",
-                    "idatacreacio": "27/03/2024",
+                    "idatacreacio": "29/05/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "27/03/2024",
+                    "idatapublicacio": "29/05/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -666,7 +696,7 @@
             "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/03/2024",
-            "Data_actualitzacio": "27/03/2024"
+            "Data_actualitzacio": "29/05/2024"
         },
         {
             "Id": "dtarq90",
@@ -4206,16 +4236,31 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Catàleg Tècnic de Dades - Departament d'Empresa i Treball - Sub. Gral. de  Subdirecció General de Relacions Laborals i Qualitat en el Treball",
                     "idescripcio": "Actualització per incorporar la informació referent a l'any 2024.",
                     "ifitxer_doc": "Festius_generals_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Festius_generals_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Festius_generals_Catalunya_V03.xlsx",
                     "idatacreacio": "25/07/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "29/05/2024",
                     "idatapublicacio": "26/07/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Catàleg Tècnic de Dades - Departament d'Empresa i Treball - Sub. Gral. de  Subdirecció General de Relacions Laborals i Qualitat en el Treball",
+                    "idescripcio": "Actualització per incorporar la informació referent a l'any 2025.",
+                    "ifitxer_doc": "Festius_generals_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Festius_generals_Catalunya.xlsx",
+                    "idatacreacio": "29/05/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/05/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Festius-generals-de-Catalunya/8qnu-agns",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -4223,7 +4268,7 @@
             "nom_dinsBD": "FESTIUS_GENERALS_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/04/2022",
-            "Data_actualitzacio": "26/07/2023"
+            "Data_actualitzacio": "29/05/2024"
         },
         {
             "Id": "dtarq170",
@@ -4448,6 +4493,90 @@
             "Classificacio": "Pendent",
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
+        },
+        {
+            "Id": "dtarq200",
+            "Nom": "Eixos del Pla de Govern",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat dels diferents eixos que formen part de l'estructura del Pla de Govern de la legislatura XIV. El Pla de Govern és el pla estratègic de legislatura, que recull els objectius i les línies d’actuació més destacades que impulsarà el Govern, més enllà de la seva activitat.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de presidència / DG de Coordinació Interdepartamental",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Eixos_Pla_Govern_ATR.docx",
+                    "ifitxer_xls": "Eixos_Pla_Govern.xlsx",
+                    "idatacreacio": "29/05/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/05/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Eixos-del-Pla-de-Govern/awf5-brvq",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "EIXOS_PLA_DE_GOVERN",
+            "Classificacio": "Vigent",
+            "Data_publicacio": "29/05/2024",
+            "Data_actualitzacio": "29/05/2024"
+        },
+        {
+            "Id": "dtarq201",
+            "Nom": "Objectius del Pla de Govern",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat dels diferents àmbits que formen part de l'estructura del pla de govern de la legislatura XIV. El Pla de Govern és el pla estratègic de legislatura, que recull els objectius i les línies d’actuació més destacades que impulsarà el Govern, més enllà de la seva activitat ordinària.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de presidència / DG de Coordinació Interdepartamental",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Objectius_Pla_Govern_ATR.docx",
+                    "ifitxer_xls": "Objectius_Pla_Govern.xlsx",
+                    "idatacreacio": "29/05/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/05/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Objectius-del-Pla-de-Govern/7ski-twkd",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "OBJETIUS_PLA_DE_GOVERN",
+            "Classificacio": "Vigent",
+            "Data_publicacio": "29/05/2024",
+            "Data_actualitzacio": "29/05/2024"
+        },
+        {
+            "Id": "dtarq202",
+            "Nom": "Àmbits del Pla de Govern",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat dels diferents àmbits que formen part de l'estructura del pla de govern de la legislatura XIV. El Pla de Govern és el pla estratègic de legislatura, que recull els objectius i les línies d’actuació més destacades que impulsarà el Govern, més enllà de la seva activitat ordinària.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de presidència / DG de Coordinació Interdepartamental",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Ambits_Pla_Govern_ATR.docx",
+                    "ifitxer_xls": "Ambits_Pla_Govern.xlsx",
+                    "idatacreacio": "29/05/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/05/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/%C3%80mbits-del-Pla-de-Govern/fb4y-5nhd",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "AMBITS_PLA_DE_GOVERN",
+            "Classificacio": "Vigent",
+            "Data_publicacio": "29/05/2024",
+            "Data_actualitzacio": "29/05/2024"
         }
     ]
 }
