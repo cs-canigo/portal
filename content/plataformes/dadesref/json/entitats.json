@@ -435,7 +435,7 @@
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
-                    "idescripcio": "La Direcció General d’Ecosistemes Forestals i Gestió del Medi passa a denominar-se Direcció General de Boscos i Gestió del Medi i La Direcció General de Qualitat Ambiental i Canvi Climàtic passa a denominar-se Direcció General de Canvi Climàtic i Qualitat Ambiental.",
+                    "idescripcio": "Evolucionar la DR amb l'actualització de la descripció compartida per la UPR i es modifica el nom de dues direccions generals d'identificadors(4910,21721)",
                     "ifitxer_doc": "Direccions_Generals_ATR.docx",
                     "ifitxer_xls": "Direccions_Generals.xlsx",
                     "idatacreacio": "29/05/2024",
@@ -682,7 +682,7 @@
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
-                    "idescripcio": "Versió inicial",
+                    "idescripcio": "Evolucionar la DR amb l'actualització de la descripció compartida per la UPR, es modifica el nom de tres direccions generals d'identificadors(14092,10869,16212) i una nova(23190)",
                     "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
                     "ifitxer_xls": "Subdireccions_Generals.xlsx",
                     "idatacreacio": "29/05/2024",
@@ -4471,7 +4471,7 @@
             "Nom": "Àmbits territorials de planificació",
             "Ambit": "Territori, infraestructures i urbanisme",
             "Subambit": "Ordenació del territori , paisatge i urbanisme",
-            "Descripcio": "Àmbits territorials de planificació, 7 arees",
+            "Descripcio": "Àmbits territorials de planificació, 8 arees",
             "instancies": [
                 {
                     "inom": "V00.01",
@@ -4505,7 +4505,7 @@
                     "inom": "V01",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "Departament de presidència / DG de Coordinació Interdepartamental",
+                    "ipromotor": "Departament de presidència - DG de Coordinació Interdepartamental",
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "Eixos_Pla_Govern_ATR.docx",
                     "ifitxer_xls": "Eixos_Pla_Govern.xlsx",
@@ -4513,7 +4513,7 @@
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
                     "idatapublicacio": "29/05/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Eixos-del-Pla-de-Govern/awf5-brvq",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Eixos-del-Pla-de-Govern/awf5-brvq",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
@@ -4533,7 +4533,7 @@
                     "inom": "V01",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "Departament de presidència / DG de Coordinació Interdepartamental",
+                    "ipromotor": "Departament de presidència - DG de Coordinació Interdepartamental",
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "Objectius_Pla_Govern_ATR.docx",
                     "ifitxer_xls": "Objectius_Pla_Govern.xlsx",
@@ -4541,7 +4541,7 @@
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
                     "idatapublicacio": "29/05/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Objectius-del-Pla-de-Govern/7ski-twkd",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Objectius-del-Pla-de-Govern/7ski-twkd",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
@@ -4561,7 +4561,7 @@
                     "inom": "V01",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "Departament de presidència / DG de Coordinació Interdepartamental",
+                    "ipromotor": "Departament de presidència - DG de Coordinació Interdepartamental",
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "Ambits_Pla_Govern_ATR.docx",
                     "ifitxer_xls": "Ambits_Pla_Govern.xlsx",
@@ -4569,7 +4569,7 @@
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
                     "idatapublicacio": "29/05/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/%C3%80mbits-del-Pla-de-Govern/fb4y-5nhd",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/-mbits-del-Pla-de-Govern/fb4y-5nhd",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
