@@ -4467,34 +4467,6 @@
             "Data_actualitzacio": "29/04/2024"
         },
         {
-            "Id": "dtarq104",
-            "Nom": "Àmbits territorials de planificació",
-            "Ambit": "Territori, infraestructures i urbanisme",
-            "Subambit": "Ordenació del territori , paisatge i urbanisme",
-            "Descripcio": "Àmbits territorials de planificació, 8 arees",
-            "instancies": [
-                {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
-                    "itipus": "Tabular",
-                    "ipromotor": "DGAD",
-                    "idescripcio": "Versió inicial",
-                    "ifitxer_doc": "Ambits_territorials_planificacio_ATR.docx",
-                    "ifitxer_xls": "",
-                    "idatacreacio": "29/04/2024",
-                    "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
-                    "idatapublicacio": "29/04/2024",
-                    "iurl_dades_obertes": "",
-                    "itipusactualitzacio": "Sota demanda"
-                }
-            ],
-            "nom_dinsBD": "AMBIT_TERRITORIALS_PLANIFICACIO",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "29/04/2024",
-            "Data_actualitzacio": "29/04/2024"
-        },
-        {
             "Id": "dtarq200",
             "Nom": "Eixos del Pla de Govern",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -4577,6 +4549,34 @@
             "Classificacio": "Vigent",
             "Data_publicacio": "29/05/2024",
             "Data_actualitzacio": "29/05/2024"
+        },
+        {
+            "Id": "dtarq104",
+            "Nom": "Àmbits territorials de planificació",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Ordenació del territori , paisatge i urbanisme",
+            "Descripcio": "Àmbits territorials de planificació, 8 arees",
+            "instancies": [
+                {
+                    "inom": "V00.01",
+                    "iestat": "Pendent",
+                    "itipus": "Tabular",
+                    "ipromotor": "DGAD",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Ambits_territorials_planificacio_ATR.docx",
+                    "ifitxer_xls": "",
+                    "idatacreacio": "29/04/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/04/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "AMBIT_TERRITORIALS_PLANIFICACIO",
+            "Classificacio": "Pendent",
+            "Data_publicacio": "29/04/2024",
+            "Data_actualitzacio": "29/04/2024"
         }
     ]
 }
