@@ -1,0 +1,26 @@
+{{ range .Site.Sections }}
+    {{ if and 
+        (ne .Name "Mapa web") 
+        (ne .Name "Destacats") 
+        (ne .Name "Comunicats") 
+        (ne .Name "Drafts")
+        (ne .Name "Documentacio")
+        (ne .Name "Descripcio-arquitectura")
+        (ne .Name "Destacats-related")
+        (ne .Name "Centre-de-suport-related")
+        (ne .Name "Comunicats_antics")
+        (ne .Name "Noticies")
+        (ne .Name "Howtos")
+        (ne .Name "Guies")
+    }}
+        {{ .Name }} <br ><!-- Page corresponding to current iteration, i.e. a Section -->
+        {{ range .Sections }}
+            &nbsp;&nbsp;{{ .Name }} <!-- Page corresponding to current iteration, i.e. a Section -->
+            <br />
+        {{ end }}
+        {{ range .Pages }}
+            &nbsp;&nbsp;{{ .Name }} <!-- Page corresponding to current iteration, i.e. a Section -->
+            <br />
+        {{ end }}        
+    {{ end }}
+{{ end }}

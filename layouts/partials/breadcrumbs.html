@@ -21,6 +21,8 @@
 <li class="NG__breadcrumb_item">
 	{{ if isset .Params "title_breadcrumbs" }}
 		{{ .Params.title_breadcrumbs }}
+	{{ else if eq .LinkTitle "404 Page not found" }}
+		Pàgina no trobada
 	{{ else }}
 		{{ .LinkTitle }}
 	{{ end }}
