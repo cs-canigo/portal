@@ -8,7 +8,8 @@ var getConfigKey = function(data, key){
     return matches[1];
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
+    console.log("loadind cms...")
     //Gets config type to adapt cms in frontend
     fetch("/admin/config.yml?" + (+new Date()))
         .then(response => response.text())
@@ -56,28 +57,28 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         
-        if(currentHost.indexOf(":")>-1){
+        /*if(currentHost.indexOf(":")>-1){
             currentHost = currentHost.slice(0, currentHost.indexOf(":"));
-        }
+        }*/
 
         //attach cms=true param to internal links
         const links = document.querySelectorAll("a");
-        links.forEach(link => {
-            if(this.hostname===currentHost && this.href.indexOf("/admin/#/")===-1 && this.href.indexOf("?cms=true")===-1){
-                this.href = this.href + "?cms=true";
+        links.forEach(link => { 
+            if((link.href.indexOf("http://"+currentHost)===0 || link.href.indexOf("https://"+currentHost)===0) && link.href.indexOf("/admin/#/")===-1 && link.href.indexOf("?cms=true")===-1){
+                link.href = link.href + "?cms=true";
             }
         })
 
         //Bind events to button and input text to create section
-        document.getElementById("sectionNameButton").addEventListener("click", function(){
+        /*document.getElementById("sectionNameButton").addEventListener("click", function(){
             createSection(window.cms.currentlang, window.cms.langs);
-        })
+        })*/
 
-        document.getElementById("sectionName").addEventListener("keyup", function(event) {
+        /*document.getElementById("sectionName").addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
                 createSection(window.cms.currentlang, window.cms.langs);
             }
-        });
+        });*/
 
         //show cms on footer and sections hidden when cms param not true
         document.getElementById("cms-editor").style.display = "block";
