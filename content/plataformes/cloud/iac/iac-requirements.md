@@ -91,8 +91,7 @@ resource "aws_ecs_task_definition" "ecs_task" {
 
 #### AWS
 
-En cas que les funcions Lambda a desplegar superin els 50MB de tamany, pel desplegament cal recolzar-se en un **bucket S3** per a l'emmagatzematge dels fitxers de la funció. Serà responsabilitat de l'aplicació aprovisionar aquest bucket, el qual haurà d'especificar-se en la invocació del workflow de CD de funcions Lambda. Més informació a . El nom del bucket ha de seguir la nomenclatura "" per tal que el workflow de CD tingui permissos per a desplegar-ne continguts. 
-
+En cas que les funcions Lambda a desplegar superin els 50MB de tamany, pel seu desplegament cal recolzar-se en un **bucket S3** per a l'emmagatzematge dels fitxers de la funció. Com a part de la infraestructura base creara per l'aplicació (ACOCLDSIC) s'haurà creat aquest bucket, el nom del qual haurà d'especificar-se en la invocació del workflow de CD. Més informació a [Workflows - Function CD](/drafts/ghec/gh-definicio-workflows#function-cd-function-cdyaml).
 
 ## Nomenclatura
 
