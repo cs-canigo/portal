@@ -53,9 +53,39 @@ Això és així degut a que els workflows de CI/CD d'infraestructura fan ús de 
 
 ### Plataformes de contenidors
 
-Cal especificar en la definició del Terraform que s'ignorin els canvis en la imatge del contenidor per evitar la recreació del recurs en cada desplegament de la infraestructura. Les noves versions dels contenidors es desplegaran mitjançant el workflow de CD d'aplicació, no del CD d'infraestructura:
+Cal especificar en la definició del Terraform que s'ignorin els canvis en la imatge del contenidor per evitar la recreació del recurs en cada desplegament de la infraestructura. Les noves versions dels contenidors es desplegaran mitjançant el workflow de CD d'aplicació, no del CD d'infraestructura.
 
-TO DO
+#### Container Apps (Azure)
+
+```hcl
+resource "azurerm_container_app" "app" {
+
+  // ... omitted for brevity ...
+  
+  // Ignore versions deployed by Infraestructure CD workflow
+  lifecycle {
+    ignore_changes = [template[0].container[0].image]
+  }
+
+  // ... omitted for brevity ...
+
+}
+```
+
+#### ECS (AWS)
+
+```hcl
+resource "aws_ecs_task_definition" "ecs_task" {
+
+  // ... omitted for brevity ...
+
+  // Ignore versions deployed by Infraestructure CD workflow, only track latest task revision managed by Application CD workflow
+  track_latest = true
+
+  // ... omitted for brevity ...
+
+}
+```
 
 ### Funcions
 
