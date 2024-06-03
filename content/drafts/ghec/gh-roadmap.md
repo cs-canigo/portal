@@ -21,11 +21,13 @@ sections    = ["GHEC"]
 - :heavy_check_mark: Certificació desplegament de llibreries Maven/Npm​
 - :heavy_check_mark: Certificació desplegaments contenidors a Azure Container Apps​
 - :heavy_check_mark: Certificació desplegaments funcions a AWS Lambda
-- (En progrés) Certificació desplegaments funcions a Azure Functions
-- (En progrés) Certificació desplegaments continguts estàtics a AWS S3 i Azure Blob Storage​
+- :heavy_check_mark: Certificació desplegaments continguts estàtics a AWS S3
+- :heavy_check_mark: Certificació desplegaments funcions a Azure Functions
+- (En progrés) Certificació desplegaments continguts estàtics a Azure Blob Storage​
+- (En progrés) Pilot integració Marc d'Automatització de Testing (MAT)
+- (To do) Pilot integració Marc d'Automatització d'Observabilitat (MAO)​
 - (To do) Definició model desplegaments delegats (en màquines virtuals) i PoC​
 - (To do) Definició model desplegament bases de dades i PoC​
-- (To do) Pilot integració Marc d'Automatització de Testing (MAT) i Marc d'Automatització d'Observabilitat (MAO)​
 - (En progrés) Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
 
 ## [Q3/Q4 2024] 1.1.0​
