@@ -1,4 +1,52 @@
+
+<!--ul class="list-group llistat_enllacos_filet_cont col-sm-4 pull-left">
+    {{ range .Site.Sections }}
+        {{ if and 
+            (ne .Name "Mapa web") 
+            (ne .Name "Destacats") 
+            (ne .Name "Comunicats") 
+            (ne .Name "Drafts")
+            (ne .Name "Documentacio")
+            (ne .Name "Descripcio-arquitectura")
+            (ne .Name "Destacats-related")
+            (ne .Name "Centre-de-suport-related")
+            (ne .Name "Comunicats_antics")
+            (ne .Name "Howtos")
+            (ne .Name "Guies")
+        }}
+            <li class="list-group-item">
+                <a href="{{.Permalink}}">{{ .Name }}</a> 
+
+                <ul>
+                {{ range .Sections }}
+                    <li class="list-group-item">
+                        <a href="{{.Permalink}}">{{ .Name }}</a> 
+                    </li>
+                {{ end }}
+
+                {{ if and 
+                    (ne .Name "Blog") 
+                    (ne .Name "Noticies")
+                }}
+                    {{ range .Pages }}
+                        {{ if ne .File.BaseFileName "_index" }}
+                        <li class="list-group-item">
+                            <a href="{{.Permalink}}">{{ .Name }}</a> 
+                        </li>
+                        {{end}}
+                    {{ end }}
+                {{ end }}
+                </ul>
+            </li>
+
+        {{ end }}
+    {{ end }}
+</ul-->
+
+
+
 {{ range .Site.Sections }}
+
     {{ if and 
         (ne .Name "Mapa web") 
         (ne .Name "Destacats") 
@@ -9,18 +57,56 @@
         (ne .Name "Destacats-related")
         (ne .Name "Centre-de-suport-related")
         (ne .Name "Comunicats_antics")
-        (ne .Name "Noticies")
         (ne .Name "Howtos")
         (ne .Name "Guies")
     }}
-        {{ .Name }} <br ><!-- Page corresponding to current iteration, i.e. a Section -->
-        {{ range .Sections }}
-            &nbsp;&nbsp;{{ .Name }} <!-- Page corresponding to current iteration, i.e. a Section -->
-            <br />
-        {{ end }}
-        {{ range .Pages }}
-            &nbsp;&nbsp;{{ .Name }} <!-- Page corresponding to current iteration, i.e. a Section -->
-            <br />
-        {{ end }}        
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="distribuidora-item ">
+
+                <p>
+                    <a class="distribuidora-item-link" href="{{.Permalink}}" title="{{ .Name }}">
+                        {{ .Name }}
+                    </a>
+
+                    <ul class="list-group">
+                        {{ range .Sections }}
+                            <li class="list-group-item">
+                                <img src="/img/icona-24-dark-chevron-right-thin-b.svg" alt="">
+                                <div><a href="{{.Permalink}}">{{ .Name }}</a> </div>
+                            </li>
+                        {{ end }}
+        
+                        {{ if and 
+                            (ne .Name "Blog") 
+                            (ne .Name "Noticies")
+                        }}
+                            {{ range .Pages }}
+                                {{ if ne .File.BaseFileName "_index" }}
+                                <li class="list-group-item">
+                                    <img src="/img/icona-24-dark-chevron-right-thin-b.svg" alt="">
+                                    <div><a href="{{.Permalink}}">{{ .Name }}</a></div> 
+                                </li>
+                                {{end}}
+                            {{ end }}
+                        {{ else }}
+                            {{ range first 7 .Pages }}
+                                {{ if ne .File.BaseFileName "_index" }}
+                                <li class="list-group-item">
+                                    <img src="/img/icona-24-dark-chevron-right-thin-b.svg" alt="">
+                                    <div><a href="{{.Permalink}}">{{ .Name }}</a></div> 
+                                </li>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </ul>                    
+                </p>
+
+            </div>
+
+        </div>
+
     {{ end }}
+
 {{ end }}
+

@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>{{ .Site.Title }}</title>
+	<title>{{.Title}}. {{ .Site.Title }}</title>
 	<meta name="robots" content="noindex,follow" />
 	{{ partial "head.html" . }}
 
@@ -56,10 +56,10 @@
 
 						{{ if and (ne $section "noticies") (ne $section "mapa web") (ne $section (.Site.Params.blog_section)) }}
 
-						<div class="fpca_distribuidora_2">
-							<div class="fpca_distribuidora_2_estil1">
-								<div class="pd-15">
-									<div class="NG-container">
+									<div class="fpca_distribuidora_2">
+										<div class="fpca_distribuidora_2_estil1">
+											<div class="pd-15">
+												<div class="NG-container">
 
 										{{ partial "section/colors.html" . }}
 
@@ -68,8 +68,8 @@
 							{{ partial "section/posts.html" . }}
 
 						{{ else if eq $section "mapa web" }}
-										<div class="fpca_llista formatter_body" id="llista_1e424f7a-e6b1-11e5-989e-005056924a59_1e424f7b-e6b1-11e5-989e-005056924a59">
-											<div class="llistat_destacat_noticies mes_actualitat pd-15 pd-30 llista-tipus-7">
+										<div class="fpca_distribuidora_2">
+											<div class="fpca_distribuidora_2_estil1">
 												<div class="pd-15">
 													<div class="NG-container">
 												{{ partial "section/mapa.html" . }}
