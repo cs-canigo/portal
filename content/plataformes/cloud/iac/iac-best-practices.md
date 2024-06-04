@@ -1,11 +1,21 @@
-+++
-date        = "2024-04-02"
-title       = "Bones pràctiques IaC"
-description = "Bones pràctiques en infraestructura com a codi (IaC) amb Terraform"
-sections    = "[IAC]"
-categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
-weight      = 2
-+++
+---
+title: Bones pràctiques IaC
+description: Bones pràctiques en infraestructura com a codi (IaC) amb Terraform
+date: 2024-04-02
+sections: "[IAC]"
+categories:
+  - cloud
+  - docker
+  - container
+  - paas
+  - aws
+  - azure
+  - gcloud
+  - devops
+  - iac
+  - terraform
+weight: 2
+---
 
 ## Bones Pràctiques en Infraestructura com a Codi (IaC)
 
@@ -105,21 +115,21 @@ Per a una implementació efectiva de la infraestructura com a codi, a més de la
 
 *	Configuració de **múltiples providers**: En el cas de ser necessari, és possible utilitzar múltiples providers en una mateixa configuració, per a un mateix proveïdor Cloud, fent ús d'àlies, podent desplegar recursos en regions diferents, la qual cosa aporta flexibilitat i control sobre la distribució dels recursos. Per exemple, a AWS, hi ha alguns serveis que s'han de desplegar a North Virginia obligatòriament, això fa que, si la infraestructura s'està desplegant a Frankfurt, sigui necessari utilitzar múltiples providers, i indicar amb què provider cal crear cada recurs, per així evitar haver de llançar dues configuracions diferents:
 
-  ```
-  provider "aws" {
-    region = "eu-central-1"
-  }
+    ```
+    provider "aws" {
+      region = "eu-central-1"
+    }
 
-  provider "aws" {
-    alias  = "north-virginia"
-    region = "us-east-1"
-  }
+    provider "aws" {
+      alias  = "north-virginia"
+      region = "us-east-1"
+    }
 
-  resource " aws_wafv2_web_acl " "web_acl" {
-    provider = aws.us-west
-    ...
-  }
-  ```
+    resource " aws_wafv2_web_acl " "web_acl" {
+      provider = aws.us-west
+      ...
+    }
+    ```
 
 *	Utilització de **"for_each"** per davant de "count" per a la creació dinàmica de recursos: Utilitzar "for_each" en lloc de "count" permet iterar sobre un mapa de recursos en lloc d'una llista, la qual cosa ofereix major flexibilitat i control sobre els recursos creats. Això vol dir, que, si cal crear múltiples recursos d'un mateix tipus, i s'utilitza count, prenent com a valor el nombre d'elements d'una llista, com l'iterador és numèric, si s'eliminés un element intermedi de la llista, s'actualitzarien tots els recursos creats després d'aquest "índex", però, si en el seu lloc s'utilitza "for_each", on s'anirà utilitzant un element de la llista/mapa directament, si s'esborra un element intermedi de la llista, la resta no es veuen afectats, ja que no hi ha un iterador numèric.
 
