@@ -122,23 +122,34 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
 
     Per a aquestes 4 fases de validació del producte, el workflow s'integrarà amb la nova eina de Qualitat de CTTI anomenada **Marc d'Automatització de Testing (MAT)** la qual disposarà de les eines necessàries **as a Service** per a realitzar les proves indicades.
 
-    Aquesta integració es realitzarà mitjançant invocacions a l'API que expossa el MAT:
+    Aquesta integració es realitzarà mitjançant invocacions al action de M.A.T **ctti-actions/trigger-actions-to-mat@v1** els paràmetres d'entrada dels quals són :
 
-    * Interfície d'integració:
-        * IN
-            + URL MAT
-            + NOM DEL COMPONENT
-            + USUARI
-            + TOKEN
-            + URL REPOSITORI COMPONENT
-            + ENTORN
-            + BRANCA
-            + URLAPP
-            
-        * OUT
-            + EXIT CODE : 0 - SUCCESS; 1 - FAILURE
-            + LOG
+    + urljenkins: URL de la feina de Jenkins.
+    + token: Token d'accés al repositori de Github per obtenir els tests 
+    + user: El nom d'usuari per a l'autenticació bàsica HTTP al orquestador MAT
+    + password: La contrasenya (o testimoni) per a l'autenticació bàsica HTTP al orquestador MAT.
+    + job: El nom de la feina cuyos els valors actuals dels quals són (actualment) :  
+        + MAT-PROVES-FUNCIONAL-SELENIUM : Per realitzar proves funcionals.
+        + MAT-PROVES-RENDIMENT-JMETER : Per a l'execució de proves de Rendiment.
+    	+ MAT-PROVES-SEGURETAT-ZAP : Per a l'execució de proves de seguretat.
+        
+    + params: Paràmetres de la feina en format Json depenent de la prova :
+        + repositori : repositori on hi haurà els tests de l'aplicació
+        + entorn : Entorn on s'executaran els tests 
+            + Desenvolupament
+            + Integracio
+            + Preproduccio
+            + Produccio
+        + rama: Branch d' on obtenir els tests
+        + urlApp : URL de l'aplicació
+        + umbraldev : Llindar de proves
+        + jiraproject : Projecte Jira
+        + jiratestplan: Pla de proves d'emissió Jira
 
+        exemple :         
+        '{"repositorio":"http://gitea.gitea/devsecops/functional-test.git", "entorno":"Integracio", "urlapp":"https://qualitat.solucions.gencat.cat/","rama":"master"}'
+
+    
 ### Worfklows de Continuous Integration (CI) per a infraestructura (IaC).
 
 Es torna a apostar (depenent de la branca) per l'ús de Pull Request per realitzar un commit a branques (develop, release, master/main).
