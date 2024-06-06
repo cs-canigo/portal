@@ -406,6 +406,7 @@ En cas de **java** :
 * java_version:  Versió de JDK, exemple: 17.
 * java_distribution : Distribució JAVA, exemple : temurin.
 * maven_version: Versió de Maven utilitzada.
+* sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).
 
 En cas de **nodejs**: 
 * node_version:  Versió de Node.
@@ -421,6 +422,7 @@ En cas de **java** :
 * java_version:  Versió de JDK, exemple: 17.
 * java_distribution : Distribució JAVA, exemple : temurin.
 * maven_version: Versió de Maven utilitzada.
+* sonar_exclusions : llistat de directoris a excloure a l'scanner de SonarQube, separats per "," (no afegir espais).      
 
 En cas de **nodejs**: 
 * node_version:  Versió de Node.
@@ -434,11 +436,12 @@ En cas de **nodejs**:
     * nodejs
 * cloud : Seleccionar en quin Proveïdor Cloud es desplegarà la function que es generi.  Actualment els valors disponibles són :
     * aws              
+    * azure
 * engine : Seleccionar que tipus de funció es desplegarà. Actualment els valors són :
     * lambda : Functions de AWS.
     * afunc : Functions de Azure.
 
-* bucket_name : Si el pes de la funció supera els 50MB, i es una función Lambda,  AWS requereix que es desplegui des d'un bucket S3 pel que és necessari introduïr el nom del bucket i descomentar la propietat. Altrament, es deixa la propietat comentada.
+* storage_name : Si el pes de la funció supera els 50MB, i es una función Lambda,  AWS requereix que es desplegui des d'un bucket S3 pel que és necessari introduïr el nom del bucket i descomentar la propietat. Altrament, es deixa la propietat comentada.
 
 Depenent dels valors seleccionats anteriorment, s'informaran les següents variables :
 En cas de **technology = java**  
@@ -446,13 +449,11 @@ En cas de **technology = java**
 * group_id : Descomentar i afegir el group_id que es troba al fitxer pom.xml
 
 
-
 ### Workflows CI/CD per a Contingut estàtic
 
 #### Static CI on PR (static-ci-on-pr.yaml) 
 * technology : Es triarà entre les dues tecnologies disponibles actualment :
-    * nodejs
-    
+    * nodejs    
 
 Una vegada seleccionada la tecnologia, s' informaran les variables d' aquesta tecnologia.
 En cas de **nodejs**: 
@@ -473,10 +474,14 @@ En cas de **nodejs**:
 * Comentar l'entorn retorn si no hi ha entorn de desenvolupament.
 * technology : Es triarà entre les dues tecnologies disponibles actualment :
     * nodejs
+
 * cloud : Seleccionar en quin Proveïdor Cloud es desplegarà el contingut estàtic que es generi.  Actualment els valors disponibles són :
     * aws              
+    * azure
+
 * engine : Seleccionar que tipus de contingut estàtic es desplegarà. Actualment els valors són :
     * s3 : Contingut estàtic de AWS.
+    * ablobstorage :  Contingut estàtic de Azure.
 
 * storage_name : Nom tècnic del Bucket o Azure Blob Storage.
 * source : Path origen on es desplega el contingut estàtic.
