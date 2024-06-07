@@ -279,6 +279,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
       Resultat de l'operació :
         * Codi desplegat a l'entorn de Desenvolupament per a la seva validació.
+        * Creació de TAG de repositori <<tag-repositori-actual>>-development per a propòsits de rollback automàtic. Exemple "0.0.1-SNAPSHOT-development".
 
   3. **Integració en branca release des de develop**
      Un cop validat el codi en l'entorn de desenvolupament, el desenvolupador pot promocionar-lo a la branca Release i així poder desplegar-lo posteriorment al pas 4.
@@ -323,6 +324,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
 
         Resultat de l'operació :
         * Codi desplegat a l'entorn de Preproducció per a la seva validació. [Pendent] Es realitzaran validacions mitjançant la integració amb el Marc d'Automatització de Testing (MAT) i MAM (Marc d'Automatització de Monitoratge).  
+        * Creació de TAG de repositori <<tag-repositori-actual>>-preproduction per a propòsits de rollback automàtic. Exemple "0.0.1-RC-preproduction".
 
               
   5. **Integració en branca master des de release**
@@ -370,6 +372,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
               
       Resultat de l'operació :
         * Codi desplegat a l'entorn de Producció.
+        * Creació de TAG de repositori <<tag-repositori-actual>>-production per a propòsits de rollback automàtic. Exemple "0.0.1-production".
 
       
 + **Exemple de model de treball per a CI/CD per a Infraestructura**
@@ -424,6 +427,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
         Resultat de l'operació :
         * Infraestructura desplegada a l'entorn de desenvolupament.  
+        * Creació de TAG de repositori <<tag-repositori-actual>>-development per a propòsits de rollback automàtic. Exemple "0.0.1-SNAPSHOT-development".
 
   3. **Integració en branca release des de develop.**
     L' usuari, un cop validada la infraestructura en l' entorn de desenvolupament, es disposa a Integrar els seus canvis en release.
@@ -470,6 +474,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
         Resultat de l'operació :
         * Infraestructura desplegada a l'entorn de Preproducció.  
+        * Creació de TAG de repositori <<tag-repositori-actual>>-preproduction per a propòsits de rollback automàtic. Exemple "0.0.1-RC-preproduction".
 
   5. **Integració en branca master des de release**
     L'usuari, un cop validat que els canvis han funcionat a l'entorn de Release, es disposa a promocionar els canvis a la branca master.
@@ -517,6 +522,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
       Resultat de l'operació :
         * Infraestructura desplegada a l'entorn de Producció.  
+        * Creació de TAG de repositori <<tag-repositori-actual>>-production per a propòsits de rollback automàtic. Exemple "0.0.1-production".
 
 + **Exemple de model de treball per a CI/CD d'una Function**
 
@@ -569,6 +575,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
       Resultat de l'operació :
         * Function desplegat a l'entorn de Desenvolupament per a la seva validació.
+        * Creació de TAG de repositori <<tag-repositori-actual>>-development per a propòsits de rollback automàtic. Exemple "0.0.1-SNAPSHOT-development".
 
   3. **Integració en branca release des de develop**
      Un cop validat el codi en l'entorn de desenvolupament, el desenvolupador pot promocionar-lo a la branca Release i així poder desplegar-lo posteriorment al pas 4.
@@ -618,6 +625,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
 
         Resultat de l'operació :
         * Function desplegat a l'entorn de Preproducció per a la seva validació. [Pendent] Es realitzaran validacions mitjançant la integració amb el Marc d'Automatització de Testing (MAT) i MAM (Marc d'Automatització de Monitoratge).  
+        * Creació de TAG de repositori <<tag-repositori-actual>>-preproduction per a propòsits de rollback automàtic. Exemple "0.0.1-RC-preproduction".
 
               
   5. **Integració en branca master des de release**
@@ -668,6 +676,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
               
       Resultat de l'operació :
         * Function desplegat a l'entorn de Producció.
+        * Creació de TAG de repositori <<tag-repositori-actual>>-production per a propòsits de rollback automàtic. Exemple "0.0.1-production".
 
 + **Exemple de model de treball per a CI/CD d'un contingut estàtic**
 
@@ -720,6 +729,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
                               
       Resultat de l'operació :
         * Contingut estàtic desplegat a l'entorn de Desenvolupament per a la seva validació.
+        * Creació de TAG de repositori <<tag-repositori-actual>>-development per a propòsits de rollback automàtic. Exemple "0.0.1-SNAPSHOT-development".
 
   3. **Integració en branca release des de develop**
      Un cop validat el codi en l'entorn de desenvolupament, el desenvolupador pot promocionar-lo a la branca Release i així poder desplegar-lo posteriorment al pas 4.
@@ -767,6 +777,7 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
 
         Resultat de l'operació :
         * Contingut estàtic desplegat a l'entorn de Preproducció per a la seva validació. [Pendent] Es realitzaran validacions mitjançant la integració amb el Marc d'Automatització de Testing (MAT) i MAM (Marc d'Automatització de Monitoratge).  
+        * Creació de TAG de repositori <<tag-repositori-actual>>-preproduction per a propòsits de rollback automàtic. Exemple "0.0.1-RC-preproduction".
 
               
   5. **Integració en branca master des de release**
@@ -815,3 +826,4 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
               
       Resultat de l'operació :
         * Contingut estàtic desplegat a l'entorn de Producció.
+        * Creació de TAG de repositori <<tag-repositori-actual>>-production per a propòsits de rollback automàtic. Exemple "0.0.1-production".
