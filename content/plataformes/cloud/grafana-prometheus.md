@@ -19,8 +19,8 @@ En primer lloc, s’ha de sol·licitar a Suport Cloud, pels canals oficials de c
  
 L' estructura del repositori ha de ser similar al d'altres aplicacions. Els fitxers s'han de situar en la branca màster per a que es pugui desplegar mitjançant SIC i ha d' existir un directori anomenat sic en el qual es trobarà el fitxer aca.yaml. S' enllacen els fitxers aca.yaml que poden ser utilitzats com a referència per al desplegament dels serveis: 
 
-* [Fitxer aca.yaml per a Grafana](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/aca-grafana.yaml)
-* [Fitxer aca.yaml per a Prometheus](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/aca-prometheus.yaml)
+* [Fitxer aca.yaml per a Grafana](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/aca-grafana.yaml)
+* [Fitxer aca.yaml per a Prometheus](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/aca-prometheus.yaml)
 
 Al fitxer aca.yaml s'enllaça la url del repositori dels orquestradors a desplegar, com es pot veure a la línia 11 dels fitxers aca.yaml enllaçats. S'adjunta una imatge d'un repositori a mode d' exemple.
 
@@ -36,17 +36,17 @@ Per realitzar el desplegament de tots els components requerits pels serveis de g
 
 S'han de desplegar els següents components: ruta, role, servei, statefulset, configmaps i secret. Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
-* [Grafana Configmap 1](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-configmap1.yaml)
-* [Grafana Configmap 2](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-configmap2.yaml)
-* [Grafana Configmap 3](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-configmap3.yaml)
-* [Grafana Configmap 4](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-configmap4.yaml)
-* [Grafana Configmap 5](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-configmap5.yaml)
-* [Grafana PVC](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-pvc-cpd2-cpd3.yaml)
-* [Grafana Role](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-role.yaml)
-* [Grafana Route](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-route.yaml)
-* [Grafana Secret](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-secret.yaml)
-* [Grafana Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-service.yaml)
-* [Grafana Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd2-cpd3/grafana-statefulset.yaml)
+* [Grafana Configmap 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap1.yaml)
+* [Grafana Configmap 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap2.yaml)
+* [Grafana Configmap 3](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap3.yaml)
+* [Grafana Configmap 4](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap4.yaml)
+* [Grafana Configmap 5](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap5.yaml)
+* [Grafana PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-pvc-cpd2-cpd3.yaml)
+* [Grafana Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-role.yaml)
+* [Grafana Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-route.yaml)
+* [Grafana Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-secret.yaml)
+* [Grafana Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-service.yaml)
+* [Grafana Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-statefulset.yaml)
 
 En tots els fitxers, substituir l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
@@ -64,13 +64,13 @@ Finalment, en el fitxer grafana-secret.yaml s'ha de substituir l'expressió "${S
 
 S' han de desplegar els següents components: ruta, role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
-* [Prometheus Configmap](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/configmap-prometheus-comun.yaml)
-* [Prometheus PVC](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/prometheus-pvc-cpd2-cpd3.yaml)
-* [Prometheus Role](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/prometheus-role.yaml)
-* [Prometheus Route](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/prometheus-route.yaml)
-* [Prometheus Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/prometheus-service.yaml)
-* [Prometheus Secret](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/secret-prometheus-comun.yaml)
-* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd2-cpd3/statefulset-prometheus-basic.yaml)
+* [Prometheus Configmap](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/configmap-prometheus-comun.yaml)
+* [Prometheus PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-pvc-cpd2-cpd3.yaml)
+* [Prometheus Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-role.yaml)
+* [Prometheus Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-route.yaml)
+* [Prometheus Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-service.yaml)
+* [Prometheus Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/secret-prometheus-comun.yaml)
+* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/statefulset-prometheus-basic.yaml)
 
 En tots els fitxers han de ser parametritzats substituint en l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
@@ -92,17 +92,17 @@ Per realitzar el desplegament de tots els components requerits pels serveis de g
 
 S'han de desplegar els següents components: ruta, role, servei, statefulset, configmaps i secret. Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
-* [Grafana Configmap 1](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap1.yaml)
-* [Grafana Configmap 2](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap2.yaml)
-* [Grafana Configmap 3](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap3.yaml)
-* [Grafana Configmap 4](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap4.yaml)
-* [Grafana Configmap 5](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap5.yaml)
-* [Grafana PVC](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-pvc-cpd4-salut.yaml)
-* [Grafana Role](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-role.yaml)
-* [Grafana Route](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-route.yaml)
-* [Grafana Secret](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-secret.yaml)
-* [Grafana Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-service.yaml)
-* [Grafana Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-statefulset.yaml)
+* [Grafana Configmap 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap1.yaml)
+* [Grafana Configmap 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap2.yaml)
+* [Grafana Configmap 3](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap3.yaml)
+* [Grafana Configmap 4](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap4.yaml)
+* [Grafana Configmap 5](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap5.yaml)
+* [Grafana PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-pvc-cpd4-salut.yaml)
+* [Grafana Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-role.yaml)
+* [Grafana Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-route.yaml)
+* [Grafana Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-secret.yaml)
+* [Grafana Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-service.yaml)
+* [Grafana Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-statefulset.yaml)
 
 
 En tots els fitxers, substituir l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
@@ -119,13 +119,13 @@ Finalment, en el fitxer grafana-secret.yaml s'ha de substituir l'expressió "${S
 
 S'han de desplegar els següents components: ruta, role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
-* [Prometheus Configmap](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/configmap-prometheus-comun.yaml)
-* [Prometheus PVC](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/prometheus-pvc-cpd4-salut.yaml)
-* [Prometheus Role](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/prometheus-role.yaml)
-* [Prometheus Route](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/prometheus-route.yaml)
-* [Prometheus Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/prometheus-service.yaml)
-* [Prometheus Secret](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/secret-prometheus-comun.yaml)
-* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/statefulset-prometheus-basic.yaml)
+* [Prometheus Configmap](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/configmap-prometheus-comun.yaml)
+* [Prometheus PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-pvc-cpd4-salut.yaml)
+* [Prometheus Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-role.yaml)
+* [Prometheus Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-route.yaml)
+* [Prometheus Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-service.yaml)
+* [Prometheus Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/secret-prometheus-comun.yaml)
+* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/statefulset-prometheus-basic.yaml)
 
 En tots els fitxers han de ser parametritzats substituint en l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
@@ -145,17 +145,17 @@ Per realitzar el desplegament de tots els components requerits pels serveis de g
 
 Es necessiten els següents components: ruta, role, servei, statefulset, configmaps i secret. S'adjunten els descriptors que poden ser utilitzats com a referència:
 
-* [Grafana Configmap 1](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap1.yaml)
-* [Grafana Configmap 2](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap2.yaml)
-* [Grafana Configmap 3](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap3.yaml)
-* [Grafana Configmap 4](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap4.yaml)
-* [Grafana Configmap 5](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-configmap5.yaml)
-* [Grafana PVC](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-pvc-cpd4-salut.yaml)
-* [Grafana Role](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-role.yaml)
-* [Grafana Route](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-route.yaml)
-* [Grafana Secret](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-secret.yaml)
-* [Grafana Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-service.yaml)
-* [Grafana Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/grafana/cpd4-salut/grafana-statefulset.yaml)
+* [Grafana Configmap 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap1.yaml)
+* [Grafana Configmap 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap2.yaml)
+* [Grafana Configmap 3](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap3.yaml)
+* [Grafana Configmap 4](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap4.yaml)
+* [Grafana Configmap 5](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap5.yaml)
+* [Grafana PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-pvc-cpd4-salut.yaml)
+* [Grafana Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-role.yaml)
+* [Grafana Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-route.yaml)
+* [Grafana Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-secret.yaml)
+* [Grafana Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-service.yaml)
+* [Grafana Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-statefulset.yaml)
 
 En tots els fitxers, substituir l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
@@ -171,17 +171,17 @@ Finalment, en el fitxer grafana-secret.yaml s'ha de substituir l'expressió "${S
 
 S' han de desplegar els següents components: ruta, role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
-* [Prometheus Configmap](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/configmap-prometheus-comun.yaml)
-* [Prometheus PVC](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/prometheus-pvc-cpd4-salut.yaml)
-* [Prometheus Role](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/prometheus-role.yaml)
-* [Prometheus Route](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/prometheus-route.yaml)
-* [Prometheus Service](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/prometheus-service.yaml)
-* [Prometheus Secret 1](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/secret-prometheus-basic-salut.yaml)
-* [Prometheus Secret 2](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/secret-prometheus-comun.yaml)
-* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/cpd4/statefulset-prometheus-basic.yaml)
+* [Prometheus Configmap](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/configmap-prometheus-comun.yaml)
+* [Prometheus PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-pvc-cpd4-salut.yaml)
+* [Prometheus Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-role.yaml)
+* [Prometheus Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-route.yaml)
+* [Prometheus Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-service.yaml)
+* [Prometheus Secret 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/secret-prometheus-basic-salut.yaml)
+* [Prometheus Secret 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/secret-prometheus-comun.yaml)
+* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/statefulset-prometheus-basic.yaml)
 
 En cas d'haver consensuat amb Arquitectura del Departament de Salut l'ús de l'autorització delegada per l'Identity Provider de Salut, s'han d'utilitzar les plantilles següents per a l'Stateful Set:
-* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048/templates-grafana-prometheus/-/blob/master/prometheus/salut/statefulset-prometheus-basic-salut.yaml)
+* [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/statefulset-prometheus-basic-salut.yaml)
 
 En aquest cas, al fitxer statefulset-prometheus-basic-salut.yaml s'ha de substituir l'expressió "${IDENTITY_PROVIDER_URL}" per l'OIDC Issuer URL de l'Identity Provider a utilitzar.
 
