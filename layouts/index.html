@@ -104,18 +104,26 @@
 									<div class="shadow"></div>
 									<div class="panel panel-default box">
 
+									{{ if gt (len (where .Site.Pages "Section" "destacats")) 0 }}
+
 									<div class="panel-heading fons_gris">
-											<h2 class="panel-title fb_no-separador titol-pd-btm">El més consultat</h2>
-										</div>
+										<h2 class="panel-title fb_no-separador titol-pd-btm">Destaquem</h2>
+									</div>
 
 									<div class="panel-body fons_blanc no-button no-button-xs">
 
 										<ul class="llistat_enllacos_filet_cont list-group">
-											{{ range $p.Params.consultat }}
-												<li class="list-group-item col-sm-12 "><a  href="{{.link}}" title="{{.title}}" class="separador" target="_self"><span class='list-group-item-wrapper-content'>{{.title}}</span></a></li>
+											{{ range first .Site.Params.destacatshome (where .Site.Pages "Section" "destacats") }}
+											{{if ne .Title "Destacats"}}
+											<li class="list-group-item col-sm-12 "><a  href="{{ index .Params "enllac" }}" title="{{ .Title }}" class="separador" target="_self"><span class='list-group-item-wrapper-content'>{{ .Title }}</span></a></li>
 											{{ end }}
+											{{ end }}
+											<li class="list-group-item col-sm-12 "><a  href="/destacats" title="Més destacats" class="separador" target="_self"><span class='list-group-item-wrapper-content'>Més destacats</span></a></li>
 										</ul>
-										</div>
+
+									</div>
+
+									{{ end }}
 
 								</div>
 								</div>
