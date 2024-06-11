@@ -7,7 +7,7 @@ categories = ["canigo"]
 key = "JUNY2024"
 +++
 
-S'ha actualitzat la **versió 3.1.1 del [Mòdul de JPA] (/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-generals/modul-jpa/) de Canigó** amb correccions relacionades amb javax.
+S'ha actualitzat la versió 3.1.1 del [Mòdul de JPA](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-generals/modul-jpa/) de Canigó amb correccions relacionades amb javax.
 
 ## Canigó JPA 3.1.1
 
