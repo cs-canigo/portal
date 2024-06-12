@@ -15,8 +15,8 @@ destacats:
     link: /plataformes/lowcode/
   - title: Cloud
     link: /plataformes/cloud/
-  - title: EventHub
-    link: /plataformes/eventhub/    
+  - title: GICAR
+    link: /plataformes/gicar/    
   - title: SIC
     link: /plataformes/sic/    
 ---
