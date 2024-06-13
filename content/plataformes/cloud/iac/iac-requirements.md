@@ -204,6 +204,9 @@ El **tipus de recurs** pot pendre els valors següents depenent del proveïdor d
   - **svp**: Azure Service Plan
   - **lfa**: Azure Linux Function App
   - **wfa**: Azure Windows Function App
+  - **ass**: Azure Storage Share
+  - **uai**: Azure user assigned identity
+  - **aes**: Azure container app environment storage
 
 - **GCP**:
   - **cos**: Google Cloud Storage
