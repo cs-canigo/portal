@@ -28,7 +28,7 @@ function app(opts) {
 
   search.addWidget(
     instantsearch.widgets.searchBox({
-      container: '#query',
+      container: '#impacteContainer',
       placeholder: 'Cerca....'
     })
   );
@@ -63,7 +63,7 @@ function app(opts) {
     instantsearch.widgets.pagination({
       container: '#pagination',
       autoHideContainer: true,
-      scrollTo: '#query',
+      scrollTo: '#impacteContainer',
       showFirstLast : false,
       maxpages : 10,
       labels: {
