@@ -102,8 +102,10 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
     2. Env. Matrix, validarà si l'artefacte pot ser desplegat en l'entorn indicat.
     3. PRE-AUDIT : Crea un CRQ en ITSM indicant l'inici de desplegament.
     4. Deploy: desplegament de l'artefacte en l'entorn indicat.
-    5. POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
-    6. EMAIL COMM : Enviament del resultat del desplegament als afectats.
+    5. Health Check : Comprova l'accés tècnic al recurs.
+    6. Functional Tests: Executa proves de funcionals amb Selenium invocant a M.A.T.
+    7. POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
+    8. EMAIL COMM : Enviament del resultat del desplegament als afectats.
     
     Nom del Workflow en GitHub : **Container CD**
 
@@ -187,7 +189,8 @@ Es detalla a continuació el flux de treball dels desplegaments d'Infraestructur
 on:
 * Download Plan : Selecció del codi a desplegar a l'entorn (env).
 * PRE Audit ITSM : Crea un tiquet a ITSM indicant el començament del desplegament
-
+* Health Check : Comprova l'accés tècnic al recurs.
+* Functional Tests: Executa proves de funcionals amb Selenium invocant a M.A.T.
 * Deploy (env): Desplegament o Apply de la infraestructura.
 * POST Audit ITSM : Actualitza el tiquet ITSM indicant el final del desplegament i el seu estat.
 
@@ -235,6 +238,8 @@ on:
 * Env. Matrix, validarà si l’artefacte pot ser desplegat en l’entorn indicat.
 * PRE-AUDIT : Crea un CRQ en ITSM indicant l’inici de desplegament.
 * Deploy: desplegament de l’artefacte en l’entorn indicat.
+* Health Check : Comprova l'accés tècnic al recurs.
+* Functional Tests: Executa proves de funcionals amb Selenium invocant a M.A.T.
 * POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
 * EMAIL COMM : Enviament del resultat del desplegament als afectats.
     
@@ -279,6 +284,8 @@ on:
 * Env. Matrix, validarà si l’artefacte pot ser desplegat en l’entorn indicat.
 * PRE-AUDIT : Crea un CRQ en ITSM indicant l’inici de desplegament.
 * Deploy: desplegament de l’artefacte en l’entorn indicat.
+* Health Check : Comprova l'accés tècnic al recurs.
+* Functional Tests: Executa proves de funcionals amb Selenium invocant a M.A.T.
 * POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
 * EMAIL COMM : Enviament del resultat del desplegament als afectats.
     
