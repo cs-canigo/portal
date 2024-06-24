@@ -134,47 +134,51 @@ El procés d'integració actualment és el següent :
           Addicionalment, en el següent Link, es podran consultar els permisos de cada rol [Roles y permisos de Repositoris ](../gh-rols-repositori).
 
 
-      + **Configuració dels diferents WorkFlows de Continuous Deployment (CI + CD)**
+      + **Configuració Inicial per a invocacions ITSM**
 
-        Per a cadascun dels repositoris creats, exceptuant *-test, es creen un conjunt de workflows que seran els que executin les tasques de CI/CD d'infraestructura (*-infra) i d'aplicació (tota la resta).
+        Dins dels diferents workflows de CD, existiran steps encarregats de realitzar invocacions a ITSM (Remedy) en les quals es crearan WorkOrders on s'indicarà que el sistema està realitzant un desplegament d'una aplicació i l'estat final d'aquest desplegament.
         
-        Pels workflows d'aplicació, existeixen diferents modalitats depenent del tipus de component que contindrà el repositori sol·licitat: 
-          + function: Workflows per desplegar Functions.
-          + library: Workflows per desplegar Llibreries.
-          + static: WorkFlows per desplegar Contingut Estàtic.
-          + container: Repositoris per desplegar Contenidors.
-          + infra: Repositoris per desplegar Infraestructura.
+        Per comunicar-nos amb la plataforma ITSM serà necessari configurar el fitxer **itsm-input.json**, disponible al repositori, on s'indicaran les característiques del tiquet que es crearà en base a la naturalesa del desplegament.
 
-
-        L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
-                
-        Accés a GHEC : [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/)
+        + "ITSM_SERVICE" : Servei Remedy que realitza el desplegament.  És important **afegir exactament el valor donat d'alta en Remedy**. 
+       
+        + "ITSM_CLASS" :  Podrà tenir els següents valors, depenent del tipus de desplegament :
+          + Normal
+          + Emergency
         
-        En aquest cas, es mostra un exemple de creació de Workflows per a repositoris el tipus de funció dels quals és una imatge de contenidors.
+        + "TYPE_AFFECTATION" : Podrà tenir els següents valors :
+           + DEGRADACIO
+           + SENSE TALL DE SERVEI
+           + TALL DE SERVEI
 
-        ![Accés a Workflows Imatge Contenidors](/images/GHEC/gh-imagen-acceso-action.png)
+        + ITSM_AFFECTATION : Text lliure per indicar el motiu del desplegament
 
+        + "ITSM_IMPACT" : Per indicar l'impacte que pot tenir el desplegament, amb els possibles valors :
+           + 4-Minor/Localized
+           + 3-Moderate/Limited 
+           + 2-Significant/Large
+           + 1-Extensive/Widespread
 
-        L'execució dels workflows, dependran de la seva tipologia i del model definit, essent :
-          - Workflows de CI (app i infra) : Executats **automàticament** en la sol·licitud d'un Pull Request o en l'execució d'un Merge de dita Pull Request.
-          - Workflows de CD (app i infra) : Executats **sota demanda** a través de la interfície web de GHEC.
+        + "ITSM_TIER3" : Nivell 3 de categorització Remedy d'un tiquet que podrà tenir els següents valors :
 
-          
-          Dins del repositori, el codi dels workflows estarà disponible en la següent ruta: \<repositori\>/.github/workflows
+          + ADAPTATIU
+          + CORRECTIU
+          + EVOLUTIU
+          + PREVENTIU
+          + VERSIO
+          + VULNERABILITAT
 
-          Exemple :
+        + "ITSM_PRIORITY" : Prioritat del desplegament amb els següents valors :
 
-          ![Ruta de Workflows](/images/GHEC/gh-ruta-workflows.png)
-         
-        En el següent enllaç està tota la informació dels Workflows disponibles així com el detall necessari pel seu ús: [Definició de Workflows d'aplicatiu i d'Infraestructura](../gh-definicio-workflows).
-        
-        Aquests workFlows, **necessiten una parametrització bàsica i que només es realitzarà una vegada**. A l'enllaç anterior es detallen els workflows/fitxers i els inputs a actualitzar **en una branca feature que posteriorment s'anirà promocionant a les diferents branques**.
+          + 4-Low
+          + 3-Medium
+          + 2-High
+          + 1-Critical
 
-
-  
+      
 ## Plataforma llesta, comencem a treballar
 
-Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que també **existirà una nova metodologia de treball**, la qual es detallarà en els següents punts i enllaços:
+Una vegada fet el setup inicial, cal recalcar que també **existirà una nova metodologia de treball**, la qual es detallarà en els següents punts i enllaços:
 
 + **Gestió i ús de branques**: El model de gestió i ús de branques que s'ha implantat és el basat en el model estàndard de GitFlow. 
 
@@ -208,6 +212,42 @@ Una vegada fet el setup inicial a nivell d'accesos i workflow, cal recalcar que 
   En el següent enllaç [Model de Pull Request](../gh-model-pull-requests) es pot observar en detall les característiques i operativa del model, així com els seus principals avantatges.
 
   Aquest model de treball és de caràcter obligatori, i prova d'això és que les branques principals Develop, Release i Master estaran bloquejades per realitzar integracions directes sense l'ús de Pull Request.
+
+
++ **Model GitOps per diferents WorkFlows de Continuous Deployment (CI + CD)**
+
+  Per a cadascun dels repositoris creats, exceptuant *-test, es creen un conjunt de workflows que seran els que executin les tasques de CI/CD d'infraestructura (*-infra) i d'aplicació (tota la resta).
+        
+  Pels workflows d'aplicació, existeixen diferents modalitats depenent del tipus de component que contindrà el repositori sol·licitat: 
+    + function: Workflows per desplegar Functions.
+    + library: Workflows per desplegar Llibreries.
+    + static: WorkFlows per desplegar Contingut Estàtic.
+    + container: Repositoris per desplegar Contenidors.
+    + infra: Repositoris per desplegar Infraestructura.
+
+
+  L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
+                
+  Accés a GHEC : [https://github.com/enterprises/gencat/](https://github.com/enterprises/gencat/)
+        
+  En aquest cas, es mostra un exemple de creació de Workflows per a repositoris el tipus de funció dels quals és una imatge de contenidors.
+
+  ![Accés a Workflows Imatge Contenidors](/images/GHEC/gh-imagen-acceso-action.png)
+
+
+  L'execució dels workflows, dependran de la seva tipologia i del model definit, essent :
+    - Workflows de CI (app i infra) : Executats **automàticament** en la sol·licitud d'un Pull Request o en l'execució d'un Merge de dita Pull Request.
+    - Workflows de CD (app i infra) : Executats **sota demanda** a través de la interfície web de GHEC.
+
+          
+  Dins del repositori, el codi dels workflows estarà disponible en la següent ruta: \<repositori\>/.github/workflows
+
+  Exemple :
+
+    ![Ruta de Workflows](/images/GHEC/gh-ruta-workflows.png)
+         
+  En el següent enllaç està tota la informació dels Workflows disponibles així com el detall necessari pel seu ús: [Definició de Workflows d'aplicatiu i d'Infraestructura](../gh-definicio-workflows).
+
 
 + **Tags i versionat de components**. Dins d'aquest model de desenvolupament, el versionat i tags d'rtefactes estarà bloquejat al desenvolupador, de tal manera que seran els workflows automàtics de CI els que s'encarreguin d'aquesta tasca, permetent al desenvolupador **només el versionat del seu codi font**.
 
