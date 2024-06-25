@@ -23,20 +23,23 @@ sections    = ["GHEC"]
 - :heavy_check_mark: Certificació desplegaments funcions a AWS Lambda
 - :heavy_check_mark: Certificació desplegaments continguts estàtics a AWS S3
 - :heavy_check_mark: Certificació desplegaments funcions a Azure Functions
-- (En progrés) Certificació desplegaments continguts estàtics a Azure Blob Storage​
-- (En progrés) Pilot integració Marc d'Automatització de Testing (MAT)
-- (To do) Pilot integració Marc d'Automatització d'Observabilitat (MAO)​
-- (To do) Definició model desplegaments delegats (en màquines virtuals) i PoC​
-- (To do) Definició model desplegament bases de dades i PoC​
+- :heavy_check_mark: Certificació desplegaments continguts estàtics a Azure Blob Storage​
+- (En progrés) PoC integració Marc d'Automatització de Testing (MAT): execució tests funcionals amb Selenium i definició rollback automàtic per contenidors
+- (En progrés) PoC integració Marc d'Automatització d'Observabilitat (MAO)​: healtcheck internet i definició rollback automàtic per contenidors
+- (En progrés) Definició model desplegaments delegats (en màquines virtuals, clusters Kubernetes, ...) i PoC​
+- (En progrés) Definició model desplegament bases de dades i PoC​
 - (En progrés) Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
 
 ## [Q3/Q4 2024] 1.1.0​
 
 - Desplegaments avançats (Canary, Blue/Green, ...)*​
+- Self-hosted runner de tipus Deployer (per desplegar en registres Docker privats, només accessibles des de la xarxa corporativa)​
 - Certificació desplegaments a GCP​
 - Suport a .NET​
 - Suport Python (llenguatge a incorporar al Full de Ruta)​
+- Desplegaments en APIM (API Manager corporatiu)
 - CI/CD MLOps
+- Integració completa amb MAT i MAO
 
 
 *_Roadmap subjecte a canvis_

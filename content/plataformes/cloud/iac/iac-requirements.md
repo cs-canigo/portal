@@ -103,12 +103,12 @@ Establir un **estàndard de nomenclatura** per als serveis desplegats en diverse
 
 La nomenclatura que s'ha de seguir pels recursos desplegats en els diferents proveïdors de núvol públic és la següent:
 
-* **acr-env-typ-lll-iii**
+* **acr-env-typ-<funcionalitat>-iii**
   - **acr**: acrònim de l'aplicació (3 dígits).
   - **env**: entorn (3 dígits). Pot pendre els valors "dev/tst/int", "pre", "pro".
   - **typ**: tipus de recurs (3 dígits).
   - **hhh**: hiperescalar (3 dígits).
-  - **lll**: localització/regió (3 dígits).
+  - **funcionalitat**: funcionalitat del recurs (màxim 10 dígits).
   - **iii**: índex seqüencial (3 dígits).
 
 * Taula **hiperescalars**:
