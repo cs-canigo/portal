@@ -851,16 +851,31 @@
                 },
                 {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Administració Local (DGAL)",
                     "idescripcio": "Es modifica el nom de 5 mancomunitats (codis: 9006150006, 9007490004, 9008470005, 9010690004 i 9011360009) i es suprimeixen 13 mancomunitats (codis: 9000760009, 9003330008, 9003640003, 9004310007, 9004460009, 9004970005, 9007520002, 9008630008, 9010750006, 9012060009, 9012130008, 9012710007 i 9013470005).",
+                    "ifitxer_doc": "Mancomunitats_ATR.docx",
+                    "ifitxer_xls": "deprecate/Mancomunitats_V02.xlsx",
+                    "idatacreacio": "24/10/2023",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/06/2024",
+                    "idatapublicacio": "25/10/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                    "idescripcio": "Actualització del nom d'una Mancomunitat la Mancomunitat de Municipis del Bages per al Sanejament amb el CODI 9002660009 passa a ser Mancomunitat del Bages i del Moianès per l'Aigua, amb el mateix CODI i la incorporació d'una nova Mancomunitat Intermun. de Gratallops, Torroja del Priorat, Poboleda i Porrera (TOPOGRAPO) amb el CODI 9007520002.",
                     "ifitxer_doc": "Mancomunitats_ATR.docx",
                     "ifitxer_xls": "Mancomunitats.xlsx",
                     "idatacreacio": "24/10/2023",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "25/10/2023",
+                    "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Mancomunitats/96mh-m3ge",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -868,7 +883,7 @@
             "nom_dinsBD": "MANCOMUNITATS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "25/10/2023"
+            "Data_actualitzacio": "28/06/2024"
         },
         {
             "Id": "dtarq106",
@@ -3248,16 +3263,31 @@
                 },
                 {
                     "inom": "V18",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització versió anterior per l'inclusió d'un nou municipi amb nom Usansolo amb codi: 489161",
                     "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V18.xlsx",
                     "idatacreacio": "31/01/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/06/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V19",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Actualització del nom d'un municipi a causa d'una correcció realitzada per IDESCAT. El municipi amb nom Láujar de Andarax i CODI 040577 passa a denominar-se Laujar de Andarax, amb el mateix CODI.",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "idatacreacio": "28/06/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3265,7 +3295,7 @@
             "nom_dinsBD": "MUNICIPIS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "28/06/2024"
         },
         {
             "Id": "dtarq127",
@@ -3523,16 +3553,31 @@
                 },
                 {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
                     "idescripcio": "Des de la Direcció General d’Indústria ens fa arribar l’actualització trimestral de les dades dels Polígons industrials.- Eliminar els registres amb aquests codis:416004,425960,Perquè no apareixen en la nova llista i  afegir els següents:415917,426402,526806",
+                    "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
+                    "ifitxer_xls": "deprecated/Poligons_Industrials_Catalunya_V02.xlsx",
+                    "idatacreacio": "27/02/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/06/2024",
+                    "idatapublicacio": "27/03/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V03",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
+                    "idescripcio": "Actualització trimestral segons l'última versió del fitxer font enviada pel promotor.",
                     "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
                     "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
                     "idatacreacio": "27/02/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "27/03/2024",
+                    "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pol%C3%ADgons-industrials-de-Catalunya/5asc-f6cw",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3540,7 +3585,7 @@
             "nom_dinsBD": "POLIGONS_INDUSTRIALS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "31/01/2024",
-            "Data_actualitzacio": "27/03/2024"
+            "Data_actualitzacio": "28/06/2024"
         },
         {
             "Id": "dtarq85",
@@ -4023,16 +4068,31 @@
                 },
                 {
                     "inom": "V17",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                     "idescripcio": "Actualització per afegir un nou municipi: Usansolo. I s’elimina els valors anteriorment atribuïts a Usansolo: Entitat Singular, Altres/Diversos i Disseminat.",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V17.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/06/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V18",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "En realitzar-se la modificació del Municipi de Laujar de Andarax , també és necessari modificar l'entitat d'Unitats Poblacionals d'Espanya, ja que els noms de municipis i els de les unitats poblacionals estan relacionats.",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "idatacreacio": "28/06/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -4040,7 +4100,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "31/03/2021",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "28/06/2024"
         },
         {
             "Id": "dtarq175",
@@ -4577,6 +4637,34 @@
             "Classificacio": "Pendent",
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
+        },       
+		{
+            "Id": "dtarq203",
+            "Nom": "Centres Peniteniaris de Catalunya",
+            "Ambit": "Justícia i dret",
+            "Subambit": "Departament de Justícia, Drets i Memòria",
+            "Descripcio": "Llistat dels centres penitenciaris de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen dues tipologies de centre: Centre Penitenciari i Centre Obert.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "CENTRES_PENITENCIARIS_ATR.docx",
+                    "ifitxer_xls": "CENTRES_PENITENCIARIS.xlsx",
+                    "idatacreacio": "28/06/2024",
+                    "itipusvisual": "28/06/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Centres-Penitenciaris-de-Catalunya/uqse-8meb/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "CENTRE_PENINTENCIARIS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "28/06/2024",
+            "Data_actualitzacio": "28/06/2024"
         }
     ]
 }
