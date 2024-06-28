@@ -38,6 +38,7 @@ sections    = ["GHEC"]
 - Suport a .NET​
 - Suport Python (llenguatge a incorporar al Full de Ruta)​
 - Desplegaments en APIM (API Manager corporatiu)
+- CI/CD Apps mòbils
 - CI/CD MLOps
 - Integració completa amb MAT i MAO
 

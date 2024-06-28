@@ -1,14 +1,11 @@
 +++
 date        = "2024-04-02"
-title       = "Plantilles IaC (Work in progress)"
+title       = "Plantilles IaC"
 description = "Plantilles d'infraestructura com a codi (IaC) pels diferents proveïdors de cloud: AWS, Azure, GCP, etc"
 sections    = "[GHEC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
 weight      = 3
 +++
-
-
- :warning: **Les plantilles que es poden trobar en aquesta plana estan en fase de validació pel que encara no es recomana el seu ús per part de les aplicacions**
 
 ## Plantilles d'infraestructura com a codi (IaC)
 
@@ -44,6 +41,8 @@ https://github.com/enterprises/gencat
 
 #### Azure
 
+ :warning: **Les plantilles que es poden trobar en aquesta secció estan en fase de validació pel que encara no es recomana el seu ús per part de les aplicacions**
+
 * Arquitectura tipus per contenidors (CaaS)
 
     _Serveis_: Azure ContainerApps, Azure CosmosDB (PostgreSQL)
@@ -57,6 +56,8 @@ https://github.com/enterprises/gencat
     _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-functions
 
 #### GCP
+
+ :warning: **Les plantilles que es poden trobar en aquesta secció estan en fase de validació pel que encara no es recomana el seu ús per part de les aplicacions**
 
 * Arquitectura tipus per contenidors (CaaS)
 
