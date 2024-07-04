@@ -21,22 +21,34 @@ Les plantilles d'IaC són una eina fonamental en el desenvolupament de solucions
 
 A continuació s'especifiquen les plantilles d'infraestructura disponibles pels diferents hiperescalars. Aquestes estan basades en serveis Cloud-Native per tal de facilitar als proveïdors d'aplicacions la seva gestió. Per cadascuna d'elles s'enumeren els serveis més rellevants que incorporen, així com l'enllaç al seu codi font.
 
- :warning: Les plantilles es poden trobar a GitHub Enterprise Cloud (GHEC). Abans d'accedir-hi, cal que l'usuari hagi estat donat d'alta a la plataforma i s'hagi autenticat:
-https://github.com/enterprises/gencat
+> **Warning**
+> Les plantilles es poden trobar a GitHub Enterprise Cloud (GHEC). Abans d'accedir-hi, cal que l'usuari hagi estat donat d'alta a la plataforma i s'hagi autenticat: https://github.com/enterprises/gencat
 
 #### AWS
 
-* Arquitectura tipus per contenidors (CaaS)
+## v1.0.0
+
+https://github.com/ctti-arq/iac-aws-templates/tree/1.0.0/
+
+_Release notes_:
+
+* Arquitectura tipus per de contenidors (CaaS)
 
     _Serveis_: AWS Application Load Balancer, AWS ECS Fargate, AWS Aurora Serverless (PostgreSQL)
 
-    _Codi font_: https://github.com/ctti-arq/iac-aws-templates/tree/master/template-fargate
+    _Ubicació dins el repositori_: template-fargate
+
+* Arquitectura tipus per contenidor (CaaS)
+
+    _Serveis_: AWS Application Load Balancer, AWS AppRunner, AWS Aurora Serverless (PostgreSQL)
+
+    _Ubicació dins el repositori_: template-apprunner
 
 * Arquitectura tipus per funcions (FaaS)
 
     _Serveis_: AWS Api Gateway, AWS Lambda, AWS DynamoDB
 
-    _Codi font_: https://github.com/ctti-arq/iac-aws-templates/tree/master/template-apigateway
+    _Ubicació dins el repositori_: template-apigateway
 
 
 #### Azure
