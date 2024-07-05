@@ -18,6 +18,9 @@ Paginate = 10
 [markup.goldmark.renderer]
     unsafe= true
 
+[markup.goldmark.parser.attribute]
+    block = true # default is false
+
 [markup]
   [markup.tableOfContents]
     endLevel = 2
