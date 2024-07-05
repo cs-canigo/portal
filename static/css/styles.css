@@ -21687,3 +21687,27 @@ body {
    margin-top: auto;
 }
 
+.danger,
+.note,
+.warning {
+  background: #efefef;
+  border-left-style: solid;
+  border-left-width: 0.4rem;
+  border-radius: 0.2rem;
+  margin-left: 0;
+  > p {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.warning {
+  border-left-color: #ffbb00;
+}
+
+.note {
+  border-left-color: #0000ee;
+}
+
+.danger {
+  border-left-color: #ee0000;
+}
