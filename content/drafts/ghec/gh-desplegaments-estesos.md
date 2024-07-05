@@ -2,13 +2,13 @@
 +++
 date         = "2024-04-19"
 title        = "Desplegaments estesos"
-description  = "Informació sobre despliegues extendidos per a Kubernetes, scripts BBDD i Màquines Virtuals"
+description  = "Informació sobre desplegaments extesos per a Kubernetes, Màquines Virtuals i Scripts BBDD"
 weight      = "13"
 sections    = ["GHEC"]
 +++
 
 ## Objectiu 🚀
-El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions que apuntin a arquitectures Cloud native i desplegaments a Cloud Pública, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI.
+El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions que apuntin a arquitectures Cloud native i desplegaments a Cloud Públic, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI com puguin ser Kubernetes o Màquines Virtuals. També els desplegaments de canvis en bases de dades poden fer ús d'aquest model de desplegament ja sigui utilitzant frameworks com Liquibase o Flyway, o bé executant directament scripts mitjançant les CLIs de PostgreSQL, MySQL, ...
 
 
 ## Al detall 📋
