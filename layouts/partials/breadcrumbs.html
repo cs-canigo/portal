@@ -8,7 +8,7 @@
 	{{if gt ($.Scratch.Get "level") 0}}
 		<li class="NG__breadcrumb_item">
 			{{ if ne .LinkTitle "Blog_tags"}}
-				<a class="NG__breadcrumb__item_link" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+				<a class="NG__breadcrumb__item_link" href="{{ .Permalink }}">{{ .LinkTitle | emojify }}</a>
 			{{ end }}
 			{{ if eq .LinkTitle "Blog_tags"}}
 				<a href="/blog">Blog</a>			
@@ -24,6 +24,6 @@
 	{{ else if eq .LinkTitle "404 Page not found" }}
 		Pàgina no trobada
 	{{ else }}
-		{{ .LinkTitle }}
+		{{ .LinkTitle | emojify }}
 	{{ end }}
 </li>

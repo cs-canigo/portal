@@ -17,7 +17,7 @@
         {{ if eq .Section "blog" }}
           BLOG. 
         {{ end }}
-        {{ .Title }}
+        {{ .Title | emojify }}
       </title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
@@ -31,7 +31,7 @@
 
     {{ range first 10 (where .Data.Pages "Section" "destacats") }}
     <item>
-      <title>{{ .Title }}</title>
+      <title>{{ .Title | emojify }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
       {{with .Site.Author.name}}<author>{{.}}</author>{{end}}

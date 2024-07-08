@@ -55,7 +55,7 @@
 									{{ if eq .Section "blog" }}
 										BLOG. 
 									{{ end }}
-									{{ .Title }}</a> ({{ .Date.Format "02-01-2006" }})
+									{{ .Title | emojify }}</a> ({{ .Date.Format "02-01-2006" }})
 									<p>{{ .Description }}<br /><br /></p>
 								</li>
 							{{ end }}
@@ -100,9 +100,9 @@
 										{{if ne .Title "Destacats"}}
 										<li class="list-group-item bullet">
 										  {{ if isset .Params "enllac" }}
-										    <a href="{{ index .Params "enllac" }}">{{ .Title }}</a>
+										    <a href="{{ index .Params "enllac" }}">{{ .Title | emojify }}</a>
 											 {{ else }}
-											   <span class="enllac">{{ .Title }}</span>
+											   <span class="enllac">{{ .Title | emojify }}</span>
 											 {{ end }}
 											 {{ .Description }}
 										  {{ end }}

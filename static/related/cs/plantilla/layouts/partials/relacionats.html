@@ -23,7 +23,7 @@
                               {{ range where .Data.Pages.ByDate "Type" "Relacionats" }}
                               <li style="color: #cc3333;">
                                 <p style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:600">
-                                  {{ .Title }}
+                                  {{ .Title | emojify }}
                                   {{ $imgurl := index  .Site.Data.parametres_continguts.docimg .Params.doctype }} 
                                   <a href="{{ .Params.urldoc }}" target="_blank">
                                     <img src="{{ $imgurl }}" />

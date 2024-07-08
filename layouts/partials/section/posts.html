@@ -12,7 +12,7 @@
 				<div class="destacat_noticies">
 					<div class="destacat_noticies_cont">
 						<h3>
-							<a href="{{ .Permalink }}" class="bloc_post">{{ .Title }}</a>
+							<a href="{{ .Permalink }}" class="bloc_post">{{ .Title | emojify }}</a>
 						</h3>
 						<p>{{ .Description}}</p>
 						<span class="data_post">{{ .Date.Format "02-01-2006" }}</span> 

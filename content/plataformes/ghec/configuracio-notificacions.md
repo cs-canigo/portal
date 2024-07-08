@@ -5,6 +5,11 @@ title        = "Notificacions"
 description  = "Configuració de notificacions"
 weight      = "9"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/configuracio-notificacions",
+    "/ghec/configuracio-notificacions",
+    "/plataformes/ghec/configuracio-notificacions"
+]
 +++
 
 ## Objectiu 🚀

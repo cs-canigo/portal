@@ -31,5 +31,5 @@
 {{ else if (eq $title "lowcode") }}
 	Plataformes LowCode
 {{ else }}
-	{{ .Title }}
+	{{ .Title | emojify }}
 {{ end }}

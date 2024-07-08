@@ -6,4 +6,9 @@ description  = "Informació sobre infraestructura com a codi (IaC): bones pràct
 enllac      = "/plataformes/cloud/iac"
 weight      = "11"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/iac",
+    "/ghec/iac",
+    "/plataformes/ghec/iac"
+]
 +++

@@ -5,6 +5,11 @@ title        = "Rols"
 description  = "Rols d'accés per a una organització"
 weight      = "3"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-rols-repositori",
+    "/ghec/gh-rols-repositori",
+    "/plataformes/ghec/gh-rols-repositori"
+]
 +++
 
 ## Objectiu 🚀

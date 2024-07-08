@@ -5,6 +5,11 @@ title        = "Model organitzatiu"
 description  = "Descripció del model organitzatiu definit per GHEC"
 weight      = "2"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-model-govern",
+    "/ghec/gh-model-govern",
+    "/plataformes/ghec/gh-model-govern"
+]
 +++
 
 ## Objectiu  🚀

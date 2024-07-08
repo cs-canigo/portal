@@ -33,7 +33,7 @@
 						<div class="NG-menu__wrapper">
 							<div class="NG-menu__wrapper_title" role="main">
 								<h1 class="NG-menu__title">
-									{{ .Title }}
+									{{ .Title | emojify }}
 								</h1>
 							</div>
 							<div class="NG-menu__wrapper_title2">					
@@ -52,7 +52,7 @@
 				<div>
 					<div id="center_1R">
 														
-						{{ $section := .Title | html | lower }} 
+						{{ $section := .Title | html | lower }}
 
 						{{ if and (ne $section "noticies")  (ne $section "destacats") (ne $section "mapa web") (ne $section (.Site.Params.blog_section)) }}
 

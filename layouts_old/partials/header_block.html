@@ -16,7 +16,7 @@
 										{{ if ne $title "cercador"}}
 											{{ partial "breadcrumbs.html" . }}
 										{{ else }}
-											{{ .Title }}
+											{{ .Title | emojify }}
 										{{ end }}
 									{{ end }}
 

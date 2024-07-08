@@ -5,6 +5,11 @@ title        = "Gestió de versions"
 description  = "Definició del model de versionat"
 weight      = "7"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-definicio-versionat",
+    "/ghec/gh-definicio-versionat",
+    "/plataformes/ghec/gh-definicio-versionat"
+]
 +++
 
 ## Objectiu 🚀

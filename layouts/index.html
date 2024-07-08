@@ -115,7 +115,7 @@
 										<ul class="llistat_enllacos_filet_cont list-group">
 											{{ range first .Site.Params.destacatshome (where .Site.Pages "Section" "destacats") }}
 											{{if ne .Title "Destacats"}}
-											<li class="list-group-item col-sm-12 "><a  href="{{ index .Params "enllac" }}" title="{{ .Title }}" class="separador" target="_self"><span class='list-group-item-wrapper-content'>{{ .Title }}</span></a></li>
+											<li class="list-group-item col-sm-12 "><a  href="{{ index .Params "enllac" }}" title="{{ .Title | emojify }}" class="separador" target="_self"><span class='list-group-item-wrapper-content'>{{ .Title | emojify }}</span></a></li>
 											{{ end }}
 											{{ end }}
 											<li class="list-group-item col-sm-12 "><a  href="/destacats" title="Més destacats" class="separador" target="_self"><span class='list-group-item-wrapper-content'>Més destacats</span></a></li>
@@ -290,7 +290,7 @@
 																							{{ if eq .Section "blog" }}
 																								BLOG. 
 																							{{ end }}
-																							{{ .Title }}
+																							{{ .Title | emojify }}
 																						</span>
 																					</a>
 																					<br />

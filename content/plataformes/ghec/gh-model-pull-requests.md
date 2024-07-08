@@ -5,6 +5,11 @@ title        = "Model d'integració de branques amb Pull Request"
 description  = "Gestió de la integració de branques a GitHub amb Pull Request"
 weight      = "5"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-model-pull-requests",
+    "/ghec/gh-model-pull-requests",
+    "/plataformes/ghec/gh-model-pull-requests"
+]
 +++
 
 ## Objectiu 🚀

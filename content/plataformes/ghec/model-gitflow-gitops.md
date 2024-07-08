@@ -5,6 +5,11 @@ title        = "Gitflow i GitOps"
 description  = "Model de treball Gitflow i GitOps"
 weight      = "4"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/model-gitflow-gitops",
+    "/ghec/model-gitflow-gitops",
+    "/plataformes/ghec/model-gitflow-gitops"
+]
 +++
 
 ## Objectiu 🚀
