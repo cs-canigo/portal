@@ -71,12 +71,12 @@ El procés d'integració actualment és el següent :
 
              
       **Llistat de repositoris**
-      | Nom tècnic component | Tipus de Repositori | Categoria | Engine |
-      |----------------------|---------------------|-----------|--------|
-      | NomTecComponent1     | backend             | container | ecs    |
-      | NomTecComponent2     | backend             | container | ecs    |
-      | NomTecComponent3     | infra               | infra     | N/A    |
-      | NomTecComponent4     | backend             | function  | lambda |
+      | Nom tècnic component | Tipus de Repositori | Categoria | Engine | Tecnologia | Versió |
+      |----------------------|---------------------|-----------|--------|------------|--------|
+      | NomTecComponent1     | backend             | container | ecs    | java       | 17     |
+      | NomTecComponent2     | backend             | container | ecs    | node       | 18.1   |
+      | NomTecComponent3     | infra               | infra     | N/A    | N/A        | N/A    |
+      | NomTecComponent4     | backend             | function  | lambda | java       | 17     |
     
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
