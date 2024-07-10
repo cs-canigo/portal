@@ -29,23 +29,29 @@ aliases = [
 - :heavy_check_mark: Certificació desplegaments continguts estàtics a AWS S3
 - :heavy_check_mark: Certificació desplegaments funcions a Azure Functions
 - :heavy_check_mark: Certificació desplegaments continguts estàtics a Azure Blob Storage​
-- (En progrés) PoC integració Marc d'Automatització de Testing (MAT): execució tests funcionals amb Selenium i definició rollback automàtic per contenidors
-- (En progrés) PoC integració Marc d'Automatització d'Observabilitat (MAO)​: healtcheck internet i definició rollback automàtic per contenidors
-- (En progrés) Definició model desplegaments delegats (en màquines virtuals, clusters Kubernetes, ...) i PoC​
-- (En progrés) Definició model desplegament bases de dades i PoC​
-- (En progrés) Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
+- :heavy_check_mark: PoC integració Marc d'Automatització de Testing (MAT): execució tests funcionals amb Selenium i definició rollback automàtic per contenidors
+- :heavy_check_mark: PoC integració Marc d'Automatització d'Observabilitat (MAO)​: healtcheck internet i definició rollback automàtic per contenidors
+- :heavy_check_mark: Definició model desplegaments delegats (en màquines virtuals, clusters Kubernetes, ...) i PoC​
+- :heavy_check_mark: Definició model desplegament bases de dades i PoC​
+- :heavy_check_mark: Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
 
 ## [Q3/Q4 2024] 1.1.0​
 
-- Desplegaments avançats (Canary, Blue/Green, ...)*​
-- Self-hosted runner de tipus Deployer (per desplegar en registres Docker privats, només accessibles des de la xarxa corporativa)​
 - Certificació desplegaments a GCP​
-- Suport a .NET​
-- Suport Python (llenguatge a incorporar al Full de Ruta)​
+- Suport a .NET​ incloent llibreries
+- Suport Python (llenguatge a incorporar al Full de Ruta)​ excloent llibreries (GitHub Packages no dona suport)
 - Desplegaments en APIM (API Manager corporatiu)
-- CI/CD Apps mòbils
-- CI/CD MLOps
-- Integració completa amb MAT i MAO
+- Self-hosted runner de tipus Deployer per (1) desplegar en registres Docker privats, només accessibles des de la xarxa corporativa, i (2) execució de healthchecks intranet
+- Implementació rollback automàtic per funcions i continguts estàtics
+- Implantació polítiques seguretat CTTI
+- Anàlisi desplegaments avançats (Canary, Blue/Green, ...) en AWS, Azure, GCP​
+- Anàlisi CI/CD Apps mòbils
+- Anàlisi CI/CD MLOps
+- Suport integració MAT i MAO/MAM
 
+## [Q1 2025] 1.2.0​
+
+- Integració amb repositori d'artefactes centralitzat en modalitat SaaS (Artifactory, ...)
+- Dashboard amb KPIs del servei
 
 *_Roadmap subjecte a canvis_
