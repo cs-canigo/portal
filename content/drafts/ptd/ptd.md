@@ -21,7 +21,7 @@ La proposta arquitectònica és compatible amb el model europeu de Gaia-X, ja qu
 
 Aquesta plataforma integra mòduls per la gestió de Dades de Referència i Mestres de Dades d'ús corporatiu, així com un mòdul específic d'Integració i Data Quality, destacant la importància de la diversitat, complexitat i sensibilitat de les dades tractades.
 
-![Cas 1](/ptd/related/PTD/PTD01.png)
+![Cas 1](/plataformes/ptd/related/PTD/PTD01.png)
 
 
 ## Mòduls de la PTD
@@ -29,21 +29,21 @@ Aquesta plataforma integra mòduls per la gestió de Dades de Referència i Mest
 Els Mòduls de la PTD, donen resposta a les diferents necessitats d’ingesta, qualitat, emmagatzemament, 
 transformació i publicació de la Dada.
 
-![Cas 2](/related/PTD/PTD02.png)
+![Cas 2](/plataformes/ptd/related/PTD/PTD02.png)
 
 - **Connexió/Ingesta:** Les capacitats de connexió i ingesta de la PTD permeten integrar múltiples orígens de dades i formats, tant on-premise com en cloud, en batch o temps real. També es pot integrar amb Webservices, API Rest i sistemes d’esdeveniments en streaming com Confluent Kafka. Permet utilitzar Databricks amb processos adhoc d’ingesta o el Mòdul ITQ que per automatitzar i planificar càrregues, o virtualitzar els origens amb Denodo per desacoblar les fonts de dades dels seus processaments de càrrega.
 
-![Cas 3](/related/PTD/PTD03.png)
+![Cas 3](/plataformes/ptd/related/PTD/PTD03.png)
 - **Data Quality:** La PTD ofereix una solució configurable de qualitat de dades basada en Spark que s'executa sobre Databricks i utilitza taules Delta Lake. Normalitza la qualitat de les dades d’entrada validant-les, corregint-les i enriquint-les. Pot processar dades en diversos formats  i recollir-les mitjançant JDBC de multitud de bases de dades. També gestiona dades en temps real en forma d'esdeveniments i el procés de qualitat inclou ingesta, validació, enriquiment, remediació, remediació manual i consolidació.
 
-![Cas 4](/related/PTD/PTD04.png)
+![Cas 4](/plataformes/ptd/related/PTD/PTD04.png)
 - **Emmagatzemament i dominis d’informació:** El Data Lake central de la PTD utilitza Databricks, amb tecnologies com Apache Spark, Delta Lake i Delta Sharing. Databricks facilita la gestió centralitzada de dades amb Unity Catalog i una col·laboració eficient gràcies a la seva arquitectura Lakehouse.
 La PTD adopta un enfocament Datamesh, on diverses bases de dades coexisteixen en un entorn governat i distribuït per dominis funcionals i estandarditza els fluxos de dades en capes: Bronze (dada crua), Silver (dada amb qualitat) i Gold (dada enriquida).
 
-![Cas 5](/related/PTD/PTD05.png)
+![Cas 5](/plataformes/ptd/related/PTD/PTD05.png)
 - **Transformació:** La PTD amb Databricks ofereix una plataforma integrada per a l'execució de processos Spark que faciliten la transformació, l'enriquiment i la gestió del cicle de vida de les dades. També amb interfícies per a l'orquestració visual de workflows i la gestió de tasques, permet als usuaris desenvolupar i executar transformacions de dades en temps real mitjançant notebooks. Això millora l'autonomia dels usuaris, la gestió de càrregues i la interacció entre tenants, essent més eficaç i flexible.
 
-![Cas 6](/related/PTD/PTD06.png)
+![Cas 6](/drafts/ptd/related/PTD/PTD06.png)
 - **Publicació:** La disponibilització de dades es pot fer amb Delta Sharing de Databricks, que permet compartir dades de manera segura entre entorns interns i externs, i amb els BIs corporatius. Els usuaris poden accedir a les dades en temps real sense duplicar-les,  i facilitant l'anàlisi i govern. La PTD també disposa de virtualització amb Denodo per desacoblar dades heterogènies en una única Font, de les eines d’explotació. Si en canvi es precisa de Microserveis, s'emprarà Openshift cloud com a solució comuna multicloud.
 
 
