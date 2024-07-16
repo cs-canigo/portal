@@ -21,7 +21,7 @@ La proposta arquitectònica és compatible amb el model europeu de Gaia-X, ja qu
 
 Aquesta plataforma integra mòduls per la gestió de Dades de Referència i Mestres de Dades d'ús corporatiu, així com un mòdul específic d'Integració i Data Quality, destacant la importància de la diversitat, complexitat i sensibilitat de les dades tractades.
 
-![Cas 1](/related/PTD/PTD01.png)
+![Cas 1](/ptd/related/PTD/PTD01.png)
 
 
 ## Mòduls de la PTD
