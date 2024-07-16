@@ -2365,7 +2365,7 @@
                 },
                 {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "En revisió",
                     "itipus": "Tabular",
                     "ipromotor": "Departament d'Igualtat i Feminismes",
                     "idescripcio": "Es modifica el nom \"No binari\" (valor anterior) per \"No-binari\" (valor actualitzat).",
@@ -2662,7 +2662,7 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "En revisió",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Versió inicial.",
