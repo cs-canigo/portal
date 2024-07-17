@@ -1,35 +1,217 @@
 +++
 date        = "2024-07-01"
-title       = "Directrius d'integració"
-description = "Directrius d'integració CI/CD, Seguretat i Gov. Dada"
+title       = "Suport"
+description = "Suport per a la integració a PTD"
 sections    = "PTD"
 toc         = false
 taxonomies  = []
 weight      = 2
 +++
 
+## OFICINA TÈCNICA DE LA PTD
+
+L’oficina tècnica de la PTD, es va crear amb la finalitat de donar el suport necessari als departaments i proveïdors, que es volen adherir a la plataforma PTD.
+
+L’oficina tècnica està pensada per ajudar en tot el procés d’integració, des de l’_onboarding_ en la definició del servei, fins el desenvolupament i integració en els diferents entorns de la plataforma PTD (DES, PRE i PRO).
+
+Les peticions que es podran sol.licitar a la oficina tècnica de la PTD mitjançant la apertura de tickets al JIRA ACOPTD son:
+
+•	Provisió dels entorns PRE/PRO per a un domini d’informació
+•	Provisió d’un entorn de desenvolupament Databricks de Proveïdor
+•	Provisió de Components a la PTD
+•	Ingesta de dades al Data Lake de la PTD
+•	Calidad de un nuevo origen que se quiere integrar en la PTD
+•	Creació d’una nova regla de Remediació
+•	Creació d’una nova regla de Validació
+•	Petició de transformación en dades a Silver
+•	Virtualización de un origen en el Denodo
+
+### EXEMPLES DE PETICIÓ
+
+####A. Tiquet petició de l’aprovisionament d’un entorn De Desenvolupament
+
+Aquesta petició proporciona al peticionari els script terraform amb les indicacions d’execució en una documentació guia.
+
+**Acompanyament PTD (ACOPTD):**
+
+Cal gestionar la creació d’un tiquet Jira al CTTI per acompanyar el projecte: https://cstd.ctti.gencat.cat/jiracstd/projects/ACOPTD/. En aquest tiquet es centralitzaran i monitoritzaran les activitats necessàries per al proveïment de l'entorn de Desenvolupament.
+Després de la creació del tiquet Jira ACOPTD, s'ha de presentar el document d'Arquitectura de l'entorn de desenvolupament. Les dades obtingudes serviran com a inputs en el procés de proveïment de Desenvolupament - Databricks (Plantilla Terraform).
+
+**Passes prèvies que cal sol·licitar a CTTI (ACOCLDSIC):**
+
+ - Alta de IdContrato amb el Proveïdor
+ - Creació i Vinculació del Billing Profile a la Subscripció del Proveïdor
+ - Assignació del Codi d'Aplicació
+ - Assignació del Codi d'Entitat
+ - Assignació del Codi Inap
+ - Assignació del Codi Jira
+ - Assignació del Tenant_ID Azure-Ctti
+ - Assignació de la Subscripció Azure-Ctti
+ - Assignació del Rang d'IP /27 per a la Net0
+ - Creació d’una VPN per accedir a l’entorn de Desenvolupament (NUS). Cal solicitar-ho posterior a l’ACOPTD. 
+ 
+####B. Tiquet petició de Data Quality sobre un nou origen:
+
+Quan un departament o proveïdor vol integrar una nova font de dades a la PTD i requereix d’un pas previ de Data Quality sobre les seves dades llavors ha de demanar la incorporació d’aquest origen d’informació sobre el sistema de Data Quality de la PTD que realitza la ingesta, qualitat i publicació de les dades amb qualitat cap a diferents sistemes destí (la pròpia PTD, CSV, SFTP o BDD externa). El primer que ha de fer és realitzar una petició via tiquet aportant la següent informació:
+ - Informar sobre el tipus d’informació que es vol integrar a la PTD y sobre la que s’ha de passar el procés de qualitat (camps i descripció dels camps)
+ - Especificar fitxa de connexió a la font (incloent mecanisme d’autenticació).
+ - Especificar Domini al que pertany la informació, projecte i proveïdor (pel FinOps).
+ - Especificar tipus de publicació ha realitzar pel sistema DQ.
+ - Especificar tipus de regles a aplicar sobre els camps.
+ - Determinar calendari d’execució (diària, setmana, mensual, sota demanda, etc.) i horari en cas de ser necessari
+
+**Tasques a fer:**
+
+ - Obrir connectivitats amb el sistema origen : L’oficina tècnica s’encarregarà d’obrir connectivitat amb l’origen de la informació a integrar a la PTD.
+
+ - Crear configuració de qualitat per la nova font: L’equip de DQ crearà si no existeix ja la corresponent configuració de qualitat (ingesta, regles de validació, reparació i enriquiment sobre els camps indicats, configuració de Publicació, configuració de JobClusters per a l’execució del DQ). Si calen regles no existents serà un nou flux de petició.
+
+ - Aprovisionar recursos :
+   L’equip de DQ crearà: (i) el Catàleg i l’schema corresponent si no existeix; (ii) els volums a ADLS i les corresponents taules a Delta Lake de Landing, Remedy i Publicació; (iii) el/s workflows del DQ.
+   L’equip d’OT s’encarregarà de crear si no existeix ja el corresponent Workspace del domini.
+
+ - Desplegament a PRE/PRO: L’oficina tècnica s’encarregarà de realitzar el desplegament a PRE/PRO (veure flux desplegament).
 
 
-# **DIRECTRIUS D'INTEGRACIÓ CI/CD**
+**En aquest apartat la oficina tècnica de la PTD publicarà la descripció dels diferents tickets de provisió de la PTD.**
 
-## **1. INTRODUCCIÓ**
+
+### Procediment de contacte amb l'Oficina Tècnica
+
+En aquest apartat es descriu com s’ha de cursar la sol·licitud en cas de necessitat de realitzar una petició a l’Oficina Tècnica, ja sigui aprovisionament de recursos o dubtes d’integració.
+
+Accedir al JIRA: [ACOPTD](https://cstd.ctti.gencat.cat/jiracstd/projects/ACOPTD)
+Demanar a la bústia cstd.ctti@gencat.cat els permisos corresponents per a obrir peticions al Servei d’acompanyament de la plataforma PTD.
+---
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:ptd.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/plataformes/ptd/Suport).
+
+![Cas 1](/plataformes/ptd/related/Suport/Suport01.png)
+
+
+## MODEL DE GOVERN DE LA PTD
+
+En aquest apartat es descriu el model de desenvolupament ordenat i multiproveïdor de la PTD.
+
+![Cas 2](/plataformes/ptd/related/Suport/Suport02.png)
+
+
+### 1. Inici del projecte
+
+**Tasques:** 
+ - Establir reunió amb el proveïdor per a l’hora de copsar en detall l'objectiu i abast del projecte
+ - Establir la Tipologia de projectes 
+ - Serveis i funcionalitats que precisa el projecte 
+ - Equips implicats en la participació
+ - Tasques que haurà d’assumir cadascun dels equips
+ - Requeriments de seguretat, rendiment o especials a tenir en compte 
+ - Criteris d’acceptació per a la productivització
+ - Resolució de dubtes que es plantegin per a validar la viabilitat del projecte
+ - Següents passes i procediments per a la implantació del projecte 
+
+**Lliurable:** Checklist de Components
+Recull de demanada del projecte en vers a les necessitats requerides a la Plataforma Transversal de Dades per part del projecte a l’hora identificar la tipologia, tecnologies i serveis a aprovisionar
+
+![Cas 3](/plataformes/ptd/related/Suport/Suport03.png)
+
+
+### 2. Entorn de desenvolupament
+**Tasques:** 
+ - Lliurar la guia de entorn de desenvolupament
+ - Recursos que han de desplegar el proveïdor en l’entorn DES segons la tipologia i abast del projecte.  Els recursos es dotaran mitjançant plantilles IaC (Terraform) :
+	- Databricks
+	- Azure Container App para aplicacions backend
+        - MongoDB
+	- Azure Functions
+	- Etc...
+ - La seguretat serà proporcionada d’acord a les pròpies polítiques del proveïdor
+ - El repositori de Codi del proveïdor haurà d’emprar el mateix que el que determina CTTI en els entorns de PRE/PRO. 
+
+**Lliurable:** Document de referencia per al desplegament de l'entorn de desenvolupament i plantilles Terraform de desplegament.
+
+![Cas 4](/plataformes/ptd/related/Suport/Suport04.png)
+
+
+### 3. Directius d'integració
+**Tasques:** 
+ - Establir els criteris d’integració continua seguint les recomanació de Databricks (estructura Bundle) 
+ - Establir els criteris dels dominis d’informació del projecte
+ - Establir els criteris d’aprovació dels fluxos de CI/CD per a l’alliberament de Releases 
+ - Establir el criteris i controls de qualitat del codi, seguint les polítiques del CTTI
+ - Establir els criteris de seguretat tant de plataforma com de Dades
+ - Establir la política d’etiquetatge de FinOps
+ - Establir el nivell de tallatge de còmput disponibles a la PTD
+ - Establir les tipologies de clústers proporcionat per la PTD
+
+**Lliurable:** Directrius d’integració CI/CD i Seguretat:
+Recull de directrius tècniques per a garantir una integració i posada en marxa d’un cas d’us a la PTD.
+
+![Cas 5](/plataformes/ptd/related/Suport/Suport05.png)
+
+
+### 4. Coordinació del Govern de la dada
+**Tasques:**
+ - Activitats licitador de la PTD: Estàndards de govern tècnic de la dada: l’equip de la PTD (OGTD) facilita els estàndards tècnics de govern de la dada (plantilles d’AXON, ordenació de les dades, nomenclatures, etc.), al proveïdor que vagi a desenvolupar el cas d’ús
+ - Activitats proveïdor cas d’ús (i OGD, DGAD, Departament): 
+      - Definició del glossari de negoci: l’equip de govern funcional defineix els diferents termes de negoci del glossari i les mètriques per al cas d’us fent servir la Plantilla genèrica del govern de la dada amb AXON, que posteriorment servirà per introduir el glossari definit a AXON.
+      - Definició de les metadades: l’equip de govern funcional identifica el sistema, els conjunts de dades (taules) i els atributs (camps) involucrats al cas d’us, omplint la Plantilla genèrica del govern de la dada amb AXON.
+      - Identificació regles de qualitat: l’equip de govern funcional identifica les regles de qualitat (remediació) a aplicar en el moment que les dades passin de la capa BRZ a la capa SLV o altres que puguin ser d’aplicació
+ - Activitats licitador de la PTD: Desenvolupament de regles de qualitat: l’equip de la PTD (OGTD) desenvolupa les regles de qualitat identificades i definides pels responsables del govern de la dada i les aplica conforme al model establert.
+
+**Lliurable:** 
+ - Document guió per al context i requeriments inicials: Es tracta d’un document estandarditzat amb tota la informació referent a la forma d’ordenar les dades a la PTD (capes i propòsits), nomenclatura que han de seguir els actius de dades (taules, camps) i tot allò que s’ha definit des d’un punt de vista tècnic en temes de govern de la dada.
+ - Plantilla genèrica del govern de la dada amb AXON: Es tracta d’un document Excel estandarditzat que disposa de quatre pestanyes que contenen les plantilles extretes d’AXON. Aquestes quatre plantilles permeten integrar, de manera coherent i estandarditzada el glossari amb els seus termes de negoci i la seva corresponent jerarquia, els sistemes origen de les dades, els conjunts de dades (taules) i els atributs (camps de les taules) a AXON.
+
+**Eines**: 
+ - AXON: És l’eina principal. Permet centralitzar tota la informació funcional i tècnica referent a les entitats del cas d’us. És des d’on es gestiona el glossari de termes de negoci i mètriques.
+ - EDC: És on es troba el catàleg de dades. Permet la connexió amb la PTD per a l’extracció de metadades tècniques.
+ - IDQ: És on es porta a terme la gestió de la qualitat de les dades. També permet la connexió amb les fonts origen i la seva principal funció és crear perfilats.
+
+
+### 5. Validació
+
+**Tasques:**
+ - Lliurament per part del proveïdor del DA, AF, AT disponibles
+ - Validació del compliment de les directrius d’integració establertes segons els lliurables del proveïdor
+ - Aportar evidencies positives de les proves de qualitat de codi 
+ - Promoció a PRE i aportar evidencies positives de les proves d’integració i UAT 
+ - Validar que el projecte s’ajusta en als requeriments d’eficiència i FinOps 
+ - Validació dels criteris de Seguretat
+ - Validació del govern de la Dada
+
+
+**Lliurable:** Checklist d’acceptació
+Recull de la validació dels criteris d’acceptació per a la promoció a producció del cas d’us a la PTD.
+
+![Cas 6](/plataformes/ptd/related/Suport/Suport06.png)
+
+
+### 6. Promoció a Producció
+
+**Tasques:**
+ - Un cop el cas d'ús ha passat per totes les fase de desenvolupament, cumpliment de les directrius de d'integració de seguretat i CI/CD, coordinació amb Govern tècnic de la dada, i el proces de validació, el projecte restarà preparat per a la promoció a Producció.
+ - Posada en producció amb el procediment establert (pateició ACOPTD) i iniciant així la fase de operació y manteniment de la solució.
+
+
+## **DIRECTRIUS D'INTEGRACIÓ CI/CD**
+
+### 1. INTRODUCCIÓ
 
 Aquest document té com a objectiu establir les directrius per a la implementació i la gestió de processos d'Integració Contínua (CI) i Desplegament Continu (CD) dins de la nostra organització. En un entorn tecnològic cada cop més dinàmic i competitiu, és fonamental comptar amb procediments estandarditzats que permetin el desenvolupament i el lliurament de programari de manera eficient, segura i d'alta qualitat. Les directrius aquí descrites estan dissenyades per optimitzar el flux de treball, millorar la col·laboració entre equips i assegurar la consistència i la confiança dels nostres desplegaments. Aquest document servirà com a guia per a tots els equips de desenvolupament i operacions, proporcionant les millors pràctiques i estàndards necessaris per assolir els nostres objectius estratègics i operatius.
 
 
-## **2. VISIÓ GENERAL DEL CI/CD**
+### 2. VISIÓ GENERAL DEL CI/CD
 
-## **2.1. Definició de CI/CD**
+#### 2.1. Definició de CI/CD
 La Integració Contínua (CI) és una pràctica de desenvolupament de programari on els desenvolupadors integren el seu codi en un dipòsit compartit diverses vegades al dia, amb cada integració verificada per una compilació automatitzada i proves per detectar errors ràpidament. El Desplegament Continu (CD) és una extensió de CI que automatitza el lliurament de canvis de codi a un entorn de producció, assegurant que el programari sempre estigui en un estat desplegable.
 
-## **2.2. Beneficis de  CI/CD**
+#### 2.2. Beneficis de  CI/CD
 •	**Reducció d'Errors:** Detecta errors ràpidament i en facilita la correcció immediata.
 •	**Lliurament Ràpida:** Accelera el temps de lliurament de noves funcionalitats i millores.
 •	**Millora a la Qualitat del Programari:** Les proves automatitzades asseguren que el codi nou no trenqui la funcionalitat existent.
 •	**Feedback Continu:** Proporciona retroalimentació constant, permetent ajustaments i millores contínues.
 •	**Major Eficiència:** Automatitza tasques repetitives, alliberant temps per al desenvolupament de noves funcionalitats.
 
-## **2.3. Principis Fonamentals**
+#### 2.3. Principis Fonamentals
 •	**Automatització:** Automatitzar les compilacions, proves i desplegaments per reduir errors humans i augmentar la velocitat.
 •	**Integració Freqüent:** Integrar canvis de codi al repositori diverses vegades al dia per detectar i corregir errors ràpidament.
 •	**Lliurament continu:** Mantenir el codi en un estat constantment desplegable, permetent desplegaments freqüents i assegurances.
@@ -37,19 +219,20 @@ La Integració Contínua (CI) és una pràctica de desenvolupament de programari
 •	**Feedback Ràpid:** proveir retroalimentació ràpida als desenvolupadors sobre la qualitat del codi i l'estat de la integració.
 
 
-## **3. Eines i Tecnologies**
+### 3. Eines i Tecnologies
 
-## **3.1. Eines d'integració contínua:**
+#### 3.1. Eines d'integració contínua:
 Les eines d'Integració Contínua (CI) automatitzen el procés d'integració del codi en un dipòsit compartit, executant compilacions i proves de manera automàtica per detectar errors com més aviat millor. En el nostre cas, utilitzem GitHub Actions, una poderosa plataforma de QI que permet definir fluxos de treball per compilar, provar i desplegar codi directament des del repositori de GitHub. GitHub Actions ofereix integració nativa amb el repositori i una àmplia varietat daccions predefinides per personalitzar el procés dintegració contínua.
 
-## **3.2. Eines de Desplegament Continu:**
+#### 3.2. Eines de Desplegament Continu:
 Les eines de Desplegament Continu (CD) automatitzen el procés de lliurament de codi als entorns de producció i preproducció. També fem servir GitHub Actions per a CD, aprofitant la seva capacitat per desencadenar desplegaments automàtics basats en esdeveniments específics, com la fusió de codi en una branca principal. Això assegura que els canvis siguin provats i desplegats de manera consistent i ràpida, mantenint el programari sempre en un estat llest per a producció.
 
-## **3.3. Gestió de Repositoris i Versionat:**
+#### 3.3. Gestió de Repositoris i Versionat:
 La gestió de repositoris i versions és crucial per mantenir la integritat del codi i facilitar la col·laboració entre equips. GitHub és la nostra plataforma triada per a la gestió de repositoris, oferint un control de versions robust amb Git. GitHub facilita la col·laboració a través de característiques com pull requests, revisions de codi i branques, permetent als equips treballar en paral·lel sense conflictes. A més, GitHub proporciona eines de seguretat i gestió d'accessos, assegurant que només els usuaris autoritzats puguin modificar el codi.
 
 
-## **4. DIRECTRIUS PER A INTEGRACIÓ CONTÍNUA (CI)**
+### 4. DIRECTRIUS PER A INTEGRACIÓ CONTÍNUA (CI)
+
 •	**Configuració de Repositoris**
 La configuració de repositoris és essencial per mantenir un entorn de desenvolupament organitzat i eficient. A la nostra plataforma, utilitzem GitHub per gestionar tots els repositoris de codi. Cada projecte tindrà el seu propi dipòsit dedicat, i s'implementaran polítiques d'accés per assegurar que només els membres de l'equip autoritzats puguin modificar el codi. A més, es configuraran plantilles de pull request i issues per estandarditzar les contribucions i facilitar-ne la revisió i el seguiment de problemes.
 
@@ -66,7 +249,8 @@ La integració de codi serà gestionada mitjançant pipelins automatitzades a Gi
 La validación y revisión de código son procesos clave para mantener la calidad del software. Todas las pull requests deberán ser revisadas y aprobadas por al menos un miembro del equipo antes de ser fusionadas. Durante la revisión, se verificará que el código cumpla con los estándares de codificación establecidos, pase todas las pruebas unitarias y no contenga vulnerabilidades detectadas por SonarQube y Dependency Track. Este proceso asegura que el código integrado sea robusto, seguro y conforme a las mejores prácticas de desarrollo.
 
 
-## **5. DIRECTRIUS PER A DESPLEGAMENT CONTINUO (CD)**
+### 5. DIRECTRIUS PER A DESPLEGAMENT CONTINUO (CD)
+
 [Aquest punt està a acabar de desenvolupar]
 •	Automatització del Desplegament
 •	Gestió d'entorns
@@ -75,31 +259,32 @@ La validación y revisión de código son procesos clave para mantener la calida
 •	Monitorització i Feedback
 
 
-## **6. GESTIÓ DE CONFIGURACIÓ I ARTEFACTES**
+### 6. GESTIÓ DE CONFIGURACIÓ I ARTEFACTES
+
 [Aquest punt està a acabar de desenvolupar]
 •	Definició d'artefactes
 •	Gestió de Versions d'Artefactes
 •	Emmagatzematge i Recuperació d'Artefactes
 
 
-## **7. MONITORITZACIÓ I REPORTING**
-[Aquest punt està a acabar de desenvolupar]
+### 7. MONITORITZACIÓ I REPORTING
 
+[Aquest punt està a acabar de desenvolupar]
 •	Eines de Monitorització
 •	Mètriques de Rendiment
 •	Informes i Dashboards
 •	Gestió d'Incidents
 
 
-# **DIRECTRIUS DE SEGURITAT**
+## **DIRECTRIUS DE SEGURETAT**
 
-# 1. INTRODUCCIÓ
+### 1. INTRODUCCIÓ
 
 Aquest document té com objectiu establir les directrius bàsiques que han de seguir totes les aplicacions per poder treballar amb la PTD de forma segura. La seguretat, des del principi, ha estat un element clau en la construcció de la plataforma i la integració del diferents projectes que l’utilitzen. El punt de partida i principal marc de controls, treballat amb l’Agència de Ciberseguretat de Catalunya (Agència), ha estat l’Esquema Nacional de Seguretat (ENS), juntament amb el marc normatiu de la Generalitat de Catalunya en matèria de seguretat de la informació.
 
 De totes formes, a banda d’aquest document, és essencial mantenir **reunions** amb els equips de desenvolupament a l’inici de qualsevol projecte i **acompanyar**\-los durant tota l’etapa de creació de les aplicacions sobre la PTD.
 
-# 2. DIRECTRIUS DE SEGURETAT
+### 2. DIRECTRIUS DE SEGURETAT
 
 De tots els controls que hi apliquen, s’han extret els necessaris (les directrius) que ha de seguir qualsevol desenvolupament nou per poder treballar amb la PTD. Aquests s’han dividit en:
 
@@ -108,7 +293,7 @@ De tots els controls que hi apliquen, s’han extret els necessaris (les directr
 - Seguretat de la informació.
 - Altres directrius.
 
-## 2.1. Desenvolupament segur
+#### 2.1. Desenvolupament segur
 
 Tot desenvolupament sobre la PTD ha de seguir el seu **marc de desenvolupament segur**, basat en OWASP SAMM. Principalment:
 
@@ -137,10 +322,9 @@ Tot desenvolupament sobre la PTD ha de seguir el seu **marc de desenvolupament s
         - [Els controls proactius d’OWASP](https://owasp.org/www-project-proactive-controls/v3/en/0x04-introduction), d’**obligat** compliment. Al següent Excel es detalla cadascun dels controls i permet fer un seguiment de la seva implementació, que ha de ser presentat a l’equip de seguretat de la plataforma abans de poder posar res en producció.
 
 
-[Fichero: PTD-ChecklistProactiveControlsOWASPv2.0.xlsx](/related/Seguritat/PTD-ChecklistProactiveControlsOWASPv2.0.xlsx)
+      [Fichero: PTD-ChecklistProactiveControlsOWASPv2.0.xlsx](/plataformes/ptd/related/Seguretat/PTD-ChecklistProactiveControlsOWASPv2.0.xlsx)
 
-
-- - - Guies de desenvolupament segur de:
+    - Guies de desenvolupament segur de:
             - Angular
             - Java
             - JavaScript
@@ -173,7 +357,7 @@ Tot desenvolupament sobre la PTD ha de seguir el seu **marc de desenvolupament s
     - Modificacions de la configuració.
     - Arxiu de codi d'aplicació i/o canvis en la memòria.
 
-## 2.2. Gestió d’usuaris
+### 2.2. Gestió d’usuaris
 
 Les directrius a seguir en quant a la gestió d’usuaris són les següents.
 
@@ -193,22 +377,22 @@ Les directrius a seguir en quant a la gestió d’usuaris són les següents.
 
 3. Per poder treballar amb un **usuari**, s'ha de fer petició a l'equip d'administració d'usuaris, **justificar** necessitat i indicar els requisits d'accés als components de la plataforma (Databricks, MongoDB Atlas, etc.).
 
-## 2.3. Control d’accés
+### 2.3. Control d’accés
 
 El control d'accés ajuda a prevenir que persones no autoritzades obtinguin accés als diferents recursos de la PTD. Mitjançant els permisos d’accés a la plataforma, es podrà controlar de forma granular quins usuaris hi tenen accés.
 
-![Cas 1](/related/Seguritat/SEG01.png)
+![Cas 1](/plataformes/ptd/related/Seguretat/SEG01.png)
 
 En quant a les directrius de **control d’accés** a les dades i altres recursos de la PTD:
 
 1. Els prestadors de serveis de manteniment i desenvolupament **no han de tenir accés a les dades de PRO**. La gestió d'usuari a PRO és **responsabilitat de negoci** (departament). No obstant això, els prestadors de serveis han de procurar que les mesures establertes i configurades de control d'accés siguin les adients (contrasenyes segures, que el sistema permeti crear rols, MFA, etc.).
 2. Es faran servir els **rols i grups** definits per l’equip de seguretat. Qualsevol nova petició haurà de ser **avaluada i aprovada per aquest equip, actuant baix les directrius del CTTI**. Al següent esquema es mostra la definició dels perfils principals d’usuari existents i els seus accessos a cadascuna de les capes de dades d’un projecte a la PTD.
 
-![Cas 2](/related/Seguritat/SEG02.png)
+![Cas 2](/plataformes/ptd/related/Seguretat/SEG02.png)
 
 Al quadre següent es poden veure l’assignació dels diferents permisos per tipus d’usuari i capa de dades.
 
-![Cas 3](/related/Seguritat/SEG03.png)
+![Cas 3](/plataformes/ptd/related/Seguretat/SEG03.png)
 
 3. Els recursos i dades del sistema es protegiran de tal forma que **per defecte s’impedeix el seu ús**, excepte per als usuaris amb els drets d'accés suficients.
 4. Els **drets d'accés** de cada recurs s'establiran segons les decisions de la **persona responsable del recurs**, que s’haurà d’atendre a les polítiques i normatives de seguretat de la PTD.
@@ -233,14 +417,14 @@ Els **mecanismes d’autenticació**, que actualment es poden emprar a la PTD, s
 | Denodo | GICAR CTTI/OIDC | Denodo permet gestionar l’autenticació d’usuaris nominals federant-se amb GICAR CTTI, emprant el protocol OIDC. Els usuaris entraran amb les seves credencials de GICAR amb MFA. S’emprarà principalment per l’accés a les consoles d’administració. |
 |  Denodo | Usuari/Password | Per als usuaris màquina, serà necessari emprar usuari i password. |
 
-## 2.4. Seguretat de la informació
+### 2.4. Seguretat de la informació
 
 En quant a les seguretat de les dades, s’han de seguir les següents directrius:
 
 1. S’ha de complir amb els requisits del [Marc de Ciberseguretat per a la Protecció de Dades (MCPD) - Mesures de seguretat](https://portal.ciberseguretat.cat/compliment-normatiu-1/auditoria-i-marc-normatiu/marc-normatiu/marc-normatiu-i-legal/marc-de-ciberseguretat-per-a-la-proteccio-de-dades-mesures-de-seguretat.pdf/view) de l’Agència, segons el nivell de protecció resultant de la qualificació de la informació.
 2. S’ha d’omplir el [formulari de qualificació](https://forms.office.com/Pages/ResponsePage.aspx?id=LzkobXpESk6iYpe6sejsJz7aNJibx9lJifqsOWHfnt9UQ0pTRVRNWDhDUDY1UzJaU01QS09EUEFQWSQlQCN0PWcu) de la informació exigida per l’Agència de Ciberseguretat i l’ENS. L’Agència farà arribar la seva qualificació i una llista de requisits a complir. Per al conjunt de la PTD s’han establert els nivells de protecció de la següent taula.
 
-![Cas 4](/related/Seguritat/SEG04.png)
+![Cas 4](/plataformes/ptd/related/Seguretat/SEG04.png)
 
 
 La categorització anterior no eximeix del fet que els projectes nous hagin de qualificar la seva informació, abans d’aplicar les mesures de seguretat més adients per protegir les seves dades.
@@ -256,16 +440,15 @@ La categorització anterior no eximeix del fet que els projectes nous hagin de q
 
 A la següent imatge es poden veure algunes de les tècniques a fer servir per tal de garantir la protecció de les dades personals.
 
-![Cas 5](/related/Seguritat/SEG05.png)
+![Cas 5](/plataformes/ptd/related/Seguretat/SEG05.png)
 
 
 I a la següent imatge a on és convenient aplicar cadascuna de les tècniques esmentades dins el flux de les dades dins la PTD.
 
-![Cas 6](/related/Seguritat/SEG06.png)
+![Cas 6](/plataformes/ptd/related/Seguretat/SEG06.png)
 
 
-
-## 2.5. Altres directrius de seguretat
+### 2.5. Altres directrius de seguretat
 
 **Retirar comptes i contrasenyes estàndard**. No és faran servir en cap moment comptes ni contrasenyes estàndard. Els usuaris nominals entraran per GICAR o Entra ID; és en aquests sistemes on es gestionen les contrasenyes dels usuaris nominals.
 
@@ -278,19 +461,15 @@ Tots els **intercanvis d'informació i prestació de serveis amb altres sistemes
 A la PTD existeix el xifrat de les dades en trànsit per tal d'evitar qualsevol tipus d'atac que puguin comprometre la integració de la informació. Només s'admeten els **protocols de comunicacions segures TLS v1.2 o superior i ssh**. Totes les comunicacions han de passar per la NET0 de CTTI, tant internes com externes.
 
 
-# **DIRECTRIUS D'INTEGRACIO DE GOVERN DE LA DADA**
+## **DIRECTRIUS D'INTEGRACIO DE GOVERN DE LA DADA**
 
-**REQUISITS DE GOVERN DE LES DADES PER ALS PROVEÏDORS**
-
-Que treballin amb la Plataforma Transversal de Dades de la Generalitat de Catalunya
-
-# Introducció
+### 1. Introducció
 
 Aquest document conté tots els requisits necessaris per poder introduir tota la informació de govern de les dades referent a les entitats del cas d’us a l’eina de govern de la Generalitat de Catalunya (Axon).
 
 També conté tota la informació que els diferents proveïdors que treballin amb la Plataforma Transversal de Dades necessiten per complimentar tots els requisits de govern i les plantilles necessàries.
 
-# Informació bàsica inicial
+### 2. Informació bàsica inicial
 
 | **Nom** | Nom del cas d’ús. |
 | --- | --- |
@@ -305,7 +484,7 @@ També conté tota la informació que els diferents proveïdors que treballin am
 El domini i subdominis es poden complimentar a partir del document “Abreviacións de dominis i subdominis que es pot trobar al final del document”.
 
 
-## Definició dels rols
+### 3. Definició dels rols
 
 Per tal de poder representar totes les parts interessades de les diferents entitats del cas d’us a l’eina de govern, és necessari recollir la següent informació:
 
@@ -324,7 +503,7 @@ Per tal de poder representar totes les parts interessades de les diferents entit
 | Arquitecte/s de la dada (sistema/es orígen) |     |     |
 | Administrador/s de sistema/es (sistema/es orígen) |     |     |
 
-# Informació de les capes funcionals de la PTD
+### 4. Informació de les capes funcionals de la PTD
 
 La Plataforma Transversal de Dades està composta de les següents capes funcionals, utilitzades per distribuir les dades en funció del seu grau d’estandardització i enriquiment:
 
@@ -332,11 +511,11 @@ La Plataforma Transversal de Dades està composta de les següents capes funcion
 - **Capa Silver (SLV):** Utilitzada per emmagatzemar una rèplica de les dades de la capa BRZ quan han passat pel procés d’estandardització i qualitat de remeiació inicial. És una capa d’explotació.
 - **Capa Gold (GLD):** Utilitzada per emmagatzemar les dades enriquides que apareixen al desenvolupar tècnicament el cas d’ús, després del modelat
 
-![Cas 1](/related/Govern/GOV01.png)
+![Cas 1](/plataformes/ptd/related/Govern/GOV01.png)
 
 Al final del present document es pot trobar el document “Estàndards tècnics de govern” amb tota la informació referent a les capes funcionals.
 
-## Nomenclatura a la BBDD – Databricks
+### 5. Nomenclatura a la BBDD – Databricks
 
 A la base de dades de la PTD (Databricks), les dades s’agrupen mitjançant les capes funcionals, catàlegs i esquemes. Aquests catàlegs i esquemes han de tenir la següent nomenclatura:
 
@@ -360,13 +539,13 @@ En cas que les dades formin part de diferents dominis, serà necessari crear els
 
 Al document d’estàndards tècnics que es pot trobar al final del present document, es pot trobar tota la informació detallada i amb exemples de les nomenclatures a Databricks.
 
-## Informació de govern de les entitats de les diferents capes
+## 6. Informació de govern de les entitats de les diferents capes
 
 A l’eina de govern de les dades (Axon), s’ingesta la informació de govern referent a les entitats de de les diferents capes funcionals de la PTD. D’una banda, la informació referent a les dades en l’estat en el que es troben a l’origen (per poder representar el llinatge tècnic a l’eina) corresponent a la capa BRZ i d’altra banda, la informació referent a les dades estandarditzades i enriquides, corresponents a les capes SLV i GLD.
 
 A continuació es detallen els requisits necessaris per incorporar tota aquesta informació a l’eina de govern de les dades.
 
-### Plantilles d’ingesta de les entitats de la capa BRZ
+#### 6.1 Plantilles d’ingesta de les entitats de la capa BRZ
 
 Per tal de poder introduir la informació de les entitats d’origen al l’eina i representar el llinatge tècnic, és necessari completar les següents plantilles, que es poden trobar al final del document:
 
@@ -376,7 +555,7 @@ Per tal de poder introduir la informació de les entitats d’origen al l’eina
 
 Aquestes plantilles s’han de treballar i complimentar conjuntament amb els corresponents usuaris del departament propietari del cas d’ús.
 
-### Plantilles d’ingesta de les entitats de la capa SLV
+#### 6.2 Plantilles d’ingesta de les entitats de la capa SLV
 
 Per tal de poder introduir la informació de les entitats estandarditzades a l’eina i representar el llinatge tècnic, és necessari completar les següents plantilles, que es poden trobar al final del document:
 
@@ -387,18 +566,18 @@ Per tal de poder introduir la informació de les entitats estandarditzades a l�
 
 Aquestes plantilles s’han de treballar i complimentar conjuntament amb els corresponents usuaris del departament propietari del cas d’ús i, en el cas dels conjunts de dades i atributs, s‘han de seguir les següents directrius de nomenclatura, recollides al document d’estàndards tècnics:
 
-![Cas 2](/related/Govern/GOV02.png)
+![Cas 2](/plataformes/ptd/related/Govern/GOV02.png)
 
-![Cas 3](/related/Govern/GOV03.png)
+![Cas 3](/plataformes/ptd/related/Govern/GOV03.png)
 
-![Cas 4](/related/Govern/GOV04.png)
+![Cas 4](/plataformes/ptd/related/Govern/GOV04.png)
 
-![Cas 5](/related/Govern/GOV05.png)
+![Cas 5](/plataformes/ptd/related/Govern/GOV05.png)
 
-![Cas 6](/related/Govern/GOV06.png)
+![Cas 6](/plataformes/ptd/related/Govern/GOV06.png)
 
 
-### Plantilles d’ingesta de les entitats de la capa GLD
+#### 6.3 Plantilles d’ingesta de les entitats de la capa GLD
 
 Una vegada finalitzat el desenvolupament tècnic del cas d’ús, per tal de poder introduir la informació de les entitats enriquides a l’eina, és necessari completar les següents plantilles, que es poden trobar al final del document:
 
@@ -408,41 +587,42 @@ Una vegada finalitzat el desenvolupament tècnic del cas d’ús, per tal de pod
 
 Aquestes plantilles s’han de treballar i complimentar conjuntament amb els corresponents usuaris del departament propietari del cas d’ús i, en el cas dels conjunts de dades i atributs, s‘han de seguir les directrius de nomenclatura, esmentades anteriorment i recollides al document d’estàndards tècnics.
 
-# Documents de suport i plantilles
+
+## 7. Documents de suport i plantilles
 
 A continuació s’adjunten tots els documents de suport que contenen la informació necessària per completar totes les tasques esmentades en aquest document i les plantilles necessàries que s’han de completar amb els usuaris.
 
-## Document que conté la informació de dominis i subdominis
+### 7.1 Document que conté la informació de dominis i subdominis
 
 Aquest document conté la recopilació completa de dominis i subdominis definits per la Funció Central Funcional, les seves descripcions i les seves corresponents abreviacions que s’hauràn d’utilitzar a l’hora de definir les nomenclatures dels catàlegs i esquemes de la BBDD (Databricks).
 
-[Acronims_Abreviacions_Dominis_Subdominis.xlsx](/related/Govern/010224_Acronims_Abreviacions_Dominis_Subdominis.xlsx)
+[Acronims_Abreviacions_Dominis_Subdominis.xlsx](/plataformes/ptd/related/Govern/010224_Acronims_Abreviacions_Dominis_Subdominis.xlsx)
 
 
-## Document d’estàndards tècnics
+### 7.2 Document d’estàndards tècnics
 
 Aquest document conté tota la informació necessària per realitzar les tasques referents a l’estructura de capes, la definició de nomenclatures i, a mes a mes, conté la informació referent al model de seguretat i privacitat de la plataforma.
 
-[PTD_Estàndars_tècnics_gover.pdf](/related/Govern/PTD_Estàndars_tècnics_gover.pdf)
+[PTD_Estàndars_tècnics_gover.pdf](/plataformes/ptd/related/Govern/PTD_Estàndars_tècnics_gover.pdf)
 
 
-## Plantilles d’ingesta de l’eina de govern (Axon)
+### 7.3 Plantilles d’ingesta de l’eina de govern (Axon)
 
 En aquest apartat s’adjunten totes les plantilles necessàries que cal utilitzar a l’hora de treballar amb els usuaris dels departaments. S’han de complimentar rigorosament per posteriorment poder incorporar i representar tota la informació recollida a l’eina de govern de les dades. Totes elles contenen instruccions i llegendes per tal de facilitar aquesta tasca.
 
 ### Plantilla de sistemes
 
-[Plantilla_Sistemes_aut.xlsx](/related/Govern/20240620_Plantilla_Sistemes_aut.xlsx)
+[Plantilla_Sistemes_aut.xlsx](/plataformes/ptd/related/Govern/20240620_Plantilla_Sistemes_aut.xlsx)
 
 
-### Plantilla de Conjunts de dades i Atributs + relacions entre Atributs
+#### Plantilla de Conjunts de dades i Atributs + relacions entre Atributs
 
-[Plantilles_Conjuntsdades_Atributs_aut.xlsx](/related/Govern/20240620_Plantilles_Conjuntsdades_Atributs_aut.xlsx)
+[Plantilles_Conjuntsdades_Atributs_aut.xlsx](/plataformes/ptd/related/Govern/20240620_Plantilles_Conjuntsdades_Atributs_aut.xlsx)
 
 
-### Plantilla del Glossari de termes de negoci
+#### Plantilla del Glossari de termes de negoci
 
-[Plantilla_Glossari_aut.xlsx](/related/Govern/20240620_Plantilla_Glossari_aut.xlsx)
+[Plantilla_Glossari_aut.xlsx](/plataformes/ptd/related/Govern/20240620_Plantilla_Glossari_aut.xlsx)
 
 
 
