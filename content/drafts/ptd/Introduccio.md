@@ -16,6 +16,7 @@ Aquesta plataforma té com a objectiu integrar, gestionar i explotar dades de di
 
 
 ### Aspectes clau de la PTD:
+
 - **Tecnologia**. La PTD és una solució integral, confiable i adaptable que es pot desplegar en diferents núvols, garantint el seu manteniment adequat, funcionalitat completa i evolució futura.
 
 - **Persones**. Promou la transformació cultural dels departaments amb iniciatives d'alfabetització en dades, gestió del coneixement i del canvi, utilitzant l'enfocament ADKAR i divulgació sistemàtica.
@@ -25,6 +26,7 @@ Aquesta plataforma té com a objectiu integrar, gestionar i explotar dades de di
 - **Dades**. Proporciona un govern robust de les dades per a diferents finalitats, assegurant la qualitat i facilitant l'obtenció del valor real que les dades poden oferir.
 
 ### Capacitats de la PTD:
+
 La Plataforma Transversal de Dades (PTD) de la Generalitat de Catalunya, inclou diverses capacitats clau per a la gestió i explotació eficient de les dades:
 
 -**Integració**. Capacitat d'integrar dades de diferents fonts i departaments, assegurant la seva coherència i disponibilitat.
@@ -64,10 +66,14 @@ Aquestes capacitats permeten a la PTD convertir-se en una plataforma robusta i f
 
 - **Suport**. Equip de suport especialitzat en la tecnologia per ajudar-vos des de la definició de l’arquitectura, millors pràctiques de definició de topics, integració amb la plataforma, resolució de incidències i posada en producció. Compta amb suport de fabricant, Confluent, amb temps de resposta inferior a 1h per a incidents de severitat crítica en producció.
 
+
 ## Welcome Pack
+
 L'Oficina Tècnica ha elaborat un conjunt de continguts a l'hora de facilitar-vos la vostra integració amb la Plataforma PTD i que trobareu en els següents apartats.
 
+
 ## Procediment de contacte amb l'Oficina Tècnica
+
 En aquest apartat es descriu com s’ha de cursar la sol·licitud en cas de necessitat de realitzar una petició a l’Oficina Tècnica, ja sigui aprovisionament de recursos o dubtes d’integració.
 
 Accedir al JIRA: [ACOPTD](https://cstd.ctti.gencat.cat/jiracstd/projects/ACOPTD)
