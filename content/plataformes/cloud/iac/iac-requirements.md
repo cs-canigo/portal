@@ -15,15 +15,14 @@ Aquesta és l'**estructura de directoris** recomanada per a un projecte d'infrae
 root
 ├── env
 │   ├── pro 
-│   │   │─ backend.tf
+│   │   │── backend.tf
 │   │   │── db.tf
 │   │   │── container-registry.tf
 │   │   │── container-platform.tf
 │   │   │── ...
 │   │   └── variables.tf
-│   │
 │   └── pre
-│       │─ backend.tf
+│       │── backend.tf
 │       │── db.tf
 │       │── container-registry.tf
 │       │── container-platform.tf
