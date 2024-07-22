@@ -15,16 +15,30 @@ Aquesta és l'**estructura de directoris** recomanada per a un projecte d'infrae
 root
 ├── env
 │   ├── pro 
-│   │   └── db 
-│   │       ├── main.tf 
-│   │       └── variables.tf
+│   │   │─ backend.tf
+│   │   │── db.tf
+│   │   │── container-registry.tf
+│   │   │── container-platform.tf
+│   │   │── ...
+│   │   └── variables.tf
+│   │
 │   └── pre
-│       └── db 
-│           ├── main.tf 
-│           └── variables.tf 
+│       │─ backend.tf
+│       │── db.tf
+│       │── container-registry.tf
+│       │── container-platform.tf
+│       │── ...
+│       └── variables.tf
 └── modules 
-    └── db 
-        └── main.tf
+    │── db 
+    │    └── main.tf
+    │    └── outputs.tf
+    │    └── variables.tf
+    │── container-registry 
+    │    └── main.tf
+    │    └── outputs.tf
+    │    └── variables.tf
+    ...
 ```
 
 Els workflows de CI/CD d'infraestructura requereixen d'aquesta estructura pel seu correcte funcionament. Els diferents stages dels workflows treballen amb el directori adient corresponent a l'**entorn segons la branca** (dev/test/int=develop, release=pre, master=pro) en la que s'estigui actuant.
