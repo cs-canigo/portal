@@ -89,7 +89,9 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 </dependency>
 ```
 
-Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions
+Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions.
+
+Per al correcte ús de les funcionalitats del mòdul d'antivirus, s'ha d'afegir aquesta dependència de la llibreria de Symantec en el pom.xml de l'aplicació generada amb l'arquetip de Canigó. És a dir, aquesta dependència estarà en el mòdul canigo.integration.antivirus i a més ha d'estar en el pom.xml de la nova aplicació generada.
 
 ### Exemple d'ús
 
