@@ -752,16 +752,31 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Administració Local (DGAL)",
                     "idescripcio": "S'actualitza la denominació de l'ajuntament de \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
                     "ifitxer_doc": "Ajuntaments_ATR.docx",
-                    "ifitxer_xls": "Ajuntaments.xlsx",
+                    "ifitxer_xls": "deprecated/Ajuntaments_V03.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                    "idescripcio": "Canvi de nom de l'ajuntament “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Ajuntaments_ATR.docx",
+                    "ifitxer_xls": "Ajuntaments.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -769,7 +784,7 @@
             "nom_dinsBD": "AJUNTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq91",
