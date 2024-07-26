@@ -679,16 +679,31 @@
                 },
 				{
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Evolucionar la DR amb l'actualització de la descripció compartida per la UPR, es modifica el nom de tres direccions generals d'identificadors(14092,10869,16212) i una nova(23190)",
                     "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
-                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "ifitxer_xls": "deprecated/Subdireccions_Generals_V02.xlsx",
                     "idatacreacio": "29/05/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/05/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V03",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació de l'entitat de Subdireccions Generals, per evolucionar l'entitat i introduir les dues noves subdireccions, a causa del Decret 106/2024. Les noves subdireccions són les següents:  Subdirecció General de Suport i Relacions Contencioses,Subdirecció General d'Impuls i Seguiment Normatiu.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -696,7 +711,7 @@
             "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/03/2024",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq90",
@@ -2720,16 +2735,31 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització per canvi de nom d'un municipi: Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat). Identificadors dels registres afectats: 0505, 0506, 0507.",
                     "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
-                    "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                    "ifitxer_xls": "deprecated/Codi_Postal_Municipis_Cat_V03.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                    "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2980,16 +3010,31 @@
                 },
                 {
                     "inom": "V07",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                     "idescripcio": "Actualització per canvi nom del municipi de codi 170486: \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
                     "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
-                    "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Catalunya_Geo_V07.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V08",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                    "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2997,7 +3042,7 @@
             "nom_dinsBD": "MUNICIPIS_CAT_GEO",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq87",
@@ -3278,16 +3323,31 @@
                 },
                 {
                     "inom": "V19",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització del nom d'un municipi a causa d'una correcció realitzada per IDESCAT. El municipi amb nom Láujar de Andarax i CODI 040577 passa a denominar-se Laujar de Andarax, amb el mateix CODI.",
                     "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V19.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V20",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3295,7 +3355,7 @@
             "nom_dinsBD": "MUNICIPIS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq127",
@@ -3409,16 +3469,31 @@
                 },
                 {
                     "inom": "V06",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                     "idescripcio": "Canvi en l'estructura de la dada.",
                     "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V06.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V07",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3426,7 +3501,7 @@
             "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "21/04/2021",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq125",
@@ -3800,16 +3875,31 @@
                 },
                 {
                     "inom": "V05",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització per canvi nom del municipi de codi 1704860000000: \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
                     "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V05.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V06",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3817,7 +3907,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "04/12/2020",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq140",
@@ -4083,16 +4173,31 @@
                 },
                 {
                     "inom": "V18",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                     "idescripcio": "En realitzar-se la modificació del Municipi de Laujar de Andarax , també és necessari modificar l'entitat d'Unitats Poblacionals d'Espanya, ja que els noms de municipis i els de les unitats poblacionals estan relacionats.",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V18.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V19",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -4100,7 +4205,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "31/03/2021",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq175",
