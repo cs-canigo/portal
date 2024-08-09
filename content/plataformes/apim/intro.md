@@ -1,8 +1,8 @@
 +++
-date        = "2024-07-30"
+date        = "2024-08-09"
 title       = "API Manager Corporatiu"
 description = "Descripció del servei"
-sections    = "ApiManager Cloud"
+sections    = "APIM"
 weight      = 1
 categories  = ["cloud","apim"]
 +++
@@ -28,9 +28,11 @@ La infraestructura dels **API Gateways** pot ser:
 
 |Modalitat|Descripció|
 |-------|-------|
-|Gateways CTTI Compartits|Infraestructura compartida onpremise|
+|Gateways CTTI Compartits|Infraestructura compartida onpremise, desplegat a CPD2|
 |Gateways dedicats|Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)|
 |Contenidors|Desplegament de l'API Gateway en contenidor|
+
+Actualment, només es troba disponible la infraestructura compartida.
 
 ## Plataforma
 
@@ -48,5 +50,5 @@ Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services
 
 Es posa a disposició documentació on es detallen les característiques i metodologia de treball del servei d'API Manager.
 
-La podeu trobar a https://canigo.ctti.gencat.cat/apim/documentacio/
+La podeu trobar a https://canigo.ctti.gencat.cat/plataformes/apim/documentacio/
 
