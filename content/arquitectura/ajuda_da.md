@@ -1,5 +1,5 @@
 +++
-date        = "2021-11-16"
+date        = "2024-08-21"
 title       = "Guia d'ajuda a l'hora d'omplir un DA"
 description = "Ajuda a l'emplenat de la plantilla DA"
 sections    = "Document Arquitectura"
@@ -21,6 +21,7 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
    3. [Parts Interessades](#PartsInteressades)
 2. [Vistes](#Vistes)
    1. [Vista de Context](#VistaContext)
+      1. [Fluxos de Comunicacions](#FluxosComunicacions)
    2. [Vista Funcional](#VistaFuncional)
    3. [Vista d’Informació](#VistaInformacio)
    4. [Vista de Concurrència](#VistaConcurrencia)
@@ -119,6 +120,16 @@ Caldrà també que aquestes dependències no siguin realment acoblaments entre a
 
 ### **Actors** {#Actors}
 Enumerar els diferents actors que apareixen al diagrama de context i detarllar-ne la descripció d'aquests. A més, caldrà explicar com s'autentiquen al Sistema.
+
+#### **Fluxos de Comunicacions** {#FluxosComunicacions}
+Diagrama general dels diferents elements on s’identifiqui la Net0 i els diferents fluxos de comunicacions involucrats en la comunicació del servei/solució. Podeu fer servir el diagrama en blanc que teniu disponible a la pàgina d’ajuda a la redacció del DA (el teniu en aquests enllaç).
+
+**Directrius**
+Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’identifiquen els fluxos. Es a dir, aquells fluxos identificats a la taula s’han de reflectir després al diagrama.
+
+<div align="left">
+<img src="/images/PlantillaDA/VistaContextNUSBase_v2.drawio.PNG" style="width:500px;" />
+<br>
 
 ###### [Inici](#TaulaContiguts)
 ## **Vista Funcional:** {#VistaFuncional}
