@@ -239,7 +239,7 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "En revisió",
+                    "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Actualització per modificar el nom de \"Departament de Polítiques Digitals i Territori\" per \"Departament de Territori\", \"Departament d'Acció Exterior i Govern Obert\" per \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia\" per \"Departament de Justícia, Drets i Memòria\". També s'han modificat els seus codis i el codi del \"Departament d'Educació\".",
@@ -248,7 +248,7 @@
                     "idatacreacio": "25/10/2022",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "26/10/2022",
+                    "idatapublicacio": "10/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -256,7 +256,7 @@
             "nom_dinsBD": "DEPARTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "10/09/2024"
         },
         {
             "Id": "dtarq102",
