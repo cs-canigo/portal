@@ -239,16 +239,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Actualització per modificar el nom de \"Departament de Polítiques Digitals i Territori\" per \"Departament de Territori\", \"Departament d'Acció Exterior i Govern Obert\" per \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia\" per \"Departament de Justícia, Drets i Memòria\". També s'han modificat els seus codis i el codi del \"Departament d'Educació\".",
                     "ifitxer_doc": "Departaments_ATR.docx",
-                    "ifitxer_xls": "Departaments.xlsx",
+                    "ifitxer_xls": "deprecated/Departaments_V04.xlsx",
                     "idatacreacio": "25/10/2022",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "10/09/2024",
                     "idatapublicacio": "26/10/2022",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització per modificar el nom de: Departament d'Economia i Finances: ECF,Departament d'Interior i Seguretat Pública: ISP,Departament de Justícia i Qualitat Democràtica: JUS,Departament de Territori, Habitatge i Transició Ecològica: TER,Departament de Salut: SLT,Departament d'Educació i Formació Professional: EDF,Departament de Drets Socials i Inclusió: DSI,Departament d'Empresa i Treball: EMT,Departament d'Igualtat i Feminisme: IFE,Departament d'Unió Europea i Acció Exterior: UEX,Departament d'Agricultura, Ramaderia, Pesca i Alimentació: ARP",
+                    "ifitxer_doc": "Departaments_ATR.docx",
+                    "ifitxer_xls": "Departaments.xlsx",
+                    "idatacreacio": "09/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "10/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -256,7 +271,7 @@
             "nom_dinsBD": "DEPARTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "10/09/2024"
         },
         {
             "Id": "dtarq102",
@@ -2782,7 +2797,7 @@
             "nom_dinsBD": "CODI_POSTAL_MUNICIPIS_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "26/05/2021",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "26/07/2024"
         },
         {
             "Id": "dtarq82",
