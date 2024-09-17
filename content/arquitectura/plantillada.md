@@ -24,8 +24,7 @@ A continuació proporcionem enllaços als documents relacionats:
 | Plantilla genèrica (arquitectures híbrides) | [Plantilla DA genèrica](/related/da/Plantilla_DA_Híbrid_DT_DAQ_V2.2.docx) |
 | On Premise | [Plantilla DA On Premise](/related/da/Plantilla_DA_OnPremise_DT_DAQ_V2.2.docx) |
 | Cloud privat | [Plantilla DA Cloud Privat](/related/da/Plantilla_DA_CloudPrivat_DT_DAQ_V2.2.docx) |
-| Cloud public Gestionat | [Plantilla DA Cloud Públic Gestionat](/related/da/Plantilla_DA_CloudPublicGestionat_DT_DAQ_V2.2.docx) |
-| Cloud public No Gestionat | [Plantilla DA Cloud Públic No Gestionat](/related/da/Plantilla_DA_CloudPublicNoGestionat_DT_DAQ_V2.2.docx) |
+| Cloud public | [Plantilla DA Cloud Públic](/related/da/Plantilla_DA_CloudPublic_DT_DAQ_V2.3.docx) |
 | Power Platform Suite | [Plantilla DA Power Platform Suite](/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
 | LowCode | [Plantilla DA LowCode](/related/da/Plantilla_DA_LowCode_DT_DAQ_V2.2.docx) |
 | SaaS | [Plantilla DA SaaS](/related/da/Plantilla_DA_SaaS_DT_DAQ_V2.2.docx) |
