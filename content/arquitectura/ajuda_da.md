@@ -1,5 +1,5 @@
 +++
-date        = "2024-08-21"
+date        = "2024-09-17"
 title       = "Guia d'ajuda a l'hora d'omplir un DA"
 description = "Ajuda a l'emplenat de la plantilla DA"
 sections    = "Document Arquitectura"
