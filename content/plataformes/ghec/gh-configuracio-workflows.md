@@ -12,6 +12,42 @@ aliases = [
 ]
 +++
 
+
+### Infra
+
+#### CD Apply
+- **cloud**: Entorn al núvol. Valors possibles:
+  - `aws`
+  - `azure`
+  - `gcp`
+- **terraform_version**: Versió de Terraform.
+- **infra_version_plan**: Versió del pla d'Infracost.
+- **environment**: Entorn.
+- **healthcheck_url**: URL del comprovador d'estat. Ha de ser `https://<endpoint_url.gencat.cat>/`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
+- **healthcheck_regex**: Regressió de l'estat. Ha de tenir format semàntic entre cometes, ex: `"1.0.0"`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
+- **healthcheck_timeout**: Temps màxim per a la comprovació d'estat. Ha de tenir un valor numèric entre cometes, ex: `"300"`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
+- **repository_mat**: Per habilitar o deshabilitar la MAT del repositori. Valors possibles:
+  - `true`
+  - `false`
+- **selenium_enabled**: Per habilitar o deshabilitar Selenium. Valors possibles:
+  - `true`
+  - `false`
+- **selenium_urlapp**: URL de Selenium, ha de tenir el valor: `https://<urlapp.gencat.cat>`. Definir només si Selenium està habilitat.
+- **selenium_umbral**: Llindar de Selenium. Ha de tenir un valor numèric entre cometes, ex: `"20"`. Definir només si Selenium està habilitat.
+- **jira_project_key**: Clau del projecte Jira. Definir només si Selenium està habilitat.
+- **jira_issue_key**: Clau de l'issue de Jira. Definir només si Selenium està habilitat.
+- **itsm_id_change_coordinator**: ID del coordinador de canvis de l'ITSM.
+
+#### CI on Commit
+- **terraform_version**: Versió de Terraform.
+
+#### CI on PR
+- **cloud**: Entorn al núvol. Valors possibles:
+  - `aws`
+  - `azure`
+  - `gcp`
+- **terraform_version**: Versió de Terraform.
+
 ### Container
 
 #### CD
@@ -83,62 +119,6 @@ aliases = [
   - `node_modules/**`
   - `test/**`
 
-### Static
-
-#### CD
-- **technology**: Tecnologia del projecte. Valors possibles:
-  - `raw`
-  - `nodejs`
-- **project_name**: Nom del projecte, especificar només si no hi ha compilació en el projecte.
-- **cloud**: Entorn al núvol. Valors possibles:
-  - `aws`
-  - `azure`
-  - `gcp`
-- **engine**: Plataforma de desplegament. Valors possibles:
-  - `s3`
-  - `ablobstorage`
-  - `cloudstorage`
-- **artifact_version**: Versió de l'artefacte.
-- **environment**: Entorn.
-- **storage_name**: Nom d'emmagatzematge.
-- **destination_prefix**: Prefix de destinació. Definir si el núvol és AWS i hi ha una subcarpeta dins del bucket de S3, especifiqueu-ho aquí.
-- **healthcheck_url**: URL del comprovador d'estat. Ha de ser `https://<endpoint_url.gencat.cat>/`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
-- **healthcheck_regex**: Regressió de l'estat. Ha de tenir format semàntic entre cometes, ex: `"1.0.0"`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
-- **healthcheck_timeout**: Temps màxim per a la comprovació d'estat. Ha de tenir un valor numèric entre cometes, ex: `"300"`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
-- **repository_mat**: Per habilitar o deshabilitar la MAT del repositori. Valors possibles:
-  - `true`
-  - `false`
-- **selenium_enabled**: Per habilitar o deshabilitar Selenium. Valors possibles:
-  - `true`
-  - `false`
-- **selenium_urlapp**: URL de Selenium, ha de tenir el valor: `https://<urlapp.gencat.cat>`. Definir només si Selenium està habilitat.
-- **selenium_umbral**: Llindar de Selenium. Ha de tenir un valor numèric entre cometes, ex: `"20"`. Definir només si Selenium està habilitat.
-- **jira_project_key**: Clau del projecte Jira. Definir només si Selenium està habilitat.
-- **jira_issue_key**: Clau de l'issue de Jira. Definir només si Selenium està habilitat.
-- **itsm_id_change_coordinator**: ID del coordinador de canvis de l'ITSM.
-
-#### CI on commit
-- **technology**: Tecnologia del projecte. Valors possibles:
-  - `raw`
-  - `nodejs`
-- **project_name**: Nom del projecte, especificar només si no hi ha compilació en el projecte.
-- **node_version**: Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **install_build_command**: Comandament d'instal·lació. Definir només si el projecte es basa en tecnologia Node.
-- **sonar_exclusions**: Exclusió de Sonar. Exemples:
-  - `node_modules/**`
-  - `test/**`
-- **source_path**: Paràmetre de la ruta de sortida de l'arxiu angular.json.
-
-#### CI on PR
-- **technology**: Tecnologia del projecte. Valors possibles:
-  - `raw`
-  - `nodejs`
-- **node_version**: Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **sonar_exclusions**: Exclusió de Sonar. Exemples:
-  - `node_modules/**`
-  - `test/**`
-
-
 ### Function
 
 #### CD
@@ -202,68 +182,25 @@ aliases = [
   - node_modules/**
   - test/**
 
-### Executor
+### Static
 
-#### Extended descriptor CD
-- **cloud**: Entorno en la nube. Valores posibles:
-  - `aws`
-  - `azure`
-  - `gcp`
-- **engine**: Plataforma de despliegue. Valores posibles:
-  - `kubernetes`
-  - `database`
-- **artifact_version**: Versión del artefacto.
-- **environment**: Entorno.
-- **function_name**: Nombres de la función.
-- **cluster_name**: Nombre del clúster.
-- **chart_name**: Nombre del Helm Chart.
-- **local_chart_path**: Ruta local del Helm Chart.
-- **namespace**: Nombre de espacio.
-- **jdbc_url**: URI endpoint de la BBDDs.
-- **db_username**: Nombre de la base de datos.
-- **changelog_file**: Fichero de los de cambios.
-- **secret_name**: Nombre del secreto.
-- **resource_group**: Grupo de recursos. Definir solamente si se basa en tecnología Azure Cloud.
-- **destination_prefix**: Prefijo de destino. Definir si la nube es AWS y hay una subcarpeta dentro del bucket de S3.
-- **healthcheck_url**: URL del comprobador de estado. Debe ser `https://<endpoint_url.gencat.cat>/`. Definir si existe un endpoint tras el deploy y una expresión de evaluación del body.
-- **healthcheck_regex**: Regresión del estado. Debe tener formato semántico entre comillas, ej: `"1.0.0"`. Definir si existe un endpoint tras el deploy y una expresión de evaluación del body.
-- **healthcheck_timeout**: Tiempo máximo para la comprobación de estado. Debe tener un valor numérico entre comillas, ej: `"300"`. Definir si existe un endpoint tras el deploy y una expresión de evaluación del body.
-- **repository_mat**: Para habilitar o deshabilitar la MAT del repositorio. Valores posibles:
-  - `true`
-  - `false`
-- **selenium_enabled**: Para habilitar o deshabilitar Selenium. Valores posibles:
-  - `true`
-  - `false`
-- **selenium_urlapp**: URL de Selenium, debe tener el valor: `https://<urlapp.gencat.cat>`. Definir sólo si Selenium está habilitado.
-- **selenium_umbral**: Umbral de Selenium. Debe tener un valor numérico entre comillas, ej: `"20"`. Definir sólo si Selenium está habilitado.
-- **jira_project_key**: Clave del proyecto Jira. Definir sólo si Selenium está habilitado.
-- **jira_issue_key**: Clave del issue de Jira. Definir sólo si Selenium está habilitado.
-- **itsm_id_change_coordinator**: ID del coordinador de cambios del ITSM.
-
-#### Extended executor CD
-- **cloud**: Entorno en la nube. Valores posibles:
-  - `aws`
-  - `azure`
-  - `gcp`
-- **engine**: Plataforma de despliegue. Valores posibles:
-  - `kubernetes`
-  - `database`
-- **executor_image_version**: Ejecutor de la versión de imagen.
-- **environment**: Entorno.
-- **registry_name**: Nombre del registro.
-- **function_name**: Nombres de la función.
-- **resource_group**: Grupo de recurso. Definir solamente si la tecnología se basa en Azure Cloud.
-
-### Infra
-
-#### CD Apply
+#### CD
+- **technology**: Tecnologia del projecte. Valors possibles:
+  - `raw`
+  - `nodejs`
+- **project_name**: Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **cloud**: Entorn al núvol. Valors possibles:
   - `aws`
   - `azure`
   - `gcp`
-- **terraform_version**: Versió de Terraform.
-- **infra_version_plan**: Versió del pla d'Infracost.
+- **engine**: Plataforma de desplegament. Valors possibles:
+  - `s3`
+  - `ablobstorage`
+  - `cloudstorage`
+- **artifact_version**: Versió de l'artefacte.
 - **environment**: Entorn.
+- **storage_name**: Nom d'emmagatzematge.
+- **destination_prefix**: Prefix de destinació. Definir si el núvol és AWS i hi ha una subcarpeta dins del bucket de S3, especifiqueu-ho aquí.
 - **healthcheck_url**: URL del comprovador d'estat. Ha de ser `https://<endpoint_url.gencat.cat>/`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
 - **healthcheck_regex**: Regressió de l'estat. Ha de tenir format semàntic entre cometes, ex: `"1.0.0"`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
 - **healthcheck_timeout**: Temps màxim per a la comprovació d'estat. Ha de tenir un valor numèric entre cometes, ex: `"300"`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
@@ -279,15 +216,26 @@ aliases = [
 - **jira_issue_key**: Clau de l'issue de Jira. Definir només si Selenium està habilitat.
 - **itsm_id_change_coordinator**: ID del coordinador de canvis de l'ITSM.
 
-#### CI on Commit
-- **terraform_version**: Versió de Terraform.
+#### CI on commit
+- **technology**: Tecnologia del projecte. Valors possibles:
+  - `raw`
+  - `nodejs`
+- **project_name**: Nom del projecte, especificar només si no hi ha compilació en el projecte.
+- **node_version**: Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **install_build_command**: Comandament d'instal·lació. Definir només si el projecte es basa en tecnologia Node.
+- **sonar_exclusions**: Exclusió de Sonar. Exemples:
+  - `node_modules/**`
+  - `test/**`
+- **source_path**: Paràmetre de la ruta de sortida de l'arxiu angular.json.
 
 #### CI on PR
-- **cloud**: Entorn al núvol. Valors possibles:
-  - `aws`
-  - `azure`
-  - `gcp`
-- **terraform_version**: Versió de Terraform.
+- **technology**: Tecnologia del projecte. Valors possibles:
+  - `raw`
+  - `nodejs`
+- **node_version**: Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **sonar_exclusions**: Exclusió de Sonar. Exemples:
+  - `node_modules/**`
+  - `test/**`
 
 ### Library
 
@@ -318,3 +266,56 @@ aliases = [
 - **sonar_exclusions**: Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
+
+### Desplegaments estesos
+
+#### Executor CD
+- **cloud**: Entorn al núvol. Valors possibles:
+  - `aws`
+  - `azure`
+  - `gcp`
+- **engine**: Plataforma de desplegament. Valors possibles:
+  - `kubernetes`
+  - `database`
+- **executor_image_version**: Versió d'imatge del executor.
+- **environment**: Entorn.
+- **registry_name**: Nom del registre.
+- **function_name**: Nom de la funció.
+- **resource_group**: Grup de recursos. Definir únicament si el cloud és `azure`.
+
+
+#### Descriptors CD
+- **cloud**: Entorn al núvol. Valors possibles:
+  - `aws`
+  - `azure`
+  - `gcp`
+- **engine**: Plataforma de desplegament. Valors possibles:
+  - `kubernetes`
+  - `database`
+- **artifact_version**: Versió de l'artefacte.
+- **environment**: Entorn.
+- **function_name**: Nom de la funció.
+- **cluster_name**: Nom del clúster.
+- **chart_name**: Nom del Helm Chart.
+- **local_chart_path**: Ruta local del Helm Chart.
+- **namespace**: Nom del namespace dins el clúster.
+- **jdbc_url**: URI endpoint de la BBDD.
+- **db_username**: Nom de la base de dades.
+- **changelog_file**: Fitxer de canvis.
+- **secret_name**: Nom del secret.
+- **resource_group**: Grup de recursos. Definir únicament si el cloud és `azure`.
+- **destination_prefix**: Prefix de destí. Definir si el núvol és AWS i hi ha una subcarpeta dins del bucket de S3.
+- **healthcheck_url**: URL del healthcheck. Actualment només es suporten URLs accessibles des d'internet `https://<endpoint_url.gencat.cat>/`.
+- **healthcheck_regex**: Expessió regular per evaluar el contingut de la resposta.
+- **healthcheck_timeout**: Temps màxim per comprovar el healthcheck. Ha de tenir un valor numèric entre cometes, ex: `"300"`.
+- **repository_mat**: Per habilitar o deshabilitar la MAT del repositori. Valors possibles:
+  - `true`
+  - `false`
+- **selenium_enabled**: Per habilitar o deshabilitar Selenium. Valors possibles:
+  - `true`
+  - `false`
+- **selenium_urlapp**: URL de Selenium, ha de tener el valor: `https://<urlapp.gencat.cat>`. Definir únicament si Selenium està habilitat.
+- **selenium_umbral**: Llindar de Selenium. Ha de tenir un valor numèric entre cometes, ex: `"20"`. Definir només si Selenium està habilitat.
+- **jira_project_key**: Clau del projecte JIRA. Definir només si Selenium está habilitat.
+- **jira_issue_key**: Clau de la issue de JIRA. Definir només si Selenium está habilitat.
+- **itsm_id_change_coordinator**: ID del coordinador de canvis d'ITSM.
