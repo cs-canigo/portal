@@ -2130,16 +2130,31 @@
                 },
                 {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "S'afegeix la geometria de cada sector sanitari i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries i els sectors sanitaris.",
                     "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
-                    "ifitxer_xls": "Sectors_sanitaris.csv",
+                    "ifitxer_xls": "Sectors_sanitaris_V02.csv",
                     "idatacreacio": "31/01/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V03",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Salut",
+                    "idescripcio": "La geometria dels Sectors sanitaris es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria dels Sectors sanitaris.",
+                    "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
+                    "ifitxer_xls": "Sectors_sanitaris.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2147,7 +2162,7 @@
             "nom_dinsBD": "SECTORS_SANITARIS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/04/2022",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq172",
