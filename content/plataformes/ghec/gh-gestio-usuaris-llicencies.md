@@ -78,4 +78,4 @@ Per la reactivació d'un usuari, caldrà que l'usuari obri un tiquet de suport a
 
 ## Baixa d'usuaris a GitHub Enterprise Cloud (GHEC)
 
-Els owners dels grups han de treue els usuaris que ja no pertanyin a l'equip o que hagin deixat de treballar a l'organització dels diferents grups. En el cas dels lots d'aplicacions poden filtrar els grups per **amXX_23** i treure l'usuari de tots els grups resultants de la cerca.
+Els owners han de treure dels diferents grups els usuaris que ja no pertanyin a l'equip o que hagin deixat de treballar a l'organització. En el cas dels lots d'aplicacions poden filtrar els grups per **amXX_23** i treure l'usuari de tots els grups resultants de la cerca.
