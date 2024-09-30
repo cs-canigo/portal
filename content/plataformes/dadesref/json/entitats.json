@@ -2752,7 +2752,7 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "En revisió",
+                    "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Versió inicial.",
@@ -2778,7 +2778,7 @@
             "Subambit": "Ordenació del territori, paisatge i urbanisme",
             "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
             "instancies": [
-                {
+              Unitats del sector públic institucional assimilades  {
                     "inom": "V01",
                     "iestat": "Obsoleta",
                     "itipus": "Tabular",
@@ -4845,6 +4845,34 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2024",
             "Data_actualitzacio": "28/06/2024"
+        },       
+		{
+            "Id": "dtarq204",
+            "Nom": "Unitats del sector públic institucional assimilades a secretaria general",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat d’unitats amb rang orgànic assimilat a secretaria general en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats de dret públic de naturalesa singular.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Secretaries_Setctor_Public_ATR.docx",
+                    "ifitxer_xls": "Unitats_sector_public_institucional_assimilades_secretaria_general.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Unitats-del-sector-p-blic-institucional-assimilade/skqb-r34e/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "UNITATAS SECTOR_PUBLICO ASSIMILADES A SECRETARIA GENERAL",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "30/09/2024"
         }
     ]
 }
