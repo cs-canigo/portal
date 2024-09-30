@@ -2076,7 +2076,7 @@
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "S'afegeix la geometria de cada regió sanitària i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries.",
-                    "ifitxer_doc": "Regions_sanitaries_ATR.docx",
+                    "ifitxer_doc": "deprecated/Regions_sanitaries_ATR_V04.docx",
                     "ifitxer_xls": "Regions_sanitaries_V04.csv",
                     "idatacreacio": "31/01/2024",
                     "itipusvisual": "Ús no restringit",
@@ -2480,7 +2480,7 @@
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
                     "idatapublicacio": "30/09/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/resources/rpg6-9mu9",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/resource/rpg6-9mu9",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
