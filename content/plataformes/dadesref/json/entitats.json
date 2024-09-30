@@ -2072,16 +2072,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "S'afegeix la geometria de cada regió sanitària i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries.",
                     "ifitxer_doc": "Regions_sanitaries_ATR.docx",
-                    "ifitxer_xls": "Regions_sanitaries.csv",
+                    "ifitxer_xls": "Regions_sanitaries_V04.csv",
                     "idatacreacio": "31/01/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Salut",
+                    "idescripcio": "La geometria de les Regions sanitàries es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria de les Regions sanitàries.",
+                    "ifitxer_doc": "Regions_sanitaries_ATR.docx",
+                    "ifitxer_xls": "Regions_sanitaries.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2089,7 +2104,7 @@
             "nom_dinsBD": "REGIONS_SANITARIES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "22/12/2021",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq159",
