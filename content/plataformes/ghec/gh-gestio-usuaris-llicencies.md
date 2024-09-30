@@ -27,7 +27,7 @@ Si el team ja existeix prèviament, no es tornarà a crear :
 + </departament/>-</entitat/>-</lot_manteniment/>-write: Desenvolupadors del lot de manteniment.
 + </departament/>-</entitat/>-read: Per a Gestors de Solucions / Entrega de l'àmbit.
 
-Una vegada creats els grups, cal que l'owner o owners identificats donin d'alta els diferents usuaris en els grups pertinents depenent del rol que han de realitzar (Maintain o Write).
+Una vegada creats els grups, cal que l'owner o owners identificats (responsables d'arquitectura i identitat en el cas dels lots d'aplicacions) donin d'alta com a membres als diferents usuaris en els grups pertinents depenent del rol que han de realitzar (Maintain o Write).
 
 Només cal actualitzar els grups de Maintain i Write, donat que la resta seran informats automàticament pel procés automàtic.
         
@@ -74,3 +74,8 @@ Informació relacionada amb la gestió d'usuaris inactius a GHEC:
 * [Gestió d'usuaris inactius](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/managing-dormant-users)
 
 Per la reactivació d'un usuari, caldrà que l'usuari obri un tiquet de suport a l'equip del SIC+ pels canals oficials.
+
+
+## Baixa d'usuaris a GitHub Enterprise Cloud (GHEC)
+
+Els owners dels grups han de treue els usuaris que ja no pertanyin a l'equip o que hagin deixat de treballar a l'organització dels diferents grups. En el cas dels lots d'aplicacions poden filtrar els grups per **amXX_23** i treure l'usuari de tots els grups resultants de la cerca.
