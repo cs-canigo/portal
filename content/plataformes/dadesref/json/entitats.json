@@ -2778,7 +2778,7 @@
             "Subambit": "Ordenació del territori, paisatge i urbanisme",
             "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
             "instancies": [
-              Unitats del sector públic institucional assimilades  {
+		     	{
                     "inom": "V01",
                     "iestat": "Obsoleta",
                     "itipus": "Tabular",
