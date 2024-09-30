@@ -1984,16 +1984,31 @@
                 },
                 {
                     "inom": "V06",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "Els canvis respecte de la versió anterior són només en el nom de tres ABS.106    CERVERA - LA SEGARRA,230    SANTA PERPÈTUA DE MOGODA,325    PINEDA DE MAR",
                     "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
-                    "ifitxer_xls": "Arees_basiques_salut.csv",
+                    "ifitxer_xls": "Arees_basiques_salut_V06.csv",
                     "idatacreacio": "27/03/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "27/03/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V07",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Salut",
+                    "idescripcio": "Modificació de la delimitació de 3 àrees bàsiques de salut, SABADELL 3B, SABADELL 4-A i SABADELL 4-B",
+                    "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                    "ifitxer_xls": "Arees_basiques_salut.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2001,7 +2016,7 @@
             "nom_dinsBD": "AREES_BASIQUES_SALUT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/04/2022",
-            "Data_actualitzacio": "27/03/2024"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq158",
