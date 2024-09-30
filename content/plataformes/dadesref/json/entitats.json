@@ -4792,31 +4792,31 @@
         },
         {
             "Id": "dtarq104",
-            "Nom": "Àmbits territorials de planificació",
-            "Ambit": "Territori, infraestructures i urbanisme",
+            "Nom": "Ambits_funcionals_territorials",
+            "Ambit": "Territori i paisatge. Urbanisme",
             "Subambit": "Ordenació del territori , paisatge i urbanisme",
-            "Descripcio": "Àmbits territorials de planificació, 8 arees",
+            "Descripcio": "Llistat d'àmbits de la planificació territorial en què es divideix el territori. Són agrupacions de comarques per al desenvolupament dels plans territorials parcials, competència del Departament de Territori. El Pla territorial general de Catalunya (PTGC), aprovat per la Llei 1/1995, de 16 de març, va definir sis àmbits funcionals. Aquests es va modificar mitjançant la Llei 24/2001, de 31 de desembre, per tal de reconèixer reconeixent l'Alt Pirineu i Aran com a nova àrea funcional diferenciada de l'àmbit de Ponent. Posteriorment, la Llei 23/2010, del 22 de juliol, va crear l’àmbit funcional del Penedès, format per les comarques de l’Alt Penedès, el Baix Penedès, el Garraf i alguns municipis de la comarca de l’Anoia..",
             "instancies": [
                 {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
+                    "inom": "V01",
+                    "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "DGAD",
+                    "ipromotor": "Direcció General d'Ordenació del Territori, Urbanisme i Arquitectura",
                     "idescripcio": "Versió inicial",
-                    "ifitxer_doc": "Ambits_territorials_planificacio_ATR.docx",
-                    "ifitxer_xls": "",
-                    "idatacreacio": "29/04/2024",
+                    "ifitxer_doc": "Àmbits_funcionals_territorials_ATR.docx",
+                    "ifitxer_xls": "Àmbits_funcionals_territorials.xlsx",
+                    "idatacreacio": "30/09/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "29/04/2024",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "AMBIT_TERRITORIALS_PLANIFICACIO",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "29/04/2024",
-            "Data_actualitzacio": "29/04/2024"
+            "nom_dinsBD": "AMBITS_FUNCIONALS_TERRITORIALS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "30/09/2024"
         },       
 		{
             "Id": "dtarq203",
@@ -4898,6 +4898,34 @@
                 }
             ],
             "nom_dinsBD": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_DIRECCIO_GENERAL",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "30/09/2024"
+        },       
+		{
+            "Id": "dtarq206",
+            "Nom": "Subdireccions Generals del sector públic institucional",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat..",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                     "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
+                    "ifitxer_xls": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL.xlsx",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals-del-sector-p-blic-instituci/6rbu-cawt/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL",
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
