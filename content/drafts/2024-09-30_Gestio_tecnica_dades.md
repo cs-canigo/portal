@@ -16,24 +16,16 @@ El dia 30/09/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dad
 En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següents canvis:<br><br>
 
 <ul>
-<li>- S’han evolucionat les entitats del grup d’Obligat compliment:<br>
+<li> S’han evolucionat les entitats del grup d’Obligat compliment:<br>
     
-<<<<<<< HEAD
 <ul>
-	<li>Gènere, modificació del cos de l’entitat en funció de l’acord GOV45/2022, també s’han modificat metadades com la descripció i la unitat promotora de l’entitat. GTDA-270.</li><br>
-	<li>Àrees bàsiques de salut, modificació de la delimitació de 3 àrees bàsiques de salut, SABADELL 3B, SABADELL 4-A i SABADELL 4-B  GTDA-271.</li><br>
-	<li>Regions sanitàries, la geometria de les Regions sanitàries es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria de les Regions sanitàries. GTDA-272.</li><br>
-	<li>Sectors sanitaris, la geometria dels Sectors sanitaris es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria dels Sectors sanitaris. GTDA-273.</li><br>
+	<li>Gènere, modificació del cos de l’entitat en funció de l’acord GOV45/2022, també s’han modificat metadades com la descripció i la unitat promotora de l’entitat.</li><br>
+	<li>Àrees bàsiques de salut, modificació de la delimitació de 3 àrees bàsiques de salut, SABADELL 3B, SABADELL 4-A i SABADELL 4-B.</li><br>
+	<li>Regions sanitàries, la geometria de les Regions sanitàries es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria de les Regions sanitàries. </li><br>
+	<li>Sectors sanitaris, la geometria dels Sectors sanitaris es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria dels Sectors sanitaris. </li><br>
 	<li>Departaments de l’Administració de la Generalitat de Catalunya, modificació per actualitzar el nom i afegir dos departaments nous, segons el Decret 133/2024.</li><br>
 </ul>
 </li>
-=======
-	Gènere, modificació del cos de l’entitat en funció de l’acord GOV45/2022, també s’han modificat metadades com la descripció i la unitat promotora de l’entitat.<br>
-	Àrees bàsiques de salut, modificació de la delimitació de 3 àrees bàsiques de salut, SABADELL 3B, SABADELL 4-A i SABADELL 4-B<br>
-	Regions sanitàries, la geometria de les Regions sanitàries es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria de les Regions sanitàries.<br>
-	Sectors sanitaris, la geometria dels Sectors sanitaris es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria dels Sectors sanitaris.<br>
-	Departaments de l’Administració de la Generalitat de Catalunya, modificació per actualitzar el nom i afegir dos departaments nous, segons el Decret 133/2024.<br>
->>>>>>> 5679c5842961a9939568fbf2e6e838302fd444fc
 
 <li>- S’ha incorporat una entitat dins del grup d'Obligat compliment:<br>
 <ul>
@@ -41,8 +33,8 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 	<li>Unitats del sector públic institucional assimilades a secretaria general.</li><br>
 	<li>Unitats del sector públic institucional assimilades a direcció general.</li><br>
 	<li>Subdireccions Generals del sector públic institucional.</li><br>
-</li>
 </ul>	
+</li>
 </ul>	
 <br><br><br>
 
