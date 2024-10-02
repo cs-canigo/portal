@@ -27,7 +27,7 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 </ul>
 </li>
 
-<li>- S’ha incorporat una entitat dins del grup d'Obligat compliment:<br>
+<li> S’ha incorporat una entitat dins del grup d'Obligat compliment:<br>
 <ul>
 	<li>Àmbits funcionals territorials.</li><br>
 	<li>Unitats del sector públic institucional assimilades a secretaria general.</li><br>
