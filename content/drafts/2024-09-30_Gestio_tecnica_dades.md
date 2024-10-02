@@ -16,7 +16,7 @@ El dia 30/09/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dad
 En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següents canvis:<br><br>
 
 <ul>
-<li> S’han evolucionat les entitats del grup d’Obligat compliment:<br>
+<li> S’han evolucionat les entitats del grup d’Obligat compliment:<br><br>
     
 <ul>
 	<li>Gènere, modificació del cos de l’entitat en funció de l’acord GOV45/2022, també s’han modificat metadades com la descripció i la unitat promotora de l’entitat.</li><br>
@@ -27,7 +27,7 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 </ul>
 </li>
 
-<li> S’ha incorporat una entitat dins del grup d'Obligat compliment:<br>
+<li> S’ha incorporat una entitat dins del grup d'Obligat compliment:<br><br>
 <ul>
 	<li>Àmbits funcionals territorials.</li><br>
 	<li>Unitats del sector públic institucional assimilades a secretaria general.</li><br>
