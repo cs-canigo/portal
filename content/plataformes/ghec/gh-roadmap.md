@@ -41,17 +41,5 @@ aliases = [
 - Suport a .NET​ incloent llibreries
 - Suport Python (llenguatge a incorporar al Full de Ruta)​ excloent llibreries (GitHub Packages no dona suport)
 - Desplegaments en APIM (API Manager corporatiu)
-- Self-hosted runner de tipus Deployer per (1) desplegar en registres Docker privats, només accessibles des de la xarxa corporativa, i (2) execució de healthchecks intranet
-- Implementació rollback automàtic per funcions i continguts estàtics
-- Implantació polítiques seguretat CTTI
-- Anàlisi desplegaments avançats (Canary, Blue/Green, ...) en AWS, Azure, GCP​
-- Anàlisi CI/CD Apps mòbils
-- Anàlisi CI/CD MLOps
-- Suport integració MAT i MAO/MAM
-
-## [Q1 2025] 1.2.0​
-
-- Integració amb repositori d'artefactes centralitzat en modalitat SaaS (Artifactory, ...)
-- Dashboard amb KPIs del servei
 
 *_Roadmap subjecte a canvis_
