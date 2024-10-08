@@ -139,23 +139,28 @@ Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquit
 
 <table style="width:60%">
    <tr>
-      <th style="width: 30%">Arquitectura</th>
-      <th style="width: 70%">Diagrama exemple</th>
+      <th style="width: 20%">Arquitectura</th>
+      <th style="width: 30%">Descripció</th>
+      <th style="width: 50%">Diagrama exemple</th>
    </tr>
    <tr>
       <td>Aplicacions auto-contingudes al CLOUD amb només publicació INTERNET</td>
+      <td>L’accés als usuaris a l’aplicació Internet passa pels FW de Publicació de la NET0 on es pot aplicar seguretat i pels WAAP que protegeixen els frontals Web. Els DNS del NUS resolen la IP pública del Cloud per tant els usuaris de dins de la Generalitat accedeixen per navegació i els usuaris Internet per Internet. La navegació dels servidors Cloud es realitza pels Proxys de la Net0. No existeix aplicació només Intranet.</td>
       <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:500px;" /></td>
    </tr>
    <tr>
       <td>Aplicacions publicades a INTERNET amb connexió a NUS</td>
+      <td>L’accés dels usuaris a l’aplicació Internet passa pels FW de Publicació de la NET0 on es pot aplicar seguretat i pels WAAP que protegeixen els frontals Web. La comunicació entre servidors CLOUD i ON-Premise està securitzada al FW Paloalto del NUS. Els DNS del NUS resolen la IP pública del Cloud per tant els usuaris de dins de la Generalitat accedeixen per navegació i els usuaris Internet per Internet. Els diferents recursos de les aplicacions de la NET0 poden accedir a recursos d’Internet mitjançant el Proxy de la NET0. No existeix aplicació només Intranet.</td>
       <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_02.jpg" style="width:500px;" /></td>
    </tr>
    <tr>
       <td>Aplicacions publicades a INTERNET i INTRANET amb connexió a NUS</td>
+      <td>L’accés dels usuaris a l’aplicació Internet app.gencat.cat passa pels FW de Publicació de la NET0 on es pot aplicar seguretat i pels WAAP que protegeixen els frontals Web. L’accés a l’aplicació INTRANET es securitza al FW Paloalto del NUS i la comunicació entre servidors CLOUD i ON-Premise està securitzada al FW Paloalto del NUS. El DNS del NUS resolen la IP pública del Cloud per app.gencat.cat i resolen la IP privada del Cloud per app.intranet.gencat.cat (Aquest flux no passa per el firewall de publicació ni pels WAAP de la NET0 i només és accessible des de la Generalitat). Els diferents recursos de les aplicacions de la NET0 poden accedir a recursos d’Internet mitjançant el Proxy de la Net0.</td>
       <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:500px;" /></td>
    </tr>
    <tr>
       <td>Aplicació només INTRANET</td>
+      <td>En aquest cas només existeix l’aplicació INTRANET (app.intranet.gencat.cat) que només és accessible des de la Generalitat amb connexió a NUS per servidors On-Premise i servidors Cloud (l’accés dels usuaris per la aplicació INTRANET no passa pel firewall de publicació ni pels WAAP de la NET0, es securitza al FW Paloalto del NUS i la comunicació entre servidors CLOUD i ON-Premise també està securitzada al FW Paloalto del NUS). El DNS d’Intranet del NUS resolen la IP privada del Cloud per app.intranet.gencat.cat. Els diferents recursos de les aplicacions de la NET0 poden accedir a recursos d’Internet mitjançant el Proxy de la NET0. No existeix una aplicació publicada a Internet.</td>
       <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:500px;" /></td>
    </tr>
 </table>
