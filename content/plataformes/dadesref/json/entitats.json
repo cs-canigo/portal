@@ -38,7 +38,7 @@
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "DIARIS_BUTLLETINS_OFICIALS",
+            "nom_dinsBD": "DIARIS_BUTLLETINS_OFICIALS",Territori, infraestructures i urbanisme
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/07/2022",
             "Data_actualitzacio": "21/12/2022"
@@ -4808,9 +4808,9 @@
         {
             "Id": "dtarq104",
             "Nom": "Àmbits Funcionals Territorials",
-            "Ambit": "Territori i paisatge. Urbanisme",
+            "Ambit": "Territori, infraestructures i urbanisme",
             "Subambit": "Ordenació del territori , paisatge i urbanisme",
-            "Descripcio": "Llistat d'àmbits de la planificació territorial en què es divideix el territori. Són agrupacions de comarques per al desenvolupament dels plans territorials parcials, competència del Departament de Territori. El Pla territorial general de Catalunya (PTGC), aprovat per la Llei 1/1995, de 16 de març, va definir sis àmbits funcionals. Aquests es va modificar mitjançant la Llei 24/2001, de 31 de desembre, per tal de reconèixer reconeixent l'Alt Pirineu i Aran com a nova àrea funcional diferenciada de l'àmbit de Ponent. Posteriorment, la Llei 23/2010, del 22 de juliol, va crear l’àmbit funcional del Penedès, format per les comarques de l’Alt Penedès, el Baix Penedès, el Garraf i alguns municipis de la comarca de l’Anoia..",
+            "Descripcio": "Llistat d'àmbits de la planificació territorial en què es divideix el territori. Són agrupacions de comarques per al desenvolupament dels plans territorials parcials, competència del Departament de Territori. El Pla territorial general de Catalunya (PTGC), aprovat per la Llei 1/1995, de 16 de març, va definir sis àmbits funcionals. Aquests es va modificar mitjançant la Llei 24/2001, de 31 de desembre, per tal de reconèixer reconeixent l'Alt Pirineu i Aran com a nova àrea funcional diferenciada de l'àmbit de Ponent. Posteriorment, la Llei 23/2010, del 22 de juliol, va crear l’àmbit funcional del Penedès, format per les comarques de l’Alt Penedès, el Baix Penedès, el Garraf i alguns municipis de la comarca de l’Anoia.",
             "instancies": [
                 {
                     "inom": "V01",
