@@ -128,17 +128,35 @@ Diagrama general dels diferents elements on s’identifiqui la Net0 i els difere
 _Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’identifiquen els fluxos. Es a dir, aquells fluxos identificats a la taula s’han de reflectir després al diagrama. podeu descarregar una plantilla buida d'aquest diagrama al [següent enllaç](related/da/VistaContextNUSBase_v2.drawio)._
 
 <div align="left">
-<img src="/images/PlantillaDA/VistaContextNUSBase_v2.jpg" style="width:500px;" />
+   <img src="/images/PlantillaDA/VistaContextNUSBase_v2.jpg" style="width:500px;" />
+</div>
+
 <br>
-
 Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquitectura:
+<br>
+<table>
+   <tr>
+      <th style="width: 30%"> **Arquitectura** </th>
+      <th style="width: 30%"> **Diagrama exemple** </th>
+   </tr>
+   <tr>
+      <td> **Aplicacions auto-contingudes al CLOUD amb només publicació INTERNET** </td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:400px;" /></td>
+   </tr>
+   <tr>
+      <td> **Aplicacions publicades a INTERNET amb connexió a NUS** </td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_02.jpg" style="width:400px;" /></td>
+   </tr>
+   <tr>
+      <td> **Aplicacions publicades a INTERNET i INTRANET amb connexió a NUS** </td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:400px;" /></td>
+   </tr>
+   <tr>
+      <td> **Aplicació només INTRANET** </td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:400px;" /></td>
+   </tr>
+</table>
 
-| **Arquitectura** | **Diagrama** |
-| --- | --- |
-| **Aplicacions auto-contingudes al CLOUD amb només publicació INTERNET** | <img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:300px;" /> |
-| **Aplicacions publicades a INTERNET amb connexió a NUS** | <img src="/images/PlantillaDA/VistaContextNUSBase_v2_02.jpg" style="width:300px;" /> |
-| **Aplicacions publicades a INTERNET i INTRANET amb connexió a NUS** | <img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:300px;" /> |
-| **Aplicació només INTRANET** | <img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:300px;" /> |
 
 ###### [Inici](#TaulaContiguts)
 
