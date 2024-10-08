@@ -131,29 +131,30 @@ _Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’ide
    <img src="/images/PlantillaDA/VistaContextNUSBase_v2.jpg" style="width:500px;" />
 </div>
 
-<br>
+<div align="left">
 Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquitectura:
-<br>
-<table>
+</div>
+
+<table style="width:60%">
    <tr>
-      <th style="width: 30%"> **Arquitectura** </th>
-      <th style="width: 70%"> **Diagrama exemple** </th>
+      <th style="width: 30%">Arquitectura</th>
+      <th style="width: 70%">Diagrama exemple</th>
    </tr>
    <tr>
-      <td> **Aplicacions auto-contingudes al CLOUD amb només publicació INTERNET** </td>
-      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:400px;" /></td>
+      <td>Aplicacions auto-contingudes al CLOUD amb només publicació INTERNET</td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:500px;" /></td>
    </tr>
    <tr>
-      <td> **Aplicacions publicades a INTERNET amb connexió a NUS** </td>
-      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_02.jpg" style="width:400px;" /></td>
+      <td>Aplicacions publicades a INTERNET amb connexió a NUS</td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_02.jpg" style="width:500px;" /></td>
    </tr>
    <tr>
-      <td> **Aplicacions publicades a INTERNET i INTRANET amb connexió a NUS** </td>
-      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:400px;" /></td>
+      <td>Aplicacions publicades a INTERNET i INTRANET amb connexió a NUS</td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_01.jpg" style="width:500px;" /></td>
    </tr>
    <tr>
-      <td> **Aplicació només INTRANET** </td>
-      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:400px;" /></td>
+      <td>Aplicació només INTRANET</td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:500px;" /></td>
    </tr>
 </table>
 
