@@ -137,7 +137,7 @@ Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquit
 <table>
    <tr>
       <th style="width: 30%"> **Arquitectura** </th>
-      <th style="width: 30%"> **Diagrama exemple** </th>
+      <th style="width: 70%"> **Diagrama exemple** </th>
    </tr>
    <tr>
       <td> **Aplicacions auto-contingudes al CLOUD amb només publicació INTERNET** </td>
