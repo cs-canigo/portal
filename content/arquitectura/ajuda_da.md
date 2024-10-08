@@ -125,7 +125,7 @@ Enumerar els diferents actors que apareixen al diagrama de context i detarllar-n
 Diagrama general dels diferents elements on s’identifiqui la Net0 i els diferents fluxos de comunicacions involucrats en la comunicació del servei/solució. Podeu fer servir el diagrama en blanc que teniu disponible a la pàgina d’ajuda a la redacció del DA (el teniu en aquests enllaç).
 
 **Directrius**
-_Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’identifiquen els fluxos. Es a dir, aquells fluxos identificats a la taula s’han de reflectir després al diagrama. podeu descarregar una plantilla buida d'aquest diagrama al [següent enllaç](related/da/VistaContextNUSBase_v2.drawio)._
+_Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’identifiquen els fluxos. Es a dir, aquells fluxos identificats a la taula s’han de reflectir després al diagrama. podeu descarregar una plantilla buida d'aquest diagrama al [següent enllaç](/related/da/VistaContextNUSBase_v2.drawio)._
 
 <div align="left">
    <img src="/images/PlantillaDA/VistaContextNUSBase_v2.jpg" style="width:500px;" />
