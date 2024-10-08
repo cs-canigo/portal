@@ -128,7 +128,11 @@ Diagrama general dels diferents elements on s’identifiqui la Net0 i els difere
 _Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’identifiquen els fluxos. Es a dir, aquells fluxos identificats a la taula s’han de reflectir després al diagrama. podeu descarregar una plantilla buida d'aquest diagrama al [següent enllaç](related/da/VistaContextNUSBase_v2.drawio)._
 
 <div align="left">
-<img src="/images/PlantillaDA/VistaContextNUSBase_v2_drawio.png" style="width:500px;" />
+<img src="/images/PlantillaDA/VistaContextNUSBase_v2.drawio.png" style="width:500px;" />
+<br>
+
+<div align="left">
+<img src="/images/PlantillaDA/VistaContextNUSBase_v2.jpg" style="width:500px;" />
 <br>
 
 ###### [Inici](#TaulaContiguts)
