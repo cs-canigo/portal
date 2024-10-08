@@ -141,6 +141,8 @@ Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquit
 | **Aplicació només INTRANET** | <img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:300px;" /> |
 
 ###### [Inici](#TaulaContiguts)
+
+
 ## **Vista Funcional:** {#VistaFuncional}
 
 ### **Diagrama Funcional** {#DiagramaFuncional}
