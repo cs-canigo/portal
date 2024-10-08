@@ -130,10 +130,12 @@ _Aquest diagrama serà resultat de la taula inicial d’aquest punt a on s’ide
 <div align="left">
    <img src="/images/PlantillaDA/VistaContextNUSBase_v2.jpg" style="width:500px;" />
 </div>
+<br>
 
 <div align="left">
 Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquitectura:
 </div>
+<br>
 
 <table style="width:60%">
    <tr>
