@@ -9,7 +9,7 @@ key = "Juliol2024"
 
 ## Introducció
 
-El dia 26/07/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar quatre entitats publicades d’obligat compliment i afegir una entitat dins de la llista d’entitats d’obligat compliment.
+El dia 26/07/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar vuit entitats publicades d’obligat compliment.
  
 ## Novetats
 

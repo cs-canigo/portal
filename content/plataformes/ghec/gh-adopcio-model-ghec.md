@@ -142,42 +142,24 @@ El procés d'integració actualment és el següent :
         + </departament/>-</entitat/>-read: Per a Gestors de Solucions / Entrega de l'àmbit.
 
         Una vegada creats els grups, cal que l'owner o owners identificats donin d'alta els diferents usuaris en els grups pertinents depenent del rol que han de realitzar (Maintain o Write).
-        
-      
-        Només cal actualitzar els grups de Maintain i Write, donat que la resta seran informats automàticament pel procés automàtic.
-                
-        Per executar aquesta tasca, l'owner disposarà de l'aplicació **myaccount** de Microsoft on haurà de: 
 
-          1. Accedir a MyGroups per a l'organització de la Generalitat de Catalunya.
-            [https://myaccount.microsoft.com/groups](https://myaccount.microsoft.com/groups)
-            
-              Les credencials d'accés són les de Generalitat de Catalunya, introduint l'usuari @gencat.cat.
+        Al següent enllaç es detalla com és la gestió d'usuaris, a més de com es gestionen les llicències de GitHub Enterprise Cloud --> [Gestió d'usuaris i llicències](../gh-gestio-usuaris-llicencies)
+
+
+      + **Configuració Inicial**
+
+        Les plantilles dels diferents tipus de workflows es poden trobar als següents repositoris. Accedir en cas de necessitar configurar els workflows de nou, i per conèixer els diferents paràmetres existents i configurables:
+
+        - Container template --> [container-template](https://github.com/ctti-arq/container-template)
+        - Function template --> [function-template](https://github.com/ctti-arq/function-template)
+        - Static template --> [static-template](https://github.com/ctti-arq/static-template)
+        - Infrastructure template --> [infrastructure-template](https://github.com/ctti-arq/infrastructure-template)
+        - Library template --> [library-template](https://github.com/ctti-arq/library-template)
+        - Extended deployment template --> [extended-template](https://github.com/ctti-arq/executor-template)
+
+        El workflow cridant necessita configurar una sèrie de parametres per al workflow anomenat. Aquests paràmetres estan explicats a la següent documentació [Configuració workflows](../gh-configuracio-workflows).
+
           
-              ![Grups credencials ](/images/GHEC/gh-mygroups-credenciales.png)
-            
-          2. Un cop ha iniciat sessió, l'owner disposarà d'una opció de menú per veure tots els grups dels quals té el rol d'Owner i que podrà gestionar afegint o eliminant usuaris des de l'opció "Groups I Own".
-
-              ![Grups](/images/GHEC/gh-mygroups.png)
-
-          3. Seleccionant el grup que vulgui modificar, tindrà la possibilitat d'afegir/eliminar usuaris. Per a això existeixen dues opcions de menú "Members" i "Owner" on, clicant en el botó "Add" podrà buscar els usuaris i afegir-los amb diferents permisos "Members" i "Owners" :
-
-                ![Grups](/images/GHEC/gh-mygroups-add.png)
-
-                + Permisos d'Owner : El nou usuari podrà ser Owner del grup i li permetrà poder afegir a altres usuaris.
-                + Permisos de Member : El nou usuari serà Member del grup.  NO podrà afegir altres usuaris.
-                + Permisos d'Owner i Member : El nou usuari serà Membre i Owner del grup.
-              
-                  ![Grups](/images/GHEC/gh-mygroups-addinguser.png)
-
-               **Els usuaris a afegir són els pertanyents al domini @gencat.cat**
-
-          4. Una vegada sincronitzat Azure Entra ID amb GHEC, els usuaris inserits/eliminats es veuran reflectits en GHEC en els Teams vinculats als grups d'Entra ID i automàticament se li assignaran permiSsos depenent del Team.
-      
-          Per a més informació, es pot consultar [Jerarquia i nomenclatura de Teams i nomenclatura de Repositoris ](../gh-model-govern) amb informació addicional de la creació de teams.
-
-          Addicionalment, en el següent Link, es podran consultar els permisos de cada rol [Roles y permisos de Repositoris ](../gh-rols-repositori).
-
-
       + **Configuració Inicial per a invocacions ITSM**
 
         Dins dels diferents workflows de CD, existiran steps encarregats de realitzar invocacions a ITSM (Remedy) en les quals es crearan WorkOrders on s'indicarà que el sistema està realitzant un desplegament d'una aplicació i l'estat final d'aquest desplegament.
