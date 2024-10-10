@@ -692,7 +692,7 @@
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 },
-				{
+                {
                     "inom": "V02",
                     "iestat": "Obsoleta",
                     "itipus": "Tabular",
@@ -707,7 +707,7 @@
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 },
-				{
+                {
                     "inom": "V03",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
@@ -919,7 +919,7 @@
                     "ifitxer_xls": "Mancomunitats.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",																																																																											
+                    "idataobsoleta": "",
                     "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Mancomunitats/96mh-m3ge",
                     "itipusactualitzacio": "Sota demanda"
@@ -2793,7 +2793,7 @@
             "Subambit": "Ordenació del territori, paisatge i urbanisme",
             "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
             "instancies": [
-		     	{
+                {
                     "inom": "V01",
                     "iestat": "Obsoleta",
                     "itipus": "Tabular",
@@ -4637,7 +4637,7 @@
             "Data_publicacio": "27/03/2024",
             "Data_actualitzacio": "27/03/2024"
         },
-		{
+        {
             "Id": "dtarq198",
             "Nom": "Divises",
             "Ambit": "Economia",
@@ -4665,7 +4665,7 @@
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
         },
-		{
+        {
             "Id": "dtarq199",
             "Nom": "Entitats bancàries",
             "Ambit": "Economia",
@@ -4808,9 +4808,9 @@
         {
             "Id": "dtarq104",
             "Nom": "Àmbits Funcionals Territorials",
-            "Ambit": "Territori i paisatge. Urbanisme",
+            "Ambit": "Territori, infraestructures i urbanisme",
             "Subambit": "Ordenació del territori , paisatge i urbanisme",
-            "Descripcio": "Llistat d'àmbits de la planificació territorial en què es divideix el territori. Són agrupacions de comarques per al desenvolupament dels plans territorials parcials, competència del Departament de Territori. El Pla territorial general de Catalunya (PTGC), aprovat per la Llei 1/1995, de 16 de març, va definir sis àmbits funcionals. Aquests es va modificar mitjançant la Llei 24/2001, de 31 de desembre, per tal de reconèixer reconeixent l'Alt Pirineu i Aran com a nova àrea funcional diferenciada de l'àmbit de Ponent. Posteriorment, la Llei 23/2010, del 22 de juliol, va crear l’àmbit funcional del Penedès, format per les comarques de l’Alt Penedès, el Baix Penedès, el Garraf i alguns municipis de la comarca de l’Anoia..",
+            "Descripcio": "Llistat d'àmbits de la planificació territorial en què es divideix el territori. Són agrupacions de comarques per al desenvolupament dels plans territorials parcials, competència del Departament de Territori. El Pla territorial general de Catalunya (PTGC), aprovat per la Llei 1/1995, de 16 de març, va definir sis àmbits funcionals. Aquests es va modificar mitjançant la Llei 24/2001, de 31 de desembre, per tal de reconèixer reconeixent l'Alt Pirineu i Aran com a nova àrea funcional diferenciada de l'àmbit de Ponent. Posteriorment, la Llei 23/2010, del 22 de juliol, va crear l’àmbit funcional del Penedès, format per les comarques de l’Alt Penedès, el Baix Penedès, el Garraf i alguns municipis de la comarca de l’Anoia.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -4824,7 +4824,7 @@
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
                     "idatapublicacio": "30/09/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/resource/xbmu-sz7e/about_data",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/resource/xbmu-sz7e",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
@@ -4832,8 +4832,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq203",
             "Nom": "Centres Peniteniaris de Catalunya",
             "Ambit": "Justícia i dret",
@@ -4860,8 +4860,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2024",
             "Data_actualitzacio": "28/06/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq204",
             "Nom": "Unitats del sector públic institucional assimilades a secretaria general",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -4888,8 +4888,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq205",
             "Nom": "Unitats del sector públic institucional assimilades a direcció general",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -4916,8 +4916,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq206",
             "Nom": "Subdireccions Generals del sector públic institucional",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -4930,7 +4930,7 @@
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Versió inicial",
-                     "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
+                    "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
                     "ifitxer_xls": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL.xlsx",
                     "idatacreacio": "30/09/2024",
                     "itipusvisual": "30/09/2024",
