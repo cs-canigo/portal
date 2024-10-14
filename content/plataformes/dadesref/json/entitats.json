@@ -672,10 +672,10 @@
         },
         {
             "Id": "dtarq194",
-            "Nom": "Unitats del sector públic institucional amb rang de subdirecció general",
+            "Nom": "Subdireccions generals",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat d’unitats amb rang de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat.",
+            "Descripcio": "Llistat de subdireccions generals en què s’organitzen els departaments de l’Administració de la Generalitat de Catalunya.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -4919,10 +4919,10 @@
         },
         {
             "Id": "dtarq206",
-            "Nom": "Subdireccions Generals del sector públic institucional",
+            "Nom": "Unitats del sector públic institucional amb rang de subdirecció general",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat..",
+            "Descripcio": "Llistat d’unitats amb rang de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat.",
             "instancies": [
                 {
                     "inom": "V01",
