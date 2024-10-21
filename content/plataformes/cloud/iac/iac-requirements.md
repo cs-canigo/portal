@@ -271,5 +271,4 @@ Per garantir el **compliment de les polítiques** establertes per Suport Cloud p
 
 En el workflow de CI d'infraestructura es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD.
 
-
-[PENDENT] **Enllaç a intranet amb detall de polítiques**
+Aquest és el repositori on es pot trobar el detall de la informació de les polítiques: https://github.com/ctti-arq/ghec-checkov-policies
