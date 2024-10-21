@@ -33,7 +33,7 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 	<li>Àmbits funcionals territorials.</li><br>
 	<li>Unitats del sector públic institucional assimilades a secretaria general.</li><br>
 	<li>Unitats del sector públic institucional assimilades a direcció general.</li><br>
-	<li>Subdireccions Generals del sector públic institucional.</li><br>
+	<li>Unitats del sector públic institucional amb rang de subdirecció general.</li><br>
 </li>
 </ul>	
 </ul>	
