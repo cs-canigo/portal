@@ -269,6 +269,6 @@ Per garantir el **compliment de les polítiques** establertes per Suport Cloud p
 - Revisar i auditar regularment el compliment de les polítiques establertes de la infraestructura de l'aplicació.
 - Integrar la gestió de les polítiques en els fluxos de treball d'infraestructura com a codi per garantir la seva aplicació coherent.
 
-En el workflow de CI d'infraestructura es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD.
+En el [workflow de CI d'infraestructura](https://canigo.ctti.gencat.cat/plataformes/ghec/gh-definicio-workflows/#worfklows-de-continuous-integration-ci-per-a-infraestructura-iac) es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD. En concret, aquesta validació es realitza al stage de **Scan check**.
 
-Aquest és el repositori on es pot trobar el detall de la informació de les polítiques: https://github.com/ctti-arq/ghec-checkov-policies
+Aquest és el repositori on es pot trobar el detall de la informació de les polítiques: https://github.com/ctti-arq/ghec-checkov-policies.
