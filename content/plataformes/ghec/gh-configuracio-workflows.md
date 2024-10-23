@@ -174,7 +174,7 @@ aliases = [
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **install_build_command**: (opcional) Comandament d'instal·lació. Definir només si el projecte es basa en tecnologia Node. Valor per defecte: `""`
+- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -188,6 +188,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       java_version: 21
       java_distribution: temurin
       maven_version: 3.9.5
+      # install_build_command: "mvn package -Dmaven.test.skip=true"
 ```
 
 #### CI on commit
@@ -308,7 +309,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **install_build_command**: (opcional) Comanda d'instal·lació. Definir només si el projecte es basa en tecnologia Node. Valor per defecte: "".
+- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -322,6 +323,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       java_version: 21
       java_distribution: temurin
       maven_version: 3.9.5
+      # install_build_command: "mvn package -Dmaven.test.skip=true"
 ```
 
 #### CI on PR
@@ -419,7 +421,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   - `nodejs`
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **install_build_command**: (opcional) Comandament d'instal·lació. Definir només si el projecte es basa en tecnologia Node. Valor per defecte: `""`.
+- **install_build_command**: (opcional) (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -434,7 +436,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
     with:
       technology: nodejs
       node_version: 20.x
-      install_build_command: "npm ci && npm run build"
+      # install_build_command: "npm ci && npm run build"
       sonar_exclusions: "node_modules/**,test/**"
       source_path: "dist"
 ```
@@ -475,7 +477,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **install_build_command**: (opcional) Comanda d'instal·lació. Definir només si el projecte es basa en tecnologia Node.
+- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -491,6 +493,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       java_version: 21
       java_distribution: temurin
       maven_version: 3.9.5
+      # install_build_command: "mvn package -Dmaven.test.skip=true"
 ```
 
 #### CI on PR

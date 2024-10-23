@@ -38,7 +38,7 @@
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "DIARIS_BUTLLETINS_OFICIALS",Territori, infraestructures i urbanisme
+            "nom_dinsBD": "DIARIS_BUTLLETINS_OFICIALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/07/2022",
             "Data_actualitzacio": "21/12/2022"
@@ -692,7 +692,7 @@
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 },
-				{
+                {
                     "inom": "V02",
                     "iestat": "Obsoleta",
                     "itipus": "Tabular",
@@ -707,7 +707,7 @@
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 },
-				{
+                {
                     "inom": "V03",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
@@ -919,7 +919,7 @@
                     "ifitxer_xls": "Mancomunitats.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",																																																																											
+                    "idataobsoleta": "",
                     "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Mancomunitats/96mh-m3ge",
                     "itipusactualitzacio": "Sota demanda"
@@ -2793,7 +2793,7 @@
             "Subambit": "Ordenació del territori, paisatge i urbanisme",
             "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
             "instancies": [
-		     	{
+                {
                     "inom": "V01",
                     "iestat": "Obsoleta",
                     "itipus": "Tabular",
@@ -4637,7 +4637,7 @@
             "Data_publicacio": "27/03/2024",
             "Data_actualitzacio": "27/03/2024"
         },
-		{
+        {
             "Id": "dtarq198",
             "Nom": "Divises",
             "Ambit": "Economia",
@@ -4665,7 +4665,7 @@
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
         },
-		{
+        {
             "Id": "dtarq199",
             "Nom": "Entitats bancàries",
             "Ambit": "Economia",
@@ -4832,8 +4832,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq203",
             "Nom": "Centres Peniteniaris de Catalunya",
             "Ambit": "Justícia i dret",
@@ -4860,8 +4860,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2024",
             "Data_actualitzacio": "28/06/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq204",
             "Nom": "Unitats del sector públic institucional assimilades a secretaria general",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -4888,8 +4888,8 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq205",
             "Nom": "Unitats del sector públic institucional assimilades a direcció general",
             "Ambit": "Administració pública, govern i relacions institucionals",
@@ -4916,13 +4916,13 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
-        },       
-		{
+        },
+        {
             "Id": "dtarq206",
-            "Nom": "Subdireccions Generals del sector públic institucional",
+            "Nom": "Unitats del sector públic institucional amb rang de subdirecció general",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat..",
+            "Descripcio": "Llistat d’unitats amb rang de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -4930,7 +4930,7 @@
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Versió inicial",
-                     "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
+                    "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
                     "ifitxer_xls": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL.xlsx",
                     "idatacreacio": "30/09/2024",
                     "itipusvisual": "30/09/2024",
