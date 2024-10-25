@@ -62,7 +62,7 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 |APP_NAME|No|Nom corresponent al producte que es vagi a desplegar. Aquest nom no ha de contenir el codi de diàleg del projecte, ja que aquest serà inclòs de manera automàtica després de realitzar-se el desplegament amb el format <codi>-<APP_NAME>. En cas que no es configuri aquesta variable en el ACA, se li assignarà per defecte el nom de la carpeta del projecte de GIT.|Nom de la carpeta del projecte|APP\_NAME: 'technicalproduct'|
 |APIC_PRESERVE_ASSEMBLY|No|Curricular que indica si s'ignora o no la regla que reemplaça l'acoblament, a través dels valors true o false, conservant l'acoblat original del YAML de l'API (secció assembly al YAML) creat pel desenvolupador, en cas que el camp s'informi amb el valor true. Això permetrà desplegar l'API amb lògica personalitzada.|false|APIC\_PRESERVE\_ASSEMBLY: true|
 |APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats.|-|APIC\_TARGET\_URL: 'https\://backend/api'|
-|APIC\_TARGET\_URL\_{N}|Si|URL de destí de les APIs si NO és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
+|APIC\_TARGET\_URL\_{N}|No|URL de destí de les APIs si NO és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 Per exemple:
 ```yaml
@@ -122,7 +122,7 @@ Per a més informació, podeu consultar: [Com construir el fitxer ACA](/platafor
 
 ## Funcionament
 
-El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIS,
+El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIs,
 atorgant la màxima agilitat i autonomia als equips de desenvolupament. En aquest sentit, es proporciona un conjunt de
 pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditzada:
 
