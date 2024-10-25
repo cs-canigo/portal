@@ -12,11 +12,11 @@ aliases = [
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-Coordinadament amb la Direcció General d'Administració Digital (DGAD), responsable d’impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la DGAD garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
+Coordinadament amb la Direcció General de Serveis Digitals i Experiència Ciutadana (DGSEC), responsable d’impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la DGSEC garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
 
 En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups:
 
-a) Dades de Referència consolidades i avalades per la DGAD que són d’obligat ús pels nous sistemes d’informació, i
+a) Dades de Referència consolidades i avalades per la DGSEC que són d’obligat ús pels nous sistemes d’informació, i
 <br/><br/>	
 b) Dades de Referència que es troben en revisió per l’òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
 <br/><br/>
@@ -424,7 +424,7 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 
 Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l’objectiu de modelar, validar i finalment incorporar dins del Catàleg Tècnic de Dades de Referència aquí publicat.
 
-El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d'Administració Digital, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Direcció General d'Administració Digital, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
+El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General de Serveis Digitals i Experiència Ciutadana, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Direcció General de Serveis Digitals i Experiència Ciutadana, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
 
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
