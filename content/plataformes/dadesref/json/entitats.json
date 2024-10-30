@@ -4974,6 +4974,90 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
+        },
+		{
+            "Id": "dtarq207",
+            "Nom": "Residus del Catàleg de Residus de Catalunya",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Llistat de residus recollits en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RESIDUS_ATR.docx",
+                    "ifitxer_xls": "RESIDUS.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Residus-del-Cat-leg-de-Residus-de-Catalunya/g4av-babz/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RESIDUS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq208",
+            "Nom": "Vies de gestió de residus de Catalunya",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "VIES_GESTIO_RESIDUS_ATR.docx",
+                    "ifitxer_xls": "VIES_GESTIO_RESIDUS.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Vies-de-gesti-de-residus/k6it-vuah/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "VIES_RESIDUS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq209",
+            "Nom": "Relació dels residus amb les vies ",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Relació dels residus amb les seves vies i subvies de gestió permeses, segons el definit en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RELACIO_RESIDUS_VIES_ATR.docx",
+                    "ifitxer_xls": "RELACIO_RESIDUS_VIES.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Relaci-dels-residus-amb-les-vies/brs8-gkwr/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RELACIO_RESIDUS_VIES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
         }
     ]
 }
