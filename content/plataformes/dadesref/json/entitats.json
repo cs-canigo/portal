@@ -1670,16 +1670,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
                     "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Delictes_ATR.docx",
-                    "ifitxer_xls": "Delictes.xlsx",
+                    "ifitxer_doc": "deprecated/Delictes_ATR_V01.docx",
+                    "ifitxer_xls": "deprecated/Delictes_V01.xlsx",
                     "idatacreacio": "25/04/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/10/2024",
                     "idatapublicacio": "28/06/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Modificació per introduir les últimes modificacions del Codi Penal en matèria de delictes contra la llibertat sexual i de maltractament d'animals. I dos camps sobre l'inici i final de vigència dels delictes que publica el CTEAJE.",
+                    "ifitxer_doc": "Delictes_ATR.docx",
+                    "ifitxer_xls": "Delictes.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Delictes/bm5b-6t6f",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -1687,7 +1702,7 @@
             "nom_dinsBD": "DELICTES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2023",
-            "Data_actualitzacio": "28/06/2023"
+            "Data_actualitzacio": "30/10/2024"
         },
         {
             "Id": "dtarq147",
