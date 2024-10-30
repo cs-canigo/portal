@@ -5058,6 +5058,34 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/10/2024",
             "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq210",
+            "Nom": "Zones Climàtiques segons el Codi Tècnic d’Edificació",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Ordenació del territori , paisatge i urbanisme",
+            "Descripcio": "El Codi Tècnic de l'Edificació (CTE) classifica les Zones Climàtiques en funció de la severitat climàtica. L'hivern mitjançant lletres que van de la A (condicions climàtiques menys severes) a la E i segons les condicions d'estiu amb números que van de l'1 (condicions climàtiques menys severes) al 4. Aquesta classificació després s'utilitza per calcular la qualificació energètica o sol·licitar ajuts per la rehabilitació d'edificis.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Ministerio de Vivienda y Agenda Urbana",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Zones_Climatiques_ATR.docx",
+                    "ifitxer_xls": "Zones_Climatiques.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Energia/Zones-Clim-tiques-segons-el-Codi-T-cnic-d-Edificac/55w8-2h5p/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "ZONES_CLIMATIQUES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
         }
     ]
 }
