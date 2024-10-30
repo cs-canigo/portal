@@ -5086,6 +5086,34 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/10/2024",
             "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq211",
+            "Nom": "Infraestructures aeroportuàries de Catalunya",
+            "Ambit": "Mobilitat i transports",
+            "Subambit": "Carreteres, ferrocarrils, ports i aeroports",
+            "Descripcio": "Ubicació del Punt de Referència de les infraestructures aeroportuàries de Catalunya amb el nom del gestor i les diferents tipologies d'infraestructura aeroportuària.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Pendent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Transports i Mobilitat",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "INFRAESTRUCTURES_AEROPORTUARIES_ATR.docx",
+                    "ifitxer_xls": "INFRAESTRUCTURES_AEROPORTUARIES.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": ",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "ZONES_CLIMATIQUES_CAT",
+            "Classificacio": "Pendent",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
         }
     ]
 }
