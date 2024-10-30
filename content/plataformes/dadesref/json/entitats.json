@@ -4850,31 +4850,46 @@
         },
         {
             "Id": "dtarq203",
-            "Nom": "Centres Peniteniaris de Catalunya",
+            "Nom": "Recursos d'Execució Penal de Catalunya",
             "Ambit": "Justícia i dret",
             "Subambit": "Execució penal i reinserció",
-            "Descripcio": "Llistat dels centres penitenciaris de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen dues tipologies de centre: Centre Penitenciari i Centre Obert.",
+            "Descripcio": "Llistat dels centres d’execució penal de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen tres tipologies de centre: Centre Penitenciari, Centre Obert i Centre Educatiu de Justícia Juvenil.",
             "instancies": [
                 {
                     "inom": "V01",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "deprectaed/CENTRES_PENITENCIARIS_ATR.docx",
+                    "ifitxer_xls": "deprectaed/CENTRES_PENITENCIARIS.xlsx",
+                    "idatacreacio": "28/06/2024",
+                    "itipusvisual": "28/06/2024",
+                    "idataobsoleta": "30/10/2024",
+                    "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Justícia, Drets i Memòria",
                     "idescripcio": "Versió inicial",
-                    "ifitxer_doc": "CENTRES_PENITENCIARIS_ATR.docx",
-                    "ifitxer_xls": "CENTRES_PENITENCIARIS.xlsx",
-                    "idatacreacio": "28/06/2024",
-                    "itipusvisual": "28/06/2024",
+                    "ifitxer_doc": "DR_Recursos_EP_ATR.docx",
+                    "ifitxer_xls": "DR_Recursos_EP.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
                     "idataobsoleta": "",
-                    "idatapublicacio": "28/06/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Centres-Penitenciaris-de-Catalunya/uqse-8meb/",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Recursos-d-Execuci-Penal-de-Catalunya/uqse-8meb",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "CENTRE_PENINTENCIARIS_CAT",
+            "nom_dinsBD": "DR_RECURS_EP_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2024",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "30/10/2024"
         },
         {
             "Id": "dtarq204",
