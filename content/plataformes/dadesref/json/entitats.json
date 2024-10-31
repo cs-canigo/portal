@@ -5005,7 +5005,7 @@
         },
 		{
             "Id": "dtarq208",
-            "Nom": "Vies de gestió de residus de Catalunya",
+            "Nom": "Vies de gestió de residus",
             "Ambit": "Medi ambient",
             "Subambit": "Residus",
             "Descripcio": "Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.",
@@ -5110,7 +5110,7 @@
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "ZONES_CLIMATIQUES_CAT",
+            "nom_dinsBD": "INFRAESTRUCTURES_AEROPORTUARIES_CAT",
             "Classificacio": "Pendent",
             "Data_publicacio": "30/10/2024",
             "Data_actualitzacio": "30/10/2024"
