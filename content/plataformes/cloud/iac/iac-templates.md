@@ -26,6 +26,13 @@ A continuació s'especifiquen les plantilles d'infraestructura disponibles pels 
 
 ### AWS
 
+#### [v1.1.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.1.0/)
+
+_Release notes_:
+
+* S'ha modificat la configuració dels recursos per a complir amb les polítiques de seguretat i estàndards definits per l'organització.
+* S'ha modificat la configuració dels recursos i blocs 'data' per a incloure la possibilitat d'utilitzar un model de Networking amb dos rangs CIDR (Subxarxes enrutables i no enrutables)
+
 #### [v1.0.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.0.0/)
 
 _Release notes_:
@@ -51,7 +58,7 @@ _Release notes_:
 
 ### Azure
 
- :warning: **Les plantilles que es poden trobar en aquesta secció estan en fase de validació pel que encara no es recomana el seu ús per part de les aplicacions**
+#### [v1.0.0](https://github.com/ctti-arq/iac-azure-templates/tree/1.0.0/)
 
 * Arquitectura tipus per contenidors (CaaS)
 
