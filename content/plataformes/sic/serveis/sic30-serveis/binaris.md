@@ -61,10 +61,8 @@ Es realitzen les següents comprovacions:
 doncs, amb aquest finalitat, s'ha habilitat el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 <br/>
-En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquesta llista mostrada es podrà utilitzar
+En finalitzar la pujada, es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquestes URLs es podran utilitzar
 per tal d’emplenar la petició de desplegament.
-
-![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)
 
 <br/>
 
