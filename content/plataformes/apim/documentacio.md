@@ -7,12 +7,6 @@ taxonomies = []
 weight = 3
 +++
 
-## Presentació general del servei
-
-Presentació a mode de Welcome Pack on es descriu de manera general el servei APIM:
-
-[Welcome Pack Servei API Manager Corporatiu](/related/apim/APIM-Welcome-Pack-v1.pdf)
-
 ##  Manuals d'usuari
 
 Es posen a disposició els següents manuals d'usuari on es detallen les característiques i metodologia de treball del servei d’API Manager: 

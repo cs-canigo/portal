@@ -1,5 +1,5 @@
 +++
-date        = "2024-08-09"
+date        = "2024-11-04"
 title       = "API Manager Corporatiu"
 description = "Descripció del servei"
 sections    = "APIM"
@@ -9,7 +9,9 @@ categories  = ["cloud","apim"]
 
 El servei d'API Manager Corporatiu de la Generalitat de Catalunya permet als departaments/proveïdors d'aplicacions **gestionar el cicle de vida de les APIS** de manera senzilla i segura. El servei ofereix la possibilitat de publicar **API's públiques** i **API's privades** , aquest últim tant en context Intranet com Extranet de la Generalitat. 
 
-![Pàgina principal](/related/apim/APIM.PNG)
+<p>
+  <img src="/related/apim/APIM.PNG" width="600" height="400"/>
+</p>
 
 ## Descripció
 
@@ -24,15 +26,13 @@ El servei d'API Manager Corporatiu ofereix les següents funcionalitats:
 
 El servei s'ofereix en **modalitat SaaS de pagament per ús**.
 
-La infraestructura dels **API Gateways** pot ser:
+El servei ofereix els següents tipus d’aprovisionament d’infraestructura dels **API Gateways**:
 
 |Modalitat|Descripció|
 |-------|-------|
-|Gateways CTTI Compartits|Infraestructura compartida onpremise, desplegat a CPD2|
-|Gateways dedicats|Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)|
-|Contenidors|Desplegament de l'API Gateway en contenidor|
+|Gateways CTTI Compartits|Infraestructura compartida on-premise, desplegat a CPD2|
 
-Actualment, només es troba disponible la infraestructura compartida.
+Hi ha la possibilitat d'ampliar la infraestructura compartida amb Gateways en altres CPDs en cas de necessitat. Requeriria avaluació dels requisits.
 
 ## Plataforma
 
@@ -48,7 +48,10 @@ Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services
 
 ## Documentació
 
-Es posa a disposició documentació on es detallen les característiques i metodologia de treball del servei d'API Manager.
+A continuació, s'adjunta el document del Welcome Pack d'API Manager Corporatiu, el qual comenta per sobre diversos dels punts i les característiques més importants del servei, i que serveix com a primera guia per començar a entendre alguns conceptes bàsics de la plataforma.
+- [Welcome Pack](/related/apim/APIM-Welcome-Pack-v2.pdf): introducció al servei d'API Manager Corporatiu. 
 
-La podeu trobar a https://canigo.ctti.gencat.cat/plataformes/apim/documentacio/
+Alhora, s'inclou el document d'Estratègies de l'ús de l'API Manager, que inclou informació complementària o addicional al Welcome Pack, i on es pot llegir sobre la importància i els beneficis d'utilitzar aquest servei.
+- [Estratègies de l’ús de l’API Manager](/related/apim/Estrategies_Us_API.pdf): estratègies de l'ús del servei d'API Manager Corporatiu.
 
+La resta de la documentació detallada on es detallen les característiques i la metodologia de treball del servei d'API Manager Corporatiu, juntament amb tots els recursos que pugui necessitar un proveïdor o consumidor, es troba a la següent url: https://canigo.ctti.gencat.cat/plataformes/apim/documentacio/
