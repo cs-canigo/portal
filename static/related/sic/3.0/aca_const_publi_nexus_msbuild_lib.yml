@@ -1,0 +1,28 @@
+version: 2.0.0 # aca schema version
+info:
+  version: 0.0.1
+  description: MSBuild 15 lib nexus
+global-env:
+  - ARTIFACT_PATH: '.'
+  - PACK_OPTIONS: '.\\folder\\project.csproj -Prop Configuration=Release'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: registreimatges.sic.intranet.gencat.cat/gencat-sic-builders/windows-builder
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - nuget.exe restore solution-file.sln
+              - msbuild.exe  .\\folder\\project.csproj /p:Configuration=Release /p:PackageVersion=%SIC_VERSION%
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]
