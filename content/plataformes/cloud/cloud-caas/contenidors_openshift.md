@@ -30,7 +30,8 @@ L'arquitectura bàsica d'una aplicació a Openshift és bàsicament la mateixa q
 A grans trets es poden distingir els següents components:
 
 * **Enrutador:** És el punt d'entrada i sortida del tràfic http/https de la plataforma i l'exterior. És responsable d'enrutar el tràfic a cada contenidor concret. Seria equivalent al Ingres Controller de Kubernetes.
-* **Ruta:** És l'element de configuració on és defineix quin domini correspondrà a un Servei. Permet també la configuració del SSL. Informa al Enrutador per a que aquest pugui redirigir el tràfic correctament. Seria equivament al Ingress de Kubernetes
+* **Ingress:** És un recurs de Kubernetes que administra l'accés extern als serveis d'una aplicació, generalment mitjançant HTTP/HTTPS. Permet definir regles per a la redirecció de trànsit, el balanceig de càrrega, i la terminació de TLS, proporcionant control sobre com els clients externs interactuen amb els serveis en el clúster. Pot ser utilitzat directament en Openshift. Encara que generarà de manera automàtica la ruta corresponent.
+* **Ruta:** És un recurs específic de OpenShift que exposa un servei intern del clúster a una URL externa, facilitant l'accés públic. Les routes ofereixen capacitats addicionals com a encaminament basat en subdominis, suport per a certificats TLS personalitzats i balanceig de càrrega a nivell de capa d'aplicació. En Openshift, existeix un controlador anomenat Ingress-to-Route que permet generar recursos de tipus Route de manera automàtica a partir d'un Ingress.
 * **Servei:** És l'element de configuració que permet exposar un servei basat en contenidors dins de la plataforma Openshift. Permet mapping de ports
 * **Desplegament:** És l'element de configuració que defineix com es desplegaran els contenidors:
 
@@ -58,7 +59,8 @@ A continuació es realitza la correlació entre els diferents components arquite
   Component genèric |  Component Openshift | Observacions  |
 |:-----------------|:---------|:-----------|
 | Enrutador  |  Router | És gestionat per l'administrador de la plataforma. A nivell d'aplicació no és necessari configurar res.|
-| Ruta  |  Route | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
+| Ingress  |  Ingress | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
+| Ruta  |  Route | Generat automàticament en desplegar un Ingress. A nivell d'aplicació no és necessari configurar res.|
 | Servei  |  Service | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
 | Desplegament  |  DeploymentConfig | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
 | Controlador  |  ReplicationController | És generat directament pel DeploymentConfig. No és necessari configurar res.|
@@ -200,6 +202,10 @@ A l'exemple es crea un servei per el DeploymentConfig creat anteriorment.
 
 Openshift només suporta serveis amb protocol HTTP/HTTPS, no suporta altres protocols, com per exemple SSH, JDBC, ...
 
+És obligatori definir un nom (àlies) per a cadascun dels ports del servei, a través de l'atribut name, i haurà de compondre's de la manera següent:
+
+<port>-<protocol>
+
 Configuració de l'exemple:
 
 * Port exposat per servei: **80**
@@ -223,30 +229,40 @@ spec:
     deploymentconfig:  XXXX-app1-server-deployment
 ```
 
-### Route
+### Ingress
 A l'exemple es crea una ruta pel servei creat anteriorment.
 
 Configuració de l'exemple:
 
 * host: **app1-server.gencat.cat**
+* secretName: **app1-server-secret-certificate** (Haurà d'existir un secret en el namespace amb el nom indicat. Aquest secret es genera de manera automàtica en Openshift en pujar un certificat a KeyVault. De moment, la inclusió del certificat se sol·licitarà com fins ara)
 
 ```
-apiVersion: v1
-kind: Route
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: app1-route
-  namespace: XXXX-app1-pre
+  annotations:
+    route.openshift.io/termination: edge
   labels:
-    app: app1-server
+    router: intranet
+  name: app1-server
+  namespace: app1-server
 spec:
-  host: app1-server.gencat.cat
-  to:
-    kind: Service
-    name:  XXXX-app1-server
-    weight: 100
-  port:
-    targetPort: 80-tcp
-  wildcardPolicy: None
+  rules:
+  - host: app1-server.gencat.cat
+    http:
+      paths:
+      - backend:
+          service:
+            name: XXXX-app1-server
+            port:
+              name: 80-tcp
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - app1-server.gencat.cat
+    secretName: app1-server-secret-certificate
 ```
 
 ## Informació relacionada
