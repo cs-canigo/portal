@@ -204,7 +204,7 @@ Openshift només suporta serveis amb protocol HTTP/HTTPS, no suporta altres prot
 
 És obligatori definir un nom (àlies) per a cadascun dels ports del servei, a través de l'atribut name, i haurà de compondre's de la manera següent:
 
-<port>-<protocol>
+port-protocol
 
 Configuració de l'exemple:
 
