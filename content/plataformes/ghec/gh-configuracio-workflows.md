@@ -102,6 +102,7 @@ aliases = [
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws` (default)
@@ -167,6 +168,7 @@ aliases = [
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **docker_build_context**: (opcional) Context de construcció de Docker. Per defecte és `"."` (l'arrel). Valor per defecte: `"."`
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
@@ -174,6 +176,7 @@ aliases = [
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
@@ -195,6 +198,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 
 **Exemple de crida al workflow:**
@@ -211,11 +215,13 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   - `java`
   - `nodejs`
   - `raw`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -243,6 +249,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **cloud**: Entorn al núvol. Valors possibles:
   - `aws` (default)
@@ -303,12 +310,14 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
@@ -330,11 +339,13 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -472,11 +483,13 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (obligatori) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
@@ -500,11 +513,13 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
+  - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
+- **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`

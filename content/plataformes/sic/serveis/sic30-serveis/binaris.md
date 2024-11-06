@@ -29,9 +29,9 @@ Cobreix les següents funcions i requeriments del servei SIC:
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
 
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
-<br/>
+![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)
 
+<br/>
 Haurà d'autenticar-se amb les seves credencials d'accés GICAR, de forma que:
 
 * Els **Release Manager i responsables de lot** disposaran d'accés al servei de pujada de binaris i també a la descàrrega dels mateixos.
@@ -43,7 +43,7 @@ En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris](/
 
 Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la següent imatge s'explica el seu funcionament:
 
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
+![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)
 
 <br/>
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
@@ -61,10 +61,8 @@ Es realitzen les següents comprovacions:
 doncs, amb aquest finalitat, s'ha habilitat el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 <br/>
-En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquesta llista mostrada es podrà utilitzar
+En finalitzar la pujada, es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquestes URLs es podran utilitzar
 per tal d’emplenar la petició de desplegament.
-
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
 <br/>
 
@@ -77,43 +75,41 @@ emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les
 ## Recuperar artefactes del SIC
 
 Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per a procedir a fer el desplegament.
-Aquesta opció el dirigirà cap al repositori de binaris (al que també pot accedir mitjançant l'enllaç https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris) on
+Aquesta opció el dirigirà cap al repositori de binaris (al que també pot accedir mitjançant l'enllaç https://bin.sic.intranet.gencat.cat/browse) on
 podrà cercar l'entrada i l'artefacte que vol descarregar.
 O simplement pot fer ús de la **URL que el proveïdor d'aplicacions ha indicat a la petició** de desplegament per accedir a la descàrrega directa.
 
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
+![Binaris](/images/news/SIC-GestioBinarisPortal_20_6.png)
 
-<!-- L'accès ha estat restringit a tècnics de Cpd en haver detectat un forat de seguretat
-Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
-informació. S'ofereixen diverses opcions de cerca i visualització.
+<!-- Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura.
+S'ofereixen diverses opcions de cerca i visualització.
 -->
 
-Aquest servei és accessible exclusivament per **tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
-informació. S'ofereixen diverses opcions de cerca i visualització.
-
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
-
+Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura.
+S'ofereixen diverses opcions de cerca i visualització.
 
 La **URL de descàrrega** seguirà el següent patró:
 ```
-https://hudson.intranet.gencat.cat/nexus/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_
+https://bin.sic.intranet.gencat.cat/api/binaris/file?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiaW5hcmlzLWJhY2tlbmQtcHJvIiwiaWF0IjoxNzMwMzY2NTExLCJleHAiOjE3MzU1NTA1MTEsImZpbGUiOiIyOTQ1L3Rlc3Rzb25kZXMvMS4xLjEvYmluLzI5NDUtdGVzdG5vZGVzLnppcCJ9.0cUl0t1YjKiPPHhJmFBi2w19Dmv95-IW9IHy8UWKGFM
 ```
 
+Contenint aquest un token jwt amb el següent payload
+```
+{
+  "iss": "binaris-backend-pro", <-- Issuer, que ha generat el token
+  "iat": 1730366511, <-- Issued at, data de creació del token
+  "exp": 1735550511, <-- Expiration time, data de caducitat del token
+  "file": "2945/testsondes/1.1.1/bin/2945-testnodes.zip" <-- Fitxer, ruta del fitxer a descarregar
+}
+```
 
 El sistema permet la consulta i descàrrega remota d’artefactes:
 
 ```
-curl -X GET [ u user:pwd ]
-"https://hudson.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" -O
-curl -X GET [ u user:pwd ]
-"https://hudson.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
+curl -O -J "https://bin.sic.intranet.gencat.cat/api/binaris/file?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiaW5hcmlzLWJhY2tlbmQtcHJvIiwiaWF0IjoxNzMwMzY2NTExLCJleHAiOjE3MzU1NTA1MTEsImZpbGUiOiIyOTQ1L3Rlc3Rzb25kZXMvMS4xLjEvYmluLzI5NDUtdGVzdG5vZGVzLnppcCJ9.0cUl0t1YjKiPPHhJmFBi2w19Dmv95-IW9IHy8UWKGFM"
 ```
 
 <br/><br/>
-<div class="message information">
-<b>L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/09/2020</b>. Durant aquest període, es podrà seguir accedint mitjançant
-el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
-</div>
 
 ## Eliminació de binaris
 

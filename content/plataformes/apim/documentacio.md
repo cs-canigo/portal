@@ -7,12 +7,6 @@ taxonomies = []
 weight = 3
 +++
 
-## Presentació general del servei
-
-Presentació a mode de Welcome Pack on es descriu de manera general el servei APIM:
-
-[Welcome Pack Servei API Manager Corporatiu](/related/apim/APIM-Welcome-Pack-v1.pdf)
-
 ##  Manuals d'usuari
 
 Es posen a disposició els següents manuals d'usuari on es detallen les característiques i metodologia de treball del servei d’API Manager: 
@@ -22,6 +16,6 @@ Es posen a disposició els següents manuals d'usuari on es detallen les caracte
 
 ## Manuals d'operacions
 
-- [Manual operatives APIM](/related/apim/APIM_Manual_Operatives_V1.pdf): conceptes generals de la operativa de la oficina tecnica del api manager
+- [Manual d'operatives de l'oficina tècnica d'API Manager](/related/apim/APIM_Manual_Operatives_V2.pdf): document que descriu les operatives que l'oficina tècnica d'API Manager podria fer durant l'acompanyament de projectes o el manteniment del servei dins de la plataforma SaaS d'API Connect
 - [Manual seguretat APIM](/related/apim/Manual_Seguretat_APIM_V1.0.pdf): conceptes generals de la seguretat del api manager
 

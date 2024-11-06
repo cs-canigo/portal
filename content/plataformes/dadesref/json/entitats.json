@@ -1670,16 +1670,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
                     "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Delictes_ATR.docx",
-                    "ifitxer_xls": "Delictes.xlsx",
+                    "ifitxer_doc": "deprecated/Delictes_ATR_V01.docx",
+                    "ifitxer_xls": "deprecated/Delictes_V01.xlsx",
                     "idatacreacio": "25/04/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/10/2024",
                     "idatapublicacio": "28/06/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Modificació per introduir les últimes modificacions del Codi Penal en matèria de delictes contra la llibertat sexual i de maltractament d'animals. I dos camps sobre l'inici i final de vigència dels delictes que publica el CTEAJE.",
+                    "ifitxer_doc": "Delictes_ATR.docx",
+                    "ifitxer_xls": "Delictes.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Delictes/bm5b-6t6f",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -1687,7 +1702,7 @@
             "nom_dinsBD": "DELICTES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2023",
-            "Data_actualitzacio": "28/06/2023"
+            "Data_actualitzacio": "30/10/2024"
         },
         {
             "Id": "dtarq147",
@@ -4835,31 +4850,46 @@
         },
         {
             "Id": "dtarq203",
-            "Nom": "Centres Peniteniaris de Catalunya",
+            "Nom": "Recursos d'Execució Penal de Catalunya",
             "Ambit": "Justícia i dret",
             "Subambit": "Execució penal i reinserció",
-            "Descripcio": "Llistat dels centres penitenciaris de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen dues tipologies de centre: Centre Penitenciari i Centre Obert.",
+            "Descripcio": "Llistat dels centres d’execució penal de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen tres tipologies de centre: Centre Penitenciari, Centre Obert i Centre Educatiu de Justícia Juvenil.",
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Justícia, Drets i Memòria",
                     "idescripcio": "Versió inicial",
-                    "ifitxer_doc": "CENTRES_PENITENCIARIS_ATR.docx",
-                    "ifitxer_xls": "CENTRES_PENITENCIARIS.xlsx",
+                    "ifitxer_doc": "deprectaed/CENTRES_PENITENCIARIS_ATR.docx",
+                    "ifitxer_xls": "deprectaed/CENTRES_PENITENCIARIS.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "28/06/2024",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/10/2024",
                     "idatapublicacio": "28/06/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Centres-Penitenciaris-de-Catalunya/uqse-8meb/",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Modificació de l’entitat de Centres Penitenciaris, per introduir nous recursos d’execució penal, Centre Educatiu de Justícia Juvenil i modificar la codificació per adaptar-la a les noves tipologies",
+                    "ifitxer_doc": "DR_Recursos_EP_ATR.docx",
+                    "ifitxer_xls": "DR_Recursos_EP.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Recursos-d-Execuci-Penal-de-Catalunya/uqse-8meb",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "CENTRE_PENINTENCIARIS_CAT",
+            "nom_dinsBD": "DR_RECURS_EP_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2024",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "30/10/2024"
         },
         {
             "Id": "dtarq204",
@@ -4944,6 +4974,146 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
             "Data_actualitzacio": "30/09/2024"
+        },
+		{
+            "Id": "dtarq207",
+            "Nom": "Residus del Catàleg de Residus de Catalunya",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Llistat de residus recollits en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RESIDUS_ATR.docx",
+                    "ifitxer_xls": "RESIDUS.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Residus-del-Cat-leg-de-Residus-de-Catalunya/g4av-babz/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RESIDUS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq208",
+            "Nom": "Vies de gestió de residus",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "VIES_GESTIO_RESIDUS_ATR.docx",
+                    "ifitxer_xls": "VIES_GESTIO_RESIDUS.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Vies-de-gesti-de-residus/k6it-vuah/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "VIES_RESIDUS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq209",
+            "Nom": "Relació dels residus amb les vies ",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Relació dels residus amb les seves vies i subvies de gestió permeses, segons el definit en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RELACIO_RESIDUS_VIES_ATR.docx",
+                    "ifitxer_xls": "RELACIO_RESIDUS_VIES.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Relaci-dels-residus-amb-les-vies/brs8-gkwr/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RELACIO_RESIDUS_VIES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq210",
+            "Nom": "Zones Climàtiques segons el Codi Tècnic d’Edificació",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Ordenació del territori , paisatge i urbanisme",
+            "Descripcio": "El Codi Tècnic de l'Edificació (CTE) classifica les Zones Climàtiques en funció de la severitat climàtica. L'hivern mitjançant lletres que van de la A (condicions climàtiques menys severes) a la E i segons les condicions d'estiu amb números que van de l'1 (condicions climàtiques menys severes) al 4. Aquesta classificació després s'utilitza per calcular la qualificació energètica o sol·licitar ajuts per la rehabilitació d'edificis.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Ministerio de Vivienda y Agenda Urbana",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Zones_Climatiques_ATR.docx",
+                    "ifitxer_xls": "Zones_Climatiques.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Energia/Zones-Clim-tiques-segons-el-Codi-T-cnic-d-Edificac/55w8-2h5p/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "ZONES_CLIMATIQUES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq211",
+            "Nom": "Infraestructures aeroportuàries de Catalunya",
+            "Ambit": "Mobilitat i transports",
+            "Subambit": "Carreteres, ferrocarrils, ports i aeroports",
+            "Descripcio": "Ubicació del Punt de Referència de les infraestructures aeroportuàries de Catalunya amb el nom del gestor i les diferents tipologies d'infraestructura aeroportuària.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Pendent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Transports i Mobilitat",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "INFRAESTRUCTURES_AEROPORTUARIES_ATR.docx",
+                    "ifitxer_xls": "INFRAESTRUCTURES_AEROPORTUARIES.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "INFRAESTRUCTURES_AEROPORTUARIES_CAT",
+            "Classificacio": "Pendent",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
         }
     ]
 }

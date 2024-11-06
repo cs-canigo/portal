@@ -74,10 +74,11 @@ El procés d'integració actualment és el següent :
       | Nom tècnic component | Tipus de Repositori | Categoria | Engine | Tecnologia | Versió |
       |----------------------|---------------------|-----------|--------|------------|--------|
       | NomTecComponent1     | backend             | container | ecs    | java       | 17     |
-      | NomTecComponent2     | backend             | container | ecs    | node       | 18.1   |
+      | NomTecComponent2     | backend             | container | ecs    | nodejs     | 18.1   |
       | NomTecComponent3     | infra               | infra     | N/A    | N/A        | N/A    |
       | NomTecComponent4     | backend             | function  | lambda | java       | 17     |
-    
+      | NomTecComponent5     | backend             | container | ecs    | dotnet     | 8      |
+
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
         + backend
@@ -108,6 +109,12 @@ El procés d'integració actualment és el següent :
         + afunc : Azure Function.
         + s3 : AWS Storage
         + ablobstorage : Azure Storage
+
+      + Tecnologia : 
+        + java
+        + nodejs
+        + dotnet. **IMPORTANT .Net Framework no està suportat**
+        
       
     + **Migració del CI/CD nadiu d'AWS o Azure a GHEC**
 

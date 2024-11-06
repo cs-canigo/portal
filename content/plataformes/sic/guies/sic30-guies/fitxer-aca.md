@@ -719,6 +719,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament On Premise](/related/sic/3.0/aca_const_despl_maven_onpremise.yml)
 
+- [Construcció aplicació MSBuild (Windows) i desplegament On Premise](/related/sic/3.0/aca_const_despl_msbuild_onpremise.yml)
+
 - [Desplegament d'scripts de bbdd en contenidors](/related/sic/3.0/aca_despl_bbdd_contenidors.yml)
 
 - [Desplegament d'scripts de bbdd On Premise](/related/sic/3.0/aca_despl_bbdd_onpremise.yml)
@@ -732,6 +734,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció i publicació de llibreria Node al Nexus](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
 
 - [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
+
+- [Construcció i publicació de llibreria .NET Framework (MSBuild) al Nexus](/related/sic/3.0/aca_const_publi_nexus_msbuild_lib.yml)
 
 - [Construcció i publicació d'imatge pròpia al Registre corporatiu](/related/sic/3.0/aca_const_publi_harbor_image.yml)
 

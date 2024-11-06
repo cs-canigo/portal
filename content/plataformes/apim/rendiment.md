@@ -3,7 +3,7 @@ date        = "2024-08-09"
 title       = "Proves de rendiment"
 description = "Procediment de les proves de rendiment per a l'API Manager"
 sections    = "APIM"
-weight      = 4
+weight      = 6
 +++
 
 El procediment per a la sol·licitud de proves de rendiment a l’API Manager Corporatiu compta amb els següents passos:
