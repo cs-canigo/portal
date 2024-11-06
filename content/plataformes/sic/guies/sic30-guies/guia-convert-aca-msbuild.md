@@ -182,6 +182,16 @@ Es transformaria d'aquesta manera:
 
 ```
 
+## Eines
+
+Per a la compilació dels projectes desenvolupats per a .Net Framework, s'ha integrat en SIC 3.0 un nou builder amb les següents característiques i eines:
+
+- Sistema Operatiu: **Windows Server 2022**
+- Versió de Nuget.exe: **5.0.2**
+- Versió de Visual Studio: **Visual Studio 2019**
+
+La versió de Visual Studio instal·lada disposa de la integració amb totes les versions de .Net Framework suportades per Microsoft a data d'elaboració d'aquest document, que són de la 4.6.2 d'ara endavant.
+
 ## Exemples
 
 A continuació els enllaços als exemples de fitxer ACA per a aquesta mena de projectes.
