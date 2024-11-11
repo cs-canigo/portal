@@ -119,6 +119,8 @@ seran arxivats en un magatzem en fred, i no seran accessibles directament des de
 contactar amb l'equip de SIC per poder recuperar-los.
 
 
+![Binaris](/images/news/SIC-GestioBinarisPortal_20_7.png)
+
 <br/><br/><br/>
 Podeu accedir al [**Material formatiu**](/related/sic/2.0/formacio-binaris-20.pdf). <br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/plataformes/sic/guies/sic30-guies/). <br/>
