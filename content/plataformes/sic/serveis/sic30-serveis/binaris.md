@@ -113,9 +113,10 @@ curl -O -J "https://bin.sic.intranet.gencat.cat/api/binaris/file?token=eyJhbGciO
 
 ## Eliminació de binaris
 
-**Periòdicament s'executa un procés d'esborrament de binaris;** els artefactes més antics de 180 dies s'esborraran mantenint solament les últimes 5 versions. A partir d'1 any d'antiguitat solament es mantindrà l'última versió.
-El Servei de Binaris no està concebut, per tant, com un servei de custòdia permanent sinó com un sistema d'intercanvi
-d'artefactes per al desplegament d'aplicacions.
+**Binaris compta amb un procés d'arxivat de binaris,** els artefactes més antics de 60 dies s'arxivaran, encara que continuaran
+sent accessibles des d'un suport d'emmagatzemament destinat a aquest accés ocasional. A partir de 360 dies d'antiguitat
+seran arxivats en un magatzem en fred, i no seran accessibles directament des de l'aplicació de Binaris. En aquest cas caldrà
+contactar amb l'equip de SIC per poder recuperar-los.
 
 
 <br/><br/><br/>
