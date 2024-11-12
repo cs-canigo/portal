@@ -24,29 +24,25 @@ La gestió dels tokens d'accés personal es gestionen des de la interfície web 
 
 1. Accedir a la consola web de Gitlab en la URL habitual.
 
-<br/>
-<br/>
 ![Login](/related/sic/3.0/gitlab-login.png)
 <br/>
-<br/>
+
+
 2. Accedir a la modificació de l'el nostre perfil d'usuari.
 
-<br/>
-<br/>
+
 ![Profile](/related/sic/3.0/gitlab-pefil.png)
 <br/>
 <br/>
 3. Gestionar els token afegint, eliminant o revocant.
 
-<br/>
-<br/>
+
 ![pat](/related/sic/3.0/gitlab-pat.png)
 <br/>
 <br/>
 4. Crear el token ajustant la durada i l'abast. L'habitual serà assignar l'abast "write_repository"
 
-<br/>
-<br/>
+
 ![Permissions](/related/sic/3.0/gitlab-permissions.png)
 <br/>
 <br/>
