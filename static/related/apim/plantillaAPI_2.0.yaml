@@ -1,0 +1,345 @@
+swagger: '2.0'
+info:
+  title: Plantilla API
+  x-ibm-name: plantilla-api
+  version: 1.0.0
+  description: |
+    **Funcionalidad del API**
+  contact:
+    name: Arquitectura Integración
+    email: 3292@gencat.cat
+x-ibm-configuration:
+  cors:
+    enabled: false
+  gateway: datapower-api-gateway
+  type: rest
+  phase: realized
+  enforced: true
+  testable: true
+  assembly:
+    execute:
+      - ctti-validate-request:
+          version: 1.0.0
+      - ctti-invoke-log:
+          version: 1.0.0
+          title: ctti-invoke-log
+          LogPoint: invoke-in
+          url: $(target-url)
+          responseObject: ''
+      - invoke:
+          title: invoke
+          version: 2.0.0
+          verb: keep
+          target-url: $(target-url)
+          follow-redirects: false
+          timeout: 60
+          parameter-control:
+            type: allowlist
+            values: []
+          header-control:
+            type: blocklist
+            values: []
+          inject-proxy-headers: true
+          persistent-connection: true
+      - ctti-invoke-log:
+          version: 1.0.0
+          title: ctti-invoke-log
+          LogPoint: invoke-out
+          url: ''
+          responseObject: ''
+    catch:
+      - errors:
+          - BadRequestError
+          - ConnectionError
+          - JavaScriptError
+        execute:
+          - ctti-error-management:
+              version: 1.0.0
+              title: ctti-error-management
+              FormatoRespuesta: json
+      - default:
+          - ctti-error-management:
+              version: 1.0.0
+              title: ctti-error-management
+              FormatoRespuesta: json
+  x-customPaths:
+    /path:
+      get:
+        responses:
+          '200':
+            description: success
+            schema:
+              type: string
+          '400':
+            description: Bad Request
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '401':
+            description: Unauthorized
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '500':
+            description: Internal Server Error
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+        consumes: []
+        produces: []
+        request:
+          params:
+            param1:
+              obligatorio: true
+              type: string
+              maxLength: 30
+          headers:
+            header1:
+              obligatorio: true
+              type: string
+              maxLength: 30
+      post:
+        responses:
+          '200':
+            description: success
+            schema:
+              type: string
+          '400':
+            description: Bad Request
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '401':
+            description: Unauthorized
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '500':
+            description: Internal Server Error
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+        consumes: []
+        produces: []
+        request:
+          params:
+            param1:
+              obligatorio: true
+              type: string
+              maxLength: 30
+          headers:
+            header1:
+              obligatorio: true
+              type: string
+              maxLength: 30
+          body:
+            $ref: '#/x-ibm-configuration/x-customDefinitions/inputData'
+  x-customDefinitions:
+    inputData:
+      type: object
+      properties:
+        objetoString:
+          obligatorio: false
+          type: string
+        objetoBoolean:
+          obligatorio: false
+          type: boolean
+        objetoStringRestringido:
+          obligatorio: false
+          type: string
+          list:
+            - OK
+            - KO
+        arrayDeObjetos:
+          obligatorio: true
+          type: object
+          arrayObject:
+            objetoString2:
+              obligatorio: false
+              type: string
+              maxLength: 3200
+            objetoBoolean2:
+              obligatorio: true
+              type: boolean
+      additionalProperties: false
+    outputError:
+      type: object
+      properties:
+        httpCode:
+          key: httpCode
+        httpMessage:
+          key: httpMessage
+        errorCode:
+          key: errorCode
+        moreInformation:
+          key: moreInformation
+  properties:
+    target-url:
+      value: https://exampledesa.com/test
+      description: >-
+        URL del sistema destino. **Property generada por defecto por API
+        Connect**
+      encoded: false
+    erroresParticularesCtti:
+      value: >-
+        {"QBE0190" : {"httpCode": 400, "httpMessage": "Bad Request",
+        "moreInformation": "No se dispone de información en el sistema sobre el
+        elemento a buscar."}}
+      description: >-
+        **Policy: ctti-error-management** Json con los errores particulares de
+        este API. **Si no se va a añadir un error particular eliminar esta
+        property**
+    cors-enabled:
+      description: >-
+        **Extension: ctti-request-cors** Indica si se realiza la extension
+        ctti-request-cors. **Si se deja a true se ejecutará la extension de
+        CORS, si no se va a ejecutar la extension CORS se puede borrar**
+      value: 'false'
+    cors-origins:
+      value: https://origen1,https://origen2,https://origen3
+      description: >-
+        **Extension: ctti-request-cors** Esta propiedad contiene los valores de
+        la cabecera HTTP Origin permitidos para las peticiones a la API. Los
+        valores deben ir separados por comas **Si no se va a ejecutar la
+        extension CORS se puede borrar**
+    cors-headers:
+      value: Origin,X-Requested-With,Content-Type,Accept,Authorization
+      description: >-
+        **Extension: ctti-request-cors** Esta propiedad contiene los valores de
+        la cabecera HTTP Allow-Headers permitidos para las peticiones a la API.
+        Los valores deben ir separados por comas y sin espacios **Si no se va a
+        ejecutar la extension CORS se puede borrar**
+    cors-methods:
+      value: POST,GET
+      description: >-
+        **Extension: ctti-request-cors**  Esta propiedad contiene los valores de
+        la cabecera HTTP Allow-Methods permitidos para las peticiones a la API.
+        Los valores deben ir separados por comas **Si no se va a ejecutar la
+        extension CORS se puede borrar**
+    cors-credentials:
+      value: 'false'
+      description: >-
+        **Extension: ctti-request-cors** Esta propiedad contiene el valor de la
+        cabecera HTTP Allow-Credentials que devolverá la API. Los posibles
+        valores son true o false **Si no se va a ejecutar la extension CORS se
+        puede borrar**
+    cabeceras-seguridad:
+      value: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\", \t\"Content-Security-Policy\": \"default-src 'self'\", \t\"Location\": \"\", \t\"Access-Control-Allow-Headers\": \"Content-Type, Authorization\", \t\"Access-Control-Allow-Origin\": \"https://example.com\" , \t\"Access-Control-Allow-Methods\": \"GET, POST\", \t\"Access-Control-Allow-Credentials\": \"true\", \"Cabecera-Custom-Example\": \"\"}"
+      description: >-
+        **Extension: ctti-response-headers-secure** JSON con las cabeceras que
+        se debe permitir su transmisión en la respuesta del API. Si se indican
+        con valor vacío se trasnmitirá un valor por defecto contenido en la
+        extensión **La propiedad no puede borrarse y debe contener las cabeceras
+        que se desean transmitir**
+    cabecerasSeguridad-enabled:
+      description: >-
+        **Extension: ctti-response-headers-secure** Indica si se realiza la extension
+        ctti-response-headers-secure. **Si se deja a true se ejecutará la extension de
+        validación de cabeceras de seguridad, si no se va a ejecutar la
+        extension de validación de cabeceras de seguridad se puede borrar**
+      value: 'false'
+  activity-log:
+    enabled: true
+    success-content: payload
+    error-content: payload
+  catalogs:
+    public_pre:
+      properties:
+        target-url: https://exampledesa.com/test
+        cors-enabled: 'false'
+        cors-origins: https://origen1,https://origen2,https://origen3
+        cors-headers: Origin,X-Requested-With,Content-Type,Accept,Authorization
+        cors-credentials: 'false'
+        cabeceras-seguridad: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\", \t\"Content-Security-Policy\": \"default-src 'self'\", \t\"Location\": \"\", \t\"Access-Control-Allow-Headers\": \"Content-Type, Authorization\", \t\"Access-Control-Allow-Origin\": \"https://example.com\" , \t\"Access-Control-Allow-Methods\": \"GET, POST\", \t\"Access-Control-Allow-Credentials\": \"true\", \"Cabecera-Custom-Example\": \"\"}"
+        cabecerasSeguridad-enabled: 'false'
+    public:
+      properties:
+        target-url: https://exampleint.com/test
+        cors-enabled: 'false'
+        cors-origins: https://origen1,https://origen2,https://origen3
+        cors-headers: Origin,X-Requested-With,Content-Type,Accept,Authorization
+        cors-credentials: 'false'
+        cabeceras-seguridad: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\", \t\"Content-Security-Policy\": \"default-src 'self'\", \t\"Location\": \"\", \t\"Access-Control-Allow-Headers\": \"Content-Type, Authorization\", \t\"Access-Control-Allow-Origin\": \"https://example.com\" , \t\"Access-Control-Allow-Methods\": \"GET, POST\", \t\"Access-Control-Allow-Credentials\": \"true\", \"Cabecera-Custom-Example\": \"\"}"
+        cabecerasSeguridad-enabled: 'false'
+    privat_pre:
+      properties:
+        target-url: https://examplepro.com/test
+        cors-enabled: 'false'
+        cors-origins: https://origen1,https://origen2,https://origen3
+        cors-headers: Origin,X-Requested-With,Content-Type,Accept,Authorization
+        cors-credentials: 'false'
+        cabeceras-seguridad: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\", \t\"Content-Security-Policy\": \"default-src 'self'\", \t\"Location\": \"\", \t\"Access-Control-Allow-Headers\": \"Content-Type, Authorization\", \t\"Access-Control-Allow-Origin\": \"https://example.com\" , \t\"Access-Control-Allow-Methods\": \"GET, POST\", \t\"Access-Control-Allow-Credentials\": \"true\", \"Cabecera-Custom-Example\": \"\"}"
+        cabecerasSeguridad-enabled: 'false'
+    privat:
+      properties:
+        target-url: https://examplepro.com/test
+        cors-enabled: 'false'
+        cors-origins: https://origen1,https://origen2,https://origen3
+        cors-headers: Origin,X-Requested-With,Content-Type,Accept,Authorization
+        cors-credentials: 'false'
+        cabeceras-seguridad: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\", \t\"Content-Security-Policy\": \"default-src 'self'\", \t\"Location\": \"\", \t\"Access-Control-Allow-Headers\": \"Content-Type, Authorization\", \t\"Access-Control-Allow-Origin\": \"https://example.com\" , \t\"Access-Control-Allow-Methods\": \"GET, POST\", \t\"Access-Control-Allow-Credentials\": \"true\", \"Cabecera-Custom-Example\": \"\"}"
+        cabecerasSeguridad-enabled: 'false'
+  application-authentication: {}
+basePath: /app-code/basepath-api
+paths:
+  /path:
+    get:
+      responses:
+        '200':
+          description: success
+          schema:
+            type: string
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/outputError'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/outputError'
+        '500':
+          description: success
+          schema:
+            $ref: '#/definitions/outputError'
+      consumes: []
+      produces: []
+    post:
+      responses:
+        '200':
+          description: success
+          schema:
+            type: string
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/outputError'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/outputError'
+        '500':
+          description: success
+          schema:
+            $ref: '#/definitions/outputError'
+      consumes: []
+      produces: []
+schemes:
+  - https
+securityDefinitions:
+  clientID:
+    type: apiKey
+    name: X-IBM-Client-Id
+    x-key-type: client_id
+    in: header
+definitions:
+  outputError:
+    type: object
+    properties:
+      httpCode:
+        type: integer
+        description: Codigo de estado de respuesta HTTP
+      httpMessage:
+        type: string
+        description: Breve descripcion del codigo de estado HTTP
+      errorCode:
+        type: string
+        description: Codigo de error propio de CTTI
+      moreInformation:
+        type: string
+        description: Descripcion detallada del error
+security:
+  - clientID: []
