@@ -7,10 +7,10 @@ weight      = 1
 categories  = ["cloud","apim"]
 +++
 
-El servei d'API Manager Corporatiu de la Generalitat de Catalunya permet als departaments/proveïdors d'aplicacions **gestionar el cicle de vida de les APIS** de manera senzilla i segura. El servei ofereix la possibilitat de publicar **API's públiques** i **API's privades** , aquest últim tant en context Intranet com Extranet de la Generalitat. 
+El servei d'API Manager Corporatiu de la Generalitat de Catalunya permet als departaments/proveïdors d'aplicacions **gestionar el cicle de vida de les APIs** de manera senzilla i segura. El servei ofereix la possibilitat de publicar **API's públiques** i **API's privades** , aquest últim tant en context Intranet com Extranet de la Generalitat. 
 
 <p>
-  <img src="/related/apim/APIM.PNG" width="600" height="400"/>
+  <img src="/related/apim/APIM.png" width="600" height="400"/>
 </p>
 
 ## Descripció

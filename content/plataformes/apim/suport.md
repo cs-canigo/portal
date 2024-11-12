@@ -5,7 +5,7 @@ description = "Com obtenir suport per part de la oficina tècnica de l'API Manag
 sections = "APIM"
 toc = true
 taxonomies = []
-weight = 4
+weight = 3
 +++
 
 ## Oficina tècnica d'API Manager
@@ -36,7 +36,7 @@ A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
 ## Aplicacions en fase de projecte
 
-Per les aplicacions en fase de projecte que s’integraran amb l'Api Manager Corporatiu, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament APIM**](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOAPIM/issues). El proveïdor d’aplicacions ha de crear una petició en aquest servei. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració dels espais, publicació de l'API, consum API, …) es canalitzarà en aquesta petició.
+Per les aplicacions en fase de projecte que s’integraran amb l'API Manager Corporatiu, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament APIM**](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOAPIM/issues). El proveïdor d’aplicacions ha de crear una petició en aquest servei. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració dels espais, publicació de l'API, consum API, …) es canalitzarà en aquesta petició.
 
 Si no disposeu d’accés al JIRA, l'alta a JIRA es demana manant el **portal PAUTIC de Remedy** a la secció de **Gestió accés d’usuaris**, sol·licitant accés a peticionar a **ACOAPIM** per poder obrir tiquets d'acompanyament de tot allò relacionat amb API Manager. També caldrà demanar accés per al projecte **ACOCLDSIC** per poder sol·licitar al SIC la configuració de les pipelins: 
 El **GDI** podrà sol·licitar l'alta, la baixa i la modificació d'usuaris en l'aplicació. En el cas que se sol·liciti una petició relacionada amb un projecte JIRA serà necessari adjuntar un correu o document amb la validació del responsable del projecte. Qualsevol dubte que es tingui, es recomana contactar amb l'equip responsable via portal PAUTIC o via correu cstd.ctti@gencat.cat.
