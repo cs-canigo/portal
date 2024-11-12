@@ -1,0 +1,74 @@
+info:
+  version: 1.0.0
+  title: Codi Project_name
+  name: codi-project_name
+  categories:
+    - codi
+    - codi/project_name
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    title: Default Plan
+    approval: true
+    description: Default Plan
+    rate-limits:
+      default:
+        value: 100/1hour
+        hard-limit: true
+    burst-limits:
+      default:
+        value: 10/1minute
+    apis:
+      apiname-apiversion: {}
+  bronze:
+    title: Bronze
+    approval: true
+    rate-limits:
+      default:
+        value: 1000/1hour
+        hard-limit: true
+    burst-limits:
+      default:
+        value: 100/1minute
+    apis:
+      apiname-apiversion: {}
+  silver:
+    title: Silver
+    approval: true
+    rate-limits:
+      default:
+        value: 2000/1hour
+        hard-limit: true
+    burst-limits:
+      default:
+        value: 200/1minute
+    apis:
+      apiname-apiversion: {}
+  gold:
+    title: Gold
+    approval: true
+    rate-limits:
+      default:
+        value: 4000/1hour
+        hard-limit: true
+    burst-limits:
+      default:
+        value: 400/1minute
+    apis:
+      apiname-apiversion: {}
+visibility:
+  view:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
+apis:
+  apiname-apiversion:
+    $ref: nombreficheroapi.yml
