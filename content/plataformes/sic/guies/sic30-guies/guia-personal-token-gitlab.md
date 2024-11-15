@@ -13,7 +13,7 @@ weight = 8
 
 ## Introducció
 
-A partir del pròxim 15 de desembre, s'activarà l'autenticació amb MFA en Gitlab i es deshabilitarà l'autenticació bàsica. Aquest canvi significa que, a partir d'aquesta data, per a accedir a Gitlab des del navegador se sol·licitarà MFA de Cisco DUO i no serà possible l'accés des d'eines de línia de comando amb l'usuari i la contrasenya de GICAR. 
+A partir del pròxim 15 de gener, s'activarà l'autenticació amb MFA en Gitlab i es deshabilitarà l'autenticació bàsica. Aquest canvi significa que, a partir d'aquesta data, per a accedir a Gitlab des del navegador se sol·licitarà MFA de Cisco DUO i no serà possible l'accés des d'eines de línia de comando amb l'usuari i la contrasenya de GICAR. 
 Per a poder continuar treballant normalment amb les eines de línia de comando, haurem de configurar i utilitzar els [**Personal Access Token (PAT) de què disposa Gitlab**](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
 
 L'objectiu de la present guia és donar unes breus indicacions perquè cada usuari de Gitlab pugui crear-se i mantenir els seus propis token d'accés.
