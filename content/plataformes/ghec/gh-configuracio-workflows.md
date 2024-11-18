@@ -170,7 +170,7 @@ aliases = [
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
 - **docker_build_context**: (opcional) Context de construcció de Docker. Per defecte és `"."` (l'arrel). Valor per defecte: `"."`
-- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.  En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
@@ -199,7 +199,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   - `java`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
-- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -231,6 +231,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   Valor per defecte: true.
 - **dependabot**: (opcional) Activació de Dependabot.
   Valor per defecte: true.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -311,7 +312,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   - `java`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
-- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
@@ -352,6 +353,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **unit_test**: (opcional) Indica si s'han d'executar proves unitàries com a part del workflow d'integració contínua. Valor per defecte: false.
 - **sonarqube**: (opcional) Indica si s'ha d'integrar SonarQube en el procés d'integració contínua. Valor per defecte: true.
 - **dependabot**: (opcional) Permet activar o desactivar la funcionalitat de Dependabot en el workflow. Valor per defecte: true.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -496,6 +498,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   - `test/**`
 - **sonarqube**: (opcional) Indica si s'ha d'executar l'anàlisi de codi mitjançant SonarQube. Valor per defecte: false.
 - **dependabot**: (opcional) Indica si s'ha de permetre l'ús de Dependabot. Valor per defecte: false.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -526,6 +529,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **sonarqube**: (opcional) Indica si s'ha d'executar l'anàlisi de codi mitjançant SonarQube. Valor per defecte: true.
 - **dependabot**: (opcional) Indica si s'ha de permetre l'ús de Dependabot. Valor per defecte: true.
 - **unit_test**: (opcional) Realització de proves unitàries. Valor per defecte: false.
+- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 
 **Exemple de crida al workflow:**
 ```yaml
