@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Gitflow i GitOps"
 description  = "Model de treball Gitflow i GitOps"
-weight      = "4"
+weight      = "1"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/model-gitflow-gitops",

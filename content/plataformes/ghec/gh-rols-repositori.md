@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Rols"
 description  = "Rols d'accés per a una organització"
-weight      = "3"
+weight      = "7"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-rols-repositori",

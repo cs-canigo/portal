@@ -37,6 +37,8 @@ Com s'ha comentat en el punt anterior, aquest és el primer pas cap a un model s
 El procés d'integració actualment és el següent :
 
   ![Procés de creació de Model GHEC](/images/GHEC/gh_proceso_automatico_pub.png) 
+ 
+ **IMPORTANT : Abans de sol·licitar el onboarding del projecte, és important revisar les diferents capacitats tecnològiques que actualment té la plataforma en el següent document [capacitats tecnològiques](../gh-capacitat-tecnologiques)**
 
 1. **Onboarding del projecte**
 
@@ -78,6 +80,7 @@ El procés d'integració actualment és el següent :
       | NomTecComponent3     | infra               | infra     | N/A    | N/A        | N/A    |
       | NomTecComponent4     | backend             | function  | lambda | java       | 17     |
       | NomTecComponent5     | backend             | container | ecs    | dotnet     | 8      |
+      | NomTecComponent6     | apim                | apim      | N/A    | apim       | N/A    |
 
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
@@ -86,6 +89,7 @@ El procés d'integració actualment és el següent :
         + library
         + infra
         + executor
+        + apim
 
       + Categoria  :
         + container : Desplegament de una imatge de contenidors.
@@ -96,6 +100,7 @@ El procés d'integració actualment és el següent :
         + kubernetes :  Desplegament estès a Kubernetes.
         + database :  Desplegament estès de scripts de Base de Dades.
         + vm :  Desplegament estès de Màquines Virtuals. 
+        + apim: Desplegament estès de Api en API Manager
 
         Amb les següents restriccions :
         - Si " Tipus de repositori " = "backend" els possibles valors de categoria són : container | function
@@ -114,6 +119,7 @@ El procés d'integració actualment és el següent :
         + java
         + nodejs
         + dotnet. **IMPORTANT .Net Framework no està suportat**
+        + apim
         
       
     + **Migració del CI/CD nadiu d'AWS o Azure a GHEC**
@@ -163,6 +169,7 @@ El procés d'integració actualment és el següent :
         - Infrastructure template --> [infrastructure-template](https://github.com/ctti-arq/infrastructure-template)
         - Library template --> [library-template](https://github.com/ctti-arq/library-template)
         - Extended deployment template --> [extended-template](https://github.com/ctti-arq/executor-template)
+        - API's deployment template --> [API's-template](https://github.com/ctti-arq/apim-template)
 
         El workflow cridant necessita configurar una sèrie de parametres per al workflow anomenat. Aquests paràmetres estan explicats a la següent documentació [Configuració workflows](../gh-configuracio-workflows).
 
@@ -298,6 +305,6 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
   + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
 
- | Exemples   ||||
-|--------------|-|-|-|
-|[e2e Container](../exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic ](../exemples/gh-exemple-e2e-cs) | [e2e Function ](../exemples/gh-exemple-e2e-function) |
+ | Exemples   |||||
+|--------------|-|-|-|-|
+|[e2e Container](../exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic ](../exemples/gh-exemple-e2e-cs) | [e2e Function ](../exemples/gh-exemple-e2e-function) | [e2e API Manager ](../exemples/gh-exemple-e2e-apimanager) |

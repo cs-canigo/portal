@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Model d'integració de branques amb Pull Request"
 description  = "Gestió de la integració de branques a GitHub amb Pull Request"
-weight      = "5"
+weight      = "2"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-model-pull-requests",

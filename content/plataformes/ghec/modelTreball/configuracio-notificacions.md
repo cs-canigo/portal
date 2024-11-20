@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Notificacions"
 description  = "Configuració de notificacions"
-weight      = "9"
+weight      = "4"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/configuracio-notificacions",

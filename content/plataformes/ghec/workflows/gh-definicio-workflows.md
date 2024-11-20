@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Workflows"
 description  = "Definició de Workflows de CI/CD"
-weight      = "6"
+weight      = "1"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-definicio-workflows",
@@ -22,7 +22,8 @@ S'ha considerat separar o aïllar els workflows en uns més específics i evitar
 
 S'han definit tant workflows per components tècnics d'aplicació com worfklows per a infraestructura (IaC).
 
-## Definició workflows 📝
+## Definició workflows - Components tècnics d'aplicació 📝
+
 
 ### Workflow de Continuous Integration (CI) per a components tècnics d'aplicació
 Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../model-gitflow-gitops)
@@ -157,6 +158,8 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
         '{"repositorio":"http://gitea.gitea/devsecops/functional-test.git", "entorno":"Integracio", "urlapp":"https://qualitat.solucions.gencat.cat/","rama":"master"}'
 
     
+## Definició workflows - Infraestructura 📝
+
 ### Worfklows de Continuous Integration (CI) per a infraestructura (IaC).
 
 Es torna a apostar (depenent de la branca) per l'ús de Pull Request per realitzar un commit a branques (develop, release, master/main).
@@ -204,6 +207,7 @@ on:
     
 El nom Workflow en GHEC és **Infra CD Apply**
 
+## Definició workflows - Functions 📝
 
 ### Workflow de Continuous Integration (CI) per a Function
 
@@ -251,6 +255,8 @@ on:
 El nom Workflow en GHEC és **FUNC CD**
 
 
+## Definició workflows - Contingut Estátic 📝
+
 ### Workflow de Continuous Integration (CI) per a Contingut Estátic
 
 Igual que passa amb el workflow d'aplicacions, s'ha diferenciat en el workflow entre:
@@ -297,3 +303,66 @@ on:
 El nom Workflow en GHEC és **Static CD**
 
 
+## Definició workflows - API's  📝
+
+### Workflow de Continuous Integration (CI) per API Manager.
+
+Igual que passa amb el workflow d'aplicacions, s'ha diferenciat en el workflow entre:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI per API Manager](/images/GHEC/ci-workflow-definition-apimanager.png)
+
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de validació de codi mitjançant el comandament validate de l'eina apic i aquest resultat es comenta en la PR. 
+
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+Nom del Workflow en GitHub : **APIM CI on PR**.
+
+![Definició a alt nivell dels workflows de CI per per API Manager](/images/GHEC/ci-workflow-definition-API-Manager-PR.png)
+
+
+
+D'altra banda, si estem en temps de commit, i partint de la base que el paquet no ha de ser mutable entre els diferents entorns, es comprova el tag generat en temps de PR, es publica l'artefacte a Github Artifacts i es torna a fer el tag del repositori.
+
+Nom del Workflow en GitHub : **APIM CI on Commit**.
+
+![Definició a alt nivell dels workflows de CI per API Manager](/images/GHEC/ci-workflow-definition-API-Manager-CM.png)
+
+
+### Worfklows de Continuous Deployment (CD) Publish per API Manager.
+
+Es detalla a continuació el flux de treball dels desplegaments de APIM Publish.
+
+![Definició a alt nivell dels Worfklows de CD per per API Manager](/images/GHEC/cd-workflow-apimanager-publish-definition.png)
+
+
+on:
+* CHECK ARTIFACTS: Comprova l'existència i validesa de l'artefacte en el repositori.
+* ENVIROMENT MATRIX: Valida si l'artefacte pot ser desplegat en l'entorn especificat.
+* ITSM PRE AUDIT: Realitza una auditoria prèvia en ITSM creant una CRQ per a la preparació del desplegament (només en entorns diferents de dev).
+* PUBLISH PRODUCT TO IBM API MANAGER (Deploy): Publica el producte a IBM API Manager segons els paràmetres configurats.
+* ITSM POST AUDIT: Completa l'auditoria en ITSM després del desplegament, registrant l'estat final i completant la CRQ.
+    
+El nom Workflow en GHEC és **APIM CD PUBLISH**
+
+### Worfklows de Continuous Deployment (CD) Operatives per API Manager.
+
+Es detalla a continuació el flux de treball dels desplegaments de APIM Operativa.
+
+![Definició a alt nivell dels Worfklows de CD per per API Manager](/images/GHEC/cd-workflow-apimanager-operativa-definition.png)
+
+on:
+* CHECKOUT: Realitza la verificació de codi en el repositori.
+* CHECK ARTIFACTS: Verifica l'existència i validesa de l'artefacte al repositori.
+* ENVIROMENT MATRIX: Valida si l'artefacte pot ser desplegat en l'entorn especificat.
+* VALIDATIONS : Step preparat per a inserir les futures validacions a realitzar prèvies a l'execució de les operatives.
+* ITSM PRE AUDIT: Realitza una auditoria prèvia a ITSM, creant una CRQ per al desplegament (només en entorns diferents de dev).
+* PRODUCT OPERATION INTO IBM API MANAGER (Deploy): Executa operacions a IBM API Manager segons l'operació especificada.
+* ITSM POST AUDIT: Completa l'auditoria a ITSM després del desplegament, registrant l'estat final i completant la CRQ.
+    
+El nom Workflow en GHEC és **APIM CD OPERATIVA**

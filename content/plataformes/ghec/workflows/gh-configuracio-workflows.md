@@ -3,7 +3,7 @@
 date         = "2024-04-19"
 title        = "Configuració workflows"
 description  = "Guia per configurar els workflows a demanda"
-weight      = "14"
+weight      = "2"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-configuracio-workflows",
@@ -13,9 +13,9 @@ aliases = [
 +++
 
 
-### Infra
+## Infra
 
-#### CD Apply
+### CD Apply
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws` (default)
   - `azure`
@@ -63,7 +63,7 @@ aliases = [
       itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 ```
 
-#### CI on Commit
+### CI on Commit
 - **terraform_version**: (obligatori) Versió de Terraform.
 
 **Exemple de crida al workflow:**
@@ -74,7 +74,7 @@ aliases = [
       terraform_version: 1.7.5
 ```
 
-#### CI on PR
+### CI on PR
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws` (default)
   - `azure`
@@ -96,9 +96,9 @@ aliases = [
       terraform_version: 1.7.5
 ```
 
-### Container
+## Container
 
-#### CD
+### CD
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -164,7 +164,7 @@ aliases = [
       itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 ```
 
-#### CI on commit develop
+### CI on commit develop
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -194,7 +194,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       # install_build_command: "mvn package -Dmaven.test.skip=true"
 ```
 
-#### CI on commit
+### CI on commit
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -210,7 +210,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ```
 
 
-#### CI on PR
+### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -244,9 +244,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       maven_version: 3.9.5
 ```
 
-### Function
+## Function
 
-#### CD
+### CD
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -307,7 +307,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 ```
 
-#### CI on Commit
+### CI on Commit
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -336,7 +336,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       # install_build_command: "mvn package -Dmaven.test.skip=true"
 ```
 
-#### CI on PR
+### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -367,9 +367,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ```
 
 
-### Static
+## Static
 
-#### CD
+### CD
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `raw`
   - `nodejs`
@@ -428,7 +428,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ```
 
 
-#### CI on commit
+### CI on commit
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `raw`
   - `nodejs`
@@ -455,7 +455,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ```
 
 
-#### CI on PR
+### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `raw`
   - `nodejs`
@@ -479,9 +479,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ```
 
 
-### Library
+## Library
 
-#### CI on Commit
+### CI on Commit
 - **technology**: (obligatori) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -512,7 +512,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       # install_build_command: "mvn package -Dmaven.test.skip=true"
 ```
 
-#### CI on PR
+### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -542,9 +542,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       maven_version: 3.9.5
 ```
 
-### Desplegaments estesos
+## Desplegaments estesos
 
-#### Executor CD
+### Executor CD
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws`
   - `azure`
@@ -572,7 +572,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ```
 
 
-#### Descriptors CD
+### Descriptors CD
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws`
   - `azure`
@@ -631,3 +631,90 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
       selenium_enabled: false
       itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 ```
+
+
+## API Manager
+
+### CD Publish
+- **artifact_version**: (obligatori) Versió de l'artefacte que es publicarà.
+- **apicCatalog**: (obligatori) Catàleg d'API Connect on es publicarà el producte.Valors possibles:
+    - `privat`
+    - `public`
+    - `privat-pre`
+    - `public-pre`
+- **apicProductFile**: (obligatori) Fitxer del producte d'API Connect que es publicarà.
+- **itsm_id_change_coordinator**: ID del coordinador de canvis en el sistema ITSM.
+- **itsm_enabled**: Indica si la integració amb ITSM està habilitada (true/false).
+
+**Exemple de crida al workflow:**
+``` yaml
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-publish-reusable.yaml@v3.0.16
+    secrets: inherit
+    with:
+      artifact_version: ${{ inputs.artifact_version }}
+
+      apicCatalog: ${{ inputs.apicCatalog }}
+      apicProductFile: ${{ inputs.apicProductFile }}
+
+      itsm_enabled: true
+      itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
+```
+
+### CD Operativa
+- **operació**: (obligatori) Operació a fer amb el producte.
+    - `INFO`
+    - `REPLACE`
+    - `RETIRE`
+    - `DELETE`
+    - `DEPRECATE`
+    - `SUPERSEDE`
+- **artifact_version**: (obligatori) Versió de l'artefacte que es publicarà.
+- **apicCatalog**: (obligatori) Catàleg d'API Connect on es farà l'operació.
+    - `privat`
+    - `public`
+    - `privat-pre`
+    - `public-pre`
+- **apicProductFile**: (obligatori) Fitxer del producte d'API Connect que es farà servir en l'operació.
+- **apicNewProductVersion**: (obligatori en operacions de Replace i Supersede) Nova versió del producte d'API Connect que es farà servir en l'operació.
+- **itsm_id_change_coordinator**: ID del coordinador de canvis en el sistema ITSM.
+- **itsm_enabled**: Indica si la integració amb ITSM està habilitada (true/false).
+
+**Exemple de crida al workflow:**
+``` yaml
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-operativa-reusable.yaml@v3.0.16
+    secrets: inherit
+    with: 
+      operation: ${{ inputs.operation }}
+      artifact_version: ${{ inputs.artifact_version }}
+
+      apicCatalog: ${{ inputs.apicCatalog }}
+      apicProductFile: ${{ inputs.apicProductFile }}
+      apicNewProductVersion: ${{ inputs.apicNewProductVersion }}
+
+      itsm_enabled: true
+      itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
+```
+
+### CI on Commit
+- **apicProductFile**: (obligatori) Fitxer del producte d'API Connect que es publicarà.
+
+**Exemple de crida al workflow:**
+``` yml
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-ci-on-commit-reusable.yaml@v3.0.16
+secrets: inherit
+with:
+    apicProductFile: "health-check-test_2.0.7.yaml"
+```
+
+### CI on PR
+- **apicProductFile**: (obligatori) Fitxer del producte d'API Connect que es publicarà.
+
+**Exemple de crida al workflow:**
+``` yml
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-ci-on-pr-reusable.yaml@v3
+secrets: inherit
+with:
+    apicProductFile: "health-check-test_2.0.7.yaml"
+```
+
+
