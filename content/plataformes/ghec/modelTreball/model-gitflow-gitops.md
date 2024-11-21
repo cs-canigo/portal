@@ -123,6 +123,36 @@ Les branques de rellegiment són necessàries quan l'equip està treballant en u
 
         Exemple: 1.2.0-SNAPSHOT
 
+
+
+---
+Addicionalment, dins la política de versions implantada, el nom del lliurable i la seva version s' obté automàticament dels fitxers de configuració del projecte.  Aquest dependrà del tipus de tecnologia.
+
+* **JAVA (Maven)**:
+   * Fitxer : pom.xml
+   * Nom Lliurable : Tag artifactid
+   * Versió Lliurable : Tag version
+    
+* **JAVA (Gradle)**        
+   * Fitxer / Nom Lliurable : settings.gradle / Camp -  rootProject.name 
+   * Fitxer / Versió Lliurable :  build.gradle / Camp -  version
+    
+* **NODE**
+   * Fitxer : package.json
+   * Nom Lliurable :  name
+   * Versió Lliurable : version
+
+* **.NET**.  En aquest cas hi ha dues casuistiques :        
+       
+   * Nom Lliurable :
+        1. Si sólo hay un unico proyecto, sólo hay un .csproj y se obtendra del campo **name** de dicho fichero.
+        2. Si tenemos en el repo más de un proyecto,  hay distintos .csproj, se obtiene de la variable **Project_Name** cuyo valor se introduce en el setup del proyecto.
+
+   * Versió Lliurable : 
+        1. Si sólo hay un unico proyecto, sólo hay un .csproj y se obtendra del campo **versión** de dicho fichero 
+        2. Si tenemos en el repo más de un proyecto,  hay distintos .csproj, luego debería haber un fichero centralizado de versiones llamado **Directory.Build.props** y de aquí se obtendra del campo **VERSION**.
+   
+
 ## MODEL GITOPS
 
 
