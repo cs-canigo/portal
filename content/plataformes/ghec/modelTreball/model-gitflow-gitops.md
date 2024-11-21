@@ -145,13 +145,14 @@ Addicionalment, dins la política de versions implantada, el nom del lliurable i
 * **.NET**.  En aquest cas hi ha dues casuistiques :        
        
    * Nom Lliurable :
-        1. Si sólo hay un unico proyecto, sólo hay un .csproj y se obtendra del campo **name** de dicho fichero.
-        2. Si tenemos en el repo más de un proyecto,  hay distintos .csproj, se obtiene de la variable **Project_Name** cuyo valor se introduce en el setup del proyecto.
+        1. Si només hi ha un unic projecte, només hi ha un **.csproj** i s'obtindra del camp **name** d'aquest fitxer.
+        2. Si tenim en el repo més d'un projecte, hi ha diferents .csproj, s'obté de la variable **Project_Name** el valor del qual s'introdueix en el setup del projecte.
+
 
    * Versió Lliurable : 
-        1. Si sólo hay un unico proyecto, sólo hay un .csproj y se obtendra del campo **versión** de dicho fichero 
-        2. Si tenemos en el repo más de un proyecto,  hay distintos .csproj, luego debería haber un fichero centralizado de versiones llamado **Directory.Build.props** y de aquí se obtendra del campo **VERSION**.
-   
+        1. Si només hi ha un unic projecte, només hi ha un **.csproj** i s'obtindra del camp **version** d'aquest fitxer 
+        2. Si tenim en el repo més d'un projecte, hi ha diferents .csproj, després hi hauria d'haver un fitxer centralitzat de versions anomenat **Directory.Build.props** i d'aquí s'obtindre del camp **VERSION**.
+  
 
 ## MODEL GITOPS
 
