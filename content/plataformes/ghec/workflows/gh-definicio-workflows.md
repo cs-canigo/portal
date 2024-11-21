@@ -26,7 +26,7 @@ S'han definit tant workflows per components tècnics d'aplicació com worfklows 
 
 
 ### Workflow de Continuous Integration (CI) per a components tècnics d'aplicació
-Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../model-gitflow-gitops)
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
 
 S'ha diferenciat en el workflow entre:
 + Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.

@@ -32,12 +32,10 @@ En el següent quadrant es poden observar les capacitats de tipus de repositoris
 
 Actualment, se suporten els desplegaments en els següents Hyperescalars, de les tecnologies i artefactes indicats en el capítol anterior:
 
-![Capacitat Tecnológiques](/images/GHEC/gh-hyperescalares.png)
+![Capacitat Tecnológiques](/images/GHEC/gh-hyperescalares_cloud.png)                                        
 
 ### Altres capacitats
 Addicionalment, la plataforma suporta les següents capacitats :
-
-
 
 * ### Desplegaments d'API's en IBM API Connect. 
 
