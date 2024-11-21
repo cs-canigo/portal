@@ -5,6 +5,11 @@ title        = "Exemple e2e Infra"
 description  = "Exemple e2e Infra"
 weight      =  "3"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-exemple-infra",
+    "/ghec/gh-exemple-e2e-infra",
+    "/plataformes/ghec/gh-exemple-e2e-infra"
+]
 +++
 
 

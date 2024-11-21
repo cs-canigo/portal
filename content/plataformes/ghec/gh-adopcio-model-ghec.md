@@ -307,4 +307,4 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
 
  | Exemples   |||||
 |--------------|-|-|-|-|
-|[e2e Container](../exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic ](../exemples/gh-exemple-e2e-cs) | [e2e Function ](../exemples/gh-exemple-e2e-function) | [e2e API Manager ](../exemples/gh-exemple-e2e-apimanager) |
+|[e2e Container](../workflows/exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../workflows/exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic ](../workflows/exemples/gh-exemple-e2e-cs) | [e2e Function ](../workflows/exemples/gh-exemple-e2e-function) | [e2e API Manager ](../workflows/exemples/gh-exemple-e2e-apimanager) |

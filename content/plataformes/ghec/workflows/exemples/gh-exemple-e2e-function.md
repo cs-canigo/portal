@@ -5,6 +5,11 @@ title        = "Exemple e2e Functions"
 description  = "Exemple e2e Functions"
 weight      = "2"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-exemple-function",
+    "/ghec/gh-exemple-e2e-function",
+    "/plataformes/ghec/gh-exemple-e2e-function"
+]
 +++
 
 

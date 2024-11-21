@@ -5,10 +5,15 @@ title        = "Exemple e2e API MANAGER"
 description  = "Exemple e2e API MANAGER"
 weight      = "5"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-exemple-apimanager",
+    "/ghec/gh-exemple-e2e-apimanager",
+    "/plataformes/ghec/gh-exemple-e2e-apimanager"
+]
 +++
 
 ## Exemple de model de treball per a CI/CD d'API Manager
-
+ 
 Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
    + Gestió de branques amb un model Gitflow.
    + Integracions de branques basades en Pull Request.
@@ -215,6 +220,6 @@ Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
   + RETIRE: 
     * Canvia l'estat de la version d'un producte a retired. 
   + REPLACE: 
-    * Reemplaça una version de producte per la indicada i canvia l'estat de la version reemplaçada a retired en el catàleg seleccionat. 
+    * Reemplaça una version de producte per la indicada i canvia l'estat de la version reemplaçada a retired en el catàleg seleccionat.
   + SUPERSEDE: 
-    * Reemplaça una version de producte per la indicada i canvia l'estat de la version reemplaçada a deprecated en el catàleg seleccionat. 
+    * Reemplaça una version de producte per la indicada i canvia l'estat de la version reemplaçada a deprecated en el catàleg seleccionat.

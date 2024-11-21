@@ -5,6 +5,11 @@ title        = "Exemple e2e Container"
 description  = "Exemple e2e Container"
 weight      = "1"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-exemple-container",
+    "/ghec/gh-exemple-e2e-container",
+    "/plataformes/ghec/gh-exemple-e2e-container"
+]
 +++
 
 ## Exemple de model de treball per a CI/CD d'un container

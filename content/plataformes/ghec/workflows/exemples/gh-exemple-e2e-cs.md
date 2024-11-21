@@ -1,10 +1,14 @@
-
 +++
 date         = "2024-04-19"
 title        = "Exemple e2e contingut estàtic"
 description  = "Exemple e2e contingut estàtic"
 weight      = "4"
 sections    = ["GHEC"]
+aliases = [
+    "/drafts/ghec/gh-exemple-e2e-cs",
+    "/ghec/gh-exemple-e2e-cs",
+    "/plataformes/ghec/gh-exemple-e2e-cs"
+]
 +++
 
 
