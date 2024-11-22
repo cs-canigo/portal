@@ -37,9 +37,9 @@ aliases = [
 
 ## [Q3/Q4 2024] 1.1.0​
 
-- Certificació desplegaments a GCP​
-- Suport a .NET​ incloent llibreries
-- Suport Python (llenguatge a incorporar al Full de Ruta)​ excloent llibreries (GitHub Packages no dona suport)
-- Desplegaments en APIM (API Manager corporatiu)
+- :heavy_check_mark: Suport a .NET​ incloent llibreries
+- :heavy_check_mark: Desplegaments en APIM (API Manager corporatiu)
+- :construction_worker: Certificació desplegaments a GCP​
+- :construction_worker: Suport Python (llenguatge a incorporar al Full de Ruta)​ excloent llibreries (GitHub Packages no dona suport)
 
 *_Roadmap subjecte a canvis_
