@@ -29,10 +29,10 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdo
 ## Consumidors
 A continuació, hi ha tots els recursos que pugui necessitar un usuari consumidor que vulgui consumir APIs i productes a la plataforma d'API Manager Corporatiu.
 
-- [Manual del consumidor d'APIs](/related/apim/APIM-Manual-Consumidor-APIs-v1.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
+- [Manual del consumidor d'APIs](/related/apim/APIM-Manual-Consumidor-APIs-V2.pdf): conceptes generals del servei APIM, com subscriure's i consumir les APIs.
 
 ## Manuals d'operacions
 
 - [Manual d'operatives de l'oficina tècnica d'API Manager](/related/apim/APIM_Manual_Operatives_V2.pdf): document que descriu les operatives que l'oficina tècnica d'API Manager podria fer durant l'acompanyament de projectes o el manteniment del servei dins de la plataforma SaaS d'API Connect.
-- [Manual seguretat APIM](/related/apim/Manual_Seguretat_APIM_V1.0.pdf): conceptes generals de la seguretat del api manager.
+- [Manual seguretat APIM (WIP)](/related/apim/Manual_Seguretat_APIM_V1.0.pdf): WIP. Manca per actualitzar. conceptes generals de la seguretat del api manager.
 
