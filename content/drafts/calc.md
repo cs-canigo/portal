@@ -3,7 +3,6 @@ date        = "2024-11-25"
 title       = "Calculadora modernització"
 sections    = []
 categories  = []
-draft       = true
 +++
 
 <form id="costForm"></form>
