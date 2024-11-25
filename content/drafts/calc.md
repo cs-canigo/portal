@@ -8,14 +8,10 @@ categories  = []
 <form id="costForm"></form>
     <label for="currentCost">Cost Actual:</label>
     <input type="text" id="currentCost" name="currentCost" oninput="calculateCost()"><br><br>
-
-
     <label for="futureCost">Cost Futur:</label>
     <input type="number" id="futureCost" name="futureCost" oninput="calculateCost()"><br><br>
-
     <label for="testCost">Cost Proves:</label>
     <input type="number" id="testCost" name="testCost" oninput="calculateCost()"><br><br>
-
     <label for="migrationCost">Cost Migració:</label>
     <input type="number" id="migrationCost" name="migrationCost" oninput="calculateCost()"><br><br>
 </form>
