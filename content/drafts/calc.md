@@ -4,7 +4,7 @@ title       = "Calculadora modernització"
 sections    = []
 categories  = []
 +++
-<style>
+<style> 
     #costForm {
         font-family: Arial, sans-serif;
         background-color: #f9f9f9;
@@ -51,12 +51,43 @@ categories  = []
         font-weight: bold;
     }
 
+    .row-calc{
+        display: flex; 
+        justify-content: space-between;        
+    }
+
+    .column-calc{
+        flex: 1; 
+    }
+
+    .column-calc:first-child{
+        margin-right: 20px;        
+    }
+
+
+    @media (max-width: 768px) {
+
+        #result{
+            padding: 1em;
+            font-size: 1.5em;
+        }
+
+        .row-calc {
+            flex-direction: column;
+        }
+
+        .column-calc:first-child {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
 
 </style>
 
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="flex: 1; margin-right: 20px;">
+<div class="row-calc">
+    <div class="column-calc">
         <form id="costForm">
             <label for="currentCost">Cost actual anual infra:</label>
             <input type="text" id="currentCost" name="currentCost" oninput="calculateCost()"><br><br>
@@ -68,7 +99,7 @@ categories  = []
             <input type="text" id="migrationCost" name="migrationCost" oninput="calculateCost()"><br><br>
         </form>
     </div>
-    <div style="flex: 1;">
+    <div class="column-calc">
         <p id="result">Omple les dades de la calculadora amb els costos estimats.</p>
     </div>
     
