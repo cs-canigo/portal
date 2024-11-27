@@ -274,7 +274,7 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
     + static: WorkFlows per desplegar Contingut Estàtic.
     + container: Repositoris per desplegar Contenidors.
     + infra: Repositoris per desplegar Infraestructura.
-    + mobile: Workflows per desplegar Aplicacions Mòbils i Llibreries d'iOS.
+    + mobile: Workflows per desplegar Aplicacions Mòbils (nadiu Android i iOS) i Llibreries d'iOS.
 
   L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
                 

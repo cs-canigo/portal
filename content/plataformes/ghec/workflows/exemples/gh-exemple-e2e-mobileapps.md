@@ -17,7 +17,7 @@ aliases = [
 Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
    + Gestió de branques amb un model Gitflow.
    + Integracions de branques basades en Pull Request.
-   + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
+   + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0 per aplicacions mòbils.
 
    En el següent exemple es mostra l'execució e2e d'un flux de treball, des que el desenvolupador realitza la seva implementació en una branca Feature, fins al desplegament en Producció. No cal infraestructura per aquest tipus de projectes.
       
@@ -68,9 +68,8 @@ Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
             * Nom del scheme per iOS
             * Nom del target per iOS
             * Nom de la configuració per iOS
-            * Ús de llibreries propies per iOS
-            * Flavour per Android
-            * Build type per Android
+            * Flavour per Android: dev
+            * Build type per Android: release
 
       Resultat de l'operació :
         * Codi desplegat a l'entorn de Desenvolupament per a la seva validació.
@@ -114,9 +113,8 @@ Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
             * Nom del scheme per iOS
             * Nom del target per iOS
             * Nom de la configuració per iOS
-            * Ús de llibreries propies per iOS
-            * Flavour per Android
-            * Build type per Android
+            * Flavour per Android: pre
+            * Build type per Android: release
 
       Resultat de l'operació :
         * Codi desplegat a l'entorn de Preproducció per a la seva validació.
@@ -160,9 +158,8 @@ Com ja s'ha comentat anteriorment, el nou model de treball es basarà en :
             * Nom del scheme per iOS
             * Nom del target per iOS
             * Nom de la configuració per iOS
-            * Ús de llibreries propies per iOS
-            * Flavour per Android
-            * Build type per Android
+            * Flavour per Android: pro
+            * Build type per Android: release
 
       Resultat de l'operació :
         * Codi desplegat a l'entorn de Producció per a la seva validació.
