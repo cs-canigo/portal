@@ -315,6 +315,6 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
   + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
 
- | Exemples   |||||
-|--------------|-|-|-|-|
-|[e2e Container](../workflows/exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../workflows/exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic](../workflows/exemples/gh-exemple-e2e-cs) | [e2e Function](../workflows/exemples/gh-exemple-e2e-function) | [e2e API Manager](../workflows/exemples/gh-exemple-e2e-apimanager) | [e2e Mobile app](../workflows/exemples/gh-exemple-e2e-mobileapps)
+ | Exemples   ||||||
+|--------------|-|-|-|-|-|
+|[e2e Container](../workflows/exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../workflows/exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic](../workflows/exemples/gh-exemple-e2e-cs) | [e2e Function](../workflows/exemples/gh-exemple-e2e-function) | [e2e API Manager](../workflows/exemples/gh-exemple-e2e-apimanager) | [e2e Mobile app](../workflows/exemples/gh-exemple-e2e-mobileapps) |
