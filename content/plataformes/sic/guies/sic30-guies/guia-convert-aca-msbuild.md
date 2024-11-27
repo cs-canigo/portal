@@ -190,7 +190,7 @@ Per a la compilació dels projectes desenvolupats per a .Net Framework, s'ha int
 - Versió de Nuget.exe: **5.0.2**
 - Versió de Visual Studio: **Visual Studio 2019**
 
-La versió de Visual Studio instal·lada disposa de la integració amb totes les versions de .Net Framework suportades per Microsoft a data d'elaboració d'aquest document, que són de la 4.6.2 d'ara endavant.
+La versió de Visual Studio instal·lada disposa de la integració amb totes les versions de .Net Framework suportades per Microsoft a data d'elaboració d'aquest document.
 
 ## Exemples
 
