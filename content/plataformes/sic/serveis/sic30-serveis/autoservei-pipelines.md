@@ -116,6 +116,8 @@ tots ells).
 - **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció
 (`x.y.z-PR`, `x.y.z-production`) concebuda per a poder fer un *rollback* a una versió anterior.
 
+- **EXECUTE-COMMAND**: Permet executar comandes en els pods desplegats a Openshift.
+
 Per altra banda, cal comentar que es generaran les pipelines internes dedicades a certes tasques comunes i que seran executades
 per la pipeline principal. Aquestes pipelines no seran visibles per l'usuari i són les següents:
 
