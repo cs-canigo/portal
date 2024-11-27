@@ -717,4 +717,149 @@ with:
     apicProductFile: "health-check-test_2.0.7.yaml"
 ```
 
+## Mobile Apps iOS
 
+### CD
+
+- **project_name**: (obligatori) Nom del projecte.
+- **project_scheme**: (obligatori) Nom del scheme del projecte.
+- **project_target**: (obligatori) Nom del target del projecte.
+- **project_config**: (obligatori) Nom de la configuració del projecte.
+- **xcode_version**: (opcional) Versió del Xcode. Valor per defecte: 15.4
+- **use_private_library**: (opcional) Per habilitar o deshabilitar l'ús de llibreries propies. Valor per defecte: false
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/apps-mobils-ios-cd-reusable.yml@v1
+    secrets: inherit
+    with:
+      project_name: "<project_name>"
+      project_scheme: ${{ inputs.project_scheme }}
+      project_target: ${{ inputs.project_target }}
+      project_config: ${{ inputs.project_config }}
+```
+
+### CI on PR
+
+- **project_name**: (obligatori) Nom del projecte.
+- **project_scheme**: (obligatori) Nom del scheme del projecte.
+- **project_target**: (obligatori) Nom del target del projecte.
+- **project_config**: (obligatori) Nom de la configuració del projecte.
+- **xcode_version**: (opcional) Versió del Xcode. Valor per defecte: 15.4
+- **use_private_library**: (opcional) Per habilitar o deshabilitar l'ús de llibreries propies. Valor per defecte: false
+- **unit_test**: (opcional) Per habilitar o deshabilitar l'execució de Unit Testing. Valor per defecte: true
+- **unit_test_os_version**: (opcional) OS a utilizar al simulador per executar Unit Testing. Valor per defecte: 17.5
+- **unit_test_device_model**: (opcional) Nom del dispositiu a utilizar al simulador per executar Unit Testing. Valor per defecte: iPhone 15
+- **unit_test_testplan**: (opcional) Nom del test plan per executar Unit Testing.
+- **lint**: (opcional) Per habilitar o deshabilitar l'execució de SwiftLint. Valor per defecte: true
+- **dependabot**: (opcional) Per habilitar o deshabilitar l'execució de Dependabot. Valor per defecte: true
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/apps-mobils-ios-ci-on-pr-reusable.yml@v1
+    secrets: inherit
+    with:
+      project_name: "<project_name>"
+      project_scheme: "<project_scheme>"
+      project_target: "<project_target>"
+      project_config: "<project_config>"
+```
+
+## Mobile Apps Android
+
+### CD
+
+- **project_name**: (obligatori) Nom del projecte.
+- **flavour**: (opcional) Nom del flavour del projecte. Valor per defecte: pro
+- **build_type**: (obligatori) Nom del build type del projecte.
+- **java_version**: (obligatori) Versió de Java.
+- **gradle_version**: (opcional) Versió de Gradle.
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/apps-mobils-android-cd-reusable.yml@v1
+    secrets: inherit
+    with:
+      project_name: "<project_name>"
+      java_version: "<java_version>"
+      flavour: ${{ inputs.flavour }}
+      build_type: ${{ inputs.build_type }}
+      gradle_version: "<gradle_version>"
+```
+
+### CI on PR
+
+- **project_name**: (obligatori) Nom del projecte.
+- **flavour**: (opcional) Nom del flavour del projecte. Valor per defecte: pro
+- **build_type**: (obligatori) Nom del build type del projecte.
+- **java_version**: (obligatori) Versió de Java.
+- **gradle_version**: (opcional) Versió de Gradle.
+- **unit_test**: (opcional) Per habilitar o deshabilitar l'execució de Unit Testing. Valor per defecte: true
+- **sonarqube**: (opcional) Utilització de SonarQube. Valor per defecte: true.
+- **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
+- **lint**: (opcional) Per habilitar o deshabilitar l'execució de Lint. Valor per defecte: true
+- **dependabot**: (opcional) Per habilitar o deshabilitar l'execució de Dependabot. Valor per defecte: true
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/apps-mobils-ios-ci-on-pr-reusable.yml@v1
+    secrets: inherit
+    with:
+      project_name: "<project_name>"
+      java_version: "<java_version>"
+      flavour: ${{ inputs.flavour }}
+      build_type: ${{ inputs.build_type }}
+      gradle_version: "<gradle_version>"
+```
+
+## Mobile Library iOS
+
+### CI on commit develop
+
+- **library_scheme_name**: (obligatori) Nom del scheme del projecte.
+- **xcode_version**: (opcional) Versió del Xcode. Valor per defecte: 15.4
+- **use_private_library**: (opcional) Per habilitar o deshabilitar l'ús de llibreries propies. Valor per defecte: false
+- **dependabot**: (opcional) Per habilitar o deshabilitar l'execució de Dependabot. Valor per defecte: true
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/library-mobils-ios-ci-on-commit-develop-reusable.yml@v1
+    secrets: inherit
+    with:
+      library_scheme_name: "<library_schem_name>"
+```
+
+### CI on commit
+
+- **library_scheme_name**: (obligatori) Nom del scheme del projecte.
+- **xcode_version**: (opcional) Versió del Xcode. Valor per defecte: 15.4
+- **use_private_library**: (opcional) Per habilitar o deshabilitar l'ús de llibreries propies. Valor per defecte: false
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/library-mobils-ios-ci-on-commit-reusable.yml@v1
+    secrets: inherit
+    with:
+      library_scheme_name: "<library_schem_name>"
+```
+
+### CI on PR
+
+- **library_scheme_name**: (obligatori) Nom del scheme del projecte.
+- **xcode_version**: (opcional) Versió del Xcode. Valor per defecte: 15.4
+- **use_private_library**: (opcional) Per habilitar o deshabilitar l'ús de llibreries propies. Valor per defecte: false
+- **unit_test**: (opcional) Per habilitar o deshabilitar l'execució de Unit Testing. Valor per defecte: true
+- **unit_test_os_version**: (opcional) OS a utilizar al simulador per executar Unit Testing. Valor per defecte: 17.5
+- **unit_test_device_model**: (opcional) Nom del dispositiu a utilizar al simulador per executar Unit Testing. Valor per defecte: iPhone 15
+- **unit_test_scheme_name**: (opcional) Nom del scheme de test del projecte per executar Unit Testing.
+- **lint**: (opcional) Per habilitar o deshabilitar l'execució de SwiftLint. Valor per defecte: true
+- **dependabot**: (opcional) Per habilitar o deshabilitar l'execució de Dependabot. Valor per defecte: true
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows-mobile/.github/workflows/library-mobils-ios-ci-on-pr-reusable.yml@v1
+    secrets: inherit
+    with:
+      library_scheme_name: "<library_schem_name>"
+      unit_test_scheme_name: "<unit_test_scheme_name>"
+```
