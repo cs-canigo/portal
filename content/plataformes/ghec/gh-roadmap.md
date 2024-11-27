@@ -3,7 +3,7 @@
 date         = "2024-04-09"
 title        = "Roadmap"
 description  = "Roadmap de GitHub Enterprise Cloud (GHEC) a.k.a SIC+"
-weight      = "10"
+weight      = "11"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-roadmap",

@@ -2,8 +2,8 @@
 +++
 date         = "2024-04-19"
 title        = "Desplegaments estesos"
-description  = "Informació sobre desplegaments extesos per a Kubernetes, Màquines Virtuals i Scripts BBDD"
-weight      = "13"
+description  = "Informació sobre desplegaments estesos per a Kubernetes, Màquines Virtuals i Scripts BBDD"
+weight      = "9"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-desplegaments-estesos",
