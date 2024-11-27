@@ -133,17 +133,17 @@ Addicionalment, dins la política de versions implantada, el nom del lliurable i
    * Nom Lliurable : Tag artifactid
    * Versió Lliurable : Tag version
     
-* **JAVA (Gradle)**        
+* **JAVA (Gradle)**:
    * Fitxer / Nom Lliurable : settings.gradle / Camp -  rootProject.name 
    * Fitxer / Versió Lliurable :  build.gradle / Camp -  version
     
-* **NODE**
+* **NODE**:
    * Fitxer : package.json
    * Nom Lliurable :  name
    * Versió Lliurable : version
 
-* **.NET**.  En aquest cas hi ha dues casuistiques :        
-       
+* **.NET**.  En aquest cas hi ha dues casuistiques :
+
    * Nom Lliurable :
         1. Si només hi ha un unic projecte, només hi ha un **.csproj** i s'obtindra del camp **name** d'aquest fitxer.
         2. Si tenim en el repo més d'un projecte, hi ha diferents .csproj, s'obté de la variable **Project_Name** el valor del qual s'introdueix en el setup del projecte.
@@ -153,6 +153,16 @@ Addicionalment, dins la política de versions implantada, el nom del lliurable i
         1. Si només hi ha un unic projecte, només hi ha un **.csproj** i s'obtindra del camp **version** d'aquest fitxer 
         2. Si tenim en el repo més d'un projecte, hi ha diferents .csproj, després hi hauria d'haver un fitxer centralitzat de versions anomenat **Directory.Build.props** i d'aquí s'obtindre del camp **VERSION**.
   
+* **Android (Gradle)**:
+   * Fitxer / Nom Lliurable : app/build.gradle / Task -  packageName 
+   * Fitxer / Versió Lliurable :  app/build.gradle / Task -  versionName
+   * Fitxer / Build Lliurable :  app/build.gradle / Task -  versionCode
+
+* **iOS**:
+   * Fitxer / Nom Lliurable : Build Settings / Camp -  PRODUCT_BUNDLE_IDENTIFIER 
+   * Fitxer / Versió Lliurable :  Build Settings / Camp -  MARKETING_VERSION
+   * Fitxer / Build Lliurable :  Build Settings / Camp -  CURRENT_PROJECT_VERSION
+
 
 ## MODEL GITOPS
 
