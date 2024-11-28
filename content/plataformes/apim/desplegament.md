@@ -1,11 +1,11 @@
 +++
-date = "2024-10-25"
+date = "2024-11-12"
 title = "Desplegaments"
 description = "Com desplegar productes i APIs a l'API Manager Corporatiu"
 sections = "APIM"
 toc = true
 taxonomies = []
-weight = 5
+weight = 4
 +++
 
 ## Introducció
@@ -117,6 +117,6 @@ Cal tenir present que:
 - Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament. Per exemple: ![Missatge d'alerta (Check de plans i seguretat)](/related/apim/Check_alerta.png)
 - Les pipelines **notificaran** dels resultats a les adreces de correu assignades.
 
-Podeu consultar el document complet de la guia de desplegament, que conté tota la informació esmentada prèviament amb molt més detall: [**Guia de desplegament**](/related/apim/Guía_de_desplegament_v1.2.docx).
+Podeu consultar el document complet de la guia de desplegament, que conté tota la informació esmentada prèviament amb molt més detall: [**Guia de desplegament**](/related/apim/Guía_de_desplegament_v1.2.pdf).
 
 Alhora, a la següent URL de la documentació del SIC, es pot trobar informació complementària a l'esmentada tant en aquesta pàgina com a la guia de desplegament: [**Com preparar productes i APIs per al desplegament a l'API Manager**](/plataformes/sic/guies/sic30-guies/preparar-apim)

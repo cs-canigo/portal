@@ -3,7 +3,7 @@
 date         = "2024-04-19"
 title        = "Gestió d'usuaris i llicències"
 description  = "Guia per a la gestió d'usuaris i llicències"
-weight      = "15"
+weight      = "6"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-gestio-usuaris-llicencies",

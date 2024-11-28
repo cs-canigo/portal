@@ -34,7 +34,7 @@ Per realitzar el desplegament de tots els components requerits pels serveis de g
 
 * Grafana
 
-S'han de desplegar els següents components: ruta, role, servei, statefulset, configmaps i secret. Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
+S'han de desplegar els següents components: Ingress (Que generarà una ruta de manera automàtica), role, servei, statefulset, configmaps i secret. Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
 * [Grafana Configmap 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap1.yaml)
 * [Grafana Configmap 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap2.yaml)
@@ -43,18 +43,30 @@ S'han de desplegar els següents components: ruta, role, servei, statefulset, co
 * [Grafana Configmap 5](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-configmap5.yaml)
 * [Grafana PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-pvc-cpd2-cpd3.yaml)
 * [Grafana Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-role.yaml)
-* [Grafana Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-route.yaml)
+* [Grafana Ingress](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-ingress.yaml)
 * [Grafana Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-secret.yaml)
 * [Grafana Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-service.yaml)
 * [Grafana Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd2-cpd3/grafana-statefulset.yaml)
 
 En tots els fitxers, substituir l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
-En el fitxer route-grafana.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei.
+En el fitxer grafana-ingress.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei.
 
 En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per:
 * Si es tracta de CPD2, "external-001" o "internal-001" segons si el domini és d'internet o intranet respectivament.
 * Si es tracta de CPD3, "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+
+En el mateix fitxer, l'expressió "${SECRET_NAME}" se substituirà pel nom del secret de Openshift, del mateix namespace, que contingui el certificat. El nom d'aquest secret es compon de la manera següent:
+
+Si el domini utilitzat és el següent:
+**preproduccio.grafana.intranet.gencat.cat**
+
+El nom del secret serà:
+**preproduccio-grafana-intranet-secret-certificate**
+
+És a dir, es reemplacen els punts per guions, i "gencat.cat" per "secret-certificate".
+
+(Encara que sapiguem el nom del secret per endavant, no es generarà un objecto de tipus Route automàticament si no existeix el secret en el namespace)
 
 En el fitxer grafana-pvc-cpd2-cpd3.yaml es substituirà l'etiqueta "${PVC_SIZE}" per la mida de pvc assignat en l'aprovisionament.
 
@@ -62,23 +74,35 @@ Finalment, en el fitxer grafana-secret.yaml s'ha de substituir l'expressió "${S
 
 * Prometheus
 
-S' han de desplegar els següents components: ruta, role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
+S' han de desplegar els següents components: Ingress (Que generarà una ruta de manera automàtica), role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
 * [Prometheus Configmap](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/configmap-prometheus-comun.yaml)
 * [Prometheus PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-pvc-cpd2-cpd3.yaml)
 * [Prometheus Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-role.yaml)
-* [Prometheus Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-route.yaml)
+* [Prometheus Ingress](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-ingress.yaml)
 * [Prometheus Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/prometheus-service.yaml)
 * [Prometheus Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/secret-prometheus-comun.yaml)
 * [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd2-cpd3/statefulset-prometheus-basic.yaml)
 
 En tots els fitxers han de ser parametritzats substituint en l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
-En el fitxer prometheus-route.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei.
+En el fitxer prometheus-ingress.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei.
 
 En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per:
 * Si es tracta de CPD2, "external-001" o "internal-001" segons si el domini és d'internet o intranet respectivament.
 * Si es tracta de CPD3, "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+
+En el mateix fitxer, l'expressió "${SECRET_NAME}" se substituirà pel nom del secret de Openshift, del mateix namespace, que contingui el certificat. El nom d'aquest secret es compon de la manera següent:
+
+Si el domini utilitzat és el següent:
+**preproduccio.prometheus.intranet.gencat.cat**
+
+El nom del secret serà:
+**preproduccio-prometheus-intranet-secret-certificate**
+
+És a dir, es reemplacen els punts per guions, i "gencat.cat" per "secret-certificate".
+
+(Encara que sapiguem el nom del secret per endavant, no es generarà un objecto de tipus Route automàticament si no existeix el secret en el namespace)
 
 En el fitxer prometheus-pvc-cpd2-cpd3.yaml es substituirà l'etiqueta "${PVC_SIZE}" per la mida de pvc assignat en l'aprovisionament.
 
@@ -90,7 +114,7 @@ Per realitzar el desplegament de tots els components requerits pels serveis de g
 
 * Grafana
 
-S'han de desplegar els següents components: ruta, role, servei, statefulset, configmaps i secret. Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
+S'han de desplegar els següents components: Ingress (Que generarà una ruta de manera automàtica), role, servei, statefulset, configmaps i secret. Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
 * [Grafana Configmap 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap1.yaml)
 * [Grafana Configmap 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap2.yaml)
@@ -99,7 +123,7 @@ S'han de desplegar els següents components: ruta, role, servei, statefulset, co
 * [Grafana Configmap 5](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap5.yaml)
 * [Grafana PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-pvc-cpd4-salut.yaml)
 * [Grafana Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-role.yaml)
-* [Grafana Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-route.yaml)
+* [Grafana Ingress](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-ingress.yaml)
 * [Grafana Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-secret.yaml)
 * [Grafana Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-service.yaml)
 * [Grafana Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-statefulset.yaml)
@@ -107,9 +131,21 @@ S'han de desplegar els següents components: ruta, role, servei, statefulset, co
 
 En tots els fitxers, substituir l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
-En el fitxer route-grafana.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
+En el fitxer grafana-ingress.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
 
-* En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+
+En el mateix fitxer, l'expressió "${SECRET_NAME}" se substituirà pel nom del secret de Openshift, del mateix namespace, que contingui el certificat. El nom d'aquest secret es compon de la manera següent:
+
+Si el domini utilitzat és el següent:
+**preproduccio.grafana.intranet.gencat.cat**
+
+El nom del secret serà:
+**preproduccio-grafana-intranet-secret-certificate**
+
+És a dir, es reemplacen els punts per guions, i "gencat.cat" per "secret-certificate".
+
+(Encara que sapiguem el nom del secret per endavant, no es generarà un objecto de tipus Route automàticament si no existeix el secret en el namespace)
 
 En el fitxer grafana-pvc-cpd4-salut.yaml es substituirà l'etiqueta "${PVC_SIZE}" per la mida de pvc assignat en l'aprovisionament.
 
@@ -117,21 +153,33 @@ Finalment, en el fitxer grafana-secret.yaml s'ha de substituir l'expressió "${S
 
 * Prometheus
 
-S'han de desplegar els següents components: ruta, role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
+S'han de desplegar els següents components: Ingress (Que generarà una ruta de manera automàtica), role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
 * [Prometheus Configmap](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/configmap-prometheus-comun.yaml)
 * [Prometheus PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-pvc-cpd4-salut.yaml)
 * [Prometheus Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-role.yaml)
-* [Prometheus Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-route.yaml)
+* [Prometheus Ingress](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-route.yaml)
 * [Prometheus Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/prometheus-service.yaml)
 * [Prometheus Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/secret-prometheus-comun.yaml)
 * [Prometheus Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/cpd4/statefulset-prometheus-basic.yaml)
 
 En tots els fitxers han de ser parametritzats substituint en l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
-En el fitxer prometheus-route.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
+En el fitxer prometheus-ingress.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
 
 En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+
+En el mateix fitxer, l'expressió "${SECRET_NAME}" se substituirà pel nom del secret de Openshift, del mateix namespace, que contingui el certificat. El nom d'aquest secret es compon de la manera següent:
+
+Si el domini utilitzat és el següent:
+**preproduccio.prometheus.intranet.gencat.cat**
+
+El nom del secret serà:
+**preproduccio-prometheus-intranet-secret-certificate**
+
+És a dir, es reemplacen els punts per guions, i "gencat.cat" per "secret-certificate".
+
+(Encara que sapiguem el nom del secret per endavant, no es generarà un objecto de tipus Route automàticament si no existeix el secret en el namespace)
 
 En el fitxer prometheus-pvc-cpd4.yaml es substituirà l'etiqueta "${PVC_SIZE}" per la mida de pvc assignat en l'aprovisionament.
 
@@ -143,7 +191,7 @@ Per realitzar el desplegament de tots els components requerits pels serveis de g
 
 * Grafana
 
-Es necessiten els següents components: ruta, role, servei, statefulset, configmaps i secret. S'adjunten els descriptors que poden ser utilitzats com a referència:
+Es necessiten els següents components: Ingress (Que generarà una ruta de manera automàtica), role, servei, statefulset, configmaps i secret. S'adjunten els descriptors que poden ser utilitzats com a referència:
 
 * [Grafana Configmap 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap1.yaml)
 * [Grafana Configmap 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap2.yaml)
@@ -152,16 +200,28 @@ Es necessiten els següents components: ruta, role, servei, statefulset, configm
 * [Grafana Configmap 5](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-configmap5.yaml)
 * [Grafana PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-pvc-cpd4-salut.yaml)
 * [Grafana Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-role.yaml)
-* [Grafana Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-route.yaml)
+* [Grafana Ingress](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-ingress.yaml)
 * [Grafana Secret](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-secret.yaml)
 * [Grafana Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-service.yaml)
 * [Grafana Stateful Set](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/grafana/cpd4-salut/grafana-statefulset.yaml)
 
 En tots els fitxers, substituir l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
-En el fitxer route-grafana.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
+En el fitxer grafana-ingress.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
 
 En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+
+En el mateix fitxer, l'expressió "${SECRET_NAME}" se substituirà pel nom del secret de Openshift, del mateix namespace, que contingui el certificat. El nom d'aquest secret es compon de la manera següent:
+
+Si el domini utilitzat és el següent:
+**preproduccio.grafana.intranet.gencat.cat**
+
+El nom del secret serà:
+**preproduccio-grafana-intranet-secret-certificate**
+
+És a dir, es reemplacen els punts per guions, i "gencat.cat" per "secret-certificate".
+
+(Encara que sapiguem el nom del secret per endavant, no es generarà un objecto de tipus Route automàticament si no existeix el secret en el namespace)
 
 En el fitxer grafana-pvc-cpd4-salut.yaml es substituirà l'etiqueta "${PVC_SIZE}" per la mida de pvc assignat en l'aprovisionament.
 
@@ -169,12 +229,12 @@ Finalment, en el fitxer grafana-secret.yaml s'ha de substituir l'expressió "${S
 
 * Prometheus
 
-S' han de desplegar els següents components: ruta, role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
+S' han de desplegar els següents components: Ingress (Que generarà una ruta de manera automàtica), role, servei, statefulset, configmap i secret.  Les següents plantilles es poden utilitzar com a referència substituint els paràmetres segons s'indica a continuació:
 
 * [Prometheus Configmap](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/configmap-prometheus-comun.yaml)
 * [Prometheus PVC](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-pvc-cpd4-salut.yaml)
 * [Prometheus Role](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-role.yaml)
-* [Prometheus Route](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-route.yaml)
+* [Prometheus Ingress](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-ingress.yaml)
 * [Prometheus Service](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/prometheus-service.yaml)
 * [Prometheus Secret 1](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/secret-prometheus-basic-salut.yaml)
 * [Prometheus Secret 2](https://git.intranet.gencat.cat/3048-intern/documentacio/-/blob/master/public/prometheus/salut/secret-prometheus-comun.yaml)
@@ -187,9 +247,21 @@ En aquest cas, al fitxer statefulset-prometheus-basic-salut.yaml s'ha de substit
 
 En tots els fitxers han de ser parametritzats substituint en l'expressió "${NAMESPACE}" pel nom del namespace de l'aplicació.
 
-En el fitxer prometheus-route.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
+En el fitxer prometheus-ingress.yaml s'ha de substituir l'expressió "${ROUTE_URL}" pel domini sol·licitat per al servei. 
 
 En el mateix fitxer, l'expressió "${ROUTER_LABEL}" es substituirà per "internet" o "intranet" segons si el domini és d'internet o intranet respectivament.
+
+En el mateix fitxer, l'expressió "${SECRET_NAME}" se substituirà pel nom del secret de Openshift, del mateix namespace, que contingui el certificat. El nom d'aquest secret es compon de la manera següent:
+
+Si el domini utilitzat és el següent:
+**preproduccio.prometheus.intranet.gencat.cat**
+
+El nom del secret serà:
+**preproduccio-prometheus-intranet-secret-certificate**
+
+És a dir, es reemplacen els punts per guions, i "gencat.cat" per "secret-certificate".
+
+(Encara que sapiguem el nom del secret per endavant, no es generarà un objecto de tipus Route automàticament si no existeix el secret en el namespace)
 
 En el fitxer prometheus-pvc-cpd4.yaml es substituirà l'etiqueta "${PVC_SIZE}" per la mida de pvc assignat en l'aprovisionament.
 
