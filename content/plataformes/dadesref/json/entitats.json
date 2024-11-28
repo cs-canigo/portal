@@ -4990,16 +4990,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "Secretaries_Setctor_Public_ATR.docx",
-                    "ifitxer_xls": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL.xslx",
+                    "ifitxer_xls": "deprectaed/UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL_V01.xslx",
                     "idatacreacio": "30/09/2024",
                     "itipusvisual": "30/09/2024",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "Secretaries_Setctor_Public_ATR.docx",
+                    "ifitxer_xls": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL.xslx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "28/11/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Unitats-del-sector-p-blic-institucional-assimilade/fec4-nnbn/about_data",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -5007,7 +5022,7 @@
             "nom_dinsBD": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL",
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
-            "Data_actualitzacio": "30/09/2024"
+            "Data_actualitzacio": "28/11/2024"
         },
         {
             "Id": "dtarq205",
