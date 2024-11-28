@@ -2,7 +2,7 @@
 +++
 date         = "2024-04-09"
 title        = "Workflows"
-description  = "Definició de Workflows de CI/CD"
+description  = "Definició workflows de CI/CD"
 weight      = "1"
 sections    = ["GHEC"]
 aliases = [
