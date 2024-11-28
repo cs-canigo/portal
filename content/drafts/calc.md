@@ -64,6 +64,10 @@ categories  = []
         margin-right: 20px;        
     }
 
+    .share-icon{
+        font-size: 1.5em;
+    }
+
 
     @media (max-width: 768px) {
 
@@ -101,6 +105,7 @@ categories  = []
     </div>
     <div class="column-calc">
         <p id="result">Omple les dades de la calculadora amb els costos estimats.</p>
+        <span class="share-icon"><a href="#" id="share">🔗</a></span>
     </div>
     
 </div>
@@ -110,15 +115,33 @@ categories  = []
     currencyInput = (e) => {
         let value = e.target.value;
         value = value.replace(/\D/g, '');
+        updateURL(e.target.id, value/100);
         value = (value / 100).toLocaleString('ca-ES', { style: 'currency', currency: 'EUR'});    
         e.target.value = value;
     };
 
+    updateURL = (field, value) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set(field, value);
+        const updatedQueryString = urlParams.toString();
+        const newUrl = window.location.pathname + '?' + updatedQueryString;
+        window.history.replaceState(null, null, newUrl);
+        document.getElementById("share").href=window.location;
+    }
 
-    document.getElementById('currentCost').addEventListener('input', currencyInput);
-    document.getElementById('futureCost').addEventListener('input', currencyInput);
-    document.getElementById('testCost').addEventListener('input', currencyInput);
-    document.getElementById('migrationCost').addEventListener('input', currencyInput);
+    window.onload = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        let params = false;
+        urlParams.forEach((value, key) => {
+            document.getElementById(key).value = urlParams.get(key) ? parseFloat(urlParams.get(key)).toLocaleString('ca-ES', { style: 'currency', currency: 'EUR'}) : '';
+            document.getElementById(key).addEventListener('input', currencyInput);
+            params = true;
+        });
+        
+        if(params){
+            calculateCost();
+        }
+    }
 
     function calculateCost() {
 
@@ -131,7 +154,6 @@ categories  = []
         if(document.getElementById('currentCost').value && document.getElementById('futureCost').value){
             document.getElementById('result').innerHTML = 'Diferència de cost AS IS / TO BE: <span class="'+((futureCost - currentCost)<=0?"result-value-green":"result-value-red")+'">' + (futureCost - currentCost).toLocaleString('ca-ES', { style: 'currency', currency: 'EUR' }) + "</span>";
         }
-        //document.getElementById('result').innerText += '\nResult: ' + result;
 
         if(testCost + migrationCost>0){
             document.getElementById('result').innerHTML += '<br /><br /><br />Cost migració + proves: <span class="result-value">' + (testCost + migrationCost).toLocaleString('ca-ES', { style: 'currency', currency: 'EUR' }) + "</span>";
@@ -141,7 +163,7 @@ categories  = []
         if (result > 0) {
             const amortizationTime = (testCost + migrationCost) / (futureCost - currentCost);
 
-            if(amortizationTime===Infinity){
+            if(amortizationTime===Infinity || futureCost>currentCost){
                 document.getElementById('result').innerHTML += '<br /><br /><br /><span class="result-time-label">Temps d\'amortització:</span> <span class="result-value">♾️</span>';
                 return;
             }
@@ -158,9 +180,11 @@ categories  = []
                 document.getElementById('result').innerHTML += '<br /><br /><br /><span class="result-time-label">Temps d\'amortització:</span> <span class="result-value">' + years + (years===1?" any":" anys") + ', ' + months + ' mesos, ' + days + ' dies</span>';
             }
 
-        }else if(result < 0 && futureCost<currentCost && futureCost>0 && testCost>0 && migrationCost>0){
+        }else if(result <= 0 && futureCost<currentCost && futureCost>0 && (testCost>0 || migrationCost>0)){
             document.getElementById('result').innerHTML += '<br /><br /><br /><span class="result-time-label">Temps d\'amortització:</span> <span class="result-value result-value-green">&lt;1 any</span>';
         }
     }
+
+   
 
 </script>
