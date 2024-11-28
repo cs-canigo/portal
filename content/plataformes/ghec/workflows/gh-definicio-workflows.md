@@ -420,7 +420,7 @@ S'ha definit l'execució del workflow, quan:
 
 Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
 
-![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibraryios.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios.png)
 
 Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi. 
 
@@ -428,13 +428,13 @@ Nom del Workflow en GitHub : **Library iOS CI on PR**.
 
 En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
 
-![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibraryios_PR.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_PR.png)
 
 D'altra banda, si estem en temps de commit, el workflow dependrà de la branca a la qual es faci l'integració:
 
 * Nom del WorkFlow si el Commit és a development : **Library iOS CI on Commit to develop**.
 * Nom del Workflow si el Commit és a release o master :  **Library iOS CI on Commit to release o master**.
 
-![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibraryios_CM.png)
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_CM.png)
 
 Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori d'artefactes o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  
