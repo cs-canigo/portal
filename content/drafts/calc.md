@@ -112,6 +112,8 @@ categories  = []
 
 <script>
 
+    const inputsText = ['currentCost','futureCost','testCost','migrationCost'];
+
     currencyInput = (e) => {
         let value = e.target.value;
         value = value.replace(/\D/g, '');
@@ -132,9 +134,12 @@ categories  = []
     window.onload = () => {
         const urlParams = new URLSearchParams(window.location.search);
         let params = false;
-        urlParams.forEach((value, key) => {
-            document.getElementById(key).value = urlParams.get(key) ? parseFloat(urlParams.get(key)).toLocaleString('ca-ES', { style: 'currency', currency: 'EUR'}) : '';
-            document.getElementById(key).addEventListener('input', currencyInput);
+        inputsText.forEach((value) => {
+            document.getElementById(value).addEventListener('input', currencyInput);
+            if(!urlParams.get(value)){
+                return;
+            }
+            document.getElementById(value).value = urlParams.get(value) ? parseFloat(urlParams.get(value)).toLocaleString('ca-ES', { style: 'currency', currency: 'EUR'}) : '';
             params = true;
         });
         
