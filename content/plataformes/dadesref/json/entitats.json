@@ -5237,18 +5237,18 @@
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "INFRAESTRUCTURES_AEROPORTUARIES_ATR.docx",
                     "ifitxer_xls": "INFRAESTRUCTURES_AEROPORTUARIES.xlsx",
-                    "idatacreacio": "30/10/2024",
-                    "itipusvisual": "30/10/2024",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "28/11/2024",
                     "idataobsoleta": "",
-                    "idatapublicacio": "30/10/2024",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
             "nom_dinsBD": "INFRAESTRUCTURES_AEROPORTUARIES_CAT",
             "Classificacio": "Consolidat",
-            "Data_publicacio": "30/10/2024",
-            "Data_actualitzacio": "30/10/2024"
+            "Data_publicacio": "28/11/2024",
+            "Data_actualitzacio": "28/11/2024"
         }
     ]
 }
