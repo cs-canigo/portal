@@ -709,16 +709,31 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Modificació de l'entitat de Subdireccions Generals, per evolucionar l'entitat i introduir les dues noves subdireccions, a causa del Decret 106/2024. Les noves subdireccions són les següents:  Subdirecció General de Suport i Relacions Contencioses,Subdirecció General d'Impuls i Seguiment Normatiu.",
                     "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
-                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "ifitxer_xls": "deprectaed/Subdireccions_Generals_V03.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -726,7 +741,7 @@
             "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/03/2024",
-            "Data_actualitzacio": "26/07/2024"
+            "Data_actualitzacio": "28/11/2024"
         },
         {
             "Id": "dtarq90",
@@ -3457,7 +3472,7 @@
                     "itipusactualitzacio": "Sota demanda"
                 },
                 {
-                    "inom": "V20",
+                    "inom": "V21",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
@@ -4341,7 +4356,7 @@
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
-                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "idescripcio": "Canvi de nom del municipi “Moncada” (nom anterior) per “Montcada/Moncada” (nom actualitzat), amb CODI: 461712",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
                     "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
                     "idatacreacio": "28/11/2024",
