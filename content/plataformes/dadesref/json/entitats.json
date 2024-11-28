@@ -5225,8 +5225,8 @@
 		{
             "Id": "dtarq211",
             "Nom": "Infraestructures aeroportuàries de Catalunya",
-            "Ambit": "Mobilitat i transports",
-            "Subambit": "Carreteres, ferrocarrils, ports i aeroports",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Obres públiques i infraestructures",
             "Descripcio": "Ubicació del Punt de Referència de les infraestructures aeroportuàries de Catalunya amb el nom del gestor i les diferents tipologies d'infraestructura aeroportuària.",
             "instancies": [
                 {
@@ -5241,7 +5241,7 @@
                     "itipusvisual": "28/11/2024",
                     "idataobsoleta": "",
                     "idatapublicacio": "28/11/2024",
-                    "iurl_dades_obertes": "",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Infraestructures-aeroportu-ries-de-Catalunya/d9uf-3de8",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
