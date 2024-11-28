@@ -5,6 +5,7 @@ title        = "Configuració workflows"
 description  = "Guia per configurar els workflows a demanda"
 weight      = "2"
 sections    = ["GHEC"]
+toc         = true
 aliases = [
     "/drafts/ghec/gh-configuracio-workflows",
     "/ghec/gh-configuracio-workflows",

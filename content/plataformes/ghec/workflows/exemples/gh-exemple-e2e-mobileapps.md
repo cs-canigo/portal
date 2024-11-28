@@ -3,7 +3,7 @@
 date         = "2024-11-26"
 title        = "Exemple e2e Mobile Apps"
 description  = "Exemple e2e Mobile Apps"
-weight      = "1"
+weight      = "6"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-exemple-e2e-mobileapps",
