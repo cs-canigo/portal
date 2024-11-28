@@ -5046,16 +5046,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Versió inicial",
                     "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
-                    "ifitxer_xls": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL.xlsx",
+                    "ifitxer_xls": "deprected/SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_V01.xlsx",
                     "idatacreacio": "30/09/2024",
                     "itipusvisual": "30/09/2024",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
+                    "ifitxer_xls": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals-del-sector-p-blic-instituci/6rbu-cawt/about_data",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -5063,7 +5078,7 @@
             "nom_dinsBD": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL",
             "Classificacio": "Consolidat",
             "Data_publicacio": "30/09/2024",
-            "Data_actualitzacio": "30/09/2024"
+            "Data_actualitzacio": "28/11/2024"
         },
 		{
             "Id": "dtarq207",
