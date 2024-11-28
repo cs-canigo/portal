@@ -179,10 +179,10 @@ categories  = []
             totalDays = totalDays < 0 ? totalDays*-1 : totalDays;
             years = Math.floor(totalDays / 365);
             const months = Math.round((totalDays % 365) / 30);
-            const days = Math.round((totalDays % 365) % 30);
+            //const days = Math.round((totalDays % 365) % 30);
 
             if(amortizationTime!==0){
-                document.getElementById('result').innerHTML += '<br /><br /><br /><span class="result-time-label">Temps d\'amortització:</span> <span class="result-value">' + years + (years===1?" any":" anys") + ', ' + months + ' mesos, ' + days + ' dies</span>';
+                document.getElementById('result').innerHTML += '<br /><br /><br /><span class="result-time-label">Temps d\'amortització:</span> <span class="result-value">' + years + (years===1?" any":" anys") + ', ' + months + (months===1?" mes":" mesos") + ' </span>';
             }
 
         }else if(result <= 0 && futureCost<currentCost && futureCost>0 && (testCost>0 || migrationCost>0)){
