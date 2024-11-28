@@ -666,16 +666,31 @@
                 },
                 {
                     "inom": "V08",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "S'han actualitzat els noms de les Secretaries Generals dels departaments.",
+                    "ifitxer_doc": "Secretaries_ATR.docx",
+                    "ifitxer_xls": "deprected/Secretaries_V08.xlsx",
+                    "idatacreacio": "19/12/2023",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "20/12/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V09",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "S'han actualitzat els noms de les Secretaries Generals dels departaments.",
                     "ifitxer_doc": "Secretaries_ATR.docx",
                     "ifitxer_xls": "Secretaries.xlsx",
-                    "idatacreacio": "19/12/2023",
+                    "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "20/12/2023",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -683,7 +698,7 @@
             "nom_dinsBD": "SECRETARIES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "28/11/2024"
         },
         {
             "Id": "dtarq194",
