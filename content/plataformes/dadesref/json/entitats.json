@@ -3443,16 +3443,31 @@
                 },
                 {
                     "inom": "V20",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
                     "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V20.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V20",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Modificació de l’entitat de Municipis d’Espanya, a causa de la modificació del nom del municipi de Moncada amb CODI: 461712 a Montcada/Moncada amb el mateix CODI.",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3460,7 +3475,7 @@
             "nom_dinsBD": "MUNICIPIS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "26/07/2024"
+            "Data_actualitzacio": "28/11/2024"
         },
         {
             "Id": "dtarq127",
@@ -3617,16 +3632,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Versió inicial.",
                     "ifitxer_doc": "Territori_NUTS_ATR.docx",
-                    "ifitxer_xls": "Territori_NUTS.xlsx",
+                    "ifitxer_xls": "deprecated/Territori_NUTS_V01.xlsx",
                     "idatacreacio": "09/03/2020",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "17/02/2021",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Modificació de l’entitat de NUTS, Nomenclatura d’unitats territorials estadístiques europea, a causa de l'última versió de la NUTS, publicada al DOUE L87, de 24 de març de 2023.",
+                    "ifitxer_doc": "Territori_NUTS_ATR.docx",
+                    "ifitxer_xls": "Territori_NUTS.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nomenclatura-d-unitats-territorials-estad%C3%ADstiques/v467-kzwi",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3634,7 +3664,7 @@
             "nom_dinsBD": "NUTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "17/02/2021",
-            "Data_actualitzacio": "17/02/2021"
+            "Data_actualitzacio": "28/11/2024"
         },
         {
             "Id": "dtarq131",
@@ -4293,23 +4323,38 @@
                 },
                 {
                     "inom": "V19",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "deprectaed/Unitats_Poblacionals_Espanya_V19.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V20",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                     "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
                     "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
-                    "idatacreacio": "26/07/2024",
+                    "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "26/07/2024",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
             "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
             "Classificacio": "Consolidat",
-            "Data_publicacio": "31/03/2021",
+            "Data_publicacio": "28/11/2024",
             "Data_actualitzacio": "26/07/2024"
         },
         {
@@ -5005,7 +5050,7 @@
         },
 		{
             "Id": "dtarq208",
-            "Nom": "Vies de gestió de residus",
+            "Nom": "Vies de gestió de residusaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
             "Ambit": "Medi ambient",
             "Subambit": "Residus",
             "Descripcio": "Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.",
