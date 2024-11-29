@@ -398,11 +398,12 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
 ![Definició a alt nivell dels workflows de CD](/images/GHEC/cd-workflow-definition-mobileapps.png)
 
 * **Flux de Deploy CD**: Realitzarà el desplegament d'un artefacte en l'entorn indicat. Tindrà com a Steps:
-    1. Fetch app version i build version, farà la captura de les dades del entorn indicat.
-    2. Check tag, validarà que l'artefacte pot ser generat per l'entorn indicat.
-    3. Build : compilar i firmar l'aplicació.
-    4. Deploy: desplegament de l'artefacte en l'entorn indicat.
-    5. Create tag, es realitzar el tag al repo segons l'entorn indicat.
+    1. Fetch variables: farà la captura de les dades de la app per l'entorn indicat.
+    2. Check tag: validarà que l'artefacte pot ser generat per l'entorn indicat.
+    3. Build: compilar l'aplicació.
+    4. Sign: firmar l'aplicació.
+    5. Deploy: desplegament de l'artefacte en l'entorn indicat.
+    6. Create tag: realitzà el tag al repo segons l'entorn indicat.
 
     Nom del Workflow en GitHub : **App iOS CD / App Android CD**
 
