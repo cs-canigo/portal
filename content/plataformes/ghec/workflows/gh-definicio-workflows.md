@@ -395,7 +395,7 @@ El workflow de Desplegament Continu (CD) s'ha aïllat del workflow de CI per des
 
 Els diferents steps que es defineixen a alt nivell són els que es mostren en el diagrama següent:
 
-![Definició a alt nivell dels workflows de CD](/images/GHEC/cd-workflow-definition-mobileapps.png)
+![Definició a alt nivell dels workflows de CD](/images/GHEC/cd-workflow-mobileapps-definition.png)
 
 * **Flux de Deploy CD**: Realitzarà el desplegament d'un artefacte en l'entorn indicat. Tindrà com a Steps:
     1. Fetch variables: farà la captura de les dades de la app per l'entorn indicat.
