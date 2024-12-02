@@ -1,5 +1,5 @@
 +++
-date = "2024-11-12"
+date = "2024-12-02"
 title = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
 sections = "APIM"
@@ -13,6 +13,7 @@ Es posen a disposició els següents manuals d'usuari on es detallen les caracte
 A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdor que vulgui realitzar desenvolupaments d'APIs i productes a la plataforma d'API Manager Corporatiu.
 
 - [Manual del proveïdor d'APIs](/related/apim/APIM-Manual-Proveidor-APIs-V2.pdf): conceptes generals del servei APIM i com publicar les APIs.
+- [Manual de seguretat APIM](/related/apim/Manual_Seguretat_APIM_V2.0.pdf): conceptes generals de la seguretat del API Manager.
 - [Guia de desenvolupament d'APIs i ús de les plantilles](/related/apim/Guia_Desenvolupament_i_Us_de_Plantilla_API_v1.0.pdf): document l'objectiu principal del qual és proporcionar una guia completa del desenvolupament i ús de la plantilla d' APIs definida, amb un enfocament específic en la millora i optimització del treball dels desenvolupadors dins de l' API Manager de CTTI.
 - [Guia d'instal·lació i configuració de LTE](/related/apim/Guia_Installacio_i_Configuracio_LTE_IBM_API_Connect_v1.0.pdf): document que ensenya a instal·lar i configurar l'entorn local de l'IBM API Connect, que consisteix del Toolkit (API Designer) i LTE (Local Testing Environment).
 - [Plantilla API OpenAPI 3.0](/related/apim/plantillaAPI.yaml): plantilla duna API en format OpenAPI 3.0. 
@@ -34,5 +35,3 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari consumido
 ## Manuals d'operacions
 
 - [Manual d'operatives de l'oficina tècnica d'API Manager](/related/apim/APIM_Manual_Operatives_V2.pdf): document que descriu les operatives que l'oficina tècnica d'API Manager podria fer durant l'acompanyament de projectes o el manteniment del servei dins de la plataforma SaaS d'API Connect.
-- [Manual seguretat APIM (WIP)](/related/apim/Manual_Seguretat_APIM_V1.0.pdf): WIP. Manca per actualitzar. conceptes generals de la seguretat del api manager.
-
