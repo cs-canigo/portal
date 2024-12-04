@@ -26,11 +26,12 @@ El model de versionat que s'implanta sobre el codi dels diferents artefactes que
 
 ![Quadre Versionat](/images/GHEC/quadre_versionat.png)
 
-Pels tres tipus nivells de versionat, s'implanta l'especificació Semantic Versioning 2.0 amb el següent format **MAJOR. MINOR. PATCH-Sufix** on:
+Pels tres tipus nivells de versionat, s'implanta l'especificació Semantic Versioning 2.0 amb el següent format **MAJOR. MINOR. PATCH_BUILD-Sufix** on:
 
 + MAJOR : S'augmenta la versió quan es fan canvis incompatibles. 
 + MINOR : S'augmenta la versió quan es fan canvis de funcionalitat compatibles amb versions anteriors. 
 + PATCH : S'augmenta la versió quan fas resolució d'incidències compatibles amb versions anteriors.
++ BUILD : S'augmenta el build per cada binari que es generar. **Només per les aplicacions mòbils**
 + Sufix : Cadena de text opcional que completarà a la versió per indicar en quin entorn o stage del gitflow hi ha un artefacte.  **NOMÉS ES REALITZARÀ PER A ENTORN/FASES NO PRODUCTIVES (Development, Release)**.  
 
 Es defineix la següent Nomenclatura :

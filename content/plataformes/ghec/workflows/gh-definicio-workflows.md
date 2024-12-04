@@ -366,3 +366,76 @@ on:
 * ITSM POST AUDIT: Completa l'auditoria a ITSM després del desplegament, registrant l'estat final i completant la CRQ.
     
 El nom Workflow en GHEC és **APIM CD OPERATIVA**
+
+
+## Definició workflows - Components tècnics d'aplicació mòbils (Android i iOS) 📝
+
+### Workflow de Continuous Integration (CI) per a components tècnics d'aplicació mòbils (Android i iOS)
+
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
+
+S'ha definit l'execució del workflow, quan:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobileapps.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi. 
+
+Nom del Workflow en GitHub : **App iOS CI on PR / App Android CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobileapps_PR.png)
+
+### Worfklows de Continuous Deployment (CD) per a aplicacions mòbils (Android i iOS)
+
+El workflow de Desplegament Continu (CD) s'ha aïllat del workflow de CI per desvincular els entorns de desplegament de les diferents branques d'un repositori, així com desacoblar la generació d'un artefacte "deliverable" del propi workflow de desplegament. D'aquesta manera, es defineix un workflow de CD que pot generar un artefacte i desplegar-lo en l'entorn que es desitgi, ja sigui en producció o en un entorn previ. **Actualment només per producció**
+
+Els diferents steps que es defineixen a alt nivell són els que es mostren en el diagrama següent:
+
+![Definició a alt nivell dels workflows de CD](/images/GHEC/cd-workflow-mobileapps-definition.png)
+
+* **Flux de Deploy CD**: Realitzarà el desplegament d'un artefacte en l'entorn indicat. Tindrà com a Steps:
+    1. Fetch variables: farà la captura de les dades de la app per l'entorn indicat.
+    2. Check tag: validarà que l'artefacte pot ser generat per l'entorn indicat.
+    3. Build: compilar l'aplicació.
+    4. Sign: firmar l'aplicació.
+    5. Deploy: desplegament de l'artefacte en l'entorn indicat.
+    6. Create tag: realitzà el tag al repo segons l'entorn indicat.
+
+    Nom del Workflow en GitHub : **App iOS CD / App Android CD**
+
+## Definició workflows - Components tècnics de llibreries mòbils (iOS) 📝
+
+**Per la naturalesa de les llibreries mòbils d'iOS, no es genera cap artefacte i per tant el workflow de CD no existeix.**
+
+### Workflow de Continuous Integration (CI) per a components tècnics de llibreries mòbils (iOS)
+
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
+
+S'ha definit l'execució del workflow, quan:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi. 
+
+Nom del Workflow en GitHub : **Library iOS CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_PR.png)
+
+D'altra banda, si estem en temps de commit, el workflow dependrà de la branca a la qual es faci l'integració:
+
+* Nom del WorkFlow si el Commit és a development : **Library iOS CI on Commit to develop**.
+* Nom del Workflow si el Commit és a release o master :  **Library iOS CI on Commit to release o master**.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_CM.png)
+
+Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori d'artefactes o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  
