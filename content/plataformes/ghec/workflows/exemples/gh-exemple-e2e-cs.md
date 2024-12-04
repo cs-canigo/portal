@@ -1,7 +1,7 @@
 +++
 date         = "2024-04-19"
-title        = "Exemple e2e contingut estàtic"
-description  = "Exemple e2e contingut estàtic"
+title        = "Exemple e2e Contingut estàtic"
+description  = "Exemple e2e Contingut estàtic"
 weight      = "4"
 sections    = ["GHEC"]
 aliases = [

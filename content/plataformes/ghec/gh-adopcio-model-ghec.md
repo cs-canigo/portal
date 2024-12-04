@@ -4,15 +4,16 @@ date         = "2024-04-19"
 title        = "Nou model de CI/CD a cloud públic"
 description  = "Guies necessàries per la integració al nou model de CI/CD a cloud públic"
 weight      = "1"
+toc         = true
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-adopcio-model-ghec",
-    "/ghec/gh-adopcio-model-ghec",
-    "/plataformes/ghec/gh-adopcio-model-ghec"
+    "/ghec/gh-adopcio-model-ghec"
 ]
 +++
 
-## Objectiu 🚀
+## Introducció
+
 El present document descriu les guies necessàries per la integració d'aplicacions al nou model de CI/CD a cloud públic.
 
 A continuació, es descriuen els principals objectius que es busquen en implantar aquest model i que impacta en la gestió i automatització del cicle de vida de les aplicacions, construcció, qualitat i desplegaments.

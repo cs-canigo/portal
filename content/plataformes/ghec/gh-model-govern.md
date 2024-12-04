@@ -3,13 +3,12 @@
 date         = "2024-04-09"
 title        = "Model organitzatiu"
 description  = "Descripció del model organitzatiu definit per GHEC"
-weight      = "2"
 sections    = ["GHEC"]
+weight      = "2"
 toc         = true
 aliases = [
     "/drafts/ghec/gh-model-govern",
-    "/ghec/gh-model-govern",
-    "/plataformes/ghec/gh-model-govern"
+    "/ghec/gh-model-govern"
 ]
 +++
 

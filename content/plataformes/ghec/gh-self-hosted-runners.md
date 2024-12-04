@@ -7,8 +7,7 @@ weight      = "8"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-self-hosted-runners",
-    "/ghec/gh-self-hosted-runners",
-    "/plataformes/ghec/gh-self-hosted-runners"
+    "/ghec/gh-self-hosted-runners"
 ]
 +++
 

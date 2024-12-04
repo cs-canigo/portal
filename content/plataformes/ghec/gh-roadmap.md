@@ -7,8 +7,7 @@ weight      = "11"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-roadmap",
-    "/ghec/gh-roadmap",
-    "/plataformes/ghec/gh-roadmap"
+    "/ghec/gh-roadmap"
 ]
 +++
 
@@ -41,5 +40,6 @@ aliases = [
 - :heavy_check_mark: Desplegaments en APIM (API Manager corporatiu)
 - :construction_worker: Certificació desplegaments a GCP​
 - :construction_worker: Suport Python (llenguatge a incorporar al Full de Ruta)​ excloent llibreries (GitHub Packages no dona suport)
+- :construction_worker: Suport a construcció i desplegament als markets d'aplicacions mòbils Android i iOS
 
 *_Roadmap subjecte a canvis_

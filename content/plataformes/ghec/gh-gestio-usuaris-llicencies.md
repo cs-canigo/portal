@@ -7,8 +7,7 @@ weight      = "6"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-gestio-usuaris-llicencies",
-    "/ghec/gh-gestio-usuaris-llicencies",
-    "/plataformes/ghec/gh-gestio-usuaris-llicencies"
+    "/ghec/gh-gestio-usuaris-llicencies"
 ]
 +++
 
