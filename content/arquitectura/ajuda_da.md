@@ -163,6 +163,11 @@ Alguns exemples d'adaptació del diagrama de fluxos segons la tipologia d'Arquit
       <td>En aquest cas només existeix l’aplicació INTRANET (app.intranet.gencat.cat) que només és accessible des de la Generalitat amb connexió a NUS per servidors On-Premise i servidors Cloud (l’accés dels usuaris per la aplicació INTRANET no passa pel firewall de publicació ni pels WAAP de la NET0, es securitza al FW Paloalto del NUS i la comunicació entre servidors CLOUD i ON-Premise també està securitzada al FW Paloalto del NUS). El DNS d’Intranet del NUS resolen la IP privada del Cloud per app.intranet.gencat.cat. Els diferents recursos de les aplicacions de la NET0 poden accedir a recursos d’Internet mitjançant el Proxy de la NET0. No existeix una aplicació publicada a Internet.</td>
       <td><img src="/images/PlantillaDA/VistaContextNUSBase_v2_04.jpg" style="width:500px;" /></td>
    </tr>
+   <tr>
+      <td><b>Aplicació publicades a INTERNET i/o INTRANET connectada a serveis SaaS externs</b></td>
+      <td>Per aplicacions que es connecten amb serveis SaaS externs podem fer servir qualsevol dels models anteriors afegint el flux entre l'aplicació a l'hiperescalar escollit i la solució SaaS aprovisionada via subscripció (ElasticSearch, MongoDB, etc.)</td>
+      <td><img src="/images/PlantillaDA/VistaContextNUSBase_SaaS_v2.jpg" style="width:500px;" /></td>
+   </tr>
 </table>
 
 
