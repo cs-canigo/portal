@@ -3,7 +3,7 @@
 date         = "2024-04-19"
 title        = "Exemple e2e Container"
 description  = "Exemple e2e Container"
-weight      = "1"
+weight      = "2"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-exemple-container",

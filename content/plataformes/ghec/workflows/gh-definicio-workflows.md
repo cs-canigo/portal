@@ -4,6 +4,7 @@ date         = "2024-04-09"
 title        = "Workflows"
 description  = "Definició workflows de CI/CD"
 weight      = "1"
+toc         = true
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-definicio-workflows",
@@ -12,20 +13,70 @@ aliases = [
 ]
 +++
 
-## Objectiu 🚀
-El present document descriu la definició a alt nivell dels Workflows de CI/CD per a GitHub Enterprise Cloud (GHEC) .
+## Introducció
 
-## Introducció 📋
+El present document descriu la definició a alt nivell dels **Workflows de CI/CD** per a GitHub Enterprise Cloud (GHEC) .
 
 S'ha considerat separar o aïllar els workflows en uns més específics i evitar així la creació d'un únic workflow amb massa lògica que integri tant el CI com el CD. Aquests workflows llançaran triggers o faran invocacions a d'altres per fer una cadena i que cada procés es trobi ben definit.
 
 
-S'han definit tant workflows per components tècnics d'aplicació com worfklows per a infraestructura (IaC).
-
-## Definició workflows - Components tècnics d'aplicació 📝
+S'han definit tant workflows per a **infraestructura com a codi (IaC) amb Terraform** com per a **components tècnics d'aplicació** empaquetats i desplegats en diferents modalitats (contenidors, funcions, ...).
 
 
-### Workflow de Continuous Integration (CI) per a components tècnics d'aplicació
+## Infraestructura
+
+### Worfklows de Continuous Integration (CI) per a infraestructura (IaC).
+
+Es torna a apostar (depenent de la branca) per l'ús de Pull Request per realitzar un commit a branques (develop, release, master/main).
+
+Per això, es diferenciaran els workflows depenent de l'acció que es realitzi, pull request o commit.
+
+En el següent diagrama s'observa el flux definit:
+
+![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/ci-workflow-infra-definition.png)
+
+on:
+* Checkout: Descarrega el codi del repositori.
+* Format Check: Realitza validacions de format al codi.
+* Scan Check: Realitza validacions estàtiques (SCA) al codi.
+* Cost Check: Validació del cost de la infraestructura. 
+* Terraform Plan & Store : Generació del Terraform Plan i emmagatzematge en el Storage Account de l'aplicació.
+* Tag: Etiquetat del codi al repositori.
+
+
+Per a PR, el nom del workflow en GHEC és **Infra CI on PR** 
+
+Per a Commit, el nom del workflow en GHEC és **Infra CI on Commit**
+
+Una vegada realitzat el Terraform Plan, s'adjunta tota la informació en la Pull Request perquè el approver (rol maintainer) pugui disposar de tota la informació necessària per a realitzar l'aprovació.
+
+
+
+### Worfklows de Continuous Deployment (CD) per a infraestructura.
+
+Es detalla a continuació el flux de treball dels desplegaments d'Infraestructura.
+
+![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/cd-workflow-infra-definition.png)
+
+
+on:
+* Download Plan : Selecció del codi a desplegar a l'entorn (env).
+* PRE Audit ITSM : Crea un tiquet a ITSM indicant el començament del desplegament
+* Health Check : Comprova l'accés tècnic al recurs.
+* Functional Tests: Executa proves de funcionals amb Selenium invocant a M.A.T.
+* Deploy (env): Desplegament o Apply de la infraestructura.
+* POST Audit ITSM : Actualitza el tiquet ITSM indicant el final del desplegament i el seu estat.
+
+* Deploy Validation (env): Validació del desplegament a l'entorn env.
+* Email Comm : Enviament del resultat del desplegament per correu als afectats.
+    
+El nom Workflow en GHEC és **Infra CD Apply**
+
+
+## Contenidors
+
+
+### Workflow de Continuous Integration (CI) per a contenidors
 Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
 
 S'ha diferenciat en el workflow entre:
@@ -158,56 +209,8 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
         '{"repositorio":"http://gitea.gitea/devsecops/functional-test.git", "entorno":"Integracio", "urlapp":"https://qualitat.solucions.gencat.cat/","rama":"master"}'
 
     
-## Definició workflows - Infraestructura 📝
 
-### Worfklows de Continuous Integration (CI) per a infraestructura (IaC).
-
-Es torna a apostar (depenent de la branca) per l'ús de Pull Request per realitzar un commit a branques (develop, release, master/main).
-
-Per això, es diferenciaran els workflows depenent de l'acció que es realitzi, pull request o commit.
-
-En el següent diagrama s'observa el flux definit:
-
-![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/ci-workflow-infra-definition.png)
-
-on:
-* Checkout: Descarrega el codi del repositori.
-* Format Check: Realitza validacions de format al codi.
-* Scan Check: Realitza validacions estàtiques (SCA) al codi.
-* Cost Check: Validació del cost de la infraestructura. 
-* Terraform Plan & Store : Generació del Terraform Plan i emmagatzematge en el Storage Account de l'aplicació.
-* Tag: Etiquetat del codi al repositori.
-
-
-Per a PR, el nom del workflow en GHEC és **Infra CI on PR** 
-
-Per a Commit, el nom del workflow en GHEC és **Infra CI on Commit**
-
-Una vegada realitzat el Terraform Plan, s'adjunta tota la informació en la Pull Request perquè el approver (rol maintainer) pugui disposar de tota la informació necessària per a realitzar l'aprovació.
-
-
-
-### Worfklows de Continuous Deployment (CD) per a infraestructura.
-
-Es detalla a continuació el flux de treball dels desplegaments d'Infraestructura.
-
-![Definició a alt nivell dels workflows de CD per a Infraestructura](/images/GHEC/cd-workflow-infra-definition.png)
-
-
-on:
-* Download Plan : Selecció del codi a desplegar a l'entorn (env).
-* PRE Audit ITSM : Crea un tiquet a ITSM indicant el començament del desplegament
-* Health Check : Comprova l'accés tècnic al recurs.
-* Functional Tests: Executa proves de funcionals amb Selenium invocant a M.A.T.
-* Deploy (env): Desplegament o Apply de la infraestructura.
-* POST Audit ITSM : Actualitza el tiquet ITSM indicant el final del desplegament i el seu estat.
-
-* Deploy Validation (env): Validació del desplegament a l'entorn env.
-* Email Comm : Enviament del resultat del desplegament per correu als afectats.
-    
-El nom Workflow en GHEC és **Infra CD Apply**
-
-## Definició workflows - Functions 📝
+## Functions
 
 ### Workflow de Continuous Integration (CI) per a Function
 
@@ -255,7 +258,7 @@ on:
 El nom Workflow en GHEC és **FUNC CD**
 
 
-## Definició workflows - Contingut Estátic 📝
+## Contingut Estátic
 
 ### Workflow de Continuous Integration (CI) per a Contingut Estátic
 
@@ -303,7 +306,7 @@ on:
 El nom Workflow en GHEC és **Static CD**
 
 
-## Definició workflows - API's  📝
+## API's
 
 ### Workflow de Continuous Integration (CI) per API Manager.
 
@@ -366,3 +369,76 @@ on:
 * ITSM POST AUDIT: Completa l'auditoria a ITSM després del desplegament, registrant l'estat final i completant la CRQ.
     
 El nom Workflow en GHEC és **APIM CD OPERATIVA**
+
+
+## Aplicacions mòbils (Android i iOS)
+
+### Workflow de Continuous Integration (CI) per a components tècnics d'aplicació mòbils (Android i iOS)
+
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
+
+S'ha definit l'execució del workflow, quan:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobileapps.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi. 
+
+Nom del Workflow en GitHub : **App iOS CI on PR / App Android CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobileapps_PR.png)
+
+### Worfklows de Continuous Deployment (CD) per a aplicacions mòbils (Android i iOS)
+
+El workflow de Desplegament Continu (CD) s'ha aïllat del workflow de CI per desvincular els entorns de desplegament de les diferents branques d'un repositori, així com desacoblar la generació d'un artefacte "deliverable" del propi workflow de desplegament. D'aquesta manera, es defineix un workflow de CD que pot generar un artefacte i desplegar-lo en l'entorn que es desitgi, ja sigui en producció o en un entorn previ. **Actualment només per producció**
+
+Els diferents steps que es defineixen a alt nivell són els que es mostren en el diagrama següent:
+
+![Definició a alt nivell dels workflows de CD](/images/GHEC/cd-workflow-mobileapps-definition.png)
+
+* **Flux de Deploy CD**: Realitzarà el desplegament d'un artefacte en l'entorn indicat. Tindrà com a Steps:
+    1. Fetch variables: farà la captura de les dades de la app per l'entorn indicat.
+    2. Check tag: validarà que l'artefacte pot ser generat per l'entorn indicat.
+    3. Build: compilar l'aplicació.
+    4. Sign: firmar l'aplicació.
+    5. Deploy: desplegament de l'artefacte en l'entorn indicat.
+    6. Create tag: realitzà el tag al repo segons l'entorn indicat.
+
+    Nom del Workflow en GitHub : **App iOS CD / App Android CD**
+
+## Llibreries iOS
+
+**Per la naturalesa de les llibreries d'iOS, no es genera cap artefacte i per tant el workflow de CD no existeix.**
+
+### Workflow de Continuous Integration (CI) per a components tècnics de llibreries mòbils (iOS)
+
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
+
+S'ha definit l'execució del workflow, quan:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi. 
+
+Nom del Workflow en GitHub : **Library iOS CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_PR.png)
+
+D'altra banda, si estem en temps de commit, el workflow dependrà de la branca a la qual es faci l'integració:
+
+* Nom del WorkFlow si el Commit és a development : **Library iOS CI on Commit to develop**.
+* Nom del Workflow si el Commit és a release o master :  **Library iOS CI on Commit to release o master**.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_CM.png)
+
+Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori d'artefactes o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  

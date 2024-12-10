@@ -4,15 +4,16 @@ date         = "2024-04-19"
 title        = "Nou model de CI/CD a cloud públic"
 description  = "Guies necessàries per la integració al nou model de CI/CD a cloud públic"
 weight      = "1"
+toc         = true
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-adopcio-model-ghec",
-    "/ghec/gh-adopcio-model-ghec",
-    "/plataformes/ghec/gh-adopcio-model-ghec"
+    "/ghec/gh-adopcio-model-ghec"
 ]
 +++
 
-## Objectiu 🚀
+## Introducció
+
 El present document descriu les guies necessàries per la integració d'aplicacions al nou model de CI/CD a cloud públic.
 
 A continuació, es descriuen els principals objectius que es busquen en implantar aquest model i que impacta en la gestió i automatització del cicle de vida de les aplicacions, construcció, qualitat i desplegaments.
@@ -81,6 +82,8 @@ El procés d'integració actualment és el següent :
       | NomTecComponent4     | backend             | function  | lambda | java       | 17     |
       | NomTecComponent5     | backend             | container | ecs    | dotnet     | 8      |
       | NomTecComponent6     | apim                | apim      | N/A    | apim       | N/A    |
+      | NomTecComponent7     | mobile              | app       | N/A    | ios        | N/A    |
+      | NomTecComponent8     | mobile              | app       | N/A    | android    | N/A    |
 
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
@@ -90,6 +93,7 @@ El procés d'integració actualment és el següent :
         + infra
         + executor
         + apim
+        + mobile
 
       + Categoria  :
         + container : Desplegament de una imatge de contenidors.
@@ -101,11 +105,13 @@ El procés d'integració actualment és el següent :
         + database :  Desplegament estès de scripts de Base de Dades.
         + vm :  Desplegament estès de Màquines Virtuals. 
         + apim: Desplegament estès de Api en API Manager
+        + app: Desplegament d'una aplicació mòbil
 
         Amb les següents restriccions :
         - Si " Tipus de repositori " = "backend" els possibles valors de categoria són : container | function
         - Si " Tipus de repositori " = "frontend" els possibles valors de categoria són : container | static
         - Si " Tipus de repositori " = "executor" els possibles valors de categoria són : kubernetes | database | vm
+        - Si " Tipus de repositori " = "mobile" els possibles valors de categoria són : app | library
 
       + Engine : 
         + ecs : Elastic Container Service.
@@ -120,6 +126,8 @@ El procés d'integració actualment és el següent :
         + nodejs
         + dotnet. **IMPORTANT .Net Framework no està suportat**
         + apim
+        + ios
+        + android
         
       
     + **Migració del CI/CD nadiu d'AWS o Azure a GHEC**
@@ -170,6 +178,9 @@ El procés d'integració actualment és el següent :
         - Library template --> [library-template](https://github.com/ctti-arq/library-template)
         - Extended deployment template --> [extended-template](https://github.com/ctti-arq/executor-template)
         - API's deployment template --> [API's-template](https://github.com/ctti-arq/apim-template)
+        - Mobile App iOS template --> [mobile-app-ios-template](https://github.com/ctti-arq/mobile-app-ios-template)
+        - Mobile App Android template --> [mobile-app-android-template](https://github.com/ctti-arq/mobile-app-android-template)
+        - Mobile Library iOs template --> [obile-library-ios-template](https://github.com/ctti-arq/obile-library-ios-template)
 
         El workflow cridant necessita configurar una sèrie de parametres per al workflow anomenat. Aquests paràmetres estan explicats a la següent documentació [Configuració workflows](../gh-configuracio-workflows).
 
@@ -264,7 +275,7 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
     + static: WorkFlows per desplegar Contingut Estàtic.
     + container: Repositoris per desplegar Contenidors.
     + infra: Repositoris per desplegar Infraestructura.
-
+    + mobile: Workflows per desplegar Aplicacions Mòbils (nadiu Android i iOS) i Llibreries d'iOS.
 
   L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
                 
@@ -305,6 +316,6 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
   + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
 
- | Exemples   |||||
-|--------------|-|-|-|-|
-|[e2e Container](../workflows/exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../workflows/exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic ](../workflows/exemples/gh-exemple-e2e-cs) | [e2e Function ](../workflows/exemples/gh-exemple-e2e-function) | [e2e API Manager ](../workflows/exemples/gh-exemple-e2e-apimanager) |
+ | Exemples   ||||||
+|--------------|-|-|-|-|-|
+|[e2e Container](../workflows/exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../workflows/exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic](../workflows/exemples/gh-exemple-e2e-cs) | [e2e Function](../workflows/exemples/gh-exemple-e2e-function) | [e2e API Manager](../workflows/exemples/gh-exemple-e2e-apimanager) | [e2e Mobile app](../workflows/exemples/gh-exemple-e2e-mobileapps) |
