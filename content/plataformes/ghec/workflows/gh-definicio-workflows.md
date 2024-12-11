@@ -147,7 +147,7 @@ Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'a
 
 A futur, es preveu la creació de workflows "llançadors" que serveixin d'orquestradors dels diferents workflows de CI/CD, podent triar a través de manifestos en format .yaml la configuració a executar i el flux a seguir. Mitjançant aquest pla de desplegament es vol controlar la paral·lelització i/o seqüencialitat dels processos involucrats en el desplegament d'una aplicació.
 
-### Worfklows de Continuous Deployment (CD) per a aplicacions
+### Worfklows de Continuous Deployment (CD) per a contenidors
 
 El workflow de Desplegament Continu (CD) s'ha aïllat del workflow de CI per desvincular els entorns de desplegament de les diferents branques d'un repositori, així com desacoblar la generació d'un artefacte "deliverable" del propi workflow de desplegament. D'aquesta manera, es defineix un workflow de CD que pot rebre qualsevol artefacte generat prèviament en el workflow de CI i desplegar-lo en l'entorn que es desitgi, ja sigui en producció o en un entorn previ.
 
@@ -209,6 +209,44 @@ Els diferents steps que es defineixen a alt nivell són els que es mostren en el
         '{"repositorio":"http://gitea.gitea/devsecops/functional-test.git", "entorno":"Integracio", "urlapp":"https://qualitat.solucions.gencat.cat/","rama":"master"}'
 
     
+## Llibreries
+
+
+### Workflow de Continuous Integration (CI) per a Llibreries
+Amb el workflow de CI proposat es força l'usuari a treballar i realitzar canvis a través de Pull Requests, tal i com s'ha definit en el [Model de GitFlow i GitOps.](../../modelTreball/model-gitflow-gitops)
+
+S'ha diferenciat en el workflow entre:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI per Llibreries](/images/GHEC/ci-llibreries-workflow-definition.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
+
+Nom del Workflow en GitHub : **Library CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+
+![Definició a alt nivell dels workflows de CI  per Llibreries](/images/GHEC/ci-workflow-llibreries-definition_PR.png)
+
+
+D'altra banda, si estem en temps de commit, el flux de commit serà diferent, ja que l'objectiu del workflow de llibreries és desplegar en un repositori de llibreries, tipus Artifactory, Nexus o GitHub Packages, i no el desplegament en cap infraestructura per a que sigui executat (runtime). 
+
+En aquest cas, a diferència del workflow d'aplicacions, la llibreria que es genera en els diferents entorns no ha de ser immutable per la qual cosa tant en la integració a Development, Release o Master, s'ha de fer la promoció de l'artefacte, compilat, empaquetat, pujada de l'artefacte al repositori de llibreries i l'etiquetatge en aquest repositori i de l' artefacte.
+    
+Nom del Workflow en GitHub : **Library CI on Commit**.
+
+
+![Definició a alt nivell dels workflows de CI per Llibreries](/images/GHEC/ci-workflow-llibreries-definition_CM.png)
+
+Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori d'artefactes o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  
+
+### Workflow de Continuous Deployment (CD) per a Llibreries
+
+No aplica, ja que els artefactes llibreries no es despleguen en cap cloud per si mateixos, sempre han d' anar embeguts en les aplicacions que seran les que es despleguin.
 
 ## Functions
 
