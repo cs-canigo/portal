@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 
-## canigo.security 3.1.0
+## canigo.integration.antivirus 3.1.0
 
 - Actualització de canigo.security
   - Dins del mòdul següent s'ha actualitzat a JDK 17 en el directori `canigó.root` de 3.1.0 a 3.2.0
