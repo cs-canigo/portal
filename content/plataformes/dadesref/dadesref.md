@@ -139,8 +139,8 @@ tr.shown td.details-control {
 		return '<table cellpadding="7" cellspacing="0" border="0" style="margin-top:0px; padding-left:20px;font-size:12px;width:100%;">'+
 			'<thead>'+
 				'<tr>'+
-					'<th style="background-color: papayawhip;">Nom</th>'+
-					'<th style="background-color: papayawhip; width:30%;">Descripcio</th>'+
+					'<th style="background-color: papayawhip;">Versió</th>'+
+					'<th style="background-color: papayawhip; width:30%;">Descripció</th>'+
 					'<th style="background-color: papayawhip; width:30%;">Promotor</th>'+
 					'<th style="background-color: papayawhip;">Estat</th>'+
 					'<th style="background-color: papayawhip;">Publicada</th>'+
