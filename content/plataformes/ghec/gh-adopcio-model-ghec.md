@@ -82,8 +82,11 @@ El procés d'integració actualment és el següent :
       | NomTecComponent4     | backend             | function  | lambda | java       | 17     |
       | NomTecComponent5     | backend             | container | ecs    | dotnet     | 8      |
       | NomTecComponent6     | apim                | apim      | N/A    | apim       | N/A    |
-      | NomTecComponent7     | mobile              | app       | N/A    | ios        | N/A    |
-      | NomTecComponent8     | mobile              | app       | N/A    | android    | N/A    |
+      | NomTecComponent7     | backend             | container | ecs    | python     | 3.10   |
+      | NomTecComponent8     | backend             | function  | lambda | python     | 3.10   |
+      | NomTecComponent9     | library             | library   | N/A    | java-gradle| 8.10   |
+      | NomTecComponent10    | mobile              | app       | N/A    | ios        | N/A    |
+      | NomTecComponent11    | mobile              | app       | N/A    | android    | N/A    |
 
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
@@ -122,10 +125,12 @@ El procés d'integració actualment és el següent :
         + ablobstorage : Azure Storage
 
       + Tecnologia : 
-        + java
+        + java/maven
+      	+ java-gradle
         + nodejs
         + dotnet. **IMPORTANT .Net Framework no està suportat**
         + apim
+        + python
         + ios
         + android
         

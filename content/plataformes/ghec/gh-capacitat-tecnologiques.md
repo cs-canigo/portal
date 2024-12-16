@@ -1,13 +1,14 @@
 
 +++
 date         = "2024-11-20"
-title        = "Tecnologies suportades"
+title        = "Tecnologies suportades i Requisits"
 description  = "Capacitats tecnològiques de la plataforma GitHub Enterprise Cloud (GHEC)"
 weight      = "4"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-capacitat-tecnologiques",
-    "/ghec/gh-capacitat-tecnologiques"
+    "/ghec/gh-capacitat-tecnologiques",
+    "/plataformes/ghec/gh-capacitat-tecnologiques"
 ]
 +++
 
@@ -72,4 +73,96 @@ Les tecnlogies certificades actualment són les següents:
 
 Més informació sobre desplegaments estesos : [Desplegaments Estesos](../gh-desplegaments-estesos/)
 
+## Requisits
 
+Addicionalment, dins la política de versions implantada, es detallen els requisits necessaris de configuració, depenent de la tecnologia.
+Respecte al versionat de l' artefacte, el nom del lliurable i la seva version s' obté automàticament dels fitxers de configuració del projecte.  Aquest dependrà del tipus de tecnologia.
+
+
+### JAVA (Maven)
+
+* **Versionat**
+   * Fitxer : pom.xml
+   * Nom Lliurable : Tag artifactid
+   * Versió Lliurable : Tag version
+
+* **Requisists**
+   Per a projectes Maven cal definir en el `pom.xml` la següent dependència per fer l'escaneig amb SonarQube:
+   ```
+   <plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.4.0.905</version>
+    </plugin>
+   ```
+    
+### JAVA (Gradle)
+* **Versionat**
+   * Fitxer / Nom Lliurable : settings.gradle / Camp -  rootProject.name 
+   * Fitxer / Versió Lliurable :  build.gradle / Camp -  version i Camp -  group
+
+* **Requisits**
+   Per a projectes Maven cal definir en el `build.gradle` la següent dependència per fer l'escaneig amb SonarQube:
+   ```
+   plugins {
+    id 'org.sonarqube' version '5.1.0.4882'
+   }
+   ```
+   I per publicar una biblioteca:
+   ```
+   plugins {
+    id 'maven-publish'
+   }
+   ```
+    
+### NODE
+* **Versionat**
+   * Fitxer : package.json
+   * Nom Lliurable :  name
+   * Versió Lliurable : version
+
+### .NET
+* **Versionat**
+En aquest cas hi ha dues casuistiques :        
+       
+   * Nom Lliurable :
+        1. Si només hi ha un unic projecte, només hi ha un **.csproj** i s'obtindra del camp **name** d'aquest fitxer.
+        2. Si tenim en el repo més d'un projecte, hi ha diferents .csproj, s'obté de la variable **Project_Name** el valor del qual s'introdueix en el setup del projecte.
+
+
+   * Versió Lliurable : 
+        1. Si només hi ha un unic projecte, només hi ha un **.csproj** i s'obtindra del camp **version** d'aquest fitxer 
+        2. Si tenim en el repo més d'un projecte, hi ha diferents .csproj, després hi hauria d'haver un fitxer centralitzat de versions anomenat **Directory.Build.props** i d'aquí s'obtindre del camp **VERSION**.
+
+* **Requisits**
+    Per a projectes on la tecnologia sigui dotnet és necessària l'existència de l'arxiu `*.csproj` a l'arrel. Si existeixen dos arxius `*.csproj` serà obligatori especificar el `Project_Name`.
+
+### APIM
+* **Versionat**
+   * Fitxer : product.yaml
+   * Nom Lliurable : title
+   * Versió Lliurable : version
+
+* **Requisits**
+   Els fitxers de producte i d'APIs han d'estar a l'arrel del repositori i no poden incloure la versió en el nom.
+
+### PYTHON
+* **Versionat** 
+   * Fitxer : setup.py
+   * Nom Lliurable : name
+   * Versió Lliurable : version
+
+* **Requisits**
+   Per a projectes Python és necessari que a l'arrel del repositori existeixin els fitxers de configuració `setup.py` i `requirements.txt`.
+
+### Android (Gradle):
+* **Versionat**
+   * Fitxer / Nom Lliurable : app/build.gradle / Task - packageName
+   * Fitxer / Versió Lliurable : app/build.gradle / Task - versionName
+   * Fitxer / Build Lliurable : app/build.gradle / Task - versionCode
+
+### iOS
+
+   * Fitxer / Nom Lliurable : Build Settings / Camp - PRODUCT_BUNDLE_IDENTIFIER
+   * Fitxer / Versió Lliurable : Build Settings / Camp - MARKETING_VERSION
+   * Fitxer / Build Lliurable : Build Settings / Camp - CURRENT_PROJECT_VERSION
