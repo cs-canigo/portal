@@ -167,7 +167,7 @@ aliases = [
       itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 ```
 
-### CI on commit develop
+### CI on commit to develop
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
   - `nodejs`
@@ -182,7 +182,7 @@ aliases = [
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
 - **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
-- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
+- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, per a java maven `"mvn package -Dmaven.test.skip=true"`, per a java gradle `"gradle clean build"`, per a dotnet `"dotnet restore $PROJECT_PATH && dotnet build $PROJECT_PATH --configuration Release && dotnet publish $PROJECT_PATH --configuration Release --output ./out"`, i per a python `"pip install -r requirements.txt && python setup.py sdist bdist_wheel"`. Si no es proporciona cap comanda personalitzada, es farà servir la comanda per defecte segons la tecnologia especificada.
 - **python_version**: (opcional) Versió de python. Definir només si el projecte es basa en tecnologia python.
 - **gradle_version**: (opcional) Versió de gradle. Definir només si el projecte es basa en tecnologia python.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
@@ -467,7 +467,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   - `nodejs`
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
-- **install_build_command**: (opcional) (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
+- **install_build_command**: (opcional) (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
@@ -531,7 +531,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
 - **dotnet_version**: (opcional) Versió de .Net. Definir només si el projecte es basa en tecnologia .Net.
 - **gradle_version**: (opcional) Versió de gradle. Definir només si el projecte es basa en tecnologia python.
-- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, i per a java maven `"mvn package -Dmaven.test.skip=true"`
+- **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci"`, per a java maven `"mvn clean compile"`, per a java gradle `"gradle clean build"`, per a dotnet `"dotnet build $PROJECT_PATH -c Release"`. Si no es proporciona cap comanda personalitzada, es farà servir la comanda per defecte segons la tecnologia especificada.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
   - `test/**`
