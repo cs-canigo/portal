@@ -237,7 +237,7 @@ x-ibm-configuration:
     success-content: payload
     error-content: payload
   catalogs:
-    public_pre:
+    public-pre:
       properties:
         target-url: https://exampledesa.com/test
         cors-enabled: 'false'
@@ -255,7 +255,7 @@ x-ibm-configuration:
         cors-credentials: 'false'
         cabeceras-seguridad: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\", \t\"Content-Security-Policy\": \"default-src 'self'\", \t\"Location\": \"\", \t\"Access-Control-Allow-Headers\": \"Content-Type, Authorization\", \t\"Access-Control-Allow-Origin\": \"https://example.com\" , \t\"Access-Control-Allow-Methods\": \"GET, POST\", \t\"Access-Control-Allow-Credentials\": \"true\", \"Cabecera-Custom-Example\": \"\"}"
         cabecerasSeguridad-enabled: 'false'
-    privat_pre:
+    privat-pre:
       properties:
         target-url: https://examplepro.com/test
         cors-enabled: 'false'
