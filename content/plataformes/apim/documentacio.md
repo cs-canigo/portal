@@ -1,5 +1,5 @@
 +++
-date = "2024-12-02"
+date = "2024-12-17"
 title = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
 sections = "APIM"
@@ -21,7 +21,7 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdo
 
 ### Desenvolupament
 
-- [Guia de desenvolupament d'APIs i ús de les plantilles](/related/apim/Guia_Desenvolupament_i_Us_de_Plantilla_API_v1.0.pdf): document l'objectiu principal del qual és proporcionar una guia completa del desenvolupament i ús de la plantilla d' APIs definida, amb un enfocament específic en la millora i optimització del treball dels desenvolupadors dins de l' API Manager de CTTI.
+- [Guia de desenvolupament d'APIs i ús de les plantilles](/related/apim/Guia_Desenvolupament_i_Us_de_Plantilla_API_v1.1.pdf): document l'objectiu principal del qual és proporcionar una guia completa del desenvolupament i ús de la plantilla d' APIs definida, amb un enfocament específic en la millora i optimització del treball dels desenvolupadors dins de l' API Manager de CTTI.
 - [Guia d'instal·lació i configuració de LTE](/related/apim/Guia_Installacio_i_Configuracio_LTE_IBM_API_Connect_v1.0.pdf): document que ensenya a instal·lar i configurar l'entorn local de l'IBM API Connect, que consisteix del Toolkit (API Designer) i LTE (Local Testing Environment).
 
 #### Plantilles 
@@ -37,7 +37,7 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdo
 
 #### Polítiques i Extensions Personalitzades
 
-- [DT Polítiques i Extensions](/related/apim/DT_Politiques_i_Extensions_V1.0.pdf): disseny tècnic de les polítiques i extensions personalitzades que poden ser utilitzades a l'entorn de l'API Manager Corporatiu.
+- [DT Polítiques i Extensions](/related/apim/DT_Politiques_i_Extensions_V1.1.pdf): disseny tècnic de les polítiques i extensions personalitzades que poden ser utilitzades a l'entorn de l'API Manager Corporatiu.
 - [Guia pujada fitxers Gateways](/related/apim/Guía_pujada_fitxers_Gateways.pdf): guia per fer el procediment de pujada de fitxers als gateways de l'entorn de l'API Manager Corporatiu, pas necessari per poder fer ús de la política personalitzada ctti-get-variables.
 - [Manual importació polítiques entorn local](/related/apim/Manual_importacio_politiques_v1.0.pdf): manual d'importació de polítiques personalitzades a l'entorn local, que fa servir el Toolkit i l'LTE de l'IBM API Connect.
 - [Guia de desplegament de recursos a l'entorn local](/related/apim/Guia_desplegament_recursos_als_Gateways_LTE_v1.0.pdf): guia de desplegament de recursos als gateways de l'entorn local, format pel Toolkit i l'LTE de l'IBM API Connect.
