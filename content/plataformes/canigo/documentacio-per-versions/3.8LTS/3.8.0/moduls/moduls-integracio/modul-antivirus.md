@@ -82,6 +82,31 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 	<version>8.2.0</version>
 </dependency>
 ```
+
+**En Roadmap**
+
+Actualment s'està realitzant un upgrade del servidor de Symantec, actualitzant-lo a l'última versió 9.2.0.
+Una vegada estigui disponible, la versió 9.1.0.4 del SDK de Symantec estarà disponible per a ser utilitzada.
+
+* Versió mòdul antivirus >= 3.1.0: llibreria "SymJavaAPI-9.1.0.4.jar" configurant el pom.xml amb:
+```xml
+<dependency>
+	<groupId>com.symantec.scanengine.api</groupId>
+	<artifactId>SymJavaAPI</artifactId>
+	<version>9.1.0.4</version>
+</dependency>
+```
+
+Encara que s'indiqui és és optimo per a versions >= 3.1.0 del mòdul d'antivirus, s'han realitzat proves de retro-compatibilitat de dita SDK amb
+versions anteriors del mòdul, amb resultat positiu.
+En conseqüència, una vegada es finalitzi aquesta migració s'aconsella que s'utilitzi dita SDK (scanEngine) per a les versions del connector de canigo >= a 2.4.0
+
+Les versions del SDK anteriors a la 9.1.0.4 continuaran operatives, però fora de suport de Symantec i en conseqüència s'incorre en possibles vulnerabilitats de seguretat,
+per la qual cosa s'aconsella encaridament actualitzar a l'última versió del SDK.
+
+**IMPORTANT**, l'operativa d'Antivirus s'està "apificando" pel que la recomanació és utilitzar dita API en comptes d'aquest mòdul d'integració amb antivirus que, a futur, acabarà sent "deprecando".
+
+
 Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions.
 
 Per al correcte ús de les funcionalitats del mòdul d'antivirus, s'ha d'afegir aquesta dependència de la llibreria de Symantec en el pom.xml de l'aplicació generada amb l'arquetip de Canigó. És a dir, aquesta dependència estarà en el mòdul canigo.integration.antivirus i a més ha d'estar en el pom.xml de la nova aplicació generada.
