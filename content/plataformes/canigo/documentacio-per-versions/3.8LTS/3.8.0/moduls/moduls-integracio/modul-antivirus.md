@@ -30,17 +30,11 @@ A la [Matriu de Compatibilitats](/plataformes/canigo/documentacio-per-versions/3
 
 L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
 
-<br>
-
 El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
-
-<br>
 
 Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
 
-<br>
-
-<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
+[Matriu de Compatibilitats Canigó 3.8](/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/compatibilitat-per-modul/)
 
 </div>
 
@@ -88,12 +82,16 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 	<version>8.2.0</version>
 </dependency>
 ```
-
 Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions.
 
 Per al correcte ús de les funcionalitats del mòdul d'antivirus, s'ha d'afegir aquesta dependència de la llibreria de Symantec en el pom.xml de l'aplicació generada amb l'arquetip de Canigó. És a dir, aquesta dependència estarà en el mòdul canigo.integration.antivirus i a més ha d'estar en el pom.xml de la nova aplicació generada.
 
-### Exemple d'ús
+En el següent diagrama, és mostra el funcionament actual del connector, i en el següent epígraf, un exemple d' ús.
+
+  ![Procés de creació de Model GHEC](/images/fw_canigo/arq_antivirus.png) 
+
+
+### Exemple d'ús endpoint scan (file)
 
 **AntivirusServiceController.java**
 

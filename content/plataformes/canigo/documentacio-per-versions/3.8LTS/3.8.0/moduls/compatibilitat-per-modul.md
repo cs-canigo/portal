@@ -42,3 +42,7 @@ weight      = 1
 | **canigo.web.rs**                                         | [3.1.0](/plataformes/canigo/documentacio-llibreries/canigo.web.rs/3.1.0/)  	            |
 |   canigo.core                                   		    | [5.1.0, 5.2.0)                                                                            |
 |   canigo.test                                   		    | [3.1.0, 3.2.0)                                                                            |
+| **canigo.integration.antivirus**                          | [3.1.0](/plataformes/canigo/documentacio-llibreries/canigo.integration.antivirus/3.1.0/)  |
+|   canigo.core                                   		    | [5.1.0, 5.2.0)                                                                            |
+                                                                      |
+
