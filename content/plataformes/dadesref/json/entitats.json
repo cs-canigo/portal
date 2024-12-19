@@ -2915,16 +2915,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
                     "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
-                    "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                    "ifitxer_xls": "deprecated/Codi_Postal_Municipis_Cat_V04.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Modificació de l’entitat de Codis postals per municipis de Catalunya, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                    "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2932,7 +2947,7 @@
             "nom_dinsBD": "CODI_POSTAL_MUNICIPIS_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "26/05/2021",
-            "Data_actualitzacio": "26/07/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq82",
