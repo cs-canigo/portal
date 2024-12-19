@@ -1,5 +1,5 @@
 +++
-date        = "2024-12-09"
+date        = "2024-12-19"
 title       = "Publicació Catàleg Tècnic de Dades - Desembre'24"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per evolucionar entitats publicades d'obligat compliment i donar d'alta noves entitats d'obligat compliment."
 categories  = ["Data Architecture"]
@@ -9,7 +9,7 @@ key = "Desembre2024"
 
 ## Introducció
 
-El dia 19/12/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar once entitats publicades d’obligat compliment i afegir una entitat dins de la llista d’entitats d’obligat compliment.
+El dia 19/12/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dades per evolucionar onze entitats publicades d’obligat compliment i afegir una entitat dins de la llista d’entitats d’obligat compliment.
  
 ## Novetats
 
