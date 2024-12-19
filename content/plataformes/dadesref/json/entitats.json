@@ -784,16 +784,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
                     "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
-                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "ifitxer_xls": "deprecated/Subdireccions_Generals_V04.xlsx",
                     "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació d’ofici de l'entitat de Subdireccions Generals a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -801,7 +816,7 @@
             "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/03/2024",
-            "Data_actualitzacio": "28/11/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq90",
