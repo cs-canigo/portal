@@ -880,7 +880,7 @@
                     "ifitxer_xls": "deprecated/Ajuntaments_V04.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "19/12/2924",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "26/07/2024",
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
@@ -890,13 +890,13 @@
                     "iestat": "Vigent",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Administració Local (DGAL)",
-                    "idescripcio": "Modificació de l’entitat d’Ajuntaments, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "idescripcio": "S'actualitza la denominació de l'ajuntament de "a Bisbal de Falset" (nom anterior) per "la Bisbal de Montsant" (nom actualitzat)",
                     "ifitxer_doc": "Ajuntaments_ATR.docx",
                     "ifitxer_xls": "Ajuntaments.xlsx",
-                    "idatacreacio": "19/12/2924",
+                    "idatacreacio": "19/12/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "19/12/29244",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -904,7 +904,7 @@
             "nom_dinsBD": "AJUNTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "19/12/2924"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq91",
