@@ -3175,16 +3175,31 @@
                 },
                 {
                     "inom": "V08",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                     "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
                     "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
-                    "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Catalunya_Geo_V08.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "26/07/2024",
+                    "idatapublicacio": "19/12/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V08",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Modificació de l’entitat de Municipis de Catalunya Geo, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                    "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3192,7 +3207,7 @@
             "nom_dinsBD": "MUNICIPIS_CAT_GEO",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "26/07/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq87",
