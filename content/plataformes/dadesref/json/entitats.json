@@ -4100,16 +4100,31 @@
                 },
                 {
                     "inom": "V06",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
                     "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V06.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V07",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271",
+                    "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -4117,7 +4132,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "04/12/2020",
-            "Data_actualitzacio": "26/07/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq140",
