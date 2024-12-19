@@ -3503,16 +3503,31 @@
                 },
                 {
                     "inom": "V21",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Modificació de l’entitat de Municipis d’Espanya, a causa de la modificació del nom del municipi de Moncada amb CODI: 461712 a Montcada/Moncada amb el mateix CODI.",
                     "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V21.xlsx",
                     "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V22",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3520,7 +3535,7 @@
             "nom_dinsBD": "MUNICIPIS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "28/11/2024"
+            "Data_actualitzacio": "19/12/20244"
         },
         {
             "Id": "dtarq127",
