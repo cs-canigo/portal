@@ -3943,16 +3943,31 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
                     "idescripcio": "Actualització trimestral segons l'última versió del fitxer font enviada pel promotor.",
                     "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Poligons_Industrials_Catalunya_V03.xlsx",
                     "idatacreacio": "27/02/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
+                    "idescripcio": "Actualització trimestral segons la darrera versió del fitxer font enviada pel promotor"
+                    "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pol%C3%ADgons-industrials-de-Catalunya/5asc-f6cw",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3960,7 +3975,7 @@
             "nom_dinsBD": "POLIGONS_INDUSTRIALS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "31/01/2024",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq85",
