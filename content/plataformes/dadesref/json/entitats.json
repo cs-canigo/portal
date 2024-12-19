@@ -5414,6 +5414,34 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/11/2024",
             "Data_actualitzacio": "28/11/2024"
+        },
+		{
+            "Id": "dtarq212",
+            "Nom": "Comissionats",
+            "Ambit": "Administració pública",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat de comissionats d'àmbit d'actuació específic de l'Administració de la Generalitat de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "COMISSIONATS_ATR.docx",
+                    "ifitxer_xls": "COMISSIONATS.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "19/12/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Comissionats/sv5v-y7k7/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "COMISSIONATS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "19/12/2024",
+            "Data_actualitzacio": "19/12/2024"
         }
     ]
 }
