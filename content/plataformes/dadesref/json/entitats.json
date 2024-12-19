@@ -827,16 +827,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Administració Local (DGAL)",
                     "idescripcio": "Canvi de nom de l'ajuntament “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
                     "ifitxer_doc": "Ajuntaments_ATR.docx",
-                    "ifitxer_xls": "Ajuntaments.xlsx",
+                    "ifitxer_xls": "deprecated/Ajuntaments_V04.xlsx",
                     "idatacreacio": "26/07/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2924",
                     "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                    "idescripcio": "Modificació de l’entitat d’Ajuntaments, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Ajuntaments_ATR.docx",
+                    "ifitxer_xls": "Ajuntaments.xlsx",
+                    "idatacreacio": "19/12/2924",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/29244",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -844,7 +859,7 @@
             "nom_dinsBD": "AJUNTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "26/07/2024"
+            "Data_actualitzacio": "19/12/2924"
         },
         {
             "Id": "dtarq91",
