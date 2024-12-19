@@ -462,16 +462,31 @@
                 },
                 {
                     "inom": "V13",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
                     "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                    "ifitxer_xls": "Direccions_Generals.xlsx",
+                    "ifitxer_xls": "deprecated/Direccions_Generals_V13.xlsx",
                     "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V14",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació d’ofici de l'entitat de Direccions Generals a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació.",
+                    "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Direccions_Generals.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -479,7 +494,7 @@
             "nom_dinsBD": "DIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "28/11/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq192",
