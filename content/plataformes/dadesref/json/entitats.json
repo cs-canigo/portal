@@ -681,16 +681,31 @@
                 },
                 {
                     "inom": "V09",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "S'han actualitzat els noms de les Secretaries Generals dels departaments.",
                     "ifitxer_doc": "Secretaries_ATR.docx",
-                    "ifitxer_xls": "Secretaries.xlsx",
+                    "ifitxer_xls": "deprecated/Secretaries_V09.xlsx",
                     "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V10",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació d’ofici de l'entitat de Secretaries Generals i sectorials a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació..",
+                    "ifitxer_doc": "Secretaries_ATR.docx",
+                    "ifitxer_xls": "Secretaries.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -698,7 +713,7 @@
             "nom_dinsBD": "SECRETARIES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "28/11/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq194",
