@@ -4398,16 +4398,31 @@
                 },
                 {
                     "inom": "V20",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                     "idescripcio": "Canvi de nom del municipi “Moncada” (nom anterior) per “Montcada/Moncada” (nom actualitzat), amb CODI: 461712",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V20.xlsx",
                     "idatacreacio": "28/11/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "9/12/2024",
                     "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V21",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Modificació de l’entitat d'Unitats Poblacionals d'Espanya, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "9/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -4415,7 +4430,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "10/07/2020",
-            "Data_actualitzacio": "28/11/2024"
+            "Data_actualitzacio": "9/12/2024"
         },
         {
             "Id": "dtarq175",
