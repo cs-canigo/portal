@@ -6,10 +6,6 @@ sections    = "Canigó. Documentació Versió 3.8"
 weight      = 1
 +++
 
-## Nota important
-
-**Aquesta guia és una còpia de la documentació del propi connector en la seva versió 3.6 de Canigó. S'està treballant per actualitzar aquest document perquè estigui alineat amb les novetats del connector migrat a Canigó 3.8. Aquest missatge s'eliminarà quan s'hagi acabat d'actualitzar aquesta documentació.**
-
 `Nota important:` **Aquesta guia és una còpia de la documentació del propi connector en la seva versió 3.6 de Canigó. S'està treballant per actualitzar aquest document perquè estigui alineat amb les novetats del connector migrat a Canigó 3.8. Aquest missatge s'eliminarà quan s'hagi acabat d'actualitzar aquesta documentació.**
 
 ## Propòsit
