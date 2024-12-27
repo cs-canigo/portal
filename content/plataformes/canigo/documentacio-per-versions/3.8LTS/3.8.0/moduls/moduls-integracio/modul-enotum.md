@@ -6,6 +6,8 @@ sections    = "Canigó. Documentació Versió 3.8"
 weight      = 4
 +++
 
+`Nota important:` **Aquesta guia és una còpia de la documentació del propi connector en la seva versió 3.6 de Canigó. S'està treballant per actualitzar aquest document perquè estigui alineat amb les novetats del connector migrat a Canigó 3.8. Aquest missatge s'eliminarà quan s'hagi acabat d'actualitzar aquesta documentació.**
+
 ## Propòsit
 
 El propòsit del connector és proporcionar una interfície funcional reduida al connector de la Pica que simplifica l'utilització del servei de Notificacions Telemàtiques de la Generalitat.
