@@ -1,5 +1,5 @@
 +++
-date = "2024-11-12"
+date = "2024-12-31"
 title = "Desplegaments"
 description = "Com desplegar productes i APIs a l'API Manager Corporatiu"
 sections = "APIM"
@@ -12,7 +12,8 @@ weight = 4
 
 El **API Manager Corporatiu** és una aplicació integrada amb el **[Servei d'Integració Contínua](/plataformes/sic/) (SIC)**, que és un servei a disposició dels proveïdors d'aplicacions per automatitzar el desplegament
 de les aplicacions.
-L'**API Manager Corporatiu** fa ús de les pipelines del SIC, configurades a **Jenkins**, per desplegar i gestionar de manera senzilla el cicle de vida dels productes i APIs en els diferents entorns que el conformen.
+L'**API Manager Corporatiu** fa ús de les pipelines del **SIC 3.0**, configurades a **Jenkins**, o dels workflows de **SIC+**, configurades a **GitHub**, per desplegar i gestionar de manera senzilla el cicle de vida dels productes i APIs en els diferents entorns que el conformen.
+
 ## Passos previs al desplegament
 
 Abans de començar amb el desplegament d' APIs, es llisten una sèrie d' accions que s' han de demanar i realitzar per tal de poder dur a terme un desplegament sense dificultats:
@@ -23,11 +24,12 @@ Per poder usar les eines i serveis necessaris per al desplegament d'APIs es requ
 * **VPN.** Necessària per accedir als recursos interns de CTTI, com ara el Gitlab, Jenkins..., per poder realitzar els desenvolupaments per cadascun dels proveïdors.
 * **JIRA.** : Plataforma que es fa servir per realitzar peticions de suport, incidències, dubtes... per configurar tant l'API Manager com el SIC per als desplegaments a realitzar.
 * **IBM API Connect.** Plataforma per on estan desplegades les APIs i els productes relacionats amb el CTTI.
-* **Gitlab.** És l'eina que es farà servir com a repositori de tots els fitxers relacionats amb el projecte.
+* **Gitlab.** És l'eina que es farà servir com a repositori de tots els fitxers relacionats amb el projecte **(si es desplega amb SIC 3.0)**.
+* **GitHub.** És l'eina que es farà servir com a repositori de tots els fitxers relacionats amb el projecte **(si es desplega amb SIC+)**.
 
 ### Instal·lació de programari
 Aquests programes poden ser útils o fins i tot necessaris per poder fer els desplegaments.
-* **Client GIT.** Instal·lar un client GIT pot ajudar a desplegar els canvis de codi amb facilitat al Gitlab corporatiu.
+* **Client GIT.** Instal·lar un client GIT pot ajudar a desplegar els canvis de codi amb facilitat al Gitlab/GitHub corporatiu.
 * **Client VPN.** Permetrà configurar i connectar-se a la VPN de CTTI per poder accedir a serveis desplegats a la xarxa interna.
 * **API Connect Toolkit/API Designer.** API Connect Toolkit, també anomenat API Designer, és l'eina facilitada per IBM perquè els desenvolupadors puguin desenvolupar les seves pròpies APIs en el seu entorn local, que compta amb les principals funcionalitats que té l'API Manager.
 * **Docker.** Docker és una plataforma de programari que ens permet crear un entorn local de prova per testejar l'API que es desenvolupi.
@@ -36,9 +38,10 @@ Aquests programes poden ser útils o fins i tot necessaris per poder fer els des
 Després d'instal·lar els programes de la secció anterior, cal configurar-los per poder realitzar els desenvolupaments en local de forma àgil.
 * **VPN.** Un cop instal·lat el client VPN, s'haurà de configurar la connexió a la VPN de CTTI per accedir als serveis interns corresponents.
 * **API Connect Toolkit i Local Testing Environments (LTE)**. Permetrà desenvolupar les APIs de forma més senzilla i poder fer diverses proves en local.
-* **Gitlab.** Al client GIT instal·lat prèviament es podrà configurar la connexió amb el Gitlab corporatiu per a la pujada del codi requerit per les pipelines per poder desplegar les APIs.
+* **Gitlab.** Al client GIT instal·lat prèviament es podrà configurar la connexió amb el Gitlab corporatiu per a la pujada del codi requerit per les pipelines per poder desplegar les APIs **(si es desplega amb SIC 3.0)**.
+* **GitHub.** Al client GIT instal·lat prèviament es podrà configurar la connexió amb el GitHub corporatiu per a la pujada del codi requerit per poder desplegar les APIs **(si es desplega amb SIC+)**.
 
-## Desplegament de APIs
+## Desplegament de APIs amb SIC 3.0
 
 ### Consideracions prèvies dins del CTTI
 
@@ -117,6 +120,71 @@ Cal tenir present que:
 - Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament. Per exemple: ![Missatge d'alerta (Check de plans i seguretat)](/related/apim/Check_alerta.png)
 - Les pipelines **notificaran** dels resultats a les adreces de correu assignades.
 
-Podeu consultar el document complet de la guia de desplegament, que conté tota la informació esmentada prèviament amb molt més detall: [**Guia de desplegament**](/related/apim/Guía_de_desplegament_v1.2.pdf).
+Podeu consultar el document complet de la guia de desplegament, que conté tota la informació esmentada prèviament amb molt més detall: [**Guia de desplegament**](/related/apim/Guía_de_desplegament_v2.pdf).
 
 Alhora, a la següent URL de la documentació del SIC, es pot trobar informació complementària a l'esmentada tant en aquesta pàgina com a la guia de desplegament: [**Com preparar productes i APIs per al desplegament a l'API Manager**](/plataformes/sic/guies/sic30-guies/preparar-apim)
+
+## Desplegament de APIs amb SIC+
+
+### Consideracions prèvies dins del CTTI
+
+L'organització de catàlegs, espais i productes és la següent:
+
+- Hi ha **quatre catàlegs segons el tipus d’entorn i el tipus de visibilitat**: `privat-pre`, `public-pre`, `privat` i `public`.
+- **Cada codi de diàleg disposarà d'un espai propi** amb la nomenclatura "CD" + <codi_diàleg> (agrupació de productes). Per exemple: "CD0192".
+- Un producte és una agrupació d’APIs i plans que les acompanyen (unitat mínima a versionar, desplegar i subscriure).
+
+Un cop fet el desenvolupament amb [API Designer](https://www.ibm.com/docs/en/api-connect/10_reserved_instance?topic=toolkit-working-offline-in-api-designer),
+caldrà exportar els YAMLs de definició del producte i els seus APIs per dipositar-los en el repositori adequat de GitHub:
+
+* Cada producte es correspondrà amb un **repositori de GitHub**, la nomenclatura de la qual és **<CODI_DIÀLEG>.<COMP>-<ACRÒNIM_APP>-<COMPONENT_TÈCNIC>-<TIPUS_COMP>**. Més informació a https://canigo.ctti.gencat.cat/plataformes/ghec/gh-model-govern/.
+
+* Es farà ús de la metodologia **Gitflow** per a la gestió de branques, havent de pujar-se el codi desenvolupat primer a una branca feature. Més informació aquí: https://canigo.ctti.gencat.cat/plataformes/ghec/modelTreball/model-gitflow-gitops/.
+
+<p align="center">
+  <img src="/related/apim/Gitflow.png" width="500" height="400"/>
+</p>
+
+* El model de treball serà amb **Pull Request a GitHub**, metodologia en la integració de branques en la qual intervenen dos actors: el **desenvolupador** i el **responsable tècnic/Release Manager**. Tota la informació sobre el model de treball es pot trobar en el següent enllaç: https://canigo.ctti.gencat.cat/plataformes/ghec/modelTreball/. 
+
+* Dins d’aquest model de desenvolupament, **el versionat i tags d’artefactes estarà bloquejat al desenvolupador**, de tal manera que seran els **workflows automàtics de CI** els que s’encarreguin d’aquesta tasca. Tota la documentació relacionada es pot consultar en el següent link: https://canigo.ctti.gencat.cat/plataformes/ghec/modelTreball/gh-definicio-versionat/.
+
+### Configuració
+
+Abans de començar a pujar el codi al repositori i executar els workflows que realitzaran els desplegaments, s' ha d' haver configurat tot el necessari a GitHub en base al nou **model GHEC**. Tota la informació es pot trobar al següent enllaç, https://canigo.ctti.gencat.cat/plataformes/ghec/gh-adopcio-model-ghec/, però aquí es deixa un resum:
+
+El procés d’integració actualment és el següent:
+![GHEC](/related/apim/GHEC.png)
+
+### Pujada de carpetes i fitxers al repositori
+
+Una vegada finalitzades les fases de disseny tant de les APIs com dels productes, on s' han configurat els fitxers YAML corresponents a cadascun d' ells, s' hauran de pujar aquests fitxers al repositori assignat al projecte, per posteriorment procedir amb el desplegament entre entorns. Els fitxers del producte i els seus corresponents APIs han de trobar-se en la mateixa ruta, la ruta principal del repositori.
+
+### Desplegament utilitzant workflows
+
+Per a cadascun dels repositoris creats, es creen un conjunt de workflows que seran els que executin les tasques de **CI/CD (són els anàlegs a les pipelins de Jenkins de SIC 3.0)**.
+L’accés a aquests workflows es realitzarà a través de l’opció **Actions** de cada repositori a GHEC.
+<p align="center">
+  <img src="/related/apim/Workflows.png" width="650" height="350"/>
+</p>
+
+L’execució dels workflows dependran de la seva tipologia i del model definit, essent:
+* **Workflows de CI.** Executats automàticament en la sol·licitud d’un **Pull Request** o en l’execució d’un **Merge** de dita Pull Request. S’ha diferenciat en el workflow entre **canvis en temps de Pull Request (PR)**, que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori, i **canvis en temps de Commit**, que equivaldria al procés després d’haver-se acceptat la PR, i integrar ambdues branques involucrades.
+    * **APIM CI on PR.** Aquest workflow, depenent d’aquestes branques que es vulguin “mergear”, executarà diferents steps amb diferents jobs. Si es crea una PR d’una branca feature a la branca **develop**, en temps d’execució es llançarà el workflow de CI que executarà els steps de validació de codi mitjançant el **comandament validate de l’eina apic** i aquest resultat es comenta en la PR. En canvi, si la PR es fes entre les branques **develop-release**, **release-master**, **hotfix-master**, s’ometrien aquests steps i es realitzaria un **fast-forward**.
+    * **APIM CI on Commit.** Si estem en temps de commit, i partint de la base que el paquet no ha de ser mutable entre els diferents entorns, es comprova el tag generat en temps de PR, es publica l’artefacte a **Github Artifacts** i es torna a fer el tag del repositori.
+* **Workflows de CD.** Executats sota demanda a través de la interfície web de GHEC.
+    * **APIM CD PUBLISH.** El workflow farà la publicació d’una nova versió d’un producte i APIs associades. El sistema permet redesplegar versions als catàlegs preproductius sempre que no hagin arribat a producció. 
+	
+	<p align="center">
+	  <img src="/related/apim/Workflow_publish.png" width="400" height="500"/>
+	</p>
+	
+    * **APIM CD OPERATIVA.** El workflow realitzarà una de les següents operatives: **INFO**, **DELETE**, **DEPRECATE**, **RETIRE**, **REPLACE**, **SUPERSEDE**. 
+	
+	<p align="center">
+	  <img src="/related/apim/Workflow_operativa.png" width="400" height="500"/>
+	</p>
+	
+Podeu consultar el document complet de la guia de desplegament, que conté tota la informació esmentada prèviament amb molt més detall: [**Guia de desplegament**](/related/apim/Guía_de_desplegament_v2.pdf).
+
+Per a més informació sobre el flux e2e i un exemple complet, accedir a https://canigo.ctti.gencat.cat/plataformes/ghec/workflows/exemples/gh-exemple-e2e-apimanager/.

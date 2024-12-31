@@ -1,5 +1,5 @@
 +++
-date        = "2024-11-04"
+date        = "2024-12-31"
 title       = "API Manager Corporatiu"
 description = "Descripció del servei"
 sections    = "APIM"
@@ -49,9 +49,9 @@ Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services
 ## Documentació
 
 A continuació, s'adjunta el document del Welcome Pack d'API Manager Corporatiu, el qual comenta per sobre diversos dels punts i les característiques més importants del servei, i que serveix com a primera guia per començar a entendre alguns conceptes bàsics de la plataforma.
-- [Welcome Pack](/related/apim/APIM-Welcome-Pack-v2.pdf): introducció al servei d'API Manager Corporatiu. 
+- [Welcome Pack](/related/apim/APIM-Welcome-Pack-v3.pdf): introducció al servei d'API Manager Corporatiu. 
 
 Alhora, s'inclou el document d'Estratègies de l'ús de l'API Manager, que inclou informació complementària o addicional al Welcome Pack, i on es pot llegir sobre la importància i els beneficis d'utilitzar aquest servei.
-- [Estratègies de l’ús de l’API Manager](/related/apim/Estrategies_Us_API.pdf): estratègies de l'ús del servei d'API Manager Corporatiu.
+- [Estratègies de l’ús de l’API Manager](/related/apim/Estrategies_Us_API_v2.pdf): estratègies de l'ús del servei d'API Manager Corporatiu.
 
 La resta de la documentació detallada on es detallen les característiques i la metodologia de treball del servei d'API Manager Corporatiu, juntament amb tots els recursos que pugui necessitar un proveïdor o consumidor, es troba a la següent url: https://canigo.ctti.gencat.cat/plataformes/apim/documentacio/

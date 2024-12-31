@@ -1,5 +1,5 @@
 +++
-date = "2024-12-17"
+date = "2024-12-31"
 title = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
 sections = "APIM"
@@ -16,7 +16,7 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdo
 
 ### Conceptes generals
 
-- [Manual del proveïdor d'APIs](/related/apim/APIM-Manual-Proveidor-APIs-V2.pdf): conceptes generals del servei APIM i com publicar les APIs.
+- [Manual del proveïdor d'APIs](/related/apim/APIM-Manual-Proveidor-APIs-V3.pdf): conceptes generals del servei APIM i com publicar les APIs.
 - [Manual de seguretat APIM](/related/apim/Manual_Seguretat_APIM_V2.0.pdf): conceptes generals de la seguretat del API Manager.
 
 ### Desenvolupament
@@ -44,7 +44,7 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdo
 
 ### Desplegament
 
-- [Guia de desplegament](/related/apim/Guía_de_desplegament_v1.2.pdf): guia de desplegament d'APIs i productes als entorns de l'API Manager Corporatiu.
+- [Guia de desplegament](/related/apim/Guía_de_desplegament_v2.pdf): guia de desplegament d'APIs i productes als entorns de l'API Manager Corporatiu.
 
 ## Consumidors
 
