@@ -67,6 +67,14 @@ _Release notes_:
 
 ### Azure
 
+#### [v1.1.0](https://github.com/ctti-arq/iac-azure-templates/tree/1.1.0/)
+
+_Release notes_:
+
+* Eliminats els mòduls per a la creació de Private DNS Zones.
+* Eliminades les referències i variables a Private DNS Zones a la resta de moduls.
+(Això es deu al fet que per polítiques de l'organització no es permet la creació de zones DNS Privades en els resource group d'aplicació, ni la vinculació dels private endpoints amb aquestes private DNS Zones per a la creació automàtica de registres. En el seu lloc, es crearà el private endpoint i posteriorment se sol·licitarà la creació dels registres sobre les Private DNS Zones de la NET0)
+
 #### [v1.0.0](https://github.com/ctti-arq/iac-azure-templates/tree/1.0.0/)
 
 * Arquitectura tipus per contenidors (CaaS)
