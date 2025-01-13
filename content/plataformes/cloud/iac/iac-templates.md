@@ -26,6 +26,15 @@ A continuació s'especifiquen les plantilles d'infraestructura disponibles pels 
 
 ### AWS
 
+#### [v1.2.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.2.0/)
+
+_Release notes_:
+
+* S'han inclòs Listener Rules en el ALB per a configurar l'autenticació amb OIDC.
+* S'han afegit blocs data per a la recuperació de certificat d'ACM, i KMS Customer Managed Key.
+* S'ha modificat la configuració de bases de dades (Aurora i DynamoDB) per a utilitzar la clau KMS recuperada amb un bloc data.
+* S'han afegit etiquetes a les bases de dades (Aurora i DynamoDB) per a incloure-les en el pla centralitzat de còpies de seguretat de l'organització.
+
 #### [v1.1.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.1.0/)
 
 _Release notes_:
@@ -64,13 +73,14 @@ _Release notes_:
 
     _Serveis_: Azure ContainerApps, Azure CosmosDB (PostgreSQL)
 
-    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-container
+    _Ubicació dins el repositori_: template-container
 
 * Arquitectura tipus per funcions (FaaS)
 
     _Serveis_: Azure Functions, Azure CosmosDB (MongoDB)
 
-    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-functions
+    _Ubicació dins el repositori_: template-functions
+
 
 ### GCP
 
