@@ -3,12 +3,11 @@
 date         = "2024-04-09"
 title        = "Roadmap"
 description  = "Roadmap de GitHub Enterprise Cloud (GHEC) a.k.a SIC+"
-weight      = "10"
+weight      = "11"
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-roadmap",
-    "/ghec/gh-roadmap",
-    "/plataformes/ghec/gh-roadmap"
+    "/ghec/gh-roadmap"
 ]
 +++
 
@@ -29,23 +28,18 @@ aliases = [
 - :heavy_check_mark: Certificació desplegaments continguts estàtics a AWS S3
 - :heavy_check_mark: Certificació desplegaments funcions a Azure Functions
 - :heavy_check_mark: Certificació desplegaments continguts estàtics a Azure Blob Storage​
-- (En progrés) PoC integració Marc d'Automatització de Testing (MAT): execució tests funcionals amb Selenium i definició rollback automàtic per contenidors
-- (En progrés) PoC integració Marc d'Automatització d'Observabilitat (MAO)​: healtcheck internet i definició rollback automàtic per contenidors
-- (En progrés) Definició model desplegaments delegats (en màquines virtuals, clusters Kubernetes, ...) i PoC​
-- (En progrés) Definició model desplegament bases de dades i PoC​
-- (En progrés) Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
+- :heavy_check_mark: PoC integració Marc d'Automatització de Testing (MAT): execució tests funcionals amb Selenium i definició rollback automàtic per contenidors
+- :heavy_check_mark: PoC integració Marc d'Automatització d'Observabilitat (MAO)​: healtcheck internet i definició rollback automàtic per contenidors
+- :heavy_check_mark: Definició model desplegaments delegats (en màquines virtuals, clusters Kubernetes, ...) i PoC​
+- :heavy_check_mark: Definició model desplegament bases de dades i PoC​
+- :heavy_check_mark: Integració d'aplicacions pilot, noves i existents: Platges, Binaris, ... (backlog d'unes 20 aplicacions)​
 
 ## [Q3/Q4 2024] 1.1.0​
 
-- Desplegaments avançats (Canary, Blue/Green, ...)*​
-- Self-hosted runner de tipus Deployer (per desplegar en registres Docker privats, només accessibles des de la xarxa corporativa)​
-- Certificació desplegaments a GCP​
-- Suport a .NET​
-- Suport Python (llenguatge a incorporar al Full de Ruta)​
-- Desplegaments en APIM (API Manager corporatiu)
-- CI/CD Apps mòbils
-- CI/CD MLOps
-- Integració completa amb MAT i MAO
-
+- :heavy_check_mark: Suport a .NET​ incloent llibreries
+- :heavy_check_mark: Desplegaments en APIM (API Manager corporatiu)
+- :construction_worker: Certificació desplegaments a GCP​
+- :construction_worker: Suport Python (llenguatge a incorporar al Full de Ruta)​ excloent llibreries (GitHub Packages no dona suport)
+- :construction_worker: Suport a construcció i desplegament als markets d'aplicacions mòbils Android i iOS
 
 *_Roadmap subjecte a canvis_

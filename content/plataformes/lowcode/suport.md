@@ -5,7 +5,7 @@ description = "Canals de suport de les plataformes LowCode"
 sections    = "LowCode"
 toc         = true
 taxonomies  = []
-weight      = 4
+weight      = 5
 +++
 
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/lowcode/faq) i utilitzeu els canals de comunicació que s'estableixen:

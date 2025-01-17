@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>{{.Title}}. {{ .Site.Title }}</title>
+	<title>{{.Title | emojify }}. {{ .Site.Title }}</title>
 
 	{{ partial "head.html" . }}
 	

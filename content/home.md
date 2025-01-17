@@ -17,6 +17,6 @@ destacats:
     link: /plataformes/cloud/
   - title: GICAR
     link: /plataformes/gicar/    
-  - title: SIC
-    link: /plataformes/sic/    
+  - title: SIC+
+    link: /plataformes/ghec/ 
 ---

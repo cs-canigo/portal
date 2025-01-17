@@ -227,6 +227,12 @@ S'indica el llistat de mòduls que han estat migrats de la versió 3.6 a la 3.8.
 - ***canigo.operation.logging***
 - ***canigo.test***
 - ***canigo.support.sftp***
+- ***canigo.integration.antivirus*** (Actualització de la documentació en curs)
+- ***canigo.integration.notificacions.electroniques*** (Actualització de la documentació en curs)
+- ***canigo.integration.notificacions.electroniques.ws*** (Actualització de la documentació en curs)
+- ***canigo.integration.pica*** (Actualització de la documentació en curs)
+- ***canigo.integration.psgd*** (Actualització de la documentació en curs)
+- ***canigo.integration.sarcat.pica*** (Actualització de la documentació en curs)
 
 ### canigo.root
 

@@ -239,16 +239,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Actualització per modificar el nom de \"Departament de Polítiques Digitals i Territori\" per \"Departament de Territori\", \"Departament d'Acció Exterior i Govern Obert\" per \"Departament d'Acció Exterior i Unió Europea\" i \"Departament de Justícia\" per \"Departament de Justícia, Drets i Memòria\". També s'han modificat els seus codis i el codi del \"Departament d'Educació\".",
                     "ifitxer_doc": "Departaments_ATR.docx",
-                    "ifitxer_xls": "Departaments.xlsx",
+                    "ifitxer_xls": "deprecated/Departaments_V04.xlsx",
                     "idatacreacio": "25/10/2022",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "10/09/2024",
                     "idatapublicacio": "26/10/2022",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització per modificar el nom de: Departament d'Economia i Finances: ECF,Departament d'Interior i Seguretat Pública: ISP,Departament de Justícia i Qualitat Democràtica: JUS,Departament de Territori, Habitatge i Transició Ecològica: TER,Departament de Salut: SLT,Departament d'Educació i Formació Professional: EDF,Departament de Drets Socials i Inclusió: DSI,Departament d'Empresa i Treball: EMT,Departament d'Igualtat i Feminisme: IFE,Departament d'Unió Europea i Acció Exterior: UEX,Departament d'Agricultura, Ramaderia, Pesca i Alimentació: ARP",
+                    "ifitxer_doc": "Departaments_ATR.docx",
+                    "ifitxer_xls": "Departaments.xlsx",
+                    "idatacreacio": "09/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "10/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -256,7 +271,7 @@
             "nom_dinsBD": "DEPARTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "10/09/2024"
         },
         {
             "Id": "dtarq102",
@@ -432,16 +447,46 @@
                 },
                 {
                     "inom": "V12",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Evolucionar la DR amb l'actualització de la descripció compartida per la UPR i es modifica el nom de dues direccions generals d'identificadors(4910,21721)",
                     "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                    "ifitxer_xls": "Direccions_Generals.xlsx",
+                    "ifitxer_xls": "deprectaed/Direccions_Generals_V12.xlsx",
                     "idatacreacio": "29/05/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "29/05/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V13",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                    "ifitxer_xls": "deprecated/Direccions_Generals_V13.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V14",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació d’ofici de l'entitat de Direccions Generals a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació.",
+                    "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Direccions_Generals.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -449,7 +494,7 @@
             "nom_dinsBD": "DIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq192",
@@ -636,16 +681,46 @@
                 },
                 {
                     "inom": "V08",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "S'han actualitzat els noms de les Secretaries Generals dels departaments.",
                     "ifitxer_doc": "Secretaries_ATR.docx",
-                    "ifitxer_xls": "Secretaries.xlsx",
+                    "ifitxer_xls": "deprected/Secretaries_V08.xlsx",
                     "idatacreacio": "19/12/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "20/12/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V09",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "S'han actualitzat els noms de les Secretaries Generals dels departaments.",
+                    "ifitxer_doc": "Secretaries_ATR.docx",
+                    "ifitxer_xls": "deprecated/Secretaries_V09.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V10",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació d’ofici de l'entitat de Secretaries Generals i sectorials a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació..",
+                    "ifitxer_doc": "Secretaries_ATR.docx",
+                    "ifitxer_xls": "Secretaries.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -653,7 +728,7 @@
             "nom_dinsBD": "SECRETARIES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/01/2021",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq194",
@@ -677,18 +752,63 @@
                     "iurl_dades_obertes": "",
                     "itipusactualitzacio": "Sota demanda"
                 },
-				{
+                {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Evolucionar la DR amb l'actualització de la descripció compartida per la UPR, es modifica el nom de tres direccions generals d'identificadors(14092,10869,16212) i una nova(23190)",
                     "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
-                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "ifitxer_xls": "deprecated/Subdireccions_Generals_V02.xlsx",
                     "idatacreacio": "29/05/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/05/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V03",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació de l'entitat de Subdireccions Generals, per evolucionar l'entitat i introduir les dues noves subdireccions, a causa del Decret 106/2024. Les noves subdireccions són les següents:  Subdirecció General de Suport i Relacions Contencioses,Subdirecció General d'Impuls i Seguiment Normatiu.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "deprectaed/Subdireccions_Generals_V03.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "deprecated/Subdireccions_Generals_V04.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Modificació d’ofici de l'entitat de Subdireccions Generals a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -696,7 +816,7 @@
             "nom_dinsBD": "SUBDIRECCIONS_GENERALS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/03/2024",
-            "Data_actualitzacio": "29/05/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq90",
@@ -737,16 +857,46 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Administració Local (DGAL)",
                     "idescripcio": "S'actualitza la denominació de l'ajuntament de \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
                     "ifitxer_doc": "Ajuntaments_ATR.docx",
-                    "ifitxer_xls": "Ajuntaments.xlsx",
+                    "ifitxer_xls": "deprecated/Ajuntaments_V03.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                    "idescripcio": "Canvi de nom de l'ajuntament “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Ajuntaments_ATR.docx",
+                    "ifitxer_xls": "deprecated/Ajuntaments_V04.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                    "idescripcio": "S'actualitza la denominació de l'ajuntament de a Bisbal de Falset (nom anterior) per la Bisbal de Montsant (nom actualitzat)",
+                    "ifitxer_doc": "Ajuntaments_ATR.docx",
+                    "ifitxer_xls": "Ajuntaments.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -754,7 +904,7 @@
             "nom_dinsBD": "AJUNTAMENTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq91",
@@ -874,7 +1024,7 @@
                     "ifitxer_xls": "Mancomunitats.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",																																																																											
+                    "idataobsoleta": "",
                     "idatapublicacio": "28/06/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Mancomunitats/96mh-m3ge",
                     "itipusactualitzacio": "Sota demanda"
@@ -1625,16 +1775,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
                     "idescripcio": "Versió inicial.",
-                    "ifitxer_doc": "Delictes_ATR.docx",
-                    "ifitxer_xls": "Delictes.xlsx",
+                    "ifitxer_doc": "deprecated/Delictes_ATR_V01.docx",
+                    "ifitxer_xls": "deprecated/Delictes_V01.xlsx",
                     "idatacreacio": "25/04/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/10/2024",
                     "idatapublicacio": "28/06/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Modernització de l'Administració de Justícia - Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Modificació per introduir les últimes modificacions del Codi Penal en matèria de delictes contra la llibertat sexual i de maltractament d'animals. I dos camps sobre l'inici i final de vigència dels delictes que publica el CTEAJE.",
+                    "ifitxer_doc": "Delictes_ATR.docx",
+                    "ifitxer_xls": "Delictes.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Delictes/bm5b-6t6f",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -1642,7 +1807,7 @@
             "nom_dinsBD": "DELICTES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2023",
-            "Data_actualitzacio": "28/06/2023"
+            "Data_actualitzacio": "30/10/2024"
         },
         {
             "Id": "dtarq147",
@@ -1939,16 +2104,31 @@
                 },
                 {
                     "inom": "V06",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "Els canvis respecte de la versió anterior són només en el nom de tres ABS.106    CERVERA - LA SEGARRA,230    SANTA PERPÈTUA DE MOGODA,325    PINEDA DE MAR",
                     "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
-                    "ifitxer_xls": "Arees_basiques_salut.csv",
+                    "ifitxer_xls": "Arees_basiques_salut_V06.csv",
                     "idatacreacio": "27/03/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "27/03/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V07",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Salut",
+                    "idescripcio": "Modificació de la delimitació de 3 àrees bàsiques de salut, SABADELL 3B, SABADELL 4-A i SABADELL 4-B",
+                    "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                    "ifitxer_xls": "Arees_basiques_salut.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -1956,7 +2136,7 @@
             "nom_dinsBD": "AREES_BASIQUES_SALUT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/04/2022",
-            "Data_actualitzacio": "27/03/2024"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq158",
@@ -2012,16 +2192,31 @@
                 },
                 {
                     "inom": "V04",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "S'afegeix la geometria de cada regió sanitària i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries.",
-                    "ifitxer_doc": "Regions_sanitaries_ATR.docx",
-                    "ifitxer_xls": "Regions_sanitaries.csv",
+                    "ifitxer_doc": "deprecated/Regions_sanitaries_ATR_V04.docx",
+                    "ifitxer_xls": "Regions_sanitaries_V04.csv",
                     "idatacreacio": "31/01/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Salut",
+                    "idescripcio": "La geometria de les Regions sanitàries es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria de les Regions sanitàries.",
+                    "ifitxer_doc": "Regions_sanitaries_ATR.docx",
+                    "ifitxer_xls": "Regions_sanitaries.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2029,7 +2224,7 @@
             "nom_dinsBD": "REGIONS_SANITARIES",
             "Classificacio": "Consolidat",
             "Data_publicacio": "22/12/2021",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq159",
@@ -2055,16 +2250,31 @@
                 },
                 {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Departament de Salut",
                     "idescripcio": "S'afegeix la geometria de cada sector sanitari i s'actualitza el conjunt de valors segons la reestructuració de les regions sanitàries i els sectors sanitaris.",
                     "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
-                    "ifitxer_xls": "Sectors_sanitaris.csv",
+                    "ifitxer_xls": "Sectors_sanitaris_V02.csv",
                     "idatacreacio": "31/01/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V03",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Salut",
+                    "idescripcio": "La geometria dels Sectors sanitaris es defineix per l’agregació d’Àrees bàsiques de salut, com s’han modificat 3 ABS, s’ha recalculat la geometria dels Sectors sanitaris.",
+                    "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
+                    "ifitxer_xls": "Sectors_sanitaris.csv",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2072,7 +2282,7 @@
             "nom_dinsBD": "SECTORS_SANITARIS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "27/04/2022",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq172",
@@ -2344,9 +2554,9 @@
         {
             "Id": "dtarq48",
             "Nom": "Gènere",
-            "Ambit": "Societat i ciutadania",
+            "Ambit": "Societat, ciutadania i famílies",
             "Subambit": "Atenció ciutadana i relacions amb l'administració",
-            "Descripcio": "Llistat dels grups en què es pot dividir el conjunt d’individus segons certes característiques psicològiques, socials i culturals.",
+            "Descripcio": "Conjunt de característiques socials, culturals, polítiques, psicològiques, jurídiques i econòmiques construïdes socioculturalment que la societat assigna a les persones de manera diferenciada, com a pròpies d’homes i dones.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -2365,24 +2575,39 @@
                 },
                 {
                     "inom": "V02",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
-                    "ipromotor": "Departament d'Igualtat i Feminismes",
+                    "ipromotor": "Direcció General de Polítiques Públiques LGBTI+",
                     "idescripcio": "Es modifica el nom \"No binari\" (valor anterior) per \"No-binari\" (valor actualitzat).",
                     "ifitxer_doc": "Genere_ATR.docx",
-                    "ifitxer_xls": "Genere.xlsx",
+                    "ifitxer_xls": "deprecated/Genere_V02.xlsx",
                     "idatacreacio": "26/09/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "30/09/2024",
                     "idatapublicacio": "27/09/2023",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/G-nere/rpg6-9mu9",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V03",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Polítiques Públiques LGBTI+",
+                    "idescripcio": "Modificació d'Ofici de l'entitat Gènere, arran d'una revisió del conjunt de dades, descripció i òrgan promotor.",
+                    "ifitxer_doc": "Genere_ATR.docx",
+                    "ifitxer_xls": "Genere.xlsx",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/resource/rpg6-9mu9",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
             "nom_dinsBD": "GENERE",
             "Classificacio": "Consolidat",
             "Data_publicacio": "31/03/2021",
-            "Data_actualitzacio": "27/09/2023"
+            "Data_actualitzacio": "30/09/2024"
         },
         {
             "Id": "dtarq54",
@@ -2720,16 +2945,46 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització per canvi de nom d'un municipi: Castell-Platja d'Aro (nom anterior) per Castell d'Aro, Platja d'Aro i s'Agaró (nom actualitzat). Identificadors dels registres afectats: 0505, 0506, 0507.",
                     "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
-                    "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                    "ifitxer_xls": "deprecated/Codi_Postal_Municipis_Cat_V03.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                    "ifitxer_xls": "deprecated/Codi_Postal_Municipis_Cat_V04.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V05",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Modificació de l’entitat de Codis postals per municipis de Catalunya, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                    "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2737,7 +2992,7 @@
             "nom_dinsBD": "CODI_POSTAL_MUNICIPIS_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "26/05/2021",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq82",
@@ -2980,16 +3235,46 @@
                 },
                 {
                     "inom": "V07",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                     "idescripcio": "Actualització per canvi nom del municipi de codi 170486: \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
                     "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
-                    "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Catalunya_Geo_V07.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V08",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                    "ifitxer_xls": "deprecated/Municipis_Catalunya_Geo_V08.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V09",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Modificació de l’entitat de Municipis de Catalunya Geo, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                    "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -2997,7 +3282,7 @@
             "nom_dinsBD": "MUNICIPIS_CAT_GEO",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq87",
@@ -3278,16 +3563,61 @@
                 },
                 {
                     "inom": "V19",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització del nom d'un municipi a causa d'una correcció realitzada per IDESCAT. El municipi amb nom Láujar de Andarax i CODI 040577 passa a denominar-se Laujar de Andarax, amb el mateix CODI.",
                     "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V19.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V20",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V20.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V21",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Modificació de l’entitat de Municipis d’Espanya, a causa de la modificació del nom del municipi de Moncada amb CODI: 461712 a Montcada/Moncada amb el mateix CODI.",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "deprecated/Municipis_Espanya_V21.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V22",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3295,7 +3625,7 @@
             "nom_dinsBD": "MUNICIPIS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "20/04/2020",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "19/12/20244"
         },
         {
             "Id": "dtarq127",
@@ -3409,16 +3739,46 @@
                 },
                 {
                     "inom": "V06",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                     "idescripcio": "Canvi en l'estructura de la dada.",
                     "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V06.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "31/01/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V07",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                    "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V07.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V08",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                    "idescripcio": "Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271",
+                    "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3426,7 +3786,7 @@
             "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "21/04/2021",
-            "Data_actualitzacio": "31/01/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq125",
@@ -3437,16 +3797,31 @@
             "instancies": [
                 {
                     "inom": "V01",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Versió inicial.",
                     "ifitxer_doc": "Territori_NUTS_ATR.docx",
-                    "ifitxer_xls": "Territori_NUTS.xlsx",
+                    "ifitxer_xls": "deprecated/Territori_NUTS_V01.xlsx",
                     "idatacreacio": "09/03/2020",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "28/11/2024",
                     "idatapublicacio": "17/02/2021",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Modificació de l’entitat de NUTS, Nomenclatura d’unitats territorials estadístiques europea, a causa de l'última versió de la NUTS, publicada al DOUE L87, de 24 de març de 2023.",
+                    "ifitxer_doc": "Territori_NUTS_ATR.docx",
+                    "ifitxer_xls": "Territori_NUTS.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nomenclatura-d-unitats-territorials-estad%C3%ADstiques/v467-kzwi",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3454,7 +3829,7 @@
             "nom_dinsBD": "NUTS",
             "Classificacio": "Consolidat",
             "Data_publicacio": "17/02/2021",
-            "Data_actualitzacio": "17/02/2021"
+            "Data_actualitzacio": "28/11/2024"
         },
         {
             "Id": "dtarq131",
@@ -3568,16 +3943,31 @@
                 },
                 {
                     "inom": "V03",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
                     "idescripcio": "Actualització trimestral segons l'última versió del fitxer font enviada pel promotor.",
                     "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Poligons_Industrials_Catalunya_V03.xlsx",
                     "idatacreacio": "27/02/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "19/12/2024",
                     "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V04",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General d'Indústria (Àrea d'Actuacions Industrials) - Departament d'Empresa i Treball",
+                    "idescripcio": "Actualització trimestral segons la darrera versió del fitxer font enviada pel promotor",
+                    "ifitxer_doc": "Poligons_Industrials_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Poligons_Industrials_Catalunya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pol%C3%ADgons-industrials-de-Catalunya/5asc-f6cw",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3585,7 +3975,7 @@
             "nom_dinsBD": "POLIGONS_INDUSTRIALS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "31/01/2024",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq85",
@@ -3800,16 +4190,46 @@
                 },
                 {
                     "inom": "V05",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Actualització per canvi nom del municipi de codi 1704860000000: \"Castell-Platja d'Aro\" (nom anterior) per \"Castell d'Aro, Platja d'Aro i s'Agaró\" (nom actualitzat).",
                     "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V05.xlsx",
                     "idatacreacio": "29/11/2023",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "29/11/2023",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V06",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V06.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V07",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271",
+                    "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -3817,7 +4237,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "04/12/2020",
-            "Data_actualitzacio": "29/11/2023"
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq140",
@@ -4083,24 +4503,69 @@
                 },
                 {
                     "inom": "V18",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                     "idescripcio": "En realitzar-se la modificació del Municipi de Laujar de Andarax , també és necessari modificar l'entitat d'Unitats Poblacionals d'Espanya, ja que els noms de municipis i els de les unitats poblacionals estan relacionats.",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V18.xlsx",
                     "idatacreacio": "28/06/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "26/07/2024",
                     "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V19",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Canvi de nom del municipi “Masarac” (nom anterior) per “Masarac i Vilarnadal” (nom actualitzat).",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "deprectaed/Unitats_Poblacionals_Espanya_V19.xlsx",
+                    "idatacreacio": "26/07/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "26/07/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V20",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Canvi de nom del municipi “Moncada” (nom anterior) per “Montcada/Moncada” (nom actualitzat), amb CODI: 461712",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V20.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "19/12/2024",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V21",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Modificació de l’entitat d'Unitats Poblacionals d'Espanya, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
             "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
             "Classificacio": "Consolidat",
-            "Data_publicacio": "31/03/2021",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_publicacio": "10/07/2020",
+            "Data_actualitzacio": "19/12/2024"
         },
         {
             "Id": "dtarq175",
@@ -4442,7 +4907,7 @@
             "Data_publicacio": "27/03/2024",
             "Data_actualitzacio": "27/03/2024"
         },
-		{
+        {
             "Id": "dtarq198",
             "Nom": "Divises",
             "Ambit": "Economia",
@@ -4470,7 +4935,7 @@
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
         },
-		{
+        {
             "Id": "dtarq199",
             "Nom": "Entitats bancàries",
             "Ambit": "Economia",
@@ -4612,59 +5077,371 @@
         },
         {
             "Id": "dtarq104",
-            "Nom": "Àmbits territorials de planificació",
+            "Nom": "Àmbits Funcionals Territorials",
             "Ambit": "Territori, infraestructures i urbanisme",
             "Subambit": "Ordenació del territori , paisatge i urbanisme",
-            "Descripcio": "Àmbits territorials de planificació, 8 arees",
-            "instancies": [
-                {
-                    "inom": "V00.01",
-                    "iestat": "Pendent",
-                    "itipus": "Tabular",
-                    "ipromotor": "DGAD",
-                    "idescripcio": "Versió inicial",
-                    "ifitxer_doc": "Ambits_territorials_planificacio_ATR.docx",
-                    "ifitxer_xls": "",
-                    "idatacreacio": "29/04/2024",
-                    "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
-                    "idatapublicacio": "29/04/2024",
-                    "iurl_dades_obertes": "",
-                    "itipusactualitzacio": "Sota demanda"
-                }
-            ],
-            "nom_dinsBD": "AMBIT_TERRITORIALS_PLANIFICACIO",
-            "Classificacio": "Pendent",
-            "Data_publicacio": "29/04/2024",
-            "Data_actualitzacio": "29/04/2024"
-        },       
-		{
-            "Id": "dtarq203",
-            "Nom": "Centres Peniteniaris de Catalunya",
-            "Ambit": "Justícia i dret",
-            "Subambit": "Execució penal i reinserció",
-            "Descripcio": "Llistat dels centres penitenciaris de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen dues tipologies de centre: Centre Penitenciari i Centre Obert.",
+            "Descripcio": "Llistat d'àmbits de la planificació territorial en què es divideix el territori. Són agrupacions de comarques per al desenvolupament dels plans territorials parcials, competència del Departament de Territori. El Pla territorial general de Catalunya (PTGC), aprovat per la Llei 1/1995, de 16 de març, va definir sis àmbits funcionals. Aquests es va modificar mitjançant la Llei 24/2001, de 31 de desembre, per tal de reconèixer reconeixent l'Alt Pirineu i Aran com a nova àrea funcional diferenciada de l'àmbit de Ponent. Posteriorment, la Llei 23/2010, del 22 de juliol, va crear l’àmbit funcional del Penedès, format per les comarques de l’Alt Penedès, el Baix Penedès, el Garraf i alguns municipis de la comarca de l’Anoia.",
             "instancies": [
                 {
                     "inom": "V01",
                     "iestat": "Vigent",
                     "itipus": "Tabular",
-                    "ipromotor": "Departament de Justícia, Drets i Memòria",
+                    "ipromotor": "Direcció General d'Ordenació del Territori, Urbanisme i Arquitectura",
                     "idescripcio": "Versió inicial",
-                    "ifitxer_doc": "CENTRES_PENITENCIARIS_ATR.docx",
-                    "ifitxer_xls": "CENTRES_PENITENCIARIS.xlsx",
-                    "idatacreacio": "28/06/2024",
-                    "itipusvisual": "28/06/2024",
+                    "ifitxer_doc": "Àmbits_funcionals_territorials_ATR.docx",
+                    "ifitxer_xls": "Àmbits_funcionals_territorials.xlsx",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "Ús no restringit",
                     "idataobsoleta": "",
-                    "idatapublicacio": "28/06/2024",
-                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Centres-Penitenciaris-de-Catalunya/uqse-8meb/",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/resource/xbmu-sz7e",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
-            "nom_dinsBD": "CENTRE_PENINTENCIARIS_CAT",
+            "nom_dinsBD": "AMBITS_FUNCIONALS_TERRITORIALS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "30/09/2024"
+        },
+        {
+            "Id": "dtarq203",
+            "Nom": "Recursos d'Execució Penal de Catalunya",
+            "Ambit": "Justícia i dret",
+            "Subambit": "Execució penal i reinserció",
+            "Descripcio": "Llistat dels centres d’execució penal de Catalunya, amb la seva codificació i vigència. En aquest llistat es contemplen tres tipologies de centre: Centre Penitenciari, Centre Obert i Centre Educatiu de Justícia Juvenil.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "deprectaed/CENTRES_PENITENCIARIS_ATR.docx",
+                    "ifitxer_xls": "deprectaed/CENTRES_PENITENCIARIS.xlsx",
+                    "idatacreacio": "28/06/2024",
+                    "itipusvisual": "28/06/2024",
+                    "idataobsoleta": "30/10/2024",
+                    "idatapublicacio": "28/06/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament de Justícia, Drets i Memòria",
+                    "idescripcio": "Modificació de l’entitat de Centres Penitenciaris, per introduir nous recursos d’execució penal, Centre Educatiu de Justícia Juvenil i modificar la codificació per adaptar-la a les noves tipologies",
+                    "ifitxer_doc": "DR_Recursos_EP_ATR.docx",
+                    "ifitxer_xls": "DR_Recursos_EP.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci-just-cia/Recursos-d-Execuci-Penal-de-Catalunya/uqse-8meb",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "DR_RECURS_EP_CAT",
             "Classificacio": "Consolidat",
             "Data_publicacio": "28/06/2024",
-            "Data_actualitzacio": "28/06/2024"
+            "Data_actualitzacio": "30/10/2024"
+        },
+        {
+            "Id": "dtarq204",
+            "Nom": "Unitats del sector públic institucional assimilades a secretaria general",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat d’unitats amb rang orgànic assimilat a secretaria general en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats de dret públic de naturalesa singular.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Secretaries_Setctor_Public_ATR.docx",
+                    "ifitxer_xls": "deprectaed/UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL_V01.xslx",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "Secretaries_Setctor_Public_ATR.docx",
+                    "ifitxer_xls": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL.xslx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "28/11/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Unitats-del-sector-p-blic-institucional-assimilade/fec4-nnbn/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_SECRETARIA_GENERAL",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "28/11/2024"
+        },
+        {
+            "Id": "dtarq205",
+            "Nom": "Unitats del sector públic institucional assimilades a direcció general",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat d’unitats amb rang orgànic assimilat a direcció general en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Direccions_Setctor_Public_ATR.docx",
+                    "ifitxer_xls": "deprecated/UNITATAS SECTOR_PUBLICO_ASSIMILADES_DIRECCIO_GENERAL_V01.xslx",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "Direccions_Setctor_Public_ATR.docx",
+                    "ifitxer_xls": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_DIRECCIO_GENERAL.xslx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "28/11/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Unitats-del-sector-p-blic-institucional-assimilade/skqb-r34e/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "UNITATAS SECTOR_PUBLICO_ASSIMILADES_DIRECCIO_GENERAL",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "28/11/2024"
+        },
+        {
+            "Id": "dtarq206",
+            "Nom": "Unitats del sector públic institucional amb rang de subdirecció general",
+            "Ambit": "Administració pública, govern i relacions institucionals",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat d’unitats amb rang de subdireccions generals en què s’organitzen les entitats del sector públic institucional. De les entitats del sector públic institucional només s'inclouen les següents: Entitats autònomes administratives / Entitats autònomes comercials, industrials o financeres / Entitats de dret públic de naturalesa singular / Entitats de dret públic sotmeses a l’ordenament jurídic privat.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Obsoleta",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
+                    "ifitxer_xls": "deprected/SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_V01.xlsx",
+                    "idatacreacio": "30/09/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "28/11/2024",
+                    "idatapublicacio": "30/09/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+				{
+                    "inom": "V02",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització segons la nova estructura de Govern, XV Legislatura.",
+                    "ifitxer_doc": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL_ATR.docx",
+                    "ifitxer_xls": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "30/09/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals-del-sector-p-blic-instituci/6rbu-cawt/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "SUBDIRECCIONS_SECTOR_PUBLIC_INSTITUCIONAL",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/09/2024",
+            "Data_actualitzacio": "28/11/2024"
+        },
+		{
+            "Id": "dtarq207",
+            "Nom": "Residus del Catàleg de Residus de Catalunya",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Llistat de residus recollits en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RESIDUS_ATR.docx",
+                    "ifitxer_xls": "RESIDUS.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Residus-del-Cat-leg-de-Residus-de-Catalunya/g4av-babz/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RESIDUS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq208",
+            "Nom": "Vies de gestió de residus",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "VIES_GESTIO_RESIDUS_ATR.docx",
+                    "ifitxer_xls": "VIES_GESTIO_RESIDUS.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Vies-de-gesti-de-residus/k6it-vuah/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "VIES_RESIDUS_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq209",
+            "Nom": "Relació dels residus amb les vies ",
+            "Ambit": "Medi ambient",
+            "Subambit": "Residus",
+            "Descripcio": "Relació dels residus amb les seves vies i subvies de gestió permeses, segons el definit en el Catàleg de Residus de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Agència de Residus de Catalunya",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RELACIO_RESIDUS_VIES_ATR.docx",
+                    "ifitxer_xls": "RELACIO_RESIDUS_VIES.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Relaci-dels-residus-amb-les-vies/brs8-gkwr/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RELACIO_RESIDUS_VIES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq210",
+            "Nom": "Zones Climàtiques segons el Codi Tècnic d’Edificació",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Ordenació del territori , paisatge i urbanisme",
+            "Descripcio": "El Codi Tècnic de l'Edificació (CTE) classifica les Zones Climàtiques en funció de la severitat climàtica. L'hivern mitjançant lletres que van de la A (condicions climàtiques menys severes) a la E i segons les condicions d'estiu amb números que van de l'1 (condicions climàtiques menys severes) al 4. Aquesta classificació després s'utilitza per calcular la qualificació energètica o sol·licitar ajuts per la rehabilitació d'edificis.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Ministerio de Vivienda y Agenda Urbana",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "Zones_Climatiques_ATR.docx",
+                    "ifitxer_xls": "Zones_Climatiques.xlsx",
+                    "idatacreacio": "30/10/2024",
+                    "itipusvisual": "30/10/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "30/10/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Energia/Zones-Clim-tiques-segons-el-Codi-T-cnic-d-Edificac/55w8-2h5p/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "ZONES_CLIMATIQUES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "30/10/2024",
+            "Data_actualitzacio": "30/10/2024"
+        },
+		{
+            "Id": "dtarq211",
+            "Nom": "Infraestructures aeroportuàries de Catalunya",
+            "Ambit": "Territori, infraestructures i urbanisme",
+            "Subambit": "Obres públiques i infraestructures",
+            "Descripcio": "Ubicació del Punt de Referència de les infraestructures aeroportuàries de Catalunya amb el nom del gestor i les diferents tipologies d'infraestructura aeroportuària.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Direcció General de Transports i Mobilitat",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "INFRAESTRUCTURES_AEROPORTUARIES_ATR.docx",
+                    "ifitxer_xls": "INFRAESTRUCTURES_AEROPORTUARIES.xlsx",
+                    "idatacreacio": "28/11/2024",
+                    "itipusvisual": "28/11/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "28/11/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Infraestructures-aeroportu-ries-de-Catalunya/d9uf-3de8",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "INFRAESTRUCTURES_AEROPORTUARIES_CAT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "28/11/2024",
+            "Data_actualitzacio": "28/11/2024"
+        },
+		{
+            "Id": "dtarq212",
+            "Nom": "Comissionats",
+            "Ambit": "Administració pública",
+            "Subambit": "Organització de l'administració i sector públic",
+            "Descripcio": "Llistat de comissionats d'àmbit d'actuació específic de l'Administració de la Generalitat de Catalunya.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "COMISSIONATS_ATR.docx",
+                    "ifitxer_xls": "COMISSIONATS.xlsx",
+                    "idatacreacio": "19/12/2024",
+                    "itipusvisual": "19/12/2024",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "19/12/2024",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Comissionats/sv5v-y7k7/about_data",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "COMISSIONATS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "19/12/2024",
+            "Data_actualitzacio": "19/12/2024"
         }
     ]
 }

@@ -26,6 +26,22 @@ A continuació s'especifiquen les plantilles d'infraestructura disponibles pels 
 
 ### AWS
 
+#### [v1.2.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.2.0/)
+
+_Release notes_:
+
+* S'han inclòs Listener Rules en el ALB per a configurar l'autenticació amb OIDC.
+* S'han afegit blocs data per a la recuperació de certificat d'ACM, i KMS Customer Managed Key.
+* S'ha modificat la configuració de bases de dades (Aurora i DynamoDB) per a utilitzar la clau KMS recuperada amb un bloc data.
+* S'han afegit etiquetes a les bases de dades (Aurora i DynamoDB) per a incloure-les en el pla centralitzat de còpies de seguretat de l'organització.
+
+#### [v1.1.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.1.0/)
+
+_Release notes_:
+
+* S'ha modificat la configuració dels recursos per a complir amb les polítiques de seguretat i estàndards definits per l'organització.
+* S'ha modificat la configuració dels recursos i blocs 'data' per a incloure la possibilitat d'utilitzar un model de Networking amb dos rangs CIDR (Subxarxes enrutables i no enrutables)
+
 #### [v1.0.0](https://github.com/ctti-arq/iac-aws-templates/tree/1.0.0/)
 
 _Release notes_:
@@ -51,19 +67,28 @@ _Release notes_:
 
 ### Azure
 
- :warning: **Les plantilles que es poden trobar en aquesta secció estan en fase de validació pel que encara no es recomana el seu ús per part de les aplicacions**
+#### [v1.1.0](https://github.com/ctti-arq/iac-azure-templates/tree/1.1.0/)
+
+_Release notes_:
+
+* Eliminats els mòduls per a la creació de Private DNS Zones.
+* Eliminades les referències i variables a Private DNS Zones a la resta de moduls.
+(Això es deu al fet que per polítiques de l'organització no es permet la creació de zones DNS Privades en els resource group d'aplicació, ni la vinculació dels private endpoints amb aquestes private DNS Zones per a la creació automàtica de registres. En el seu lloc, es crearà el private endpoint i posteriorment se sol·licitarà la creació dels registres sobre les Private DNS Zones de la NET0)
+
+#### [v1.0.0](https://github.com/ctti-arq/iac-azure-templates/tree/1.0.0/)
 
 * Arquitectura tipus per contenidors (CaaS)
 
     _Serveis_: Azure ContainerApps, Azure CosmosDB (PostgreSQL)
 
-    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-container
+    _Ubicació dins el repositori_: template-container
 
 * Arquitectura tipus per funcions (FaaS)
 
     _Serveis_: Azure Functions, Azure CosmosDB (MongoDB)
 
-    _Codi font_: https://github.com/ctti-arq/iac-azure-templates/tree/master/template-functions
+    _Ubicació dins el repositori_: template-functions
+
 
 ### GCP
 

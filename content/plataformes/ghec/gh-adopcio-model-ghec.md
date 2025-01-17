@@ -4,15 +4,16 @@ date         = "2024-04-19"
 title        = "Nou model de CI/CD a cloud públic"
 description  = "Guies necessàries per la integració al nou model de CI/CD a cloud públic"
 weight      = "1"
+toc         = true
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-adopcio-model-ghec",
-    "/ghec/gh-adopcio-model-ghec",
-    "/plataformes/ghec/gh-adopcio-model-ghec"
+    "/ghec/gh-adopcio-model-ghec"
 ]
 +++
 
-## Objectiu 🚀
+## Introducció
+
 El present document descriu les guies necessàries per la integració d'aplicacions al nou model de CI/CD a cloud públic.
 
 A continuació, es descriuen els principals objectius que es busquen en implantar aquest model i que impacta en la gestió i automatització del cicle de vida de les aplicacions, construcció, qualitat i desplegaments.
@@ -37,6 +38,8 @@ Com s'ha comentat en el punt anterior, aquest és el primer pas cap a un model s
 El procés d'integració actualment és el següent :
 
   ![Procés de creació de Model GHEC](/images/GHEC/gh_proceso_automatico_pub.png) 
+ 
+ **IMPORTANT : Abans de sol·licitar el onboarding del projecte, és important revisar les diferents capacitats tecnològiques que actualment té la plataforma en el següent document [capacitats tecnològiques](../gh-capacitat-tecnologiques)**
 
 1. **Onboarding del projecte**
 
@@ -74,10 +77,17 @@ El procés d'integració actualment és el següent :
       | Nom tècnic component | Tipus de Repositori | Categoria | Engine | Tecnologia | Versió |
       |----------------------|---------------------|-----------|--------|------------|--------|
       | NomTecComponent1     | backend             | container | ecs    | java       | 17     |
-      | NomTecComponent2     | backend             | container | ecs    | node       | 18.1   |
+      | NomTecComponent2     | backend             | container | ecs    | nodejs     | 18.1   |
       | NomTecComponent3     | infra               | infra     | N/A    | N/A        | N/A    |
       | NomTecComponent4     | backend             | function  | lambda | java       | 17     |
-    
+      | NomTecComponent5     | backend             | container | ecs    | dotnet     | 8      |
+      | NomTecComponent6     | apim                | apim      | N/A    | apim       | N/A    |
+      | NomTecComponent7     | backend             | container | ecs    | python     | 3.10   |
+      | NomTecComponent8     | backend             | function  | lambda | python     | 3.10   |
+      | NomTecComponent9     | library             | library   | N/A    | java-gradle| 8.10   |
+      | NomTecComponent10    | mobile              | app       | N/A    | ios        | N/A    |
+      | NomTecComponent11    | mobile              | app       | N/A    | android    | N/A    |
+
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
         + backend
@@ -85,6 +95,8 @@ El procés d'integració actualment és el següent :
         + library
         + infra
         + executor
+        + apim
+        + mobile
 
       + Categoria  :
         + container : Desplegament de una imatge de contenidors.
@@ -95,11 +107,14 @@ El procés d'integració actualment és el següent :
         + kubernetes :  Desplegament estès a Kubernetes.
         + database :  Desplegament estès de scripts de Base de Dades.
         + vm :  Desplegament estès de Màquines Virtuals. 
+        + apim: Desplegament estès de Api en API Manager
+        + app: Desplegament d'una aplicació mòbil
 
         Amb les següents restriccions :
         - Si " Tipus de repositori " = "backend" els possibles valors de categoria són : container | function
         - Si " Tipus de repositori " = "frontend" els possibles valors de categoria són : container | static
         - Si " Tipus de repositori " = "executor" els possibles valors de categoria són : kubernetes | database | vm
+        - Si " Tipus de repositori " = "mobile" els possibles valors de categoria són : app | library
 
       + Engine : 
         + ecs : Elastic Container Service.
@@ -108,6 +123,17 @@ El procés d'integració actualment és el següent :
         + afunc : Azure Function.
         + s3 : AWS Storage
         + ablobstorage : Azure Storage
+
+      + Tecnologia : 
+        + java/maven
+      	+ java-gradle
+        + nodejs
+        + dotnet. **IMPORTANT .Net Framework no està suportat**
+        + apim
+        + python
+        + ios
+        + android
+        
       
     + **Migració del CI/CD nadiu d'AWS o Azure a GHEC**
 
@@ -142,42 +168,28 @@ El procés d'integració actualment és el següent :
         + </departament/>-</entitat/>-read: Per a Gestors de Solucions / Entrega de l'àmbit.
 
         Una vegada creats els grups, cal que l'owner o owners identificats donin d'alta els diferents usuaris en els grups pertinents depenent del rol que han de realitzar (Maintain o Write).
-        
-      
-        Només cal actualitzar els grups de Maintain i Write, donat que la resta seran informats automàticament pel procés automàtic.
-                
-        Per executar aquesta tasca, l'owner disposarà de l'aplicació **myaccount** de Microsoft on haurà de: 
 
-          1. Accedir a MyGroups per a l'organització de la Generalitat de Catalunya.
-            [https://myaccount.microsoft.com/groups](https://myaccount.microsoft.com/groups)
-            
-              Les credencials d'accés són les de Generalitat de Catalunya, introduint l'usuari @gencat.cat.
+        Al següent enllaç es detalla com és la gestió d'usuaris, a més de com es gestionen les llicències de GitHub Enterprise Cloud --> [Gestió d'usuaris i llicències](../gh-gestio-usuaris-llicencies)
+
+
+      + **Configuració Inicial**
+
+        Les plantilles dels diferents tipus de workflows es poden trobar als següents repositoris. Accedir en cas de necessitar configurar els workflows de nou, i per conèixer els diferents paràmetres existents i configurables:
+
+        - Container template --> [container-template](https://github.com/ctti-arq/container-template)
+        - Function template --> [function-template](https://github.com/ctti-arq/function-template)
+        - Static template --> [static-template](https://github.com/ctti-arq/static-template)
+        - Infrastructure template --> [infrastructure-template](https://github.com/ctti-arq/infrastructure-template)
+        - Library template --> [library-template](https://github.com/ctti-arq/library-template)
+        - Extended deployment template --> [extended-template](https://github.com/ctti-arq/executor-template)
+        - API's deployment template --> [API's-template](https://github.com/ctti-arq/apim-template)
+        - Mobile App iOS template --> [mobile-app-ios-template](https://github.com/ctti-arq/mobile-app-ios-template)
+        - Mobile App Android template --> [mobile-app-android-template](https://github.com/ctti-arq/mobile-app-android-template)
+        - Mobile Library iOs template --> [obile-library-ios-template](https://github.com/ctti-arq/obile-library-ios-template)
+
+        El workflow cridant necessita configurar una sèrie de parametres per al workflow anomenat. Aquests paràmetres estan explicats a la següent documentació [Configuració workflows](../gh-configuracio-workflows).
+
           
-              ![Grups credencials ](/images/GHEC/gh-mygroups-credenciales.png)
-            
-          2. Un cop ha iniciat sessió, l'owner disposarà d'una opció de menú per veure tots els grups dels quals té el rol d'Owner i que podrà gestionar afegint o eliminant usuaris des de l'opció "Groups I Own".
-
-              ![Grups](/images/GHEC/gh-mygroups.png)
-
-          3. Seleccionant el grup que vulgui modificar, tindrà la possibilitat d'afegir/eliminar usuaris. Per a això existeixen dues opcions de menú "Members" i "Owner" on, clicant en el botó "Add" podrà buscar els usuaris i afegir-los amb diferents permisos "Members" i "Owners" :
-
-                ![Grups](/images/GHEC/gh-mygroups-add.png)
-
-                + Permisos d'Owner : El nou usuari podrà ser Owner del grup i li permetrà poder afegir a altres usuaris.
-                + Permisos de Member : El nou usuari serà Member del grup.  NO podrà afegir altres usuaris.
-                + Permisos d'Owner i Member : El nou usuari serà Membre i Owner del grup.
-              
-                  ![Grups](/images/GHEC/gh-mygroups-addinguser.png)
-
-               **Els usuaris a afegir són els pertanyents al domini @gencat.cat**
-
-          4. Una vegada sincronitzat Azure Entra ID amb GHEC, els usuaris inserits/eliminats es veuran reflectits en GHEC en els Teams vinculats als grups d'Entra ID i automàticament se li assignaran permiSsos depenent del Team.
-      
-          Per a més informació, es pot consultar [Jerarquia i nomenclatura de Teams i nomenclatura de Repositoris ](../gh-model-govern) amb informació addicional de la creació de teams.
-
-          Addicionalment, en el següent Link, es podran consultar els permisos de cada rol [Roles y permisos de Repositoris ](../gh-rols-repositori).
-
-
       + **Configuració Inicial per a invocacions ITSM**
 
         Dins dels diferents workflows de CD, existiran steps encarregats de realitzar invocacions a ITSM (Remedy) en les quals es crearan WorkOrders on s'indicarà que el sistema està realitzant un desplegament d'una aplicació i l'estat final d'aquest desplegament.
@@ -268,7 +280,7 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
     + static: WorkFlows per desplegar Contingut Estàtic.
     + container: Repositoris per desplegar Contenidors.
     + infra: Repositoris per desplegar Infraestructura.
-
+    + mobile: Workflows per desplegar Aplicacions Mòbils (nadiu Android i iOS) i Llibreries d'iOS.
 
   L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
                 
@@ -309,6 +321,6 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
   + Tagging d'artefactes i repositoris amb el model Semantic Version 2.0.
 
 
- | Exemples   ||||
-|--------------|-|-|-|
-|[e2e Container](../exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic ](../exemples/gh-exemple-e2e-cs) | [e2e Function ](../exemples/gh-exemple-e2e-function) |
+ | Exemples   ||||||
+|--------------|-|-|-|-|-|
+|[e2e Container](../workflows/exemples/gh-exemple-e2e-container) | [e2e Infraestructura](../workflows/exemples/gh-exemple-e2e-infra) | [e2e Contingut estàtic](../workflows/exemples/gh-exemple-e2e-cs) | [e2e Function](../workflows/exemples/gh-exemple-e2e-function) | [e2e API Manager](../workflows/exemples/gh-exemple-e2e-apimanager) | [e2e Mobile app](../workflows/exemples/gh-exemple-e2e-mobileapps) |

@@ -15,16 +15,29 @@ Aquesta és l'**estructura de directoris** recomanada per a un projecte d'infrae
 root
 ├── env
 │   ├── pro 
-│   │   └── db 
-│   │       ├── main.tf 
-│   │       └── variables.tf
+│   │   │── backend.tf
+│   │   │── db.tf
+│   │   │── container-registry.tf
+│   │   │── container-platform.tf
+│   │   │── ...
+│   │   └── variables.tf
 │   └── pre
-│       └── db 
-│           ├── main.tf 
-│           └── variables.tf 
+│       │── backend.tf
+│       │── db.tf
+│       │── container-registry.tf
+│       │── container-platform.tf
+│       │── ...
+│       └── variables.tf
 └── modules 
-    └── db 
-        └── main.tf
+    │── db 
+    │    └── main.tf
+    │    └── outputs.tf
+    │    └── variables.tf
+    │── container-registry 
+    │    └── main.tf
+    │    └── outputs.tf
+    │    └── variables.tf
+    ...
 ```
 
 Els workflows de CI/CD d'infraestructura requereixen d'aquesta estructura pel seu correcte funcionament. Els diferents stages dels workflows treballen amb el directori adient corresponent a l'**entorn segons la branca** (dev/test/int=develop, release=pre, master=pro) en la que s'estigui actuant.
@@ -256,7 +269,6 @@ Per garantir el **compliment de les polítiques** establertes per Suport Cloud p
 - Revisar i auditar regularment el compliment de les polítiques establertes de la infraestructura de l'aplicació.
 - Integrar la gestió de les polítiques en els fluxos de treball d'infraestructura com a codi per garantir la seva aplicació coherent.
 
-En el workflow de CI d'infraestructura es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD.
+En el [workflow de CI d'infraestructura](https://canigo.ctti.gencat.cat/plataformes/ghec/gh-definicio-workflows/#worfklows-de-continuous-integration-ci-per-a-infraestructura-iac) es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD. En concret, aquesta validació es realitza al stage de **Scan check**.
 
-
-[PENDENT] **Enllaç a intranet amb detall de polítiques**
+Aquest és el repositori on es pot trobar el detall de la informació de les polítiques: https://github.com/ctti-arq/ghec-checkov-policies.

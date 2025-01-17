@@ -1,5 +1,5 @@
 +++
-date = "2023-05-04"
+date = "2024-09-11"
 title = "Com preparar productes i APIs per al desplegament a l'API Manager"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament de productes i APIs a l'API Manager corporatiu"
 sections = "SIC"
@@ -13,29 +13,29 @@ weight = 3
 
 ## Introducció
 
-El **[Servei d'Integració Contínua](/sic/) és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
+El **[Servei d'Integració Contínua](/plataformes/sic/) és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
 de les aplicacions**.
 
-**L'[API Manager Corporatiu](/apim/) és una plataforma en modalitat SaaS basada en la solució IBM API Connect 10 Reserved Instance**.
-Aquest servei permet gestionar el cicle de vida de les APIS de manera senzilla i segura amb l’objectiu de facilitar-ne
+**L'[API Manager Corporatiu](/plataformes/apim/) és una plataforma en modalitat SaaS basada en la solució IBM API Connect 10 Reserved Instance**.
+Aquest servei permet gestionar el cicle de vida de les APIs de manera senzilla i segura amb l’objectiu de facilitar-ne
 tant la seva publicació com el seu consum.
 
 ## Organització de catàlegs, espais i productes
 
 L'organització de catàlegs, espais i productes és la següent:
 
-- Hi ha **quatre catàlegs segons el tipus d’entorn i el tipus de visibilitat**: `privat-pre`, `public-pre`, `privat` i `public`.
+- Hi ha **quatre catàlegs segons el tipus d’entorn i el tipus de visibilitat**: `privat_pre`, `public_pre`, `privat` i `public`.
 - **Cada codi de diàleg disposarà d'un espai propi** amb la nomenclatura "CD" + <codi_diàleg> (agrupació de productes). Per exemple: "CD0192".
 - Un producte és una agrupació d’APIs i plans que les acompanyen (unitat mínima a versionar, desplegar i subscriure).
 
 ## Preparació de productes i APIs
 
-Un cop fet el desenvolupament amb [API Designer](https://www.ibm.com/docs/en/acvfc?topic=applications-creating-api-definitions-by-using-api-designer),
-caldrà exportar els yml de definició del producte i les seves APIS per a repositar-los al sistema de gestió de
+Un cop fet el desenvolupament amb [API Designer](https://www.ibm.com/docs/en/api-connect/10_reserved_instance?topic=toolkit-working-offline-in-api-designer),
+caldrà exportar els yml de definició del producte i les seves APIs per a repositar-los al sistema de gestió de
 codi font (SCM - Source Code Management) del SIC d'acord amb les següents premisses:
 
 * Cada producte es correspondrà amb un projecte dins el **codi de diàleg** adient, de forma que tota la gestió posterior de pipelines
-i creació de peticions Remedy s'associïn a l'aplicació corresponent. Per aquest mateix motiu, **no està contemplat la creació
+i creació de peticions Remedy o Jira s'associïn a l'aplicació corresponent. Per aquest mateix motiu, **no està contemplat la creació
 de subgrups de projectes**, tot i que l'eina ho permeti.
 
 * Els projectes poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER**
@@ -58,9 +58,11 @@ de carpeta i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració
 
 |Variable|Requerit|Descripció|Valor per defecte|Exemple|
 |--------|--------|----------|-----------------|-------|
-|APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|-|
+|APIC_PRODUCT_FILE|No|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l'Api Manager. La variable només serà requerida en cas que la ruta i/o nom del fitxer difereixi del suggerit|product.yml|APIC\_PRODUCT\_FILE: 'product_v1.0.0.yaml'|
+|APP_NAME|No|Nom corresponent al producte que es vagi a desplegar. Aquest nom no ha de contenir el codi de diàleg del projecte, ja que aquest serà inclòs de manera automàtica després de realitzar-se el desplegament amb el format <codi>-<APP_NAME>. En cas que no es configuri aquesta variable en el ACA, se li assignarà per defecte el nom de la carpeta del projecte de GIT.|Nom de la carpeta del projecte|APP\_NAME: 'technicalproduct'|
+|APIC_PRESERVE_ASSEMBLY|No|Curricular que indica si s'ignora o no la regla que reemplaça l'acoblament, a través dels valors true o false, conservant l'acoblat original del YAML de l'API (secció assembly al YAML) creat pel desenvolupador, en cas que el camp s'informi amb el valor true. Això permetrà desplegar l'API amb lògica personalitzada.|false|APIC\_PRESERVE\_ASSEMBLY: true|
 |APIC\_TARGET\_URL|Si|URL de destí de les APIs si és comuna a totes, tot i que pot conviure amb APIC\_TARGET\_URL\_{N} per especificitats.|-|APIC\_TARGET\_URL: 'https\://backend/api'|
-|APIC\_TARGET\_URL\_{N}|Si|URL de destí de les APIs si NO és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
+|APIC\_TARGET\_URL\_{N}|No|URL de destí de les APIs si NO és comuna a totes les APIs permetent definir especificitats, tot i que pot conviure amb APIC\_TARGET\_URL global: <br/>- Format de la clau: APIC\_TARGET\_URL\_{0-*9a-*zA-Z}<br/>- Format del valor: \<api-file-name-with-extension\>:\<target-url\>|-|APIC\_TARGET\_URL\_1: 'api_1.0.0.yml:https\://backend/api'|
 
 Per exemple:
 ```yaml
@@ -70,6 +72,8 @@ info:
   description: APIM Demo Project
 global-env:
   - APIC_PRODUCT_FILE: 'product.yml'
+  - APP_NAME: 'technicalproduct'
+  - APIC_PRESERVE_ASSEMBLY: true
 components:
   - deployment:
       environments:
@@ -113,16 +117,16 @@ notifications:
 
 On es pot comprovar que s'ha definit una `target-url` global i una d'específica per a l'API_C.
 
-<br/>
-Per a més informació, podeu consultar: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
+
+Per a més informació, podeu consultar: [Com construir el fitxer ACA](/plataformes/sic/guies/sic30-guies/fitxer-aca/)
 
 ## Funcionament
 
-El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIS,
+El SIC s'encarrega de la publicació i el desplegament automatitzat de les APIs,
 atorgant la màxima agilitat i autonomia als equips de desenvolupament. En aquest sentit, es proporciona un conjunt de
 pipelines que permeten gestionar el seu cicle de vida d’una forma estandarditzada:
 
-- **PUBLISH**: publicació d’una nova versió d’un producte i APIS associades. El sistema permet redesplegar versions als
+- **PUBLISH**: publicació d’una nova versió d’un producte i APIs associades. El sistema permet redesplegar versions als
 catàlegs preproductius sempre que no hagin arribat a producció.
 - **INFO**: obtenció d’informació del producte dins d’un catàleg (versions, subscripcions i altres). Caldrà seleccionar
 el catàleg del qual es desitja informació.
@@ -141,12 +145,12 @@ el catàleg del qual es desitja informació.
     seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar la versió actual del producte
     (*CURRENT_PRODUCT_VERSION*) i la nova versió del producte (*NEW_PRODUCT_VERSION*). Per exemple: `1.1.0`.
 
-Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/apim/).
+Per a més informació, podeu consultar: [Servei d'API Manager Corporatiu](/plataformes/apim/).
 
 <br/>
 Cal tenir present que:
 
-- Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
+- Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament. Per exemple: ![Missatge d'alerta (Check de plans i seguretat)](/related/apim/Check_alerta.png)
 - Les pipelines **notificaran** dels resultats a les adreces de correu assignades.
 
 
@@ -160,7 +164,7 @@ nomenclatura aplicades són les següents:
 
 - Productes:
 
-    * `name` obligatori i immutable que es correspon amb el codi de diàleg, el caràcter separador "-" i el nom del projecte.
+    * `name` obligatori i immutable que es correspon amb el codi de diàleg, el caràcter separador "-" i un text descriptiu que serveixi per identificar la funcionalitat del producte  com, per exemple, el nom del projecte.
       Per exemple: "0192-apim_demo_project".
     * `title` obligatori amb prefix de codi de diàleg, un espai en blanc i un text lliure. Per exemple: "0192 APIM Demo Project".
 
@@ -169,10 +173,10 @@ nomenclatura aplicades són les següents:
     * `x-ibm-name` obligatori amb prefix de codi de diàleg, el caràcter separador '-' i l'identificador de l'API.
       Per exemple: "0192-api_a".
     * `basePath` inclou el codi de diàleg. Per exemple: "/0192/api_a". Per tal de resoldre la crida al `target-url`
-      de l’aplicació, s'implementa un pas a l’`Assembly` que s’encarrega d’eliminar el codi de diàleg del `requestPath`.
+      de l’aplicació, s'implementa un pas a l’`Assembly` que s’encarrega d’eliminar el codi de diàleg del `requestPath` (en cas que el valor d'APIC_PRESERVE_ASSEMBLY sigui false).
 
 En qualsevol cas, si aquests criteris no s'acompleixen a la configuració del producte o les APIs, **el SIC durà a terme
-els reemplaçaments necessaris per a assegurar la seva aplicació**. Donat el nom del producte és immutable, aquest no es
+els reemplaçaments necessaris per a assegurar la seva aplicació** (en cas que el valor d'APIC_PRESERVE_ASSEMBLY sigui false). Donat el nom del producte és immutable, aquest no es
 demana de cara a l’execució de les pipelines operatives de gestió del cicle de vida: DELETE, DEPRECATE, REPLACE, RETIRE
 i SUPERSEDE.
 
@@ -222,22 +226,6 @@ x-ibm-configuration:
 El SIC aplica una sèrie de mecanismes de control i seguretat (snippets) que poden implicar canvis respecte a la
 definició inicial de productes i APIs realitzada pel proveïdor:
 
-- S’aplicaran **plans estandarditzats CTTI amb aprovació obligatòria de subscripcions**:
-
-```yaml
-plans:
-  default-plan:
-    title: Default Plan
-    description: Default Plan
-    approval: true
-    rate-limits:
-      default:
-        value: 30/1second
-        hard-limit: true
-    burst-limits:
-      default:
-        value: 300/1second
-```
 
 - La **visibilitat del producte serà sempre de tipus `authenticated`**:
 
@@ -255,48 +243,7 @@ visibility:
     enabled: true
 ```
 
-- S’establirà **un mateix OAuth Provider per a totes les APIS d’un mateix catàleg**. Es contemplen dos tipus, que seran
-establerts per l'equip de SIC: *IBM Default* o *GICAR*.
-
-En cas d'autenticació *IBM Default*:
-
-```yaml
-securityDefinitions:
-  clientID:
-    type: apiKey
-    in: header
-    name: X-IBM-Client-Id
-security:
-  - clientID: []
-```
-
-En cas d'autenticació *Gicar* (entorn productiu):
-
-```yaml
-securityDefinitions:
-  clientID:
-    type: apiKey
-    in: header
-    name: X-IBM-Client-Id
-  produccio-gicar:
-    type: oauth2
-    x-ibm-oauth-provider: pro-apic-keycloak-cpd4
-    flow: accessCode
-    authorizationUrl: >-
-      https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/auth
-    tokenUrl: >-
-      https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
-    scopes:
-      email: scope email
-      profile: scope profile
-security:
-  - clientID: []
-    produccio-gicar:
-      - email
-      - profile
-```
-
-- **No es permetrà configurar especificitats singulars per a les APIS dins un pla**. En aquest sentit, la secció
+- **No es permetrà configurar especificitats singulars per a les APIs dins un pla**. En aquest sentit, en cas que la variable APIC_PRESERVE_ASSEMBLY tingui el valor de false, la secció
 `x-ibm-configuration.assembly.execute` serà reemplaçada aplicant la configuració de `target-url` especificada al
 fitxer `aca.yml` de forma que sigui possible dur a terme un desplegament multientorn, tenint en compte la regla de
 nomenclatura aplicada al `basePath`.
@@ -333,4 +280,4 @@ Podeu descarregar el següent [Projecte d'exemple](/related/sic/3.0/0192-apim_de
 completa d'un producte.
 
 <br/><br/><br/>
-Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) o utilitzar els canals de [**Suport**](/sic/suport).
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/plataformes/sic/faq) o utilitzar els canals de [**Suport**](/plataformes/sic/suport).
