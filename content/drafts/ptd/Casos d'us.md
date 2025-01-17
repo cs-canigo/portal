@@ -1,6 +1,6 @@
 +++
-date        = "2025-01-16"
-title       = "c"
+date        = "2024-07-01"
+title       = "Casos d'ús"
 description = "Exemple de cas d'ús de la plataforma PTD"
 sections    = "PTD"
 toc         = false
@@ -25,7 +25,7 @@ Intel·litur és una plataforma que **recopila**, **analitza** i **interpreta** 
 
 <br>
 
-![Cas 2](/plataformes/ptd/related/CAS/PTD002.png)
+![Cas 1](/plataformes/ptd/related/CAS/PTD002.png)
 
 <br>
 

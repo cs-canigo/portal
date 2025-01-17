@@ -1,5 +1,5 @@
 +++
-date        = "2025-01-16"
+date        = "2024-07-01"
 title       = "Mòduls de la PTD"
 description = "Mòduls i serveis disponibles a la PTD"
 sections    = "PTD"
