@@ -593,6 +593,14 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ## Desplegaments estesos
 
 ### Executor CD
+- **executor_image_version**: (obligatori) Versió d'imatge del executor.
+- **technology**: Tecnologia. Valors possibles:
+  - `liquibase`
+  - `psql` 
+  - `sqlcmd` 
+  - `kubectl`
+  - `helm`
+- **environment**: (obligatori) Entorn.
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws`
   - `azure`
@@ -600,11 +608,8 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **engine**: (obligatori) Plataforma de desplegament. Valors possibles:
   - `kubernetes`
   - `database`
-- **executor_image_version**: (obligatori) Versió d'imatge del executor.
-- **environment**: (obligatori) Entorn.
 - **registry_name**: (obligatori) Nom del registre.
-- **function_name**: (obligatori) Nom de la funció.
-- **resource_group**: (opcional) Grup de recursos. Definir únicament si el cloud és `azure`.
+- **function_name**: (obligatori) Nom de la funció. Definir únicament si el cloud és `AWS`.
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -612,7 +617,8 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
     secrets: inherit
     with:
       cloud: aws
-      engine: kubernetes
+      engine: database
+      technology: psql
       executor_image_version: ${{ inputs.executor_image_version }}
       environment: ${{ inputs.environment }}
       registry_name: ${{ inputs.registry_name }}
@@ -621,6 +627,15 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 
 ### Descriptors CD
+- **executor_image_version**: (opcional) Versió d'imatge del executor. Definir únicament si el cloud és `azure`.
+- **artifact_version**: (obligatori) Versió de l'artefacte.
+- **technology**: (opcional) Technology. Valors possibles:
+  - `liquibase`
+  - `psql` 
+  - `sqlcmd` 
+  - `kubectl`
+  - `helm`
+- **environment**: (obligatori) Entorn.
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws`
   - `azure`
@@ -628,56 +643,48 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **engine**: (obligatori) Plataforma de desplegament. Valors possibles:
   - `kubernetes`
   - `database`
-- **artifact_version**: (obligatori) Versió de l'artefacte.
-- **environment**: (obligatori) Entorn.
-- **function_name**: (obligatori) Nom de la funció.
-- **cluster_name**: (opcional) Nom del clúster.
-- **chart_name**: (opcional) Nom del Helm Chart.
-- **local_chart_path**: (opcional) Ruta local del Helm Chart.
-- **namespace**: (opcional) Nom del namespace dins el clúster.
-- **jdbc_url**: (opcional) URI endpoint de la BBDD.
-- **db_username**: (opcional) Nom de la base de dades.
-- **changelog_file**: (opcional) Fitxer de canvis.
-- **secret_name**: (opcional) Nom del secret.
-- **resource_group**: (opcional) Grup de recursos. Definir únicament si el cloud és `azure`.
+- **storage_name**: (obligatori) Nom de l'emmagatzematge.
+- **blob_name**: (opcional) Blob nom. Definir únicament si el cloud és `azure`.
 - **destination_prefix**: (opcional) Prefix de destí. Definir si el núvol és AWS i hi ha una subcarpeta dins del bucket de S3.
-- **healthcheck_url**: (opcional) URL del healthcheck. Actualment només es suporten URLs accessibles des d'internet `https://<endpoint_url.gencat.cat>/`.
-- **healthcheck_regex**: (opcional) Expessió regular per evaluar el contingut de la resposta.
-- **healthcheck_timeout**: (opcional) Temps màxim per comprovar el healthcheck. Ha de tenir un valor numèric entre cometes, ex: `"300"`.
-- **repository_mat**: (opcional) Per habilitar o deshabilitar la MAT del repositori. Valors possibles:
-  - `true` (default)
-  - `false`
-- **selenium_enabled**: (opcional) Per habilitar o deshabilitar Selenium. Valors possibles:
-  - `true`
-  - `false` (default)
-- **selenium_urlapp**: (opcional) URL de Selenium, ha de tener el valor: `https://<urlapp.gencat.cat>`. Definir únicament si Selenium està habilitat.
-- **selenium_umbral**: (opcional) Llindar de Selenium. Ha de tenir un valor numèric entre cometes, ex: `"20"`. Definir només si Selenium està habilitat. Valor per defecte: 20.
-- **jira_project_key**: (opcional) Clau del projecte JIRA. Definir només si Selenium está habilitat.
-- **jira_issue_key**: (opcional) Clau de la issue de JIRA. Definir només si Selenium está habilitat.
-- **itsm_id_change_coordinator**: (opcional) ID del coordinador de canvis d'ITSM.
-- **itsm_enabled**: (opcional) Activa la funcionalitat de Gestió de Canvis ITSM
 - **exclude**: (opcional) Indica els fitxers o directoris que s'han d'excloure durant el procés de càrrega de contingut. Valor per defecte: .git.
 - **delete**: (opcional) Determina si els fitxers que no són presents en la font s'han de suprimir del destí durant el procés de càrrega. Valor per defecte: true.
+- **descriptor_relative_path**: (obligatori) Path relatiu dels descriptors, (fitxer o directori), és a dir: 'folder/sql.sql' o 'folder/subfolder'. El path relatiu ja conté els valors "descriptors/_engine_/_technology_/", per la qual cosa no cal incloure'ls com a input, sinó que cal indicar a partir d'aquí.
+- **key_vault_name**: (opcional) Key Vault nom. Definir únicament si el cloud és `azure`.
+- **connection_secret_name**: (opcional) Nom del secret de connexió.
+- **function_name**: (opcional) Nom de la funció. Definir únicament si el cloud és `AWS`.
+- **resource_group**: (opcional) Grup de recursos. Definir únicament si el cloud és `azure`.
+- **azure_region**: (opcional) Regió Azure. Definir únicament si el cloud és `azure`.
+- **registry_name**: (opcional) Nom de l'egistry. Definir únicament si el cloud és `azure`.
+- **vnet_name**: (opcional) VNet nom. Definir únicament si el cloud és `azure`.
+- **subnet_name**: (opcional) Subnet nom. Definir únicament si el cloud és `azure`.
+- **cluster_name**: (opcional) Nom del clúster.
+- **namespace**: (opcional) Nom del namespace dins el clúster.
+- **database_endpoint**: (opcional) URI endpoint de la BBDD.
+- **database_name**: (opcional) Nom de la base de dades.
+- **database_user**:(opcional) Usuari de la BBDD.
+- **itsm_enabled**: (opcional) Activa la funcionalitat de Gestió de Canvis ITSM
+- **itsm_id_change_coordinator**: (opcional) ID del coordinador de canvis d'ITSM.
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/extended-descriptor-cd-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/extended-descriptor-cd-reusable.yaml@v4
     secrets: inherit
     with:
       cloud: aws
-      engine: kubernetes
+      engine: database
+      technology: psql
       artifact_version: ${{ inputs.artifact_version }}
       environment: ${{ inputs.environment }}
-      storage_name: ${{ inputs.storage_name }}
-      function_name: ${{ inputs.function_name }}
+      storage_name: "ghec-dev-s3-ew1-ingest-scripts-db-psql"
+      descriptors_relative_path: ${{ inputs.descriptors_relative_path }}
+      connection_secret_name: "rds!cluster-e490379f-cfff-4ebb-b083-f723b8fb136e"
+      function_name: "ghec-dev-lam-ew1-000-psql"
+      database_endpoint: ${{ inputs.database_endpoint }}
+      database_name: ${{ inputs.database_name }}
+      database_user: ${{ inputs.database_user }}
+      itsm_enabled: false
+      # itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 
-      cluster_name: ${{ inputs.cluster_name }}
-      chart_name: ${{ inputs.chart_name }}
-      local_chart_path: ${{ inputs.local_chart_path }}
-      namespace: ${{ inputs.namespace }}
-      repository_mat: true
-      selenium_enabled: false
-      itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
 ```
 
 
