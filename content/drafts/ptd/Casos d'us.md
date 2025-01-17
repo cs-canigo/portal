@@ -1,5 +1,5 @@
 +++
-date        = "2024-07-01"
+date        = "2025-01-16"
 title       = "c"
 description = "Exemple de cas d'ús de la plataforma PTD"
 sections    = "PTD"

@@ -1,5 +1,5 @@
 +++
-date        = "2024-07-01"
+date        = "2025-01-16"
 title       = "Què és la PTD"
 description = "Introducció a la plataforma PTD"
 sections    = "PTD"
