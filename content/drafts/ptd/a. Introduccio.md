@@ -41,8 +41,7 @@ A través dels següents links podeu accedir a materials que ofereixen una prime
 
 - **Welcome pack**: un document introductori que explica els conceptes clau, funcionalitats i beneficis de la PTD.
 
-![Welcome pack](./related/PDF/PTD_welcome_pack_v11.pdf)
-
+<a href="./related/PDF/PTD_welcome_pack_v11.pdf">Welcome pack</a>
 <br>
 
 - **El camí de la dada**: una presentació que detalla el recorregut que segueixen les dades dins de la plataforma i com es gestionen de manera eficient.
