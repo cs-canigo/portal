@@ -54,24 +54,6 @@ Suport a les següents accions i operatives:
     En el següent enllaç, es pot revisar la definició de workflows per a totes les tecnologies incloent API's: [Workflows Reutilitzables](../gh-definicio-workflows/).
 
 
-### Desplegaments estesos
-
-El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions cap a arquitectures cloud-native desplegades a Cloud Públic, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI com puguin ser **clusters de Kubernetes** o **màquines virtuals**. També els desplegaments de canvis en **bases de dades** poden fer ús d'aquest model de desplegament ja sigui utilitzant frameworks com Liquibase o Flyway, o bé executant directament scripts mitjançant les CLIs de PostgreSQL, MySQL o altres motors de bases de dades.
-
-Les tecnlogies certificades actualment són les següents:
-
-* Desplegaments a AWS de:
-    * Scripts BBDD
-    * Kubernetes amb Helm
-    * Màquines Virtuals (En roadmap)
-
-* Desplegaments a Azure de:
-    * Scripts BBDD (En preparació)
-    * Kubernetes amb Helm (En preparació)
-    * Màquines Virtuals (En roadmap)
-
-
-Més informació sobre desplegaments estesos : [Desplegaments Estesos](../gh-desplegaments-estesos/)
 
 ## Requisits
 
@@ -166,3 +148,194 @@ En aquest cas hi ha dues casuistiques :
    * Fitxer / Nom Lliurable : Build Settings / Camp - PRODUCT_BUNDLE_IDENTIFIER
    * Fitxer / Versió Lliurable : Build Settings / Camp - MARKETING_VERSION
    * Fitxer / Build Lliurable : Build Settings / Camp - CURRENT_PROJECT_VERSION
+
+### Desplegaments estesos
+
+El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions cap a arquitectures cloud-native desplegades a Cloud Públic, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI com puguin ser **clusters de Kubernetes** o **màquines virtuals**. També els desplegaments de canvis en **bases de dades** poden fer ús d'aquest model de desplegament ja sigui utilitzant frameworks com Liquibase, o bé executant directament scripts mitjançant les CLIs de PostgreSQL, MySQL o altres motors de bases de dades.
+
+Les tecnlogies certificades actualment són les següents:
+
+* Desplegaments a AWS de:
+    * Scripts BBDD
+    * Kubernetes amb Helm Kubectl
+    * Màquines Virtuals (En roadmap)
+
+* Desplegaments a Azure de:
+    * Scripts BBDD 
+    * Kubernetes amb Helm Kubectl
+    * Màquines Virtuals (En roadmap)
+
+Per a desplegaments estesos seran necessaris certs recursos com a prerequisits al núvol, depenent del mateix, perquè funcioni correctament el model com es pot observar en [Desplegaments Estesos](../gh-desplegaments-estesos/). Aquests són tant recursos d'infraestructura com permisos necessaris perquè la lambda pugui accedir als recursos necessaris.
+
+**AWS**
+
+Per al desplegament de descriptors en AWS es requereix dels següents recursos d'infraestructura:
+
+1. **Elastic Container Registry (ECR)**: Per a emmagatzemar les imatges de contenidors que es generin a partir dels Dockerfiles.
+2. **Lambda basada en contenidors**: Per a executar el contenidor que es generi a partir de la imatge pujada a ECR. Aquesta lambda serà una funció basada en contenidor (no en codi).
+3. **Bucket S3**: Per a emmagatzemar els descriptors (Helm Charts, manifestos, scripts de bases de dades, etc.) que es vulguin desplegar.
+4. **Secrets Manager**: Per a emmagatzemar les credencials d'accés als recursos que es vulguin modificar (clúster de kubernetes, base de dades, etc.).
+5. **IAM Role**: Per a donar permisos a la lambda perquè pugui accedir als recursos necessaris, tant per a descarregar els descriptors del bucket, com per a obtenir les credencials del Secrets Manager. A més, s'hauran de donar permisos a la lambda perquè pugui fer la connexió i el desplegament dels descriptors en els recursos.
+6. **Endpoint gateway**: Per a que la lambda pugui accedir als recursos de la VPC (S3).
+
+Permisos requerits:
+
+1. ECR (Elastic Container Registry): 
+   * ecr:CreateRepository
+   * ecr:PutImage
+   * ecr:GetDownloadUrlForLayer
+   * ecr:BatchCheckLayerAvailability
+   * ecr:CompleteLayerUpload
+   * ecr:InitiateLayerUpload
+   * ecr:UploadLayerPart
+2. Lambda: 
+   * lambda:UpdateFunctionCode
+   * lambda:CreateFunction
+   * lambda:UpdateFunctionConfiguration
+
+#### Exemple de codi terraform
+
+    resource "aws_iam_role" "lambda_role" {
+        name = "lambda_execution_role"
+
+        assume_role_policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [
+            {
+            Action = "sts:AssumeRole"
+            Effect = "Allow"
+            Principal = {
+                Service = "lambda.amazonaws.com"
+            }
+            }
+        ]
+        })
+    }
+
+    resource "aws_iam_policy" "lambda_policy" {
+        name        = "lambda_policy"
+        description = "IAM policy for Lambda to access Secrets Manager, S3, and DynamoDB"
+
+        policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [
+            {
+            Effect = "Allow"
+            Action = [
+                "secretsmanager:GetSecretValue"
+            ]
+            Resource = "arn:aws:secretsmanager:eu-south-2:123456789012:secret:your-secret-name"
+            },
+            {
+            Effect = "Allow"
+            Action = [
+                "s3:GetObject"
+            ]
+            Resource = "arn:aws:s3:::my-bucket/*"
+            },
+            {
+            Effect = "Allow"
+            Action = [
+                "dynamodb:PutItem"
+            ]
+            Resource = "arn:aws:dynamodb:eu-south-2:123456789012:table/my-table"
+            }
+        ]
+        })
+    }
+
+    resource "aws_iam_role_policy_attachment" "lambda_policy_attachment" {
+        role       = aws_iam_role.lambda_role.name
+        policy_arn = aws_iam_policy.lambda_policy.arn
+            }
+
+            resource "aws_lambda_function" "my_lambda" {
+            function_name = "my_lambda_function"
+            role          = aws_iam_role.lambda_role.arn
+            handler       = "lambda_function.handler"
+            runtime       = "python3.8"
+            filename      = "path/to/your/lambda_function.zip"
+
+            environment {
+            variables = {
+                SECRET_NAME = "your-secret-name"
+            }
+        }
+    }
+
+    resource "aws_iam_role" "lambda_role" {
+        name = "lambda_execution_role"
+
+        assume_role_policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [
+            {
+            Action = "sts:AssumeRole"
+            Effect = "Allow"
+            Principal = {
+                Service = "lambda.amazonaws.com"
+            }
+            }
+        ]
+        })
+    }
+
+    resource "aws_iam_policy" "lambda_policy" {
+        name        = "lambda_policy"
+        description = "IAM policy for Lambda to access ECR and update Lambda function"
+
+        policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [
+            {
+            Effect = "Allow"
+            Action = [
+                "ecr:CreateRepository",
+                "ecr:PutImage",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:CompleteLayerUpload",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart"
+            ]
+            Resource = "*"
+            },
+            {
+            Effect = "Allow"
+            Action = [
+                "lambda:UpdateFunctionCode",
+                "lambda:CreateFunction",
+                "lambda:UpdateFunctionConfiguration"
+            ]
+            Resource = "arn:aws:lambda:us-west-2:123456789012:function:your-lambda-function-name"
+            }
+        ]
+        })
+    }
+
+    resource "aws_iam_role_policy_attachment" "lambda_policy_attachment" {
+        role       = aws_iam_role.lambda_role.name
+        policy_arn = aws_iam_policy.lambda_policy.arn
+    }
+
+    resource "aws_lambda_function" "my_lambda" {
+        function_name = "my_lambda_function"
+        role          = aws_iam_role.lambda_role.arn
+        handler       = "lambda_function.handler"
+        runtime       = "python3.8"
+        filename      = "path/to/your/lambda_function.zip"
+
+        environment {
+            variables = {
+                ECR_REPOSITORY = "your-ecr-repository"
+            }
+        }
+    }
+
+**Azure**
+
+Per al desplegament de descriptors en Azure es requereix dels següents recursos d'infraestructura:
+
+1. **Azure Container Registry (ACR)**: Per a emmagatzemar les imatges de contenidors que es generin a partir dels Dockerfiles.
+2. **Storage Account i Blob Storage**: Per a emmagatzemar els descriptors (Helm Charts, manifestos, scripts de bases de dades, etc.) que es vulguin desplegar.
+3. **KeyVault**: Per a emmagatzemar les credencials d'accés als recursos que es vulguin modificar (clúster de kubernetes, base de dades, etc.).
