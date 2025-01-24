@@ -20,7 +20,7 @@ A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 ## Integració al SIC del desplegament d’aplicacions en fase de projecte
 
 Per les aplicacions en fase de projecte que s’integraran amb SIC, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
-Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
+Si no disposeu d’accés ho podeu demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i el servei d’acompanyament que es vol sol·licitar l’accés.
 
 **Un cop finalitzada la reunió de Fase 0, l’equip de SIC prepararà les peticions, adjuntarà les plantilles a emplenar i assignarà els tiquets** de lot d’aplicacions i CPD a l’integrador de solucions per a que
 aquest coordini l’acompliment de requisits per a poder iniciar el projecte d’integració al SIC. En endavant, tota la comunicació es farà per aquest canal recordant
@@ -77,7 +77,7 @@ El procediment que ha de seguir el CPD en els acompanyaments per part de SIC en 
 ## Integració al SIC del desplegament d’aplicacions en servei
 
 Per les aplicacions en servei que s’integraran amb SIC, la comunicació també s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
-Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
+Si no disposeu d’accés ho podeu demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i el servei d’acompanyament que es vol sol·licitar l’accés.
 
 En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines](/sic-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
 qui crearà la petició en aquest servei** indicant el motiu. Caldrà indicar com a mínim el **codi de diàleg** i la
