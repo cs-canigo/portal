@@ -16,7 +16,7 @@ A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
 Per les aplicacions en fase de projecte que es desenvolupin sota plataformes LowCode, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament LowCode**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOLOW). El proveïdor d’aplicacions ha de crear una petició en aquest servei informant el camp Sumari “Suport projecte NOM_PROJECTE”. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració de l'entorn de desenvolupament, gestió d'usuaris i permisos, …) es canalitzarà en aquesta petició.
 
-Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
+Si no disposeu d’accés ho podeu demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i sol·licitant permisos de rol desenvolupador.
 
 
 ## Aplicacions en servei
