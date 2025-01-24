@@ -16,7 +16,7 @@ Per a introduir una incidència, petició de canvi, consulta o petició de supor
 
 ## Accés al JIRA CSTD
 
-Per a demanar accés d'un usuari al servei CAN del JIRA és necessari enviar un correu a la bústia <cstd.ctti@gencat.cat> sol·licitant accés al servei [Canigó](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN).
+Per a demanar accés d’un usuari al servei CAN del JIRA és necessari demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i sol·licitant accés al servei [Canigó](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN).
 
 ## Formació
 Per a capacitar-se en el Framework Canigó es pot obtenir mitjançant la realització de cursos presencials que es poden sol·licitar a través de la bústia <oficina-tecnica.canigo.ctti@gencat.cat>
