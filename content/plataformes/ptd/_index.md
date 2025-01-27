@@ -1,9 +1,4 @@
 +++
-title="PTD"
-description="Plataforma transversal de Dades"
-weight=4
-aliases = [
-    "/ptd"
-]
-draft = true
+title = "PTD"
+description = "Informació relativa a la PTD: Introducció, mòduls, suport per a la implementació de projectes i les tipologies de casos d'ús"
 +++
