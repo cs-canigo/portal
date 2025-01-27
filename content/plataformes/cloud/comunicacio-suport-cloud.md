@@ -139,4 +139,4 @@ _Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](http
 
 <br/>
 
-En cas que no es disposi d'usuari al CSTD, cal que el gestor de projecte CTTI de l'aplicació faci arribar la petició d'alta d'usuari al propi [servei CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CSTD) o bé enviant un correu a la bústia [cstd.ctti@gencat.cat](mailto:cstd.ctti@gencat.cat).
+En cas que no es disposi d’usuari al CSTD, cal que el gestor de projecte CTTI de l’aplicació faci arribar la petició d’alta d’usuari mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i el servei d’acompanyament que es vol sol·licitar l’accés”
