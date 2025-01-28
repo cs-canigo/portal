@@ -12,11 +12,11 @@ weight		= 7
 
 ## Incidències, Peticions de canvi, Consultes i Suport
 
-Per a introduir una incidència, petició de canvi, consulta o petició de suport és necessari accedir al servei [CAN del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) i crear una petició del tipus desitjat.
+Per a introduir una incidència, petició de canvi, consulta o petició de suport és necessari accedir al servei [CAN del JIRA CSTD](https://cstd-ctti.atlassian.net/jira/software/c/projects/CAN/boards/15) i crear una petició del tipus desitjat.
 
 ## Accés al JIRA CSTD
 
-Per a demanar accés d’un usuari al servei CAN del JIRA és necessari demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i sol·licitant accés al servei [Canigó](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN).
+Per a demanar accés d’un usuari al servei CAN del JIRA és necessari demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i sol·licitant accés al servei [Canigó](https://cstd-ctti.atlassian.net/jira/software/c/projects/CAN/boards/15).
 
 ## Formació
 Per a capacitar-se en el Framework Canigó es pot obtenir mitjançant la realització de cursos presencials que es poden sol·licitar a través de la bústia <oficina-tecnica.canigo.ctti@gencat.cat>
