@@ -8,7 +8,7 @@ aliases     = ["/cloud/comunicacio-cpd-suport-cloud/"]
 weight      = 6
 +++
 
-S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
+S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd-ctti.atlassian.net/) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
 
 <br/>
 
@@ -28,7 +28,7 @@ _Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip 
 
 S’ha creat un nou projecte per l’acompanyament Cloud i SIC que pròximament es posarà en servei.
 
-Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC). El procediment que ha de seguir el CPD en els acompanyaments per part de Suport Cloud en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
+Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOCLDSIC/boards/43). El procediment que ha de seguir el CPD en els acompanyaments per part de Suport Cloud en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
 
 * El lot d' aplicació obrirà un nou tiquet ACOCLDSIC a l' inici de la fase d' acompanyament de Suport Cloud. El conjunt de subtasques creades automàticament en la creació del tiquet ACOCLDSIC dependrà de la plataforma seleccionada.
 
