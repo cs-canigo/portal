@@ -36,7 +36,7 @@ L’oficina tècnica està pensada per ajudar en tot el procés d’integració,
 
 ## Procediment de contacte amb l'Oficina Tècnica
 En aquest apartat es descriu com s'ha de cursar la sol·licitud en cas de necessitat de realitzar una petició a l'Oficina Tècnica, ja sigui aprovisionament de recursos o dubtes d'integració.
-- Accedir al JIRA CSTD: https://cstd.ctti.gencat.cat/jiracstd/
+- Accedir al JIRA CSTD: https://cstd-ctti.atlassian.net/
 - Demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i sol·licitant els permisos corresponents per a obrir peticions al servei Servei d’acompanyament de la plataforma EventHub (ACOEVENT).
 - S'ha de crear una petició d'acompanyament amb les dades del vostre requeriment.
 ---
