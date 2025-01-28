@@ -14,12 +14,12 @@ weight = 4
 +++
 
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
-[**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
+[**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd-ctti.atlassian.net/) i [**Remedy**](https://pautic.gencat.cat/).
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
 ## Integració al SIC del desplegament d’aplicacions en fase de projecte
 
-Per les aplicacions en fase de projecte que s’integraran amb SIC, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
+Per les aplicacions en fase de projecte que s’integraran amb SIC, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOSIC/boards/167).
 Si no disposeu d’accés ho podeu demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i el servei d’acompanyament que es vol sol·licitar l’accés.
 
 **Un cop finalitzada la reunió de Fase 0, l’equip de SIC prepararà les peticions, adjuntarà les plantilles a emplenar i assignarà els tiquets** de lot d’aplicacions i CPD a l’integrador de solucions per a que
@@ -30,7 +30,7 @@ assignar el tiquet a la persona que ha de donar resposta en cada cas.
 
 S’ha creat un nou projecte per l’acompanyament Cloud i SIC que pròximament es posarà en servei.
 
-Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLDSIC). El procediment que ha de seguir el lot d'aplicació per a sol·licitar un acompanyament per part de SIC en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
+Per a les aplicacions en fase de projecte la comunicació s’ha de fer via CSTD al servei [**Servei Acompanyament Suport Cloud i SIC**](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOCLDSIC/boards/43). El procediment que ha de seguir el lot d'aplicació per a sol·licitar un acompanyament per part de SIC en fase de projecte mitjançant el projecte de Jira ACOCLDSIC és el següent:
 
 * El lot d' aplicació obrirà un nou tiquet ACOCLDSIC a l' inici de la fase d' acompanyament de SIC. En la creació del tiquet s' hauran d' informar com a servei SIC, així com altres camps obligatoris. El tiquet ACOCLDSIC s' assignarà automàticament al responsable del servei d' acompanyament de SIC. En el tiquet ha d' informar els camps següents:
    - Tipus d' Incidència: Acompanyament SIC
@@ -76,7 +76,7 @@ El procediment que ha de seguir el CPD en els acompanyaments per part de SIC en 
 
 ## Integració al SIC del desplegament d’aplicacions en servei
 
-Per les aplicacions en servei que s’integraran amb SIC, la comunicació també s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
+Per les aplicacions en servei que s’integraran amb SIC, la comunicació també s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOSIC/boards/167).
 Si no disposeu d’accés ho podeu demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i el servei d’acompanyament que es vol sol·licitar l’accés.
 
 En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines](/sic-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
