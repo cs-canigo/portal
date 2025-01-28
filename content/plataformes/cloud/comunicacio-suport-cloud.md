@@ -8,7 +8,7 @@ aliases     = ["/cloud/comunicacio-suport-cloud/"]
 weight      = 6
 +++
 
-S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
+S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**]([https://cstd.ctti.gencat.cat/jiracstd](https://cstd-ctti.atlassian.net/)) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
 
 <br/>
 
