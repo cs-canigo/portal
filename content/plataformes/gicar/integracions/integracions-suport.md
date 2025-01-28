@@ -10,7 +10,7 @@ weight 		= 4
 
 En aquest apartat es descriu com s'ha de cursar la sol·licitud en cas de necessitat demanar una nova integració amb GICAR, demanar una re-configuració d'una existent, o tractar dubtes d'una petició d'integració nova que vindrà.
 
-1. Accedir al JIRA CSTD: https://cstd.ctti.gencat.cat/jiracstd/
+1. Accedir al JIRA CSTD: https://cstd-ctti.atlassian.net/
 
 1. Fer una nova sol·licitud al servei Noves Integracions GICAR (ACOGICAR), i emplenar la informació que allà se sol·licita.
 
