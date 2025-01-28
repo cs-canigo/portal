@@ -9,12 +9,12 @@ weight      = 5
 +++
 
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**](/lowcode/faq) i utilitzeu els canals de comunicació que s'estableixen:
-[**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
+[**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd-ctti.atlassian.net/) i [**Remedy**](https://pautic.gencat.cat/).
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
 ## Aplicacions en fase de projecte
 
-Per les aplicacions en fase de projecte que es desenvolupin sota plataformes LowCode, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament LowCode**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOLOW). El proveïdor d’aplicacions ha de crear una petició en aquest servei informant el camp Sumari “Suport projecte NOM_PROJECTE”. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració de l'entorn de desenvolupament, gestió d'usuaris i permisos, …) es canalitzarà en aquesta petició.
+Per les aplicacions en fase de projecte que es desenvolupin sota plataformes LowCode, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament LowCode**](https://cstd-ctti.atlassian.net/browse/ACOLOW). El proveïdor d’aplicacions ha de crear una petició en aquest servei informant el camp Sumari “Suport projecte NOM_PROJECTE”. Mentre l’aplicació estigui en fase de projecte tot el suport (Ex. configuració de l'entorn de desenvolupament, gestió d'usuaris i permisos, …) es canalitzarà en aquesta petició.
 
 Si no disposeu d’accés ho podeu demanar mitjançant una petició [**REMEDY**](https://pautic.gencat.cat/) de tipus “Gestió accés d'usuaris”, seleccionant “Alta” i l’aplicació “JIRA CSTD”, indicant DNI i sol·licitant permisos de rol desenvolupador.
 
