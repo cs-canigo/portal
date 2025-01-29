@@ -5487,6 +5487,287 @@
             "Classificacio": "Consolidat",
             "Data_publicacio": "19/12/2024",
             "Data_actualitzacio": "19/12/2024"
+        },
+	{
+            "Id": "dtarq213",
+            "Nom": "Àrees bàsiques dels agents rurals",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de les d’àrees bàsiques en què es subdivideixen les àrees regionals dels agents rurals i que constitueixen el nivell bàsic de la seva organització territorial.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "AB_AGENTS_RURALS_ATR.docx",
+                    "ifitxer_xls": "AB_AGENTS_RURALS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/-rees-b-siques-dels-agents-rurals/vmd4-zszj",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "AB_AGENTS_RURALS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	{
+            "Id": "dtarq214",
+            "Nom": "Àrees bàsiques policials",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat d'àrees bàsiques policials (ABP) que és la unitat bàsica d’implantació territorial, definida per criteris territorials i policials, en què s'organitza el desplegament del cos de Mossos d'Esquadra. Les ABP s'agrupen en diferents regions policials.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "ABP_MOSSOS.docx",
+                    "ifitxer_xls": "ABP_MOSSOS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/-rees-b-siques-policials/i2dd-kfpa",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "ABP_MOSSOS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	{
+            "Id": "dtarq215",
+            "Nom": "Àrees regionals dels agents rurals",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de les àrees regionals dels agents rurals en què s’organitza territorialment el Cos d’Agents Rurals per exercir les seves funcions.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "AR_AGENTS_RURALS_ATR.docx",
+                    "ifitxer_xls": "AR_AGENTS_RURALS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/-rees-regionals-dels-agents-rurals/hqk7-z9qw",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "AR_AGENTS_RURALS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	{
+            "Id": "dtarq216",
+            "Nom": "Regions d'Emergències de Bombers",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de les regions d’emergència (RE) en què s’articula la implantació territorial del cos de Bombers de la Generalitat.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RE_BOMBERS_ATR.docx",
+                    "ifitxer_xls": "RE_BOMBERS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-d-emerg-ncies/i5uz-s4g6/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RE_BOMBERS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	    {
+            "Id": "dtarq217",
+            "Nom": "Regions policials",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de les regions policials (RP) dependents de la Comissaria Superior Territorial en què s'organitza territorialment la Policia de la Generalitat-Mossos d'Esquadra.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "RP_MOSSOS_ATR.docx",
+                    "ifitxer_xls": "RP_MOSSOS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-policials/yq89-5upb/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "RP_MOSSOS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	    {
+            "Id": "dtarq218",
+            "Nom": "Relació de municipis i àrees bàsiques dels agents rurals",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de codis de municipi de Catalunya amb l’identificador de l’àrea bàsica dels agents rurals a la qual pertany a cada municipi.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "MUN_AB_AGENTS_RURALS_ATR.docx",
+                    "ifitxer_xls": "MUN_AB_AGENTS_RURALS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Relaci-de-municipis-i-rees-b-siques-dels-agents-ru/e4mz-sgih/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "MUN_AB_AGENTS_RURALS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	    {
+            "Id": "dtarq219",
+            "Nom": "Relació de municipis i àrees bàsiques policials",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de codis de municipi de Catalunya amb l’identificador de l’àrea bàsica policial a la qual pertany cada municipi o districte.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "MUN_ABP_MOSSOS_ATR.docx",
+                    "ifitxer_xls": "MUN_ABP_MOSSOS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Relaci-de-municipis-i-rees-b-siques-policials/dtpq-6fvw/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "MUN_ABP_MOSSOS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	    {
+            "Id": "dtarq220",
+            "Nom": "Relació de municipis i regions d’emergències",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de codis de municipi de Catalunya amb l’identificador de la regió d’emergències a la qual pertany cada municipi.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "MUN_RE_BOMBERS_ATR.docx",
+                    "ifitxer_xls": "MUN_RE_BOMBERS.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Relaci-de-municipis-i-regions-d-emerg-ncies/kh9v-aqnk/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "MUN_RE_BOMBERS",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	    {
+            "Id": "dtarq221",
+            "Nom": "Relació de municipis i Serveis Territorials d’Interior i Seguretat Pública",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Llistat de codis de municipi de Catalunya amb l’identificador del Servei Territorial d’Interior i Seguretat Pública al qual pertany cada municipi.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "MUN_SERVEIS_TERR_INT_ATR.docx",
+                    "ifitxer_xls": "MUN_SERVEIS_TERR_INT.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Relaci-de-municipis-i-Serveis-Territorials-d-Inter/qe3d-htkn/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "MUN_SERVEIS_TERR_INT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
+        },
+	    {
+            "Id": "dtarq222",
+            "Nom": "Delimitació dels serveis territorials Interior i Seguretat Pública",
+            "Ambit": "Seguretat i emergències",
+            "Subambit": "Seguretat pública",
+            "Descripcio": "Delimitació dels serveis Territorials en què s’estructura el departament d’Interior i Seguretat Pública per exercir les seves funcions en l’àmbit territorial.",
+            "instancies": [
+                {
+                    "inom": "V01",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Versió inicial",
+                    "ifitxer_doc": "SERVEIS_TERR_INT_ATR.docx",
+                    "ifitxer_xls": "SERVEIS_TERR_INT.csv",
+                    "idatacreacio": "29/01/2025",
+                    "itipusvisual": "29/01/2025",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "29/01/2025",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Seguretat/Delimitaci-dels-serveis-territorials-Interior-i-Se/5sk6-yqrf/",
+                    "itipusactualitzacio": "Sota demanda"
+                }
+            ],
+            "nom_dinsBD": "SERVEIS_TERR_INT",
+            "Classificacio": "Consolidat",
+            "Data_publicacio": "29/01/2025",
+            "Data_actualitzacio": "29/01/2025"
         }
+ 
     ]
 }
