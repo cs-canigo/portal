@@ -16,7 +16,7 @@ Coordinadament amb la Direcció General de Serveis Digitals i Experiència Ciuta
 
 En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups:
 
-a) Dades de Referència consolidades i avalades per la DGSEC que són d’obligat ús pels nous sistemes d’informació, i
+a) Dades de Referència consolidades i avalades per la DGSEC que són d’obligat ús pels nous sistemes d’informació.
 <br/><br/>	
 b) Dades de Referència que es troben en revisió per l’òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
 <br/><br/>
