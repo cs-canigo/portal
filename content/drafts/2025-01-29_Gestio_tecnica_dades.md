@@ -2,8 +2,7 @@
 date        = "2025-01-29"
 title       = "Publicació Catàleg Tècnic de Dades - Gener'25"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per evolucionar entitats publicades d'obligat compliment i donar d'alta noves entitats d'obligat compliment."
-categories  = ["Data Architecture"]
-sections    = ["Notícies", "home"]
+
 key = "Gener2025"
 +++
 
@@ -19,8 +18,8 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 	<li>Prioritats del Pla de Govern, Modificació de l’entitat d'Eixos del Pla de Govern per adaptar-la al nou Pla de Govern de la XV legislatura. Modificació del nom, descripció, nom dels atributs i contingut de l’entitat.</li><br>
 	<li>Objectius del Pla de Govern, Modificació de l’entitat d'Àmbits del Pla de Govern per adaptar-la al nou Pla de Govern de la XV legislatura. Modificació del nom, descripció, nom dels atributs i contingut de l’entitat.</li><br>
 	<li>Mesures del Pla de Govern, Modificació de l’entitat d'Objectius del Pla de Govern per adaptar-la al nou Pla de Govern de la XV legislatura. Modificació del nom, descripció, nom dels atributs i contingut de l’entitat.</li><br>
-</ul>
 </li>
+</ul>
 <li>S’han incorporat deu entitats dins del grup d'Obligat compliment:<br>
 <ul>
 	<li>Àrees regionals dels agents rurals. Llistat de les àrees regionals dels agents rurals en què s’organitza territorialment el Cos d’Agents Rurals per exercir les seves funcions.</li><br>

@@ -2,8 +2,6 @@
 date        = "2024-12-19"
 title       = "Publicació Catàleg Tècnic de Dades - Desembre'24"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per evolucionar entitats publicades d'obligat compliment i donar d'alta noves entitats d'obligat compliment."
-categories  = ["Data Architecture"]
-sections    = ["Notícies", "home"]
 key = "Desembre2024"
 +++
 
