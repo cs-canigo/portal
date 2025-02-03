@@ -13,13 +13,15 @@ Durant el mes de gener s’ha fet una nova actualització del Catàleg Tècnic d
 ## Novetats
 
 En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següents canvis:<br><br>
-<ul>
+
 <li>S’han evolucionat les entitats del grup d’Obligat compliment:<br>
+<ul>
 	<li>Prioritats del Pla de Govern, Modificació de l’entitat d'Eixos del Pla de Govern per adaptar-la al nou Pla de Govern de la XV legislatura. Modificació del nom, descripció, nom dels atributs i contingut de l’entitat.</li><br>
 	<li>Objectius del Pla de Govern, Modificació de l’entitat d'Àmbits del Pla de Govern per adaptar-la al nou Pla de Govern de la XV legislatura. Modificació del nom, descripció, nom dels atributs i contingut de l’entitat.</li><br>
 	<li>Mesures del Pla de Govern, Modificació de l’entitat d'Objectius del Pla de Govern per adaptar-la al nou Pla de Govern de la XV legislatura. Modificació del nom, descripció, nom dels atributs i contingut de l’entitat.</li><br>
-</li>
 </ul>
+</li>
+
 <li>S’han incorporat deu entitats dins del grup d'Obligat compliment:<br>
 <ul>
 	<li>Àrees regionals dels agents rurals. Llistat de les àrees regionals dels agents rurals en què s’organitza territorialment el Cos d’Agents Rurals per exercir les seves funcions.</li><br>
