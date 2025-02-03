@@ -23,7 +23,7 @@ En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següen
 	<li>Unitats poblacionals Catalunya, Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271. </li><br>
 	<li>Unitats Poblacionals d’Espanya, Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271. </li><br>
 	<li>Nom de carrers de Catalunya, Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271. </li><br>
-	<li>Ajuntaments, S'actualitza la denominació de l'ajuntament de "a Bisbal de Falset" (nom anterior) per "la Bisbal de Montsant" (nom actualitzat). </li><br>
+	<li>Ajuntaments, S'actualitza la denominació de l'ajuntament de "la Bisbal de Falset" (nom anterior) per "la Bisbal de Montsant" (nom actualitzat). </li><br>
 	<li>Codis postals per municipis de Catalunya, Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271. </li><br>
 	<li>Secretaries Generals i Sectorials, Derogació de la Secretaria d'Agenda Rural, ID: 11291, a causa del decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació. I la creació del Gabinet del President amb ID: 18092.</li><br>
 	<li>Direccions Generals, Creació de la Direcció General de Desenvolupament Rural, ID: 23560 i la Direcció General de Regadius i Espais Agraris, ID: 2356, a causa del decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació.</li><br>
