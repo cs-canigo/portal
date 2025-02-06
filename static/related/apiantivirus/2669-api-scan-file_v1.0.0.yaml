@@ -1,0 +1,353 @@
+openapi: 3.0.0
+info:
+  title: 2669 API SCAN FILE
+  description: |
+    **Funcionalidad del API**
+  contact:
+    name: Arquitectura Integración
+    email: 2669@gencat.cat
+  version: 1.0.0
+  x-ibm-name: 2669-api-scan-file
+servers:
+  - url: /2669/api-scan-file
+paths:
+  /scan-file:
+    post:
+      requestBody:
+        description: A description of the requestBody
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - file
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: success
+          content:
+            '*/*':
+              schema:
+                type: string
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                type: string
+        '400':
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '401':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '403':
+          description: Forbidden
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '405':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '429':
+          description: Too Many Request
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '500':
+          description: Internal Server Error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+  /scan-file-path:
+    post:
+      responses:
+        '200':
+          description: success
+          content:
+            '*/*':
+              schema:
+                type: string
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                type: string
+        '400':
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '401':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '403':
+          description: Forbidden
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '405':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '429':
+          description: Too Many Request
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+        '500':
+          description: Internal Server Error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/outputError'
+security:
+  - clientID: []
+    gicar:
+      - gicar_id_token
+      - gicar_user_information
+components:
+  schemas:
+    outputError:
+      type: object
+      properties:
+        httpCode:
+          type: integer
+          description: Codigo de estado de respuesta HTTP
+        httpMessage:
+          type: string
+          description: Breve descripcion del codigo de estado HTTP
+        errorCode:
+          type: string
+          description: Codigo de error propio de Ctti
+        moreInformation:
+          type: string
+          description: Descripcion detallada del error
+  securitySchemes:
+    clientID:
+      type: apiKey
+      name: X-IBM-Client-Id
+      in: header
+    gicar:
+      type: oauth2
+      x-ibm-oauth-provider: $(oauth-provider)
+      flows:
+        clientCredentials:
+          scopes:
+            gicar_id_token: Token Id
+            gicar_user_information: User information
+          tokenUrl: $(token-url)
+x-ibm-configuration:
+  cors:
+    enabled: false
+  gateway: datapower-api-gateway
+  type: rest
+  phase: realized
+  enforced: true
+  testable: true
+  assembly:
+    execute:
+      - ctti-validate-request:
+          version: 1.0.0
+      - gatewayscript:
+          version: 2.0.0
+          title: Token replace
+          source: "let header = context.request.header.get('Authorization-SPE');\r\n\r\nif(!header.includes(\"Bearer\"))\r\n    context.message.header.set('Authorization', \"Bearer \"+header); \r\nelse\r\n    context.message.header.set('Authorization', header); "
+      - invoke:
+          version: 2.2.0
+          title: invoke
+          backend-type: detect
+          header-control:
+            type: blocklist
+            values: []
+          parameter-control:
+            type: allowlist
+            values: []
+          http-version: HTTP/1.1
+          timeout: 60
+          verb: keep
+          chunked-uploads: true
+          persistent-connection: true
+          cache-response: protocol
+          cache-ttl: 900
+          stop-on-error: []
+          websocket-upgrade: false
+          target-url: $(target-url)$(api.operation.path)
+          graphql-send-type: detect
+    catch:
+      - errors:
+          - BadRequestError
+          - ConnectionError
+          - JavaScriptError
+        execute:
+          - ctti-error-management:
+              version: 1.0.0
+              title: ctti-error-management
+              FormatoRespuesta: json
+      - default:
+          - ctti-error-management:
+              version: 1.0.0
+              title: ctti-error-management
+              FormatoRespuesta: json
+    finally: []
+  x-customPaths:
+    /scan-file:
+      post:
+        responses:
+          '200':
+            description: success
+            schema:
+              type: string
+          '400':
+            description: Bad Request
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '401':
+            description: Unauthorized
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '500':
+            description: Internal Server Error
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+        request:
+          headers:
+            Authorization-SPE:
+              description: Token de autenticación de SPE
+              obligatorio: true
+              type: string
+              maxLength: 300
+            Authorization:
+              description: Token de autenticación de Gicar
+              obligatorio: true
+              type: string
+    /scan-file-path:
+      post:
+        responses:
+          '200':
+            description: success
+            schema:
+              type: string
+          '400':
+            description: Bad Request
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '401':
+            description: Unauthorized
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+          '500':
+            description: Internal Server Error
+            schema:
+              $ref: '#/x-ibm-configuration/x-customDefinitions/outputError'
+        request:
+          headers:
+            Authorization-SPE:
+              description: Token de autenticación de SPE
+              obligatorio: true
+              type: string
+              maxLength: 300
+            Authorization:
+              description: Token de autenticación de Gicar
+              obligatorio: true
+              type: string
+          body:
+            $ref: '#/x-ibm-configuration/x-customDefinitions/inputDataScanFilePath'
+  x-customDefinitions:
+    inputDataScanFilePath:
+      type: object
+      properties:
+        filePath:
+          description: File path to scan
+          obligatorio: false
+          type: string
+      additionalProperties: false
+    outputError:
+      type: object
+      properties:
+        httpCode:
+          key: httpCode
+        httpMessage:
+          key: httpMessage
+        errorCode:
+          key: errorCode
+        moreInformation:
+          key: moreInformation
+  properties:
+    target-url:
+      description: >-
+        URL del sistema destino. **Property generada por defecto por API
+        Connect**
+      encoded: false
+    cabeceras-seguridad:
+      value: "{ \t\"Strict-Transport-Security\": \"max-age=86400; includeSubDomains\", \"X-Content-Type-Options\": \"nosniff\",\t\"X-Frame-Options\": \"deny\"}"
+      description: >-
+        **Extension: ctti-response-headers-secure** JSON con las cabeceras que
+        se debe permitir su transmisión en la respuesta del API. Si se indican
+        con valor vacío se trasnmitirá un valor por defecto contenido en la
+        extensión **La propiedad no puede borrarse y debe contener las cabeceras
+        que se desean transmitir**
+    cabecerasSeguridad-enabled:
+      description: >-
+        **Extension: ctti-response-headers-secure** Indica si se realiza la
+        extension ctti-response-headers-secure. **Si se deja a true se ejecutará
+        la extension de validación de cabeceras de seguridad, si no se va a
+        ejecutar la extension de validación de cabeceras de seguridad se puede
+        borrar**
+      value: 'true'
+    token-url: {}
+    oauth-provider: {}
+  activity-log:
+    enabled: true
+    success-content: activity
+    error-content: payload
+  catalogs:
+    privat-pre:
+      properties:
+        target-url: http://preproduccio.antivirus.intranet.gencat.cat:8008/spe/api/v1
+        oauth-provider: apic-keycloak-cpd4
+        token-url: >-
+          https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
+    privat:
+      properties:
+        target-url: http://antivirus.intranet.gencat.cat:8008/spe/api/v1
+        oauth-provider: pro-apic-keycloak-cpd4
+        token-url: >-
+          https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token

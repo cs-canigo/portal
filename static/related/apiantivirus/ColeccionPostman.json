@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "3d2a9b5f-e1d8-42b0-8e29-173023973bf3",
+		"name": "APIM-CTTI Antivirus Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33715187"
+	},
+	"item": [
+		{
+			"name": "POST API-AUTHENTICATE Get Token SPE",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "antivirus-ctti-intranet",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "t0hyQxuPN82YmkCmIZfduZwqm3fji9GX",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Gicar Antivirus PRE",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-IBM-Client-Id",
+						"value": "Client id",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preproduccio.ctti.apim.intranet.gencat.cat/ctti/privat-pre/2669/api-request-token/authentication",
+					"protocol": "https",
+					"host": [
+						"preproduccio",
+						"ctti",
+						"apim",
+						"intranet",
+						"gencat",
+						"cat"
+					],
+					"path": [
+						"ctti",
+						"privat-pre",
+						"2669",
+						"api-request-token",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST API-AUTHENTICATE Refresh",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "antivirus-ctti-intranet",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "t0hyQxuPN82YmkCmIZfduZwqm3fji9GX",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Gicar Antivirus PRE",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization-SPE",
+						"value": "TOKEN SPE",
+						"type": "text"
+					},
+					{
+						"key": "X-IBM-Client-Id",
+						"value": "e8ff2e7fa850bed4d0720c9f458893b6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preproduccio.ctti.apim.intranet.gencat.cat/ctti/privat-pre/2669/api-request-token/authentication",
+					"protocol": "https",
+					"host": [
+						"preproduccio",
+						"ctti",
+						"apim",
+						"intranet",
+						"gencat",
+						"cat"
+					],
+					"path": [
+						"ctti",
+						"privat-pre",
+						"2669",
+						"api-request-token",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST API-SCAN",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "antivirus-ctti-intranet",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "t0hyQxuPN82YmkCmIZfduZwqm3fji9GX",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Gicar Antivirus PRE",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-IBM-Client-Id",
+						"value": "Client id",
+						"type": "text"
+					},
+					{
+						"key": "Authorization-SPE",
+						"value": "TOKEN SPE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "File to be scanned",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://preproduccio.ctti.apim.intranet.gencat.cat/ctti/privat-pre/2669/api-scan-file/scan-file",
+					"protocol": "https",
+					"host": [
+						"preproduccio",
+						"ctti",
+						"apim",
+						"intranet",
+						"gencat",
+						"cat"
+					],
+					"path": [
+						"ctti",
+						"privat-pre",
+						"2669",
+						"api-scan-file",
+						"scan-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Token Gicar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "client ID GICAR",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "client Secret GICAR",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token",
+					"protocol": "https",
+					"host": [
+						"preproduccio",
+						"endpointma",
+						"autenticaciogicar4",
+						"extranet",
+						"gencat",
+						"cat"
+					],
+					"path": [
+						"realms",
+						"gicarcpd4",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
