@@ -5,6 +5,7 @@ description = "Requeriments en l'ús d'infraestructura com a codi (IaC) amb Terr
 sections    = "[IAC]"
 categories  = ["cloud","docker","container","paas","aws","azure","gcloud","devops", "iac", "terraform"]
 weight      = 1
+toc         = true
 +++
 
 ## Estructura de projecte
@@ -272,3 +273,7 @@ Per garantir el **compliment de les polítiques** establertes per Suport Cloud p
 En el [workflow de CI d'infraestructura](https://canigo.ctti.gencat.cat/plataformes/ghec/gh-definicio-workflows/#worfklows-de-continuous-integration-ci-per-a-infraestructura-iac) es realitza una **validació de compliment de polítiques** abans d'executar el workflow de CD. En concret, aquesta validació es realitza al stage de **Scan check**.
 
 Aquest és el repositori on es pot trobar el detall de la informació de les polítiques: https://github.com/ctti-arq/ghec-checkov-policies.
+
+## Backups
+
+TO-DO: Añadir información de tagging
