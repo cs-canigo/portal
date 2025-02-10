@@ -39,7 +39,7 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "t0hyQxuPN82YmkCmIZfduZwqm3fji9GX",
+							"value": "xxxxxxxxxxxxxxxxxxx",
 							"type": "string"
 						},
 						{
@@ -117,7 +117,7 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "t0hyQxuPN82YmkCmIZfduZwqm3fji9GX",
+							"value": "xxxxxxxxxxxxxxxxxxx",
 							"type": "string"
 						},
 						{
@@ -141,7 +141,7 @@
 					},
 					{
 						"key": "X-IBM-Client-Id",
-						"value": "e8ff2e7fa850bed4d0720c9f458893b6",
+						"value": "xxxxxxxxxxxxxxxxxxx",
 						"type": "text"
 					}
 				],
@@ -200,7 +200,7 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "t0hyQxuPN82YmkCmIZfduZwqm3fji9GX",
+							"value": "xxxxxxxxxxxxxxxxxxx",
 							"type": "string"
 						},
 						{

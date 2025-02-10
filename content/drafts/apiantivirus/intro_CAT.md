@@ -31,6 +31,9 @@ A continuació, es llisten les diferents funcionals que ofereix el API Antivirus
 A través del següent enllaç es pot anar a la secció de canigo relacionada amb el disseny tècnic del API Antivirus.
 - **[disseny tècnic del API Antivirus](/drafts/apiantivirus/disenotecnico_CAT/)**.
 
+A través del següent enllaç es pot anar a la secció de canigo relacionada amb els requisits necessaris per a fer ús del API Antivirus.
+- **[Requisits per a fer ús del API Antivirus](/drafts/apiantivirus/requisitosdeuso_CAT/)**.
+
 A través del següent enllaç es pot anar a la secció de canigo relacionada amb el manual d'ús del API Antivirus.
 - **[Manual d'ús del API Antivirus](/drafts/apiantivirus/manualdeuso_CAT/)**.
 
