@@ -99,6 +99,7 @@ A continuació, s'indica l'enllaç a la documentació d'IBM relacionada amb el A
 
 ## **Definició del API REST d'Antivirus**
 ### **Requisit previ de l'ús**
+## 
 Per a poder fer ús de les operacions de les APIs, és necessari realitzar una crida prèvia al endpoint de Keycloak per a sol·licitar un token d'accés, facilitant per a això les credencials Client ID i Client Secret facilitades per Gicar. El token d'accés obtingut s'utilitzarà per a autenticar-se contra la capa de OAuth implementada en les APIs, i d'aquesta manera, processar les peticions del client correctament.
 ## 
 La petició que s'ha de realitzar és el següent:

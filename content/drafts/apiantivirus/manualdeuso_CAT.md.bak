@@ -473,18 +473,15 @@ https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gi
 		<img src="/related/apiantivirus/AnexoPostman2.png" width="600" height="300"/>
 	</p>
 
-## 
 2) Una vegada emplenat els paràmetres anteriors, es prem sobre el botó "Get new access token"
 
 	<p>
 		<img src="/related/apiantivirus/AnexoPostman3.png" width="600" height="500"/>
 	</p>
 
-## 
 3) Després d'obtenir el token d'accés GICAR, es prem sobre el botó "Use Token" per a afegir el token en les peticions que es realitzen contra les APIs d'antivirus.
 
 	<p>
 		<img src="/related/apiantivirus/AnexoPostman4.png" width="600" height="400"/>
 	</p>
 
-## 
