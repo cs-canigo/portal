@@ -1,7 +1,7 @@
 
 +++
 date         = "2024-04-09"
-title        = "Workflows"
+title        = "Definició workflows"
 description  = "Definició workflows de CI/CD"
 weight      = "1"
 toc         = true
