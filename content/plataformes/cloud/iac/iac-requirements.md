@@ -274,6 +274,20 @@ En el [workflow de CI d'infraestructura](https://canigo.ctti.gencat.cat/platafor
 
 Aquest és el repositori on es pot trobar el detall de la informació de les polítiques: https://github.com/ctti-arq/ghec-checkov-policies.
 
-## Backups
+## Backups (AWS)
 
-TO-DO: Añadir información de tagging
+Per a incloure els recursos requerits en els plans de còpia de seguretat creats per l'organització, seran necessàries les següents accions en el codi terraform d'aquests:
+
+- Encriptar els recursos corresponents amb la clau KMS existent en el compte com a part de la infraestructura base.
+- Etiquetar els recursos amb l'etiqueta corresponent a la freqüència/retenció desitjada:
+
+| Key | Value |  
+|------|-------|
+| diaria  | diaria
+| semanal-basica  | semanal-bas
+| semanal-avanzada  | semanal-av
+| mensual  | mensual
+| anual-basica  | anual-bas
+| anual-avanzada  | anual-av
+
+S'inclou més informació en les plantilles d'exemple de IaC.
