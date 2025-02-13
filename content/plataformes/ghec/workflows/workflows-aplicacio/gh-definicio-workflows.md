@@ -2,14 +2,14 @@
 +++
 date         = "2024-04-09"
 title        = "Definició workflows"
-description  = "Definició workflows de CI/CD"
+description  = "Definició workflows de CI/CD d'infraestructura i components tècnics d'aplicació"
 weight      = "1"
 toc         = true
 sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-definicio-workflows",
     "/ghec/gh-definicio-workflows",
-    "/plataformes/ghec/gh-definicio-workflows"
+    "/plataformes/ghec/workflows/gh-definicio-workflows"
 ]
 +++
 

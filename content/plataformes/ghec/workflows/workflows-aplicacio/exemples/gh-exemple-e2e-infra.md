@@ -8,7 +8,8 @@ sections    = ["GHEC"]
 aliases = [
     "/drafts/ghec/gh-exemple-infra",
     "/ghec/gh-exemple-e2e-infra",
-    "/plataformes/ghec/gh-exemple-e2e-infra"
+    "/plataformes/ghec/gh-exemple-e2e-infra",
+    "/plataformes/ghec/workflows/exemples/gh-exemple-e2e-infra"
 ]
 +++
 

@@ -1,5 +1,5 @@
 +++
-title = "Documentació workflows"
-description = "Documentació workflows"
+title = "Workflows"
+description = "Documentació dels workflows de CI/CD"
 weight = "5"
 +++

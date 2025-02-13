@@ -9,7 +9,8 @@ toc         = true
 aliases = [
     "/drafts/ghec/gh-configuracio-workflows",
     "/ghec/gh-configuracio-workflows",
-    "/plataformes/ghec/gh-configuracio-workflows"
+    "/plataformes/ghec/gh-configuracio-workflows",
+    "/plataformes/ghec/workflows/gh-configuracio-workflows/"
 ]
 +++
 
