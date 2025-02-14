@@ -145,7 +145,7 @@ public class PsisService {
 Afegim també un exemple d'invocació al nou mètode "validarSignaturaPsis" disponible en el connector:
 
 
-```
+```java
 public String testValidarSignaturaPsis() {
 	 logger.debug("[testValidarSignaturaPsis]");
 	 private static final VerifyRequest signatura = crearVerifyRequest(
@@ -194,7 +194,7 @@ public String testValidarSignaturaPsis() {
 
 Afegim també un exemple d'invocació al nou mètode "validarCertificatPsis" disponible en el connector:
 
-```
+```java
 public String testValidarCertificatPsis() {
 
 	 logger.debug("[testValidarCertificatPsis]");
