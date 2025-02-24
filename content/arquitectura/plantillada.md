@@ -12,10 +12,10 @@ La plantilla està pensada per cobrir la informació requerida per un document d
 El document està dividit en dues parts:
 
 - **La definició de l'arquitectura:** Aquesta part descriu d'una forma global quina és l'arquitectura del servei, entrant en tots els aspectes relacionats mitjançant tres categories principals corresponents als apartats 1, 2 i 3 del document.<sup>**(1)**</sup>
-###### <sup>(1)</sup> <img src="/images/PlantillaDA/warning-icon.png" alt="Advertencia" width="20" height="20"> _**Nota:** En el cas de Comunicacions i Lloc de Treball, l’apartat 3 no correspon i no és aplicable._
+###### <sup>(1)</sup> _**Nota:** En el cas de Comunicacions i Lloc de Treball, l’apartat 3 no correspon i no és aplicable._
 
 - **Informació del projecte d'aprovisionament:** A l'apartat 4 s'ha d'afegir tota la informació relativa al projecte d'aprovisionament que ha requerit la nova versió del document d'arquitectura. En cas d'un servei nou, en aquest apartat només és necessari afegir dades d'aprovisionament que no estan contemplats a la resta del document.<sup>**(2)**</sup>
-###### <sup>(2)</sup> <img src="/images/PlantillaDA/warning-icon.png" alt="Advertencia" width="20" height="20"> _**Nota:** aquest apartat només afecta els documents relacionats amb Sistemes. Per a les àrees de Comunicacions i Lloc de Treball, aquesta secció no és aplicable actualment._
+###### <sup>(2)</sup> _**Nota:** aquest apartat només afecta els documents relacionats amb Sistemes. Per a les àrees de Comunicacions i Lloc de Treball, aquesta secció no és aplicable actualment._
 
 A partir de la versió 2.2 de la plantilla del DA, posem a disposició dels arquitectes diverses versions de la plantilla per adaptar el document a les diferents tipologíes d'arquitectura. La plantilla clàssica que es feia servir fins ara es la primera (Plantilla genèrica).
 
