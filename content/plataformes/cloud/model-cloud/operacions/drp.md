@@ -5,7 +5,7 @@ description = "Pla de Recuperació davant Desastres"
 sections    = "Cloud"
 categories  = ["cloud","model","aws","azure","gcp"]
 aliases     = ["/model-cloud/operacions/drp"]
-weight      = 7
+weight      = 8
 +++
 
 

@@ -5,7 +5,7 @@ description = "Còpia Immutable"
 sections    = "Cloud"
 categories  = ["cloud","model","aws","azure","gcp"]
 aliases     = ["/model-cloud/operacions/copia"]
-weight      = 6
+weight      = 7
 +++
 
 
