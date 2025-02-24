@@ -65,13 +65,6 @@ A continuació proporcionem enllaços als documents relacionats (durant el cicle
             <td>Lloc de treball o Comunicacions</td>
             <td><a href="https://qualitat.solucions.gencat.cat/">Plantilla DA Lloc de treball o Comunicacions</a></td>
         </tr>
-        <tr>
-            <td>Lloc de treball</td>
-            <td rowspan=2><a href="https://qualitat.solucions.gencat.cat/">Plantilla DA Lloc de treball o Comunicacions</a></td>
-        </tr>
-        <tr>
-            <td>Comunicacions</td>
-        </tr>
     </tbody>
 </table>
 
