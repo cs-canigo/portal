@@ -5,7 +5,7 @@ description = "Guia d'ús de tokens personals per a l'accés programàtic i des 
 sections = "SIC"
 toc = true
 aliases = [
-    "/sic30-guies/guia-convert-aca-msbuild/"
+    "/sic30-guies/guia-personal-token-gitlab/"
 ]
 taxonomies = []
 weight = 8
