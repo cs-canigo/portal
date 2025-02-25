@@ -1,5 +1,5 @@
 +++
-date = "2024-12-31"
+date = "2025-02-20"
 title = "Documentació del servei de l'API Manager Corporatiu"
 description = "Documentació i manuals d'usuari"
 sections = "APIM"
@@ -40,7 +40,7 @@ A continuació, hi ha tots els recursos que pugui necessitar un usuari proveïdo
 - [DT Polítiques i Extensions](/related/apim/DT_Politiques_i_Extensions_V1.1.pdf): disseny tècnic de les polítiques i extensions personalitzades que poden ser utilitzades a l'entorn de l'API Manager Corporatiu.
 - [Guia pujada fitxers Gateways](/related/apim/Guía_pujada_fitxers_Gateways.pdf): guia per fer el procediment de pujada de fitxers als gateways de l'entorn de l'API Manager Corporatiu, pas necessari per poder fer ús de la política personalitzada ctti-get-variables.
 - [Manual importació polítiques entorn local](/related/apim/Manual_importacio_politiques_v1.0.pdf): manual d'importació de polítiques personalitzades a l'entorn local, que fa servir el Toolkit i l'LTE de l'IBM API Connect.
-- [Guia de desplegament de recursos a l'entorn local](/related/apim/Guia_desplegament_recursos_als_Gateways_LTE_v1.0.pdf): guia de desplegament de recursos als gateways de l'entorn local, format pel Toolkit i l'LTE de l'IBM API Connect.
+- [Guia de desplegament de recursos a l'entorn local](/related/apim/Guia_desplegament_recursos_als_Gateways_LTE_v1.1.pdf): guia de desplegament de recursos als gateways de l'entorn local, format pel Toolkit i l'LTE de l'IBM API Connect.
 
 ### Desplegament
 

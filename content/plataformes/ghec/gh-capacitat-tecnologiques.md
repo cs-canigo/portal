@@ -63,6 +63,8 @@ Respecte al versionat de l' artefacte, el nom del lliurable i la seva version s'
 
 ### JAVA (Maven)
 
+El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub Packages, han d'utilitzar únicament lletres minúscules i guions o guions baixos per separar paraules.
+
 * **Versionat**
    * Fitxer : pom.xml
    * Nom Lliurable : Tag artifactid
@@ -79,8 +81,11 @@ Respecte al versionat de l' artefacte, el nom del lliurable i la seva version s'
    ```
     
 ### JAVA (Gradle)
+
+El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub Packages, han d'utilitzar únicament lletres minúscules i guions o guions baixos per separar paraules.
+
 * **Versionat**
-   * Fitxer / Nom Lliurable : settings.gradle / Camp -  rootProject.name 
+   * Fitxer / Nom Lliurable : settings.gradle / Camp -  rootProject.name
    * Fitxer / Versió Lliurable :  build.gradle / Camp -  version i Camp -  group
 
 * **Requisits**
@@ -93,6 +98,7 @@ Respecte al versionat de l' artefacte, el nom del lliurable i la seva version s'
    I per publicar una biblioteca:
    ```
    plugins {
+    id 'java-library'
     id 'maven-publish'
    }
    ```
