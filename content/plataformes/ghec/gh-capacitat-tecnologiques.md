@@ -35,9 +35,9 @@ Actualment, estan certificats els desplegaments als següents hiperescalars, sem
 
 Addicionalment, la plataforma suporta les següents capacitats :
 
-### Desplegaments a [API Manager corporatiu (APIM)](https://canigo.ctti.gencat.cat/plataformes/apim/)
+### Desplegaments a [API Manager corporatiu (APIM)](https://canigo.ctti.gencat.cat/plataformes/apim/) 
 
-Suport a les següents accions i operatives:
+<br>Suport a les següents accions i operatives:
 
 * **PUBLISH**: publicació d’una nova versió d’un producte i APIs associades. El sistema permet redesplegar versions als catàlegs preproductius sempre que no hagin arribat a producció.
 
@@ -51,9 +51,30 @@ Suport a les següents accions i operatives:
     * **SUPERSEDE**: deprecació d’una de les versions vigents del producte i marcat de subscripcions “migrated”. Caldrà seleccionar el catàleg sobre el qual es desitja fer el supersede, indicar la versió actual del producte (CURRENT_PRODUCT_VERSION) i la nova versió del producte (NEW_PRODUCT_VERSION). Per exemple: 1.1.0.
 
 
-    En el següent enllaç, es pot revisar la definició de workflows per a totes les tecnologies incloent API's: [Workflows Reutilitzables](../gh-definicio-workflows/).
+    En el següent enllaç, es pot revisar la definició de workflows per a totes les tecnologies incloent API's: [Workflows Reutilitzables](../workflows/workflows-aplicacio/gh-definicio-workflows/).
 
+### Desplegaments per a tecnologies no suportades "**custom**" de contenidors, funcions i contingut estàtic
 
+<br>S'ha decidit desenvolupar un model de CI/CD per a contenidors, funcions i contingut estàtic més flexible per a les tecnologies que no estan suportades o estan fora de la fulla de ruta de la plataforma. Aquest model es basa en la definició, mitjançant paràmetres passats als workflows, de comandes personalitzades per obtenir la versió i el nom del projecte del fitxer descriptor on s'emmagatzemen aquestes metadades. Gràcies a l'ús d'aquestes comandes, i l'ús de comandes personalitzades per a la compilació, instal·lació de dependències o empaquetat, es pot adaptar el model de CI/CD a qualsevol tecnologia, podent ser aprofitats per realitzar instal·lacions d'eines o llibreries específiques de cada tecnologia prèviament a la compilació, execució dels tests o la generació d'artefactes. A continuació s'explica al detall el funcionament d'aquest model:
+
+S'ha afegit un nou valor possible per a la tecnologia denominat "custom". Aquest valor requereix comandes personalitzades per obtenir la versió i el nom del projecte del descriptor. Aquestes comandes es passen com a paràmetres als workflows de CI/CD. Les comandes s'utilitzen en el pas de set-project-vars, que és l'encarregat d'obtenir els valors de la versió i el nom del projecte.
+
+        #####################################################################################
+        # Specify both parameters if technology is custom. Comment in any other case        #
+        # The parameters are used to get the project name and version from descriptor files #
+        #####################################################################################
+        # get_project_name_command: "jq '.name' composer.json"
+        # get_version_command: "jq '.version' composer.json"
+
+<br>La comanda "get_version_command" s'utilitzarà per extreure la versió del fitxer de configuració o descriptor del projecte, on es troben les metadades del projecte. Per exemple, es pot utilitzar jq -r '.version' per extreure la versió del fitxer composer.json per al cas de PHP.
+
+Quan la tecnologia sigui "custom", es realitzarà el CI on PR també. Això assegura que el model de CI es mantingui igual que per a altres tecnologies suportades.
+
+S'ha implementat una comanda similar denominada "get_project_name_command", per obtenir el nom del projecte del descriptor. Per exemple, es pot utilitzar jq -r '.name' per extreure el nom del fitxer composer.json per al cas de PHP.
+
+En els workflows de CD de contenidors, funcions i estàtics, s'ha eliminat el paràmetre "get_version_command", ja que no s'utilitza en aquests workflows. En el seu lloc, s'utilitza l'artifact_version passat per paràmetre en el formulari.
+
+Per a més detalls sobre la configuració dels workflows i els paràmetres necessaris per a la tecnologia "custom", es pot consultar la secció [Configuració workflows](../workflows/workflows-aplicacio/gh-configuracio-workflows).
 
 ## Requisits
 
@@ -63,7 +84,7 @@ Respecte al versionat de l' artefacte, el nom del lliurable i la seva version s'
 
 ### JAVA (Maven)
 
-El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub Packages, han d'utilitzar únicament lletres minúscules i guions o guions baixos per separar paraules.
+<br>El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub Packages, han d'utilitzar únicament lletres minúscules i guions o guions baixos per separar paraules.
 
 * **Versionat**
    * Fitxer : pom.xml
@@ -82,7 +103,7 @@ El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub 
     
 ### JAVA (Gradle)
 
-El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub Packages, han d'utilitzar únicament lletres minúscules i guions o guions baixos per separar paraules.
+<br>El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub Packages, han d'utilitzar únicament lletres minúscules i guions o guions baixos per separar paraules.
 
 * **Versionat**
    * Fitxer / Nom Lliurable : settings.gradle / Camp -  rootProject.name
@@ -102,14 +123,18 @@ El nom del projecte i els artefactes que es generin i es vagin a pujar a GitHub 
     id 'maven-publish'
    }
    ```
-    
+
 ### NODE
+<br>
+
 * **Versionat**
    * Fitxer : package.json
    * Nom Lliurable :  name
    * Versió Lliurable : version
 
 ### .NET
+<br>
+
 * **Versionat**
 En aquest cas hi ha dues casuistiques :        
        
@@ -126,6 +151,8 @@ En aquest cas hi ha dues casuistiques :
     Per a projectes on la tecnologia sigui dotnet és necessària l'existència de l'arxiu `*.csproj` a l'arrel. Si existeixen dos arxius `*.csproj` serà obligatori especificar el `Project_Name`.
 
 ### APIM
+<br>
+
 * **Versionat**
    * Fitxer : product.yaml
    * Nom Lliurable : title
@@ -135,6 +162,8 @@ En aquest cas hi ha dues casuistiques :
    Els fitxers de producte i d'APIs han d'estar a l'arrel del repositori i no poden incloure la versió en el nom.
 
 ### PYTHON
+<br>
+
 * **Versionat** 
    * Fitxer : setup.py
    * Nom Lliurable : name
@@ -144,12 +173,15 @@ En aquest cas hi ha dues casuistiques :
    Per a projectes Python és necessari que a l'arrel del repositori existeixin els fitxers de configuració `setup.py` i `requirements.txt`.
 
 ### Android (Gradle):
+<br>
+
 * **Versionat**
    * Fitxer / Nom Lliurable : app/build.gradle / Task - packageName
    * Fitxer / Versió Lliurable : app/build.gradle / Task - versionName
    * Fitxer / Build Lliurable : app/build.gradle / Task - versionCode
 
 ### iOS
+<br>
 
    * Fitxer / Nom Lliurable : Build Settings / Camp - PRODUCT_BUNDLE_IDENTIFIER
    * Fitxer / Versió Lliurable : Build Settings / Camp - MARKETING_VERSION
@@ -157,7 +189,7 @@ En aquest cas hi ha dues casuistiques :
 
 ### Desplegaments estesos
 
-El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions cap a arquitectures cloud-native desplegades a Cloud Públic, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI com puguin ser **clusters de Kubernetes** o **màquines virtuals**. També els desplegaments de canvis en **bases de dades** poden fer ús d'aquest model de desplegament ja sigui utilitzant frameworks com Liquibase, o bé executant directament scripts mitjançant les CLIs de PostgreSQL, MySQL o altres motors de bases de dades.
+<br>El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions cap a arquitectures cloud-native desplegades a Cloud Públic, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI com puguin ser **clusters de Kubernetes** o **màquines virtuals**. També els desplegaments de canvis en **bases de dades** poden fer ús d'aquest model de desplegament ja sigui utilitzant frameworks com Liquibase, o bé executant directament scripts mitjançant les CLIs de PostgreSQL, MySQL o altres motors de bases de dades.
 
 Les tecnlogies certificades actualment són les següents:
 
@@ -200,6 +232,7 @@ Permisos requerits:
    * lambda:UpdateFunctionConfiguration
 
 #### Exemple de codi terraform
+<br>
 
     resource "aws_iam_role" "lambda_role" {
         name = "lambda_execution_role"

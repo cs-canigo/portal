@@ -45,7 +45,7 @@ aliases = [
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/infra-cd-apply-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/infra-cd-apply-reusable.yaml@v4
     secrets: inherit
     with:
       cloud: aws
@@ -70,7 +70,7 @@ aliases = [
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/infra-ci-on-commit-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/infra-ci-on-commit-reusable.yaml@v4
     secrets: inherit
     with:
       terraform_version: 1.7.5
@@ -91,7 +91,7 @@ aliases = [
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/infra-ci-on-pr-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/infra-ci-on-pr-reusable.yaml@v4
     secrets: inherit
     with:
       cloud: aws
@@ -103,10 +103,13 @@ aliases = [
 ### CD
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
   - `java-gradle`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws` (default)
@@ -117,7 +120,8 @@ aliases = [
   - `aca`
 - **artifact_version**: (obligatori) Versió de l'artefacte.
 - **environment**: (obligatori) Entorn.
-- **service_name**: (opcional) Nom del servei.
+- **service_name**: (opcional) Nom del servei. Definir només si el projecte es basa en AWS.
+- **container_app**: (opcional) Nom de l'aplicació de contenidors. Definir només si el projecte es basa en Azure ACA engine.
 - **registry_name**:(obligatori)  Nom del registre.
 - **cluster_name**: (opcional) Nom del clúster. Definir si el projecte es basa en un motor AWS o ECS.
 - **task_definition_name**: (opcional) Nom de la definició de la tasca. Definir només si el projecte es basa en AWS.
@@ -142,7 +146,7 @@ aliases = [
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/container-cd-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/container-cd-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -171,11 +175,15 @@ aliases = [
 ### CI on commit to develop
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
   - `java-gradle`
+  - `custom`
 - **docker_build_context**: (opcional) Context de construcció de Docker. Per defecte és `"."` (l'arrel). Valor per defecte: `"."`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.  En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
@@ -192,7 +200,7 @@ aliases = [
 
 **Exemple de crida al workflow:**
 ```yaml
-uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-develop-reusable.yaml@v3
+uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-develop-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -205,15 +213,19 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CI on commit
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
   - `java-gradle`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projectes hi hagi més de dos .csproj o projectes que no se li especifiqui la tecnologia, aquesta propietat project_name és obligatòria.
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -223,11 +235,14 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
-  - `raw`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
   - `java-gradle`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
@@ -245,7 +260,6 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
   Valor per defecte: true.
 - **dependabot**: (opcional) Activació de Dependabot.
   Valor per defecte: true.
-- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 - **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`, per a java maven `"mvn package -Dmaven.test.skip=true"`, per a java gradle `"gradle clean build"`, per a dotnet `"dotnet restore $PROJECT_PATH && dotnet build $PROJECT_PATH --configuration Release && dotnet publish $PROJECT_PATH --configuration Release --output ./out"`, i per a python `"pip install -r requirements.txt && python setup.py sdist bdist_wheel"`. Si no es proporciona cap comanda personalitzada, es farà servir la comanda per defecte segons la tecnologia especificada.
 - **custom_test_command**:(opcional) Comanda personalitzada per realitzar les proves al projecte. Els valors per defecte són els següents segons la tecnologia:
 
@@ -257,7 +271,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-pr-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-pr-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -271,9 +285,12 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CD
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **cloud**: Entorn al núvol. Valors possibles:
   - `aws` (default)
@@ -306,7 +323,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/function-cd-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/function-cd-reusable.yaml@v4
     secrets: inherit
     with:
       technology: nodejs
@@ -333,9 +350,13 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CI on Commit
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
@@ -351,7 +372,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/function-ci-on-commit-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/function-ci-on-commit-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -364,9 +385,13 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `python`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **java_version**: (opcional) Versió de Java. Definir només si el projecte es basa en tecnologia Java.
 - **java_distribution**: (opcional) Distribució de Java. Definir només si el projecte es basa en tecnologia Java.
 - **maven_version**: (opcional) Versió de Maven. Definir només si el projecte es basa en tecnologia Java.
@@ -380,7 +405,6 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **unit_test**: (opcional) Indica si s'han d'executar proves unitàries com a part del workflow d'integració contínua. Valor per defecte: false.
 - **sonarqube**: (opcional) Indica si s'ha d'integrar SonarQube en el procés d'integració contínua. Valor per defecte: true.
 - **dependabot**: (opcional) Permet activar o desactivar la funcionalitat de Dependabot en el workflow. Valor per defecte: true.
-- **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte. En el cas de projectes amb tecnologia .NET i que en el repositori de projecte existeixin mes de dos .csproj, aquesta propietat project_name és obligatòria.
 - **install_build_command**: (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci"`, per a java `"mvn clean compile"`, per a dotnet `"dotnet restore $PROJECT_PATH && dotnet build $PROJECT_PATH --configuration Release"`, i per a python `" pip install -r requirements.txt"`. Si no es proporciona cap comanda personalitzada, es farà servir la comanda per defecte segons la tecnologia especificada.
 **custom_test_command**:(opcional) Comanda personalitzada per realitzar les proves al projecte. Els valors per defecte són els següents segons la tecnologia:
 
@@ -391,7 +415,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/function-ci-on-pr-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/function-ci-on-pr-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -407,6 +431,8 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `raw`
   - `nodejs`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **cloud**: (obligatori) Entorn al núvol. Valors possibles:
   - `aws` (default)
@@ -438,7 +464,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/static-cd-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/static-cd-reusable.yaml@v4
     secrets: inherit
     with:
       technology: nodejs
@@ -466,6 +492,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `raw`
   - `nodejs`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **project_name**: (opcional) Nom del projecte, especificar només si no hi ha compilació en el projecte.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
 - **install_build_command**: (opcional) (opcional) Comanda personalitzada per construir i empaquetar el projecte. El valor per defecte per a nodejs és `"npm ci && npm run build"`.
@@ -478,7 +507,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/static-ci-on-commit-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/static-ci-on-commit-reusable.yaml@v4
     secrets: inherit
     with:
       technology: nodejs
@@ -493,6 +522,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `raw`
   - `nodejs`
+  - `custom`
+- **get_project_name_command**: (opcional) Comanda per obtenir el nom del projecte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir el nom del projecte del fitxer descriptor.
+- **get_version_command**: (opcional) Comanda per obtenir la versió de l'artefacte. Especifiqueu el paràmetre si la tecnologia és "custom". Comenta en qualsevol altre cas. El paràmetre s'utilitza per obtenir la versió de l'artefacte del fitxer descriptor.
 - **node_version**: (opcional) Versió de Node. Definir només si el projecte es basa en tecnologia Node.
 - **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
   - `node_modules/**`
@@ -508,7 +540,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/static-ci-on-pr-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/static-ci-on-pr-reusable.yaml@v4
     secrets: inherit
     with:
       technology: nodejs
@@ -522,6 +554,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CI on Commit
 - **technology**: (obligatori) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `java-gradle`
@@ -542,7 +575,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/library-ci-on-commit-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/library-ci-on-commit-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -555,6 +588,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 ### CI on PR
 - **technology**: (opcional) Tecnologia del projecte. Valors possibles:
   - `java`
+  - `java-maven`
   - `nodejs`
   - `dotnet` **IMPORTANT .Net Framework no està suportat**
   - `java-gradle`
@@ -582,7 +616,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/library-ci-on-pr-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/library-ci-on-pr-reusable.yaml@v4
     secrets: inherit
     with:
       technology: java
@@ -614,7 +648,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ```yaml
-  uses: ctti-arq/reusable-workflows/.github/workflows/extended-executor-cd-reusable.yaml@v3
+  uses: ctti-arq/reusable-workflows/.github/workflows/extended-executor-cd-reusable.yaml@v4
     secrets: inherit
     with:
       cloud: aws
@@ -704,7 +738,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 
 **Exemple de crida al workflow:**
 ``` yaml
-uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-publish-reusable.yaml@v3.0.16
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-publish-reusable.yaml@v4
     secrets: inherit
     with:
       artifact_version: ${{ inputs.artifact_version }}
@@ -737,7 +771,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-publish-reusable.yam
 
 **Exemple de crida al workflow:**
 ``` yaml
-uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-operativa-reusable.yaml@v3.0.16
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-operativa-reusable.yaml@v4
     secrets: inherit
     with: 
       operation: ${{ inputs.operation }}
@@ -756,7 +790,7 @@ uses: ctti-arq/reusable-workflows/.github/workflows/apim-cd-operativa-reusable.y
 
 **Exemple de crida al workflow:**
 ``` yml
-uses: ctti-arq/reusable-workflows/.github/workflows/apim-ci-on-commit-reusable.yaml@v3.0.16
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-ci-on-commit-reusable.yaml@v4
 secrets: inherit
 with:
     apicProductFile: "health-check-test_2.0.7.yaml"
@@ -767,7 +801,7 @@ with:
 
 **Exemple de crida al workflow:**
 ``` yml
-uses: ctti-arq/reusable-workflows/.github/workflows/apim-ci-on-pr-reusable.yaml@v3
+uses: ctti-arq/reusable-workflows/.github/workflows/apim-ci-on-pr-reusable.yaml@v4
 secrets: inherit
 with:
     apicProductFile: "health-check-test_2.0.7.yaml"
