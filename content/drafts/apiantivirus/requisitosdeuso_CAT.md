@@ -1,6 +1,6 @@
 +++
 date        = "2025-01-21"
-title       = "Requisits per a fer ús del API Antivirus"
+title       = "Passos a seguir per fer l’ús del API Antivirus"
 description = "Documentació detallada dels requisits necessaris per a integrar-se amb el API Antivirus"
 sections    = "APIANTIVIRUS"
 weight      = 1
@@ -9,18 +9,30 @@ categories  = ["cloud","apiantivirus"]
 
 La següent informació es proporciona com una guia per als clients, detallant els requeriments i passos necessaris que les aplicacions/projectes han de seguir per a poder fer ús de les APIs d'Antivirus.
 
+Els passos que caldria seguir serien els següents:
+- *_Sol·licitar alta d'usuari en GICAR_*
+- *_Accés Portal desenvolupador i creació de l'aplicació_*
+- *_Suscripció al Pla_*
+- *_Obertura del tiquet ACOAPIM per a l'autorització al pla de subscripció_*
+- *_Obertura del tiquet ACOGICAR per a sol·licitar les credencials KeyCloak_*
+## 
+
 ## **Requisits previs**
 
-### **Sol·licitar alta d'usuari en Gicar**
+### **Sol·licitar alta d'usuari en GICAR**
 
-Gicar és el Identity provider de CTTI integrat en tots els serveis de CTTI. Per a accedir als serveis i plataformes de CTTI és necessari tenir un usuari vàlid de Gicar per a autenticar-se en les plataformes.
+GICAR és el Identity provider de CTTI integrat en tots els serveis de CTTI. Per a accedir als serveis i plataformes de CTTI és necessari tenir un usuari vàlid de GICAR per a autenticar-se en les plataformes.
 
-La gestió de l'alta, baixa, modificació dels usuaris/passwords en GICAR es duu a terme a través del departament de Gestió d'identitats dins de CTTI. Cada proveïdor tindrà un agent del PMO, qui s'encarregarà de gestionar els comptes Gicar, amb les dades com el DNI, correu i el nom facilitat per l'agent del projecte.
+La gestió de l'alta, baixa, modificació dels usuaris/passwords en GICAR es duu a terme a través del departament de Gestió d'identitats dins de CTTI. Cada proveïdor tindrà un agent del PMO, qui s'encarregarà de gestionar els comptes GICAR, amb les dades com el DNI, correu i el nom facilitat per l'agent del projecte.
 ## 
 
 <p>
   <img src="/related/apiantivirus/AutenticacioDeUsuariosGicar.png" width="900" height="400"/>
 </p>
+
+##
+###### **_Contacte:_**
+En cas de tenir qualsevol problema en realitzar la sol·licitud d'alta en GICAR, podeu posar-vos en contacte amb l'equip responsable, a través de l'obertura d'un tiquet a [ACOGICAR](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOGICAR/issues) 
 
 ---
 
@@ -36,7 +48,7 @@ De cara a poder fer ús de les APIs, és necessari subscriure's al producte asso
 </p>
 
 ## 
-Una vegada accedit al portal de developer, s'inicia sessió amb el compte de Gicar sol·licitada prèviament i es procedeix a crear una nova aplicació.
+Una vegada accedit al portal de developer, s'inicia sessió amb el compte de GICAR sol·licitada prèviament i es procedeix a crear una nova aplicació.
 
 Per a això, es prem primer en el botó "Apps" en la barra superior de la pantalla, i posteriorment, en el botó "Crear una aplicació nova".
 ## 
@@ -101,6 +113,10 @@ Una vegada subscrit al producte, es pot verificar per la pantalla de l'aplicaci�
   <img src="/related/apiantivirus/PasoCrearAPP_Detalle.png" width="600" height="400"/>
 </p>
 
+##
+###### **_Contacte:_**
+En cas de tenir qualsevol problema en crear l'aplicació en el portal de desenvolupadors, o en realitzar la subscripció al pla del API corresponent, podeu posar-vos en contacte amb l'equip responsable, a través de l'obertura d'un tiquet a [ACOAPIM](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOAPIM/issues)
+
 ## 
 ### **Obertura del tiquet ACOAPIM per a l'aprovació de la subscripció de APIs**
 
@@ -129,5 +145,9 @@ Una vegada que la OFT d'API Manager hagi aprovat la subscripció del producte d'
 Les APIs d'antivirus implementen el flux de seguretat i autenticació OAuth (Client Credentials) utilitzant el proveïdor intern recomanat per CTTI, GICAR, usant el sistema de gestió d'identitats de Keycloak. En aquest flux, l'aplicació empra les seves credencials prèviament sol·licitades per a obtenir un token d'accés. Keycloak verifica les credencials i, si són vàlides, genera un token d'accés que permet autenticar-se en la capa OAuth 2.0 del API, habilitant així l'accés als serveis oferts per les APIs.
 
 Per a sol·licitar les credencials Client ID + Client Secret per a autenticar-se contra Keycloak és necessari obrir un tiquet [ACOGICAR](https://cstd-ctti.atlassian.net/jira/software/c/projects/acogicar/boards/21). Si no es disposa de permisos per a accedir a això, és necessari obrir un tiquet [REMEDY](https://pauticgencat.onbmc.com/) indicant la necessitat d'obtenir accés per a obrir tiquets de ACOGICAR.
+
+##
+###### **_Contacte:_**
+En cas de tenir qualsevol problema a l'hora de sol·licitar les credencials de keycloak, podeu posar-vos en contacte amb l'equip responsable, a través de l'obertura d'un tiquet a [ACOGICAR](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOGICAR/issues) 
 
 ---
