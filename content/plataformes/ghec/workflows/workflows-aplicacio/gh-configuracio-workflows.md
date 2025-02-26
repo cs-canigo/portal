@@ -302,9 +302,9 @@ uses: ctti-arq/reusable-workflows/.github/workflows/container-ci-on-commit-devel
 - **artifact_version**: (obligatori) Versió de l'artefacte.
 - **environment**: (obligatori) Entorn.
 - **function_names**: (obligatori) Noms de les funcions.
-- **folder_names**: (opcional) Noms dels fitxers.
+- **folder_names**: (opcional) Noms dels fitxers de les funcions. Especificar si el codi de la funció o funcions està en un directori i no a l'arrel. Especificar aquest paràmetre abans que el "functions_folder_path".
 - **storage_name**: (opcional) Nom d'emmagatzematge. Descomentar només si s'espera que el fitxer .zip tingui més de 50 MB i és necessari pujar-lo a un bucket.
-- **functions_folder_path**: (opcional) Ruta del fitxer de les funcions. Descomentar només si les funcions es troben en una carpeta diferent a l'arrel del repositori.
+- **functions_folder_path**: (opcional) Ruta del fitxer de les funcions. Passar el paràmetre nomès si s'ha especificat el "folders_names". Descomentar només si les funcions es troben en una carpeta diferent a l'arrel del repositori que contenta subdirectoris per cadascuna de les funcions.
 - **healthcheck_url**: (opcional) URL del comprovador d'estat. Ha de ser `https://<endpoint_url.gencat.cat>/`. Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
 - **healthcheck_regex**: (opcional) Regresió de l'estat. Ha de tenir format semàntic entre cometes, ex: "1.0.0". Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
 - **healthcheck_timeout**: (opcional) Temps màxim per a la comprovació d'estat. Ha de tenir un valor numèric entre cometes, ex: "300". Definir si existeix un endpoint després del deploy i una expressió d'avaluació del body.
