@@ -4608,16 +4608,31 @@
                 },
                 {
                     "inom": "V21",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                     "idescripcio": "Modificació de l’entitat d'Unitats Poblacionals d'Espanya, a causa de la modificació del nom del municipi de la Bisbal de Falset amb CODI: 430271, a la Bisbal de Montsant amb el mateix CODI.",
                     "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya.xlsx",
                     "idatacreacio": "19/12/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "27/02/2025",
                     "idatapublicacio": "19/12/2024",
+                    "iurl_dades_obertes": "",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V22",
+                    "iestat": "Vigent",
+                    "itipus": "Tabular",
+                    "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                    "idescripcio": "Canvi de denominació oficial del municipi de Castelló de la Plana, que passa a denominar-se oficialment Castelló de la Plana/Castellón de la Plana.",
+                    "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                    "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                    "idatacreacio": "27/02/2025",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "27/02/2025",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                     "itipusactualitzacio": "Sota demanda"
                 }
@@ -4625,7 +4640,7 @@
             "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
             "Classificacio": "Consolidat",
             "Data_publicacio": "10/07/2020",
-            "Data_actualitzacio": "19/12/2024"
+            "Data_actualitzacio": "27/02/2025"
         },
         {
             "Id": "dtarq175",
@@ -5522,10 +5537,10 @@
         },
         {
             "Id": "dtarq212",
-            "Nom": "Comissionats",
+            "Nom": "Comissionats de l’Administració de la Generalitat de Catalunya",
             "Ambit": "Administració pública",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de comissionats d'àmbit d'actuació específic de l'Administració de la Generalitat de Catalunya.",
+            "Descripcio": "Els Comissionats són alts càrrecs que depenen del titular del departament i tindran les funcions i estructura que prevegi la seva norma de creació. Poden assistir a reunions del Govern.",
             "instancies": [
                 {
                     "inom": "V01",
