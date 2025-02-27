@@ -3638,7 +3638,7 @@
                 },
                 {
                     "inom": "V22",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                     "idescripcio": "Canvi de nom del municipi “la Bisbal de Falset” (nom anterior) per “la Bisbal de Montsant” (nom actualitzat), amb CODI: 430271",
@@ -3646,9 +3646,24 @@
                     "ifitxer_xls": "Municipis_Espanya.xlsx",
                     "idatacreacio": "19/12/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "2025-02-27",
                     "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V23",
+                    "iestat": "Publicada",
+                    "itipus": "Tabular",
+                    "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                    "idescripcio": "Canvi de denominació oficial del municipi de Castelló de la Plana, que passa a denominar-se oficialment Castelló de la Plana/Castellón de la Plana.",
+                    "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                    "ifitxer_xls": "Municipis_Espanya.xlsx",
+                    "idatacreacio": "2025-02-26",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "2025-02-27",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/d/wu5r-gv4j",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
