@@ -417,7 +417,7 @@
                 },
                 {
                     "inom": "V11",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Subdirecció General d'Organització de l'Administració i del Sector Públic",
                     "idescripcio": "La Direcció General d’Ecosistemes Forestals i Gestió del Medi passa a denominar-se Direcció General de Boscos i Gestió del Medi i La Direcció General de Qualitat Ambiental i Canvi Climàtic passa a denominar-se Direcció General de Canvi Climàtic i Qualitat Ambiental.",
@@ -425,9 +425,24 @@
                     "ifitxer_xls": "Direccions_Generals.xlsx",
                     "idatacreacio": "27/03/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "2025-02-27",
                     "idatapublicacio": "27/03/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V15",
+                    "iestat": "Publicada",
+                    "itipus": "Tabular",
+                    "ipromotor": "Gabinet Tècnic - Departament d’Interior i Seguretat Pública",
+                    "idescripcio": "Actualització del conjunt de valors a causa del nou decret de reestructuració del Departament d'Unió Europea i Acció Exterior. Actualització del nom i de la descripció de l'entitat.",
+                    "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Direccions_Generals.xlsx",
+                    "idatacreacio": "2025-02-26",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "2025-02-27",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/d/f6vb-44qq",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
@@ -4337,7 +4352,7 @@
             "Data_publicacio": "27/03/2024",
             "Data_actualitzacio": "27/03/2024"
         },
-		{
+        {
             "Id": "dtarq198",
             "Nom": "Divises",
             "Ambit": "Economia",
@@ -4365,7 +4380,7 @@
             "Data_publicacio": "29/04/2024",
             "Data_actualitzacio": "29/04/2024"
         },
-		{
+        {
             "Id": "dtarq199",
             "Nom": "Entitats bancàries",
             "Ambit": "Economia",
