@@ -275,10 +275,10 @@
         },
         {
             "Id": "dtarq102",
-            "Nom": "Direccions generals",
+            "Nom": "Direccions generals de l’Administració de la Generalitat de Catalunya",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de direccions generals i assimilades orgànicament (per ex. direcció de serveis) en què s’organitzen els departaments de l’Administració de la Generalitat de Catalunya.",
+            "Descripcio": "Les direccions generals i assimilades orgànicament (per ex. Direcció de Serveis) són alts càrrecs, a més, són les unitats directives bàsiques de l’Administració de la Generalitat encarregades de la gestió d’una o diverses àrees d’activitat funcional homogènies. Tenen les funcions, la dependència i l’estructura que determini el decret d’estructura corresponent.",
             "instancies": [
                 {
                     "inom": "V01",
@@ -762,10 +762,10 @@
         },
         {
             "Id": "dtarq194",
-            "Nom": "Subdireccions generals",
+            "Nom": "Subdireccions generals de l’Administració de la Generalitat de Catalunya",
             "Ambit": "Administració pública, govern i relacions institucionals",
             "Subambit": "Organització de l'administració i sector públic",
-            "Descripcio": "Llistat de subdireccions generals en què s’organitzen els departaments de l’Administració de la Generalitat de Catalunya.",
+            "Descripcio": "Les subdireccions generals i assimilades orgànicament són els òrgans actius de superior rang de l’Administració de la Generalitat de Catalunya. Les subdireccions generals estan reservades a funcionaris.",
             "instancies": [
                 {
                     "inom": "V01",
