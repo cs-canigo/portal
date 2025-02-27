@@ -200,6 +200,15 @@ S'executarà la comanda ```dotnet nuget push ${ARTIFACT_PATH}/*.nupkg```
 En aquest cas, no serà necessari configurar cap directiva de `build` ni `deployment`.
 
 </br>
+#### Per al desplegament delegat on-premise:
+
+|Variable|Valor|
+|-------|-------|
+|DEPLOYMENT_TIMEOUT|Temps en minuts per a definir el timeout del deploy|
+
+Aquesta variable només apliqués als desplegaments on premise per a tots els CPD
+
+</br>
 #### Exemple
 
 Exemple de definició de variables per al desplegament a Openshift:
