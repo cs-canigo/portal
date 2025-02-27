@@ -814,7 +814,7 @@
                 },
                 {
                     "inom": "V05",
-                    "iestat": "Vigent",
+                    "iestat": "Obsoleta",
                     "itipus": "Tabular",
                     "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                     "idescripcio": "Modificació d’ofici de l'entitat de Subdireccions Generals a causa del darrer decret de reestructuració del Departament d’Agricultura, Pesca, Ramaderia i Alimentació.",
@@ -822,9 +822,24 @@
                     "ifitxer_xls": "Subdireccions_Generals.xlsx",
                     "idatacreacio": "19/12/2024",
                     "itipusvisual": "Ús no restringit",
-                    "idataobsoleta": "",
+                    "idataobsoleta": "2025-02-27",
                     "idatapublicacio": "19/12/2024",
                     "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Subdireccions-Generals/yb4q-ihtu",
+                    "itipusactualitzacio": "Sota demanda"
+                },
+                {
+                    "inom": "V06",
+                    "iestat": "Publicada",
+                    "itipus": "Tabular",
+                    "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                    "idescripcio": "Actualització del conjunt de valors a causa del nou decret de reestructuració del Departament d'Unió Europea i Acció Exterior. Actualització del nom i de la descripció de l'entitat.",
+                    "ifitxer_doc": "Subdireccions_Generals_ATR.docx",
+                    "ifitxer_xls": "Subdireccions_Generals.xlsx",
+                    "idatacreacio": "2025-02-26",
+                    "itipusvisual": "Ús no restringit",
+                    "idataobsoleta": "",
+                    "idatapublicacio": "2025-02-27",
+                    "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/d/gz25-6fib",
                     "itipusactualitzacio": "Sota demanda"
                 }
             ],
