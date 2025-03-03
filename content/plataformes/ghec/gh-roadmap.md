@@ -13,9 +13,11 @@ aliases = [
 
 ## [Q1 2025] 1.1.1
 
+- :construction_worker: Suport a llibreries Gradle
 - :construction_worker: Suport desplegament a Azure Databricks
-- :construction_worker: Suport a ús de self-hosted runners amb configuració de xarxa privada
 - :construction_worker: Suport desplegament a Azure Data Factory
+- :construction_worker: Suport a ús de self-hosted runners amb configuració de xarxa privada
+- :construction_worker: Pilot workflows de CloudOps a AWS i Azure
 
 ## [Q3/Q4 2024] 1.1.0​
 

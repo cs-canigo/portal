@@ -13,8 +13,7 @@ aliases = [
 ]
 +++
 
-
-## RELEASE v4
+## [RELEASE v4](https://github.com/ctti-arq/reusable-workflows/releases/tag/v4)
 
 ### Release notes
 
@@ -22,31 +21,31 @@ aliases = [
 
 * **Desplegaments estesos:** documentació i exemples per a desplegaments estesos en [Desplegaments estesos](../../../gh-desplegaments-estesos)
 * **Publicació de llibreries complexes per a projectes java-maven multi-mòdul en GitHub Packages**
-* **Suport a GCP (Google Cloud Platform):** s'afegeix suport a GCP en els workflows d'infraestructura i a desplegaments de contenidors, funcions i contingut estàtic.
-* **Model flexible de CI/CD per a tecnologies no suportades:** s'afegeix un model flexible de CI/CD per a tecnologies no suportades en els workflows de contenidors, funcions i contingut estàtic. Més informació en [Modelo flexible de CI/CD con tecnología "custom"](../../../gh-capacitat-tecnologiques)
-* **Nou paràmetre "container_app" per a desplegaments en ACA (Azure Container Apps)**
-* **Correcció per al funcionament de sonar per a projectes JAVA 8**
-* **Suport a Databricks**
+* **Suport a GCP (Google Cloud Platform):** s'afegeix suport a GCP en els workflows d'infraestructura i als worfklows de desplegaments de contenidors, funcions i contingut estàtic
+* **Model flexible de CI/CD per a tecnologies no suportades:** s'afegeix un model flexible de CI/CD per a tecnologies no suportades en els workflows de contenidors, funcions i contingut estàtic. Més informació a [Model flexible de CI/CD amb tecnología "custom"](../../../gh-capacitat-tecnologiques)
+* **Nou paràmetre "container_app" per a desplegaments en ACA (Azure Container Apps)** per tal d'alinear la nomenclatura amb la del hiperescalar
+* **Correcció del funcionament de la integració amb SonarQube per a projectes Java 8**
+* **Suport a Databricks**, incloent una nova tecnlogia suportada en els workflows d'aplicació anomenada "databricks"
 
 ### Canvis a les plantilles
 
-<br>S'han modificat tots els plantilles de les diferents tipologies per apuntar a la v4, que ja ha estat mergeada a la branca master. 
+<br>S'han modificat totes les plantilles de les diferents tipologies de components per utilitzar la v4 dels reusable workflows. 
 
-Estàtics: [https://github.com/ctti-arq/static-template](https://github.com/ctti-arq/static-template)  
-Contenidors: [https://github.com/ctti-arq/container-template](https://github.com/ctti-arq/container-template)  
-Infraestructura: [https://github.com/ctti-arq/infrastructure-template](https://github.com/ctti-arq/infrastructure-template)  
-Llibreries: [https://github.com/ctti-arq/library-template](https://github.com/ctti-arq/library-template)  
-Funcions: [https://github.com/ctti-arq/function-template](https://github.com/ctti-arq/function-template)  
-Estessos: [https://github.com/ctti-arq/executor-template](https://github.com/ctti-arq/executor-template)  
-Apim: [https://github.com/ctti-arq/apim-template](https://github.com/ctti-arq/apim-template)  
-Databricks: [https://github.com/ctti-arq/databricks-template](https://github.com/ctti-arq/databricks-template)
+* Infraestructura: [https://github.com/ctti-arq/infrastructure-template](https://github.com/ctti-arq/infrastructure-template)  
+* Contenidors: [https://github.com/ctti-arq/container-template](https://github.com/ctti-arq/container-template)  
+* Funcions: [https://github.com/ctti-arq/function-template](https://github.com/ctti-arq/function-template)  
+* Estàtics: [https://github.com/ctti-arq/static-template](https://github.com/ctti-arq/static-template)  
+* Llibreries: [https://github.com/ctti-arq/library-template](https://github.com/ctti-arq/library-template)  
+* Apim: [https://github.com/ctti-arq/apim-template](https://github.com/ctti-arq/apim-template)  
+* Databricks: [https://github.com/ctti-arq/databricks-template](https://github.com/ctti-arq/databricks-template)
+* Executor (per desplegament estesos): [https://github.com/ctti-arq/executor-template](https://github.com/ctti-arq/executor-template)  
 
-## RELEASE v3
+## [RELEASE v3](https://github.com/ctti-arq/reusable-workflows/releases/tag/v3)
 
 ### Release notes
 
-La v3 no es depreca però no evolucionarà a no ser que sigui per a parches de seguretat. Per això s'ha creat una branca backup del que hi ha actualment a la versió v3.0.33 per alliberar les properes versions (si n'hi hagués) sobre aquesta branca amb els canvis del pegat
+La v3 no es depreca però no evolucionarà a no ser que sigui per a pegats de seguretat.
 
 ## Versions anteriors
 
-Les versions V1 i V2 dels reusable workflows estan discontinuades.
+Les versions v1 i v2 dels reusable workflows estan discontinuades.
