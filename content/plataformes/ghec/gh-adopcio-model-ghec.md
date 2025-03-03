@@ -86,7 +86,8 @@ El procés d'integració actualment és el següent :
       | NomTecComponent8     | backend             | function  | lambda | python     | 3.10   |
       | NomTecComponent9     | library             | library   | N/A    | java-gradle| 8.10   |
       | NomTecComponent10    | mobile              | app       | N/A    | ios        | N/A    |
-      | NomTecComponent11    | mobile              | app       | N/A    | android    | N/A    |
+      | NomTecComponent11    | mobile              | library   | N/A    | ios        | N/A    |
+      | NomTecComponent12    | mobile              | app       | N/A    | android    | N/A    |
 
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
@@ -185,7 +186,7 @@ El procés d'integració actualment és el següent :
         - API's deployment template --> [API's-template](https://github.com/ctti-arq/apim-template)
         - Mobile App iOS template --> [mobile-app-ios-template](https://github.com/ctti-arq/mobile-app-ios-template)
         - Mobile App Android template --> [mobile-app-android-template](https://github.com/ctti-arq/mobile-app-android-template)
-        - Mobile Library iOs template --> [obile-library-ios-template](https://github.com/ctti-arq/obile-library-ios-template)
+        - Mobile Library iOs template --> [mobile-library-ios-template](https://github.com/ctti-arq/mobile-library-ios-template)
 
         El workflow cridant necessita configurar una sèrie de parametres per al workflow anomenat. Aquests paràmetres estan explicats a la següent documentació [Configuració workflows](../gh-configuracio-workflows).
 
