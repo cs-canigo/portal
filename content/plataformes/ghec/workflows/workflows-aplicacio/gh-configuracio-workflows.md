@@ -863,7 +863,10 @@ with:
 - **flavour**: (opcional) Nom del flavour del projecte. Valor per defecte: pro
 - **build_type**: (obligatori) Nom del build type del projecte.
 - **java_version**: (obligatori) Versió de Java.
+- **group_id**: (obligatori) Group Id del projecte.
 - **gradle_version**: (opcional) Versió de Gradle.
+- **auto_upload_playstore**: (opcional) Desactivar la distribució automàtica al Google Play Store del entorn.
+- **binary_type**: (opcional) Tipus de binari a generar i signar. Valor per defecte: 'aab'
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -872,6 +875,7 @@ with:
     with:
       project_name: "<project_name>"
       java_version: "<java_version>"
+      group_id: "<group_id"
       flavour: ${{ inputs.flavour }}
       build_type: ${{ inputs.build_type }}
       gradle_version: "<gradle_version>"
@@ -889,6 +893,7 @@ with:
 - **sonar_exclusions**: (opcional) Exclusió de Sonar, pot estar buit.
 - **lint**: (opcional) Per habilitar o deshabilitar l'execució de Lint. Valor per defecte: true
 - **dependabot**: (opcional) Per habilitar o deshabilitar l'execució de Dependabot. Valor per defecte: true
+- **group_id**: (obligatori) Group Id del projecte.
 
 **Exemple de crida al workflow:**
 ```yaml
@@ -897,6 +902,7 @@ with:
     with:
       project_name: "<project_name>"
       java_version: "<java_version>"
+      group_id: "<group_id"
       flavour: ${{ inputs.flavour }}
       build_type: ${{ inputs.build_type }}
       gradle_version: "<gradle_version>"
