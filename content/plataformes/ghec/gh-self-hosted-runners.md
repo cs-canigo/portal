@@ -20,21 +20,27 @@ GitHub Actions permet l'execució de workflows amb els runners propis de GHEC o 
 
 Per fer ús d'aquest tipus de runners cal indicar-ho en els workflows de la manera següent:
 
-1. Invocant un job previ que comprova si hi ha runners disponibles i garanteix que almenys sempre un runner està aixecat.
+1. Invocant un job previ que comprova si hi ha runners disponibles i garanteix que almenys sempre un runner està aixecat. S'especificarà si s'ha de realitzar aquest job solament quan sigui necessari executar-se en un self-hosted-runner mitjançant la condició 
 
+            if: ${{ contains(inputs.runner_type, 'self-hosted') }}
 
       ![](/images/GHEC/gh-containers-running.png)
 
-2. Indicar que s'utilitza un runner self-hosted mitjançant:
-  
-        + Comandament: runs-on:
-        + Group: java
-        + labels: medium
+2. Indicar que s'utilitza un runner auto-hospedat mitjançant:
 
-      ![](/images/GHEC/ghp-run-selfhostedrunners.png)
+      Al formulari del workflow cridant (CD): S'indicarà com un choice en format JSON, i després es processarà aquesta elecció en la condició 
+      
+            runs-on: ${{ fromJSON(inputs.runner_type) }}.
+
+      ![](/images/GHEC/gh-self-hosted-CD.png)
+
+      Al workflow cridant de CI on PR: S'indicarà amb el mateix format JSON el runner a triar.
+
+      ![](/images/GHEC/gh-self-hosted-CI-on-PR.png)
 
 D'altra banda, actualment el model només disposa de self-hosted runners amb les característiques següents:
 
 + Java i "tallatge" medium
++ Databricks i "tallatge" medium
 
 Segons necessitats, s'ampliarà el catàleg de self-hosted runners que es posen a disposició dels desenvolupadors.

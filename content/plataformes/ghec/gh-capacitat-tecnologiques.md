@@ -187,6 +187,18 @@ En aquest cas hi ha dues casuistiques :
    * Fitxer / Versió Lliurable : Build Settings / Camp - MARKETING_VERSION
    * Fitxer / Build Lliurable : Build Settings / Camp - CURRENT_PROJECT_VERSION
 
+### Databricks
+<br>
+
+* **Versionat**
+   * Fitxer / Nom Lliurable : databricks.yml / Camp - bundle.name
+   * Fitxer / Versió Lliurable : \_\_init\_\_.py / Camp - \_\_version\_\_
+
+    Si es vol ubicar en un altre lloc del projecte el nom del projecte o la versió, es poden obtenir a través d'aquests inputs amb comandes personalitzades: **get_project_name_command** i **get_version_command**.
+
+* **Requisits**
+    * Els workflows de CI on PR i CD han de córrer en un self-hosted runner.
+
 ### Desplegaments estesos
 
 <br>El model de GHEC està enfocat a noves aplicacions o migració d'aplicacions cap a arquitectures cloud-native desplegades a Cloud Públic, però també s'ha volgut donar cabuda a aplicacions amb tecnologies menys estratègiques dins del CTTI com puguin ser **clusters de Kubernetes** o **màquines virtuals**. També els desplegaments de canvis en **bases de dades** poden fer ús d'aquest model de desplegament ja sigui utilitzant frameworks com Liquibase, o bé executant directament scripts mitjançant les CLIs de PostgreSQL, MySQL o altres motors de bases de dades.

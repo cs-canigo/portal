@@ -959,3 +959,85 @@ with:
       library_scheme_name: "<library_schem_name>"
       unit_test_scheme_name: "<unit_test_scheme_name>"
 ```
+
+## Databricks
+
+### CD
+- **technology**: (obligatori) Tecnologia del projecte. Valors possibles:
+  - `databricks`
+- **artifact_version**: (obligatori) Versió de l'artefacte.
+- **environment**: (obligatori) Entorn.
+- **runner_type**: (obligatori) Tipus de runner. Valors possibles:
+  - '{"group": "databricks", "labels": ["self-hosted", "databricks"]}'
+  - '["ubuntu-22.04"]'
+  - '["ubuntu-24.04"]'
+- **itsm_id_change_coordinator**: (opcional) ID del coordinador de canvis de l'ITSM.
+- **itsm_enabled**: (opcional) Permet activar la funcionalitat d'ITSM. Valor per defecte: false.
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows/.github/workflows/databricks-cd-reusable.yaml@v4
+    secrets: inherit
+    with:
+      technology: databricks
+      artifact_version: ${{ inputs.artifact_version }}
+      environment: ${{ inputs.environment }}
+      runner_type: ${{ inputs.runner_type }}
+      itsm_id_change_coordinator: ${{ inputs.itsm_id_change_coordinator }}
+```
+
+
+### CI on commit
+- **technology**: (obligatori) Tecnologia del projecte. Valors possibles:
+  - `databricks`
+- **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
+  - `node_modules/**`
+  - `test/**`
+- **sonarqube**: (opcional) Indica si s'ha d'executar l'anàlisi de codi mitjançant SonarQube. Valor per defecte: false.
+- **dependabot**: (opcional) Indica si s'ha de permetre l'ús de Dependabot. Valor per defecte: false.
+- **get_project_name_command**: (opcional) Indica el comandament personalitzat per obtenir el nom del projecte.
+- **get_version_command**: (opcional) Indica el comandament personalitzat per obtenir la versió del projecte.
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows/.github/workflows/databricks-ci-on-commit-reusable.yaml@v4
+    secrets: inherit
+    with:
+      technology: databricks
+      sonar_exclusions: "test/**"
+      # get_project_name_command: "yq eval '.bundle.name' '${{ github.workspace }}/databricks.yml'"
+      # get_version_command: "grep '__version__' ${sourceProjectPath}/__init__.py | cut -d '"' -f 2"
+```
+
+
+### CI on PR
+- **technology**: (obligatori) Tecnologia del projecte. Valors possibles:
+  - `databricks`
+- **runner_type**: (obligatori) Tipus de runner. Valors possibles:
+  - '{"group": "databricks", "labels": ["self-hosted", "databricks"]}'  
+  - '["ubuntu-22.04"]'
+  - '["ubuntu-24.04"]'
+- **sonar_exclusions**: (opcional) Exclusió de Sonar. Exemples:
+  - `test/**`
+- **unit_test**: (opcional) Indica si s'han d'executar proves unitàries com a part del flux de treball d'integració contínua. Valor per defecte: false.
+- **sonarqube**: (opcional) Habilita la integració amb SonarQube. Valor per defecte: true.
+- **dependabot**: (opcional) Activa o desactiva l'ús de Dependabot
+  Valor per defecte: true.
+- **custom_test_command**:(opcional) Comanda personalitzada per realitzar les proves al projecte. Els valors per defecte són els següents segons la tecnologia:
+- **get_project_name_command**: (opcional) Indica el comandament personalitzat per obtenir el nom del projecte.
+- **get_version_command**: (opcional) Indica el comandament personalitzat per obtenir la versió del projecte.
+
+
+**Exemple de crida al workflow:**
+```yaml
+  uses: ctti-arq/reusable-workflows/.github/workflows/databricks-ci-on-pr-reusable.yaml@v4
+    secrets: inherit
+    with:
+      technology: databricks
+      runner_type: '{"group": "databricks", "labels": ["self-hosted", "databricks"]}'
+      sonar_exclusions: "test/**"
+      # custom_test_command: ""
+      # get_project_name_command: "yq eval '.bundle.name' '${{ github.workspace }}/databricks.yml'"
+      # get_version_command: "grep '__version__' ${sourceProjectPath}/__init__.py | cut -d '"' -f 2"
+      
+```

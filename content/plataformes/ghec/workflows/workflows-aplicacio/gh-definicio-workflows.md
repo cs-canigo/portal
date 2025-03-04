@@ -480,3 +480,48 @@ D'altra banda, si estem en temps de commit, el workflow dependrà de la branca a
 ![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-mobilelibrary-ios_CM.png)
 
 Addicionalment, cal destacar que no es permetrà a l'usuari o desenvolupador d'aplicacions, la creació manual de tags, ja sigui en repositori d'artefactes o registre d'imatges, ja que aquest procés serà automatitzat en els workflows i serà gestionat pel propi workflow.  
+
+
+## Databricks
+
+### Workflow de Continuous Integration (CI) per Databricks
+
+Igual que passa amb el workflow d'aplicacions, s'ha diferenciat en el workflow entre:
++ Canvis en temps de Pull Request (PR), que equivaldria al procés pel qual un usuari crea la PR, i encara no és validada per un moderador o usuari del repositori.
++ Canvis en temps de Commit, que equivaldria al procés després d'haver-se acceptat la PR, i integrar ambdues branques involucrades. 
+
+Depenent d'aquestes branques que es vulguin "mergear", es provocarà que s'executin diferents steps amb diferents jobs com s'observa en el següent diagrama:
+
+![Definició a alt nivell dels workflows de CI per Databricks](/images/GHEC/ci-workflow-definition-databricks.png)
+
+Si es crea una PR d'una branca feature a la branca develop, en temps d'execució es llançarà el workflow de CI que executarà els steps de compilació, tests unitaris, inspecció de codi, eines de seguretat SAST i SCA. 
+
+Nom del Workflow en GitHub : **Databricks CI on PR**.
+
+En canvi, si la PR es fes entre les branques develop-release, release-master, hotfix-master, s'ometrien aquests steps i es realitzaria un fast-forward, ja que tots ells haurien estat executats i validats prèviament, donat que teòricament el codi no rep més canvis des que entra en la branca develop en endavant.
+
+
+![Definició a alt nivell dels workflows de CI per Databricks](/images/GHEC/ci-workflow-definition-databricks-PR.png)
+
+
+D'altra banda, si estem en temps de commit, i partint de la base que el paquet no ha de ser immutable entre els diferents entorns, en totes les fases es realitzaran els steps de empaquetat, versionat de l'artefacte, publicació a GitHub Artifacts i versionat del repositori.
+
+Nom del Workflow en GitHub : **Databricks CI on Commit**.
+
+![Definició a alt nivell dels workflows de CI](/images/GHEC/ci-workflow-definition-databricks-CM.png)
+
+### Worfklows de Continuous Deployment (CD) per databricks.
+
+Es detalla a continuació el flux de treball dels desplegaments de Databricks.
+
+![Definició a alt nivell dels Worfklows de CD per databricks](/images/GHEC/cd-workflow-databricks-definition.png)
+
+on:
+* Check Artifacts, realitzarà revisions sobre l’artefacte abans del desplegament.
+* Env. Matrix, validarà si l’artefacte pot ser desplegat en l’entorn indicat.
+* PRE-AUDIT : Crea un CRQ en ITSM indicant l’inici de desplegament.
+* Deploy: desplegament de l’artefacte en l’entorn indicat.
+* TESTING: Executa proves invocant a M.A.T.
+* POST-AUDIT: Completa la CRQ amb el resultat del desplegament.
+
+El nom Workflow en GHEC és **Databricks CD**

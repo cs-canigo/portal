@@ -88,6 +88,7 @@ El procés d'integració actualment és el següent :
       | NomTecComponent10    | mobile              | app       | N/A    | ios        | N/A    |
       | NomTecComponent11    | mobile              | library   | N/A    | ios        | N/A    |
       | NomTecComponent12    | mobile              | app       | N/A    | android    | N/A    |
+      | NomTecComponent12    | databricks          | databricks| N/A    | databricks | N/A    |
 
       on els camps següents poden tenir les següents opcions : 
       + Tipus de repositori:
@@ -98,6 +99,7 @@ El procés d'integració actualment és el següent :
         + executor
         + apim
         + mobile
+        + databricks
 
       + Categoria  :
         + container : Desplegament de una imatge de contenidors.
@@ -110,6 +112,7 @@ El procés d'integració actualment és el següent :
         + vm :  Desplegament estès de Màquines Virtuals. 
         + apim: Desplegament estès de Api en API Manager
         + app: Desplegament d'una aplicació mòbil
+        + databricks: Desplegament d'un bundle de databricks
 
         Amb les següents restriccions :
         - Si " Tipus de repositori " = "backend" els possibles valors de categoria són : container | function
@@ -134,6 +137,7 @@ El procés d'integració actualment és el següent :
         + python
         + ios
         + android
+        + databricks
         
       
     + **Migració del CI/CD nadiu d'AWS o Azure a GHEC**
@@ -187,6 +191,7 @@ El procés d'integració actualment és el següent :
         - Mobile App iOS template --> [mobile-app-ios-template](https://github.com/ctti-arq/mobile-app-ios-template)
         - Mobile App Android template --> [mobile-app-android-template](https://github.com/ctti-arq/mobile-app-android-template)
         - Mobile Library iOs template --> [mobile-library-ios-template](https://github.com/ctti-arq/mobile-library-ios-template)
+        - Databricks template --> [databricks-template](https://github.com/ctti-arq/databricks-template)
 
         El workflow cridant necessita configurar una sèrie de parametres per al workflow anomenat. Aquests paràmetres estan explicats a la següent documentació [Configuració workflows](../gh-configuracio-workflows).
 
@@ -282,6 +287,7 @@ Una vegada fet el setup inicial, cal recalcar que també **existirà una nova me
     + container: Repositoris per desplegar Contenidors.
     + infra: Repositoris per desplegar Infraestructura.
     + mobile: Workflows per desplegar Aplicacions Mòbils (nadiu Android i iOS) i Llibreries d'iOS.
+    + databricks: Workflows per desplegar Bundles de Databricks
 
   L'accés a aquests workflows es realitzarà a través de l'opció "Actions" de cada repositori a GHEC. 
                 
