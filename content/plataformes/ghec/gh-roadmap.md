@@ -11,6 +11,11 @@ aliases = [
 ]
 +++
 
+## [Q2 2025] 1.1.2
+
+- :lotus_position: Integració completa amb el Marc d'Automatització de Testing (MAT)​
+- :lotus_position: Workflows de CloudOps a AWS i Azure
+
 ## [Q1 2025] 1.1.1
 
 - :construction_worker: Suport a llibreries Gradle
