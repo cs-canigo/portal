@@ -20,7 +20,7 @@ La plataforma es basa en el producte UiPath, sent els components desplegats:
 
 ![Components UiPath](/related/rpa/uipath.png)
 
-La versió de UiPath desplegada a la plataforma corporativa és la **2021.10.2**
+La versió de UiPath desplegada a la plataforma corporativa és la **2023.10.7**
 
 ## Entorns de la plataforma
 

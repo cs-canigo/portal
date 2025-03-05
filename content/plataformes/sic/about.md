@@ -59,7 +59,6 @@ La tasca inclourà accions de construcció d'artefactes, versionat de codi, exec
 
 Per a més informació:
 
-- [Integració contínua (SIC 2.0)](/plataformes/sic/serveis/sic20-serveis/ci/)
 - [Integració contínua (SIC 3.0)](/plataformes/sic/serveis/sic30-serveis/ci/)
 
 ### Binaris

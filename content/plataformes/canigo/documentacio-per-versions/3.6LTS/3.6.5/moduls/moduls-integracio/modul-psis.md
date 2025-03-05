@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-23"
+date        = "2025-02-14"
 title       = "PSIS"
 description = "Validació de Signatures electròniques mitjançant els serveis de PSIS oferts per CatCert."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -139,6 +139,105 @@ public class PsisService {
 		 return message;
 	 }
 	 
+}
+```
+
+Afegim també un exemple d'invocació al nou mètode "validarSignaturaPsis" disponible en el connector:
+
+```java
+public String testValidarSignaturaPsis() {
+	 logger.debug("[testValidarSignaturaPsis]");
+	 private static final VerifyRequest signatura = crearVerifyRequest(
+	"1598432437539psi",  // IdPeticion
+	1,  // NumElementos
+	"2020-08-26T11:00:39.217+02:00",  // TimeStamp
+	"PeticioFinalitzada",  // CodigoEstado
+	"PSIS_SIGNATURA_VALIDACIO",  // CodigoCertificado
+	"PSIS",  // CodigoProducto
+	"Q0801175A",  // NifEmisor
+	"CONSORCI AOC",  // NombreEmisor
+	"1DPGO049",  // IdSolicitanteOriginal
+	"CTTI",  // NombreSolicitante
+	"PROVES",  // Finalidad
+	"Si",  // Consentimiento
+	1,  // IdSolicitud
+	213421,  // IdTransmision
+	"2020-08-26",  // FechaGeneracion
+	"TestRequestID",  // RequestID
+	"http://example.com/profile"  // Profile
+	);
+	
+	 String message;
+	 
+	 try{
+		 VerifyRequest peticioValidar = VerifyRequest.Factory.newInstance();
+		 peticioValidar.setCertificat(signatura);
+		 document.setVerifyRequest(peticioValidar);
+		 VerifyResponse resposta = psisServices.validarSignaturaPsis(document);
+		 if (resposta!=null && resposta.getVerifyResponse()!=null && resposta.getVerifyResponse().getResultat()!=null){
+			 message = "S'ha verificat el certificat amb el següent resultat: "+ resposta.getVerifyResponse().getResultat();
+		 }else{
+			 message = "No s'ha rebut resposta del servei o el format d'aquesta no es l'esperat";
+		 }
+	 } catch (PSISException e) {
+		 message = "S'ha produït un error al servei";
+		 logger.error(e.getMessage(), e);
+	 } catch (Exception e) {
+		 message = "S'ha produït un error general";
+		 logger.error(e.getMessage(), e);
+	 }
+	 
+	 return message;
+}
+```
+
+Afegim també un exemple d'invocació al nou mètode "validarCertificatPsis" disponible en el connector:
+
+```java
+public String testValidarCertificatPsis() {
+
+	 logger.debug("[testValidarCertificatPsis]");
+	  private static final VerifyRequest certificat = crearVerifyRequest(
+	"1598432437539psi",  // IdPeticion
+	1,  // NumElementos
+	"2020-08-26T11:00:39.217+02:00",  // TimeStamp
+	"PeticioFinalitzada",  // CodigoEstado
+	"PSIS_SIGNATURA_VALIDACIO",  // CodigoCertificado
+	"PSIS",  // CodigoProducto
+	"Q0801175A",  // NifEmisor
+	"CONSORCI AOC",  // NombreEmisor
+	"1DPGO049",  // IdSolicitanteOriginal
+	"CTTI",  // NombreSolicitante
+	"PROVES",  // Finalidad
+	"Si",  // Consentimiento
+	1,  // IdSolicitud
+	213421,  // IdTransmision
+	"2020-08-26",  // FechaGeneracion
+	"TestRequestID",  // RequestID
+	"http://example.com/profile"  // Profile
+	);
+	
+	 String message;
+	 
+	 try{
+		 VerifyRequest peticioValidar = VerifyRequest.Factory.newInstance();
+		 peticioValidar.setCertificat(certificat);
+		 document.setVerifyRequest(peticioValidar);
+		 VerifyResponse resposta = psisServices.validarCertificatPsis(document);
+		 if (resposta!=null && resposta.getVerifyResponse()!=null && resposta.getVerifyResponse().getResultat()!=null){
+			 message = "S'ha verificat el certificat amb el següent resultat: "+ resposta.getVerifyResponse().getResultat();
+		 }else{
+			 message = "No s'ha rebut resposta del servei o el format d'aquesta no es l'esperat";
+		 }
+	 } catch (PSISException e) {
+		 message = "S'ha produït un error al servei";
+		 logger.error(e.getMessage(), e);
+	 } catch (Exception e) {
+		 message = "S'ha produït un error general";
+		 logger.error(e.getMessage(), e);
+	 }
+	 
+	 return message;
 }
 ```
 
