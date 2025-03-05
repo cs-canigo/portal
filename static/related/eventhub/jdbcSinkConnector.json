@@ -1,0 +1,31 @@
+{
+  "name": "<client-name>-<description>",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "key.converter": "<converter>",
+    "value.converter": "<converter>",
+    "transforms": "dropPrefix, unwrap",
+    "topics": "<topic-list>",
+    "transforms.dropPrefix.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "transforms.dropPrefix.regex": "<^(<client-name>-<description>)(.*)>",
+    "transforms.dropPrefix.replacement": "$2",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.drop.tombstones": "false",
+    "connection.url": "<url>",
+    "connection.user": "<user>",
+    "connection.password": "<password>",
+    "insert.mode": "upsert",
+    "delete.enabled": "true",
+    "table.name.format": "<<schema>.\"${topic}\">",
+    "pk.mode": "record_key",
+    "pk.fields": "id",
+    "quote.sql.identifiers": "always",
+    "consumer.override.security.protocol": "SSL",
+    "consumer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>-keystore.jks",
+    "consumer.override.ssl.keystore.password": "<jks-password>",
+    "consumer.override.ssl.key.password": "<jks-password>",
+    "consumer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>-keystore.jks",
+    "consumer.override.ssl.truststore.password": "<jks-password>"
+  }
+}
