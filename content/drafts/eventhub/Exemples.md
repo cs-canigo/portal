@@ -17,14 +17,14 @@ weight      = 6
 
 ## Kafka connect
 **Plantilles connectors**
-[MongoSourceConnector](/related/eventhub/mongoSourceConnector.json)
-[MongoSinkConnector](/related/eventhub/mongoSinkConnector.json)
-[JdbcSourceConnector](/related/eventhub/jdbcSourceConnector.json)
-[JdbcSinkConnector](/related/eventhub/jdbcSinkConnector.json)
-[DebeziumPostgresConnector](/related/eventhub/debeziumPostgresConnector.json)
-[DebeziumOracleConnector](/related/eventhub/debeziumOracleConnector.json)
-[OracleCdcSourceConnector](/related/eventhub/oracleCdcSourceConnector.json)
-[SqlRedoSinkConnector](/related/eventhub/sqlRedoSinkConnector.json)
+- [MongoSourceConnector](/related/eventhub/mongoSourceConnector.json)
+- [MongoSinkConnector](/related/eventhub/mongoSinkConnector.json)
+- [JdbcSourceConnector](/related/eventhub/jdbcSourceConnector.json)
+- [JdbcSinkConnector](/related/eventhub/jdbcSinkConnector.json)
+- [DebeziumPostgresConnector](/related/eventhub/debeziumPostgresConnector.json)
+- [DebeziumOracleConnector](/related/eventhub/debeziumOracleConnector.json)
+- [OracleCdcSourceConnector](/related/eventhub/oracleCdcSourceConnector.json)
+- [SqlRedoSinkConnector](/related/eventhub/sqlRedoSinkConnector.json)
 
 **Mongo DB**
 - [MongoDB Connector - Replicate Data with a Change Data Capture Handler](https://www.mongodb.com/docs/kafka-connector/current/tutorials/replicate-with-cdc/)

@@ -11,6 +11,7 @@ weight      = 3
 
 ### Kafka
 ![Kafka](/related/eventhub/what_is_kafka_and_how_does_it_work.png)
+
 Apache Kafka és una plataforma de transmissió d'esdeveniments distribuïda de codi obert utilitzada per milers d'empreses per a canalitzacions de dades d'alt rendiment, anàlisis de transmissió, integració de dades i aplicacions crítiques.
 
 Kafka combina tres capacitats clau perquè pugueu implementar els vostres casos d'ús per a la transmissió d'esdeveniments de punta a punta amb una única solució provada en batalla:
@@ -55,6 +56,7 @@ Kafka pot servir com una mena de commit-log extern per a un sistema distribuït.
 
 ### Schema Registry
 ![Schema Registry](/related/eventhub/Kafka_101_-_Schema_Registry.png)
+
 Un cop les aplicacions estiguin ocupades produint missatges a Kafka i consumint-ne missatges, passaran dues coses. En primer lloc, sorgiran nous consumidors de topics existents. Es tracta d'aplicacions noves, potser escrites per l'equip que va escriure el productor original dels missatges, potser per un altre equip, i hauran d'entendre el format dels missatges del topic. En segon lloc, el format d'aquests missatges evolucionarà a mesura que evolucioni el negoci. Els objectes de comanda obtenen un nou camp d'estat, els noms d'usuari es divideixen en nom i cognoms a partir del nom complet, etc. L'esquema dels nostres objectes de domini és un objectiu en constant moviment, i hem de tenir una manera d'acordar l'esquema dels missatges en qualsevol topic determinat.
 
 Existeix Schema Registry per resoldre aquest problema.
@@ -67,6 +69,7 @@ De la mateixa manera, pel que fa al consum, si un consumidor llegeix un missatge
 
 ### Kafka Connect
 ![Kafka Connect](/related/eventhub/Kafka_101_-_Kafka_Connect.png)
+
 En el món de l'emmagatzematge i la recuperació d'informació, alguns sistemes no són Kafka. De vegades us agradaria que les dades d'aquests altres sistemes entrin als topics de Kafka i, de vegades, voldríeu que les dades dels topics de Kafka entrin en aquests sistemes. Com a API d'integració d'Apache Kafka, això és exactament el que fa Kafka Connect.
 
 D'una banda, Kafka Connect és un ecosistema de connectors endollables, i de l'altra, una aplicació client. Com a aplicació client, Connect és un procés de servidor que s'executa amb maquinari independent dels mateixos brokers de Kafka. És escalable i tolerant a errors, el que significa que podeu executar no només un treballador de Connect, sinó un grup de treballadors de Connect que comparteixen la càrrega de traslladar dades dins i fora de Kafka des i cap a sistemes externs. Kafka Connect també elimina el negoci del codi lluny de l'usuari i, en canvi, només requereix la configuració JSON per executar-se.
@@ -74,7 +77,8 @@ D'una banda, Kafka Connect és un ecosistema de connectors endollables, i de l'a
 Un dels principals avantatges de Kafka Connect és el seu gran ecosistema de connectors. Escriure el codi que mou dades a un magatzem de blobs al núvol, o escriu a Elasticsearch o inseriu registres en una base de dades relacional és un codi que és poc probable que variï d'una empresa a una altra. De la mateixa manera, llegir des d'una base de dades relacional, Salesforce o un sistema de fitxers HDFS heretat és la mateixa operació, independentment del tipus d'aplicació que ho faci. Definitivament, podeu escriure aquest codi, però dedicar el vostre temps a això no afegeix cap tipus de valor únic als vostres clients ni fa que el vostre negoci sigui més competitiu.
 
 ### ksqlDB
-![Kafka Connect](/related/eventhub/Kafka_101_-_ksqlDB.png)
+![ksqlDB](/related/eventhub/Kafka_101_-_ksqlDB.png)
+
 ksqlDB permet construir tream processing applications a sobre de l'Apache Kafka amb la facilitat de construir aplicacions tradicionals en una base de dades relacional. Utilitzant SQL per a descriure el que voleu fer en lloc de com, facilita la construcció d'aplicacions natives de Kafka per a processar streams de dades en temps real. Alguns casos d'ús de la clau ksqlDB inclouen:
 * Caixes cau materialitzades
 * Transmissió de canonades ETL

@@ -1,0 +1,25 @@
+{
+    "config": {
+        "connection.password": "<password>",
+        "connection.url": "jdbc:oracle:thin:@<host>:<port>/<servicename>",
+        "connection.user": "<user>",
+        "connector.class": "ctti.connectors.sqlredo.SqlRedoSinkConnector",
+        "consumer.override.security.protocol": "SSL",
+        "consumer.override.ssl.key.password": "<jks-password>",
+        "consumer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "consumer.override.ssl.keystore.password": "<jks-password>",
+        "consumer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "consumer.override.ssl.truststore.password": "<jks-password>",
+        "key.converter": "<converter>",
+        "producer.override.security.protocol": "SSL",
+        "producer.override.ssl.key.password": "<jks-password>",
+        "producer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "producer.override.ssl.keystore.password": "<jks-password>",
+        "producer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "producer.override.ssl.truststore.password": "<jks-password>",
+        "statement.whitelist": "^insert|^delete|^update|^commit|^rollback",
+        "topics": "<client-name>exadata-redolog-6209-cdc-usu",
+        "value.converter": "<converter>"
+    },
+    "name": "<client-name>-<description>"
+}
