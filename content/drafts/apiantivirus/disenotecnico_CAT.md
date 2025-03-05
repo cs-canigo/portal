@@ -158,9 +158,6 @@ A continuació, es detalla el disseny tècnic de les dues APIs encarregades de g
 + **Resposta Reeixida (200 OK):** El resultat de l'anàlisi, incloent així detalls com les amenaces trobades i els fitxers que s'han escanejat.
 	+ **Tipus:** application/json
 
-###### *NOTA*: Actualment no es troba disponible aquesta operació, pel fet que encara falta per plantejar i aprovisionar un espai compartit on es pugui emmagatzemar els fitxers, i realitzar les configuracions necessàries perquè el servidor SPE pugui tenir accés a l'espai creat. {style="background: yellow"}
-## 
-
 ###### **_Definició del API (yaml):_**
 - [Adjuntem el fitxer ymal del API Scan File (Swagger)](/related/apiantivirus/2669-api-scan-file_v1.0.0.yaml)
 ## 
