@@ -158,6 +158,21 @@ A continuació, es detalla el disseny tècnic de les dues APIs encarregades de g
 + **Resposta Reeixida (200 OK):** El resultat de l'anàlisi, incloent així detalls com les amenaces trobades i els fitxers que s'han escanejat.
 	+ **Tipus:** application/json
 
+**_Nota:_** per a poder fer ús de l'operació de Scan-file-path(url), les aplicacions hauran d'enviar via SFTP el fitxer a escanejar a la següents ubicacions, depenent de l'entorn PREPRODUCCIÓ o PRODUCCIÓ:
+
+**_PREPRODUCCIÓ:_**
+- **Servidor:** preproduccio.cpd4.sftp.intranet.gencat.cat (10.53.4.16)
+- **User:** antivirus_pre
+- **Pass:** <La password d'accés al servidor i carpeta del sftp s'ha de sol·licitar a través d'un tiquet a [ACOAPIM](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOAPIM/issues)>
+- **Carpeta:** /files2scan
+ 
+**_PRODUCCIÓ:_**
+- **Servidor:** cpd4.sftp.intranet.gencat.cat (10.52.4.103)
+- **User:** antivirus_pro
+- **Pass:** <La password d'accés al servidor i carpeta del sftp s'ha de sol·licitar a través d'un tiquet a [ACOAPIM](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOAPIM/issues)>
+- **Carpeta:** /files2scan
+## 
+
 ###### **_Definició del API (yaml):_**
 - [Adjuntem el fitxer ymal del API Scan File (Swagger)](/related/apiantivirus/2669-api-scan-file_v1.0.0.yaml)
 ## 

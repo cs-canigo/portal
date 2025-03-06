@@ -267,7 +267,7 @@ Per a escanejar fitxers facilitant la ruta per on es troba emmagatzemat els fitx
 - **filePath:** *_<La ruta del fitxer a analitzar, emmagatzemat en l'espai compartit>_*
 
 <p>
-  <img src="/related/apiantivirus/Postman18.png" width="900" height="250"/>
+  <img src="/related/apiantivirus/Postman18.png" width="1000" height="250"/>
 </p>
 
 ## 
