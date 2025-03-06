@@ -14,9 +14,10 @@ Durant el mes de febrer s’ha fet una nova actualització del Catàleg Tècnic 
 ## Novetats
 
 En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següents canvis:<br><br>
+S’han evolucionat les entitats del grup d’Obligat compliment:<br><br>
 <ul>
-<li>S’han evolucionat les entitats del grup d’Obligat compliment:<br><br>
-	<li>Comissionats de l’Administració de la Generalitat de Catalunya, Actualització del nom i de la descripció de l'entitat.</li><br>
+<li>
+ <li>Comissionats de l’Administració de la Generalitat de Catalunya, Actualització del nom i de la descripció de l'entitat.</li><br>
 	<li>Secretaries Generals i sectorials, Actualització del conjunt de valors a causa del nou decret de reestructuració del Departament d'Unió Europea i Acció Exterior.</li><br>
 	<li>Direccions generals de l’Administració de la Generalitat de Catalunya, Actualització del conjunt de valors a causa del nou decret de reestructuració del Departament d'Unió Europea i Acció Exterior. Actualització del nom i de la descripció de l'entitat.</li><br>
 	<li>Subdireccions generals de l’Administració de la Generalitat de Catalunya, Actualització del conjunt de valors a causa del nou decret de reestructuració del Departament d'Unió Europea i Acció Exterior. Actualització del nom i de la descripció de l'entitat.</li><br>
@@ -30,5 +31,3 @@ Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
 
 * [Gestió Tècnica de Dades](https://canigo.ctti.gencat.cat/plataformes/dadesref/gestiodades/)
 * [Dades de Referència](https://canigo.ctti.gencat.cat/plataformes/dadesref/dadesref/)
-ica policial que correspon a cada municipi.</li><br>
-	<li>Serveis territorials d’Interior. Llistat dels serveis Territorials en què s’estructura el departament d’Interior i Seguretat Pública per exercir les seves funcions
