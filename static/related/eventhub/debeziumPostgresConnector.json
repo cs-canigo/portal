@@ -1,0 +1,27 @@
+{
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.dbname": "<dbname>",
+        "database.hostname": "<hostname>",
+        "database.password": "<password>",
+        "database.port": "<port>",
+        "database.user": "<user>",
+        "key.converter": "<converter>",
+        "plugin.name": "pgoutput",
+        "producer.override.security.protocol": "SSL",
+        "producer.override.ssl.key.password": "<jks-password>",
+        "producer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>-keystore.jks",
+        "producer.override.ssl.keystore.password": "<jks-password>",
+        "producer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>-keystore.jks",
+        "producer.override.ssl.truststore.password": "<jks-password>",
+        "publication.autocreate.mode": "filtered",
+        "snapshot.mode": "no_data",
+        "table.include.list": "<table-list>",
+        "tasks.max": "1",
+        "time.precision.mode": "connect",
+        "topic.delimiter": "-",
+        "topic.prefix": "<client-name>",
+        "value.converter": "<converter>",
+    },
+    "name": "<client-name>-<description>"
+}

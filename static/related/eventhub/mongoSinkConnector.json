@@ -1,0 +1,24 @@
+{
+  "name": "<client-name>-<description>",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "tasks.max": "1",
+    "key.converter": "<converter>",
+    "value.converter": "<converter>",
+    "errors.retry.timeout": "10",
+    "errors.retry.delay.max.ms": "5000",
+    "topics": "<client-name>-<description>",
+    "connection.uri": "<connection-uri>",
+    "database": "<database>",
+    "collection": "<collection>",
+    "namespace.mapper": "com.mongodb.kafka.connect.sink.namespace.mapping.FieldPathNamespaceMapper",
+    "namespace.mapper.value.collection.field": "subject",
+    "namespace.mapper.error.if.invalid": "false",
+    "consumer.override.security.protocol": "SSL",
+    "consumer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+    "consumer.override.ssl.keystore.password": "<jks-password>",
+    "consumer.override.ssl.key.password": "<jks-password>",
+    "consumer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+    "consumer.override.ssl.truststore.password": "<jks-password>"
+  }
+}

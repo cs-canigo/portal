@@ -19,7 +19,7 @@ Amb aquest canvi s'ha aconseguit el següent:
 
 ## Descripció
 
-A continuació, es llisten les diferents funcionals que ofereix el API Antivirus, les quals es detallessin més en profunditat en la secció de **[disseny tècnic del API](/drafts/apiantivirus/disenotecnico_CAT/)**.
+A continuació, es llisten les diferents funcionals que ofereix el API Antivirus, les quals es detallessin més en profunditat en la secció de **[disseny tècnic del API](../disenotecnico_CAT/)**.
 ## 
 - **Obtenir token d'autenticació**: Operació per a sol·licitar un token d'autenticació i de refresh, requerits per a poder fer ús de la funcionalitat d'escaneig del API Antivirus.
 - **Refrescar Token**: Operació que s'usa per a refrescar el període de caducitat del token proporcionant un nou token d'accés, facilitant per a això el token de refresh.
@@ -29,12 +29,12 @@ A continuació, es llisten les diferents funcionals que ofereix el API Antivirus
 ## Documentació
 
 A través del següent enllaç es pot anar a la secció de canigo relacionada amb el disseny tècnic del API Antivirus.
-- **[disseny tècnic del API Antivirus](/drafts/apiantivirus/disenotecnico_CAT/)**.
+- **[disseny tècnic del API Antivirus](../disenotecnico_CAT/)**.
 
 A través del següent enllaç es pot anar a la secció de canigo relacionada amb els requisits necessaris per a fer ús del API Antivirus.
-- **[Requisits per a fer ús del API Antivirus](/drafts/apiantivirus/requisitosdeuso_CAT/)**.
+- **[Requisits per a fer ús del API Antivirus](../requisitosdeuso_CAT/)**.
 
 A través del següent enllaç es pot anar a la secció de canigo relacionada amb el manual d'ús del API Antivirus.
-- **[Manual d'ús del API Antivirus](/drafts/apiantivirus/manualdeuso_CAT/)**.
+- **[Manual d'ús del API Antivirus](../manualdeuso_CAT/)**.
 
 

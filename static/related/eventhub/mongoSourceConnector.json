@@ -1,0 +1,32 @@
+{
+    "config": {
+        "change.stream.full.document": "updateLookup",
+        "connection.uri": "<connection-uri>",
+        "connector.class": "com.mongodb.kafka.connect.MongoSourceConnector",
+        "consumer.override.security.protocol": "SSL",
+        "consumer.override.ssl.key.password": "<jks-password>",
+        "consumer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "consumer.override.ssl.keystore.password": "<jks-password>",
+        "consumer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "consumer.override.ssl.truststore.password": "<jks-password>",
+        "database": "VariablesCliniques",
+        "errors.log.enable": "true",
+        "errors.tolerance": "none",
+        "heartbeat.interval.ms": "60000",
+        "heartbeat.topic.name": "<client-name>-<description>-heartbeat",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "key.converter.schemas.enabled": "false",
+        "pipeline": "<pipeline>",
+        "poll.await.time.ms": "100",
+        "poll.max.batch.size": "10",
+        "producer.override.security.protocol": "SSL",
+        "producer.override.ssl.key.password": "<jks-password>",
+        "producer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "producer.override.ssl.keystore.password": "<jks-password>",
+        "producer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "producer.override.ssl.truststore.password": "<jks-password>",
+        "topic.namespace.map": "<namespace-map>",
+        "value.converter": "<converter>"
+    },
+    "name": "<client-name>-<description>"
+}
