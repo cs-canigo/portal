@@ -34,6 +34,6 @@ A continuació, s'indiquen una sèrie d'exemples d'ús i el model d'integració 
 
 | Cas d'ús | Mode d'integració recomanat |  
 |------|-------|
-| Sol·licitud d'escaneig de fitxers amb una grandària inferior a 15MB | **[API](../intro_CAT)** (Escaneig per fitxer adjunt)
-| Sol·licitud d'escaneig de fitxers amb una grandària superior a 15MB | **[API](../intro_CAT)** (Escaneig per URL)
-| Desenvolupaments que no poden integrar-se via API | **[SDK](https://canigo.ctti.gencat.cat/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-integracio/modul-antivirus/)
+| Sol·licitud d'escaneig de fitxers amb una grandària inferior a 15MB | **[API](../intro_CAT)** (Escaneig per fitxer adjunt)|
+| Sol·licitud d'escaneig de fitxers amb una grandària superior a 15MB | **[API](../intro_CAT)** (Escaneig per URL) |
+| Desenvolupaments que no poden integrar-se via API | **[SDK](https://canigo.ctti.gencat.cat/plataformes/canigo/documentacio-per-versions/3.8LTS/3.8.0/moduls/moduls-integracio/modul-antivirus/)** |
