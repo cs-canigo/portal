@@ -108,12 +108,19 @@ function refreshIndex(_index){
 		if (!err) {
 			console.log('success deleting all');
 		}
-		algolia.saveObjects(_index, function(err, content) {
-			if (!err) {
-				console.log('success indexing all');
-			}
-			console.log(content);
-		});
+
+		// Iterate 500 by 500 and save
+		const chunkSize = 500;
+		for (let i = 0; i < _index.length; i += chunkSize) {
+			const chunk = _index.slice(i, i + chunkSize);
+			algolia.saveObjects(chunk, function(err, content) {
+				if (!err) {
+					console.log('success indexing chunk');
+				} else {
+					console.log('Error' + err);
+				}
+			});
+		}		
 	});
 }
 
