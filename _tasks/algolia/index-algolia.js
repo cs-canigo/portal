@@ -54,8 +54,8 @@ function runIndex(){
 		function(_newIdx){
 
 			//comment or uncomment next two lines for "delta" indexing or full indexing. Uncomment for full indexing
-			refreshIndex(_newIdx);
-			return;	
+			//refreshIndex(_newIdx);
+			//return;	
 
 			var old = readFile(_indexDir+"index.json");
 
