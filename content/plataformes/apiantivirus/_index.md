@@ -1,6 +1,6 @@
 +++
 title       = "Interoperabilitat Antivirus"
-description= "Descripción técnica y funcional de los servicios que ofrece Antivirus"
+description= "Descripció tècnica i funcional dels serveis que ofereix Antivirus"
 weight      = 15
 aliases = [
     "/apiantivirus"

@@ -247,9 +247,6 @@ Per a escanejar fitxers, és necessari invocar a la següent operació amb les s
 ## 
 ### **Escaneig de fitxers per ruta**
 
-###### *NOTA*: Actualment no es troba disponible aquesta operació, pel fet que encara falta per plantejar i aprovisionar un espai compartit on es pugui emmagatzemar els fitxers, i realitzar les configuracions necessàries perquè el servidor SPE pugui tenir accés a l'espai creat. {style="background: yellow"}
-## 
-
 Per a escanejar fitxers facilitant la ruta per on es troba emmagatzemat els fitxers, és necessari invocar a la següent operació amb les següents configuracions:
 
 ###### **_EndPoints_**

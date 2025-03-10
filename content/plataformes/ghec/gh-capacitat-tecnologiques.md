@@ -116,13 +116,37 @@ Respecte al versionat de l' artefacte, el nom del lliurable i la seva version s'
     id 'org.sonarqube' version '5.1.0.4882'
    }
    ```
-   I per publicar una biblioteca:
+   I per publicar una biblioteca java:
    ```
    plugins {
     id 'java-library'
     id 'maven-publish'
    }
    ```
+   I per publicar una biblioteca android:
+   - A nivell del mòdul de biblioteca i de l'arrel (build.gradle)
+   ```
+   plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+   }
+   ```
+   - A nivell del mòdul de biblioteca (build.gradle)
+   ```
+    afterEvaluate {
+        publishing {
+            publications {
+                uploadArchives(MavenPublication) {
+                    from components.findByName('release')
+                    artifactId = '<artifactId>'
+                    groupId = '<groupId>'
+                }
+            }
+        }
+    }
+   ```
+
+
 
 ### NODE
 <br>

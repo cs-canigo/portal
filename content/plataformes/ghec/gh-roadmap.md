@@ -11,13 +11,34 @@ aliases = [
 ]
 +++
 
-## [Q1 2025] 1.1.1
+## [Q4 2025] 1.5.0
+
+- :lotus_position: Migració aplicacions a GitHub EU
+- :lotus_position: Apptio CostGuard per costos de desplegaments a Azure
+- :lotus_position: Migració GH Packages i GH Artifacts a repositori d'artefactes SaaS global pel SIC (SIC+ i SIC 3.0)
+- :lotus_position: Integració completa amb el Marc d'Automatització de Monitoratge (MAO/MAMBO)​
+
+## [Q3 2025] 1.4.0
+
+- :lotus_position: GitHub EU per nous projectes
+- :lotus_position: Orquestrador de desplegaments (visió release de producte)
+- :lotus_position: Desplegaments delegats a GCP
+- :lotus_position: Pilot integració amb el Marc d'Automatització de Monitoratge (MAO/MAMBO)​
+
+## [Q2 2025] 1.3.0
+
+- :lotus_position: Workflows de CloudOps a Azure
+- :lotus_position: Integració completa amb el Marc d'Automatització de Testing (MAT)​
+- :lotus_position: Aprovacions de negoci a ITSM Remedy per desplegaments
+- :lotus_position: Apptio CostGuard per costos de desplegaments a AWS
+
+## [Q1 2025] 1.2.0
 
 - :construction_worker: Suport a llibreries Gradle
 - :construction_worker: Suport desplegament a Azure Databricks
 - :construction_worker: Suport desplegament a Azure Data Factory
 - :construction_worker: Suport a ús de self-hosted runners amb configuració de xarxa privada
-- :construction_worker: Pilot workflows de CloudOps a AWS i Azure
+- :construction_worker: Workflows de CloudOps a AWS
 
 ## [Q3/Q4 2024] 1.1.0​
 

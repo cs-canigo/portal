@@ -1,0 +1,21 @@
+{
+    "config": {
+        "connection.password": "<password>",
+        "connection.url": "<connection-url>",
+        "connection.user": "<user>",
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "key.converter": "<converter>",
+        "mode": "<mode>",
+        "poll.interval.ms": "<ms>",
+        "producer.override.security.protocol": "SSL",
+        "producer.override.ssl.key.password": "<jks-password>",
+        "producer.override.ssl.keystore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "producer.override.ssl.keystore.password": "<jks-password>",
+        "producer.override.ssl.truststore.location": "/opt/confluent/certs/<client-name>.keystore.jks",
+        "producer.override.ssl.truststore.password": "<jks-password>",
+        "table.whitelist": "OPS$US2.PRSTB016",
+        "topic.prefix": "<client-name>-<description>-",
+        "value.converter": "<converter>"
+    },
+    "name": "<client-name>-<description>"
+}
