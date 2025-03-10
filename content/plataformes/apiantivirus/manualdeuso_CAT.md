@@ -339,8 +339,7 @@ S'emplenen els paràmetres amb els següents valors:
 
 - **Token Name:** Indicar el nom del token
 - **Grant type:** Client Credentials
-- **Access Token URL:**
-https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
+- **Access Token URL:** https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
 - **Client ID:** Client ID de GICAR
 - **Client Secret:** Client Secret de GICAR
 - **Client Authentication:** Send as Basic Auth header

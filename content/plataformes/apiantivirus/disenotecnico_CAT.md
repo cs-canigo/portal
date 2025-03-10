@@ -104,7 +104,7 @@ Per a poder fer ús de les operacions de les APIs, és necessari realitzar una c
 
 Dominis Accés Internet:
 + **PRE:**
-	https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
+	https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect
 + **PRO:**
 	https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect
 	
@@ -113,7 +113,7 @@ La petició que s'ha de realitzar és el següent:
 
 ###### **_EndPoints:_**
 
-1) **_POST '/scan-file'_**
+1) **_POST '/token'_**
 
 + **Descripció:** Operació que permet l'obtenció d'un token d'accés Keycloak per a autenticar-se contra la capa de seguretat del API, facilitant per a això les credencials Client ID i Client Secret necessàries.
 + **Cos de la Sol·licitud:** Credencials requerides per a la petició ("client_id", "client_secret" i "grant_type").
@@ -136,8 +136,8 @@ A continuació, es detalla el disseny tècnic de les dues APIs encarregades de g
 
 **_Dominis Accés Internet:_**
 
-- **PRE**: https://preproduccio.ctti.apim.extranet.gencat.cat/ctti/privat-pre/
-- **PRO**: https://ctti.apim.extranet.gencat.cat/ctti/privat/
+- **PRE**: https://preproduccio.ctti.apim.intranet.gencat.cat/ctti/privat-pre/
+- **PRO**: https://ctti.apim.intranet.gencat.cat/ctti/privat/
 
 **_Base Path:_**
 - **URL del API:** /2669/api-scan-file
@@ -193,8 +193,8 @@ A continuació, es detalla el disseny tècnic de les dues APIs encarregades de g
 
 **_Dominis Accés Internet:_**
 
-- **PRE**: https://preproduccio.ctti.apim.extranet.gencat.cat/ctti/privat-pre/
-- **PRO**: https://ctti.apim.extranet.gencat.cat/ctti/privat/
+- **PRE**: https://preproduccio.ctti.apim.intranet.gencat.cat/ctti/privat-pre/
+- **PRO**: https://ctti.apim.intranet.gencat.cat/ctti/privat/
 
 **_Base Path:_**
 - **URL del API:** /2669/api-request-token
