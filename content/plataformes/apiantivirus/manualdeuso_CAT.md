@@ -53,6 +53,8 @@ En aquesta secció es detalla l'algorisme dissenyat per al API de Scan File, aba
 
 En aquesta secció es detalla un exemple d'ús dels serveis de les APIs d'Antivirus mitjançant l'eina Postman, des de l'obtenció del token de Gicar fins a l'escaneig d'un fitxer.
 
+**_Nota_**: les URLs de les APIs per als diferents entorns (PRE i PRO) es poden visualitzar en la secció de [disseny tècnic del API Antivirus](../disenotecnico_CAT/)"
+
 ### **Obtenció de token Gicar**
 
 Per a l'obtenció del token Gicar, és necessari invocar a la següent operació amb les següents configuracions:

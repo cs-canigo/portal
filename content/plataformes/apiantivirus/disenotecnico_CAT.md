@@ -101,11 +101,19 @@ A continuació, s'indica l'enllaç a la documentació d'IBM relacionada amb el A
 ### **Requisit previ de l'ús**
 Per a poder fer ús de les operacions de les APIs, és necessari realitzar una crida prèvia al endpoint de Keycloak per a sol·licitar un token d'accés, facilitant per a això les credencials Client ID i Client Secret facilitades per Gicar. El token d'accés obtingut s'utilitzarà per a autenticar-se contra la capa de OAuth implementada en les APIs, i d'aquesta manera, processar les peticions del client correctament.
 ## 
-La petició que s'ha de realitzar és el següent:
 
-## 
-###### **_POST_**
+Dominis Accés Internet:
++ **PRE:**
 	https://preproduccio.endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect/token
++ **PRO:**
+	https://endpointma.autenticaciogicar4.extranet.gencat.cat/realms/gicarcpd4/protocol/openid-connect
+	
+La petició que s'ha de realitzar és el següent:
+## 
+
+###### **_EndPoints:_**
+
+1) **_POST '/scan-file'_**
 
 + **Descripció:** Operació que permet l'obtenció d'un token d'accés Keycloak per a autenticar-se contra la capa de seguretat del API, facilitant per a això les credencials Client ID i Client Secret necessàries.
 + **Cos de la Sol·licitud:** Credencials requerides per a la petició ("client_id", "client_secret" i "grant_type").
@@ -114,7 +122,7 @@ La petició que s'ha de realitzar és el següent:
 + **Resposta Reeixida (200 OK):** El token d'accés generat per Keycloak.
 	+ **Tipus:** `application/json`
 
-**_Nota_**: El Client ID i Client Secret que es requereix per a aquesta operació se sol·licita a través del tiquet ACOGICAR.
+**_Nota_**: El Client ID i Client Secret que es requereix per a aquesta operació se sol·licita a través del tiquet [ACOGICAR](https://cstd-ctti.atlassian.net/jira/software/c/projects/ACOGICAR/issues), per a l'entorn que correspon (PRE i PRO).
 ## 
 
 ### **Especificacions tècniques de les APIs**
@@ -262,4 +270,3 @@ S'ha implementat en les APIs d'antivirus el flux de seguretat/autenticació OAut
 * **Tokens d'Accés (Access token):** Són tractats com a credencials confidencials i transmesos de manera segura.
 
 * **Abast i Durada:** L'abast i la durada dels tokens d'accés han de ser mínims segons sigui necessari.
-
