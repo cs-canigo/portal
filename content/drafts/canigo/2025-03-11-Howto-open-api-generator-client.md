@@ -21,9 +21,9 @@ Un cop instal·lat, hem d'obrir una línia de comandes i instal·lar el plugin d
 npm install @openapitools/openapi-generator-cli -g
 ```
 
-# Ús del Plugin
+## Ús del Plugin
 
-## Generació del Client
+### Generació del Client
 
 Per generar el client utilitzant el plugin, pots utilitzar les següents opcions en Java, per exemple:
 
@@ -42,7 +42,7 @@ Per generar clients amb altres opcions, pots consultar la documentació oficial 
 - [Documentació d'instal·lació](https://openapi-generator.tech/docs/installation)
 - [Documentació de generadors](https://openapi-generator.tech/docs/generators)
 
-## Importar el Client
+### Importar el Client
 
 Un cop generat el client, pots importar-lo de dues maneres:
 
@@ -59,7 +59,7 @@ Exemple de dependència al `pom.xml`:
 </dependency>
 ```
 
-## Ús del Client
+### Ús del Client
 
 Un cop importat el client, només ens quedaria utilitzar la llibreria al nostre projecte. Exemple:
 
