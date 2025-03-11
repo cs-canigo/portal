@@ -28,10 +28,10 @@ npm install @openapitools/openapi-generator-cli -g
 Per generar el client utilitzant el plugin, pots utilitzar les següents opcions en Java, per exemple:
 
 ```bash
-openapi-generator-cli generate -i openapisgde.json -g java --library restclient -o clientsgde --additional-properties=useSpringBoot=true
+openapi-generator-cli generate -i openapi.json -g java --library restclient -o clientsgde --additional-properties=useSpringBoot=true
 ```
 
-El fitxer d'especificació openapisgde és un exemple. Aquest arxiu pot estar en format JSON o YAML.
+El fitxer d'especificació openapi.json és un exemple. Aquest arxiu pot estar en format JSON o YAML.
 
 El paràmetre --library fa referència a les llibreries HTTP que utilitzarà el client, en aquest cas, serà un client REST.
 
@@ -59,7 +59,7 @@ Exemple de dependència al `pom.xml`:
 </dependency>
 ```
 
-# Ús del Client
+## Ús del Client
 
 Un cop importat el client, només ens quedaria utilitzar la llibreria al nostre projecte. Exemple:
 
