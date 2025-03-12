@@ -291,3 +291,7 @@ Per a incloure els recursos requerits en els plans de còpia de seguretat creats
 | anual-avanzada  | anual-av
 
 S'inclou més informació en les plantilles d'exemple de IaC.
+
+## CloudOps
+
+TO-DO: especificar els requeriments necessàris a la infra d'aplicació per tal de poder fer ús dels [workflows de CloudOps](https://canigo.ctti.gencat.cat/plataformes/ghec/workflows/workflows-cloudops/).
