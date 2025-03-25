@@ -16,7 +16,7 @@ El dia 30/10/2024 s’ha fet una nova actualització del Catàleg Tècnic de Dad
 En la darrera actualització del Catàleg Tècnic de Dades s'han fet els següents canvis:<br><br>
 
 <ul>
-<li>S’han evolucionat les entitats del grup d’Obligat compliment:<br>
+<li>S’han evolucionat les entitats del grup d’Obligat compliment: Probes<br>
     
 
 <ul>
